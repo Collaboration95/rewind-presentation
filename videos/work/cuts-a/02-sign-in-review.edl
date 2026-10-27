@@ -1,0 +1,32 @@
+TITLE: Sign in
+FCM: NON-DROP FRAME
+* 30 FPS; STRAIGHT CUTS; REAL FOOTAGE AT 1X; POSTROLL FREEZE WHERE NOTED
+* All source audio discarded; final AAC stereo is silent.
+* JSON EDL is authoritative for source in/out and postroll hold durations.
+
+001  AX       V     C        00:00:00:00 00:00:06:00 00:00:00:00 00:00:06:00
+* FROM CLIP NAME: 02-signin-clean.mov
+* Blank sign-in form
+
+002  AX       V     C        00:00:10:15 00:00:11:02 00:00:06:00 00:00:12:00
+* FROM CLIP NAME: 02-signin-clean.mov
+* Recorded Maya username typing; hold last real frame
+* FREEZE LAST SAFE FRAME: 5.433333s
+
+003  AX       V     C        00:00:11:02 00:00:14:00 00:00:12:00 00:00:20:00
+* FROM CLIP NAME: 02-signin-clean.mov
+* Recorded password typing at original speed; masked password
+* FREEZE LAST SAFE FRAME: 5.066667s
+
+004  AX       V     C        00:00:23:00 00:00:31:00 00:00:20:00 00:00:28:00
+* FROM CLIP NAME: 02-signin-clean.mov
+* Read completed form before submitting
+
+005  AX       V     C        00:00:31:00 00:00:32:18 00:00:28:00 00:00:37:00
+* FROM CLIP NAME: 02-signin-clean.mov
+* Real sign-in progress; freeze safe last frame; omit ALL app Home frames
+* FREEZE LAST SAFE FRAME: 7.400000s
+
+006  AX       V     C        00:00:00:00 00:00:08:00 00:00:37:00 00:00:45:00
+* FROM CLIP NAME: 02-signedin-settings.png
+* Cut directly to authenticated Settings and Maya profile

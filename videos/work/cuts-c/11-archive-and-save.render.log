@@ -1,0 +1,38 @@
+Rendering 1/11 (8s)
+Cache: segment-e2b9da9276c0dbfcfde1.mov
+Rendering 2/11 (4s)
+Cache: segment-7e732c88aa548aecefb3.mov
+Rendering 3/11 (3s)
+Cache: segment-958cc72b71a5e1fa160e.mov
+Rendering 4/11 (3s)
+Cache: segment-3d6f8d356627f1d905a2.mov
+Rendering 5/11 (3s)
+Cache: segment-95bf0950f9ae1a8ee6ff.mov
+Rendering 6/11 (6s)
+Cache: segment-d4c2b3d975f84a76d52e.mov
+Rendering 7/11 (5s)
+Rendering 8/11 (5s)
+Cache: segment-c688b04bb3a3957e0287.mov
+Rendering 9/11 (4s)
+Cache: segment-6ad0156b1971e73eaa34.mov
+Rendering 10/11 (8s)
+Cache: segment-2ca9c6035f14afb63e9c.mov
+Rendering 11/11 (6s)
+Cache: segment-214f139575871364df63.mov
+{
+  "output": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/cuts-c/11-archive-and-save.mp4",
+  "frames": 1650,
+  "duration": 55.0,
+  "checks": {
+    "codec": true,
+    "profile": true,
+    "size": true,
+    "pixel_format": true,
+    "fps": true,
+    "frame_count": true,
+    "video_duration": true,
+    "container_duration": true,
+    "audio": true,
+    "audio_duration": true
+  }
+}

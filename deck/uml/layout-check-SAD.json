@@ -1,0 +1,124 @@
+{
+  "canvas": [
+    1280,
+    720
+  ],
+  "card": [
+    1248,
+    688
+  ],
+  "figures": [
+    {
+      "id": "uc-model",
+      "width": 1703,
+      "height": 831,
+      "minFont": 20.0,
+      "slideFont": 14.66
+    },
+    {
+      "id": "arch-logical",
+      "width": 1603,
+      "height": 795,
+      "minFont": 19.0,
+      "slideFont": 14.79
+    },
+    {
+      "id": "bce-cycle",
+      "width": 1424,
+      "height": 480,
+      "minFont": 18.0,
+      "slideFont": 15.78
+    },
+    {
+      "id": "a2d-cycle",
+      "width": 716,
+      "height": 631,
+      "minFont": 18.0,
+      "slideFont": 18.0
+    },
+    {
+      "id": "class-cycle",
+      "width": 1399,
+      "height": 864,
+      "minFont": 18.0,
+      "slideFont": 14.33
+    },
+    {
+      "id": "seq-cycle",
+      "width": 1215,
+      "height": 666,
+      "minFont": 17.0,
+      "slideFont": 17.0
+    },
+    {
+      "id": "state-cycle",
+      "width": 1124,
+      "height": 442,
+      "minFont": 19.0,
+      "slideFont": 19.0
+    },
+    {
+      "id": "seq-capture",
+      "width": 1194,
+      "height": 697,
+      "minFont": 19.0,
+      "slideFont": 18.75
+    },
+    {
+      "id": "uc-model-access",
+      "width": 850,
+      "height": 569,
+      "minFont": 20.0,
+      "slideFont": 20.0
+    },
+    {
+      "id": "uc-model-capture",
+      "width": 727,
+      "height": 466,
+      "minFont": 19.0,
+      "slideFont": 19.0
+    },
+    {
+      "id": "uc-model-cycle",
+      "width": 819,
+      "height": 500,
+      "minFont": 20.0,
+      "slideFont": 20.0
+    },
+    {
+      "id": "seq-cycle-compile",
+      "width": 1152,
+      "height": 759,
+      "minFont": 19.0,
+      "slideFont": 17.22
+    },
+    {
+      "id": "seq-cycle-release",
+      "width": 1460,
+      "height": 523,
+      "minFont": 19.0,
+      "slideFont": 16.24
+    },
+    {
+      "id": "seq-capture-accept",
+      "width": 1130,
+      "height": 516,
+      "minFont": 19.0,
+      "slideFont": 19.0
+    },
+    {
+      "id": "seq-capture-commit",
+      "width": 1072,
+      "height": 583,
+      "minFont": 19.0,
+      "slideFont": 19.0
+    },
+    {
+      "id": "seq-capture-process",
+      "width": 1364,
+      "height": 537,
+      "minFont": 19.0,
+      "slideFont": 17.38
+    }
+  ]
+}

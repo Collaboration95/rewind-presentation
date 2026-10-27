@@ -1,0 +1,488 @@
+[
+  {
+    "time": 0,
+    "frame": "qa/05-photo-with-a-look-review/ocr/0001.png",
+    "text": "9:41\n\n=F &\n\na\n\n>\n\n\u2018Bleft-30 4\n\nGroup - At table\n\n\u2014\u2014\n\nf\n\nif\n\nyf\n\nvideo\n\n8mm Home Movie\n\nVHS Camcorder\n\noO\n\neee\n\n\u2014\n\n127.0.0.1\n\n@\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 1,
+    "frame": "qa/05-photo-with-a-look-review/ocr/0002.png",
+    "text": "=>\n\n-_\n\n9:41\n\n(a)\n\n\u2014~\n\n5 left - 30 4\n\nGroup - At table\n\n/\n\n\u2014\n\ni\n\nrf\n\ni\u201d\n\nvideo\n\n8mm Home Movie\n\nVHS Camcorder\n\noO\n\neee\n\n<\n\n\u20147\n\n127.0.0.1\n\n@\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 2,
+    "frame": "qa/05-photo-with-a-look-review/ocr/0003.png",
+    "text": "9:41\n\n=>\n\n-_\n\n(a)\n\n\u2014\n\n5 left -30 4\n\nGroup - At table\n\n/\n\n\u2014\n\nkL\n\nf\n\ni\u201d\n\nvioeo\n\n8mm Home Movie\n\nVHS Camcorder\n\noO\n\neee\n\n\u20144\n\n127.0.0.1\n\n@\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 3,
+    "frame": "qa/05-photo-with-a-look-review/ocr/0004.png",
+    "text": "9:41\n\n=>\n\n-_\n\n(a)\n\n\u2014\n\n5 left -30 4\n\nGroup - At table\n\n\u2014\n\nkL\n\nf\n\ni\u201d\n\nvioeo\n\n8mm Home Movie\n\nVHS Camcorder\n\noO\n\neee\n\n\u20144\n\n127.0.0.1\n\n@\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 4,
+    "frame": "qa/05-photo-with-a-look-review/ocr/0005.png",
+    "text": "9:41\n\n=>\n\n-_\n\n(a)\n\n\u2014\n\nN\n\n5 esos\n\nGroup - At table\n\n/\n\n\u2014\n\nL\n\nf\n\ni\u201d\n\nvideo\n\n8mm Home Movie\n\nVHS Camcorder\n\noO\n\neee\n\n\u20144\n\n127.0.0.1\n\n@\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 5,
+    "frame": "qa/05-photo-with-a-look-review/ocr/0006.png",
+    "text": "9:41\n\n=>\n\n-_\n\n(o2 0\n\n\u2014\n\nN\n\n5 left-306\n\nGroup - At table\n\ni\n\n\u2014\n\nL\n\nif\n\ni\u201d\n\nvioeo\n\n8mm Home Movie\n\nVHS Camcorder\n\nom)\n\neee\n\n\u20144\n\n127.0.0.1\n\n@\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 6,
+    "frame": "qa/05-photo-with-a-look-review/ocr/0007.png",
+    "text": "9:41\n\n=>\n\n-_\n\n(o2 0\n\n\u2014\n\nN\n\n5 left-306\n\nGroup - At table\n\ni\n\n\u2014\n\nL\n\nif\n\nF\n\ni\u201d\n\nvioeo\n\n8mm Home Movie\n\nVHS Camcorder\n\nom)\n\neee\n\n\u20144\n\n127.0.0.1\n\n@\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 7,
+    "frame": "qa/05-photo-with-a-look-review/ocr/0008.png",
+    "text": "9:41\n\n=>\n\n-_\n\n(o2 0\n\n\u2014\n\nN\n\n5 left-306\n\nGroup - At table\n\ni\n\n\u2014\n\nL\n\nif\n\nF\n\ni\u201d\n\nvioeo\n\n8mm Home Movie\n\nVHS Camcorder\n\nom)\n\neee\n\n\u20144\n\n127.0.0.1\n\n@\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 8,
+    "frame": "qa/05-photo-with-a-look-review/ocr/0009.png",
+    "text": "9:41\n\nF @\n\n\u2014\n\n5 left -30 5\n\nGroup - At table\n\ni\n\n\u2014\u2014\n\nL\n\n\\i\n\n4\n\n7 f\n\n8mm Home Movie\n\nVHS Camcorder\n\nvA\n\nom)\n\n\u2014\n\neee\n\n127.0.0.1\n\n@\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 9,
+    "frame": "qa/05-photo-with-a-look-review/ocr/0010.png",
+    "text": "9:41\n\nF @\n\n\u2014\n\n5 left -30 5\n\nGroup - At table\n\ni\n\n\u2014\u2014\n\nL\n\n\\i\n\n4\n\n7 f\n\n8mm Home Movie\n\nVHS Camcorder\n\nvA\n\nom)\n\n\u2014\n\neee\n\n127.0.0.1\n\n@\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 10,
+    "frame": "qa/05-photo-with-a-look-review/ocr/0011.png",
+    "text": "9:41\n\nF @\n\n\u2014\n\n5 left -30 5\n\nGroup - At table\n\ni\n\n\u2014\u2014\n\nL\n\n\\i\n\n4\n\n7 f\n\n8mm Home Movie\n\nVHS Camcorder\n\nvA\n\nom)\n\n\u2014\n\neee\n\n127.0.0.1\n\n@\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 11,
+    "frame": "qa/05-photo-with-a-look-review/ocr/0012.png",
+    "text": "9:41\n\nF @\n\n\u2014\n\n5 left -30 5\n\nGroup - At table\n\ni\n\n\u2014\u2014\n\nL\n\n\\i\n\n4\n\n7 f\n\n8mm Home Movie\n\nVHS Camcorder\n\nvA\n\noO\n\n\u2014\n\neee\n\n127.0.0.1\n\n@\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 12,
+    "frame": "qa/05-photo-with-a-look-review/ocr/0013.png",
+    "text": "9:41\n\nF @\n\n\u2014\n\n5 left -30 5\n\nGroup - At table\n\ni\n\n\u2014\u2014\n\nL\n\n\\i\n\n4\n\n7 f\n\n8mm Home Movie\n\nVHS Camcorder\n\nvA\n\nom)\n\n\u2014\n\neee\n\n127.0.0.1\n\n@\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 13,
+    "frame": "qa/05-photo-with-a-look-review/ocr/0014.png",
+    "text": "9:41\n\nF @\n\n\u2014\n\n5 left -30 5\n\nGroup - At table\n\ni\n\n\u2014\u2014\n\nL\n\n\\i\n\n4\n\n7 f\n\n8mm Home Movie\n\nVHS Camcorder\n\nvA\n\nom)\n\n\u2014\n\neee\n\n127.0.0.1\n\n@\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 14,
+    "frame": "qa/05-photo-with-a-look-review/ocr/0015.png",
+    "text": "9:41\n\nF @\n\n\u2014\n\n5 left -30 5\n\nGroup - At table\n\ni\n\n\u2014\u2014\n\nL\n\n\\i\n\n4\n\n7 f\n\n8mm Home Movie\n\nVHS Camcorder\n\nvA\n\nom)\n\n\u2014\n\neee\n\n127.0.0.1\n\n@\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 15,
+    "frame": "qa/05-photo-with-a-look-review/ocr/0016.png",
+    "text": "9:41\n\nF @\n\n\u2014\n\n5 left -30 5\n\nGroup - At table\n\ni\n\n\u2014\u2014\n\nL\n\n\\i\n\n4\n\n7 f\n\n8mm Home Movie\n\nVHS Camcorder\n\nvA\n\noO\n\n\u2014\n\neee\n\n127.0.0.1\n\n@\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 16,
+    "frame": "qa/05-photo-with-a-look-review/ocr/0017.png",
+    "text": "9:41\n\nFe @\n\n>\n\n5 left - 30 5,\n\nGroup - At table\n\ni\n\n_\u2014\n\n>\n\n\"i\n\n=\n\nA\n\nyf\n\nwe\n\n,\n\nvideo\n\n8mm Home Movie\n\nVHS Camcorder\n\nom)\n\nb\u20144\n\neee\n\n127.0.0.1\n\n@\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 17,
+    "frame": "qa/05-photo-with-a-look-review/ocr/0018.png",
+    "text": "9:41\n\nFe @\n\n>\n\n5 left - 30 5,\n\nGroup - At table\n\ni\n\n\u2014_\n\n~\n\n\u2018i\n\n=\n\nA\n\nyf\n\nwe\n\n,\n\nrl\n\nvioeo\n\n8mm Home Movie\n\nVHS Camcorder\n\nom)\n\nb\u20144\n\neee\n\n127.0.0.1\n\n@\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 18,
+    "frame": "qa/05-photo-with-a-look-review/ocr/0019.png",
+    "text": "=>\n\n\u2014\n\n9:41\n\nSo\n\na:\n\n5 left: 30s\n\nGroup - At table\n\nA\n\n\\y\n\nonl\n\nff\n\nvioeo\n\n8mm Home Movie\n\nVHS Camcorder\n\n\u2014\n\noO\n\nb\u20144\n\n127.0.0.1\n\neee\n\n@\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 19,
+    "frame": "qa/05-photo-with-a-look-review/ocr/0020.png",
+    "text": "=>\n\n\u2014\n\n9:41\n\nSo\n\na:\n\n5 left: 30s\n\nGroup - At table\n\n/\n\n\\\\\n\nem.\n\nonl\n\nff\n\nvioeo\n\n8mm Home Movie\n\nVHS Camcorder\n\na\n\noO\n\nb\u20144\n\n127.0.0.1\n\neee\n\n@\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 20,
+    "frame": "qa/05-photo-with-a-look-review/ocr/0021.png",
+    "text": "9:41\n\n=>\n\n\u2014\n\nSo\n\na:\n\n5 left: 30s\n\nGroup - At table\n\nSem\n\nyf\n\nonl\n\nff\n\nvideo\n\n8mm Home Movie\n\nVHS Camcorder\n\na\n\nOo\n\nb\u20144\n\n127.0.0.1\n\n@\n\neee\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 21,
+    "frame": "qa/05-photo-with-a-look-review/ocr/0022.png",
+    "text": "9:41\n\n=>\n\n\u2014\n\nSo\n\na:\n\n5 left: 30s\n\nGroup - At table\n\n>,\n\nyf\n\nonl\n\nff\n\nvioeo\n\n8mm Home Movie\n\nVHS Camcorder\n\n\u2014\n\n127.0.0.1\n\n@\n\neee\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 22,
+    "frame": "qa/05-photo-with-a-look-review/ocr/0023.png",
+    "text": "9:41\n\n=>\n\n\u2014\n\nSo\n\na:\n\n5 left: 30s\n\nGroup - At table\n\nde\n\nyf\n\nonl\n\nff\n\nvideo\n\n8mm Home Movie\n\nVHS Camcorder\n\n\u2014\n\n127.0.0.1\n\n@\n\neee\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 23,
+    "frame": "qa/05-photo-with-a-look-review/ocr/0024.png",
+    "text": "9:41\n\n=>\n\n\u2014\n\nSo\n\na:\n\n6 left-30s\n\nGroup - At table\n\n/\n\na,\n\n=\n\nyf\n\nonl\n\nff\n\nvioeo\n\n8mm Home Movie\n\nVHS Camcorder\n\n\u2014\n\n127.0.0.1\n\n@\n\neee\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 24,
+    "frame": "qa/05-photo-with-a-look-review/ocr/0025.png",
+    "text": "=>\n\n-_\n\n9:41\n\no\n\n(oo MN\n\n6 left-30s\n\nGroup - At table\n\n/\n\n-\n\n\u2014\n\nNy\n\na\n\n\u2019\n\n4\n\n3)\n\nA\n\nVIDEO\n\n8mm Home Movie\n\nVHS Camcorder\n\na\n\n\\\n\ni]\n\n127.0.0.1\n\neee\n\n@\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 25,
+    "frame": "qa/05-photo-with-a-look-review/ocr/0026.png",
+    "text": "=>\n\n-_\n\n9:41\n\no\n\n(oo MN\n\n\u2014-\n\n6 left-30s\n\nGroup - At table\n\n/\n\n-\n\n\u2014\n\nNy\n\na\n\n\u2019\n\n4\n\n3)\n\nP\n\nVIDEO\n\n8mm Home Movie\n\nVHS Camcorder\n\na\n\n\\\n\ni]\n\n127.0.0.1\n\neee\n\n@\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 26,
+    "frame": "qa/05-photo-with-a-look-review/ocr/0027.png",
+    "text": "9:41\n\nFr &\u00ae\n\n5 left-30s\n\nGroup - At table\n\ny\n\n4\n\n\\\n\n,\n\ncart\n\ngr\n\nV,\n\nd\n\noa\n\n\u2014_\n\nChosen from a file\n\nCompact ital\n\n8mm Home Movie\n\nVHS Camcorder\n\nCounts as one moment: 3 s in the film\n\n_\n\n\u2014\n\nRetake\n\n& Seal\n\nom)\n\neee\n\n<\n\n=\n\n127.0.0.1\n\n@\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 27,
+    "frame": "qa/05-photo-with-a-look-review/ocr/0028.png",
+    "text": "9:41\n\nFr &\u00ae\n\n5 left-30s\n\nGroup - At table\n\ny\n\n4\n\n\\\n\n,\n\ncart\n\ngr\n\nV,\n\nd\n\n=\n\n\u2014_\n\nChosen from a file\n\nCompact ital\n\n8mm Home Movie\n\nVHS Camcorder\n\nCounts as one moment: 3 s in the film\n\n_\n\n\u2014\n\nRetake\n\n& Seal\n\nom)\n\neee\n\n<\n\n=\n\n127.0.0.1\n\n@\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 28,
+    "frame": "qa/05-photo-with-a-look-review/ocr/0029.png",
+    "text": "9:41\n\nFr &\u00ae\n\n5 left-30s\n\nGroup - At table\n\ny\n\n4\n\n\\\n\n,\n\ncart\n\ngr\n\nV,\n\nd\n\n=\n\n\u2014_\n\nChosen from a file\n\nCompact ital\n\n8mm Home Movie\n\nVHS Camcorder\n\nCounts as one moment: 3 s in the film\n\n_\n\n\u2014\n\nRetake\n\n& Seal\n\nom)\n\neee\n\n<\n\n=\n\n127.0.0.1\n\n@\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 29,
+    "frame": "qa/05-photo-with-a-look-review/ocr/0030.png",
+    "text": "9:41\n\nFr &\u00ae\n\n5 left-30s\n\nGroup - At table\n\ny\n\n4\n\n\\\n\n,\n\ncart\n\ngr\n\nV,\n\nd\n\n=\n\n\u2014_\n\nChosen from a file\n\nCompact ital\n\n8mm Home Movie\n\nVHS Camcorder\n\nCounts as one moment: 3 s in the film\n\n_\n\n\u2014\n\nRetake\n\n& Seal\n\nom)\n\neee\n\n<\n\n=\n\n127.0.0.1\n\n@\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 30,
+    "frame": "qa/05-photo-with-a-look-review/ocr/0031.png",
+    "text": "9:41\n\nFr &\u00ae\n\n5 left-30s\n\nGroup - At table\n\ny\n\n4\n\n\\\n\n,\n\ncart\n\ngr\n\nV,\n\nd\n\n=\n\n\u2014_\n\nChosen from a file\n\nCompact ital\n\n8mm Home Movie\n\nVHS Camcorder\n\nCounts as one moment: 3 s in the film\n\n_\n\n\u2014\n\nRetake\n\n& Seal\n\nom)\n\neee\n\n<\n\n=\n\n127.0.0.1\n\n@\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 31,
+    "frame": "qa/05-photo-with-a-look-review/ocr/0032.png",
+    "text": "9:41\n\nFr &\u00ae\n\n5 left-30s\n\nGroup - At table\n\ny\n\n4\n\n\\\n\n,\n\ncart\n\ngr\n\nV,\n\nd\n\n=\n\n\u2014_\n\nChosen from a file\n\nCompact ital\n\n8mm Home Movie\n\nVHS Camcorder\n\nCounts as one moment: 3 s in the film\n\n_\n\n\u2014\n\nRetake\n\n& Seal\n\nom)\n\neee\n\n<\n\n=\n\n127.0.0.1\n\n@\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 32,
+    "frame": "qa/05-photo-with-a-look-review/ocr/0033.png",
+    "text": "9:41\n\nFr &\u00ae\n\n5 left-30s\n\nGroup - At table\n\ny\n\n4\n\n\\\n\n,\n\ncart\n\ngr\n\nV,\n\nd\n\n=\n\n\u2014_\n\nChosen from a file\n\nCompact ital\n\n8mm Home Movie\n\nVHS Camcorder\n\nCounts as one moment: 3 s in the film\n\n_\n\n\u2014\n\nRetake\n\n& Seal\n\nom)\n\neee\n\n<\n\n=\n\n127.0.0.1\n\n@\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 33,
+    "frame": "qa/05-photo-with-a-look-review/ocr/0034.png",
+    "text": "9:41\n\nFr &\u00ae\n\n5 left-30s\n\nGroup - At table\n\n4\n\n,\n\na\n\nSs\n\nChosen ae\n\nCompact ital\n\n. 8mm Home Movie\n\nVHS Camcorder\n\nCounts as one moment: 3 s in the film\n\n_\n\n\u2014\n\nRetake\n\n& Seal\n\nom)\n\neee\n\n<\n\n=\n\n127.0.0.1\n\n@\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 34,
+    "frame": "qa/05-photo-with-a-look-review/ocr/0035.png",
+    "text": "9:41\n\nFe @\n\n5 left-30s\n\nGroup - At table\n\n\u2014\n\nd\n\n*\n\n: A\n\n=\n\n4\n\nChosen ae\n\nCompact Data\n\n8mm Home Movie\n\nVHS Camcorder\n\nCounts as one moment: 3 s in the film\n\n\u2014\n\nRetake\n\n6 Seal\n\noO\n\neee\n\n<\n\n\u20147\n\n127.0.0.1\n\n@\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 35,
+    "frame": "qa/05-photo-with-a-look-review/ocr/0036.png",
+    "text": "9:41\n\nFe @\n\n5 left-30s\n\nGroup - At table\n\n\u2014\n\nd\n\n*\n\n: A\n\n=\n\n4\n\nChosen ae\n\nCompact Data\n\n8mm Home Movie\n\nVHS Camcorder\n\nCounts as one moment: 3 s in the film\n\n\u2014\n\nRetake\n\n6 Seal\n\noO\n\neee\n\n<\n\n\u20147\n\n127.0.0.1\n\n@\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 36,
+    "frame": "qa/05-photo-with-a-look-review/ocr/0037.png",
+    "text": "9:41\n\nFe @\n\n5 left-30s\n\nGroup - At table\n\n\u2014\n\nd\n\n*\n\n: A\n\n=\n\n4\n\nChosen ae\n\nCompact Data\n\n8mm Home Movie\n\nVHS Camcorder\n\nCounts as one moment: 3 s in the film\n\n\u2014\n\nRetake\n\n6 Seal\n\noO\n\neee\n\n<\n\n\u20147\n\n127.0.0.1\n\n@\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 37,
+    "frame": "qa/05-photo-with-a-look-review/ocr/0038.png",
+    "text": "9:41\n\nFe @\n\n5 left-30s\n\nGroup - At table\n\n\u2014\n\nd\n\n*\n\n: A\n\n=\n\n4\n\nChosen ae\n\nCompact Data\n\n8mm Home Movie\n\nVHS Camcorder\n\nCounts as one moment: 3 s in the film\n\n\u2014\n\nRetake\n\n6 Seal\n\noO\n\neee\n\n<\n\n\u20147\n\n127.0.0.1\n\n@\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 38,
+    "frame": "qa/05-photo-with-a-look-review/ocr/0039.png",
+    "text": "9:41\n\nFe @\n\n5 left-30s\n\nGroup - At table\n\n\u2014\n\nd\n\n*\n\n: A\n\n=\n\n4\n\nChosen ae\n\nCompact Data\n\n8mm Home Movie\n\nVHS Camcorder\n\nCounts as one moment: 3 s in the film\n\n\u2014\n\nRetake\n\n6 Seal\n\noO\n\neee\n\n<\n\n\u20147\n\n127.0.0.1\n\n@\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 39,
+    "frame": "qa/05-photo-with-a-look-review/ocr/0040.png",
+    "text": "9:41\n\nFe @\n\n5 left-30s\n\nGroup - At table\n\n\u2014\n\nd\n\n*\n\n: A\n\n=\n\n4\n\nChosen ae\n\nCompact Data\n\n8mm Home Movie\n\nVHS Camcorder\n\nCounts as one moment: 3 s in the film\n\n\u2014\n\nRetake\n\n6 Seal\n\noO\n\neee\n\n<\n\n\u20147\n\n127.0.0.1\n\n@\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 40,
+    "frame": "qa/05-photo-with-a-look-review/ocr/0041.png",
+    "text": "9:41\n\nFF &\n\n-OUt\u00e9\u201c\u2018 OSC\n\n5 left-30s\n\nGroup - At table\n\n/\n\nyf\n\ny\n\nis\n\n\u00bb\n\nChosen from a file\n\n\u2014\u2014\u2014\u2014\u2014_E\n\nUploading...\n\nwf\n\nom)\n\n\u2014\n\n127.0.0.1\n\n@\n\neee\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 41,
+    "frame": "qa/05-photo-with-a-look-review/ocr/0042.png",
+    "text": "9:41\n\nFF &\n\n-OUt\u00e9\u201c\u2018 OSC\n\n5 left-30s\n\nGroup - At table\n\n/\n\nyf\n\ny\n\nis\n\n\u00bb\n\nChosen from a file\n\n\u2014\u2014\u2014\u2014\u2014_E\n\nUploading...\n\nwf\n\nom)\n\n\u2014\n\n127.0.0.1\n\n@\n\neee\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 42,
+    "frame": "qa/05-photo-with-a-look-review/ocr/0043.png",
+    "text": "9:41\n\nFF &\n\n-OUt\u00e9\u201c\u2018 OSC\n\n5 left-30s\n\nGroup - At table\n\n/\n\nyf\n\ny\n\nis\n\n\u00bb\n\nChosen from a file\n\n\u2014\u2014\u2014\u2014\u2014_E\n\nUploading...\n\nwf\n\nom)\n\n\u2014\n\n127.0.0.1\n\n@\n\neee\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 43,
+    "frame": "qa/05-photo-with-a-look-review/ocr/0044.png",
+    "text": "9:41\n\nFF &\n\n-OUt\u00e9\u201c\u2018 OSC\n\n5 left-30s\n\nGroup - At table\n\n/\n\nyf\n\ny\n\nis\n\n\u00bb\n\nChosen from a file\n\n\u2014\u2014\u2014\u2014\u2014_E\n\nUploading...\n\nwf\n\nom)\n\n\u2014\n\n127.0.0.1\n\n@\n\neee\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 44,
+    "frame": "qa/05-photo-with-a-look-review/ocr/0045.png",
+    "text": "9:41\n\nFF &\n\n-OUt\u00e9\u201c\u2018 OSC\n\n5 left-30s\n\nGroup - At table\n\n/\n\nyf\n\ny\n\nis\n\n\u00bb\n\nChosen from a file\n\n\u2014\u2014\u2014\u2014\u2014_E\n\nUploading...\n\nwf\n\nom)\n\n\u2014\n\n127.0.0.1\n\n@\n\neee\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 45,
+    "frame": "qa/05-photo-with-a-look-review/ocr/0046.png",
+    "text": "9:41\n\nFF &\n\n-OUt\u00e9\u201c\u2018 OSC\n\n5 left-30s\n\nGroup - At table\n\n/\n\nyf\n\ny\n\nis\n\n\u00bb\n\nChosen from a file\n\n\u2014\u2014\u2014\u2014\u2014_E\n\nUploading...\n\nwf\n\nom)\n\n\u2014\n\n127.0.0.1\n\n@\n\neee\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 46,
+    "frame": "qa/05-photo-with-a-look-review/ocr/0047.png",
+    "text": "9:41\n\nFF &\n\n-OUt\u00e9\u201c\u2018 OSC\n\n5 left-30s\n\nGroup - At table\n\n/\n\nyf\n\ny\n\nis\n\n\u00bb\n\nChosen from a file\n\n\u2014\u2014\u2014\u2014\u2014_E\n\nUploading...\n\nwf\n\nom)\n\n\u2014\n\n127.0.0.1\n\n@\n\neee\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 47,
+    "frame": "qa/05-photo-with-a-look-review/ocr/0048.png",
+    "text": "9:41\n\nF@\n\nSealed\n\n4 left - finishing in the background\n\n ceemeiiiaaaaess\n\nNobody sees it before the film, not even\n\nyou.\n\n.\n\n<\n\nom)\n\n\u2014\n\n127.0.0.1\n\n@\n\neee\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 48,
+    "frame": "qa/05-photo-with-a-look-review/ocr/0049.png",
+    "text": "9:41\n\nF @\n\nSealed\n\n4 left - finishing in the background\n\na:\n\nNobody sees it before the film, not even\n\nyou.\n\n.\n\n<\n\n=\u2014\n\noO\n\n127.0.0.1\n\n@\n\neee\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 49,
+    "frame": "qa/05-photo-with-a-look-review/ocr/0050.png",
+    "text": "9:41\n\nF @\n\nSealed\n\n4 left - finishing in the background\n\na:\n\nNobody sees it before the film, not even\n\nyou.\n\n.\n\n<\n\n=\u2014\n\noO\n\n127.0.0.1\n\n@\n\neee\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 50,
+    "frame": "qa/05-photo-with-a-look-review/ocr/0051.png",
+    "text": "9:41\n\nF @\n\nSealed\n\n4 left - finishing in the background\n\na:\n\nNobody sees it before the film, not even\n\nyou.\n\n.\n\n<\n\n=\u2014\n\noO\n\n127.0.0.1\n\n@\n\neee\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 51,
+    "frame": "qa/05-photo-with-a-look-review/ocr/0052.png",
+    "text": "9:41\n\nF @\n\nSealed\n\n4 left - finishing in the background\n\na:\n\nNobody sees it before the film, not even\n\nyou.\n\n.\n\n<\n\n=\u2014\n\noO\n\n127.0.0.1\n\n@\n\neee\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 52,
+    "frame": "qa/05-photo-with-a-look-review/ocr/0053.png",
+    "text": "9:41\n\nF @\n\nSealed\n\n4 left - finishing in the background\n\na:\n\nNobody sees it before the film, not even\n\nyou.\n\n.\n\n<\n\n=\u2014\n\noO\n\n127.0.0.1\n\n@\n\neee\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 53,
+    "frame": "qa/05-photo-with-a-look-review/ocr/0054.png",
+    "text": "9:41\n\nF @\n\nSealed\n\n4 left - finishing in the background\n\na:\n\nNobody sees it before the film, not even\n\nyou.\n\n.\n\n<\n\n=\u2014\n\noO\n\n127.0.0.1\n\n@\n\neee\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 54,
+    "frame": "qa/05-photo-with-a-look-review/ocr/0055.png",
+    "text": "9:41\n\nF @\n\nSealed\n\n4 left - finishing in the background\n\na:\n\nNobody sees it before the film, not even\n\nyou.\n\n.\n\n<\n\n=\u2014\n\noO\n\n127.0.0.1\n\n@\n\neee\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 0,
+    "frame": "qa/05-photo-with-a-look-review/ocr/boundary-00000.png",
+    "text": "9:41\n\n=>\n\n\u2014\n\nGa)\n\n=\n\n\u2014\n\n5 left-30s\n\nGroup - At table\n\n\u2018\n\n7. a\n\n\u2014_.\n\nNi\n\nvioeo\n\n8mm Home Movie\n\nVHS Camcorder\n\n=)\n\neee\n\n\u2014\n\n127.0.0.1\n\n@\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 5,
+    "frame": "qa/05-photo-with-a-look-review/ocr/boundary-00150.png",
+    "text": "9:41\n\n=>\n\n\u2014\n\noF\n\n5 left-30s\n\nGroup - At table\n\n/\n\n\u2014\n\nrf\n\nvioeo\n\n8mm Home Movie\n\nVHS Camcorder\n\n@\n\nom)\n\neee\n\n\u2014\n\n127.0.0.1\n\n@\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 7.966666666666667,
+    "frame": "qa/05-photo-with-a-look-review/ocr/boundary-00239.png",
+    "text": "9:41\n\n=>\n\n\u2014\n\noF\n\n5 left-30s\n\nGroup - At table\n\n/\n\n\u2014\n\nrf\n\nvideo\n\n8mm Home Movie\n\nVHS Camcorder\n\n@\n\nom)\n\neee\n\n\u2014\n\n127.0.0.1\n\n@\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 8,
+    "frame": "qa/05-photo-with-a-look-review/ocr/boundary-00240.png",
+    "text": "9:41\n\n=>\n\n-_\n\nGa\n\n-_\n\n5 left-30 s\n\nGroup - At table\n\n_\u2014\n\nyf\n\nvioeo\n\n8mm Home Movie\n\nVHS Camcorder\n\nr\n\n=)\n\neee\n\n\u2014_\n\n127.0.0.1\n\n@\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 10,
+    "frame": "qa/05-photo-with-a-look-review/ocr/boundary-00300.png",
+    "text": "9:41\n\n=>\n\n-_\n\nGa\n\n-_\n\n5 left-30 s\n\nGroup - At table\n\n_\u2014\n\nyf\n\nvioeo\n\n8mm Home Movie\n\nVHS Camcorder\n\nr\n\n=)\n\neee\n\n\u2014_\n\n127.0.0.1\n\n@\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 15,
+    "frame": "qa/05-photo-with-a-look-review/ocr/boundary-00450.png",
+    "text": "9:41\n\n=>\n\n-_\n\nGa\n\n-_\n\n5 left-30 s\n\nGroup - At table\n\n_\u2014\n\nyf\n\nvioeo\n\n8mm Home Movie\n\nVHS Camcorder\n\nr\n\n=)\n\neee\n\n\u2014_\n\n127.0.0.1\n\n@\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 15.966666666666667,
+    "frame": "qa/05-photo-with-a-look-review/ocr/boundary-00479.png",
+    "text": "9:41\n\n=>\n\n-_\n\nGa\n\n-_\n\n5 left-30 s\n\nGroup - At table\n\n_\u2014\n\nyf\n\nvioeo\n\n8mm Home Movie\n\nVHS Camcorder\n\nr\n\n=)\n\neee\n\n\u2014_\n\n127.0.0.1\n\n@\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 16,
+    "frame": "qa/05-photo-with-a-look-review/ocr/boundary-00480.png",
+    "text": "9:41\n\n=>\n\n-_\n\n(25)\n\n=\n\n5 left- 30s\n\nGroup - At table\n\n_\u2014\n\na *\n\n\u2018i\n\nrf\n\n\u00a2\n\nvioeo\n\n8mm Home Movie\n\nVHS Camcorder\n\n=)\n\neee\n\n\u2014\n\n127.0.0.1\n\n@\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 20,
+    "frame": "qa/05-photo-with-a-look-review/ocr/boundary-00600.png",
+    "text": "9:41\n\nFe &\n\n5 left- 30s\n\nGroup - At table\n\n\u2014\n\nan\n\na\n\nce\n\nae\n\nvideo\n\n8mm Home Movie\n\nVHS Camcorder\n\nom\n\noO\n\n\u2014\n\n127.0.0.1\n\neee\n\n@\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 25,
+    "frame": "qa/05-photo-with-a-look-review/ocr/boundary-00750.png",
+    "text": "=>\n\n\u2014\n\n9:41\n\na)\n\n5 left- 30s\n\nGroup - At table\n\n\u2014 ii\n\n\u00b0-e\n\ny\n\na\n\n>\n\n4\n\nvioeo\n\n8mm Home Movie\n\nVHS Camcorder\n\n\\\n\n127.0.0.1\n\neee\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 25.766666666666666,
+    "frame": "qa/05-photo-with-a-look-review/ocr/boundary-00773.png",
+    "text": "=>\n\n\u2014\n\n9:41\n\na)\n\n5 left-30s\n\nGroup - At table\n\n\u2014 iii\n\n\u00b0-e\n\ny\n\na\n\n>\n\n4\n\nvioeo\n\n8mm Home Movie\n\nVHS Camcorder\n\n\\\n\n127.0.0.1\n\neee\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 25.8,
+    "frame": "qa/05-photo-with-a-look-review/ocr/boundary-00774.png",
+    "text": "<\n\n\u20144\n\noO\n\n127.0.0.1\n\n@\n\neee\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 30,
+    "frame": "qa/05-photo-with-a-look-review/ocr/boundary-00900.png",
+    "text": "9:41\n\nFr @\n\nyoo\n\nf \u00bb\n\n5 left-30s\n\nGroup - At table\n\nVv,\n\nChosen from a file\n\nCompact Distal\n\n8mm Home Movie\n\nVHS Camcorder\n\nCounts as one moment: 3 s in the film\n\nRetake\n\n& Seal\n\n[=\n\neee\n\n<\n\n\u2014\n\n127.0.0.1\n\n@\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 33.56666666666667,
+    "frame": "qa/05-photo-with-a-look-review/ocr/boundary-01007.png",
+    "text": "9:41\n\nFF @\n\nyoo\n\nf \u00bb\n\n5 left-30s\n\nGroup - At table\n\n7 f\n\nVv,\n\nChosen from a file\n\nCompact Distal\n\n8mm Home Movie\n\nVHS Camcorder\n\nCounts as one moment: 3 s in the film\n\nRetake\n\n& Seal\n\n[=\n\neee\n\n<\n\n\u2014\n\n127.0.0.1\n\n@\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 33.6,
+    "frame": "qa/05-photo-with-a-look-review/ocr/boundary-01008.png",
+    "text": "9:41\n\nFF &\u00ae\n\nSleft-30s\n\nGroup - At table\n\n7\n\n-\n\nChosen ae\n\n=\n\n8mm Home Movie\n\nVHS Camcorder\n\nCounts as one moment - 3 s in the film\n\nRetake\n\n& Seal\n\noO\n\neee\n\n<\n\nP\u20147\n\n127.0.0.1\n\n@\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 35,
+    "frame": "qa/05-photo-with-a-look-review/ocr/boundary-01050.png",
+    "text": "9:41\n\nFF &\u00ae\n\nSleft-30s\n\nGroup - At table\n\n7\n\n-\n\nChosen\n\n=\n\n8mm Home Movie\n\nVHS Camcorder\n\nCounts as one moment - 3 s in the film\n\nRetake\n\n& Seal\n\noO\n\neee\n\n<\n\nP\u20147\n\n127.0.0.1\n\n@\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 39.56666666666667,
+    "frame": "qa/05-photo-with-a-look-review/ocr/boundary-01187.png",
+    "text": "9:41\n\nFF &\u00ae\n\nSleft-30s\n\nGroup - At table\n\n7\n\n-\n\nChosen\n\n=\n\n8mm Home Movie\n\nVHS Camcorder\n\nCounts as one moment - 3 s in the film\n\nRetake\n\n& Seal\n\noO\n\neee\n\n<\n\nP\u20147\n\n127.0.0.1\n\n@\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 39.6,
+    "frame": "qa/05-photo-with-a-look-review/ocr/boundary-01188.png",
+    "text": "9:41\n\nFF @&\u00ae\n\n-_-\n\ni 5 left-30s\n\nGroup - At table\n\n/\n\ny\n\nis\n\n\u00bb\n\nChosen from a file\n\nUploading...\n\nom)\n\n\u2014\n\n127.0.0.1\n\n@\n\neee\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 40,
+    "frame": "qa/05-photo-with-a-look-review/ocr/boundary-01200.png",
+    "text": "9:41\n\nFF @&\u00ae\n\n<>\n\n-_-\n\ni 5 left-30s\n\nGroup - At table\n\n/\n\ny\n\nis\n\n\u00bb\n\nChosen from a file\n\nUploading...\n\nom)\n\n\u2014\n\n127.0.0.1\n\n@\n\neee\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 45,
+    "frame": "qa/05-photo-with-a-look-review/ocr/boundary-01350.png",
+    "text": "9:41\n\nFF @&\u00ae\n\n<=>\n\n-_-\n\ni 5 left-30s\n\nGroup - At table\n\n/\n\ny\n\nis\n\n\u00bb\n\nChosen from a file\n\nUploading...\n\nom)\n\n\u2014\n\n127.0.0.1\n\n@\n\neee\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 47.36666666666667,
+    "frame": "qa/05-photo-with-a-look-review/ocr/boundary-01421.png",
+    "text": "9:41\n\nFF @&\u00ae\n\n<>\n\n-_-\n\ni 5 left-30s\n\nGroup - At table\n\n/\n\ny\n\nis\n\n\u00bb\n\nChosen from a file\n\nUploading...\n\nom)\n\n\u2014\n\n127.0.0.1\n\n@\n\neee\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 47.4,
+    "frame": "qa/05-photo-with-a-look-review/ocr/boundary-01422.png",
+    "text": "9:41\n\nFA\n\nSealed\n\n4 left - finishing in the background\n\nsatanaiiteanaaaes\n\nNobody sees it before the film, not even\n\nyou.\n\n.\n\n<\n\noO\n\n\u2014\n\n127.0.0.1\n\n@\n\neee\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 48.36666666666667,
+    "frame": "qa/05-photo-with-a-look-review/ocr/boundary-01451.png",
+    "text": "9:41\n\nFA\n\nSealed\n\n4 left - finishing in the background\n\neaeeneaiitenaaaans\n\nNobody sees it before the film, not even\n\nyou.\n\n.\n\n<\n\noO\n\n\u2014\n\n127.0.0.1\n\n@\n\neee\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 48.4,
+    "frame": "qa/05-photo-with-a-look-review/ocr/boundary-01452.png",
+    "text": "9:41\n\nFQ\n\nSealed\n\n4 left - finishing in the background\n\na\n\n ceneniiaeaees\n\nNobody sees it before the film, not even\n\nyou.\n\n>\n\n<\n\n\u2014\n\noO\n\n127.0.0.1\n\n@\n\neee\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 50,
+    "frame": "qa/05-photo-with-a-look-review/ocr/boundary-01500.png",
+    "text": "9:41\n\nFQ\n\nSealed\n\n4 left - finishing in the background\n\na\n\n ceneniiaeaees\n\nNobody sees it before the film, not even\n\nyou.\n\n>\n\n<\n\n\u2014\n\noO\n\n127.0.0.1\n\n@\n\neee\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 54.96666666666667,
+    "frame": "qa/05-photo-with-a-look-review/ocr/boundary-01649.png",
+    "text": "9:41\n\nFQ\n\nSealed\n\n4 left - finishing in the background\n\n ceneniiaeaees\n\nNobody sees it before the film, not even\n\nyou.\n\n>\n\n<\n\n\u2014\n\noO\n\n127.0.0.1\n\n@\n\neee\n",
+    "forbidden_matches": []
+  }
+]

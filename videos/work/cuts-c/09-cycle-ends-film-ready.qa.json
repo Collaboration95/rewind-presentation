@@ -1,0 +1,60 @@
+{
+  "output": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/cuts-c/09-cycle-ends-film-ready.mp4",
+  "duration": 40,
+  "forbidden_text_hits": 0,
+  "ocr_samples": 40,
+  "audio": [
+    {
+      "output_in": 0,
+      "output_out": 8,
+      "external_audio": false,
+      "rms": 0.0,
+      "interior_silent_rms": 0.0,
+      "silent_pass": true
+    },
+    {
+      "output_in": 8,
+      "output_out": 16,
+      "external_audio": false,
+      "rms": 0.0,
+      "interior_silent_rms": 0.0,
+      "silent_pass": true
+    },
+    {
+      "output_in": 16,
+      "output_out": 24,
+      "external_audio": false,
+      "rms": 0.0,
+      "interior_silent_rms": 0.0,
+      "silent_pass": true
+    },
+    {
+      "output_in": 24,
+      "output_out": 32,
+      "external_audio": false,
+      "rms": 0.0,
+      "interior_silent_rms": 0.0,
+      "silent_pass": true
+    },
+    {
+      "output_in": 32,
+      "output_out": 40,
+      "external_audio": false,
+      "rms": 0.0,
+      "interior_silent_rms": 0.0,
+      "silent_pass": true
+    }
+  ],
+  "encoding_checks": {
+    "codec": true,
+    "profile": true,
+    "size": true,
+    "pixel_format": true,
+    "fps": true,
+    "frame_count": true,
+    "video_duration": true,
+    "container_duration": true,
+    "audio": true,
+    "audio_duration": true
+  }
+}

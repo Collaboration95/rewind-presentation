@@ -1,0 +1,37 @@
+@startuml
+!include _style.iuml
+title Design sequence · UC05–UC06 Contribute a photo within allowance
+hide footbox
+autonumber
+skinparam Padding 0
+skinparam sequence {
+ MessageSpacing 0
+ ParticipantPadding 5
+ BoxPadding 3
+}
+skinparam ParticipantFontSize 19
+skinparam SequenceGroupHeaderFontSize 19
+skinparam maxMessageSize 500
+skinparam sequenceMessageSpan true
+participant "direct-transfer.ts\n«module»" as D
+participant "real-routes.ts\n«module»" as API
+participant "Amazon S3\n«system»" as S3
+[-> D : transferContribution() · photo
+D -> API : POST /real/groups/:g/upload-intents
+API --> D : requestUploadIntent(): intent + presigned PUT
+D -> S3 : PUT photo bytes
+alt reply received
+ S3 --> D : x-amz-version-id
+else PUT reply lost
+ D -> API : GET intent; POST …/:id/reconcile
+ ref over API,S3 : reconcileUploadIntent(): exactly one matching version
+ API --> D : pinned version / failure
+end
+D -> API : POST …/upload-intents/:id/complete {versionId}
+ref over API,S3 : seq-capture-accept · pin, probe, atomic acceptance
+API --> D : completed receipt
+legend bottom
+CameraCaptureScreen → GroupCaptureView callback → submitPhotoContribution()
+→ runtime uploadClip() → transferContribution(). Processing: seq-capture-process.
+endlegend
+@enduml

@@ -1,0 +1,175 @@
+{
+  "output": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/cuts-b/08-weekly-reminder-review.mp4",
+  "frames": 1500,
+  "duration": 50.0,
+  "segments": [
+    {
+      "type": "phone",
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/08-reminder.mov",
+      "still": false,
+      "start": 180.0,
+      "end": 190.0,
+      "frames": 300,
+      "duration": 10.0,
+      "width": 1206,
+      "height": 2622,
+      "crop": null,
+      "masks": [],
+      "audio_file": null,
+      "audio_in": 0,
+      "gain": 1,
+      "source_audio": false,
+      "island": false,
+      "signature": {
+        "row": {
+          "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/08-reminder.mov",
+          "in": 180,
+          "out": 190,
+          "duration": 10,
+          "audio": false,
+          "note": "Settings scroll to Weekly reminder Off"
+        },
+        "source": [
+          "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/08-reminder.mov",
+          479108261,
+          1793027470106565481
+        ],
+        "audio": null
+      }
+    },
+    {
+      "type": "phone",
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/08-reminder.mov",
+      "still": false,
+      "start": 210.0,
+      "end": 216.0,
+      "frames": 180,
+      "duration": 6.0,
+      "width": 1206,
+      "height": 2622,
+      "crop": null,
+      "masks": [],
+      "audio_file": null,
+      "audio_in": 0,
+      "gain": 1,
+      "source_audio": false,
+      "island": false,
+      "signature": {
+        "row": {
+          "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/08-reminder.mov",
+          "in": 210,
+          "out": 216,
+          "duration": 6,
+          "audio": false,
+          "note": "Weekly reminder Off, cut before simultaneous toggle/install modal"
+        },
+        "source": [
+          "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/08-reminder.mov",
+          479108261,
+          1793027470106565481
+        ],
+        "audio": null
+      }
+    },
+    {
+      "type": "phone",
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/08-reminder.mov",
+      "still": false,
+      "start": 257.0,
+      "end": 269.0,
+      "frames": 360,
+      "duration": 12.0,
+      "width": 1206,
+      "height": 2622,
+      "crop": null,
+      "masks": [],
+      "audio_file": null,
+      "audio_in": 0,
+      "gain": 1,
+      "source_audio": false,
+      "island": false,
+      "signature": {
+        "row": {
+          "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/08-reminder.mov",
+          "in": 257,
+          "out": 269,
+          "duration": 12,
+          "audio": false,
+          "note": "Weekly reminder On after modal omission; no sign-out tail"
+        },
+        "source": [
+          "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/08-reminder.mov",
+          479108261,
+          1793027470106565481
+        ],
+        "audio": null
+      }
+    },
+    {
+      "type": "phone",
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/08-banner.mov",
+      "still": false,
+      "start": 1.0,
+      "end": 16.0,
+      "frames": 450,
+      "duration": 15.0,
+      "width": 1206,
+      "height": 2622,
+      "crop": null,
+      "masks": [],
+      "audio_file": null,
+      "audio_in": 0,
+      "gain": 1,
+      "source_audio": false,
+      "island": false,
+      "signature": {
+        "row": {
+          "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/08-banner.mov",
+          "in": 1,
+          "out": 16,
+          "duration": 15,
+          "audio": false,
+          "note": "Safe Home, actual banner arrival and departure"
+        },
+        "source": [
+          "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/08-banner.mov",
+          1849812,
+          1793028262145740563
+        ],
+        "audio": null
+      }
+    },
+    {
+      "type": "phone",
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/cuts-b/holds/08-home-final.png",
+      "still": true,
+      "start": 0.0,
+      "end": null,
+      "frames": 210,
+      "duration": 7.0,
+      "width": 1206,
+      "height": 2622,
+      "crop": null,
+      "masks": [],
+      "audio_file": null,
+      "audio_in": 0,
+      "gain": 1,
+      "source_audio": false,
+      "island": false,
+      "signature": {
+        "row": {
+          "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/cuts-b/holds/08-home-final.png",
+          "duration": 7,
+          "audio": false,
+          "note": "Last safe Home frame; total banner section 22s"
+        },
+        "source": [
+          "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/cuts-b/holds/08-home-final.png",
+          680706,
+          1793028798475222177
+        ],
+        "audio": null
+      }
+    }
+  ]
+}

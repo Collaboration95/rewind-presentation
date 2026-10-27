@@ -1,0 +1,47 @@
+@startuml
+!include _style.iuml
+' Speaker note: Problem: deliver committed chat changes to all connected authorized sessions in a group.
+' Speaker note: Candidates: polling clients, or group-scoped callback observers with SSE delivery.
+' Speaker note: Choice: RealtimeHub fans out after commit; durable message replay uses realtime_events, not hub memory.
+title Design class view · Chat event delivery
+skinparam nodesep 25
+skinparam ClassStereotypeFontSize 19
+skinparam ranksep 35
+class "chat-routes.ts\nPOST handlers" as POST <<publisher>> {
+  createChatMessage(...)
+  toggleChatReaction(...)
+}
+class RealtimeHub <<subject>> #F5F2E9 {
+  - subscribers: Map<string, Set<RealtimeEventWriter>>
+  + subscribe(groupId, writer): () => void
+  + publish(event): void
+  + subscriberCount(groupId?): number
+}
+interface "RealtimeEventWriter\n(function type)" as OBS <<observer>> #EEE7F3 {
+  (event: ChatMessageEvent | ChatReactionEvent): void
+}
+class "chat-routes.ts\nSSE callback" as SSE <<concrete observer>> #F5F2E9 {
+  writeEvent(event)
+  writeReaction(event)
+  subscribeToGroup(listener)
+}
+class "chat/index.ts" as CHAT <<module>> {
+  + createChatMessage(...)
+  + listChatEvents(...)
+}
+class realtime_events <<table>> #FCF7E7 {
+  id: BIGINT <<PK>>
+  message_id: TEXT <<FK, UNIQUE>>
+}
+POST -right-> RealtimeHub : publish after commit
+RealtimeHub "1" o-right- "0..*" OBS : group writers
+SSE .up.|> OBS
+SSE -left-> RealtimeHub : subscribe / unsubscribe
+POST -down-> CHAT : persist
+CHAT -right-> realtime_events : message events
+SSE -left-> CHAT : listChatEvents\n(Last-Event-ID)
+legend bottom
+  Each HTTP runtime owns one RealtimeHub; writers are callbacks, not observer classes.
+  Messages replay from realtime_events. Reactions do not move the replay cursor.
+endlegend
+@enduml

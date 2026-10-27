@@ -1,0 +1,237 @@
+{
+  "sampling": "One phone crop per output second; tesseract PSM 11; visual contact review supplements OCR.",
+  "patterns": [
+    "week\\s*\\d+\\s*(?:of|/|0f)\\s*4",
+    "minutes?\\s+until",
+    "moments?\\s+reset",
+    "resets?\\s+in\\s+1\\s*day",
+    "\\b(?:1|one)[ -]day\\s+cycle",
+    "cycle\\s+(?:length|duration)",
+    "save\\s+password",
+    "siri\\s+suggestions",
+    "recent\\s+searches"
+  ],
+  "forbidden_hits": [],
+  "frames": [
+    {
+      "second": 0,
+      "text": "9:41\n\nFF @\n\nGD\n\nThe little things v\n\nArchive\n\n1 film so far\n\nPREMIERE\n\nYour film is here\n\nCycle ended 26 Oct\n\nDb Play\n\n@\n\n(2)\n\n@\n\nHome\n\nChat\n\nArchive\n\noO\n\n!kuvm.cloudfront.net G\n\neee\n\nL\n\nt |\n"
+    },
+    {
+      "second": 1,
+      "text": "9:41\n\nFF @\n\nGD\n\nThe little things v\n\nArchive\n\n1 film so far\n\nPREMIERE\n\nYour film is here\n\nCycle ended 26 Oct\n\nDb Play\n\n@\n\n(2)\n\n@\n\nHome\n\nChat\n\nArchive\n\noO\n\n!kuvm.cloudfront.net G\n\neee\n\nL\n\nt |\n"
+    },
+    {
+      "second": 2,
+      "text": "9:41\n\nFF @\n\nGD\n\nThe little things v\n\nArchive\n\n1 film so far\n\nPREMIERE\n\nYour film is here\n\nCycle ended 26 Oct\n\nDb Play\n\n@\n\n(2)\n\n@\n\nHome\n\nChat\n\nArchive\n\noO\n\n!kuvm.cloudfront.net G\n\neee\n\nL\n\nt |\n"
+    },
+    {
+      "second": 3,
+      "text": "9:41\n\nFF @\n\nGD\n\nThe little things v\n\nArchive\n\n1 film so far\n\nPREMIERE\n\n\u2014\n\nYour film is here\n\nCycle ended 26 Oct\n\nDb Play\n\n@\n\n(2)\n\n@\n\nHome\n\nChat\n\nArchive\n\noO\n\n!kuvm.cloudfront.net G\n\neee\n\nL\n\nt |\n"
+    },
+    {
+      "second": 4,
+      "text": "9:41\n\nFe @\n\nGD\n\nThe little things v\n\nArchive\n\n1 film so far\n\nPREMIERE\n\nYour film is here\n\nCycle ended 26 Oct\n\nDb Play\n\n@\n\n(2)\n\n@\n\nHome\n\nChat\n\nArchive\n\noO\n\n!kuvm.cloudfront.net G\n\neee\n\nt |\n"
+    },
+    {
+      "second": 5,
+      "text": "9:41\n\nFe @\n\nGD\n\nThe little things v\n\nArchive\n\n1 film so far\n\nPREMIERE\n\n\u2014\u2014\n\nYour film is here\n\nCycle ended 26 Oct\n\nD Play\n\n@\n\n(2)\n\n@\n\nHome\n\nChat\n\nArchive\n\noO\n\n!kuvm.cloudfront.net G\n\neee\n\nt |\n"
+    },
+    {
+      "second": 6,
+      "text": "9:41\n\nFe @\n\nGD\n\nThe little things v\n\nArchive\n\n1 film so far\n\nPREMIERE\n\n\u2014\n\nYour film is here\n\nCycle ended 26 Oct\n\nD Play\n\n@\n\n(2)\n\n@\n\nHome\n\nChat\n\nArchive\n\noO\n\n!kuvm.cloudfront.net G\n\neee\n\nt |\n"
+    },
+    {
+      "second": 7,
+      "text": "9:41\n\nFe @\n\nGD\n\nThe little things v\n\nArchive\n\n1 film so far\n\nPREMIERE\n\nYour film is here\n\nCycle ended 26 Oct\n\nD Play\n\n@\n\n(2)\n\n@\n\nHome\n\nChat\n\nArchive\n\noO\n\n!kuvm.cloudfront.net G\n\neee\n\nt |\n"
+    },
+    {
+      "second": 8,
+      "text": "9:41\n\nPremiere\n\nOpening the film...\n\noO\n\n\u2014\n\neee\n\nkuvm.cloudfront.net G@\n"
+    },
+    {
+      "second": 9,
+      "text": "9:41\n\nPremiere\n\nI\n\noO\n\n\u2014\n\nkuvm.cloudfront.net G@\n\neee\n"
+    },
+    {
+      "second": 10,
+      "text": "9:41\n\nPremiere\n\nI\n\noO\n\n\u2014\n\nkuvm.cloudfront.net G@\n\neee\n"
+    },
+    {
+      "second": 11,
+      "text": "ee A\n\n\u2014\n"
+    },
+    {
+      "second": 12,
+      "text": "ee\n\n.)\n\ne\n\n\u00a3\n"
+    },
+    {
+      "second": 13,
+      "text": "Teen\n\nAe\n\n_\n\ny a\n\nak >\n\n- >.\n\nee ile? Oe\n\nwy\n\nSk.\n\nap\n\nTee)\n\naS\n\n8\n\naS\n\nam 5\n\nWy\n\n8)\n\na>\n\noe\n\nwi.\n\ne{ =>\n\n>\n\ney\n\nvo\n\n=>\n\n.s\n\n<s,\n\nos\n\n6.\n\n\u201c%\n\nee\n"
+    },
+    {
+      "second": 14,
+      "text": "ae\n\naS\n\nest/=\n\nak >\n\n- >.\n\nSS\n\nw\n\nSk.\n\napy)\n\nTee)\n\naS\n\n3\n\na\n\nga\n\na 5\n\niy\n\nWy\n\na)\n\na>\n\nae\n\nwk.\n\ne{ >\n\nae\n\nfo dans\n\n=>\n\n2\n\n<s,\n\noe\n\nSy\n\n\u201c%\n\nhet\n"
+    },
+    {
+      "second": 15,
+      "text": "EF\n\n\u2014\n\nTa\n"
+    },
+    {
+      "second": 16,
+      "text": "aS\n\nem a.\n\n>\n\nnay ay\n"
+    },
+    {
+      "second": 17,
+      "text": ""
+    },
+    {
+      "second": 18,
+      "text": "9:41\n\n> @\n\n(02\n"
+    },
+    {
+      "second": 19,
+      "text": "oO\n\neee\n\n\u2014\n\nkuvm.cloudfront.net @\n"
+    },
+    {
+      "second": 20,
+      "text": "=\n\n9:41\n\n>\n\n(62)\n\nSS\n\nPremiere\n\nThe end\n\nPremiere\n\nSave your own moments\n\nReport a moment\n\noO\n\n\u2014\n\nkuvm.cloudfront.net @\n\neee\n"
+    },
+    {
+      "second": 21,
+      "text": "=>\n\n9:41\n\n>\n\n(67)\n\nSS\n\nPremiere\n\nThe end\n\nPremiere\n\noeren\n\nSave your own moments\n\nReport a moment\n\noO\n\n\u2014\n\nkuvm.cloudfront.net @\n\neee\n"
+    },
+    {
+      "second": 22,
+      "text": "=>\n\n9:41\n\n>\n\n(67)\n\nSS\n\nPremiere\n\nThe end\n\nPremiere\n\naren\n\nSave your own moments\n\nReport a moment\n\noO\n\n\u2014\n\nkuvm.cloudfront.net @\n\neee\n"
+    },
+    {
+      "second": 23,
+      "text": "=>\n\n9:41\n\n>\n\n(67)\n\nSS\n\nPremiere\n\nThe end\n\nPremiere\n\naren\n\nSave your own moments\n\nReport a moment\n\noO\n\n\u2014\n\nkuvm.cloudfront.net @\n\neee\n"
+    },
+    {
+      "second": 24,
+      "text": "=>\n\n9:41\n\n>\n\n(67)\n\nSS\n\nPremiere\n\nThe end\n\nPremiere\n\naere=\n\nSave your own moments\n\nReport a moment\n\noO\n\n\u2014\n\nkuvm.cloudfront.net @\n\neee\n"
+    },
+    {
+      "second": 25,
+      "text": "=>\n\n9:41\n\n>\n\n(67)\n\nSS\n\nPremiere\n\nThe end\n\nPremiere\n\naere=\n\nSave your own moments\n\nReport a moment\n\noO\n\n\u2014\n\nkuvm.cloudfront.net @\n\neee\n"
+    },
+    {
+      "second": 26,
+      "text": "=>\n\n9:41\n\n>\n\n(67)\n\nSS\n\nPremiere\n\nThe end\n\nPremiere\n\naere=\n\nSave your own moments\n\nReport a moment\n\noO\n\n\u2014\n\nkuvm.cloudfront.net @\n\neee\n"
+    },
+    {
+      "second": 27,
+      "text": "4\n\nees\n\nPremiere\n\nx\n\nThe end\n\nPremiere\n\n\u00a9 Talk about it i\n\nhat\n\nGa\n\nSave your own moments\n\nReport a moment\n\noO\n\n\u2014\n\nkuvm.cloudfront.net @\n\neee\n"
+    },
+    {
+      "second": 28,
+      "text": "4\n\nees\n\nPremiere\n\nx\n\nThe end\n\nPremiere\n\n\u00a9 Talk about it i\n\nhat\n\nGa\n\nSave your own moments\n\nReport a moment\n\noO\n\n\u2014\n\nkuvm.cloudfront.net @\n\neee\n"
+    },
+    {
+      "second": 29,
+      "text": "9:41\n\na\n\nPremiere\n\nThe end\n\nPremiere\n\ny \\\n\n\u00a9 Replay\n\nSave your own moments\n\nReport a moment\n\noO\n\neee\n\n\u2014\n\nkuvm.cloudfront.net @\n"
+    },
+    {
+      "second": 30,
+      "text": "9:41\n\na\n\nPremiere\n\nThe end\n\nPremiere\n\ny \\\n\n\u00a9 Replay\n\nSave your own moments\n\nReport a moment\n\noO\n\neee\n\n\u2014\n\nkuvm.cloudfront.net @\n"
+    },
+    {
+      "second": 31,
+      "text": "9:41\n\na\n\nPremiere\n\nThe end\n\nPremiere\n\n\\\n\n=>\n\nSave your own moments\n\nReport a moment\n\noO\n\neee\n\n\u2014\n\nkuvm.cloudfront.net @\n"
+    },
+    {
+      "second": 32,
+      "text": "(a Cj)\n\nMS COO\n\nier\n\nDo you want to download \u201crewind-\n\ngroup-film-real-cycle-8a66da82-\n\nc634-4f47-9016-9d2d4f0b0dcec-202\n\n6-10-26-film-\n\nbae7047be8d5782f0db5ab95.mp4\u201d\n\non\n\n\u201cd2m6kz76y4kuvm.cloudfront.net\u201d?\n\nDownload\n\nSave your own moments\n\nReport a moment\n\nkuvm.cloudfront.net\n\nx\n\neee\n"
+    },
+    {
+      "second": 33,
+      "text": "(a Cj)\n\nMS COO\n\nier\n\nDo you want to download \u201crewind-\n\ngroup-film-real-cycle-8a66da82-\n\nc634-4f47-9016-9d2d4f0b0dcec-202\n\n6-10-26-film-\n\nbae7047be8d5782f0db5ab95.mp4\u201d\n\non\n\n\u201cd2m6kz76y4kuvm.cloudfront.net\u201d?\n\nDownload\n\nSave your own moments\n\nReport a moment\n\nkuvm.cloudfront.net\n\nx\n\neee\n"
+    },
+    {
+      "second": 34,
+      "text": "(a Cj)\n\nMS COO\n\nier\n\nDo you want to download \u201crewind-\n\ngroup-film-real-cycle-8a66da82-\n\nc634-4f47-9016-9d2d4f0b0dcec-202\n\n6-10-26-film-\n\nbae7047be8d5782f0db5ab95.mp4\u201d\n\non\n\n\u201cd2m6kz76y4kuvm.cloudfront.net\u201d?\n\nDownload\n\nSave your own moments\n\nReport a moment\n\nkuvm.cloudfront.net\n\nx\n\neee\n"
+    },
+    {
+      "second": 35,
+      "text": "(a Cj)\n\nMS COO\n\nier\n\nDo you want to download \u201crewind-\n\ngroup-film-real-cycle-8a66da82-\n\nc634-4f47-9016-9d2d4f0b0dcec-202\n\n6-10-26-film-\n\nbae7047be8d5782f0db5ab95.mp4\u201d\n\non\n\n\u201cd2m6kz76y4kuvm.cloudfront.net\u201d?\n\nDownload\n\nSave your own moments\n\nReport a moment\n\nkuvm.cloudfront.net\n\nx\n\neee\n"
+    },
+    {
+      "second": 36,
+      "text": "4\n\na\n\nPremiere\n\nThe end\n\nPremiere\n\nGe\u00bb\n\nSave your own moments\n\nReport a moment\n\n\u00b0e\n\nkuvm.cloudfront.net @\n\neee\n"
+    },
+    {
+      "second": 37,
+      "text": "SS\n\nPremiere\n\nThe end\n\nPremiere\n\nTalk about\n\nin Chat\n\nC\n\n@\n\nHide Distracting Items\n\nDownloads\n\n\u00a9\n\neee\n"
+    },
+    {
+      "second": 38,
+      "text": "SS\n\nPremiere\n\nThe end\n\nPremiere\n\nTalk about\n\nin Chat\n\n@\n\nHide Distracting Items\n\nDownloads\n\n\u00a9\n\neee\n"
+    },
+    {
+      "second": 39,
+      "text": "=>\n\n9:41\n\n>\n\n(62)\n\na\n\nPremiere\n\nThe end\n\nPremiere\n\nClie\n\nSave your own moments\n\nReport a moment\n\n\u00b0\n\nkuvm.cloudfront.net @\n\neee\n"
+    },
+    {
+      "second": 40,
+      "text": "=\n\n>\n\n9:41\n\nGa\u00bb\n\n>\n\n@\n\nDownloads\n\nwir\n\n|\n\nC\n\nQ\n\nrewind-group-film-real-cycle-8a...\n\nL\n"
+    },
+    {
+      "second": 41,
+      "text": "=>\n\n>\n\n9:41\n\naa\u00bb\n\n>\n\n(22)\n\nDownloads\n\nwid\n\ncon)\n\nC\n\nQ\n\nrewind-group-film-real-cycle-83..\n\nL\n"
+    },
+    {
+      "second": 42,
+      "text": "=>\n\n>\n\n9:41\n\naa\u00bb\n\n>\n\n(22)\n\nDownloads\n\nwid\n\ncon)\n\nC\n\nQ\n\nrewind-group-film-real-cycle-83..\n\nL\n"
+    },
+    {
+      "second": 43,
+      "text": "=>\n\n>\n\n9:41\n\naa\u00bb\n\n>\n\n(22)\n\nDownloads\n\nwid\n\ncon)\n\nC\n\nQ\n\nrewind-group-film-real-cycle-83..\n\nL\n"
+    },
+    {
+      "second": 44,
+      "text": "=>\n\n>\n\n9:41\n\naa\u00bb\n\n>\n\n(22)\n\nDownloads\n\nwid\n\ncon)\n\nC\n\nQ\n\nrewind-group-film-real-cycle-83..\n\nL\n"
+    },
+    {
+      "second": 45,
+      "text": "=>\n\n>\n\n9:41\n\naa\u00bb\n\n>\n\n(22)\n\nDownloads\n\nwid\n\ncon)\n\nC\n\nQ\n\nrewind-group-film-real-cycle-83..\n\nL\n"
+    },
+    {
+      "second": 46,
+      "text": "=>\n\n>\n\n9:41\n\naa\u00bb\n\n>\n\n(22)\n\nDownloads\n\nwid\n\ncon)\n\nC\n\nQ\n\nrewind-group-film-real-cycle-83..\n\nL\n"
+    },
+    {
+      "second": 47,
+      "text": "=>\n\n>\n\n9:41\n\naa\u00bb\n\n>\n\n(22)\n\nDownloads\n\nwid\n\ncon)\n\nC\n\nQ\n\nrewind-group-film-real-cycle-83..\n\nL\n"
+    },
+    {
+      "second": 48,
+      "text": "=>\n\n>\n\n9:41\n\naa\u00bb\n\n>\n\n(22)\n\nDownloads\n\nwid\n\ncon)\n\nC\n\nQ\n\nrewind-group-film-real-cycle-83..\n\nL\n"
+    },
+    {
+      "second": 49,
+      "text": "9:41\n\nFe @\n\nGa\u00bb\n\nThe little things v\n\nArchive\n\n1 film so far\n\nam\n\nPREMIERE\n\nYour film is here\n\nCycle ended 26 Oct\n\nD Play\n\nA)\n\n(2)\n\n@\n\nHome\n\nChat\n\nArchive\n\noO\n\n'kuvm.cloudfront.net G\n\neee\n\nt |\n"
+    },
+    {
+      "second": 50,
+      "text": "9:41\n\nFe @\n\nGa\u00bb\n\nThe little things v\n\nArchive\n\n1 film so far\n\nam\n\nPREMIERE\n\nYour film is here\n\nCycle ended 26 Oct\n\nD Play\n\nA)\n\n(2)\n\n@\n\nHome\n\nChat\n\nArchive\n\noO\n\n'kuvm.cloudfront.net G\n\neee\n\nt |\n"
+    },
+    {
+      "second": 51,
+      "text": "9:41\n\nFe @\n\nGa\u00bb\n\nThe little things v\n\nArchive\n\n1 film so far\n\nam\n\nPREMIERE\n\nYour film is here\n\nCycle ended 26 Oct\n\nD Play\n\nA)\n\n(2)\n\n@\n\nHome\n\nChat\n\nArchive\n\noO\n\n'kuvm.cloudfront.net G\n\neee\n\nt |\n"
+    },
+    {
+      "second": 52,
+      "text": "9:41\n\nFe @\n\nGa\u00bb\n\nThe little things v\n\nArchive\n\n1 film so far\n\nam\n\nPREMIERE\n\nYour film is here\n\nCycle ended 26 Oct\n\nD Play\n\nA)\n\n(2)\n\n@\n\nHome\n\nChat\n\nArchive\n\noO\n\n'kuvm.cloudfront.net G\n\neee\n\nt |\n"
+    },
+    {
+      "second": 53,
+      "text": "9:41\n\nFe @\n\nGa\u00bb\n\nThe little things v\n\nArchive\n\n1 film so far\n\nam\n\nPREMIERE\n\nYour film is here\n\nCycle ended 26 Oct\n\nD Play\n\nA)\n\n(2)\n\n@\n\nHome\n\nChat\n\nArchive\n\noO\n\n'kuvm.cloudfront.net G\n\neee\n\nt |\n"
+    },
+    {
+      "second": 54,
+      "text": "9:41\n\nFe @\n\nGa\u00bb\n\nThe little things v\n\nArchive\n\n1 film so far\n\nam\n\nPREMIERE\n\nYour film is here\n\nCycle ended 26 Oct\n\nD Play\n\nA)\n\n(2)\n\n@\n\nHome\n\nChat\n\nArchive\n\noO\n\n'kuvm.cloudfront.net G\n\neee\n\n\u20ac |\n"
+    }
+  ]
+}

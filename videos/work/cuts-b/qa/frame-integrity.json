@@ -1,0 +1,30 @@
+[
+  {
+    "file": "05-photo-with-a-look-review.mp4",
+    "frames_scanned": 1650,
+    "blank_phone_frames": [],
+    "min_phone_mean_luma": 38.05293062200957,
+    "last_phone_mean_luma": 50.01584928229665
+  },
+  {
+    "file": "06-video-and-allowance-review.mp4",
+    "frames_scanned": 1950,
+    "blank_phone_frames": [],
+    "min_phone_mean_luma": 40.30442583732057,
+    "last_phone_mean_luma": 227.45962918660288
+  },
+  {
+    "file": "08-weekly-reminder-review.mp4",
+    "frames_scanned": 1500,
+    "blank_phone_frames": [],
+    "min_phone_mean_luma": 224.54306220095694,
+    "last_phone_mean_luma": 224.7221889952153
+  },
+  {
+    "file": "12-outsider-denied-review.mp4",
+    "frames_scanned": 1500,
+    "blank_phone_frames": [],
+    "min_phone_mean_luma": 220.0559210526316,
+    "last_phone_mean_luma": 222.02601674641147
+  }
+]

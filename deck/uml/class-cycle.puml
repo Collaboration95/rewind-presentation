@@ -1,0 +1,63 @@
+@startuml
+!include _style.iuml
+skinparam Padding 0
+title Design classes · UC07–UC08 Close cycle and release film
+top to bottom direction
+skinparam nodesep 22
+skinparam ranksep 26
+class "scheduler.ts" as Scheduler <<module>> {
+  + runCycleSchedulerTick()
+}
+class "worker.ts" as Worker <<module>> {
+  + runWorkerTick()
+}
+class "lifecycle.ts" as Lifecycle <<module>> <<guarded state machine>> {
+  + advanceCycleLifecycleWithStore()
+  + publishCycleReleaseWithStore()
+  - ensureSuccessor()
+}
+class "compilation.ts" as Compilation <<module>> <<durable job queue>> {
+  + ensureCompilationJob()
+  + claimCompilationJob()
+  + processCompilationJobForWorker()
+  - publishCompilationOutput()
+}
+class "stored-output.ts" as Output <<module>> {
+  + verifyReadyJobOutput()
+}
+interface MediaStore <<interface>> <<strategy>> {
+  + read(scope: MediaScope, ref: MediaObjectRef)
+  + put(scope: MediaScope, input: MediaPut)
+}
+interface StoredJobOptions <<interface>> <<context>> {
+  + mediaEnvironment: string [0..1]
+}
+class PrivateS3MediaStore <<concrete strategy>> {
+  - transport: PrivateS3Transport
+  - options: PrivateS3Options
+}
+class "RewindDatabase\n(type: DatabaseSync)" as DB <<type alias>> {
+  + exec(sql: string): void
+  + prepare(sql: string): StatementSync
+}
+class "ffmpeg.ts" as FF <<module>> <<boundary>> {
+  + compileFilmWithFfmpeg()
+  + probeClipWithFfmpeg()
+}
+Scheduler ..> Lifecycle
+Scheduler ..> Worker
+Worker ..> Compilation
+Lifecycle ..> Compilation : ensure job
+Lifecycle ..> Output : verified proof
+Compilation ..> FF
+Compilation ..> DB
+Lifecycle ..> DB
+Output ..> StoredJobOptions : options
+StoredJobOptions "0..*" --> "0..1" MediaStore
+Output ..> MediaStore : verify stored output
+PrivateS3MediaStore ..|> MediaStore
+legend bottom
+State machine = persisted states + guards. Job queue = records + generation fence.
+Functions belong to «module» elements. Storage interface is the Strategy seam.
+endlegend
+@enduml

@@ -1,0 +1,32 @@
+@startuml
+!include _style.iuml
+skinparam Padding 0
+skinparam ranksep 20
+skinparam nodesep 18
+left to right direction
+title Use case model · UC01–UC03, UC10–UC11, UC14 Participate in a group
+actor "Account holder" as A
+actor Member as M
+actor Owner as O
+M --|> A
+O --|> M
+rectangle Rewind {
+ usecase "UC01\nSign in and out" as U1
+ usecase "UC02\nCreate / select group" as U2
+ usecase "UC03\nIssue / revoke / accept invite" as U3
+ usecase "UC10\nReminder preference / delivery" as U10
+ usecase "UC11\nPrivate chat" as U11
+ usecase "UC14\nInstall / update / open invite" as U14
+}
+actor "Amazon Cognito" as C <<system>>
+actor "Web push service" as P <<system>>
+A -- U1
+A -- U2
+A -- U3
+A -- U14
+M -- U10
+M -- U11
+O -- U3
+U1 -- C
+U10 -- P
+@enduml

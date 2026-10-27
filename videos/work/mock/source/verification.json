@@ -1,0 +1,122 @@
+[
+  {
+    "engine": "chromium",
+    "kind": "photo",
+    "state": {
+      "state": "flash",
+      "w": 402,
+      "h": 714,
+      "dpr": 3,
+      "time": 7
+    },
+    "errors": [],
+    "external": [],
+    "badText": [],
+    "video": []
+  },
+  {
+    "engine": "chromium",
+    "kind": "video",
+    "state": {
+      "state": "recording",
+      "w": 402,
+      "h": 714,
+      "dpr": 3,
+      "time": 10
+    },
+    "errors": [],
+    "external": [],
+    "badText": [],
+    "video": [
+      {
+        "width": 720,
+        "height": 1280,
+        "ready": 4,
+        "muted": true,
+        "paused": false,
+        "time": 1.328759
+      },
+      {
+        "width": 720,
+        "height": 1280,
+        "ready": 4,
+        "muted": true,
+        "paused": false,
+        "time": 1.33487
+      }
+    ]
+  },
+  {
+    "engine": "chromium",
+    "kind": "banner",
+    "state": {
+      "w": 402,
+      "h": 714,
+      "dpr": 3
+    },
+    "errors": [],
+    "external": [],
+    "badText": [],
+    "video": []
+  },
+  {
+    "engine": "webkit",
+    "kind": "photo",
+    "state": {
+      "state": "flash",
+      "w": 402,
+      "h": 714,
+      "dpr": 3,
+      "time": 7
+    },
+    "errors": [],
+    "external": [],
+    "badText": [],
+    "video": []
+  },
+  {
+    "engine": "webkit",
+    "kind": "video",
+    "state": {
+      "state": "recording",
+      "w": 402,
+      "h": 714,
+      "dpr": 3,
+      "time": 10
+    },
+    "errors": [],
+    "external": [],
+    "badText": [],
+    "video": [
+      {
+        "width": 720,
+        "height": 1280,
+        "ready": 4,
+        "muted": true,
+        "paused": false,
+        "time": 1.1886207076733624
+      },
+      {
+        "width": 720,
+        "height": 1280,
+        "ready": 4,
+        "muted": true,
+        "paused": false,
+        "time": 1.203983708613385
+      }
+    ]
+  },
+  {
+    "engine": "webkit",
+    "kind": "banner",
+    "state": {
+      "w": 402,
+      "h": 714,
+      "dpr": 3
+    },
+    "errors": [],
+    "external": [],
+    "badText": [],
+    "video": []
+  }
+]

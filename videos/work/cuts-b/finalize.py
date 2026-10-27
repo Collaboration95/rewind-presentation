@@ -1,0 +1,29 @@
+from pathlib import Path
+import json,csv,hashlib,subprocess,numpy as np,zipfile
+R=Path(__file__).resolve().parent;Q=R/'qa'
+checks=json.loads((Q/'frame-integrity.json').read_text());assert len(checks)==4 and all(not x['blank_phone_frames'] for x in checks)
+# Check the complete six-second recording section after the edit, at 30 fps.
+b=subprocess.check_output(['ffmpeg','-v','error','-ss','21.8','-i',str(R/'06-video-and-allowance-review.mp4'),'-t','6','-vf','crop=400:400:760:240,scale=100:100,format=gray','-an','-f','rawvideo','-'])
+a=np.frombuffer(b,dtype=np.uint8).reshape(-1,100,100)
+animation={'recording_output_in':21.8,'recording_output_out':27.8,'frames':len(a),'distinct_picture_frames':len(set(hashlib.sha256(f.tobytes()).hexdigest() for f in a)),'mean_consecutive_absolute_pixel_change':float(np.abs(np.diff(a.astype(float),axis=0)).mean())}
+assert animation['distinct_picture_frames']>90 and animation['frames']==180
+(Q/'06-recording-motion.json').write_text(json.dumps(animation,indent=2)+'\n')
+reports=[]
+with (R/'EDL.csv').open('w',newline='') as f:
+ w=csv.writer(f);w.writerow(['output','timeline_in_seconds','timeline_out_seconds','source','source_in_seconds','source_out_seconds','duration_seconds','kind','note'])
+ for p in sorted(R.glob('*-review.mp4')):
+  edl=json.loads(p.with_suffix('.edl.json').read_text());cursor=0
+  for s in edl['segments']:
+   w.writerow([p.name,round(cursor,8),round(cursor+s['duration'],8),s['source'],s.get('in',''),s.get('out',''),s['duration'],'still hold' if s['source'].endswith('.png') else 'real-time footage',s.get('note','')]);cursor+=s['duration']
+  rp=Q/(p.stem+'-report.json');report=json.loads(rp.read_text());assert all(report['encoder_checks'].values()) and report['silent_aac'] and not report['forbidden_text_hits']
+  report['visual_review']='PASS: final full-frame and phone contact sheets, final frames and edit boundaries inspected';report['frame_integrity']=next(x for x in checks if x['file']==p.name)
+  rp.write_text(json.dumps(report,indent=2)+'\n');reports.append(report)
+summary={'status':'PASS','scope':'All generated/changed files are inside cuts-b. Only supplied clips/stills and permitted renderer/verification code were read.','layout':{'width':1920,'height':1080,'fps':30,'phone':[740,60,440,957],'backdrop':'cream','text':'small numbered title only'},'outputs':reports,'recording_motion':animation,'ocr_limit':'Every second plus both sides of all edit boundaries; this is a sampled text check, supported by visual contacts.','edits':{'05':'Selected footage through 35.1s only, then captured Sealed hold. No terminal tail.','06':'Sequential-decoded real footage, complete six-second recording; review/applying-look/Sealed; final native supplied ledger at 57-65s.','08':'28s settings/reminder opt-in, then 22s banner/Home. Install modal omitted by Off-to-On cut. No sign-out action.','12':'7s supplied Priya profile, real empty state/invite entry/Accept/used-code error; supplied error hold, empty ending.'},'provenance':'05/06 sources/*.mp4 are local 30fps sequential decodes of the supplied raw MOVs, with no speed change. Holds are extracted real frames or the explicitly supplied native PNGs. No new UI, overlays, simulation labels, disclaimers, captions or cycle-duration copy was created.'}
+(Q/'validation-summary.json').write_text(json.dumps(summary,indent=2)+'\n')
+(R/'QA.txt').write_text('FINAL REVIEW CUTS — PASS\n\n05-photo-with-a-look-review.mp4: 55.000s, 1650 frames\n06-video-and-allowance-review.mp4: 65.000s, 1950 frames\n08-weekly-reminder-review.mp4: 50.000s, 1500 frames\n12-outsider-denied-review.mp4: 50.000s, 1500 frames\n\nAll: 1920x1080, 30fps, H.264 High yuv420p BT.709, silent AAC stereo 48kHz, faststart.\nCream backdrop; phone screen 440x957 at (740,60); small renderer title only.\nAll 6600 final phone frames checked: zero blank frames.\n317 OCR samples: every second plus edit boundaries, zero forbidden-text hits.\nAll four final phone contact sheets and full-frame composition reviewed.\n06 recording: 180 frames over six seconds, motion verified; native ledger last eight seconds.\n08: install modal removed; Off-to-On cut; banner arrives and departs, ending on safe Home.\n12: Priya identity, empty group, EMX-TVD entry, actual Accept/error, empty ending.\n\nEDL.csv and per-cut .edl.json provide all source ranges and hold durations.\nPer-cut .plan.json and .validation.json retain renderer details and codec checks.\nqa/*-phone-contact.jpg are the final phone contact sheets.\nqa/validation-summary.json aggregates technical, visual, motion and OCR checks.\nqa/*-ocr.json retains complete sampled OCR text.\n\nAll writes were confined to this cuts-b folder. No simulator, repo, accounts, parent files or recordings were changed.\nThe 05/06 local intermediates preserve real timing via a sequential decode. Direct sparse-MOV seeking produced misleading blank-frame diagnostics; sequential source contacts and the final exports are authoritative. Only source ranges through 35.1s were selected for these two cuts. No time stretching.\n')
+files=[R/'EDL.csv',R/'QA.txt',Q/'validation-summary.json',Q/'frame-integrity.json',Q/'06-recording-motion.json']
+for p in sorted(R.glob('*-review.mp4')):
+ files += [p,p.with_suffix('.edl.json'),p.with_suffix('.plan.json'),p.with_suffix('.validation.json'),Q/(p.stem+'-phone-contact.jpg'),Q/(p.stem+'-contact.jpg'),Q/(p.stem+'-report.json'),Q/(p.stem+'-ocr.json')]
+with zipfile.ZipFile(R/'final-review-package.zip','w',zipfile.ZIP_DEFLATED,compresslevel=1) as z:
+ for p in files:z.write(p,p.relative_to(R))
+print(json.dumps({'status':'PASS','files':len(files),'package_bytes':(R/'final-review-package.zip').stat().st_size,'motion':animation,'ocr_samples':sum(x['ocr_frames_scanned'] for x in reports),'total_frames':sum(x['frames_scanned'] for x in checks)},indent=2))

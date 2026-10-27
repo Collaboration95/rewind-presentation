@@ -1,0 +1,251 @@
+{
+  "output": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/cuts-a/01-install-to-home-screen-review.mp4",
+  "frames": 1350,
+  "duration": 45.0,
+  "segments": [
+    {
+      "type": "phone",
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/01-install-clean.mov",
+      "still": false,
+      "start": 0.0,
+      "end": 6.0,
+      "frames": 180,
+      "duration": 6.0,
+      "width": 1206,
+      "height": 2622,
+      "crop": null,
+      "masks": [],
+      "smooth": [],
+      "audio_file": null,
+      "audio_in": 0,
+      "gain": 1,
+      "source_audio": false,
+      "island": false,
+      "signature": {
+        "row": {
+          "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/01-install-clean.mov",
+          "in": 0,
+          "out": 6,
+          "duration": 6,
+          "audio": false,
+          "note": "Real Safari sign-in form; establish browser context"
+        },
+        "source": [
+          "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/01-install-clean.mov",
+          141540709,
+          1793025755838259609
+        ],
+        "audio": null
+      }
+    },
+    {
+      "type": "phone",
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/01-install-clean.mov",
+      "still": false,
+      "start": 8.0,
+      "end": 12.0,
+      "frames": 150,
+      "duration": 5.0,
+      "width": 1206,
+      "height": 2622,
+      "crop": null,
+      "masks": [],
+      "smooth": [],
+      "audio_file": null,
+      "audio_in": 0,
+      "gain": 1,
+      "source_audio": false,
+      "island": false,
+      "signature": {
+        "row": {
+          "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/01-install-clean.mov",
+          "in": 8,
+          "out": 12,
+          "duration": 5,
+          "audio": false,
+          "note": "Safari More menu opens; trim following idle pause"
+        },
+        "source": [
+          "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/01-install-clean.mov",
+          141540709,
+          1793025755838259609
+        ],
+        "audio": null
+      }
+    },
+    {
+      "type": "phone",
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/01-install-clean.mov",
+      "still": false,
+      "start": 47.0,
+      "end": 52.0,
+      "frames": 180,
+      "duration": 6.0,
+      "width": 1206,
+      "height": 2622,
+      "crop": null,
+      "masks": [],
+      "smooth": [],
+      "audio_file": null,
+      "audio_in": 0,
+      "gain": 1,
+      "source_audio": false,
+      "island": false,
+      "signature": {
+        "row": {
+          "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/01-install-clean.mov",
+          "in": 47,
+          "out": 52,
+          "duration": 6,
+          "audio": false,
+          "note": "Tap Share; native share sheet appears"
+        },
+        "source": [
+          "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/01-install-clean.mov",
+          141540709,
+          1793025755838259609
+        ],
+        "audio": null
+      }
+    },
+    {
+      "type": "phone",
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/01-install-clean.mov",
+      "still": false,
+      "start": 62.0,
+      "end": 67.0,
+      "frames": 180,
+      "duration": 6.0,
+      "width": 1206,
+      "height": 2622,
+      "crop": null,
+      "masks": [],
+      "smooth": [],
+      "audio_file": null,
+      "audio_in": 0,
+      "gain": 1,
+      "source_audio": false,
+      "island": false,
+      "signature": {
+        "row": {
+          "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/01-install-clean.mov",
+          "in": 62,
+          "out": 67,
+          "duration": 6,
+          "audio": false,
+          "note": "View More expands native Safari actions"
+        },
+        "source": [
+          "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/01-install-clean.mov",
+          141540709,
+          1793025755838259609
+        ],
+        "audio": null
+      }
+    },
+    {
+      "type": "phone",
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/stills/01-share-actions.png",
+      "still": true,
+      "start": 0.0,
+      "end": null,
+      "frames": 210,
+      "duration": 7.0,
+      "width": 1206,
+      "height": 2622,
+      "crop": null,
+      "masks": [],
+      "smooth": [],
+      "audio_file": null,
+      "audio_in": 0,
+      "gain": 1,
+      "source_audio": false,
+      "island": false,
+      "signature": {
+        "row": {
+          "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/stills/01-share-actions.png",
+          "duration": 7,
+          "audio": false,
+          "note": "Read Add to Home Screen in the real native action sheet",
+          "add_island": false
+        },
+        "source": [
+          "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/stills/01-share-actions.png",
+          898662,
+          1793025674665328890
+        ],
+        "audio": null
+      }
+    },
+    {
+      "type": "phone",
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/01-install-clean.mov",
+      "still": false,
+      "start": 86.0,
+      "end": 91.0,
+      "frames": 210,
+      "duration": 7.0,
+      "width": 1206,
+      "height": 2622,
+      "crop": null,
+      "masks": [],
+      "smooth": [],
+      "audio_file": null,
+      "audio_in": 0,
+      "gain": 1,
+      "source_audio": false,
+      "island": false,
+      "signature": {
+        "row": {
+          "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/01-install-clean.mov",
+          "in": 86,
+          "out": 91,
+          "duration": 7,
+          "audio": false,
+          "note": "Tap Add to Home Screen; real confirmation opens"
+        },
+        "source": [
+          "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/01-install-clean.mov",
+          141540709,
+          1793025755838259609
+        ],
+        "audio": null
+      }
+    },
+    {
+      "type": "phone",
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/01-install-clean.mov",
+      "still": false,
+      "start": 133.0,
+      "end": 136.1,
+      "frames": 240,
+      "duration": 8.0,
+      "width": 1206,
+      "height": 2622,
+      "crop": null,
+      "masks": [],
+      "smooth": [],
+      "audio_file": null,
+      "audio_in": 0,
+      "gain": 1,
+      "source_audio": false,
+      "island": false,
+      "signature": {
+        "row": {
+          "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/01-install-clean.mov",
+          "in": 133,
+          "out": 136.1,
+          "duration": 8,
+          "audio": false,
+          "note": "Tap Add; real installed iPhone Home Screen; hold final raw frame"
+        },
+        "source": [
+          "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/01-install-clean.mov",
+          141540709,
+          1793025755838259609
+        ],
+        "audio": null
+      }
+    }
+  ]
+}

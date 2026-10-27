@@ -1,0 +1,36 @@
+TITLE: Invite and join
+FCM: NON-DROP FRAME
+* 30 FPS; STRAIGHT CUTS; REAL FOOTAGE AT 1X; POSTROLL FREEZE WHERE NOTED
+* All source audio discarded; final AAC stereo is silent.
+* JSON EDL is authoritative for source in/out and postroll hold durations.
+
+001  AX       V     C        00:00:00:00 00:00:08:00 00:00:00:00 00:00:08:00
+* FROM CLIP NAME: 04-invite-code.png
+* Invite code EMX-TVD; start after initial one-person Settings
+
+002  AX       V     C        00:01:01:00 00:01:06:00 00:00:08:00 00:00:16:00
+* FROM CLIP NAME: 04-invite.mov
+* Share code opens real native share sheet
+* FREEZE LAST SAFE FRAME: 3.000000s
+
+003  AX       V     C        00:01:40:00 00:01:49:00 00:00:16:00 00:00:25:00
+* FROM CLIP NAME: 04-invite.mov
+* Read invitation share content and available destinations
+
+004  AX       V     C        00:01:49:00 00:01:50:15 00:00:25:00 00:00:33:00
+* FROM CLIP NAME: 04-invite.mov
+* Dismiss native share sheet back to invite; omit stale Members and Home
+* FREEZE LAST SAFE FRAME: 6.500000s
+
+005  AX       V     C        00:03:44:15 00:03:54:15 00:00:33:00 00:00:43:00
+* FROM CLIP NAME: 04-invite.mov
+* After join: Settings shows 2 of 5 members; no refresh/Home footage
+
+006  AX       V     C        00:03:54:15 00:03:57:00 00:00:43:00 00:00:53:00
+* FROM CLIP NAME: 04-invite.mov
+* Open fresh Members showing Maya and Jun
+* FREEZE LAST SAFE FRAME: 7.500000s
+
+007  AX       V     C        00:00:00:00 00:00:07:00 00:00:53:00 00:01:00:00
+* FROM CLIP NAME: 04-members-joined.png
+* End on verified joined-members still with both Maya and Jun

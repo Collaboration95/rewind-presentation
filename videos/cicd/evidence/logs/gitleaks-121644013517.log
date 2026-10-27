@@ -1,0 +1,364 @@
+Gitleaks full-history scan	Set up job	﻿2026-10-26T14:50:48.5084722Z Current runner version: '2.338.0'
+Gitleaks full-history scan	Set up job	2026-10-26T14:50:48.5121581Z ##[group]Runner Image Provisioner
+Gitleaks full-history scan	Set up job	2026-10-26T14:50:48.5123112Z Hosted Compute Agent
+Gitleaks full-history scan	Set up job	2026-10-26T14:50:48.5124229Z Version: 20261021.618
+Gitleaks full-history scan	Set up job	2026-10-26T14:50:48.5125227Z Commit: 21505ad2541d5be6135ed84fc33697146cf75b8e
+Gitleaks full-history scan	Set up job	2026-10-26T14:50:48.5126519Z Build Date: 2026-10-21T00:45:21Z
+Gitleaks full-history scan	Set up job	2026-10-26T14:50:48.5127577Z Worker ID: {ea5308aa-0f9e-4f8a-96ff-2dcc699c90d1}
+Gitleaks full-history scan	Set up job	2026-10-26T14:50:48.5128522Z Region: eastus
+Gitleaks full-history scan	Set up job	2026-10-26T14:50:48.5129079Z Cloud: Azure
+Gitleaks full-history scan	Set up job	2026-10-26T14:50:48.5129585Z ##[endgroup]
+Gitleaks full-history scan	Set up job	2026-10-26T14:50:48.5131534Z ##[group]Operating System
+Gitleaks full-history scan	Set up job	2026-10-26T14:50:48.5132242Z Ubuntu
+Gitleaks full-history scan	Set up job	2026-10-26T14:50:48.5132836Z 24.04.5
+Gitleaks full-history scan	Set up job	2026-10-26T14:50:48.5133372Z LTS
+Gitleaks full-history scan	Set up job	2026-10-26T14:50:48.5133890Z ##[endgroup]
+Gitleaks full-history scan	Set up job	2026-10-26T14:50:48.5134527Z ##[group]Runner Image
+Gitleaks full-history scan	Set up job	2026-10-26T14:50:48.5135161Z Image: ubuntu-24.04
+Gitleaks full-history scan	Set up job	2026-10-26T14:50:48.5135763Z Version: 20261012.334.1
+Gitleaks full-history scan	Set up job	2026-10-26T14:50:48.5136835Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261012.334/images/ubuntu/Ubuntu2404-Readme.md
+Gitleaks full-history scan	Set up job	2026-10-26T14:50:48.5139087Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261012.334
+Gitleaks full-history scan	Set up job	2026-10-26T14:50:48.5141053Z ##[endgroup]
+Gitleaks full-history scan	Set up job	2026-10-26T14:50:48.5143104Z ##[group]GITHUB_TOKEN Permissions
+Gitleaks full-history scan	Set up job	2026-10-26T14:50:48.5145896Z Contents: read
+Gitleaks full-history scan	Set up job	2026-10-26T14:50:48.5146952Z Metadata: read
+Gitleaks full-history scan	Set up job	2026-10-26T14:50:48.5147882Z SecurityEvents: write
+Gitleaks full-history scan	Set up job	2026-10-26T14:50:48.5148837Z ##[endgroup]
+Gitleaks full-history scan	Set up job	2026-10-26T14:50:48.5152062Z Secret source: Actions
+Gitleaks full-history scan	Set up job	2026-10-26T14:50:48.5153608Z Cache mode: write
+Gitleaks full-history scan	Set up job	2026-10-26T14:50:48.5155302Z Prepare workflow directory
+Gitleaks full-history scan	Set up job	2026-10-26T14:50:48.5490576Z Prepare all required actions
+Gitleaks full-history scan	Set up job	2026-10-26T14:50:48.5538623Z Getting action download info
+Gitleaks full-history scan	Set up job	2026-10-26T14:50:48.7975227Z Download action repository 'actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+Gitleaks full-history scan	Set up job	2026-10-26T14:50:48.9102483Z Download action repository 'actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a' (SHA:043fb46d1a93c77aae656e7c1c64a875d1fc6a0a)
+Gitleaks full-history scan	Set up job	2026-10-26T14:50:49.0351488Z Download action repository 'github/codeql-action@2892aa5e19bbd11bc0cff5427e3b750a04d9e3c2' (SHA:2892aa5e19bbd11bc0cff5427e3b750a04d9e3c2)
+Gitleaks full-history scan	Set up job	2026-10-26T14:50:49.4972950Z Complete job name: Gitleaks full-history scan
+Gitleaks full-history scan	Check out the complete history	﻿2026-10-26T14:50:49.6059099Z ##[group]Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:49.6061252Z with:
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:49.6062130Z   fetch-depth: 0
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:49.6063067Z   persist-credentials: false
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:49.6064185Z   repository: Collaboration95/rewind-app
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:49.6072970Z   token: ***
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:49.6073861Z   ssh-strict: true
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:49.6074786Z   ssh-user: git
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:49.6075641Z   clean: true
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:49.6076553Z   sparse-checkout-cone-mode: true
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:49.6077633Z   fetch-tags: false
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:49.6078540Z   show-progress: true
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:49.6079466Z   lfs: false
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:49.6080313Z   submodules: false
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:49.6081406Z   set-safe-directory: true
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:49.6082464Z   allow-unsafe-pr-checkout: false
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:49.6083819Z ##[endgroup]
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:49.7117816Z Syncing repository: Collaboration95/rewind-app
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:49.7122612Z ##[group]Getting Git version info
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:49.7125237Z Working directory is '/home/runner/work/rewind-app/rewind-app'
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:49.7128743Z [command]/usr/bin/git version
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:49.7171177Z git version 2.55.0
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:49.7198959Z ##[endgroup]
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:49.7208054Z Temporarily overriding HOME='/home/runner/work/_temp/f13b6202-16a7-4519-a6d6-9273b4115b2b' before making global git config changes
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:49.7213384Z Adding repository directory to the temporary git global config as a safe directory
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:49.7218041Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/rewind-app/rewind-app
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:49.7277249Z Deleting the contents of '/home/runner/work/rewind-app/rewind-app'
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:49.7281947Z ##[group]Determining repository object format
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:49.7299165Z ##[endgroup]
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:49.7301490Z ##[group]Initializing the repository
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:49.7303058Z [command]/usr/bin/git init /home/runner/work/rewind-app/rewind-app
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:49.7420236Z hint: Using 'master' as the name for the initial branch. This default branch name
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:49.7423715Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:49.7426864Z hint: to use in all of your new repositories, which will suppress this warning,
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:49.7429017Z hint: call:
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:49.7430454Z hint:
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:49.7432124Z hint: 	git config --global init.defaultBranch <name>
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:49.7433718Z hint:
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:49.7434998Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:49.7436939Z hint: 'development'. The just-created branch can be renamed via this command:
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:49.7438677Z hint:
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:49.7439607Z hint: 	git branch -m <name>
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:49.7440600Z hint:
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:49.7442868Z hint: Disable this message with "git config set advice.defaultBranchName false"
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:49.7446655Z Initialized empty Git repository in /home/runner/work/rewind-app/rewind-app/.git/
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:49.7455154Z [command]/usr/bin/git remote add origin https://github.com/Collaboration95/rewind-app
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:49.7515748Z ##[endgroup]
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:49.7518587Z ##[group]Disabling automatic garbage collection
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:49.7521232Z [command]/usr/bin/git config --local gc.auto 0
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:49.7566220Z ##[endgroup]
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:49.7568585Z ##[group]Setting up auth
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:49.7570343Z Removing SSH command configuration
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:49.7575062Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:49.7615104Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:49.8009896Z Removing HTTP extra header
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:49.8015287Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:49.8056210Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:49.8274820Z Removing includeIf entries pointing to credentials config files
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:49.8280493Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:49.8316953Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:49.8540602Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-14d83f66-309c-47eb-b428-b070d849488f.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:49.8582334Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/rewind-app/rewind-app/.git.path /home/runner/work/_temp/git-credentials-14d83f66-309c-47eb-b428-b070d849488f.config
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:49.8618587Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/rewind-app/rewind-app/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-14d83f66-309c-47eb-b428-b070d849488f.config
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:49.8656295Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-14d83f66-309c-47eb-b428-b070d849488f.config
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:49.8694050Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-14d83f66-309c-47eb-b428-b070d849488f.config
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:49.8727381Z ##[endgroup]
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:49.8728898Z ##[group]Fetching the repository
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:49.8735050Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules origin +refs/heads/*:refs/remotes/origin/* +refs/tags/*:refs/tags/* +5860b188af0e988ab74a8bcdbf524891744d0620:refs/remotes/pull/595/merge
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.4115894Z From https://github.com/Collaboration95/rewind-app
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.4117986Z  * [new branch]      codex/issue-305-canonical-url            -> origin/codex/issue-305-canonical-url
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.4119848Z  * [new branch]      codex/perf-profiling-review-267          -> origin/codex/perf-profiling-review-267
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.4121934Z  * [new branch]      codex/project11-ios-keyboard-accessibility -> origin/codex/project11-ios-keyboard-accessibility
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.4124178Z  * [new branch]      codex/revert-vigolium-dev-merge          -> origin/codex/revert-vigolium-dev-merge
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.4125811Z  * [new branch]      codex/sprint-audit-fixes                 -> origin/codex/sprint-audit-fixes
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.4127527Z  * [new branch]      codex/sprint-label-reconciliation        -> origin/codex/sprint-label-reconciliation
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.4129298Z  * [new branch]      codex/sprint2-workspace-snapshot         -> origin/codex/sprint2-workspace-snapshot
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.4130221Z  * [new branch]      codex/vigolium-agentic-coverage          -> origin/codex/vigolium-agentic-coverage
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.4131555Z  * [new branch]      codex/vigolium-agentic-provider          -> origin/codex/vigolium-agentic-provider
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.4132335Z  * [new branch]      codex/vigolium-dast-review               -> origin/codex/vigolium-dast-review
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.4133062Z  * [new branch]      codex/vigolium-dev-dast                  -> origin/codex/vigolium-dev-dast
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.4133927Z  * [new branch]      dependabot/docker/deploy/dev/docker-all-1301c15e82 -> origin/dependabot/docker/deploy/dev/docker-all-1301c15e82
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.4134978Z  * [new branch]      dependabot/github_actions/dev/actions-all-8370e00f6b -> origin/dependabot/github_actions/dev/actions-all-8370e00f6b
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.4136007Z  * [new branch]      dependabot/npm_and_yarn/dev/npm-all-b8472e6b91 -> origin/dependabot/npm_and_yarn/dev/npm-all-b8472e6b91
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.4136769Z  * [new branch]      dev                                      -> origin/dev
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.4137842Z  * [new branch]      docs/541-project-conduct-evidence        -> origin/docs/541-project-conduct-evidence
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.4138617Z  * [new branch]      docs/558-model-gaps-20261015             -> origin/docs/558-model-gaps-20261015
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.4139377Z  * [new branch]      docs/current-system-architecture         -> origin/docs/current-system-architecture
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.4140148Z  * [new branch]      docs/final-doc-links-20261015            -> origin/docs/final-doc-links-20261015
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.4211015Z  * [new branch]      docs/submission-database-20261015        -> origin/docs/submission-database-20261015
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.4212634Z  * [new branch]      docs/submission-devsecops-20261015       -> origin/docs/submission-devsecops-20261015
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.4214016Z  * [new branch]      docs/submission-guidance-20261015        -> origin/docs/submission-guidance-20261015
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.4215419Z  * [new branch]      docs/submission-index-20261015           -> origin/docs/submission-index-20261015
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.4216796Z  * [new branch]      docs/submission-models-20261015          -> origin/docs/submission-models-20261015
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.4218117Z  * [new branch]      docs/submission-scope-baseline           -> origin/docs/submission-scope-baseline
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.4219343Z  * [new branch]      exp/ci-prebatch                          -> origin/exp/ci-prebatch
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.4220572Z  * [new branch]      fix/587-focused-script-tests             -> origin/fix/587-focused-script-tests
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.4221955Z  * [new branch]      fix/588-chat-labels                      -> origin/fix/588-chat-labels
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.4223662Z  * [new branch]      fix/android-capture-capabilities         -> origin/fix/android-capture-capabilities
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.4224775Z  * [new branch]      fix/camera-capture                       -> origin/fix/camera-capture
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.4225468Z  * [new branch]      fix/native-photo-seal                    -> origin/fix/native-photo-seal
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.4226232Z  * [new branch]      fix/submission-e2e-group-journey-20261015 -> origin/fix/submission-e2e-group-journey-20261015
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.4226997Z  * [new branch]      guru/512-retire-hibernation              -> origin/guru/512-retire-hibernation
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.4227715Z  * [new branch]      guru/513-514-media-metrics-decisions     -> origin/guru/513-514-media-metrics-decisions
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.4228423Z  * [new branch]      guru/521-capture-regression              -> origin/guru/521-capture-regression
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.4229073Z  * [new branch]      guru/admin-table-browser                 -> origin/guru/admin-table-browser
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.4229719Z  * [new branch]      guru/browser-check-fixes                 -> origin/guru/browser-check-fixes
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.4230372Z  * [new branch]      guru/coverage-server-20261020            -> origin/guru/coverage-server-20261020
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.4231783Z  * [new branch]      guru/cull-dead-code-20261020             -> origin/guru/cull-dead-code-20261020
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.4232689Z  * [new branch]      guru/deps-roundup                        -> origin/guru/deps-roundup
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.4233349Z  * [new branch]      guru/devsecops-artifacts                 -> origin/guru/devsecops-artifacts
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.4234016Z  * [new branch]      guru/explainer-site                      -> origin/guru/explainer-site
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.4234684Z  * [new branch]      guru/explainer-site-update               -> origin/guru/explainer-site-update
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.4235403Z  * [new branch]      guru/followup-cleanup-20261021           -> origin/guru/followup-cleanup-20261021
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.4236273Z  * [new branch]      guru/home-build-tag-20261004             -> origin/guru/home-build-tag-20261004
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.4236989Z  * [new branch]      guru/hooks-unset-git-env                 -> origin/guru/hooks-unset-git-env
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.4237698Z  * [new branch]      guru/host-backups                        -> origin/guru/host-backups
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.4239357Z  * [new branch]      guru/hotfix-release-schema-version       -> origin/guru/hotfix-release-schema-version
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.4241172Z  * [new branch]      guru/lean-delivery-rules-20261004        -> origin/guru/lean-delivery-rules-20261004
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.4242526Z  * [new branch]      guru/load-test                           -> origin/guru/load-test
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.4243633Z  * [new branch]      guru/make-review                         -> origin/guru/make-review
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.4244849Z  * [new branch]      guru/media-integrity-once                -> origin/guru/media-integrity-once
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.4246104Z  * [new branch]      guru/night-a-capture                     -> origin/guru/night-a-capture
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.4247415Z  * [new branch]      guru/night-b-safety                      -> origin/guru/night-b-safety
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.4248704Z  * [new branch]      guru/night-c-polish                      -> origin/guru/night-c-polish
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.4250075Z  * [new branch]      guru/night-d-demo                        -> origin/guru/night-d-demo
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.4251548Z  * [new branch]      guru/password-eye-toggle                 -> origin/guru/password-eye-toggle
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.4252664Z  * [new branch]      guru/polish-batch                        -> origin/guru/polish-batch
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.4253652Z  * [new branch]      guru/postgres                            -> origin/guru/postgres
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.4254678Z  * [new branch]      guru/postgres-cutover                    -> origin/guru/postgres-cutover
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.4255853Z  * [new branch]      guru/postgres-rehearsal-notes            -> origin/guru/postgres-rehearsal-notes
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.4257344Z  * [new branch]      guru/presentation-pipeline-fixes         -> origin/guru/presentation-pipeline-fixes
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.4258861Z  * [new branch]      guru/project11-acceptance-batch-20261004 -> origin/guru/project11-acceptance-batch-20261004
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.4259997Z  * [new branch]      guru/release-up                          -> origin/guru/release-up
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.4260696Z  * [new branch]      guru/remove-cost-safety-audit            -> origin/guru/remove-cost-safety-audit
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.4261812Z  * [new branch]      guru/retro-before-upload                 -> origin/guru/retro-before-upload
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.4262507Z  * [new branch]      guru/run-real-short-cycle                -> origin/guru/run-real-short-cycle
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.4263216Z  * [new branch]      guru/simplify-refactor-20261020          -> origin/guru/simplify-refactor-20261020
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.4263904Z  * [new branch]      guru/walkthrough-fixes                   -> origin/guru/walkthrough-fixes
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.4264541Z  * [new branch]      guru/warm-glass-ui                       -> origin/guru/warm-glass-ui
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.4265177Z  * [new branch]      guru/wave2-observability                 -> origin/guru/wave2-observability
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.4265759Z  * [new branch]      main                                     -> origin/main
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.4266461Z  * [new branch]      ops/504-release-postgres-cutover-20261018 -> origin/ops/504-release-postgres-cutover-20261018
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.4267189Z  * [new branch]      pr-assets/night-a                        -> origin/pr-assets/night-a
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.4267788Z  * [new branch]      pr-assets/night-c                        -> origin/pr-assets/night-c
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.4268851Z  * [new branch]      pr-assets/night-d                        -> origin/pr-assets/night-d
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.4270058Z  * [new branch]      pr-assets/warm-glass-ui                  -> origin/pr-assets/warm-glass-ui
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.4271472Z  * [new branch]      submission/release-504-515-230           -> origin/submission/release-504-515-230
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.4272213Z  * [new branch]      test/527-hosted-20261015                 -> origin/test/527-hosted-20261015
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.4273156Z  * [new branch]      ui-concept/bibi45c-home-directions       -> origin/ui-concept/bibi45c-home-directions
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.4273961Z  * [new branch]      ui-concept/bibi45c-warm-glass-cleanup    -> origin/ui-concept/bibi45c-warm-glass-cleanup
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.4274705Z  * [new branch]      ui-concept/final-screens                 -> origin/ui-concept/final-screens
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.4275370Z  * [new branch]      ui-concept/home-atelier                  -> origin/ui-concept/home-atelier
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.4276027Z  * [new branch]      ui-concept/loi-darkroom                  -> origin/ui-concept/loi-darkroom
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.4276687Z  * [new branch]      wip/issue-230-environments               -> origin/wip/issue-230-environments
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.4277298Z  * [new tag]         apk-dev-1b70716                          -> apk-dev-1b70716
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.4277816Z  * [new tag]         apk-dev-7105328                          -> apk-dev-7105328
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.4278314Z  * [new tag]         apk-dev-e39f707                          -> apk-dev-e39f707
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.4278847Z  * [new tag]         demo-frozen-20261004                     -> demo-frozen-20261004
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.4279413Z  * [new tag]         pre-migration-squash                     -> pre-migration-squash
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.4279966Z  * [new ref]         5860b188af0e988ab74a8bcdbf524891744d0620 -> pull/595/merge
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.4281551Z ##[endgroup]
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.4282016Z ##[group]Determining the checkout info
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.4282486Z ##[endgroup]
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.4282829Z [command]/usr/bin/git sparse-checkout disable
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.4283661Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.4284815Z ##[group]Checking out the ref
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.4285277Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/595/merge
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.5198847Z Note: switching to 'refs/remotes/pull/595/merge'.
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.5199596Z 
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.5200203Z You are in 'detached HEAD' state. You can look around, make experimental
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.5201846Z changes and commit them, and you can discard any commits you make in this
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.5203143Z state without impacting any branches by switching back to a branch.
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.5203649Z 
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.5204028Z If you want to create a new branch to retain commits you create, you may
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.5204862Z do so (now or later) by using -c with the switch command. Example:
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.5205342Z 
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.5205559Z   git switch -c <new-branch-name>
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.5205889Z 
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.5206134Z Or undo this operation with:
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.5206499Z 
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.5206691Z   git switch -
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.5206927Z 
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.5207339Z Turn off this advice by setting config variable advice.detachedHead to false
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.5207891Z 
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.5208544Z HEAD is now at 5860b18 Merge 38593b225cf636062f2b1578ccfcc033f86fbd64 into 47ea5f0ec14c19d6c138876abd44837f598ebeee
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.5218526Z ##[endgroup]
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.5268199Z [command]/usr/bin/git log -1 --format=%H
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.5298767Z 5860b188af0e988ab74a8bcdbf524891744d0620
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.5309291Z ##[group]Removing auth
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.5309809Z Removing SSH command configuration
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.5313738Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.5348711Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.5574736Z Removing HTTP extra header
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.5578827Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.5613607Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.5837561Z Removing includeIf entries pointing to credentials config files
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.5842864Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.5879074Z includeif.gitdir:/home/runner/work/rewind-app/rewind-app/.git.path
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.5879802Z includeif.gitdir:/home/runner/work/rewind-app/rewind-app/.git/worktrees/*.path
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.5880387Z includeif.gitdir:/github/workspace/.git.path
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.5881164Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.5887681Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/rewind-app/rewind-app/.git.path
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.5914058Z /home/runner/work/_temp/git-credentials-14d83f66-309c-47eb-b428-b070d849488f.config
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.5927116Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/rewind-app/rewind-app/.git.path \/home\/runner\/work\/_temp\/git\-credentials\-14d83f66\-309c\-47eb\-b428\-b070d849488f\.config
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.5967588Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/rewind-app/rewind-app/.git/worktrees/*.path
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.5992784Z /home/runner/work/_temp/git-credentials-14d83f66-309c-47eb-b428-b070d849488f.config
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.6000424Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/rewind-app/rewind-app/.git/worktrees/*.path \/home\/runner\/work\/_temp\/git\-credentials\-14d83f66\-309c\-47eb\-b428\-b070d849488f\.config
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.6035911Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.6061993Z /github/runner_temp/git-credentials-14d83f66-309c-47eb-b428-b070d849488f.config
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.6069690Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-14d83f66\-309c\-47eb\-b428\-b070d849488f\.config
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.6107052Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.6132984Z /github/runner_temp/git-credentials-14d83f66-309c-47eb-b428-b070d849488f.config
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.6140918Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-14d83f66\-309c\-47eb\-b428\-b070d849488f\.config
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.6176297Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.6416367Z Removing credentials config '/home/runner/work/_temp/git-credentials-14d83f66-309c-47eb-b428-b070d849488f.config'
+Gitleaks full-history scan	Check out the complete history	2026-10-26T14:50:51.6428166Z ##[endgroup]
+Gitleaks full-history scan	Scan secrets with default rules and documented false positives	﻿2026-10-26T14:50:51.6642706Z ##[group]Run mkdir -p secret-results
+Gitleaks full-history scan	Scan secrets with default rules and documented false positives	2026-10-26T14:50:51.6643166Z ^[[36;1mmkdir -p secret-results^[[0m
+Gitleaks full-history scan	Scan secrets with default rules and documented false positives	2026-10-26T14:50:51.6643554Z ^[[36;1mdocker run --rm --user "$(id -u):$(id -g)" \^[[0m
+Gitleaks full-history scan	Scan secrets with default rules and documented false positives	2026-10-26T14:50:51.6643994Z ^[[36;1m  -v "$PWD:/repo" ghcr.io/gitleaks/gitleaks:v8.30.1 \^[[0m
+Gitleaks full-history scan	Scan secrets with default rules and documented false positives	2026-10-26T14:50:51.6644430Z ^[[36;1m  git /repo --redact --no-banner --exit-code 1 \^[[0m
+Gitleaks full-history scan	Scan secrets with default rules and documented false positives	2026-10-26T14:50:51.6644812Z ^[[36;1m  --config /repo/.gitleaks.toml \^[[0m
+Gitleaks full-history scan	Scan secrets with default rules and documented false positives	2026-10-26T14:50:51.6645274Z ^[[36;1m  --report-format sarif --report-path /repo/secret-results/gitleaks.sarif^[[0m
+Gitleaks full-history scan	Scan secrets with default rules and documented false positives	2026-10-26T14:50:51.6899295Z shell: /usr/bin/bash -e {0}
+Gitleaks full-history scan	Scan secrets with default rules and documented false positives	2026-10-26T14:50:51.6899799Z ##[endgroup]
+Gitleaks full-history scan	Scan secrets with default rules and documented false positives	2026-10-26T14:50:53.2378727Z Unable to find image 'ghcr.io/gitleaks/gitleaks:v8.30.1' locally
+Gitleaks full-history scan	Scan secrets with default rules and documented false positives	2026-10-26T14:50:53.4563520Z v8.30.1: Pulling from gitleaks/gitleaks
+Gitleaks full-history scan	Scan secrets with default rules and documented false positives	2026-10-26T14:50:53.5156360Z d49a2dee86fb: Pulling fs layer
+Gitleaks full-history scan	Scan secrets with default rules and documented false positives	2026-10-26T14:50:53.5157220Z d92b655ae8e2: Pulling fs layer
+Gitleaks full-history scan	Scan secrets with default rules and documented false positives	2026-10-26T14:50:53.5157981Z 61fdfd7c0175: Pulling fs layer
+Gitleaks full-history scan	Scan secrets with default rules and documented false positives	2026-10-26T14:50:53.5158745Z a43ab0c74cc4: Pulling fs layer
+Gitleaks full-history scan	Scan secrets with default rules and documented false positives	2026-10-26T14:50:53.5159201Z a43ab0c74cc4: Waiting
+Gitleaks full-history scan	Scan secrets with default rules and documented false positives	2026-10-26T14:50:53.5763548Z d49a2dee86fb: Download complete
+Gitleaks full-history scan	Scan secrets with default rules and documented false positives	2026-10-26T14:50:53.6227230Z d92b655ae8e2: Verifying Checksum
+Gitleaks full-history scan	Scan secrets with default rules and documented false positives	2026-10-26T14:50:53.6227751Z d92b655ae8e2: Download complete
+Gitleaks full-history scan	Scan secrets with default rules and documented false positives	2026-10-26T14:50:53.6567595Z 61fdfd7c0175: Verifying Checksum
+Gitleaks full-history scan	Scan secrets with default rules and documented false positives	2026-10-26T14:50:53.6568356Z 61fdfd7c0175: Download complete
+Gitleaks full-history scan	Scan secrets with default rules and documented false positives	2026-10-26T14:50:53.6692738Z a43ab0c74cc4: Verifying Checksum
+Gitleaks full-history scan	Scan secrets with default rules and documented false positives	2026-10-26T14:50:53.6693249Z a43ab0c74cc4: Download complete
+Gitleaks full-history scan	Scan secrets with default rules and documented false positives	2026-10-26T14:50:53.7159538Z d49a2dee86fb: Pull complete
+Gitleaks full-history scan	Scan secrets with default rules and documented false positives	2026-10-26T14:50:56.0007992Z d92b655ae8e2: Pull complete
+Gitleaks full-history scan	Scan secrets with default rules and documented false positives	2026-10-26T14:50:56.1236002Z 61fdfd7c0175: Pull complete
+Gitleaks full-history scan	Scan secrets with default rules and documented false positives	2026-10-26T14:50:56.1337843Z a43ab0c74cc4: Pull complete
+Gitleaks full-history scan	Scan secrets with default rules and documented false positives	2026-10-26T14:50:56.1379451Z Digest: sha256:c00b6bd0aeb3071cbcb79009cb16a60dd9e0a7c60e2be9ab65d25e6bc8abbb7f
+Gitleaks full-history scan	Scan secrets with default rules and documented false positives	2026-10-26T14:50:56.1393198Z Status: Downloaded newer image for ghcr.io/gitleaks/gitleaks:v8.30.1
+Gitleaks full-history scan	Scan secrets with default rules and documented false positives	2026-10-26T14:51:03.5703615Z ^[[90m2:51PM^[[0m ^[[32mINF^[[0m ^[[1m813 commits scanned.^[[0m
+Gitleaks full-history scan	Scan secrets with default rules and documented false positives	2026-10-26T14:51:03.5704595Z ^[[90m2:51PM^[[0m ^[[32mINF^[[0m ^[[1mscanned ~18843759 bytes (18.84 MB) in 6.74s^[[0m
+Gitleaks full-history scan	Scan secrets with default rules and documented false positives	2026-10-26T14:51:03.5705343Z ^[[90m2:51PM^[[0m ^[[32mINF^[[0m ^[[1mno leaks found^[[0m
+Gitleaks full-history scan	Retain the redacted SARIF report	﻿2026-10-26T14:51:03.6729095Z ##[group]Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+Gitleaks full-history scan	Retain the redacted SARIF report	2026-10-26T14:51:03.6729532Z with:
+Gitleaks full-history scan	Retain the redacted SARIF report	2026-10-26T14:51:03.6729790Z   name: gitleaks-5860b188af0e988ab74a8bcdbf524891744d0620
+Gitleaks full-history scan	Retain the redacted SARIF report	2026-10-26T14:51:03.6730133Z   path: secret-results/gitleaks.sarif
+Gitleaks full-history scan	Retain the redacted SARIF report	2026-10-26T14:51:03.6730399Z   if-no-files-found: warn
+Gitleaks full-history scan	Retain the redacted SARIF report	2026-10-26T14:51:03.6730622Z   retention-days: 30
+Gitleaks full-history scan	Retain the redacted SARIF report	2026-10-26T14:51:03.6731168Z   compression-level: 6
+Gitleaks full-history scan	Retain the redacted SARIF report	2026-10-26T14:51:03.6731411Z   overwrite: false
+Gitleaks full-history scan	Retain the redacted SARIF report	2026-10-26T14:51:03.6731626Z   include-hidden-files: false
+Gitleaks full-history scan	Retain the redacted SARIF report	2026-10-26T14:51:03.6731858Z   archive: true
+Gitleaks full-history scan	Retain the redacted SARIF report	2026-10-26T14:51:03.6732064Z ##[endgroup]
+Gitleaks full-history scan	Retain the redacted SARIF report	2026-10-26T14:51:03.8141899Z With the provided path, there will be 1 file uploaded
+Gitleaks full-history scan	Retain the redacted SARIF report	2026-10-26T14:51:03.8191563Z Artifact name is valid!
+Gitleaks full-history scan	Retain the redacted SARIF report	2026-10-26T14:51:03.8201774Z Root directory input is valid!
+Gitleaks full-history scan	Retain the redacted SARIF report	2026-10-26T14:51:04.0133136Z Uploading artifact: gitleaks-5860b188af0e988ab74a8bcdbf524891744d0620.zip
+Gitleaks full-history scan	Retain the redacted SARIF report	2026-10-26T14:51:04.0193389Z Beginning upload of artifact content to blob storage
+Gitleaks full-history scan	Retain the redacted SARIF report	2026-10-26T14:51:04.1022077Z Uploaded bytes 7063
+Gitleaks full-history scan	Retain the redacted SARIF report	2026-10-26T14:51:04.1193025Z Finished uploading artifact content to blob storage!
+Gitleaks full-history scan	Retain the redacted SARIF report	2026-10-26T14:51:04.1194105Z SHA256 digest of uploaded artifact is d42148efac67c15f00db17eff6504cc9fcc2139c88a0a2a4f5c674ac4b774555
+Gitleaks full-history scan	Retain the redacted SARIF report	2026-10-26T14:51:04.1195188Z Finalizing artifact upload
+Gitleaks full-history scan	Retain the redacted SARIF report	2026-10-26T14:51:04.5834099Z Artifact gitleaks-5860b188af0e988ab74a8bcdbf524891744d0620 successfully finalized. Artifact ID 12661101135
+Gitleaks full-history scan	Retain the redacted SARIF report	2026-10-26T14:51:04.5835899Z Artifact gitleaks-5860b188af0e988ab74a8bcdbf524891744d0620 has been successfully uploaded! Final size is 7063 bytes. Artifact ID is 12661101135
+Gitleaks full-history scan	Retain the redacted SARIF report	2026-10-26T14:51:04.5839205Z Artifact download URL: https://github.com/Collaboration95/rewind-app/actions/runs/40343459282/artifacts/12661101135
+Gitleaks full-history scan	Upload secrets to code scanning	﻿2026-10-26T14:51:04.6706101Z ##[group]Run github/codeql-action/upload-sarif@2892aa5e19bbd11bc0cff5427e3b750a04d9e3c2
+Gitleaks full-history scan	Upload secrets to code scanning	2026-10-26T14:51:04.6706588Z with:
+Gitleaks full-history scan	Upload secrets to code scanning	2026-10-26T14:51:04.6706809Z   sarif_file: secret-results/gitleaks.sarif
+Gitleaks full-history scan	Upload secrets to code scanning	2026-10-26T14:51:04.6707098Z   category: gitleaks
+Gitleaks full-history scan	Upload secrets to code scanning	2026-10-26T14:51:04.6707376Z   checkout_path: /home/runner/work/rewind-app/rewind-app
+Gitleaks full-history scan	Upload secrets to code scanning	2026-10-26T14:51:04.6709889Z   token: ***
+Gitleaks full-history scan	Upload secrets to code scanning	2026-10-26T14:51:04.6710096Z   matrix: null
+Gitleaks full-history scan	Upload secrets to code scanning	2026-10-26T14:51:04.6710310Z   wait-for-processing: true
+Gitleaks full-history scan	Upload secrets to code scanning	2026-10-26T14:51:04.6710559Z ##[endgroup]
+Gitleaks full-history scan	Upload secrets to code scanning	2026-10-26T14:51:04.9343476Z Job run UUID is 52a4bc71-1c58-443d-9c69-d002e92deb5a.
+Gitleaks full-history scan	Upload secrets to code scanning	2026-10-26T14:51:05.5949062Z Post-processing sarif files: ["secret-results/gitleaks.sarif"]
+Gitleaks full-history scan	Upload secrets to code scanning	2026-10-26T14:51:05.5956709Z Validating secret-results/gitleaks.sarif
+Gitleaks full-history scan	Upload secrets to code scanning	2026-10-26T14:51:05.6426959Z Adding fingerprints to SARIF file. See https://docs.github.com/en/code-security/reference/code-scanning/sarif-support-for-code-scanning#data-for-preventing-duplicated-alerts for more information.
+Gitleaks full-history scan	Upload secrets to code scanning	2026-10-26T14:51:05.6430359Z ##[group]Uploading code scanning results
+Gitleaks full-history scan	Upload secrets to code scanning	2026-10-26T14:51:05.6712294Z Uploading results
+Gitleaks full-history scan	Upload secrets to code scanning	2026-10-26T14:51:06.5313755Z Successfully uploaded results
+Gitleaks full-history scan	Upload secrets to code scanning	2026-10-26T14:51:06.5314547Z ##[endgroup]
+Gitleaks full-history scan	Upload secrets to code scanning	2026-10-26T14:51:06.5319204Z ##[group]Waiting for processing to finish
+Gitleaks full-history scan	Upload secrets to code scanning	2026-10-26T14:51:11.6698934Z Analysis upload status is complete.
+Gitleaks full-history scan	Upload secrets to code scanning	2026-10-26T14:51:11.6700003Z ##[endgroup]
+Gitleaks full-history scan	Summarise the secret scan	﻿2026-10-26T14:51:11.9847369Z ##[group]Run if [ -f secret-results/gitleaks.sarif ]; then
+Gitleaks full-history scan	Summarise the secret scan	2026-10-26T14:51:11.9847872Z ^[[36;1mif [ -f secret-results/gitleaks.sarif ]; then^[[0m
+Gitleaks full-history scan	Summarise the secret scan	2026-10-26T14:51:11.9848346Z ^[[36;1m  count="$(jq '[.runs[].results[]] | length' secret-results/gitleaks.sarif)"^[[0m
+Gitleaks full-history scan	Summarise the secret scan	2026-10-26T14:51:11.9849160Z ^[[36;1m  printf '### Gitleaks full history\n\n| Findings | Artifact |\n| ---: | --- |\n| %s | gitleaks.sarif (redacted) |\n' "$count" >> "$GITHUB_STEP_SUMMARY"^[[0m
+Gitleaks full-history scan	Summarise the secret scan	2026-10-26T14:51:11.9849829Z ^[[36;1melse^[[0m
+Gitleaks full-history scan	Summarise the secret scan	2026-10-26T14:51:11.9850259Z ^[[36;1m  echo 'Gitleaks produced no SARIF; inspect the scan step failure.' >> "$GITHUB_STEP_SUMMARY"^[[0m
+Gitleaks full-history scan	Summarise the secret scan	2026-10-26T14:51:11.9850748Z ^[[36;1mfi^[[0m
+Gitleaks full-history scan	Summarise the secret scan	2026-10-26T14:51:11.9913145Z shell: /usr/bin/bash -e {0}
+Gitleaks full-history scan	Summarise the secret scan	2026-10-26T14:51:11.9913452Z env:
+Gitleaks full-history scan	Summarise the secret scan	2026-10-26T14:51:11.9913788Z   CODEQL_ACTION_JOB_RUN_UUID: 52a4bc71-1c58-443d-9c69-d002e92deb5a
+Gitleaks full-history scan	Summarise the secret scan	2026-10-26T14:51:11.9914251Z   CODEQL_ACTION_FEATURE_MULTI_LANGUAGE: false
+Gitleaks full-history scan	Summarise the secret scan	2026-10-26T14:51:11.9914617Z   CODEQL_ACTION_FEATURE_SANDWICH: false
+Gitleaks full-history scan	Summarise the secret scan	2026-10-26T14:51:11.9915002Z   CODEQL_ACTION_FEATURE_SARIF_COMBINE: true
+Gitleaks full-history scan	Summarise the secret scan	2026-10-26T14:51:11.9915362Z   CODEQL_ACTION_FEATURE_WILL_UPLOAD: true
+Gitleaks full-history scan	Summarise the secret scan	2026-10-26T14:51:11.9915703Z   CODEQL_ACTION_VERSION: 4.38.2
+Gitleaks full-history scan	Summarise the secret scan	2026-10-26T14:51:11.9916137Z   CODEQL_ACTION_ANALYSIS_KEY: .github/workflows/secret-scan.yml:gitleaks
+Gitleaks full-history scan	Summarise the secret scan	2026-10-26T14:51:11.9916653Z   CODEQL_WORKFLOW_STARTED_AT: 2026-10-26T14:51:04.933Z
+Gitleaks full-history scan	Summarise the secret scan	2026-10-26T14:51:11.9917193Z   CODEQL_UPLOAD_SARIF_GITLEAKS__GITLEAKS: CODEQL_UPLOAD_SARIF_GITLEAKS__GITLEAKS
+Gitleaks full-history scan	Summarise the secret scan	2026-10-26T14:51:11.9917855Z ##[endgroup]
+Gitleaks full-history scan	Post Upload secrets to code scanning	﻿2026-10-26T14:51:12.0120738Z Post job cleanup.
+Gitleaks full-history scan	Post Upload secrets to code scanning	2026-10-26T14:51:12.2628628Z ##[group]Uploading combined SARIF debug artifact
+Gitleaks full-history scan	Post Upload secrets to code scanning	2026-10-26T14:51:12.2631870Z ##[endgroup]
+Gitleaks full-history scan	Post Check out the complete history	﻿2026-10-26T14:51:12.2818020Z Post job cleanup.
+Gitleaks full-history scan	Post Check out the complete history	2026-10-26T14:51:12.3754913Z [command]/usr/bin/git version
+Gitleaks full-history scan	Post Check out the complete history	2026-10-26T14:51:12.3799275Z git version 2.55.0
+Gitleaks full-history scan	Post Check out the complete history	2026-10-26T14:51:12.3837803Z Temporarily overriding HOME='/home/runner/work/_temp/75b6dbcb-34e2-4fc0-827a-4a516478fe4c' before making global git config changes
+Gitleaks full-history scan	Post Check out the complete history	2026-10-26T14:51:12.3839123Z Adding repository directory to the temporary git global config as a safe directory
+Gitleaks full-history scan	Post Check out the complete history	2026-10-26T14:51:12.3844544Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/rewind-app/rewind-app
+Gitleaks full-history scan	Post Check out the complete history	2026-10-26T14:51:12.3880586Z Removing SSH command configuration
+Gitleaks full-history scan	Post Check out the complete history	2026-10-26T14:51:12.3888095Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Gitleaks full-history scan	Post Check out the complete history	2026-10-26T14:51:12.3942112Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Gitleaks full-history scan	Post Check out the complete history	2026-10-26T14:51:12.4209102Z Removing HTTP extra header
+Gitleaks full-history scan	Post Check out the complete history	2026-10-26T14:51:12.4216880Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Gitleaks full-history scan	Post Check out the complete history	2026-10-26T14:51:12.4271964Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Gitleaks full-history scan	Post Check out the complete history	2026-10-26T14:51:12.4575058Z Removing includeIf entries pointing to credentials config files
+Gitleaks full-history scan	Post Check out the complete history	2026-10-26T14:51:12.4583923Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Gitleaks full-history scan	Post Check out the complete history	2026-10-26T14:51:12.4629608Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Gitleaks full-history scan	Complete job	﻿2026-10-26T14:51:12.5030466Z Cleaning up orphan processes

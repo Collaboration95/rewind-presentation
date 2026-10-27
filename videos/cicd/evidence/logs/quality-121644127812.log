@@ -1,0 +1,224 @@
+Production dependency audit	Set up job	﻿2026-10-26T14:51:00.5809818Z Current runner version: '2.338.0'
+Production dependency audit	Set up job	2026-10-26T14:51:00.5826691Z ##[group]Runner Image Provisioner
+Production dependency audit	Set up job	2026-10-26T14:51:00.5827202Z Hosted Compute Agent
+Production dependency audit	Set up job	2026-10-26T14:51:00.5827675Z Version: 20261021.618
+Production dependency audit	Set up job	2026-10-26T14:51:00.5828040Z Commit: 21505ad2541d5be6135ed84fc33697146cf75b8e
+Production dependency audit	Set up job	2026-10-26T14:51:00.5828482Z Build Date: 2026-10-21T00:45:21Z
+Production dependency audit	Set up job	2026-10-26T14:51:00.5828868Z Worker ID: {d8391b05-1103-4d74-bf85-280ca2970245}
+Production dependency audit	Set up job	2026-10-26T14:51:00.5829260Z Region: southcentralus
+Production dependency audit	Set up job	2026-10-26T14:51:00.5829665Z Cloud: Azure
+Production dependency audit	Set up job	2026-10-26T14:51:00.5829983Z ##[endgroup]
+Production dependency audit	Set up job	2026-10-26T14:51:00.5831024Z ##[group]Operating System
+Production dependency audit	Set up job	2026-10-26T14:51:00.5831389Z Ubuntu
+Production dependency audit	Set up job	2026-10-26T14:51:00.5831693Z 24.04.5
+Production dependency audit	Set up job	2026-10-26T14:51:00.5832077Z LTS
+Production dependency audit	Set up job	2026-10-26T14:51:00.5832377Z ##[endgroup]
+Production dependency audit	Set up job	2026-10-26T14:51:00.5832718Z ##[group]Runner Image
+Production dependency audit	Set up job	2026-10-26T14:51:00.5833074Z Image: ubuntu-24.04
+Production dependency audit	Set up job	2026-10-26T14:51:00.5833403Z Version: 20261012.334.1
+Production dependency audit	Set up job	2026-10-26T14:51:00.5834349Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261012.334/images/ubuntu/Ubuntu2404-Readme.md
+Production dependency audit	Set up job	2026-10-26T14:51:00.5835349Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261012.334
+Production dependency audit	Set up job	2026-10-26T14:51:00.5835895Z ##[endgroup]
+Production dependency audit	Set up job	2026-10-26T14:51:00.5836583Z ##[group]GITHUB_TOKEN Permissions
+Production dependency audit	Set up job	2026-10-26T14:51:00.5837688Z Contents: read
+Production dependency audit	Set up job	2026-10-26T14:51:00.5838017Z Metadata: read
+Production dependency audit	Set up job	2026-10-26T14:51:00.5838387Z ##[endgroup]
+Production dependency audit	Set up job	2026-10-26T14:51:00.5839568Z Secret source: Actions
+Production dependency audit	Set up job	2026-10-26T14:51:00.5840169Z Cache mode: write
+Production dependency audit	Set up job	2026-10-26T14:51:00.5840571Z Prepare workflow directory
+Production dependency audit	Set up job	2026-10-26T14:51:00.6036263Z Prepare all required actions
+Production dependency audit	Set up job	2026-10-26T14:51:00.6069762Z Getting action download info
+Production dependency audit	Set up job	2026-10-26T14:51:00.8662459Z Download action repository 'actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+Production dependency audit	Set up job	2026-10-26T14:51:00.9309850Z Download action repository 'actions/setup-node@820762786026740c76f36085b0efc47a31fe5020' (SHA:820762786026740c76f36085b0efc47a31fe5020)
+Production dependency audit	Set up job	2026-10-26T14:51:01.0167061Z Download action repository 'actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a' (SHA:043fb46d1a93c77aae656e7c1c64a875d1fc6a0a)
+Production dependency audit	Set up job	2026-10-26T14:51:01.2288347Z Complete job name: Production dependency audit
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	﻿2026-10-26T14:51:01.2802896Z ##[group]Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:01.2803429Z with:
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:01.2803667Z   persist-credentials: false
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:01.2804216Z   repository: Collaboration95/rewind-app
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:01.2806348Z   token: ***
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:01.2806580Z   ssh-strict: true
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:01.2806816Z   ssh-user: git
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:01.2807046Z   clean: true
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:01.2807287Z   sparse-checkout-cone-mode: true
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:01.2807570Z   fetch-depth: 1
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:01.2807808Z   fetch-tags: false
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:01.2808045Z   show-progress: true
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:01.2808288Z   lfs: false
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:01.2808513Z   submodules: false
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:01.2808755Z   set-safe-directory: true
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:01.2809046Z   allow-unsafe-pr-checkout: false
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:01.2809408Z ##[endgroup]
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:01.3458023Z Syncing repository: Collaboration95/rewind-app
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:01.3459594Z ##[group]Getting Git version info
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:01.3460329Z Working directory is '/home/runner/work/rewind-app/rewind-app'
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:01.3461142Z [command]/usr/bin/git version
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:01.3519354Z git version 2.55.0
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:01.3533392Z ##[endgroup]
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:01.3545612Z Temporarily overriding HOME='/home/runner/work/_temp/15417811-7552-4115-9b38-25d4448f9b73' before making global git config changes
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:01.3547177Z Adding repository directory to the temporary git global config as a safe directory
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:01.3548494Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/rewind-app/rewind-app
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:01.3594837Z Deleting the contents of '/home/runner/work/rewind-app/rewind-app'
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:01.3597587Z ##[group]Determining repository object format
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:01.3598773Z ##[endgroup]
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:01.3599401Z ##[group]Initializing the repository
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:01.3602233Z [command]/usr/bin/git init /home/runner/work/rewind-app/rewind-app
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:01.3687294Z hint: Using 'master' as the name for the initial branch. This default branch name
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:01.3688565Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:01.3689400Z hint: to use in all of your new repositories, which will suppress this warning,
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:01.3690201Z hint: call:
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:01.3690789Z hint:
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:01.3691442Z hint: 	git config --global init.defaultBranch <name>
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:01.3691949Z hint:
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:01.3692398Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:01.3693103Z hint: 'development'. The just-created branch can be renamed via this command:
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:01.3693653Z hint:
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:01.3694504Z hint: 	git branch -m <name>
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:01.3695097Z hint:
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:01.3695674Z hint: Disable this message with "git config set advice.defaultBranchName false"
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:01.3696591Z Initialized empty Git repository in /home/runner/work/rewind-app/rewind-app/.git/
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:01.3698194Z [command]/usr/bin/git remote add origin https://github.com/Collaboration95/rewind-app
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:01.3744839Z ##[endgroup]
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:01.3745376Z ##[group]Disabling automatic garbage collection
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:01.3748918Z [command]/usr/bin/git config --local gc.auto 0
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:01.3780756Z ##[endgroup]
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:01.3781797Z ##[group]Setting up auth
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:01.3782279Z Removing SSH command configuration
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:01.3787335Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:01.3827760Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:01.4110786Z Removing HTTP extra header
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:01.4116047Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:01.4148057Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:01.4318978Z Removing includeIf entries pointing to credentials config files
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:01.4324236Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:01.4354133Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:01.4527992Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-1a39674a-b97a-4359-be19-6786d70eb234.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:01.4561977Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/rewind-app/rewind-app/.git.path /home/runner/work/_temp/git-credentials-1a39674a-b97a-4359-be19-6786d70eb234.config
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:01.4591863Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/rewind-app/rewind-app/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-1a39674a-b97a-4359-be19-6786d70eb234.config
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:01.4623283Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-1a39674a-b97a-4359-be19-6786d70eb234.config
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:01.4651219Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-1a39674a-b97a-4359-be19-6786d70eb234.config
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:01.4677047Z ##[endgroup]
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:01.4677494Z ##[group]Fetching the repository
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:01.4681740Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +5860b188af0e988ab74a8bcdbf524891744d0620:refs/remotes/pull/595/merge
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:02.2436847Z From https://github.com/Collaboration95/rewind-app
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:02.2438604Z  * [new ref]         5860b188af0e988ab74a8bcdbf524891744d0620 -> pull/595/merge
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:02.2441246Z ##[endgroup]
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:02.2442169Z ##[group]Determining the checkout info
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:02.2443169Z ##[endgroup]
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:02.2445672Z [command]/usr/bin/git sparse-checkout disable
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:02.2488116Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:02.2515268Z ##[group]Checking out the ref
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:02.2517272Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/595/merge
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:02.3109726Z Note: switching to 'refs/remotes/pull/595/merge'.
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:02.3110529Z 
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:02.3111006Z You are in 'detached HEAD' state. You can look around, make experimental
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:02.3112260Z changes and commit them, and you can discard any commits you make in this
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:02.3113428Z state without impacting any branches by switching back to a branch.
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:02.3114302Z 
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:02.3114779Z If you want to create a new branch to retain commits you create, you may
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:02.3115830Z do so (now or later) by using -c with the switch command. Example:
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:02.3116440Z 
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:02.3116713Z   git switch -c <new-branch-name>
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:02.3117143Z 
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:02.3117489Z Or undo this operation with:
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:02.3118075Z 
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:02.3118478Z   git switch -
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:02.3118985Z 
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:02.3119613Z Turn off this advice by setting config variable advice.detachedHead to false
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:02.3120488Z 
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:02.3121471Z HEAD is now at 5860b18 Merge 38593b225cf636062f2b1578ccfcc033f86fbd64 into 47ea5f0ec14c19d6c138876abd44837f598ebeee
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:02.3124952Z ##[endgroup]
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:02.3158941Z [command]/usr/bin/git log -1 --format=%H
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:02.3182520Z 5860b188af0e988ab74a8bcdbf524891744d0620
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:02.3189828Z ##[group]Removing auth
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:02.3191236Z Removing SSH command configuration
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:02.3192949Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:02.3220537Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:02.3385530Z Removing HTTP extra header
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:02.3387640Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:02.3414447Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:02.3579780Z Removing includeIf entries pointing to credentials config files
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:02.3582063Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:02.3607793Z includeif.gitdir:/home/runner/work/rewind-app/rewind-app/.git.path
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:02.3609786Z includeif.gitdir:/home/runner/work/rewind-app/rewind-app/.git/worktrees/*.path
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:02.3611579Z includeif.gitdir:/github/workspace/.git.path
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:02.3612995Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:02.3616600Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/rewind-app/rewind-app/.git.path
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:02.3636214Z /home/runner/work/_temp/git-credentials-1a39674a-b97a-4359-be19-6786d70eb234.config
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:02.3705235Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/rewind-app/rewind-app/.git.path \/home\/runner\/work\/_temp\/git\-credentials\-1a39674a\-b97a\-4359\-be19\-6786d70eb234\.config
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:02.3712478Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/rewind-app/rewind-app/.git/worktrees/*.path
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:02.3733802Z /home/runner/work/_temp/git-credentials-1a39674a-b97a-4359-be19-6786d70eb234.config
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:02.3741668Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/rewind-app/rewind-app/.git/worktrees/*.path \/home\/runner\/work\/_temp\/git\-credentials\-1a39674a\-b97a\-4359\-be19\-6786d70eb234\.config
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:02.3770927Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:02.3791445Z /github/runner_temp/git-credentials-1a39674a-b97a-4359-be19-6786d70eb234.config
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:02.3797115Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-1a39674a\-b97a\-4359\-be19\-6786d70eb234\.config
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:02.4072545Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:02.4093857Z /github/runner_temp/git-credentials-1a39674a-b97a-4359-be19-6786d70eb234.config
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:02.4100542Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-1a39674a\-b97a\-4359\-be19\-6786d70eb234\.config
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:02.4356045Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:02.4520046Z Removing credentials config '/home/runner/work/_temp/git-credentials-1a39674a-b97a-4359-be19-6786d70eb234.config'
+Production dependency audit	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:02.4527847Z ##[endgroup]
+Production dependency audit	Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020	﻿2026-10-26T14:51:02.4775196Z ##[group]Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+Production dependency audit	Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020	2026-10-26T14:51:02.4776191Z with:
+Production dependency audit	Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020	2026-10-26T14:51:02.4776729Z   node-version-file: .nvmrc
+Production dependency audit	Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020	2026-10-26T14:51:02.4777392Z   check-latest: false
+Production dependency audit	Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020	2026-10-26T14:51:02.4782648Z   token: ***
+Production dependency audit	Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020	2026-10-26T14:51:02.4783217Z   package-manager-cache: true
+Production dependency audit	Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020	2026-10-26T14:51:02.4783872Z ##[endgroup]
+Production dependency audit	Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020	2026-10-26T14:51:02.5559647Z Node version file is not JSON file
+Production dependency audit	Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020	2026-10-26T14:51:02.5560782Z Resolved .nvmrc as 22.23.3
+Production dependency audit	Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020	2026-10-26T14:51:02.5574245Z Found in cache @ /opt/hostedtoolcache/node/22.23.3/x64
+Production dependency audit	Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020	2026-10-26T14:51:02.5576219Z ##[group]Environment details
+Production dependency audit	Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020	2026-10-26T14:51:02.8245265Z node: v22.23.3
+Production dependency audit	Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020	2026-10-26T14:51:02.8245744Z npm: 10.9.9
+Production dependency audit	Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020	2026-10-26T14:51:02.8245990Z yarn: 1.22.22
+Production dependency audit	Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020	2026-10-26T14:51:02.8246514Z ##[endgroup]
+Production dependency audit	Audit production dependencies and retain JSON	﻿2026-10-26T14:51:02.8359616Z ##[group]Run mkdir -p coverage
+Production dependency audit	Audit production dependencies and retain JSON	2026-10-26T14:51:02.8359907Z ^[[36;1mmkdir -p coverage^[[0m
+Production dependency audit	Audit production dependencies and retain JSON	2026-10-26T14:51:02.8360158Z ^[[36;1mnpm audit --omit=dev --audit-level=high --json > coverage/npm-audit.json^[[0m
+Production dependency audit	Audit production dependencies and retain JSON	2026-10-26T14:51:02.8560952Z shell: /usr/bin/bash -e {0}
+Production dependency audit	Audit production dependencies and retain JSON	2026-10-26T14:51:02.8561181Z ##[endgroup]
+Production dependency audit	Summarise dependency audit	﻿2026-10-26T14:51:04.3034530Z ##[group]Run python3 scripts/quality-summary.py audit
+Production dependency audit	Summarise dependency audit	2026-10-26T14:51:04.3034936Z ^[[36;1mpython3 scripts/quality-summary.py audit^[[0m
+Production dependency audit	Summarise dependency audit	2026-10-26T14:51:04.3088865Z shell: /usr/bin/bash -e {0}
+Production dependency audit	Summarise dependency audit	2026-10-26T14:51:04.3089030Z ##[endgroup]
+Production dependency audit	Retain dependency audit	﻿2026-10-26T14:51:04.3414735Z ##[group]Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+Production dependency audit	Retain dependency audit	2026-10-26T14:51:04.3414985Z with:
+Production dependency audit	Retain dependency audit	2026-10-26T14:51:04.3415117Z   name: quality-npm-audit
+Production dependency audit	Retain dependency audit	2026-10-26T14:51:04.3415257Z   path: coverage/npm-audit.json
+Production dependency audit	Retain dependency audit	2026-10-26T14:51:04.3415394Z   if-no-files-found: warn
+Production dependency audit	Retain dependency audit	2026-10-26T14:51:04.3415514Z   retention-days: 30
+Production dependency audit	Retain dependency audit	2026-10-26T14:51:04.3415631Z   compression-level: 6
+Production dependency audit	Retain dependency audit	2026-10-26T14:51:04.3415744Z   overwrite: false
+Production dependency audit	Retain dependency audit	2026-10-26T14:51:04.3415870Z   include-hidden-files: false
+Production dependency audit	Retain dependency audit	2026-10-26T14:51:04.3415996Z   archive: true
+Production dependency audit	Retain dependency audit	2026-10-26T14:51:04.3416107Z ##[endgroup]
+Production dependency audit	Retain dependency audit	2026-10-26T14:51:04.4340409Z With the provided path, there will be 1 file uploaded
+Production dependency audit	Retain dependency audit	2026-10-26T14:51:04.4341127Z Artifact name is valid!
+Production dependency audit	Retain dependency audit	2026-10-26T14:51:04.4341403Z Root directory input is valid!
+Production dependency audit	Retain dependency audit	2026-10-26T14:51:04.7330049Z Uploading artifact: quality-npm-audit.zip
+Production dependency audit	Retain dependency audit	2026-10-26T14:51:04.7353866Z Beginning upload of artifact content to blob storage
+Production dependency audit	Retain dependency audit	2026-10-26T14:51:04.9156636Z Uploaded bytes 316
+Production dependency audit	Retain dependency audit	2026-10-26T14:51:04.9607246Z Finished uploading artifact content to blob storage!
+Production dependency audit	Retain dependency audit	2026-10-26T14:51:04.9608488Z SHA256 digest of uploaded artifact is dc97cceacb5beafd038c12b2b70f6920e046d826daf4681073f89eeb44f78d5d
+Production dependency audit	Retain dependency audit	2026-10-26T14:51:04.9609261Z Finalizing artifact upload
+Production dependency audit	Retain dependency audit	2026-10-26T14:51:05.4996365Z Artifact quality-npm-audit successfully finalized. Artifact ID 12659802287
+Production dependency audit	Retain dependency audit	2026-10-26T14:51:05.4996926Z Artifact quality-npm-audit has been successfully uploaded! Final size is 316 bytes. Artifact ID is 12659802287
+Production dependency audit	Retain dependency audit	2026-10-26T14:51:05.4999031Z Artifact download URL: https://github.com/Collaboration95/rewind-app/actions/runs/40343459119/artifacts/12659802287
+Production dependency audit	Post Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020	﻿2026-10-26T14:51:05.5119694Z Post job cleanup.
+Production dependency audit	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	﻿2026-10-26T14:51:05.5984449Z Post job cleanup.
+Production dependency audit	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:05.6506979Z [command]/usr/bin/git version
+Production dependency audit	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:05.6536275Z git version 2.55.0
+Production dependency audit	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:05.6557895Z Temporarily overriding HOME='/home/runner/work/_temp/d037a1b3-691e-4e22-978b-896ebd2ee057' before making global git config changes
+Production dependency audit	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:05.6558729Z Adding repository directory to the temporary git global config as a safe directory
+Production dependency audit	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:05.6560795Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/rewind-app/rewind-app
+Production dependency audit	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:05.6586942Z Removing SSH command configuration
+Production dependency audit	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:05.6590549Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Production dependency audit	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:05.6616787Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Production dependency audit	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:05.6840149Z Removing HTTP extra header
+Production dependency audit	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:05.6866592Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Production dependency audit	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:05.6945761Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Production dependency audit	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:05.7259162Z Removing includeIf entries pointing to credentials config files
+Production dependency audit	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:05.7270580Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Production dependency audit	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:05.7329558Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Production dependency audit	Complete job	﻿2026-10-26T14:51:05.7693691Z Cleaning up orphan processes

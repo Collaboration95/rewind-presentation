@@ -1,0 +1,97 @@
+{
+  "number": 11,
+  "name": "Archive and save",
+  "title_card": false,
+  "output": "11-archive-and-save.mp4",
+  "notes": [
+    "55 seconds, entirely silent AAC. Raw 11 first read only after 11-done.txt existed. All film frames are actual native footage; brief playback montage, no replacement film. Real Save -> Download confirmation -> Safari completed 5.2 MB download list. Save Password prompt and entire tail after Downloads omitted. Closing Archive is explicitly an editorial still, not an additional recorded navigation."
+  ],
+  "segments": [
+    {
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/11-archive-save.mov",
+      "in": 46,
+      "duration": 8,
+      "audio": false,
+      "note": "Read real Archive card: Your film is here, Cycle ended 26 Oct. No Home shot.",
+      "out": 54
+    },
+    {
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/11-archive-save.mov",
+      "in": 54,
+      "duration": 4,
+      "audio": false,
+      "note": "Actual Play and loading transition to native player.",
+      "out": 58
+    },
+    {
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/11-archive-save.mov",
+      "in": 59,
+      "duration": 3,
+      "audio": false,
+      "note": "Brief actual native film: first photo into second contribution; silent by choice.",
+      "out": 62
+    },
+    {
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/11-archive-save.mov",
+      "in": 74,
+      "duration": 3,
+      "audio": false,
+      "note": "Brief actual native film near ending; playback shortened for Archive/Save focus.",
+      "out": 77
+    },
+    {
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/11-archive-save.mov",
+      "in": 178.5,
+      "duration": 3,
+      "audio": false,
+      "note": "Actual native Close returning to real app end UI.",
+      "out": 181.5
+    },
+    {
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/11-archive-save.mov",
+      "in": 184,
+      "duration": 6,
+      "audio": false,
+      "note": "Read actual The end / Replay / Save film screen.",
+      "out": 190
+    },
+    {
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/11-archive-save.mov",
+      "in": 190.5,
+      "duration": 5,
+      "audio": false,
+      "note": "Actual Save film action and Saving/Saved state. Final 0.1 s held; stops before any browser prompt transition.",
+      "out": 195.4
+    },
+    {
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/11-archive-save.mov",
+      "in": 294.2,
+      "duration": 5,
+      "audio": false,
+      "note": "Real Safari download confirmation and Download acceptance. Password interlude entirely omitted.",
+      "out": 299.2
+    },
+    {
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/11-archive-save.mov",
+      "in": 333.5,
+      "duration": 4,
+      "audio": false,
+      "note": "Actual Safari page menu Downloads action and completed-list transition.",
+      "out": 337.5
+    },
+    {
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/stills/11-downloaded.png",
+      "in": 0,
+      "duration": 8,
+      "audio": false,
+      "note": "Parent clean actual phone proof: completed film in Safari Downloads, 5.2 MB. Entire later Files/Spotlight tail omitted."
+    },
+    {
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/stills/11-archive.png",
+      "in": 0,
+      "duration": 6,
+      "audio": false,
+      "note": "Closing real Archive card still; editorial return to feature context, no fabricated tap."
+    }
+  ]
+}

@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Rewind · UI flow mapped to the cycle statechart</title>
+<style>
+@font-face{font-family:"Fraunces";src:url(fonts/Fraunces.ttf) format("truetype");font-weight:100 900;font-display:block}
+@font-face{font-family:"Geist";src:url(fonts/Geist.ttf) format("truetype");font-weight:100 900;font-display:block}
+@font-face{font-family:"DM Mono";src:url(fonts/DMMono-Regular.ttf) format("truetype");font-weight:400;font-display:block}
+@font-face{font-family:"DM Mono";src:url(fonts/DMMono-Medium.ttf) format("truetype");font-weight:500;font-display:block}
+:root{
+  --bg:#f6ede3;--ink:#33231a;--muted:rgba(51,35,26,.74);--line:rgba(51,35,26,.12);
+  --accent:#e0703a;--accentInk:#a84a1a;--peachTop:#ffd2a6;--peachBottom:#ff9f6b;--peachSoft:#ffd9b0;
+  --sheet:rgba(255,250,244,.92);--danger:#c2452f;--dangerInk:#8f2615;
+  --serif:"Fraunces",Georgia,serif;--sans:"Geist",-apple-system,"Helvetica Neue",Arial,sans-serif;--mono:"DM Mono",ui-monospace,Menlo,monospace;
+}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;background:var(--bg);overflow:hidden}
+body{font-family:var(--sans);color:var(--ink);-webkit-font-smoothing:antialiased}
+#stage{position:absolute;left:50%;top:50%;width:1280px;height:720px;transform-origin:0 0;overflow:hidden;
+  background:
+   radial-gradient(520px 420px at 14% 52%,rgba(255,159,107,.38),transparent 70%),
+   radial-gradient(560px 380px at 72% 18%,rgba(255,210,166,.55),transparent 70%),
+   radial-gradient(500px 360px at 88% 92%,rgba(233,180,76,.20),transparent 70%),var(--bg)}
+button{font:inherit;color:inherit;cursor:pointer}
+
+/* header */
+header{position:absolute;left:32px;right:32px;top:14px;height:76px}
+.titles{position:absolute;left:0;right:0;top:4px}
+.kicker{font:500 15px/18px var(--mono);letter-spacing:1.2px;text-transform:uppercase;color:var(--accentInk)}
+h1{margin:10px 0 0;font:500 28px/34px var(--serif);font-variation-settings:"SOFT" 100,"opsz" 40;letter-spacing:-.3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+nav{position:absolute;right:0;top:0;display:flex;gap:8px}
+nav button{border:1px solid var(--line);background:rgba(255,250,244,.7);border-radius:999px;padding:5px 13px;font:600 15px/18px var(--sans);display:flex;gap:7px;align-items:center}
+nav button b{font:500 15px var(--mono);color:var(--accentInk)}
+nav button.on{background:linear-gradient(180deg,var(--peachTop),var(--peachBottom));border-color:transparent;color:#2a1a10}
+nav button.on b{color:#2a1a10}
+nav .sep{width:1px;background:var(--line);margin:4px 2px}
+
+/* phone */
+.phone{--w:280px;position:relative;width:calc(var(--w) + var(--w)*0.086);padding:calc(var(--w)*0.043);border-radius:calc(var(--w)*0.165);
+  background:linear-gradient(145deg,#4a423d,#1c1917 40%,#2b2622);box-shadow:0 0 0 1.5px #6e655e inset,0 18px 40px rgba(80,40,10,.28),0 3px 8px rgba(0,0,0,.18)}
+.screen{position:relative;width:var(--w);height:calc(var(--w)*774/402);border-radius:calc(var(--w)*0.125);overflow:hidden;background:#f6ede3}
+.sb{position:absolute;inset:0 0 auto;height:calc(var(--w)*54/402);display:flex;align-items:center;justify-content:space-between;padding:0 calc(var(--w)*0.085) 0 calc(var(--w)*0.105);
+  font:600 calc(var(--w)*16/402)/1 -apple-system,"SF Pro Text","Helvetica Neue",Arial,sans-serif;color:#000;background:#f6ede3;z-index:2}
+.sb.dark{background:#140d09;color:#fff}
+.sb .island{position:absolute;left:50%;top:calc(var(--w)*11/402);width:calc(var(--w)*0.31);height:calc(var(--w)*0.09);transform:translateX(-50%);background:#000;border-radius:999px}
+.sb svg{height:calc(var(--w)*12/402);width:auto;display:block}
+.sb .icons{display:flex;gap:calc(var(--w)*5/402);align-items:center}
+.screen .shot{position:absolute;left:0;right:0;bottom:0;top:calc(var(--w)*54/402);overflow:hidden}
+.screen .shot img{display:block;width:100%;height:100%;object-fit:cover}
+.screen .home-ind{position:absolute;left:50%;bottom:calc(var(--w)*7/402);width:34%;height:calc(var(--w)*5/402);transform:translateX(-50%);border-radius:9px;background:rgba(0,0,0,.55);z-index:3}
+.screen .home-ind.light{background:rgba(255,255,255,.7)}
+.server{position:absolute;inset:calc(var(--w)*54/402) 0 0;background:#1d1410;color:#f8ece0;padding:calc(var(--w)*0.08);display:flex;flex-direction:column;gap:calc(var(--w)*0.04);font:500 calc(var(--w)*0.052)/1.35 var(--mono)}
+.server .req{color:#ffc08f}
+.server .code{font:600 calc(var(--w)*0.15)/1 var(--serif);color:#ff9f6b;margin-top:calc(var(--w)*0.03)}
+.server .code small{display:block;font:500 calc(var(--w)*0.055)/1.3 var(--mono);color:#f8ece0;margin-top:calc(var(--w)*0.02)}
+.server pre{margin:0;white-space:pre-wrap;word-break:break-word;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:calc(var(--w)*0.04);padding:calc(var(--w)*0.045);font:inherit;color:#f8ece0}
+.server .tag{align-self:flex-start;font:600 calc(var(--w)*0.05)/1 var(--sans);letter-spacing:.5px;text-transform:uppercase;padding:calc(var(--w)*0.025) calc(var(--w)*0.04);border-radius:999px;background:rgba(255,159,107,.18);color:#ffc08f}
+.anim-next{animation:inNext .38s cubic-bezier(.2,.8,.2,1)}
+.anim-prev{animation:inPrev .38s cubic-bezier(.2,.8,.2,1)}
+@keyframes inNext{from{opacity:0;transform:translateX(36px)}to{opacity:1;transform:none}}
+@keyframes inPrev{from{opacity:0;transform:translateX(-36px)}to{opacity:1;transform:none}}
+
+/* interactive view */
+#live{position:absolute;inset:0}
+#live .phonewrap{position:absolute;left:40px;top:100px}
+#live .incoming{position:absolute;left:24px;top:610px;width:340px}
+.chart{position:absolute;left:380px;right:32px;top:98px;height:262px;background:#fff;border-radius:20px;box-shadow:0 1px 0 rgba(255,255,255,.8) inset,0 10px 30px rgba(120,60,20,.12);padding:10px 14px 8px}
+.chart .cap{display:flex;justify-content:space-between;align-items:baseline;font:600 15px/18px var(--sans);color:var(--ink)}
+.chart .cap span{font:500 15px var(--mono);color:var(--muted)}
+.chart svg{display:block;width:100%;height:auto;margin-top:4px}
+/* statechart highlight */
+.chart svg g.entity rect{transition:fill .25s,stroke .25s}
+.chart svg g.entity{opacity:.62;transition:opacity .25s}
+.chart svg g.entity.on{opacity:1}
+.chart svg g.entity.on rect{fill:#ffd9b0!important;stroke:#e0703a!important;stroke-width:3.5px!important}
+.chart svg g.entity.deny{opacity:1}
+.chart svg g.entity.deny rect{fill:#fde3db!important;stroke:#c2452f!important;stroke-width:3px!important;stroke-dasharray:8 5}
+.chart svg g.start_entity.on ellipse{fill:#e0703a!important;stroke:#ffd9b0!important;stroke-width:7px!important}
+.chart svg g.link{opacity:.55;transition:opacity .25s}
+.chart svg g.link.on{opacity:1}
+.chart svg g.link.on path{stroke:#e0703a!important;stroke-width:3.5px!important}
+.chart svg g.link.on polygon{fill:#e0703a!important;stroke:#e0703a!important}
+.chart svg g.link.on text{fill:#a84a1a!important;font-weight:700}
+.deny-note{position:absolute;right:20px;top:42px;font:600 15px/18px var(--sans);color:var(--dangerInk);background:#fde3db;border:1px solid rgba(194,69,47,.35);border-radius:999px;padding:5px 12px;display:none}
+.deny-note.show{display:block}
+
+.step{position:absolute;left:380px;right:32px;top:370px;height:236px;background:var(--sheet);border:1px solid rgba(255,255,255,.7);border-radius:20px;box-shadow:0 10px 30px rgba(120,60,20,.12);padding:16px 22px;display:grid;grid-template-columns:1fr 340px;gap:6px 24px}
+.step .left{min-width:0}
+.trig{display:flex;align-items:flex-start;gap:10px;font:500 16px/21px var(--sans)}
+.badge{flex:none;font:600 14px/1 var(--mono);letter-spacing:1px;text-transform:uppercase;padding:5px 9px 4px;border-radius:999px;margin-top:1px}
+.badge.user{background:#33231a;color:#fff}
+.badge.system{background:#e0703a;color:#fff}
+.badge.alt{background:#c2452f;color:#fff}
+.trig .t{min-width:0}
+.trig code,.mono{font-family:var(--mono);font-size:15px}
+.step h2{margin:10px 0 4px;font:500 26px/31px var(--serif);font-variation-settings:"SOFT" 100,"opsz" 36}
+.step p{margin:0;font:400 16px/22px var(--sans);color:var(--muted)}
+.step .right{border-left:1px solid var(--line);padding-left:20px;display:flex;flex-direction:column;gap:5px;min-width:0}
+.lbl{font:500 14px/16px var(--mono);letter-spacing:1px;text-transform:uppercase;color:var(--muted)}
+.statechip{display:inline-flex;align-items:center;gap:8px;font:600 17px/22px var(--sans)}
+.statechip i{width:12px;height:12px;border-radius:50%;background:#e0703a;flex:none}
+.statechip.deny i{background:#c2452f}
+.kv{font:500 15px/19px var(--mono);color:var(--ink);word-break:break-word}
+.kv div{margin:1px 0}
+.counter{position:absolute;left:22px;bottom:12px;font:500 15px var(--mono);color:var(--muted)}
+
+.strip{position:absolute;left:380px;right:32px;top:614px;height:100px;display:flex;align-items:center;gap:0}
+.thumb{position:relative;flex:none;border:0;padding:0;background:none;border-radius:10px;opacity:.7;transition:opacity .2s,transform .2s}
+.thumb .mini{width:46px;height:88px;border-radius:9px;overflow:hidden;background:#140d09;border:2px solid rgba(51,35,26,.25);display:block}
+.thumb .mini img{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
+.thumb .mini.srv{background:#1d1410;color:#ffc08f;font:600 15px/1 var(--mono);display:flex;align-items:center;justify-content:center}
+.thumb.on{opacity:1;transform:translateY(-3px)}
+.thumb.on .mini{border-color:#e0703a;box-shadow:0 0 0 3px rgba(224,112,58,.35)}
+.thumb.done{opacity:.9}
+.sarrow{flex:1;min-width:14px;height:2px;background:rgba(51,35,26,.3);position:relative;margin:0 5px}
+.sarrow::after{content:"";position:absolute;right:-1px;top:-4px;border:5px solid transparent;border-left:7px solid rgba(51,35,26,.4);border-right:0}
+.sarrow.sys{background:repeating-linear-gradient(90deg,#e0703a 0 6px,transparent 6px 10px)}
+.sarrow.sys::after{border-left-color:#e0703a}
+.sarrow.alt{background:repeating-linear-gradient(90deg,#c2452f 0 6px,transparent 6px 10px)}
+.sarrow.alt::after{border-left-color:#c2452f}
+.hint{position:absolute;left:44px;bottom:14px;font:500 15px var(--sans);color:var(--muted)}
+.hint kbd{font:500 14px var(--mono);border:1px solid var(--line);border-bottom-width:2px;border-radius:5px;padding:1px 6px;background:rgba(255,250,244,.8);color:var(--ink)}
+
+/* storyboard view */
+#story{position:absolute;left:24px;right:24px;top:92px;bottom:10px;display:none}
+body.story #story{display:block}
+body.story #live{display:none}
+.rows{display:flex;flex-direction:column;gap:6px;height:100%;justify-content:center}
+.row{display:flex;align-items:flex-start;justify-content:center}
+.cell{display:flex;align-items:flex-start}
+.cell .arr{width:var(--aw,118px);align-self:stretch;display:flex;flex-direction:column;justify-content:center;align-items:stretch;padding:0 8px 40px}
+.cell .arr .al{font:500 14px/17px var(--sans);color:var(--ink);text-align:center;margin-bottom:6px}
+.cell .arr .al .badge{display:inline-block;margin:0 0 4px}
+.cell .arr .ln{height:2px;background:rgba(51,35,26,.45);position:relative}
+.cell .arr .ln::after{content:"";position:absolute;right:-1px;top:-5px;border:6px solid transparent;border-left:9px solid rgba(51,35,26,.55);border-right:0}
+.cell .arr.sys .ln{background:repeating-linear-gradient(90deg,#e0703a 0 7px,transparent 7px 11px)}
+.cell .arr.sys .ln::after{border-left-color:#e0703a}
+.cell .arr.alt .ln{background:repeating-linear-gradient(90deg,#c2452f 0 7px,transparent 7px 11px)}
+.cell .arr.alt .ln::after{border-left-color:#c2452f}
+.cell .col{display:flex;flex-direction:column;align-items:center;width:calc(var(--pw) * 1.086 + 10px);overflow:visible}
+.cell .num{font:500 14px var(--mono);color:var(--accentInk);margin-top:6px}
+.cell .ttl{font:600 15px/18px var(--sans);text-align:center;margin-top:1px;width:230px}
+.cell .chip{margin-top:4px;font:500 14px/17px var(--mono);padding:3px 8px;border-radius:999px;background:#ffd9b0;color:#5a2b10;white-space:nowrap}
+.cell .chip.deny{background:#fde3db;color:var(--dangerInk)}
+body.export nav{display:none}
+</style>
+</head>
+<body>
+<div id="stage">
+  <header>
+    <div class="titles">
+      <div class="kicker" id="kicker">SAD · UI flow · statechart mapping</div>
+      <h1 id="headline"></h1>
+    </div>
+    <nav id="nav"></nav>
+  </header>
+
+  <section id="live">
+    <div class="phonewrap"><div class="phone" id="phone" style="--w:280px"></div></div>
+    <div class="chart">
+      <div class="cap">Statechart · Cycle <span>cycles.status · cycles.release_status</span></div>
+      <div class="deny-note" id="denyNote">Guard rejects the request · state unchanged</div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="4 44 1110 300" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Cycle statechart"><defs/><g font-family="sans-serif" lengthAdjust="spacing"><g class="entity" data-qualified-name="C" id="ent0001" data-source-line="6"><rect x="18.11" y="124" width="179.531" height="60" fill="#F5F2E9" style="stroke:#75528F;stroke-width:0.5;" rx="3" ry="3"/><line x1="18.11" y1="174" x2="197.641" y2="174" style="stroke:#75528F;stroke-width:0.5;"/><text x="28.11" y="144.4" fill="#14202B" font-size="20" textLength="87.822" font-family="'Helvetica'">Collecting</text><text x="28.11" y="164.4" fill="#14202B" font-size="20" textLength="159.531" font-family="'Helvetica'">status = collecting</text></g><g class="entity" data-qualified-name="U" id="ent0002" data-source-line="7"><rect x="607.5" y="114" width="280.742" height="80" fill="#F5F2E9" style="stroke:#75528F;stroke-width:0.5;" rx="3" ry="3"/><line x1="607.5" y1="184" x2="888.242" y2="184" style="stroke:#75528F;stroke-width:0.5;"/><text x="617.5" y="134.4" fill="#14202B" font-size="20" textLength="213.486" font-family="'Helvetica'">Revealing / unpublished</text><text x="617.5" y="154.4" fill="#14202B" font-size="20" textLength="157.314" font-family="'Helvetica'">status = revealing</text><text x="617.5" y="174.4" fill="#14202B" font-size="20" textLength="260.742" font-family="'Helvetica'">release_status = unpublished</text></g><g class="entity" data-qualified-name="P" id="ent0003" data-source-line="8"><rect x="621.63" y="256" width="258.496" height="80" fill="#F5F2E9" style="stroke:#75528F;stroke-width:0.5;" rx="3" ry="3"/><line x1="621.63" y1="326" x2="880.126" y2="326" style="stroke:#75528F;stroke-width:0.5;"/><text x="631.63" y="276.4" fill="#14202B" font-size="20" textLength="191.24" font-family="'Helvetica'">Revealing / published</text><text x="631.63" y="296.4" fill="#14202B" font-size="20" textLength="157.314" font-family="'Helvetica'">status = revealing</text><text x="631.63" y="316.4" fill="#14202B" font-size="20" textLength="238.496" font-family="'Helvetica'">release_status = published</text></g><g class="entity" data-qualified-name="A" id="ent0004" data-source-line="9"><rect x="7" y="266" width="171.748" height="60" fill="#F5F2E9" style="stroke:#75528F;stroke-width:0.5;" rx="3" ry="3"/><line x1="7" y1="316" x2="178.748" y2="316" style="stroke:#75528F;stroke-width:0.5;"/><text x="17" y="286.4" fill="#14202B" font-size="20" textLength="77.813" font-family="'Helvetica'">Archived</text><text x="17" y="306.4" fill="#14202B" font-size="20" textLength="151.748" font-family="'Helvetica'">status = archived</text></g><g class="start_entity" data-qualified-name=".start." id="ent0005" data-source-line="10"><ellipse cx="107.87" cy="61" rx="10" ry="10" fill="#222" style="stroke:#222;stroke-width:1;"/></g><!--link *start* to C--><g class="link" data-entity-1="ent0005" data-entity-2="ent0001" id="lnk6" data-source-line="10" data-link-type="dependency"><path d="M107.87,71.4 C107.87,83.66 107.87,100.68 107.87,118.76" style="stroke:#596473;stroke-width:1.4;" fill="none" id="*start*-to-C"/><polygon points="107.87,123.76,111.87,114.76,107.87,118.76,103.87,114.76,107.87,123.76" fill="#596473" style="stroke:#596473;stroke-width:1.4;stroke-linejoin:miter;stroke-miterlimit:10;"/><text x="108.87" y="97.63" fill="#14202B" font-size="19" textLength="157.344" font-family="'Helvetica'">createRealGroup()</text></g><!--link C to U--><g class="link" data-entity-1="ent0001" data-entity-2="ent0002" id="lnk7" data-source-line="11" data-link-type="dependency"><path d="M197.87,154 C304.26,154 477.56,154 602.23,154" style="stroke:#596473;stroke-width:1.4;" fill="none" id="C-to-U"/><polygon points="607.23,154,598.23,150,602.23,154,598.23,158,607.23,154" fill="#596473" style="stroke:#596473;stroke-width:1.4;stroke-linejoin:miter;stroke-miterlimit:10;"/><text x="291.262" y="126.63" fill="#14202B" font-size="19" textLength="222.888" font-family="'Helvetica'">advance [now >= ends_at]</text><text x="211.57" y="145.63" fill="#14202B" font-size="19" textLength="382.273" font-family="'Helvetica'">/ ensureCompilationJob(); ensureSuccessor()</text></g><!--link U to P--><g class="link" data-entity-1="ent0002" data-entity-2="ent0003" id="lnk8" data-source-line="12" data-link-type="dependency"><path d="M748.72,194.37 C749.13,213.62 749.523,231.721 749.933,250.931" style="stroke:#596473;stroke-width:1.4;" fill="none" id="U-to-P"/><polygon points="750.04,255.93,753.847,246.847,749.933,250.931,745.849,247.017,750.04,255.93" fill="#596473" style="stroke:#596473;stroke-width:1.4;stroke-linejoin:miter;stroke-miterlimit:10;"/><text x="750.73" y="220.63" fill="#14202B" font-size="19" textLength="358.05" font-family="'Helvetica'">publish [ready proof AND now >= ends_at]</text><text x="803.263" y="239.63" fill="#14202B" font-size="19" textLength="252.984" font-family="'Helvetica'">/ release_published_at := now</text></g><!--reverse link A to P--><g class="link" data-entity-1="ent0004" data-entity-2="ent0003" id="lnk10" data-source-line="13" data-link-type="dependency"><path d="M184.23,296 C297.03,296 490.5,296 621.34,296" style="stroke:#596473;stroke-width:1.4;" fill="none" id="A-backto-P"/><polygon points="179.23,296,188.23,300,184.23,296,188.23,292,179.23,296" fill="#596473" style="stroke:#596473;stroke-width:1.4;stroke-linejoin:miter;stroke-miterlimit:10;"/><text x="191.69" y="268.63" fill="#14202B" font-size="19" textLength="417.193" font-family="'Helvetica'">advance [24 h since publication AND ready proof]</text><text x="348.537" y="287.63" fill="#14202B" font-size="19" textLength="103.498" font-family="'Helvetica'">/ addEvent()</text></g><!--link C to A--></g></svg>
+    </div>
+    <div class="step" id="step"></div>
+    <div class="strip" id="strip"></div>
+  </section>
+
+  <section id="story"></section>
+</div>
+
+<script>
+const SB_ICONS = '<span class="icons"><svg viewBox="0 0 18 12"><rect x="0" y="8" width="3" height="4" rx="1" fill="currentColor"/><rect x="5" y="5.5" width="3" height="6.5" rx="1" fill="currentColor"/><rect x="10" y="3" width="3" height="9" rx="1" fill="currentColor"/><rect x="15" y="0" width="3" height="12" rx="1" fill="currentColor"/></svg><svg viewBox="0 0 16 12"><path d="M8 11.5 5.6 9a3.4 3.4 0 0 1 4.8 0L8 11.5ZM3.3 6.8a6.6 6.6 0 0 1 9.4 0l-1.5 1.5a4.5 4.5 0 0 0-6.4 0L3.3 6.8ZM1 4.5a9.9 9.9 0 0 1 14 0l-1.5 1.5a7.8 7.8 0 0 0-11 0L1 4.5Z" fill="currentColor"/></svg><svg viewBox="0 0 27 12"><rect x=".5" y=".5" width="23" height="11" rx="3.2" fill="none" stroke="currentColor" opacity=".45"/><rect x="2" y="2" width="17" height="8" rx="2" fill="currentColor"/><rect x="24.6" y="4" width="1.8" height="4" rx=".9" fill="currentColor" opacity=".5"/></svg></span>';
+
+const STATES = {
+  start: {name: 'Initial · no cycle yet', svg: '.start_entity'},
+  C: {name: 'Collecting', svg: '[data-qualified-name="C"]'},
+  U: {name: 'Revealing / unpublished', svg: '[data-qualified-name="U"]'},
+  P: {name: 'Revealing / published', svg: '[data-qualified-name="P"]'},
+  A: {name: 'Archived', svg: '[data-qualified-name="A"]'},
+};
+const LINKS = {create: '#lnk6', advance: '#lnk7', publish: '#lnk8', archive: '#lnk10'};
+
+const FLOWS = [
+ {id: 'join', file: '1-join-a-private-group', tab: 'Join', uc: 'UC02 · UC03',
+  headline: 'A new group starts Collecting at once; only a one-time code adds a member',
+  steps: [
+   {img: 'home-none', title: 'Home · not in a group yet', type: 'user', trig: 'Maya signs in', s: 'Sign in',
+    code: 'HomeState · real-group-none', state: 'start', kv: ['No membership, no cycle'],
+    desc: 'An account without a group can only join with a code or create its own group.'},
+   {img: 'create-form', title: 'New group', type: 'user', trig: 'Tap “Create a group”', s: 'Create a group',
+    code: 'CreateGroupScreen', state: 'start', kv: ['Name · prompt · member limit 2–10'],
+    desc: 'The creator becomes the owner. The first cycle lasts four weeks and starts now.'},
+   {img: 'home-active', title: 'Home · cycle collecting', type: 'user', trig: 'Tap “Create group” → <code>createRealGroup()</code>', s: 'createRealGroup()',
+    link: 'create', code: 'HomeBody · real-group-home', state: 'C', kv: ["cycles.status = 'collecting'", 'max_count 5 · max_seconds 30'],
+    desc: 'One transaction inserts the group, the owner membership and the first cycle. Home shows the countdown, week and prompt.'},
+   {img: 'invite-code', title: 'Invite friends', type: 'user', trig: 'Settings → Invite friends → <code>createRealGroupInvite()</code>', s: 'Invite friends',
+    code: 'Invite · real-group-invite-code', state: 'C', kv: ["real_group_invites.status = 'active'"],
+    desc: 'The six-letter code works once and expires after 24 hours. Share or copy it.'},
+   {img: 'join-code', title: 'Have an invite? · Jun', type: 'user', trig: 'Jun signs in and enters the code', s: 'Jun enters code',
+    code: 'JoinScreen · real-group-enter-code', state: 'C', kv: ['Second account, no group yet'],
+    desc: 'Jun is a separate account. The code is the only way into the private group.'},
+   {img: 'join-done', title: 'Joined', type: 'user', trig: 'Accept invitation → <code>acceptRealGroupInvite()</code>', s: 'Accept invitation',
+    code: 'JoinScreen · real-join-done', state: 'C', kv: ["invite: 'active' → 'accepted'", 'membership role = member'],
+    desc: 'The membership is inserted and the code is used up in the same step.'},
+   {img: 'home-jun', title: 'Home · Jun is a member', type: 'user', trig: 'Go to the group', s: 'Go to the group',
+    code: 'HomeBody · real-group-home', state: 'C', kv: ["Same cycle · status = 'collecting'"],
+    desc: 'Jun joins the cycle that is already collecting. No new cycle is created.'},
+   {img: 'members', title: 'Members · owner view', type: 'user', trig: 'Maya: Settings → Members', s: 'Settings → Members',
+    code: 'Members · real-group-members', state: 'C', kv: ['2 members · owner + member'],
+    desc: 'The owner sees both members. Blocking hides someone’s messages and moments.'},
+  ]},
+ {id: 'capture', file: '2-contribute-within-the-allowance', tab: 'Capture', uc: 'UC04 · UC05 · UC06a',
+  headline: 'Capture only spends the weekly allowance; the cycle stays in Collecting',
+  steps: [
+   {img: 'home-active', title: 'Home · 5 of 5 left', type: 'user', trig: 'Open the group', s: 'Open the group',
+    code: 'Dock › Shutter · real-group-capture-action', state: 'C', kv: ['quota window count_used = 0', '“Add a moment · 5 of 5 left”'],
+    desc: 'The shutter carries the allowance. Photos and videos share 5 moments and 30 seconds a week.'},
+   {img: 'camera-permission', dark: true, title: 'Camera · permission', type: 'user', trig: 'Tap the shutter', s: 'Tap shutter',
+    code: 'CameraCaptureScreen', state: 'C', kv: ['Header: 5 left · 30 s'],
+    desc: 'Before the browser grants the camera, a card explains why it is needed.'},
+   {img: 'photo-camera', dark: true, title: 'Camera · choose a look', type: 'user', trig: 'Continue → camera granted', s: 'Allow camera',
+    code: 'CamTop · LookPicker', state: 'C', kv: ['Look: Disposable Flash'],
+    desc: 'Four looks: Disposable Flash, Compact Digital, 8mm Home Movie and VHS Camcorder.'},
+   {img: 'photo-preview', dark: true, title: 'Review · Retake or Seal', type: 'user', trig: 'Take the photo', s: 'Take photo',
+    code: 'ReviewActions', state: 'C', kv: ['Counts as one moment · 3 s in the film'],
+    desc: 'Nothing is spent until Seal. Retake returns to the camera.'},
+   {img: 'photo-sealed', dark: true, title: 'Sealed · 4 left', type: 'user', trig: 'Seal → <code>requestUploadIntent()</code> → S3 PUT → <code>completeUploadIntent()</code>', s: 'Seal → upload',
+    code: 'SealedOverlay', state: 'C', kv: ['count_used 0 → 1 · seconds_used 0 → 3'],
+    desc: 'Bytes go straight to S3; one transaction reserves the allowance. Nobody sees it before the film, not even you.'},
+   {img: 'video-sealed', dark: true, title: 'Sealed · video · 3 left', type: 'user', trig: 'Record 6 s with VHS Camcorder → Seal', s: 'Record video → Seal',
+    code: 'VideoCaptureScreen · SealedOverlay', state: 'C', kv: ['count_used 1 → 2 · seconds_used 3 → 9'],
+    desc: 'Video draws from the same allowance: 4 left · 27 s before, 3 left after.'},
+   {img: 'home-2used', title: 'Home · 2 of 5 used', type: 'user', trig: 'Done', s: 'Done',
+    code: 'HomeBody · real-group-allowance', state: 'C', kv: ['You · 2 of 5 · 9 of 30 s'],
+    desc: 'The progress pips follow the ledger. The content stays sealed.'},
+   {img: 'home-exhausted-tap', title: 'Home · allowance used', type: 'user', trig: 'Moments 3–5 sealed → tap the shutter', s: 'Use all 5',
+    code: 'shutterState() → kind: used', state: 'C', kv: ['count_used = max_count = 5'],
+    desc: 'The shutter turns grey: “All 5 used · resets in 5 days”. The server also refuses a sixth upload.'},
+  ]},
+ {id: 'cycle', file: '3-cycle-lifecycle-to-archive', tab: 'Lifecycle', uc: 'UC07 · UC08 · UC12 · UC13',
+  headline: 'Every Home and Archive state renders one server state of the cycle',
+  steps: [
+   {img: 'home-active', title: 'Home · collecting', type: 'user', trig: 'Members add moments', s: 'During the cycle',
+    code: 'HomeBody · real-group-home', state: 'C', kv: ["status = 'collecting'"],
+    desc: 'Intake stays open until ends_at. The countdown names the days until the film.'},
+   {img: 'home-developing', title: 'Home · film developing', type: 'system', trig: 'Scheduler: <code>advance [now ≥ ends_at] / ensureCompilationJob(); ensureSuccessor()</code>', s: 'advance [now ≥ ends_at]',
+    link: 'advance', code: 'StatusCard · real-home-card-developing', state: 'U', kv: ["release_status = 'unpublished'", "media_jobs.status = 'processing'", "Home release state 'processing'"],
+    desc: 'The closed cycle compiles while its successor already collects, so Home shows a new countdown.'},
+   {img: 'archive-developing', title: 'Archive · developing', type: 'user', trig: 'Tap Archive', s: 'Tap Archive',
+    code: 'ArchiveScreen · real-archive', state: 'U', kv: ["status = 'revealing'", "release_status = 'unpublished'"],
+    desc: '“You can watch it once it’s out.” Nothing is playable before publication.'},
+   {img: 'home-premiere', title: 'Home · your film is here', type: 'system', trig: '<code>publish [ready proof AND now ≥ ends_at] / release_published_at := now</code>', s: 'publish [ready proof]',
+    link: 'publish', code: 'StatusCard · real-home-card-released', state: 'P', kv: ["release_status = 'published'", "Home release state 'premiere'"],
+    desc: 'Ready proof = verified film bytes and an unchanged ready job. The premiere lasts 24 hours.'},
+   {img: 'film-premiere', dark: true, title: 'Film · premiere', type: 'user', trig: 'Tap Watch', s: 'Tap Watch',
+    code: 'FilmScreen · real-film-video', state: 'P', kv: ['Premiere · 24 h left'],
+    desc: 'The verified film streams through a short-lived protected path.'},
+   {img: 'film-end', dark: true, title: 'Film · the end', type: 'user', trig: 'The film ends', s: 'Film ends',
+    code: 'FilmScreen · real-film-end', state: 'P', kv: ['Talk about it in Chat · Replay · Save film'],
+    desc: 'Save film downloads the MP4 (UC13). Chat continues the conversation (UC11).'},
+   {img: 'archive-archived', title: 'Archive · earlier films', type: 'system', trig: '<code>advance [24 h since publication AND ready proof] / addEvent()</code>', s: 'advance [24 h after publication]',
+    link: 'archive', code: 'ArchiveScreen · real-archive-older', state: 'A', kv: ["status = 'archived'", "Archive release state 'archived'"],
+    desc: 'The film stays in Archive to watch again (UC12). The current cycle stays sealed until it ends.'},
+   {img: 'home-delayed', title: 'Home · taking a little longer', type: 'alt', trig: 'alt, from step 2: the compile fails with no retries left', s: 'from 02: compile fails',
+    code: 'StatusCard · real-home-card-delayed', state: 'U', kv: ["media_jobs.status = 'failed'", "Home release state 'delayed'"],
+    desc: 'Error state. A failed guard keeps the cycle in Revealing / unpublished: “Everyone hears when it’s ready.”'},
+  ]},
+ {id: 'access', file: '4-outsider-is-denied', tab: 'Access', uc: 'UC03 guard · private media',
+  headline: 'Privacy is enforced on the server: a non-member cannot join or reach the film',
+  steps: [
+   {img: 'outsider-home', title: 'Home · Priya, not a member', type: 'user', trig: 'Priya signs in', s: 'Priya signs in',
+    code: 'HomeState · real-group-none', state: 'A', deny: true, kv: ['No membership row for Priya'],
+    desc: 'The private group never appears in her account.'},
+   {img: 'outsider-used', title: 'Have an invite? · reused code', type: 'user', trig: 'Enters Jun’s used code → <code>acceptRealGroupInvite()</code>', s: 'Reuse Jun’s code',
+    code: 'JoinScreen · real-group-join-feedback', state: 'A', deny: true, kv: ["invite status = 'accepted'", "result: 'replayed'"],
+    desc: '“This invitation has already been used.” A code admits exactly one person.'},
+   {server: true, title: 'Direct film request · HTTP 403', type: 'user', trig: '<code>GET /api/cycles/:cycleId/premiere</code> with Priya’s session', s: 'Request the film',
+    code: 'requireAuthorisedMediaGroup()', state: 'A', deny: true, kv: ['403 forbidden'],
+    desc: 'The membership check runs before any media lookup, so the film’s existence is not revealed.'},
+   {img: 'archive-jun', title: 'Archive · Jun, a member', type: 'user', trig: 'Same request as member Jun → HTTP 200', s: 'Member → 200',
+    code: 'ArchiveScreen · real-archive-older', state: 'A', kv: ["status = 'archived' · unchanged"],
+    desc: 'Members watch and save the film. Denied requests never change the cycle.'},
+  ]},
+];
+
+const SERVER_HTML = `<div class="server"><span class="tag">Server response</span>
+<div class="req">GET /api/cycles/:cycleId/<wbr>premiere</div>
+<div class="code">403<small>forbidden · Priya is not a member</small></div>
+<pre>{
+ "allowed": false,
+ "status": 403,
+ "error": "forbidden",
+ "message": "You do not have access to this resource."
+}</pre></div>`;
+
+const $ = (s, r = document) => r.querySelector(s);
+const svg = $('.chart svg');
+let flow = 0, step = 0;
+
+function screenHTML(st, w) {
+  const body = st.server ? SERVER_HTML : `<div class="shot"><img src="screens/${st.img}.jpg" alt="${st.title}"></div>`;
+  const dark = st.dark || st.server;
+  return `<div class="screen"><div class="sb${dark ? ' dark' : ''}"><span>9:41</span><i class="island"></i>${SB_ICONS}</div>${body}<i class="home-ind${dark ? ' light' : ''}"></i></div>`;
+}
+
+function renderNav() {
+  $('#nav').innerHTML = FLOWS.map((f, i) => `<button data-flow="${i}" class="${i === flow ? 'on' : ''}"><b>${i + 1}</b>${f.tab}</button>`).join('')
+    + `<span class="sep"></span><button data-story="1" class="${document.body.classList.contains('story') ? 'on' : ''}"><b>S</b>Storyboard</button>`;
+}
+
+function highlight(st) {
+  svg.querySelectorAll('.on,.deny').forEach(n => n.classList.remove('on', 'deny'));
+  const node = svg.querySelector(STATES[st.state].svg);
+  if (node) node.classList.add(st.deny ? 'deny' : 'on');
+  if (st.link) svg.querySelector(LINKS[st.link])?.classList.add('on');
+  $('#denyNote').classList.toggle('show', !!st.deny);
+}
+
+function render(dir) {
+  const f = FLOWS[flow], st = f.steps[step];
+  $('#kicker').textContent = `SAD · UI flow ${flow + 1} of 4 · ${f.uc}`;
+  $('#headline').textContent = f.headline;
+  renderNav();
+  const phone = $('#phone');
+  phone.innerHTML = screenHTML(st);
+  if (dir) { phone.firstChild.classList.add(dir > 0 ? 'anim-next' : 'anim-prev'); }
+  highlight(st);
+  const badge = st.type === 'system' ? 'system' : st.type === 'alt' ? 'alt' : 'user';
+  const badgeText = st.type === 'system' ? 'System event' : st.type === 'alt' ? 'Alt · error' : 'User action';
+  $('#step').innerHTML = `<div class="left">
+      <div class="trig"><span class="badge ${badge}">${step === 0 ? 'Start' : badgeText}</span><span class="t">${st.trig}</span></div>
+      <h2>${st.title}</h2><p>${st.desc}</p></div>
+    <div class="right"><div class="lbl">State</div>
+      <div class="statechip${st.deny ? ' deny' : ''}"><i></i>${STATES[st.state].name}${st.deny ? ' · not reachable' : ''}</div>
+      <div class="lbl" style="margin-top:4px">Data</div><div class="kv">${st.kv.map(k => `<div>${k}</div>`).join('')}</div>
+      <div class="lbl" style="margin-top:4px">Code</div><div class="kv">${st.code.split(' · ').map(k => `<div>${k}</div>`).join('')}</div></div>
+    <div class="counter">${step + 1} / ${f.steps.length}</div>`;
+  $('#strip').innerHTML = f.steps.map((s, i) => {
+    const thumb = `<button class="thumb ${i === step ? 'on' : i < step ? 'done' : ''}" data-step="${i}" title="${s.title}">${s.server ? '<span class="mini srv">403</span>' : `<span class="mini"><img src="screens/${s.img}.jpg" alt=""></span>`}</button>`;
+    if (!i) return thumb;
+    return `<span class="sarrow ${s.type === 'system' ? 'sys' : s.type === 'alt' ? 'alt' : ''}"></span>` + thumb;
+  }).join('');
+  renderStory();
+  history.replaceState(null, '', `#${document.body.classList.contains('story') ? 'story-' : ''}${flow + 1}-${step + 1}`);
+}
+
+function renderStory() {
+  const f = FLOWS[flow];
+  const n = f.steps.length;
+  const perRow = n <= 4 ? n : Math.ceil(n / 2);
+  const pw = n <= 4 ? 180 : 108;
+  const aw = n <= 4 ? 124 : 150;
+  let rows = [];
+  for (let i = 0; i < n; i += perRow) rows.push(f.steps.slice(i, i + perRow).map((s, j) => [s, i + j]));
+  $('#story').innerHTML = `<div class="rows">` + rows.map(r => `<div class="row">` + r.map(([s, i]) => {
+    const cls = s.type === 'system' ? 'sys' : s.type === 'alt' ? 'alt' : '';
+    const badge = s.type === 'system' ? '<span class="badge system">system</span><br>' : s.type === 'alt' ? '<span class="badge alt">alt</span><br>' : '';
+    const arr = i === 0 ? '' : `<div class="arr ${cls}" style="--aw:${aw}px"><div class="al">${badge}${s.s}</div><div class="ln"></div></div>`;
+    return `<div class="cell">${arr}<div class="col" style="--pw:${pw}px"><div class="phone" style="--w:${pw}px">${screenHTML(s)}</div>
+      <div class="num">${String(i + 1).padStart(2, '0')}</div><div class="ttl">${s.title}</div>
+      <div class="chip${s.deny ? ' deny' : ''}">${STATES[s.state].name}${s.deny ? ' · denied' : ''}</div></div></div>`;
+  }).join('') + `</div>`).join('') + `</div>`;
+}
+
+function go(f, s, dir = 0) { flow = f; step = s; render(dir); }
+function next() { const n = FLOWS[flow].steps.length; if (step < n - 1) go(flow, step + 1, 1); else if (flow < FLOWS.length - 1) go(flow + 1, 0, 1); }
+function prev() { if (step > 0) go(flow, step - 1, -1); else if (flow > 0) go(flow - 1, FLOWS[flow - 1].steps.length - 1, -1); }
+function toggleStory(on) { document.body.classList.toggle('story', on ?? !document.body.classList.contains('story')); render(0); }
+
+document.addEventListener('keydown', e => {
+  if (e.metaKey || e.ctrlKey || e.altKey) return;
+  const story = document.body.classList.contains('story');
+  if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') { e.preventDefault(); story ? go(Math.min(flow + 1, 3), 0) : next(); }
+  else if (e.key === 'ArrowLeft' || e.key === 'PageUp') { e.preventDefault(); story ? go(Math.max(flow - 1, 0), 0) : prev(); }
+  else if (/^[1-4]$/.test(e.key)) go(+e.key - 1, 0);
+  else if (e.key === 's' || e.key === 'S') toggleStory();
+  else if (e.key === 'Home') go(flow, 0);
+  else if (e.key === 'End') go(flow, FLOWS[flow].steps.length - 1);
+});
+document.addEventListener('click', e => {
+  const b = e.target.closest('button');
+  if (!b) { if (!document.body.classList.contains('story') && e.target.closest('#live .phonewrap')) next(); return; }
+  if (b.dataset.flow) go(+b.dataset.flow, 0);
+  else if (b.dataset.story) toggleStory();
+  else if (b.dataset.step) { const s = +b.dataset.step; go(flow, s, s > step ? 1 : -1); }
+});
+
+function fit() {
+  const k = Math.min(innerWidth / 1280, innerHeight / 720);
+  const st = $('#stage');
+  st.style.transform = `scale(${k}) translate(-50%,-50%)`;
+  st.style.transformOrigin = '0 0';
+  st.style.left = '50%'; st.style.top = '50%';
+  st.style.transform = `translate(-50%,-50%) scale(${k})`;
+  st.style.transformOrigin = '50% 50%';
+}
+addEventListener('resize', fit); fit();
+addEventListener('hashchange', () => { if (readHash()) render(0); });
+
+// preload
+FLOWS.forEach(f => f.steps.forEach(s => { if (s.img) { const i = new Image(); i.src = `screens/${s.img}.jpg`; } }));
+
+function readHash() {
+  const m = location.hash.match(/^#(story-)?(\d)(?:-(\d+))?/);
+  if (!m) return false;
+  document.body.classList.toggle('story', !!m[1]);
+  flow = Math.min(3, Math.max(0, +m[2] - 1));
+  step = Math.min(FLOWS[flow].steps.length - 1, Math.max(0, (+m[3] || 1) - 1));
+  return true;
+}
+if (/export/.test(location.search)) document.body.classList.add('export');
+readHash();
+render(0);
+</script>
+</body>
+</html>

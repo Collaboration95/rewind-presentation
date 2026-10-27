@@ -1,0 +1,217 @@
+{
+  "version": 1,
+  "sourceTimeUnit": "seconds",
+  "intervalConvention": "[start,end)",
+  "clips": [
+    {
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/clips/03-create-group.mp4",
+      "output": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/deck/clips/device/03-create-group.mp4",
+      "poster": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/deck/clips/device/03-create-group-poster.jpg",
+      "duration": 60.0,
+      "crop": {
+        "x": 752,
+        "y": 124,
+        "width": 416,
+        "height": 776
+      },
+      "retainedSourceIntervals": [
+        {
+          "start": 0.0,
+          "end": 60.0
+        }
+      ],
+      "posterTime": 35,
+      "sourceSha256": "61f7a71018fbd69ea8a45eea4b91e8d943bb3693b60698955de56a8eb7f71c9e",
+      "outputSha256": "a96b320f37c9fcf4dd33492585f60a2729b499f900275bfac9d71cad79d7eada"
+    },
+    {
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/clips/04-invite-and-join.mp4",
+      "output": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/deck/clips/device/04-invite-and-join.mp4",
+      "poster": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/deck/clips/device/04-invite-and-join-poster.jpg",
+      "duration": 60.0,
+      "crop": {
+        "x": 752,
+        "y": 124,
+        "width": 416,
+        "height": 858
+      },
+      "retainedSourceIntervals": [
+        {
+          "start": 0.0,
+          "end": 60.0
+        }
+      ],
+      "posterTime": 47,
+      "sourceSha256": "7f0e25f1597fd5e36a62608ede8b14f8a7f5b4aba6a339db504c8587ac92b2f4",
+      "outputSha256": "83101a723eef651436bb28f8e636cca13ab583ff78a6e5c74ad8b2df828ace93"
+    },
+    {
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/clips/05-photo-with-a-look.mp4",
+      "output": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/deck/clips/device/05-photo-with-a-look.mp4",
+      "poster": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/deck/clips/device/05-photo-with-a-look-poster.jpg",
+      "duration": 55.0,
+      "crop": {
+        "x": 752,
+        "y": 124,
+        "width": 416,
+        "height": 776
+      },
+      "retainedSourceIntervals": [
+        {
+          "start": 0.0,
+          "end": 55.0
+        }
+      ],
+      "posterTime": 28,
+      "sourceSha256": "c292411d474b8796b5e431d5b0281fa58e485ee609c4893584dee2915693caf0",
+      "outputSha256": "ddecab9ff810ad297f0529b44d0d6b650be2871ae40098a64a7074b22b32f144"
+    },
+    {
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/clips/06-video-and-allowance.mp4",
+      "output": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/deck/clips/device/06-video-and-allowance.mp4",
+      "poster": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/deck/clips/device/06-video-and-allowance-poster.jpg",
+      "duration": 65.0,
+      "crop": {
+        "x": 752,
+        "y": 124,
+        "width": 416,
+        "height": 776
+      },
+      "retainedSourceIntervals": [
+        {
+          "start": 0.0,
+          "end": 65.0
+        }
+      ],
+      "posterTime": 59,
+      "sourceSha256": "cc39539eccee59b7fc5c54a969953784a03a85861a5bc7d4c10c8b2fb73a8d6f",
+      "outputSha256": "34716dd077c1538e2ceacd6cbb409c39169e14415ef2a0eb568a5daffa9e1211"
+    },
+    {
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/clips/07-group-chat.mp4",
+      "output": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/deck/clips/device/07-group-chat.mp4",
+      "poster": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/deck/clips/device/07-group-chat-poster.jpg",
+      "duration": 55.0,
+      "crop": {
+        "x": 752,
+        "y": 124,
+        "width": 416,
+        "height": 776
+      },
+      "retainedSourceIntervals": [
+        {
+          "start": 0.0,
+          "end": 55.0
+        }
+      ],
+      "posterTime": 46,
+      "sourceSha256": "8a6348f1d289e5e4a536c4ac5ac1de9dbeec76656dab952f085403044b6384ff",
+      "outputSha256": "7eeaa5bead1986bfa5d98623510d2a8773daca902bb63622ded7d22d1985d141"
+    },
+    {
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/clips/08-weekly-reminder.mp4",
+      "output": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/deck/clips/device/08-weekly-reminder.mp4",
+      "poster": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/deck/clips/device/08-weekly-reminder-poster.jpg",
+      "duration": 50.0,
+      "crop": {
+        "x": 752,
+        "y": 124,
+        "width": 416,
+        "height": 776
+      },
+      "retainedSourceIntervals": [
+        {
+          "start": 0.0,
+          "end": 50.0
+        }
+      ],
+      "posterTime": 34,
+      "sourceSha256": "f1850c0fd7fb865ca010eae999d43255b07736de8b62c73e0c65a1a1e96cb730",
+      "outputSha256": "2bad9a0e15cd1cb553e8968ffa00885c0d906cba653c456f95f77cbba4ecbf85"
+    },
+    {
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/clips/09-cycle-ends-film-ready.mp4",
+      "output": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/deck/clips/device/09-cycle-ends-film-ready.mp4",
+      "poster": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/deck/clips/device/09-cycle-ends-film-ready-poster.jpg",
+      "duration": 40.0,
+      "crop": {
+        "x": 752,
+        "y": 124,
+        "width": 416,
+        "height": 776
+      },
+      "retainedSourceIntervals": [
+        {
+          "start": 0.0,
+          "end": 40.0
+        }
+      ],
+      "posterTime": 2,
+      "sourceSha256": "39905f31f0c117b7ed534a510f3b7dd6ce75ed2bc145dbcac29b2d6327f7c20f",
+      "outputSha256": "d3015f46affd44e80994707dd5d0d50ce0b5ff1b2d5e79bd153d1290f2342d86"
+    },
+    {
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/clips/10-watch-the-film.mp4",
+      "output": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/deck/clips/device/10-watch-the-film.mp4",
+      "poster": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/deck/clips/device/10-watch-the-film-poster.jpg",
+      "duration": 80.0,
+      "crop": {
+        "x": 752,
+        "y": 124,
+        "width": 416,
+        "height": 858
+      },
+      "retainedSourceIntervals": [
+        {
+          "start": 0.0,
+          "end": 80.0
+        }
+      ],
+      "posterTime": 8,
+      "sourceSha256": "2e0812cd2b911d3240a286d16be0251af5c19577d42b206e2a866bd5f240dfdf",
+      "outputSha256": "18163ab2a4d4f5adb09527414d26b36e55e2a4b970ebd39c60b0f89c4bb2e69d"
+    },
+    {
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/clips/11-archive-and-save.mp4",
+      "output": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/deck/clips/device/11-archive-and-save.mp4",
+      "poster": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/deck/clips/device/11-archive-and-save-poster.jpg",
+      "duration": 55.0,
+      "crop": {
+        "x": 752,
+        "y": 124,
+        "width": 416,
+        "height": 858
+      },
+      "retainedSourceIntervals": [
+        {
+          "start": 0.0,
+          "end": 55.0
+        }
+      ],
+      "posterTime": 2,
+      "sourceSha256": "6d8ed6d9efe9b5eeee01d77c0836a834b4ce94f0838119dde36892568b22f264",
+      "outputSha256": "7a16f0aa279a4cf45e13e9fd34f313e1fa71c9422a9d1e40bd11e5e6aa43d922"
+    },
+    {
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/clips/12-outsider-denied.mp4",
+      "output": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/deck/clips/device/12-outsider-denied.mp4",
+      "poster": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/deck/clips/device/12-outsider-denied-poster.jpg",
+      "duration": 50.0,
+      "crop": {
+        "x": 752,
+        "y": 124,
+        "width": 416,
+        "height": 776
+      },
+      "retainedSourceIntervals": [
+        {
+          "start": 0.0,
+          "end": 50.0
+        }
+      ],
+      "posterTime": 35,
+      "sourceSha256": "e3b06e17a5383a44f14f8c9a9866501164671aa9e0f47af64acd3c5ccb824edc",
+      "outputSha256": "3c032e6b34243e080ac44be1be01e902787f47962842055d4beb02c986d30e8d"
+    }
+  ]
+}

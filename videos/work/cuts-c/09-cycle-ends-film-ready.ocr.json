@@ -1,0 +1,174 @@
+{
+  "sampling": "One phone crop per output second; tesseract PSM 11; visual contact review supplements OCR.",
+  "patterns": [
+    "week\\s*\\d+\\s*(?:of|/|0f)\\s*4",
+    "minutes?\\s+until",
+    "moments?\\s+reset",
+    "resets?\\s+in\\s+1\\s*day",
+    "\\b(?:1|one)[ -]day\\s+cycle",
+    "cycle\\s+(?:length|duration)"
+  ],
+  "forbidden_hits": [],
+  "frames": [
+    {
+      "second": 0,
+      "text": "9:41\n\nFF @\n\naa\u00bb\n\nThe little things v\n\nYour film is here\n\nPremiere - 24 h left\n\n7 Watch\n\nTHIS CYCLE\u2019S PROMPT\n\nThe small moments that\n\nmade our week\n\nYou:O of 5-Oof30s >\n\nNothing sealed yet this week\n\n@\n\n2\n\ne\n\nHome\n\nChat\n\nArchive\n\noa\n\n~\n\n\u2014\n\noO\n\nikuvm.cloudfront.net @\n\neee\n"
+    },
+    {
+      "second": 1,
+      "text": "9:41\n\nFF @\n\naa\u00bb\n\nThe little things v\n\nYour film is here\n\nPremiere - 24 h left\n\n7 Watch\n\nTHIS CYCLE\u2019S PROMPT\n\nThe small moments that\n\nmade our week\n\nYou:O of 5-Oof30s >\n\nNothing sealed yet this week\n\n@\n\n2\n\ne\n\nHome\n\nChat\n\nArchive\n\noa\n\n~\n\n\u2014\n\noO\n\nikuvm.cloudfront.net @\n\neee\n"
+    },
+    {
+      "second": 2,
+      "text": "9:41\n\nFF @\n\naa\u00bb\n\nThe little things v\n\nYour film is here\n\nPremiere - 24 h left\n\n7 Watch\n\nTHIS CYCLE\u2019S PROMPT\n\nThe small moments that\n\nmade our week\n\nYou:O of 5-Oof30s >\n\nNothing sealed yet this week\n\n@\n\n2\n\ne\n\nHome\n\nChat\n\nArchive\n\noa\n\n~\n\n\u2014\n\noO\n\nikuvm.cloudfront.net @\n\neee\n"
+    },
+    {
+      "second": 3,
+      "text": "9:41\n\nFF @\n\naa\u00bb\n\nThe little things v\n\nYour film is here\n\nPremiere - 24 h left\n\n7 Watch\n\nTHIS CYCLE\u2019S PROMPT\n\nThe small moments that\n\nmade our week\n\nYou:O of 5-Oof30s >\n\nNothing sealed yet this week\n\n@\n\n2\n\ne\n\nHome\n\nChat\n\nArchive\n\noa\n\n~\n\n\u2014\n\noO\n\nikuvm.cloudfront.net @\n\neee\n"
+    },
+    {
+      "second": 4,
+      "text": "9:41\n\nFF @\n\naa\u00bb\n\nThe little things v\n\nYour film is here\n\nPremiere - 24 h left\n\n7 Watch\n\nTHIS CYCLE\u2019S PROMPT\n\nThe small moments that\n\nmade our week\n\nYou:O of 5-Oof30s >\n\nNothing sealed yet this week\n\n@\n\n2\n\ne\n\nHome\n\nChat\n\nArchive\n\noa\n\n~\n\n\u2014\n\noO\n\nikuvm.cloudfront.net @\n\neee\n"
+    },
+    {
+      "second": 5,
+      "text": "9:41\n\nFF @\n\naa\u00bb\n\nThe little things v\n\nYour film is here\n\nPremiere - 24 h left\n\n7 Watch\n\nTHIS CYCLE\u2019S PROMPT\n\nThe small moments that\n\nmade our week\n\nYou:O of 5-Oof30s >\n\nNothing sealed yet this week\n\n@\n\n2\n\ne\n\nHome\n\nChat\n\nArchive\n\noa\n\n~\n\n\u2014\n\noO\n\nikuvm.cloudfront.net @\n\neee\n"
+    },
+    {
+      "second": 6,
+      "text": "9:41\n\nFF @\n\naa\u00bb\n\nThe little things v\n\nYour film is here\n\nPremiere - 24 h left\n\n7 Watch\n\nTHIS CYCLE\u2019S PROMPT\n\nThe small moments that\n\nmade our week\n\nYou:O of 5-Oof30s >\n\nNothing sealed yet this week\n\n@\n\n2\n\ne\n\nHome\n\nChat\n\nArchive\n\noa\n\n~\n\n\u2014\n\noO\n\nikuvm.cloudfront.net @\n\neee\n"
+    },
+    {
+      "second": 7,
+      "text": "9:41\n\nFF @\n\naa\u00bb\n\nThe little things v\n\nYour film is here\n\nPremiere - 24 h left\n\n7 Watch\n\nTHIS CYCLE\u2019S PROMPT\n\nThe small moments that\n\nmade our week\n\nYou:O of 5-Oof30s >\n\nNothing sealed yet this week\n\n@\n\n2\n\ne\n\nHome\n\nChat\n\nArchive\n\noa\n\n~\n\n\u2014\n\noO\n\nikuvm.cloudfront.net @\n\neee\n"
+    },
+    {
+      "second": 8,
+      "text": "9:41\n\n&\n\nGaD\n\nSettings\n\nMaya\n\nmaya.chen.27\n\na 3\n\nPos\n\n56\n\nThe little th:\n\nMJ\n\nOwner - 2 o'\n\nice\n\nPro\u2019\n\nThe si\n\ny\n\nTime zo.\n\nAsia/Sing:\n\n>\n\n\\\n\nInvite friends\n\nMembers\n\n>\n\n\\\n\n20f6\n\nSwitch group\n\n>\n\n\\\n\n3 groups\n\nHave an invite?\n\n+\n\nCreate a group\n\nREMINDER\n\noO\n\n\u2014\n\nikuvm.cloudfront.net G\n\neee\n\n~\\\n"
+    },
+    {
+      "second": 9,
+      "text": "9:41\n\nFF @\n\nGaD\n\nSettings\n\nMaya\n\nmaya.chen.27\n\nThe little t\n\nMJ\n\nOwner - 2 of\n\nice\n\nPro\n\npt\n\ny\n\nTime zon\n\nAsia/Sing:\n\n>\n\n\\\n\nInvite friends\n\nMembers\n\n>\n\n\\\n\n20f6\n\nSwitch group\n\n>\n\n\\\n\n3 groups\n\nHave an invite?\n\n+\n\nCreate a group\n\nREMINDER\n\noO\n\n\u2014\n\nikuvm.cloudfront.net G\n\neee\n\n~\\\n"
+    },
+    {
+      "second": 10,
+      "text": "9:41\n\nFF @\n\nGaD\n\nSettings\n\nMaya\n\nmaya.chen.27\n\nThe little t\n\nMJ\n\nOwner - 2 of\n\nm\n\nice\n\nPro\n\nThe si\n\nTime zone\n\nAsia/Sii\n\n>\n\n\\\n\nInvite friends\n\nMembers\n\n>\n\n\\\n\n20f6\n\nSwitch group\n\n>\n\n\\\n\n3 groups\n\nHave an invite?\n\n+\n\nCreate a group\n\nREMINDER\n\noO\n\n\u2014\n\nikuvm.cloudfront.net G\n\neee\n\n~\\\n"
+    },
+    {
+      "second": 11,
+      "text": "9:41\n\nFF @\n\nGaD\n\nSettings\n\nMaya\n\nmaya.chen.27\n\nThe little t\n\nMJ\n\nOwner - 2 of 6m\n\nPro\u2019\n\nice\n\nTim\n\nAsia/S\\\n\n>\n\n\\\n\nInvite friends\n\n\u2014\n\nMembers\n\n>\n\n\\\n\n20f6\n\n>\n\n\\\n\nSwitch group\n\n3 groups\n\nHave an invite?\n\n+\n\nCreate a group\n\nREMINDER\n\noO\n\neee\n\n\u2014\n\nikuvm.cloudfront.net G\n\n~\\\n"
+    },
+    {
+      "second": 12,
+      "text": "9:41\n\nFF @\n\nGaD\n\nSettings\n\nMaya\n\nmaya.chen.27\n\nThe little t\n\nMJ\n\nOwner - 2 of\n\nmi\n\nice\n\nPro\n\nll\n\nTime z\n\nAsia/S\\\n\n>\n\n\\\n\nInvite friends\n\nMembers\n\n>\n\n\\\n\n20f6\n\nSwitch group\n\n>\n\n\\\n\n3 groups\n\nHave an invite?\n\n+\n\nCreate a group\n\nREMINDER\n\noO\n\n\u2014\n\nikuvm.cloudfront.net G\n\neee\n\n~\\\n"
+    },
+    {
+      "second": 13,
+      "text": "9:41\n\nFF @\n\nGaD\n\nSettings\n\nMaya\n\nmaya.chen.27\n\nThe little t\n\nMJ\n\nOwner - 2 of\n\nmi\n\nide\n\nPro\n\nll\n\nTim\n\n1e\n\nAsia/S\\\n\n>\n\n\\\n\nInvite friends\n\nMembers\n\n>\n\n\\\n\n20f6\n\nSwitch group\n\n>\n\n\\\n\n3 groups\n\nHave an invite?\n\n+\n\nCreate a group\n\nREMINDER\n\noO\n\n\u2014\n\nikuvm.cloudfront.net G\n\neee\n\n~\\\n"
+    },
+    {
+      "second": 14,
+      "text": "9:41\n\nFF @\n\nGaD\n\nSettings\n\nMaya\n\nmaya.chen.27\n\nThe little th\n\nMJ\n\nOwner - 2 of\n\nice\n\nPromp\n\nll\n\nTim\n\n1e\n\nAsia/S\\\n\n>\n\n)\n\nInvite friends\n\nMembers\n\n>\n\n\\\n\n20f6\n\nSwitch group\n\n>\n\n\\\n\n3 groups\n\nHave an invite?\n\n+\n\nCreate a group\n\nREMINDER\n\noO\n\n\u2014\n\nikuvm.cloudfront.net G\n\neee\n\n~\\\n"
+    },
+    {
+      "second": 15,
+      "text": "9:41\n\nFF @\n\nGaD\n\nSettings\n\nMaya\n\nmaya.chen.27\n\nThe little t\n\nMJ\n\nOwner - 2 of 6m\n\nnb\n\nPro\n\nice\n\nTime\n\nAsia/S\\\n\n>\n\n)\n\nInvite friends\n\nMembers\n\n>\n\n\\\n\n20f6\n\n>\n\n\\\n\nSwitch group\n\n3 groups\n\nHave an invite?\n\n+\n\nCreate a group\n\nREMINDER\n\noO\n\neee\n\n\u2014\n\nikuvm.cloudfront.net G\n\n~\\\n"
+    },
+    {
+      "second": 16,
+      "text": "9:41\n\nMembers\n\nMaya (you)\n\nOwner\n\nJun\n\nMember\n\nBlocking hi\n\n\u2014\n\noO\n\nikuvm.cloudfront.net G\n\neee\n\n%\n\nt |\n"
+    },
+    {
+      "second": 17,
+      "text": "9:41\n\nMembers\n\nMaya (you)\n\nOwner\n\nJun\n\nMember\n\nBlocking hi\n\n\u2014\n\noO\n\nikuvm.cloudfront.net G\n\neee\n\n%\n\nt |\n"
+    },
+    {
+      "second": 18,
+      "text": "9:41\n\nMembers\n\nMaya (you)\n\nOwner\n\nJun\n\nMember\n\nBlocking hi\n\nZ\n\n\u2014\n\noO\n\nikuvm.cloudfront.net G\n\neee\n\n%\n\nt |\n"
+    },
+    {
+      "second": 19,
+      "text": "9:41\n\nMembers\n\nMaya (you)\n\nOwner\n\nJun\n\nMember\n\nne\n\nBlocking hi\n\nZ\n\n\u2014\n\noO\n\nikuvm.cloudfront.net G\n\neee\n\n%\n\nt |\n"
+    },
+    {
+      "second": 20,
+      "text": "9:41\n\nMembers\n\nMaya (you)\n\nOwner\n\nJun\n\n\u2014\n\nBlocking hi\n\nyou.\n\nZ\n\n\u2014\n\noO\n\nikuvm.cloudfront.net G\n\neee\n\n%\n\nt |\n"
+    },
+    {
+      "second": 21,
+      "text": "9:41\n\nMembers\n\nMaya (you)\n\nOwner\n\nJun\n\nMember\n\n \u2014_\u2014\n\nBlocking hid\n\nyou.\n\nZ\n\n\u2014\n\noO\n\nikuvm.cloudfront.net G\n\neee\n\n%\n\nt |\n"
+    },
+    {
+      "second": 22,
+      "text": "9:41\n\nFF @\n\naa\u00bb\n\nMembers\n\nMaya (you)\n\nOwner\n\nJun\n\nMember\n\nae\n\nBlocking hi\n\nm you.\n\n\u2014\n\noO\n\nikuvm.cloudfront.net G\n\neee\n\n%\n\nt |\n"
+    },
+    {
+      "second": 23,
+      "text": "9:41\n\nMembers\n\nMaya (you)\n\nOwner\n\nJun\n\nMember\n\n _\u2014\u2014\n\nBlocking hit\n\nm you.\n\nZ\n\n\u2014\n\noO\n\nikuvm.cloudfront.net G\n\neee\n\n%\n\nt |\n"
+    },
+    {
+      "second": 24,
+      "text": "9:41\n\nFF @\n\nGaD\n\nSettings\n\nMaya\n\nmaya.chen.27\n\nThe little t\n\nMJ\n\nOwner - 2 of 6 men\n\nice\n\nPrompt\n\nTim\n\nO!\n\nAsi\n\n>\n\n\\\n\nInvite friends\n\nMembers\n\n>\n\n\\\n\n20f6\n\nSwitch group\n\n>\n\n\\\n\n3 groups\n\nHave an invite?\n\nah\n\nCreate a group\n\nREMINDER\n\noO\n\n\u2014\n\nikuvm.cloudfront.net G\n\neee\n\n\\\n"
+    },
+    {
+      "second": 25,
+      "text": "9:41\n\nFF @\n\nGaD\n\nSettings\n\nMaya\n\nmaya.chen.27\n\nThe little t\n\nMJ\n\nOwner - 2 of\n\nm\n\nice\n\nPrompt\n\nO!\n\nAsia/S\\\n\n>\n\n\\\n\nInvite friends\n\nMembers\n\n>\n\n\\\n\n20f6\n\nSwitch group\n\n>\n\n\\\n\n3 groups\n\nHave an invite?\n\nah\n\nCreate a group\n\nREMINDER\n\noO\n\n\u2014\n\nikuvm.cloudfront.net G\n\neee\n\n\\\n"
+    },
+    {
+      "second": 26,
+      "text": "9:41\n\nFF @\n\nGaD\n\nSettings\n\nMaya\n\nmaya.chen.27\n\nThe little t\n\nMJ\n\nOwner - 2 of 6\n\nni\n\nProt\n\n(ar\n\nTim\n\nAsia/S\\\n\n>\n\n\\\n\nInvite friends\n\nMembers\n\n>\n\n\\\n\n20f6\n\n>\n\n\\\n\nSwitch group\n\n3 groups\n\nHave an invite?\n\nah\n\nCreate a group\n\nREMINDER\n\noO\n\neee\n\n\u2014\n\nikuvm.cloudfront.net G\n\n\\\n"
+    },
+    {
+      "second": 27,
+      "text": "9:41\n\nFF @\n\nGaD\n\nSettings\n\nMaya\n\nmaya.chen.27\n\nThe little t\n\nMJ\n\nOwner - 2 of\n\nm\n\nice\n\nPrompt\n\nThe si\n\nTime\n\nAsia/Sing:\n\n>\n\n\\\n\nInvite friends\n\nMembers\n\n>\n\n\\\n\n20f6\n\nSwitch group\n\n>\n\n\\\n\n3 groups\n\nHave an invite?\n\n+\n\nCreate a group\n\nREMINDER\n\noO\n\n\u2014\n\nikuvm.cloudfront.net G\n\neee\n\n\\\n"
+    },
+    {
+      "second": 28,
+      "text": "9:41\n\nFF @\n\nGaD\n\nSettings\n\nMaya\n\nmaya.chen.27\n\nThe little t\n\nMJ\n\nOwner - 2 o'\n\nm\n\n(ar\n\nPrompt\n\nThe s!\n\nTime\n\nAsia/Sing:\n\n>\n\n\\\n\nInvite friends\n\n\u2014\u2014\u2014\n\nMembers\n\n>\n\n\\\n\n20f6\n\nSwitch group\n\n2\n\n\\\n\n3 groups\n\nHave an invite?\n\n+\n\nCreate a group\n\nREMINDER\n\noO\n\n\u2014\n\nikuvm.cloudfront.net G\n\neee\n\n\\\n"
+    },
+    {
+      "second": 29,
+      "text": "9:41\n\nFF @\n\nGaD\n\nSettings\n\nMaya\n\nmaya.chen.27\n\nae\n\nThe little t\n\nMJ\n\nOwner - 2 of\n\nm\n\nar\n\nPrompt\n\nThe si\n\nTime zo\n\nAsia/Sing:\n\n>\n\n\\\n\nInvite friends\n\nae\n\nMembers\n\n>\n\n\\\n\n20f6\n\nSwitch group\n\n2\n\n\\\n\n3 groups\n\nHave an invite?\n\n+\n\nCreate a group\n\nREMINDER\n\noO\n\n\u2014\n\nikuvm.cloudfront.net G\n\neee\n\n\\\n"
+    },
+    {
+      "second": 30,
+      "text": "9:41\n\nFF @\n\nGaD\n\nSettings\n\nMaya\n\nmaya.chen.27\n\nThe little t\n\nMJ\n\nOwner - 2 of\n\n6m\n\nPro\n\n(ar\n\nThe\n\nlin\n\nTime zo\n\nAsia/S\n\n>\n\n\\\n\nInvite friends\n\n\u2014\u2014\u2014EEE\n\nMembers\n\n>\n\n\\\n\n20f6\n\n>\n\n\\\n\nSwitch group\n\n3 groups\n\nHave an invite?\n\n+\n\nCreate a group\n\nREMINDER\n\noO\n\neee\n\n\u2014\n\nikuvm.cloudfront.net G\n\n\\\n"
+    },
+    {
+      "second": 31,
+      "text": "9:41\n\nFF @\n\nGaD\n\nSettings\n\nMaya\n\nmaya.chen.27\n\nThe little t\n\nMJ\n\nOwner - 2 of\n\nm\n\n(ar\n\nPrompt\n\nThe si\n\nTime\n\nAsia/Sil\n\n>\n\n\\\n\nInvite friends\n\nMembers\n\n>\n\n\\\n\n20f6\n\nSwitch group\n\n2\n\n\\\n\n3 groups\n\nHave an invite?\n\n+\n\nCreate a group\n\nREMINDER\n\noO\n\n\u2014\n\nikuvm.cloudfront.net G\n\neee\n\n\\\n"
+    },
+    {
+      "second": 32,
+      "text": "9:41\n\nFF @\n\naa\u00bb\n\nThe little things v\n\nYour film is here\n\nPremiere - 24 h left\n\n7 Watch\n\nTHIS CYCLE\u2019S PROMPT\n\nThe small moments that\n\nmade our week\n\nYou:O of 5-Oof30s >\n\nNothing sealed yet this week\n\n@\n\n2\n\ne\n\nHome\n\nChat\n\nArchive\n\noa\n\n~\n\n\u2014\n\noO\n\nikuvm.cloudfront.net @\n\neee\n"
+    },
+    {
+      "second": 33,
+      "text": "9:41\n\nFF @\n\naa\u00bb\n\nThe little things v\n\nYour film is here\n\nPremiere - 24 h left\n\n7 Watch\n\nTHIS CYCLE\u2019S PROMPT\n\nThe small moments that\n\nmade our week\n\nYou:O of 5-Oof30s >\n\nNothing sealed yet this week\n\n@\n\n2\n\ne\n\nHome\n\nChat\n\nArchive\n\noa\n\n~\n\n\u2014\n\noO\n\nikuvm.cloudfront.net @\n\neee\n"
+    },
+    {
+      "second": 34,
+      "text": "9:41\n\nFF @\n\naa\u00bb\n\nThe little things v\n\nYour film is here\n\nPremiere - 24 h left\n\n7 Watch\n\nTHIS CYCLE\u2019S PROMPT\n\nThe small moments that\n\nmade our week\n\nYou:O of 5-Oof30s >\n\nNothing sealed yet this week\n\n@\n\n2\n\ne\n\nHome\n\nChat\n\nArchive\n\noa\n\n~\n\n\u2014\n\noO\n\nikuvm.cloudfront.net @\n\neee\n"
+    },
+    {
+      "second": 35,
+      "text": "9:41\n\nFF @\n\naa\u00bb\n\nThe little things v\n\nYour film is here\n\nPremiere - 24 h left\n\n7 Watch\n\nTHIS CYCLE\u2019S PROMPT\n\nThe small moments that\n\nmade our week\n\nYou:O of 5-Oof30s >\n\nNothing sealed yet this week\n\n@\n\n2\n\ne\n\nHome\n\nChat\n\nArchive\n\noa\n\n~\n\n\u2014\n\noO\n\nikuvm.cloudfront.net @\n\neee\n"
+    },
+    {
+      "second": 36,
+      "text": "9:41\n\nFF @\n\naa\u00bb\n\nThe little things v\n\nYour film is here\n\nPremiere - 24 h left\n\n7 Watch\n\nTHIS CYCLE\u2019S PROMPT\n\nThe small moments that\n\nmade our week\n\nYou:O of 5-Oof30s >\n\nNothing sealed yet this week\n\n@\n\n2\n\ne\n\nHome\n\nChat\n\nArchive\n\noa\n\n~\n\n\u2014\n\noO\n\nikuvm.cloudfront.net @\n\neee\n"
+    },
+    {
+      "second": 37,
+      "text": "9:41\n\nFF @\n\naa\u00bb\n\nThe little things v\n\nYour film is here\n\nPremiere - 24 h left\n\n7 Watch\n\nTHIS CYCLE\u2019S PROMPT\n\nThe small moments that\n\nmade our week\n\nYou:O of 5-Oof30s >\n\nNothing sealed yet this week\n\n@\n\n2\n\ne\n\nHome\n\nChat\n\nArchive\n\noa\n\n~\n\n\u2014\n\noO\n\nikuvm.cloudfront.net @\n\neee\n"
+    },
+    {
+      "second": 38,
+      "text": "9:41\n\nFF @\n\naa\u00bb\n\nThe little things v\n\nYour film is here\n\nPremiere - 24 h left\n\n7 Watch\n\nTHIS CYCLE\u2019S PROMPT\n\nThe small moments that\n\nmade our week\n\nYou:O of 5-Oof30s >\n\nNothing sealed yet this week\n\n@\n\n2\n\ne\n\nHome\n\nChat\n\nArchive\n\noa\n\n~\n\n\u2014\n\noO\n\nikuvm.cloudfront.net @\n\neee\n"
+    },
+    {
+      "second": 39,
+      "text": "9:41\n\nFF @\n\naa\u00bb\n\nThe little things v\n\nYour film is here\n\nPremiere - 24 h left\n\n7 Watch\n\nTHIS CYCLE\u2019S PROMPT\n\nThe small moments that\n\nmade our week\n\nYou:O of 5-Oof30s >\n\nNothing sealed yet this week\n\n@\n\n2\n\ne\n\nHome\n\nChat\n\nArchive\n\noa\n\n~\n\n\u2014\n\noO\n\nikuvm.cloudfront.net @\n\neee\n"
+    }
+  ]
+}

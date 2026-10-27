@@ -1,0 +1,38 @@
+@startuml
+!include _style.iuml
+title Activity view · DevSecOps checks and hosted delivery
+skinparam defaultFontSize 23
+skinparam activityFontSize 23
+skinparam ArrowFontSize 20
+skinparam activityBackgroundColor #F5F2E9
+skinparam activityBorderColor #75528F
+skinparam partitionBorderColor #C7BCA7
+skinparam nodesep 20
+skinparam ranksep 15
+skinparam Padding 6
+skinparam LegendFontSize 22
+partition "Developer" {
+  (*) --> "Commit / PR to dev\nPush protection rejects secrets" as PR
+}
+partition "GitHub PR checks" {
+  PR -right-> ===checks===
+  ===checks=== -right-> "BLOCKS MERGE · Quality\nstatic ×4; tests + fixtures\nSQLite + PostgreSQL; Jest ≥70%\nSCA: npm audit HIGH+\n→ quality-test-results-root\n→ server-coverage\n→ frontend-coverage\n→ quality-npm-audit" as Q
+  ===checks=== --> "REPORTS · parallel workflows\nSAST CodeQL → Security\nGitleaks → gitleaks-<sha>\nTrivy images + SBOM →\nrelease-security-{runtime,web}-<sha>\nIaC → release-security-iac-<sha>\nGitGuardian app → PR status\nGitHub secrets / Dependabot → alerts" as REPORT
+}
+partition "Deploy dev" {
+  Q -right-> "Merge → push dev\nBLOCKS DEPLOY: Quality + Trivy\nSame-commit Quality; build / verify tar\nExact-bundle Trivy: HIGH / CRITICAL\n→ sbom-{runtime,web}.cdx.json\n→ trivy-{runtime,web}.json\n→ release-manifest.json\narchive: dev-release-security-<sha>" as SCAN
+  SCAN --> "Attest tar + manifest\n→ Sigstore JSON bundle\n→ dev-release-bundle-<sha>\nOIDC → SSH upload" as SIGN
+}
+partition "Hosted dev" {
+  SCAN -[hidden]right-> "Install + health check\nBLOCKS DEPLOY: bad health\nRestore previous on failure" as HOST
+  SIGN -right-> HOST
+  HOST --> "REPORTS · ZAP baseline\n→ zap-baseline-<sha>\nreport_json.json\nreport_html.html / report_md.md" as ZAP
+  ZAP --> (*)
+}
+legend bottom
+  BLOCKS MERGE = required Quality. BLOCKS DEPLOY = stops upload / activation. REPORTS = outside both gates.
+  PR + push: Quality, CodeQL, Gitleaks; CodeQL also weekly. Candidate scans: path-filtered PR, dev/main push, v*, manual.
+  Deploy: dev push / manual; docs-only skips host work and app checks. Main adds browser checks to Quality.
+  Manual performance REPORTS → hosted-performance-<run-id>: results.json + SUMMARY.md. Independent scans can fail their jobs.
+endlegend
+@enduml

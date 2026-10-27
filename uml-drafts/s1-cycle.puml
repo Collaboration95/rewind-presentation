@@ -1,0 +1,21 @@
+@startuml
+!include _style.iuml
+title Statechart · Cycle lifecycle (cycles.status, cycles.release_status) · as built at f6cd896
+' Evidence: server/src/cycles/lifecycle.ts#L312-L411 (advanceCycleLifecycleVerified), #L216-L273 (publishCycleReleaseVerified), #L276-L310 (ensureSuccessor), #L38 (PREMIERE_DURATION_MS); groups/real.ts#L94-L99; cycles/scheduler.ts#L58-L80
+[*] --> collecting : createRealGroup() / INSERT cycles status='collecting'
+state collecting
+collecting --> collecting : advanceCycleLifecycle [now < ends_at] / action = waiting_for_boundary
+collecting --> revealing : advanceCycleLifecycle [now >= ends_at] / status = 'revealing'\nevent collecting_to_revealing\nensureCompilationJob (film job 'pending')\nensureSuccessor (next cycle 'collecting', groups.current_cycle_id)
+state revealing {
+  [*] --> unpublished
+  unpublished --> unpublished : advanceCycleLifecycle / action = waiting_for_release
+  unpublished --> published : publishCycleRelease [status = 'revealing' and now >= ends_at\nand film job 'ready' with verified sha256 and size] / release_status = 'published'\nrelease_published_at = now
+  published --> published : advanceCycleLifecycle [now < release_published_at + 24 h] / action = premiere
+}
+revealing --> archived : advanceCycleLifecycle [published and now >= release_published_at + 24 h\nand film output re-verified] / status = 'archived'\nevent revealing_to_archived
+archived --> archived : advanceCycleLifecycle / action = already_archived
+legend bottom
+  Events are calls made by the scheduler tick (1 s loop). Each transition runs in one BEGIN IMMEDIATE transaction.
+  Replays are safe: UNIQUE (cycle_id, transition) on cycle_lifecycle_events, conditional UPDATE of groups.current_cycle_id.
+endlegend
+@enduml

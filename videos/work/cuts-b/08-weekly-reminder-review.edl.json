@@ -1,0 +1,45 @@
+{
+  "number": 8,
+  "name": "Weekly reminder",
+  "output": "08-weekly-reminder-review.mp4",
+  "segments": [
+    {
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/08-reminder.mov",
+      "in": 180,
+      "out": 190,
+      "duration": 10,
+      "audio": false,
+      "note": "Settings scroll to Weekly reminder Off"
+    },
+    {
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/08-reminder.mov",
+      "in": 210,
+      "out": 216,
+      "duration": 6,
+      "audio": false,
+      "note": "Weekly reminder Off, cut before simultaneous toggle/install modal"
+    },
+    {
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/08-reminder.mov",
+      "in": 257,
+      "out": 269,
+      "duration": 12,
+      "audio": false,
+      "note": "Weekly reminder On after modal omission; no sign-out tail"
+    },
+    {
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/08-banner.mov",
+      "in": 1,
+      "out": 16,
+      "duration": 15,
+      "audio": false,
+      "note": "Safe Home, actual banner arrival and departure"
+    },
+    {
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/cuts-b/holds/08-home-final.png",
+      "duration": 7,
+      "audio": false,
+      "note": "Last safe Home frame; total banner section 22s"
+    }
+  ]
+}

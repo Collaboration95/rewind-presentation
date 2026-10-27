@@ -1,0 +1,24 @@
+Rendering 1/7 (8s)
+Rendering 2/7 (8s)
+Rendering 3/7 (9s)
+Rendering 4/7 (8s)
+Rendering 5/7 (10s)
+Rendering 6/7 (10s)
+Rendering 7/7 (7s)
+{
+  "output": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/cuts-a/04-invite-and-join-review.mp4",
+  "frames": 1800,
+  "duration": 60.0,
+  "checks": {
+    "codec": true,
+    "profile": true,
+    "size": true,
+    "pixel_format": true,
+    "fps": true,
+    "frame_count": true,
+    "video_duration": true,
+    "container_duration": true,
+    "audio": true,
+    "audio_duration": true
+  }
+}

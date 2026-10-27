@@ -1,0 +1,4 @@
+ffconcat version 1.0
+file '/tmp/rewind-video/work/png/cv-17cc76559c.png'
+duration 4.0000
+file '/tmp/rewind-video/work/png/cv-17cc76559c.png'

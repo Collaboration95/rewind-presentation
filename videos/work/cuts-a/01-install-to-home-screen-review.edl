@@ -1,0 +1,38 @@
+TITLE: Install to Home Screen
+FCM: NON-DROP FRAME
+* 30 FPS; STRAIGHT CUTS; REAL FOOTAGE AT 1X; POSTROLL FREEZE WHERE NOTED
+* All source audio discarded; final AAC stereo is silent.
+* JSON EDL is authoritative for source in/out and postroll hold durations.
+
+001  AX       V     C        00:00:00:00 00:00:06:00 00:00:00:00 00:00:06:00
+* FROM CLIP NAME: 01-install-clean.mov
+* Real Safari sign-in form; establish browser context
+
+002  AX       V     C        00:00:08:00 00:00:12:00 00:00:06:00 00:00:11:00
+* FROM CLIP NAME: 01-install-clean.mov
+* Safari More menu opens; trim following idle pause
+* FREEZE LAST SAFE FRAME: 1.000000s
+
+003  AX       V     C        00:00:47:00 00:00:52:00 00:00:11:00 00:00:17:00
+* FROM CLIP NAME: 01-install-clean.mov
+* Tap Share; native share sheet appears
+* FREEZE LAST SAFE FRAME: 1.000000s
+
+004  AX       V     C        00:01:02:00 00:01:07:00 00:00:17:00 00:00:23:00
+* FROM CLIP NAME: 01-install-clean.mov
+* View More expands native Safari actions
+* FREEZE LAST SAFE FRAME: 1.000000s
+
+005  AX       V     C        00:00:00:00 00:00:07:00 00:00:23:00 00:00:30:00
+* FROM CLIP NAME: 01-share-actions.png
+* Read Add to Home Screen in the real native action sheet
+
+006  AX       V     C        00:01:26:00 00:01:31:00 00:00:30:00 00:00:37:00
+* FROM CLIP NAME: 01-install-clean.mov
+* Tap Add to Home Screen; real confirmation opens
+* FREEZE LAST SAFE FRAME: 2.000000s
+
+007  AX       V     C        00:02:13:00 00:02:16:03 00:00:37:00 00:00:45:00
+* FROM CLIP NAME: 01-install-clean.mov
+* Tap Add; real installed iPhone Home Screen; hold final raw frame
+* FREEZE LAST SAFE FRAME: 4.900000s

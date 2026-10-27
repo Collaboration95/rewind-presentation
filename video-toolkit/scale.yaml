@@ -1,0 +1,29 @@
+output: out/scale-test.mp4
+stamp: "27 Oct 2026 · hosted dev · abc1234"
+srt: scale.srt
+clips:
+  - {title: "CI/CD pipeline demo", kicker: "Scale test", sub: "25 segments, 60 cues", dur: 3}
+  - {source: in/desktop-10min.mp4, in: 331, out: 365, caption: "Step 0"}
+  - {source: in/desktop-10min.mp4, in: 154, out: 188, caption: "Step 1"}
+  - {source: in/desktop-10min.mp4, in: 404, out: 438, caption: "Step 2"}
+  - {source: in/desktop-10min.mp4, in: 49, out: 83, caption: "Step three (edited)"}
+  - {source: in/desktop-10min.mp4, in: 74, out: 108, caption: "Step 4"}
+  - {source: in/desktop-10min.mp4, in: 96, out: 160, speed: 8, caption: "wait trimmed: actual {actual}"}
+  - {source: in/desktop-10min.mp4, in: 374, out: 408, caption: "Step 6"}
+  - {source: in/desktop-10min.mp4, in: 59, out: 93, caption: "Step 7"}
+  - {source: in/desktop-10min.mp4, in: 519, out: 553, caption: "Step 8"}
+  - {source: in/desktop-10min.mp4, in: 219, out: 253, caption: "Step 9"}
+  - {source: in/desktop-10min.mp4, in: 38, out: 72, caption: "Step 10"}
+  - {source: in/desktop-10min.mp4, in: 88, out: 152, speed: 8, caption: "wait trimmed: actual {actual}"}
+  - {source: in/desktop-10min.mp4, in: 444, out: 478, caption: "Step 12"}
+  - {source: in/desktop-10min.mp4, in: 428, out: 462, caption: "Step 13"}
+  - {source: in/desktop-10min.mp4, in: 71, out: 105, caption: "Step 14"}
+  - {source: in/desktop-10min.mp4, in: 246, out: 280, caption: "Step 15"}
+  - {source: in/desktop-10min.mp4, in: 92, out: 126, caption: "Step 16"}
+  - {source: in/desktop-10min.mp4, in: 434, out: 498, speed: 8, caption: "wait trimmed: actual {actual}"}
+  - {source: in/desktop-10min.mp4, in: 60, out: 94, caption: "Step 18"}
+  - {source: in/desktop-10min.mp4, in: 126, out: 160, caption: "Step 19"}
+  - {source: in/desktop-10min.mp4, in: 228, out: 262, caption: "Step 20"}
+  - {source: in/desktop-10min.mp4, in: 63, out: 97, caption: "Step 21"}
+  - {source: in/desktop-10min.mp4, in: 406, out: 440, caption: "Step 22"}
+  - {source: in/desktop-10min.mp4, in: 50, out: 114, speed: 8, caption: "wait trimmed: actual {actual}"}

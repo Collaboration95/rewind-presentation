@@ -1,0 +1,75 @@
+@startuml
+!include _style.iuml
+title Data class view · Real membership, capture and compilation
+skinparam nodesep 24
+skinparam ranksep 22
+skinparam ClassAttributeFontSize 20
+skinparam ClassStereotypeFontSize 20
+skinparam ArrowFontSize 20
+skinparam LegendFontSize 20
+skinparam linetype polyline
+hide methods
+class real_profiles <<table>> {
+  id: TEXT <<PK>>
+  account_id: TEXT <<FK real_accounts, UQ>>
+}
+class real_group_memberships <<table>> {
+  group_id: TEXT <<PK, FK>>
+  account_id: TEXT <<PK, FK*>>
+  profile_id: TEXT <<FK*>>
+}
+class real_group_metadata <<table>> {
+  group_id: TEXT <<PK, FK groups>>
+  owner_account_id: TEXT <<FK real_accounts>>
+}
+class profiles <<table>> {
+  id: TEXT <<PK>>
+  display_name: TEXT
+}
+class groups <<table>> {
+  id: TEXT <<PK>>
+  name: TEXT
+  current_cycle_id: TEXT [0..1]
+}
+class cycles <<table>> {
+  id: TEXT <<PK>>
+  group_id: TEXT <<FK groups>>
+  status, release_status: TEXT
+}
+class contributions <<table>> {
+  id: TEXT <<PK>>
+  cycle_id: TEXT <<FK cycles>>
+  member_id: TEXT <<FK profiles>>
+  duration_seconds: DOUBLE PRECISION
+}
+class compilation_job_inputs <<table>> {
+  job_id: TEXT <<PK, FK>>
+  clip_job_id: TEXT <<PK, FK media_jobs>>
+  contribution_id: TEXT <<FK>>
+  position: BIGINT
+}
+class media_jobs <<table>> {
+  id: TEXT <<PK>>
+  group_id: TEXT <<FK groups>>
+  cycle_id: TEXT [0..1] <<FK cycles>>
+  contribution_id: TEXT [0..1] <<FK contributions>>
+  kind, status: TEXT
+  claim_generation: BIGINT
+}
+real_profiles "1" -right- "0..*" real_group_memberships : composite FK*
+real_group_memberships "0..*" -right- "1" real_group_metadata : group_id
+real_profiles .down.> profiles : trigger mirror
+real_group_metadata "0..1" -down- "1" groups
+profiles -[hidden]right- groups
+groups "1" -right- "0..*" cycles
+profiles "1" -down- "0..*" contributions
+groups -[hidden]down- compilation_job_inputs
+cycles "0..1" -down- "0..*" media_jobs
+contributions "1" -right- "0..*" compilation_job_inputs
+compilation_job_inputs "0..*" -right- "1" media_jobs : job_id
+legend bottom
+  Selected columns. PK = primary key; FK = database foreign key; UQ = unique; [0..1] = nullable.
+  FK* = (account_id, profile_id) → real_profiles(account_id, id). real_accounts is the account identity table.
+  current_cycle_id is an application link. UNIQUE(job_id, contribution_id). Archive reads published cycles + film jobs.
+endlegend
+@enduml

@@ -1,0 +1,28 @@
+{
+  "video": "cicd-demo.mp4",
+  "durationSeconds": 710,
+  "frameCount": 21300,
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "videoCodec": "h264",
+  "audioCodec": "aac",
+  "decode": "PASS: full final MP4 decoded without errors",
+  "visualQA": "30 shot midpoints reviewed; final performance cursor and closing card rechecked",
+  "backupPNGs": 35,
+  "backupDimensions": "3840x2160",
+  "chartsDimensions": "1280x720",
+  "loadTest": {
+    "source": "local",
+    "vus": 100,
+    "requests": 3212,
+    "p95Ms": 1335.9449579999782,
+    "errors": 0,
+    "throughputRps": 17.83765712919595,
+    "githubRunUrl": null,
+    "dispatch": "HTTP404; performance.yml absent from main"
+  },
+  "githubSettingsChanged": false,
+  "prsMerged": false,
+  "awsChanged": false
+}

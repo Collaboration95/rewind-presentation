@@ -1,0 +1,43 @@
+@startuml
+!include _cicd.iuml
+title Pipeline view · one change from commit to hosted dev
+skinparam nodesep 20
+skinparam ranksep 30
+skinparam ArrowFontSize 20
+
+frame "1 · Developer → pull request into dev" as F1 {
+  rectangle "Commit on\nissue branch\n<size:20>git hooks: lint,</size>\n<size:20>format, typecheck</size>" as C
+  rectangle "<b>BLOCKS PUSH</b>\nPush protection\n<size:20>secret patterns</size>" <<human>> as PP
+  rectangle "<b>BLOCKS MERGE</b>\nQuality checks\n<size:20>static · audit · tests</size>" <<merge>> as Q
+  rectangle "<b>REPORTS</b>\nCodeQL · Gitleaks\nTrivy · GitGuardian" <<report>> as R
+  hexagon "Merge\nallowed?" <<merge>> as G1
+}
+
+frame "2 · Deploy dev · same push to dev" as F2 {
+  hexagon "Quality\npassed\nagain?" <<deploy>> as G2
+  rectangle "Build +\nverify\nbundle" as B
+  hexagon "0 HIGH /\nCRITICAL?" <<deploy>> as G3
+  rectangle "SBOM · manifest\nattest provenance\nOIDC → upload" as S
+  hexagon "Health\nOK?\n<size:20>no: restore</size>\n<size:20>prior release</size>" <<deploy>> as G4
+}
+
+frame "3 · Hosted dev → promotion" as F3 {
+  node "Hosted dev\n<size:20>CloudFront → nginx</size>\n<size:20>+ Node + PostgreSQL</size>" as H
+  rectangle "<b>REPORTS</b>\nDAST · ZAP baseline\n<size:20>0 High · 4 Medium</size>" <<report>> as Z
+  hexagon "PR dev → main\n+ 1 approval" <<human>> as G5
+}
+
+C -right-> PP : push
+PP -right-> Q : PR
+Q -right-> G1
+R -right-> G1 : <size:20>not required</size>
+Q -[hidden]down- R
+G1 -down-> G2 : merge
+G2 -right-> B : yes
+B -right-> G3
+G3 -right-> S : yes
+S -right-> G4
+G4 -down-> H : yes · activate
+H -left-> Z
+Z -left-> G5
+@enduml

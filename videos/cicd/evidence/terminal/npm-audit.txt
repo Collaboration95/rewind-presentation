@@ -1,0 +1,20 @@
+$ jq '.metadata' quality-npm-audit/npm-audit.json
+{
+  "vulnerabilities": {
+    "info": 0,
+    "low": 0,
+    "moderate": 0,
+    "high": 0,
+    "critical": 0,
+    "total": 0
+  },
+  "dependencies": {
+    "prod": 674,
+    "dev": 432,
+    "optional": 40,
+    "peer": 4,
+    "peerOptional": 0,
+    "total": 1119
+  }
+}
+

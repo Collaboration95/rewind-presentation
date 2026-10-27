@@ -1,0 +1,25 @@
+Rendering 1/5 (10s)
+Cache: segment-685dcf141bae3123ee79.mov
+Rendering 2/5 (6s)
+Rendering 3/5 (12s)
+Rendering 4/5 (15s)
+Cache: segment-7bc907f8b04674963580.mov
+Rendering 5/5 (7s)
+Cache: segment-cc8c5adcbe246e7b9c33.mov
+{
+  "output": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/cuts-b/08-weekly-reminder-review.mp4",
+  "frames": 1500,
+  "duration": 50.0,
+  "checks": {
+    "codec": true,
+    "profile": true,
+    "size": true,
+    "pixel_format": true,
+    "fps": true,
+    "frame_count": true,
+    "video_duration": true,
+    "container_duration": true,
+    "audio": true,
+    "audio_duration": true
+  }
+}

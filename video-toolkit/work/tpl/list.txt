@@ -1,0 +1,3 @@
+file '/private/tmp/rewind-video/out/tpl/t6-title.mp4'
+file '/private/tmp/rewind-video/out/tpl/t5-stamp.mp4'
+file '/private/tmp/rewind-video/out/tpl/t2-phone.mp4'

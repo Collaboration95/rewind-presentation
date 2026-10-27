@@ -1,0 +1,6 @@
+Static and root tests	UNKNOWN STEP	2026-10-08T08:05:46.0889214Z ##[group]Run command -v ffmpeg >/dev/null || (sudo apt-get update && sudo apt-get install -y ffmpeg)
+Static and root tests	UNKNOWN STEP	2026-10-08T08:05:46.0889798Z ^[[36;1mcommand -v ffmpeg >/dev/null || (sudo apt-get update && sudo apt-get install -y ffmpeg)^[[0m
+Server tests and coverage	UNKNOWN STEP	2026-10-08T07:53:47.7121681Z ##[group]Run command -v ffmpeg >/dev/null || (sudo apt-get update && sudo apt-get install -y ffmpeg)
+Server tests and coverage	UNKNOWN STEP	2026-10-08T07:53:47.7122274Z ^[[36;1mcommand -v ffmpeg >/dev/null || (sudo apt-get update && sudo apt-get install -y ffmpeg)^[[0m
+Server tests on PostgreSQL	UNKNOWN STEP	2026-10-08T07:54:04.1713399Z ##[group]Run command -v ffmpeg >/dev/null || (sudo apt-get update && sudo apt-get install -y ffmpeg)
+Server tests on PostgreSQL	UNKNOWN STEP	2026-10-08T07:54:04.1714416Z ^[[36;1mcommand -v ffmpeg >/dev/null || (sudo apt-get update && sudo apt-get install -y ffmpeg)^[[0m

@@ -1,0 +1,78 @@
+{
+  "results": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/load-test/rerun-local-20261026T155655Z/results.json",
+  "run": null,
+  "url": "",
+  "passed": true,
+  "stages": [
+    {
+      "vus": 1,
+      "phase": "steady",
+      "elapsedSeconds": 180.063270541,
+      "requests": 38,
+      "errors": 0,
+      "errorRate": 0,
+      "throughputRps": 0.21103693099558293,
+      "meanMs": 682.2835011052634,
+      "p50Ms": 765.0668750000041,
+      "p95Ms": 1057.7308340000018,
+      "p99Ms": 1238.1317920000001,
+      "maxMs": 1238.1317920000001
+    },
+    {
+      "vus": 10,
+      "phase": "steady",
+      "elapsedSeconds": 180.00226195800002,
+      "requests": 330,
+      "errors": 0,
+      "errorRate": 0,
+      "throughputRps": 1.8333102951617297,
+      "meanMs": 422.782921569696,
+      "p50Ms": 389.79483300005086,
+      "p95Ms": 663.4130420000292,
+      "p99Ms": 827.3990410000551,
+      "maxMs": 948.0073330000159
+    },
+    {
+      "vus": 25,
+      "phase": "steady",
+      "elapsedSeconds": 180.04194400000003,
+      "requests": 826,
+      "errors": 0,
+      "errorRate": 0,
+      "throughputRps": 4.587819824918131,
+      "meanMs": 424.06929156053315,
+      "p50Ms": 378.9762079999782,
+      "p95Ms": 674.9279170000227,
+      "p99Ms": 944.3709169999929,
+      "maxMs": 1525.310792000033
+    },
+    {
+      "vus": 50,
+      "phase": "steady",
+      "elapsedSeconds": 180.03799274999997,
+      "requests": 1632,
+      "errors": 0,
+      "errorRate": 0,
+      "throughputRps": 9.064753361620669,
+      "meanMs": 471.6684033946093,
+      "p50Ms": 432.15862500004005,
+      "p95Ms": 842.4493750000838,
+      "p99Ms": 1105.5832919999957,
+      "maxMs": 1487.9776249999413
+    },
+    {
+      "vus": 100,
+      "phase": "steady",
+      "elapsedSeconds": 180.068490875,
+      "requests": 3212,
+      "errors": 0,
+      "errorRate": 0,
+      "throughputRps": 17.83765712919595,
+      "meanMs": 615.4496602117052,
+      "p50Ms": 496.00391700002365,
+      "p95Ms": 1335.9449579999782,
+      "p99Ms": 1635.8794999999227,
+      "maxMs": 1972.7178330000024
+    }
+  ]
+}

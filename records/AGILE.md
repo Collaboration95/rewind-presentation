@@ -1,0 +1,145 @@
+# Rewind — agile project record
+
+SWE5006 · Collaboration95/rewind-app · presentation **27 October 2026, 14:30 SGT**. GitHub snapshot: **26 October 2026, approximately 22:30 SGT**. Sprint names are zero-based; the 24 October “Sprint 4” report describes **Sprint 3**, not an additional sprint.
+
+## Product backlog
+
+| Current milestone | Total | Closed | Open | mvp | archived | Both | Neither |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Sprint 0 | 21 | 21 | 0 | 0 | 0 | 0 | 21 |
+| Sprint 1 | 52 | 52 | 0 | 0 | 1 | 0 | 51 |
+| Sprint 2 | 133 | 131 | 2 | 43 | 20 | 3 | 73 |
+| Sprint 3 | 47 | 40 | 7 | 43 | 3 | 0 | 1 |
+| Unassigned | 76 | 75 | 1 | 0 | 3 | 0 | 73 |
+
+Labels overlap: `archived` overrides delivery scope even when `mvp` is also present. Current labels and milestone membership are a snapshot, not original commitments. 329 issues; 319 closed; 10 open. Closure reasons: 262 completed, 14 duplicate, 43 not planned.
+
+| Selected current label | Issues | Open |
+| --- | --- | --- |
+| mvp | 86 | 7 |
+| archived | 27 | 0 |
+| bug | 64 | 2 |
+| duplicate | 23 | 0 |
+| doing | 3 | 2 |
+
+All label counts and milestone × label counts are in `data/backlog-by-label.csv` and `data/backlog-milestone-label.csv`. `mvp` is the delivery path; `doing` means current work. GitHub Project boards are not maintained.
+
+## Stories and use cases
+
+Foundation stories: [5](https://github.com/Collaboration95/rewind-app/issues/5) **US-01** launch/navigation; [6](https://github.com/Collaboration95/rewind-app/issues/6) **US-02** select a local demo profile; [7](https://github.com/Collaboration95/rewind-app/issues/7) **US-03** understand the group capsule — all **Sprint 0**. Sprint 1 extended the synthetic journey; Sprint 2 implemented the real-account product.
+
+The UC IDs/titles follow `product.json`; the story sentences and milestone links below are an editorial traceability map, not original issue tags or a preserved commitment. “S2” = Sprint 2, “S3” = Sprint 3. Every numbered issue below has that current milestone in the saved GitHub data.
+
+| UC | Use case | User story | Milestone evidence |
+| --- | --- | --- | --- |
+| UC01 | Sign in / restore / sign out | As a member, keep my private account session. | S2 [168](https://github.com/Collaboration95/rewind-app/issues/168); S3 release identity [515](https://github.com/Collaboration95/rewind-app/issues/515) |
+| UC02 | Create / select / switch group | As a member, enter the intended private group. | S2 [168](https://github.com/Collaboration95/rewind-app/issues/168); S3 switching [565](https://github.com/Collaboration95/rewind-app/issues/565) |
+| UC03 | Issue / revoke / accept invite | As an owner/invitee, invite friends and join securely. | S2 [312](https://github.com/Collaboration95/rewind-app/issues/312); S3 journey verification [527](https://github.com/Collaboration95/rewind-app/issues/527) |
+| UC04 | Record / review / trim / submit video | As a member, contribute a clip up to 15 seconds. | S2 [328](https://github.com/Collaboration95/rewind-app/issues/328) / [329](https://github.com/Collaboration95/rewind-app/issues/329); S3 looks [367](https://github.com/Collaboration95/rewind-app/issues/367) |
+| UC05 | Contribute photo | As a member, seal a photo as a three-second segment. | S2 [313](https://github.com/Collaboration95/rewind-app/issues/313); S3 fallback [545](https://github.com/Collaboration95/rewind-app/issues/545) / JPEG [574](https://github.com/Collaboration95/rewind-app/issues/574) |
+| UC06 | Allowance and one correction | As a member, see my five-item/30-second budget and correct once. | S2 [239](https://github.com/Collaboration95/rewind-app/issues/239) / [340](https://github.com/Collaboration95/rewind-app/issues/340); S3 refresh [521](https://github.com/Collaboration95/rewind-app/issues/521) |
+| UC07 | Close cycle and start successor | As a member, get a new collecting cycle automatically. | S2 [342](https://github.com/Collaboration95/rewind-app/issues/342) / [343](https://github.com/Collaboration95/rewind-app/issues/343) |
+| UC08 | Compile / retry / publish / archive | As a member, receive one film after cycle closure. | S2 [343](https://github.com/Collaboration95/rewind-app/issues/343); S3 benchmark [526](https://github.com/Collaboration95/rewind-app/issues/526) |
+| UC09 | Owner prompt and group time zone | As an owner, set a shared prompt and local reminder time. | S2 [346](https://github.com/Collaboration95/rewind-app/issues/346) |
+| UC10 | Reminder preference and delivery | As a member, opt into weekly web-push reminders. | S2 [347](https://github.com/Collaboration95/rewind-app/issues/347) / [348](https://github.com/Collaboration95/rewind-app/issues/348); S3 truthful feedback [524](https://github.com/Collaboration95/rewind-app/issues/524) |
+| UC11 | Private group chat | As a member, chat, reply and react inside the group. | S2 [239](https://github.com/Collaboration95/rewind-app/issues/239); S3 reactions [523](https://github.com/Collaboration95/rewind-app/issues/523) / streams [567](https://github.com/Collaboration95/rewind-app/issues/567) |
+| UC12 | Premiere and released Archive | As a member, watch the 24-hour premiere and revisit films. | S2 [345](https://github.com/Collaboration95/rewind-app/issues/345); S3 current state [521](https://github.com/Collaboration95/rewind-app/issues/521) |
+| UC13 | Download own clip / group film | As a member, save only media I am authorised to access. | S2 [344](https://github.com/Collaboration95/rewind-app/issues/344); S3 pagination [522](https://github.com/Collaboration95/rewind-app/issues/522) / Android [525](https://github.com/Collaboration95/rewind-app/issues/525) |
+| UC14 | Install / update / invitation return | As a member, install the PWA and retain an invitation through entry. | S2 [350](https://github.com/Collaboration95/rewind-app/issues/350); S3 Safari/Home Screen verification [527](https://github.com/Collaboration95/rewind-app/issues/527) |
+
+Current scope: real accounts; private groups; photos and video; sealed contributions; cycle/film/Archive; chat; web push; web/PWA. Synthetic Demo was removed 6 October. Compiled native iOS and native push are outside the active scope. Release identity and physical-device verification remain open.
+
+## Sprint goals and outcomes
+
+| Sprint (SGT) | Goal | Recorded outcome |
+| --- | --- | --- |
+| 0 · 1–12 Sep | Runnable local walking skeleton: demo members, group prompt/countdown/quota, navigation and first checks. | Prototype and runtime foundations delivered; local/synthetic, not real authentication. [25](https://github.com/Collaboration95/rewind-app/issues/25) / [PR #78](https://github.com/Collaboration95/rewind-app/pull/78) |
+| 1 · 13–26 Sep | Grow local groups/capture/cycle/Archive toward a repeatable hosted synthetic Demo. | Integrated synthetic journey and audit fixes; 26 Sep report says review ready, Sprint not closed, hosted acceptance outstanding. [PR #204](https://github.com/Collaboration95/rewind-app/pull/204) / [PR #205](https://github.com/Collaboration95/rewind-app/pull/205) / [PR #206](https://github.com/Collaboration95/rewind-app/pull/206) / [PR #207](https://github.com/Collaboration95/rewind-app/pull/207) |
+| 2 · 27 Sep–10 Oct | Complete the real-account private-group journey and hosted product. | Accounts/groups, photo/video, S3, film/Archive, web push; Demo removed; hosted dev PostgreSQL and Cognito code. Release parity/device proof incomplete. [PR #506](https://github.com/Collaboration95/rewind-app/pull/506) / [PR #508](https://github.com/Collaboration95/rewind-app/pull/508) / [PR #510](https://github.com/Collaboration95/rewind-app/pull/510) |
+| 3 · 11–24 Oct | Stabilise user interactions, harden recovery and prepare assessment material. | Live-state/download/reaction/reminder fixes; refactor, recovery rehearsal, models and explainer. Final report, release and target-device items remain. [PR #529](https://github.com/Collaboration95/rewind-app/pull/529) / [PR #552](https://github.com/Collaboration95/rewind-app/pull/552) / [PR #581](https://github.com/Collaboration95/rewind-app/pull/581) / [PR #582](https://github.com/Collaboration95/rewind-app/pull/582) |
+
+### Delivery counts and charts
+
+| Sprint | Issues closed, all milestones | PRs merged, all targets | dev | main | Other |
+| --- | --- | --- | --- | --- | --- |
+| Sprint 0 | 44 | 11 | 0 | 11 | 0 |
+| Sprint 1 | 100 | 36 | 0 | 36 | 0 |
+| Sprint 2 | 145 | 132 | 128 | 3 | 1 |
+| Sprint 3 | 30 | 34 | 33 | 1 | 0 |
+
+| Replayed milestone | Opening scope | Opening open | Closing scope | Closing open |
+| --- | --- | --- | --- | --- |
+| Sprint 0 | 0 | 0 | 21 | 0 |
+| Sprint 1 | 50 | 37 | 50 | 0 |
+| Sprint 2 | 9 | 3 | 135 | 9 |
+| Sprint 3 | 18 | 3 | 45 | 5 |
+
+Charts: `charts/burndown-sprint-{0,1,2,3}.png` and `charts/velocity.png`, all 1280×720. CSVs and raw gh snapshots are under `data/`. Burndowns replay milestone assignment/removal, closure and reopen events at opening 00:00 and daily closes · SGT; replay matches all 329 current issue states/milestones. Opening values are at 00:00 on day one. No ideal line is invented: there is no preserved opening commitment. Velocity uses final `closedAt` / `mergedAt` in each SGT window, across all milestones/targets; current own-milestone closure counts are an additional CSV column. PR milestones are retained in `prs.csv`, but mostly absent and are not used to invent sprint assignments. Promotions may count the same implementation twice. Neither metric measures effort or story points.
+
+## Definition of Done
+
+An issue is Done when all four conditions hold:
+
+1. Its core outcome works, checked in the cheapest real environment that
+   exercises it (see Verification tiers).
+2. `npm run test:fast` passes and the PR's aggregate Quality check is green.
+3. Only for an overnight or batched run (a queue of several issues), or when
+   the owner asks: one review-agent pass is complete and blocking findings are
+   fixed. Other PRs need no review pass, and none is reported as missing. No
+   human approval is needed for routine `dev` PRs.
+4. The PR is merged to `dev`. Then close the issue with a one-line comment
+   linking the PR.
+
+Screenshots, evidence comments or folders, completion notes, decision documents,
+second-machine or physical-device runs, repeated rehearsals, and independent
+human acceptance are not required unless the issue itself makes them the
+deliverable.
+
+Source: [worktree AGENTS.md at f6cd896](https://github.com/Collaboration95/rewind-app/blob/f6cd896/AGENTS.md). UI checks use a local browser; client logic uses focused tests plus fast tests; server and real-account flows use local server/SQLite or `make run-real`; HTTPS-only camera/PWA/push/S3/Cognito behaviour needs hosted dev. Web export/routing/PWA/accessibility changes and main promotion additionally require slow tests, coverage and accessibility checks.
+
+## Ceremonies held
+
+| Ceremony | Record and evidence boundary |
+| --- | --- |
+| Project planning | Held, per owner confirmation; plans and scope decisions are the retained outputs. |
+| Sprint Planning — Sprints 0–3 | Held each sprint, per owner confirmation. Sprint plans and milestone intake support the selected goals; no exact attendance, duration or meeting dates supplied. |
+| Sprint Review — Sprints 0–3 | Held each sprint, per owner confirmation. Reports and [25](https://github.com/Collaboration95/rewind-app/issues/25) record increments and limitations; no invented stakeholder acceptance. |
+| Retrospective outcomes — Sprints 0–3 | Reflections below come from progress reports and [27](https://github.com/Collaboration95/rewind-app/issues/27). Sprint reports record reflections and resulting actions. |
+| Daily Scrum / async updates | The working agreement defines daily coordination; retained work updates are in issue comments. |
+
+## Retrospectives and subsequent changes
+
+| Reflection | Action / observed next-sprint change | Boundary |
+| --- | --- | --- |
+| Sprint 0: runnable increment succeeded; capacity/evidence decisions were late, work bunched late, hours not tracked. | Sprint 1 agreement: five-issue WIP limit, Day 1 LAN/SQLite/FFmpeg gate, single-device fallback and earlier checkpoint. [27](https://github.com/Collaboration95/rewind-app/issues/27) | Second-machine rehearsal and actual daily effort were not subsequently proven. |
+| Sprint 1: integrated slice and audit were useful; test doubles missed method binding/native transport; seeded media/quota and infrastructure records drifted. | Sprint 2 delivered real-account and remote-reminder contracts, hosted integration checks, S3/PG/Cognito and removed Demo. [PR #506](https://github.com/Collaboration95/rewind-app/pull/506) / [PR #510](https://github.com/Collaboration95/rewind-app/pull/510) | The next sprint exercised the real adapters and defined bounded work lanes and interfaces. |
+| Sprint 2: real journey, recovery and faster tests improved delivery; scope churn, release lag, device gaps and hours remained. | Sprint 3 delivered lossless export/install rehearsal, state and download fixes, behavioural tests, refactor and assessment models. [PR #529](https://github.com/Collaboration95/rewind-app/pull/529) / [PR #577](https://github.com/Collaboration95/rewind-app/pull/577) / [PR #581](https://github.com/Collaboration95/rewind-app/pull/581) | Release [230](https://github.com/Collaboration95/rewind-app/issues/230) / [504](https://github.com/Collaboration95/rewind-app/issues/504) / [515](https://github.com/Collaboration95/rewind-app/issues/515), device [527](https://github.com/Collaboration95/rewind-app/issues/527) and report [362](https://github.com/Collaboration95/rewind-app/issues/362) still open. |
+| Sprint 3: whole-interaction tests exposed retry defects; refactoring and traceable design material helped. Release, device proof, report assembly and effort records lagged. | Final-sprint learning: include recovery, state transitions and feedback in completion; keep explanations linked to tested implementation. | No further sprint is committed. These are closing lessons, not a fabricated next-sprint outcome. |
+
+Process simplification occurred **during Sprint 2 on 4 October** (lean DoD / no Project board), per G-pm.md; it is not presented as a change caused by the later 10 October retrospective.
+
+## Outstanding mvp issues — 26 October 2026
+
+| Issue | Current milestone | Outstanding outcome |
+| --- | --- | --- |
+| [230](https://github.com/Collaboration95/rewind-app/issues/230) | Sprint 3 | Complete the isolated release deployment and verify environment boundaries |
+| [362](https://github.com/Collaboration95/rewind-app/issues/362) | Sprint 3 | Assemble and validate every final-report template section |
+| [504](https://github.com/Collaboration95/rewind-app/issues/504) | Sprint 3 | Move the release environment onto managed PostgreSQL with isolated backups |
+| [515](https://github.com/Collaboration95/rewind-app/issues/515) | Sprint 3 | Deploy isolated Cognito Managed Login for the release web and PWA |
+| [527](https://github.com/Collaboration95/rewind-app/issues/527) | Sprint 3 | Verify the current hosted Safari and Home Screen app integrations once |
+| [587](https://github.com/Collaboration95/rewind-app/issues/587) | Sprint 3 | Fix focused script-test selection and document the Sprint override |
+| [588](https://github.com/Collaboration95/rewind-app/issues/588) | Sprint 3 | Preserve emoji and local calendar labels in chat |
+
+Source command: `gh issue list -R Collaboration95/rewind-app --label mvp --state open --limit 1000`. Seven open at the saved snapshot; #587/#588 were created 25 October SGT, after Sprint 3 ended. Release preparation is not an activated release; dev success does not prove physical iPhone camera/audio/push delivery.
+
+## Source register
+
+| Source | Use |
+| --- | --- |
+| `../audit/G-pm.md` (26 Oct) | Audit cross-check, SGT windows, evidence limits and owner questions, superseded by supplied owner decisions. |
+| [Sprint 0 plan](https://github.com/Collaboration95/rewind-app/blob/f6cd896/doc/planning/sprints/sprint-0-plan.md); [Sprint 1 plan](https://github.com/Collaboration95/rewind-app/blob/f6cd896/doc/planning/sprints/sprint-1-plan.md); [Sprint 2 plan](https://github.com/Collaboration95/rewind-app/blob/f6cd896/doc/planning/sprints/sprint-2-user-journey-plan.md) | Goals and planning assumptions. |
+| [Project-conduct evidence index](https://github.com/Collaboration95/rewind-app/blob/f6cd896/doc/planning/project-conduct-evidence.md) | Indexes retained original Sprint 0 and 26 Sep report extractions; these were read in the main checkout’s local evidence store. The older archived 12 Sep draft is not treated as the 26 Sep report. |
+| [Sprint 2 report](https://github.com/Collaboration95/rewind-app/blob/f6cd896/doc/planning/sprints/sprint-2-report/rewind-sprint-2-progress-report.docx) | §§1–3, 8–10: delivery, contributions, problems and reflection. |
+| 24 October report, main checkout: `doc/planning/sprints/sprint-4-report-2026-10-24/rewind-sprint-4-progress-report.md` | §§4–10: final sprint outcomes, reported checks, contributions and reflection. Local untracked source; no fabricated GitHub blob link. |
+| [product.json](https://github.com/Collaboration95/rewind-app/blob/f6cd896/docs/site/content/product.json) / [scrum.json](https://github.com/Collaboration95/rewind-app/blob/f6cd896/docs/site/content/scrum.json) / [owners.json](https://github.com/Collaboration95/rewind-app/blob/f6cd896/docs/site/content/owners.json) | UC inventory and historical context. Legacy four-member roster and 20 Oct/UTC counts are superseded here. |
+| `data/issues.json`, `prs.json`, `issue-timeline.json`, `milestones.json`, `open-mvp.json` | Fresh authenticated read-only gh census; see DATA.md for commands and reconstruction. |

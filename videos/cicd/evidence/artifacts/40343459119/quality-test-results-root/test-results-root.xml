@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testsuites>
+	<testcase name="server coverage JSON retains measured totals without labelling lines as statements" time="0.001927" classname="test"/>
+	<testcase name="frontend selector runs only the named Jest file" time="0.001403" classname="test"/>
+	<testcase name="server selector builds then runs only the named Node test" time="0.000353" classname="test"/>
+	<testcase name="root selector maps Node and shell files to their existing runners" time="0.000410" classname="test"/>
+	<testcase name="unknown suites, unsupported paths, and missing files are rejected" time="0.000541" classname="test"/>
+	<testcase name="a selected test failure is returned unchanged after a successful server build" time="0.000368" classname="test"/>
+	<testcase name="nearest-rank statistics retain slow failures and reject unusable observations" time="0.009944" classname="test"/>
+	<testcase name="targets apply per operation and repetition, never hide misses in averages" time="0.014273" classname="test"/>
+	<testcase name="film contract is the current 720x1280 at 30 fps" time="0.000156" classname="test"/>
+	<testcase name="generated 1080p portrait and landscape sources: clips keep size, films are 720x1280" time="4.185464" classname="test"/>
+	<testcase name="CLI refuses a supplied URL before importing the runtime or starting fixtures" time="0.059161" classname="test"/>
+	<testcase name="Quality summaries count failed/skipped tests and do not assign frontend coverage to root" time="0.099015" classname="test"/>
+	<testcase name="assigns each sequential run a distinct pair inside the owned port range" time="0.001521" classname="test"/>
+	<testcase name="an occupied owned port fails closed without closing the existing listener" time="0.009031" classname="test"/>
+	<testcase name="fixture cleanup runs in reverse acquisition order after a failed operation" time="0.000280" classname="test"/>
+	<testcase name="owned command runner preserves a child failure exit code" time="0.033608" classname="test"/>
+	<testcase name="fixture environment strips cloud credentials and keeps owned local settings" time="0.000578" classname="test"/>
+	<testcase name="TLS proxy overwrites browser-supplied forwarding credentials with its fixture secret" time="0.000485" classname="test"/>
+	<testcase name="fixture origin authentication cannot be enabled on an HTTP web boundary" time="0.000401" classname="test"/>
+	<testcase name="failure diagnostics redact credentials, invite codes, local paths, and URLs" time="0.001105" classname="test"/>
+	<testcase name="the concurrent suites run the same commands as the standalone scripts" time="0.001522" classname="test"/>
+	<testcase name="the suites share the CPUs instead of each taking all of them" time="0.000230" classname="test"/>
+	<testcase name="suites run concurrently with separate buffered output and a named failure" time="0.069559" classname="test"/>
+	<testcase name="a passing suite shows only its totals, a failing one its full output" time="0.000725" classname="test"/>
+	<testcase name="an interrupt stops every suite, including grandchildren, and is reported" time="0.046533" classname="test"/>
+	<testcase name="a hung suite is killed after the timeout and reported as such" time="0.203663" classname="test"/>
+	<testcase name="repository architecture boundaries are platform-safe" time="0.004994" classname="test"/>
+	<testcase name="architecture guard rejects framework imports in domain and device imports in routes" time="0.011222" classname="test"/>
+	<testcase name="fork retains every upstream file, MIT license, authors and pinned provenance" time="0.002810" classname="test"/>
+	<testcase name="all micromatch consumers install one physical integrity-pinned fork" time="0.007416" classname="test"/>
+	<testcase name="negative control: original compile exhausts the stack under the character cap" time="0.071331" classname="test"/>
+	<testcase name="negative control: original expand exhausts the stack under the character cap" time="0.060361" classname="test"/>
+	<testcase name="every public string entry point rejects deep braces, parentheses and malformed nesting in bounded children" time="0.085325" classname="test"/>
+	<testcase name="caller-supplied and cyclic ASTs cannot bypass compile, expand or stringify depth guards" time="0.141062" classname="test"/>
+	<testcase name="allowed depth boundary, literal syntax and real glob patterns preserve upstream behavior" time="0.137567" classname="test"/>
+	<testcase name="database operations accept only matched environment/branch/host/role/region" time="0.025543" classname="test"/>
+	<testcase name="host refuses cross-environment and missing release backup settings before Docker" time="0.010198" classname="test"/>
+	<testcase name="quiesce stops timer and every runtime writer, and a failed drain stays recoverable" time="0.162727" classname="test"/>
+	<testcase name="stopped-runtime tools require the installed qualified image and export its SHA" time="0.105587" classname="test"/>
+	<testcase name="recovery comparison rejects changed content, missing/extra tables and wrong environment" time="0.092823" classname="test"/>
+	<testcase name="final import workflow passes its freshly produced manifest and stops on failed backup" time="0.050237" classname="test"/>
+	<testcase name="managed rehearsal pins the stopped baseline and fails on same-count restored corruption" time="0.160807" classname="test"/>
+	<testcase name="resolved Compose keeps local ports private and exposes only the hosted web origin" time="2.907562" classname="test"/>
+	<testcase name="resolved Compose preserves explicit HTTP request bounds" time="0.100954" classname="test"/>
+	<testcase name="lifecycle smoke contract is disposable, bounded, and Compose-isolated" time="0.001825" classname="test"/>
+	<testcase name="failure diagnostics redact paths, environment values, invitation codes, and media content" time="0.001159" classname="test"/>
+	<testcase name="a failed Compose assertion still removes its project and emits only redacted diagnostics" time="0.025682" classname="test"/>
+	<testcase name="Chromium cookie client → intent HTTP → cross-origin binary PUT → pinned completion and processing" time="5.482525" classname="test"/>
+	<testcase name="response loss reaches the bound account fetch after persistence; retry preserves identity" time="0.008139" classname="test"/>
+	<testcase name="unarmed, unrelated paths and SSE reads retain the original fetch response" time="0.002476" classname="test"/>
+	<testcase name="profiles preserve callback, explicit local versions, no OTA and platform/signing separation" time="0.001919" classname="test"/>
+	<testcase name="public origins are explicit HTTPS and reject credentials/query/invite paths" time="0.000601" classname="test"/>
+	<testcase name="staging pins accepted base, source/config/origin and excludes ambient credentials" time="0.127656" classname="test"/>
+	<testcase name="unmerged config overlays are labelled preview; unrelated dirty code/dependency changes are refused" time="0.158920" classname="test"/>
+	<testcase name="artifact receipt binds checksum to unchanged source and origins without native acceptance claims" time="0.203392" classname="test"/>
+	<testcase name="staging rejects source symlinks, unsafe destinations and wrong base" time="0.077873" classname="test"/>
+	<testcase name="bundle receipt refuses foreign shared-tree code and changed staged application content" time="0.074527" classname="test"/>
+	<testcase name="bundle verification refuses a source replaced by a symlink after its descriptor opens" time="0.073428" classname="test"/>
+	<testcase name="generated iOS configuration declares capture purposes and export compliance only" time="0.596824" classname="test"/>
+	<testcase name="fork preserves the full upstream package and its BSD/GPL attribution" time="0.005811" classname="test"/>
+	<testcase name="root, Expo CLI and Expo certificates resolve the identical pinned fork" time="0.008548" classname="test"/>
+	<testcase name="CommonJS: original accepts public-key-only nested forgery; fork rejects it" time="0.012209" classname="test"/>
+	<testcase name="CommonJS: valid PKCS#1 v1.5 hashes still verify; wrong messages fail" time="0.025281" classname="test"/>
+	<testcase name="dist/forge.min.js: original accepts public-key-only nested forgery; fork rejects it" time="0.013691" classname="test"/>
+	<testcase name="dist/forge.min.js: valid PKCS#1 v1.5 hashes still verify; wrong messages fail" time="0.018739" classname="test"/>
+	<testcase name="dist/forge.all.min.js: original accepts public-key-only nested forgery; fork rejects it" time="0.010957" classname="test"/>
+	<testcase name="dist/forge.all.min.js: valid PKCS#1 v1.5 hashes still verify; wrong messages fail" time="0.019202" classname="test"/>
+	<testcase name="SHA-256 with optional NULL remains valid; extra children are rejected at both nesting levels" time="0.044271" classname="test"/>
+	<testcase name="Expo certificate generation, PEM round trips, CSR and manifest signing remain compatible" time="0.284251" classname="test"/>
+	<testcase name="signed-out visitors can read and follow the public legal pages without the API" time="3.103219" classname="test"/>
+	<testcase name="privacy explains data, storage, retention exceptions and account deletion" time="0.001690" classname="test"/>
+	<testcase name="support identifies its public contact channel and warns against sharing private data" time="0.001203" classname="test"/>
+	<testcase name="Expo web config and manifest describe an installable standalone shell" time="0.002014" classname="test"/>
+	<testcase name="the web shell registers a bounded offline fallback without offline sync" time="0.000555" classname="test"/>
+	<testcase name="push revalidates the cookie session/current group, displays only generic content and routes only when verified" time="0.033301" classname="test"/>
+	<testcase name="notification taps use opaque IDs and focus an existing app without arbitrary navigation" time="0.003417" classname="test"/>
+	<testcase name="private API/media, invite query navigations and writes never enter the shell cache" time="0.008667" classname="test"/>
+	<testcase name="full-chat and unread SSE GETs stay browser-owned across group switches, including offline" time="0.008523" classname="test"/>
+	<testcase name="the SSE exception preserves private API writes, denials and offline fail-closed responses" time="0.002999" classname="test"/>
+	<testcase name="public legal pages load as documents, never the SPA shell" time="0.002924" classname="test"/>
+	<testcase name="offline entry uses its installed build; an incomplete upgrade preserves the previous cache" time="0.016738" classname="test"/>
+	<testcase name="public asset misses omit credentials and no-store responses are not cached" time="0.002260" classname="test"/>
+	<testcase name="export stamping is deterministic and changes on asset content without import-time writes" time="0.072288" classname="test"/>
+	<testcase name="actual Git changes classify README.md, docs/guide.md, doc/planning/note.md, skills/helper/SKILL.md, .github/PULL_REQUEST_TEMPLATE.md" time="0.076894" classname="test"/>
+	<testcase name="actual Git changes classify docs/guide.md, App.tsx" time="0.070977" classname="test"/>
+	<testcase name="actual Git changes classify skills/helper/run.mjs" time="0.056491" classname="test"/>
+	<testcase name="actual Git changes classify docs/script.sh" time="0.049635" classname="test"/>
+	<testcase name="actual Git changes classify .github/workflows/quality.yml" time="0.054603" classname="test"/>
+	<testcase name="actual Git changes classify deploy/README.md" time="0.055232" classname="test"/>
+	<testcase name="actual Git changes classify infra/terraform/README.md" time="0.058031" classname="test"/>
+	<testcase name="executable and symlink Markdown require checks, including removal of an executable bit" time="0.083036" classname="test"/>
+	<testcase name="code renamed into documentation still requires checks; documentation deletion can stay cheap" time="0.080608" classname="test"/>
+	<testcase name="unavailable, invalid, initial-push and empty comparisons conservatively require checks" time="0.033898" classname="test"/>
+	<testcase name="deployment stays on its classified commit when dev advances to a documentation-only commit" time="0.093306" classname="test"/>
+	<testcase name="every external package the server imports is a packaged runtime root" time="0.011810" classname="test"/>
+	<testcase name="scaffold identifies the Rewind app and exposes baseline quality commands" time="0.000918" classname="test"/>
+	<testcase name="quality workflow validates main and dev pushes and PRs against any stacked base" time="0.000529" classname="test"/>
+	<testcase name="documentation classification gates deployment before AWS and preserves scheduled CodeQL" time="0.004289" classname="test"/>
+	<testcase name="the deploy pipeline targets the existing hosted host and provisions nothing" time="0.005112" classname="test"/>
+	<testcase name="only a dev commit that passed its own Quality run may deploy" time="0.000291" classname="test"/>
+	<testcase name="the job reaches the host with temporary, always-closed SSH" time="0.000237" classname="test"/>
+	<testcase name="a deploy never powers the host on or off and never rewrites its private config" time="0.000297" classname="test"/>
+	<testcase name="the deploy role trusts one environment, one branch, and one host" time="0.000305" classname="test"/>
+	<testcase name="the deploy role carries the live instance ARN and cannot mutate the host" time="0.000247" classname="test"/>
+	<testcase name="the account-level OIDC provider lives in the bootstrap root" time="0.000152" classname="test"/>
+	<testcase name="the release builder takes an explicit branch gate" time="0.000132" classname="test"/>
+	<testcase name="the assumed session backs the same-step caller-identity check" time="0.002139" classname="test"/>
+	<testcase name="pins Demo Lightsail names/addresses and the example backend key" time="0.000828" classname="test"/>
+	<testcase name="the deleted optional Lightsail distribution cannot be recreated by Terraform" time="0.000748" classname="test"/>
+	<testcase name="the real-auth distribution remains CloudFront with HTTPS viewers and the protected instance origin" time="0.000304" classname="test"/>
+	<testcase name="the default AWS provider remains regional and no distribution-only provider is configured" time="0.000311" classname="test"/>
+	<testcase name="existing hosts ignore only creation-time user_data drift" time="0.000262" classname="test"/>
+	<testcase name="new hosts keep current bootstrap and the static IP attachment chain" time="0.000352" classname="test"/>
+	<testcase name="production web proxy keeps API and SPA routing boundaries explicit" time="0.001754" classname="test"/>
+	<testcase name="Compose starts the web proxy only after the healthy runtime" time="0.000374" classname="test"/>
+	<testcase name="the web image bakes the same-origin API prefix into the Expo artifact" time="0.000351" classname="test"/>
+	<testcase name="runtime-unavailable API responses stay JSON and never fall back to the shell" time="0.054861" classname="test"/>
+	<testcase name="an idle event stream outlives the request timeout and closes upstream with the browser" time="3.413573" classname="test"/>
+	<testcase name="switching full-chat and unread streams repeatedly closes both proxy upstreams" time="0.047964" classname="test"/>
+	<testcase name="public legal pages resolve at extensionless paths without the SPA shell" time="3.019706" classname="test"/>
+	<testcase name="API path references cannot replace the configured runtime authority" time="0.000283" classname="test"/>
+	<testcase name="API paths retain same-origin runtime routing and query parameters" time="0.000210" classname="test"/>
+	<testcase name="nginx preserves application 503 and sanitizes gateway failures" time="0.000257" classname="test">
+		<skipped type="skipped" message="true"/>
+	</testcase>
+	<testcase name="every nginx location includes the shared always-on security headers" time="0.000295" classname="test"/>
+	<!-- tests 124 -->
+	<!-- suites 0 -->
+	<!-- pass 123 -->
+	<!-- fail 0 -->
+	<!-- cancelled 0 -->
+	<!-- skipped 1 -->
+	<!-- todo 0 -->
+	<!-- duration_ms 14095.204679 -->
+</testsuites>

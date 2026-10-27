@@ -1,0 +1,32 @@
+@startuml
+!include _cicd.iuml
+title DAST stage · ZAP baseline scans the running hosted dev site after each deploy
+skinparam nodesep 30
+skinparam ranksep 50
+skinparam ArrowFontSize 20
+skinparam artifactFontSize 20
+
+frame "Deploy dev workflow · job “DAST (ZAP baseline on hosted dev)” · needs: deploy" as J {
+  rectangle "Deploy job\nsucceeded\n<size:20>new release live</size>" as D
+  rectangle "<b>Check out</b>\n<b>.zap/rules.tsv</b>\n<size:20>10096, 10109 → IGNORE</size>" as R
+  rectangle "<b>ZAP baseline</b> · ZAP 2.17.0\n<size:20>spider + AJAX spider, 2 min</size>\n<size:20>passive rules, unauthenticated</size>" <<report>> as Z
+  hexagon "Alerts\nfound?" as G
+  rectangle "<b>REPORTS ONLY</b>\nfail_action: false\n<size:20>job stays green</size>" <<report>> as K
+  rectangle "<b>Publish summary</b>\n<size:20>risk table in the run</size>" as S
+}
+
+node "Hosted dev\n<size:20>d2m6kz76y4kuvm.cloudfront.net</size>\n<size:20>SPA · /api/health · icons</size>" as H
+
+artifact "<b>zap-baseline-<sha></b>\nreport_json.json\nreport_html.html\nreport_md.md\n<size:20>kept 90 days</size>" as A
+
+rectangle "Results · run 40344230832\n<b>0 High · 4 Medium · 7 Low · 6 Info</b>\n<size:20>Medium = Content Security Policy</size>" as RES
+
+D -right-> R
+R -right-> Z
+Z <-up-> H : crawl with GET,\nread responses
+Z -right-> G
+G -down-> K : yes / no
+K -left-> S
+S -left-> A
+A -left-> RES
+@enduml

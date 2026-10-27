@@ -1,0 +1,31 @@
+@startuml
+!include _style.iuml
+title Design sequence · UC05 Process the accepted photo
+hide footbox
+autonumber
+skinparam Padding 0
+skinparam sequence {
+ MessageSpacing 0
+ ParticipantPadding 5
+ BoxPadding 3
+}
+skinparam ParticipantFontSize 19
+skinparam SequenceGroupHeaderFontSize 19
+skinparam maxMessageSize 500
+skinparam sequenceMessageSpan true
+participant "photo-submit.ts\n«module»" as R
+participant "contribution-routes.ts\n«module»" as API
+participant "jobs/clip.ts\n«module»" as C
+participant ":MediaStore\n«interface»" as M
+participant "ffmpeg.ts\n«module»" as F
+R -> API : POST /contributions/jobs/:jobId/process\nvia runtime processClipJob()
+API -> C : processClipJob()
+C -> C : claimClipJob() · DB generation + 1
+C -> M : read(scope, ref) · materialize incoming version
+C -> F : processPhotoWithFfmpeg(); probeClipWithFfmpeg()
+C -> M : put(scope, input) · processed MP4
+C -> C : finalizeStoredClip() · verify stored bytes;\ndelete raw version; fenced DB UPDATE ready
+C --> API : status: ready
+API --> R : job.status: ready
+note over R : photoContributionStatusForJob() → sealed
+@enduml

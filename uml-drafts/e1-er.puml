@@ -1,0 +1,134 @@
+@startuml
+!include _style.iuml
+title ER subset · capture, cycle and Archive · PostgreSQL baseline 030 + 031 · as built at f6cd896
+' Evidence: server/migrations/postgres/030-baseline.sql (tables cycles, contributions, media_jobs, compilation_job_inputs, film_segments, cycle_lifecycle_events, upload_intents, profiles, real_profiles, real_group_metadata, groups) and its indexes
+skinparam linetype ortho
+hide methods
+entity groups {
+  * id : TEXT <<PK>>
+  --
+  name : TEXT
+  current_cycle_id : TEXT (logical, no FK)
+}
+entity real_group_metadata {
+  * group_id : TEXT <<PK, FK groups>>
+  --
+  owner_account_id : TEXT <<FK real_accounts>>
+  max_members : BIGINT (2..10)
+  time_zone : TEXT
+}
+entity cycles {
+  * id : TEXT <<PK>>
+  --
+  group_id : TEXT <<FK groups>>
+  previous_cycle_id : TEXT <<FK cycles, unique>>
+  prompt, starts_at, ends_at : TEXT
+  status : TEXT (collecting | revealing | archived)
+  release_status : TEXT (unpublished | published)
+  release_published_at : TEXT
+  max_count, count_used : BIGINT
+  max_seconds, seconds_used : BIGINT, DOUBLE
+}
+entity cycle_lifecycle_events {
+  * id : TEXT <<PK>>
+  --
+  cycle_id : TEXT <<FK cycles>>
+  transition : TEXT (3 values)
+  occurred_at : TEXT
+  UNIQUE (cycle_id, transition)
+}
+entity contribution_quota_windows {
+  * id : TEXT <<PK>>
+  --
+  cycle_id : TEXT <<FK cycles>>
+  member_id : TEXT <<FK profiles>>
+  window_start_at, window_end_at : TEXT
+  count_used : BIGINT, seconds_used : DOUBLE
+  UNIQUE (cycle_id, member_id, window_start_at)
+}
+entity profiles {
+  * id : TEXT <<PK>>
+  --
+  display_name : TEXT
+  is_synthetic : BIGINT (0 for real)
+}
+entity real_profiles {
+  * id : TEXT <<PK>>
+  --
+  account_id : TEXT <<FK real_accounts, unique>>
+  display_name : TEXT
+}
+entity contributions {
+  * id : TEXT <<PK>>
+  --
+  cycle_id : TEXT <<FK cycles>>
+  member_id : TEXT <<FK profiles>>
+  media_job_id : TEXT (logical, no FK)
+  duration_seconds : DOUBLE
+  deleted_at, removed_at : TEXT
+  replaced_by_contribution_id : TEXT <<FK contributions>>
+}
+entity upload_intents {
+  * id : TEXT <<PK>>
+  --
+  group_id : TEXT <<FK real_group_metadata>>
+  profile_id : TEXT <<FK real_profiles>>
+  cycle_id : TEXT <<FK cycles>>
+  contribution_id : TEXT <<FK, unique>>
+  job_id : TEXT <<FK, unique>>
+  state : TEXT (open | pinned | completed | expired)
+  pinned_ref, request_hash : TEXT
+  UNIQUE (environment, group_id, profile_id, idempotency_hash)
+}
+entity media_jobs {
+  * id : TEXT <<PK>>
+  --
+  group_id : TEXT <<FK groups>>
+  cycle_id : TEXT <<FK cycles>> (film jobs)
+  contribution_id : TEXT <<FK contributions>> (clip jobs)
+  kind : TEXT (clip | film | download)
+  status : TEXT (pending | processing | ready | failed)
+  claim_generation, attempt_count : BIGINT
+  output_path, output_sha256 : TEXT
+  output_bytes : BIGINT
+  UNIQUE (cycle_id) WHERE kind = 'film'
+}
+entity compilation_job_inputs {
+  * job_id : TEXT <<PK, FK media_jobs>>
+  * clip_job_id : TEXT <<PK, FK media_jobs>>
+  --
+  contribution_id : TEXT <<FK contributions>>
+  position : BIGINT
+}
+entity film_segments {
+  * film_job_id : TEXT <<PK, FK media_jobs>>
+  * position : BIGINT <<PK>>
+  --
+  contribution_id : TEXT <<FK contributions, null on delete>>
+  start_seconds, duration_seconds : DOUBLE
+}
+groups ||--o| real_group_metadata
+groups ||--o{ cycles
+cycles |o--o| cycles : previous_cycle_id
+cycles ||--o{ cycle_lifecycle_events
+cycles ||--o{ contribution_quota_windows
+cycles ||--o{ contributions
+cycles ||--o{ media_jobs
+profiles ||--o{ contributions
+profiles ||--o{ contribution_quota_windows
+real_profiles ||--o| profiles : same id (trigger mirror)
+contributions |o--o{ media_jobs
+media_jobs ||--o{ compilation_job_inputs
+media_jobs ||--o{ film_segments
+contributions ||--o{ compilation_job_inputs
+contributions |o--o{ film_segments
+upload_intents }o--|| cycles
+upload_intents }o--|| real_profiles
+upload_intents }o--|| real_group_metadata
+upload_intents |o--o| contributions
+upload_intents |o--o| media_jobs
+legend bottom
+  Timestamps are ISO-8601 TEXT (COLLATE "C"). Integers are BIGINT. Archive = published cycles + their film job + clip jobs; there is no archive table.
+  media_jobs.group_id also references groups; compilation_job_inputs.clip_job_id points at a clip job in media_jobs.
+endlegend
+@enduml

@@ -1,0 +1,1059 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testsuites>
+	<testcase name="deleting an account needs the password, removes its data and media, and hands groups on" time="2.195831" classname="test"/>
+	<testcase name="members can report and block, which hides that chat from them only" time="0.694578" classname="test"/>
+	<testcase name="members can report a person in their group, once, but not themselves or outsiders" time="0.641603" classname="test"/>
+	<testcase name="moderation records retain reporter, reason and time after the target account and group disappear" time="0.625398" classname="test"/>
+	<testcase name="direct chat interactions deny both sides of a block and recover after unblock" time="0.717578" classname="test"/>
+	<testcase name="reported messages deny direct reaction access without exposing hidden reply previews" time="0.493897" classname="test"/>
+	<testcase name="audit events record the real signed-in member and null for system actions" time="0.208501" classname="test"/>
+	<testcase name="members can persist one-level replies and nested replies are rejected" time="0.430979" classname="test"/>
+	<testcase name="supported reaction add/remove is idempotent and returns aggregate counts" time="0.491867" classname="test"/>
+	<testcase name="a member outside the group cannot reply or react to its messages" time="0.404179" classname="test"/>
+	<testcase name="a reaction change reaches other members as a reaction event, not a message" time="1.698461" classname="test"/>
+	<testcase name="a foreign-group member never receives reaction events for this group" time="0.471859" classname="test"/>
+	<testcase name="reaction events respect each viewer’s block and report rules" time="1.580501" classname="test"/>
+	<testcase name="a revoked session’s open stream is denied instead of receiving reactions" time="0.485866" classname="test"/>
+	<testcase name="reaction snapshots reconcile missed changes for any loaded message" time="0.650285" classname="test"/>
+	<testcase name="chat validates body type, trimmed emptiness and the 2000-character boundary without writing events" time="0.720936" classname="test"/>
+	<testcase name="message retry keys reject changed text, changed authors and changed reply targets" time="0.935777" classname="test"/>
+	<testcase name="replies reject absent, foreign-group and nested parents without leaking their contents" time="0.671227" classname="test"/>
+	<testcase name="invalid service clocks roll back chat writes and leave the next valid transaction usable" time="0.405673" classname="test"/>
+	<testcase name="auth config reports the sign-in methods" time="0.095172" classname="test"/>
+	<testcase name="start redirects to Managed Login with PKCE and a transaction cookie" time="0.022950" classname="test"/>
+	<testcase name="return paths stay on this origin" time="0.000373" classname="test"/>
+	<testcase name="a good callback signs in, creates the account once and keeps the invite path" time="0.061319" classname="test"/>
+	<testcase name="callbacks with a bad token, state or replay are rejected" time="0.080129" classname="test"/>
+	<testcase name="a cancelled sign-in returns to the app with a message" time="0.019990" classname="test"/>
+	<testcase name="a failed sign-in started from an invitation returns to the invitation" time="0.022167" classname="test"/>
+	<testcase name="an ID token without an email_verified claim is rejected" time="0.020880" classname="test"/>
+	<testcase name="used states expire and are bounded" time="0.000369" classname="test"/>
+	<testcase name="first-sign-in display name is saved on the account" time="0.037441" classname="test"/>
+	<testcase name="Cognito accounts cannot sign in with a password" time="0.106363" classname="test"/>
+	<testcase name="sign-out of a Cognito session returns the Cognito logout URL" time="0.024592" classname="test"/>
+	<testcase name="deleting a Cognito account asks for DELETE, removes the Cognito user, then the data" time="0.035649" classname="test"/>
+	<testcase name="a failed Cognito deletion leaves the account in place" time="0.023888" classname="test"/>
+	<testcase name="password sign-in off: register and login are refused, Cognito still works" time="0.027366" classname="test"/>
+	<testcase name="release refuses to start with password sign-in enabled" time="0.001562" classname="test"/>
+	<testcase name="password sign-in off without Cognito settings is a config error" time="0.000306" classname="test"/>
+	<testcase name="Cognito callback fails closed on a rejected token exchange and consumes the state" time="0.100370" classname="test"/>
+	<testcase name="Cognito callback fails closed on a network failure and consumes the state" time="0.031386" classname="test"/>
+	<testcase name="Cognito callback fails closed on invalid provider JSON and consumes the state" time="0.035625" classname="test"/>
+	<testcase name="Cognito callback fails closed on a missing ID token and consumes the state" time="0.020962" classname="test"/>
+	<testcase name="Cognito callback fails closed on a non-string ID token and consumes the state" time="0.020828" classname="test"/>
+	<testcase name="Cognito callback fails closed on a missing subject and consumes the state" time="0.016564" classname="test"/>
+	<testcase name="Cognito callback fails closed on a non-string subject and consumes the state" time="0.016222" classname="test"/>
+	<testcase name="Cognito callback fails closed on a missing nonce and consumes the state" time="0.017868" classname="test"/>
+	<testcase name="missing and oversized authorization codes never reach the provider" time="0.019980" classname="test"/>
+	<testcase name="malformed, oversized and expired transaction cookies never reach the provider" time="0.031978" classname="test"/>
+	<testcase name="unsafe return paths fall back to the app root and unconfigured Cognito is unavailable" time="0.035014" classname="test"/>
+	<testcase name="runtime Cognito configuration produces Managed Login redirects without contacting the provider" time="0.016465" classname="test"/>
+	<testcase name="cycle boundary creates one persistent film job from processed non-raw clips" time="0.026673" classname="test"/>
+	<testcase name="compilation claims and progress survive a restart without duplicate jobs" time="0.019182" classname="test"/>
+	<testcase name="compilation excludes tombstones and a worker claim reconciles stale inputs atomically" time="0.019920" classname="test"/>
+	<testcase name="progress heartbeats renew only the current fenced claim lease" time="0.017639" classname="test"/>
+	<testcase name="disk rollback creates no adapter and local store requires an explicit namespace" time="0.003601" classname="test"/>
+	<testcase name="explicit S3 config fails closed without exposing values or accepting aliases" time="0.000833" classname="test"/>
+	<testcase name="one configured adapter binds HTTP, lifecycle, worker and upload intents to the same scope" time="0.000580" classname="test"/>
+	<testcase name="installed SDK constructs the configured private runtime offline and closes idempotently" time="0.143032" classname="test"/>
+	<testcase name="worker CLI uses opt-in local store for pinned input, verified output and input cleanup" time="0.380434" classname="test"/>
+	<testcase name="report detects each required inconsistency and does not mutate rows, files, or audits" time="0.046600" classname="test"/>
+	<testcase name="processed-file candidate checks find references beyond the limited job window" time="0.017756" classname="test"/>
+	<testcase name="processed-file scan continues past referenced entries to the finding limit" time="0.017546" classname="test"/>
+	<testcase name="report limits scan classes independently and fairly select findings" time="0.018194" classname="test"/>
+	<testcase name="marks a consistency report truncated when processed entries exceed the hard scan bound" time="0.510174" classname="test"/>
+	<testcase name="compilation audit detects IDs bound to the wrong contribution" time="0.016953" classname="test"/>
+	<testcase name="compilation audit detects a clip bound to another group cycle" time="0.016426" classname="test"/>
+	<testcase name="compilation audit detects a film bound to a different cycle than its clip" time="0.016671" classname="test"/>
+	<testcase name="the audit table keeps earlier events and permits consistency repair events" time="0.017055" classname="test"/>
+	<testcase name="consistency CLI defaults to read-only JSON report mode" time="0.201393" classname="test"/>
+	<testcase name="repair is bounded, audited, generation-fenced, path-contained, and idempotent" time="0.022565" classname="test"/>
+	<testcase name="a failed database commit restores quarantined files and rolls back their audit rows" time="0.013710" classname="test"/>
+	<testcase name="a failed post-commit unlink restores the orphan and records a recoverable failure" time="0.022364" classname="test"/>
+	<testcase name="the ledger schema is part of readiness and a dropped ledger index is refused" time="0.045607" classname="test"/>
+	<testcase name="GET /contributions is self-only, current-cycle, paginated, filterable and redacted" time="0.485534" classname="test"/>
+	<testcase name="GET /contributions exposes the latest active entry beyond its default 50-entry page" time="0.237780" classname="test"/>
+	<testcase name="ledger denial happens before filters and hides group existence" time="0.459165" classname="test"/>
+	<testcase name="the baseline schema carries the ledger replacement column and scope index" time="0.021031" classname="test"/>
+	<testcase name="the ledger reports every lifecycle state with duration and redacted metadata" time="0.021929" classname="test"/>
+	<testcase name="the ledger is self-only inside the selected group and current cycle" time="0.015703" classname="test"/>
+	<testcase name="deletion stays deleted until an explicit accepted replacement links it" time="0.023028" classname="test"/>
+	<testcase name="replacement linking refuses cross-member, cross-window, and non-deleted targets" time="0.014384" classname="test"/>
+	<testcase name="a replacement upload outside the member scope rolls back its new contribution and allowance" time="0.015173" classname="test"/>
+	<testcase name="ledger pagination is bounded and its cursor is bound to member and state" time="0.016352" classname="test"/>
+	<testcase name="ledger allowance impact tracks the current window and cycle phase" time="0.013296" classname="test"/>
+	<testcase name="current-week allowance does not inherit usage or correction from the previous week" time="0.010532" classname="test"/>
+	<testcase name="ledger preserves the sealed fractional duration for nearest-second UI rounding" time="0.011859" classname="test"/>
+	<testcase name="weekly allowance is anchored to the cycle start and resets at seven days" time="0.002982" classname="test"/>
+	<testcase name="clip submissions enforce five clips and thirty seconds per member window" time="0.032139" classname="test"/>
+	<testcase name="one current-week deletion tombstones media, restores exact allowance, and permits replacement" time="0.016307" classname="test"/>
+	<testcase name="second deletion in the same weekly window and post-reveal deletion are denied" time="0.013253" classname="test"/>
+	<testcase name="processing contributions cannot be deleted while a worker owns the job" time="0.011773" classname="test"/>
+	<testcase name="idempotent retries consume one allowance and persisted state survives reopen" time="0.013302" classname="test"/>
+	<testcase name="the thirty-second limit is independent from the five-clip limit" time="0.014042" classname="test"/>
+	<testcase name="duration above fifteen seconds is rejected before policy state is written" time="0.013721" classname="test"/>
+	<testcase name="quota uses verified server metadata when a client submits a shorter duration hint" time="0.014691" classname="test"/>
+	<testcase name="trim bounds use verified FFprobe duration rather than a client source-duration hint" time="0.017469" classname="test"/>
+	<testcase name="staged source capabilities are owner-bound and cannot be replaced" time="0.012801" classname="test"/>
+	<testcase name="a transient SQLite writer lock retries and same-key submissions remain idempotent" time="0.236670" classname="test"/>
+	<testcase name="every exposed protected category denies a member of another group without content" time="0.312582" classname="test"/>
+	<testcase name="each protected category remains readable for the member of its own group" time="0.366977" classname="test"/>
+	<testcase name="a session from another group cannot inspect or play a group premiere" time="0.311079" classname="test"/>
+	<testcase name="cycle engine rejects invalid time inputs and preserves exact phase boundaries" time="0.002908" classname="test"/>
+	<testcase name="invalid persisted cycle times fail atomically and a corrected cycle can still close" time="0.490631" classname="test"/>
+	<testcase name="invalid lifecycle clocks and foreign cycles cannot create successors or publish releases" time="0.270441" classname="test"/>
+	<testcase name="real persisted scheduler closes, compiles with audio, publishes once and archives after 24h with every client absent" time="0.887078" classname="test"/>
+	<testcase name="scheduler does not publish a missing or corrupted ready film and stop cancels idle scans" time="0.991357" classname="test"/>
+	<testcase name="bounded scans advance their cursor and invalid limits fail clearly" time="0.140536" classname="test"/>
+	<testcase name="ordinary runtime starts automatic real lifecycle without an HTTP request and shuts down its owned loop" time="2.181243" classname="test"/>
+	<testcase name="one deterministic engine calculates one-day and four-week windows" time="0.002814" classname="test"/>
+	<testcase name="engine advances a cycle deterministically without changing its duration" time="0.000488" classname="test"/>
+	<testcase name="closure creates one immediate boundary-anchored successor and publication keeps a 24-hour premiere" time="0.052011" classname="test"/>
+	<testcase name="missing, corrupt or unverified film never publishes or archives; next capture is independent" time="0.044203" classname="test"/>
+	<testcase name="late restart repairs legacy closure without shifting boundary or rewinding a newer current cycle" time="0.042726" classname="test"/>
+	<testcase name="lifecycle migration applies after the canonical quota/media migrations" time="0.022908" classname="test"/>
+	<testcase name="real four-week rollover rejects ended quota and enables next capture while film is pending" time="0.232808" classname="test"/>
+	<testcase name="concurrent lifecycle processes persist one successor, job and transition receipt" time="0.230815" classname="test"/>
+	<testcase name="duplicate workers produce exactly one result for the same clip job" time="0.278600" classname="test"/>
+	<testcase name="a stale processing claim is reclaimed after restart while a live claim is not" time="0.311924" classname="test"/>
+	<testcase name="a stale failing clip worker cannot change or remove a reclaimed worker output" time="0.199845" classname="test"/>
+	<testcase name="automatic clip retries stop at the cap while request retries remain available" time="0.025772" classname="test"/>
+	<testcase name="worker claim enforces the automatic clip cap after candidate selection" time="0.020175" classname="test"/>
+	<testcase name="an exhausted film job is terminal and never claimed again" time="0.024305" classname="test"/>
+	<testcase name="a stale failing film worker cannot remove a reclaimed generation output" time="1.150510" classname="test"/>
+	<testcase name="graceful shutdown stops claiming and leaves work for the request-driven path" time="0.381182" classname="test"/>
+	<testcase name="graceful shutdown waits for in-flight FFmpeg and skips the next claim" time="0.326192" classname="test"/>
+	<testcase name="repeated idle waits do not retain callbacks for elapsed ticks" time="0.172082" classname="test"/>
+	<testcase name="stale ready clip and film candidates do not consume the worker job limit" time="0.190628" classname="test"/>
+	<testcase name="a worker counts successful persisted-output recovery against the job limit" time="0.346403" classname="test"/>
+	<testcase name="candidate selection excludes terminal, ready, and out-of-scope rows" time="0.035149" classname="test"/>
+	<testcase name="loop failure labels stay stable and expose no path or FFmpeg detail" time="0.000645" classname="test"/>
+	<testcase name="persistent loop rejects on a claim error instead of reporting a clean stop" time="0.000637" classname="test"/>
+	<testcase name="worker CLI exits nonzero with a safe label after a persistent loop failure" time="0.372783" classname="test"/>
+	<testcase name="--once --json emits one parseable summary and zero idle is rejected" time="0.577550" classname="test"/>
+	<testcase name="capacity uses unprivileged available blocks and retains measured zero availability" time="0.001685" classname="test"/>
+	<testcase name="invalid metadata and unsafe byte arithmetic remain unavailable instead of rounding or clamping" time="0.000552" classname="test"/>
+	<testcase name="filesystem probe failures and invalid results omit paths, exceptions and raw metadata" time="0.000310" classname="test"/>
+	<testcase name="actual local statfs CLI preserves database-only output and read-only store bytes" time="0.416508" classname="test"/>
+	<testcase name="accepts a landscape clip at intake; the film letterboxes it into vertical 720p" time="0.230162" classname="test"/>
+	<testcase name="compiles chronological retained clips into a playable normalized-audio film" time="1.103188" classname="test"/>
+	<testcase name="a moment the owner removed before the film compiles stays out of it" time="0.431202" classname="test"/>
+	<testcase name="a film from a photo and a variable-rate clip stays playable on iPhone" time="2.858639" classname="test"/>
+	<testcase name="production selection appends and visibly labels same-group archive filler" time="1.071153" classname="test"/>
+	<testcase name="a write-then-fail FFmpeg run removes partial output and keeps playback unavailable" time="1.260242" classname="test"/>
+	<testcase name="fixture upload sends unchanged bytes and authority only to its owned test server" time="0.031468" classname="test"/>
+	<testcase name="fixture upload rejects other origins and URL credentials before sending bytes" time="0.005003" classname="test"/>
+	<testcase name="fixture upload requires a live server explicitly bound to IPv4 loopback" time="0.000994" classname="test"/>
+	<testcase name="fixture upload never replays bytes or authority to redirect targets" time="0.012668" classname="test"/>
+	<testcase name="a full group rejects another invitee and keeps the unused invitation intact" time="1.097841" classname="test"/>
+	<testcase name="an invitation cannot be redirected to another group and remains usable for its intended group" time="0.613830" classname="test"/>
+	<testcase name="invitation expiry enforces five-minute and seven-day bounds and expires at the exact deadline" time="0.679835" classname="test"/>
+	<testcase name="closed-cycle settings and revoked authorization leave the prompt, zone and reminder preference unchanged" time="0.273261" classname="test"/>
+	<testcase name="HTTP policy configuration is bounded and has documented defaults" time="0.002906" classname="test"/>
+	<testcase name="slow JSON bodies return a stable 408 contract" time="0.114385" classname="test"/>
+	<testcase name="an upload that exceeds its total deadline returns a stable 408 contract" time="0.442952" classname="test"/>
+	<testcase name="staging exceptions remove the final source, release the claim, and allow retry" time="0.546442" classname="test"/>
+	<testcase name="JSON bodies above the existing 64 KiB cap return a stable 413 contract" time="0.024042" classname="test"/>
+	<testcase name="media bodies above the existing 50 MiB cap return a stable 413 contract" time="0.216290" classname="test"/>
+	<testcase name="a second media intake receives a stable 429 while the first is active" time="0.262614" classname="test"/>
+	<testcase name="aborted media intake returns to a retryable staged state" time="0.416160" classname="test"/>
+	<testcase name="processing concurrency returns stable 429 and releases capacity for retry" time="0.677615" classname="test"/>
+	<testcase name="a normal bounded media upload remains successful" time="0.423342" classname="test"/>
+	<testcase name="GET /health as none: 200" time="0.052303" classname="test"/>
+	<testcase name="GET /version as none: 200" time="0.004258" classname="test"/>
+	<testcase name="POST /health as none: health ignores the method" time="0.004157" classname="test"/>
+	<testcase name="DELETE /version as none: version ignores the method" time="0.003942" classname="test"/>
+	<testcase name="GET /health/ as none: 404 not_found" time="0.003192" classname="test"/>
+	<testcase name="GET /healthz as none: 404 not_found" time="0.003068" classname="test"/>
+	<testcase name="GET / as none: 404 not_found" time="0.003321" classname="test"/>
+	<testcase name="GET /nowhere as none: 404 not_found" time="0.003885" classname="test"/>
+	<testcase name="POST /nowhere as none: 404 not_found" time="0.003658" classname="test"/>
+	<testcase name="DELETE /nowhere as none: 404 not_found" time="0.003787" classname="test"/>
+	<testcase name="GET /nowhere as owner: 404 not_found" time="0.003298" classname="test"/>
+	<testcase name="PUT /nowhere as none: 405 method_not_allowed" time="0.002763" classname="test"/>
+	<testcase name="PATCH /health as none: 405 method_not_allowed" time="0.002420" classname="test"/>
+	<testcase name="PUT /archive?groupId={g} as owner: 405 method_not_allowed" time="0.002842" classname="test"/>
+	<testcase name="HEAD /health as none: HEAD is not supported outside media paths" time="0.002101" classname="test"/>
+	<testcase name="HEAD /archive?groupId={g} as owner: 405" time="0.002244" classname="test"/>
+	<testcase name="PUT /auth/session as none: 405 method_not_allowed" time="0.002656" classname="test"/>
+	<testcase name="PUT /auth/login as none: 405 method_not_allowed" time="0.002855" classname="test"/>
+	<testcase name="GET /media/access/BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB as none: unknown capability" time="0.003446" classname="test"/>
+	<testcase name="GET /media/access/BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB as owner: 404 not_found" time="0.003051" classname="test"/>
+	<testcase name="HEAD /media/access/BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB as none: HEAD is allowed through on media paths" time="0.002546" classname="test"/>
+	<testcase name="GET /media/access/BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB as none: 403 forbidden" time="0.003672" classname="test"/>
+	<testcase name="GET /media/access/BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB as none: x-forwarded-proto without the origin-auth secret" time="0.003464" classname="test"/>
+	<testcase name="GET /media/access/BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB as garbage: malformed bearer is denied rather than ignored" time="0.002980" classname="test"/>
+	<testcase name="GET /media/access/BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB as none: malformed cookie is denied rather than ignored" time="0.003553" classname="test"/>
+	<testcase name="GET /media/access/BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB as unknown: well-formed unknown session" time="0.002996" classname="test"/>
+	<testcase name="POST /media/access/BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB as none: POST falls through to the generic 404" time="0.002928" classname="test"/>
+	<testcase name="GET /media/access/too-short as none: 404 not_found" time="0.002777" classname="test"/>
+	<testcase name="GET /media/access/BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBx as none: 404 not_found" time="0.003045" classname="test"/>
+	<testcase name="GET /media/access/ as none: 404 not_found" time="0.002604" classname="test"/>
+	<testcase name="GET /auth/config as none: 200" time="0.002900" classname="test"/>
+	<testcase name="GET /auth/config as none: 403 auth_transport_unavailable" time="0.002892" classname="test"/>
+	<testcase name="GET /auth/config as none: x-forwarded-proto without the origin-auth secret" time="0.002439" classname="test"/>
+	<testcase name="GET /auth/config as none: 403 auth_transport_unavailable" time="0.002486" classname="test"/>
+	<testcase name="GET /auth/no-such-route as none: guard runs before routing" time="0.002243" classname="test"/>
+	<testcase name="POST /auth/login as none: 403 auth_transport_unavailable" time="0.003106" classname="test"/>
+	<testcase name="POST /auth/config as none: wrong method" time="0.003469" classname="test"/>
+	<testcase name="GET /auth/no-such-route as none: 404 not_found" time="0.002789" classname="test"/>
+	<testcase name="GET /auth/ as none: 404 not_found" time="0.005638" classname="test"/>
+	<testcase name="GET /auth/cognito/start as none: Cognito not configured" time="0.002308" classname="test"/>
+	<testcase name="POST /auth/cognito/start as none: wrong method" time="0.002243" classname="test"/>
+	<testcase name="GET /auth/session as none: 401 session_required" time="0.002572" classname="test"/>
+	<testcase name="GET /auth/session as garbage: malformed bearer counts as missing" time="0.002398" classname="test"/>
+	<testcase name="GET /auth/session as unknown: 401 session_expired" time="0.002440" classname="test"/>
+	<testcase name="GET /auth/session?token=BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB as none: query tokens are ignored" time="0.003395" classname="test"/>
+	<testcase name="GET /auth/session as owner: 200" time="0.002410" classname="test"/>
+	<testcase name="POST /auth/session as owner: wrong method" time="0.002465" classname="test"/>
+	<testcase name="POST /auth/profile as none: 401 session_required" time="0.003249" classname="test"/>
+	<testcase name="POST /auth/profile as unknown: 401 session_required" time="0.003199" classname="test"/>
+	<testcase name="POST /auth/profile as creator: 400 invalid_display_name" time="0.005106" classname="test"/>
+	<testcase name="POST /auth/profile as creator: 400 invalid_display_name" time="0.003625" classname="test"/>
+	<testcase name="POST /auth/profile as creator: 400 invalid_display_name" time="0.003998" classname="test"/>
+	<testcase name="POST /auth/profile as creator: 413 payload_too_large" time="0.004808" classname="test"/>
+	<testcase name="POST /auth/profile as creator: 200" time="0.003980" classname="test"/>
+	<testcase name="GET /auth/profile as creator: wrong method" time="0.002817" classname="test"/>
+	<testcase name="POST /auth/login as none: 401 sign_in_failed" time="0.003515" classname="test"/>
+	<testcase name="POST /auth/login as none: 401 sign_in_failed" time="0.003221" classname="test"/>
+	<testcase name="POST /auth/login as none: clientType is required" time="0.002623" classname="test"/>
+	<testcase name="POST /auth/login as none: 401 sign_in_failed" time="0.003147" classname="test"/>
+	<testcase name="POST /auth/login as none: 401 sign_in_failed" time="0.003078" classname="test"/>
+	<testcase name="POST /auth/login as none: 401 sign_in_failed" time="0.132963" classname="test"/>
+	<testcase name="POST /auth/login as none: 413 payload_too_large" time="0.003911" classname="test"/>
+	<testcase name="GET /auth/login as none: wrong method" time="0.005903" classname="test"/>
+	<testcase name="POST /auth/register as none: 400 invalid_registration" time="0.009400" classname="test"/>
+	<testcase name="POST /auth/register as none: 400 invalid_registration" time="0.003889" classname="test"/>
+	<testcase name="POST /auth/register as none: 400 invalid_registration" time="0.006179" classname="test"/>
+	<testcase name="POST /auth/register as none: register" time="0.109943" classname="test"/>
+	<testcase name="POST /auth/register as none: 409 username_unavailable" time="0.105471" classname="test"/>
+	<testcase name="POST /auth/register as none: sixth attempt is limited before the body is read" time="0.009846" classname="test"/>
+	<testcase name="GET /auth/register as none: wrong method" time="0.002443" classname="test"/>
+	<testcase name="POST /auth/account/delete as none: 401 session_required" time="0.005824" classname="test"/>
+	<testcase name="POST /auth/account/delete as unknown: 401 session_required" time="0.004876" classname="test"/>
+	<testcase name="POST /auth/account/delete as creator: 403 password_incorrect" time="0.003238" classname="test"/>
+	<testcase name="POST /auth/account/delete as creator: 403 password_incorrect" time="0.002971" classname="test"/>
+	<testcase name="POST /auth/account/delete as creator: 413 payload_too_large" time="0.002968" classname="test"/>
+	<testcase name="GET /auth/account/delete as creator: wrong method" time="0.002166" classname="test"/>
+	<testcase name="GET /auth/logout as none: wrong method" time="0.002202" classname="test"/>
+	<testcase name="POST /auth/logout as none: signing out without a session still succeeds" time="0.002395" classname="test"/>
+	<testcase name="POST /auth/logout as unknown: 200" time="0.002545" classname="test"/>
+	<testcase name="password sign-in lifecycle: login (native + browser), session cookie, logout, delete" time="0.549401" classname="test"/>
+	<testcase name="JSON replies on /auth and global routes keep their CORS posture" time="0.012775" classname="test"/>
+	<testcase name="OPTIONS: auth-style paths get no-store preflights, other paths a plain wildcard 204" time="0.017336" classname="test"/>
+	<testcase name="auth: the callback with no login transaction returns to / with an error and clears the cookie" time="0.003969" classname="test"/>
+	<testcase name="auth: password sign-in can be switched off" time="0.010552" classname="test"/>
+	<testcase name="cognito: config reports it, start redirects with a transaction cookie, failures return to the app" time="0.028470" classname="test"/>
+	<testcase name="UNKNOWN_TOKEN is 43 url-safe characters" time="0.000274" classname="test"/>
+	<testcase name="GET /realtime/groups/{g}/messages as none: 401 session_required" time="0.082349" classname="test"/>
+	<testcase name="GET /realtime/groups/{g}/messages as unknown: 401 session_required" time="0.006127" classname="test"/>
+	<testcase name="GET /realtime/groups/{g}/messages as outsider: 403 forbidden" time="0.003085" classname="test"/>
+	<testcase name="GET /realtime/groups/%E0%A4%A/messages as owner: 400 invalid_request" time="0.002721" classname="test"/>
+	<testcase name="GET /realtime/groups/%E0%A4%A/messages as none: 400 invalid_request" time="0.002241" classname="test"/>
+	<testcase name="GET /realtime/groups/{g}/events as none: 401 session_required" time="0.002631" classname="test"/>
+	<testcase name="GET /realtime/groups/{g}/events as unknown: 401 session_required" time="0.002346" classname="test"/>
+	<testcase name="GET /realtime/groups/{g}/events as outsider: 403 forbidden" time="0.002586" classname="test"/>
+	<testcase name="GET /realtime/groups/%E0%A4%A/events as owner: 400 invalid_request" time="0.002158" classname="test"/>
+	<testcase name="GET /realtime/groups/%E0%A4%A/events as none: 400 invalid_request" time="0.001986" classname="test"/>
+	<testcase name="GET /realtime/groups/nonexistent-group/messages as owner: 403 forbidden" time="0.002482" classname="test"/>
+	<testcase name="GET /realtime/groups/{g}/messages?limit=0 as owner: 400 invalid_chat_cursor" time="0.002417" classname="test"/>
+	<testcase name="GET /realtime/groups/{g}/messages?limit=101 as owner: 400 invalid_chat_cursor" time="0.002029" classname="test"/>
+	<testcase name="GET /realtime/groups/{g}/messages?limit=abc as owner: 400 invalid_chat_cursor" time="0.002124" classname="test"/>
+	<testcase name="GET /realtime/groups/{g}/messages?beforeEventId=0 as owner: 400 invalid_chat_cursor" time="0.002156" classname="test"/>
+	<testcase name="GET /realtime/groups/{g}/messages?beforeEventId=x as owner: 400 invalid_chat_cursor" time="0.001996" classname="test"/>
+	<testcase name="GET /realtime/groups/{g}/messages as owner: history page" time="0.003285" classname="test"/>
+	<testcase name="DELETE /realtime/groups/{g}/messages as owner: 404 not_found" time="0.002317" classname="test"/>
+	<testcase name="POST /realtime/groups/{g}/events as owner: 404 not_found" time="0.002646" classname="test"/>
+	<testcase name="GET /realtime/groups/{g}/reaction-counts as owner: 404 not_found" time="0.002068" classname="test"/>
+	<testcase name="GET /realtime/groups/{g} as owner: 404 not_found" time="0.001970" classname="test"/>
+	<testcase name="GET /realtime/groups/{g}/unknown as owner: 404 not_found" time="0.001938" classname="test"/>
+	<testcase name="POST /realtime/groups/{g}/messages as none: 401 session_required" time="0.002971" classname="test"/>
+	<testcase name="POST /realtime/groups/{g}/messages as outsider: 403 forbidden" time="0.002368" classname="test"/>
+	<testcase name="POST /realtime/groups/%E0%A4%A/messages as owner: 400 invalid_request" time="0.002491" classname="test"/>
+	<testcase name="POST /realtime/groups/{g}/messages as owner: invalid JSON is treated as an empty body" time="0.003369" classname="test"/>
+	<testcase name="POST /realtime/groups/{g}/messages as owner: array JSON is treated as an empty body" time="0.003361" classname="test"/>
+	<testcase name="POST /realtime/groups/{g}/messages as owner: 400 message_empty_body" time="0.003840" classname="test"/>
+	<testcase name="POST /realtime/groups/{g}/messages as owner: 400 message_body_too_long" time="0.003675" classname="test"/>
+	<testcase name="POST /realtime/groups/{g}/messages as owner: 404 not_found" time="0.003677" classname="test"/>
+	<testcase name="POST /realtime/groups/{g}/messages as owner: 413 payload_too_large" time="0.003566" classname="test"/>
+	<testcase name="POST /realtime/groups/{g}/messages as owner: happy path" time="0.003675" classname="test"/>
+	<testcase name="POST /realtime/groups/{g}/messages as owner: same retry is deduplicated" time="0.003350" classname="test"/>
+	<testcase name="POST /realtime/groups/{g}/messages as owner: 409 message_duplicate_message" time="0.003187" classname="test"/>
+	<testcase name="GET /realtime/groups/{g}/messages/rc-message-1/reactions as none: 401 session_required" time="0.002765" classname="test"/>
+	<testcase name="GET /realtime/groups/{g}/messages/rc-message-1/reactions as outsider: 403 forbidden" time="0.002186" classname="test"/>
+	<testcase name="GET /realtime/groups/%E0%A4%A/messages/rc-message-1/reactions as owner: 400 invalid_request" time="0.002584" classname="test"/>
+	<testcase name="GET /realtime/groups/{g}/messages/%E0%A4%A/reactions as owner: 400 invalid_request" time="0.005816" classname="test"/>
+	<testcase name="GET /realtime/groups/{g}/messages/rc-message-1/reactions/%E0%A4%A as owner: 400 invalid_request" time="0.002356" classname="test"/>
+	<testcase name="GET /realtime/groups/{g}/messages/no-such-message/reactions as owner: 404 not_found" time="0.002872" classname="test"/>
+	<testcase name="POST /realtime/groups/{g}/messages/rc-message-1/reactions as none: 401 session_required" time="0.002722" classname="test"/>
+	<testcase name="POST /realtime/groups/{g}/messages/rc-message-1/reactions as outsider: 403 forbidden" time="0.002577" classname="test"/>
+	<testcase name="POST /realtime/groups/%E0%A4%A/messages/rc-message-1/reactions as owner: 400 invalid_request" time="0.002632" classname="test"/>
+	<testcase name="POST /realtime/groups/{g}/messages/%E0%A4%A/reactions as owner: 400 invalid_request" time="0.001924" classname="test"/>
+	<testcase name="POST /realtime/groups/{g}/messages/rc-message-1/reactions/%E0%A4%A as owner: 400 invalid_request" time="0.002256" classname="test"/>
+	<testcase name="POST /realtime/groups/{g}/messages/no-such-message/reactions as owner: 404 not_found" time="0.002466" classname="test"/>
+	<testcase name="DELETE /realtime/groups/{g}/messages/rc-message-1/reactions as none: 401 session_required" time="0.002001" classname="test"/>
+	<testcase name="DELETE /realtime/groups/{g}/messages/rc-message-1/reactions as outsider: 403 forbidden" time="0.002363" classname="test"/>
+	<testcase name="DELETE /realtime/groups/%E0%A4%A/messages/rc-message-1/reactions as owner: 400 invalid_request" time="0.002533" classname="test"/>
+	<testcase name="DELETE /realtime/groups/{g}/messages/%E0%A4%A/reactions as owner: 400 invalid_request" time="0.002510" classname="test"/>
+	<testcase name="DELETE /realtime/groups/{g}/messages/rc-message-1/reactions/%E0%A4%A as owner: 400 invalid_request" time="0.002471" classname="test"/>
+	<testcase name="DELETE /realtime/groups/{g}/messages/no-such-message/reactions as owner: 404 not_found" time="0.002218" classname="test"/>
+	<testcase name="PUT /realtime/groups/{g}/messages/rc-message-1/reactions as owner: 405 method_not_allowed" time="0.002052" classname="test"/>
+	<testcase name="GET /realtime/groups/{g}/messages/rc-message-1/reactions as owner: GET reaction view" time="0.002484" classname="test"/>
+	<testcase name="POST /realtime/groups/{g}/messages/rc-message-1/reactions as owner: 400 reaction_unsupported_reaction" time="0.002631" classname="test"/>
+	<testcase name="POST /realtime/groups/{g}/messages/rc-message-1/reactions as owner: invalid JSON toggles the default reaction" time="0.003898" classname="test"/>
+	<testcase name="DELETE /realtime/groups/{g}/messages/rc-message-1/reactions as owner: DELETE removes the default reaction" time="0.004193" classname="test"/>
+	<testcase name="POST /realtime/groups/{g}/messages/rc-message-1/reactions as owner: 413 payload_too_large" time="0.003727" classname="test"/>
+	<testcase name="POST /realtime/groups/{g}/reaction-counts as none: 401 session_required" time="0.003135" classname="test"/>
+	<testcase name="POST /realtime/groups/{g}/reaction-counts as outsider: 403 forbidden" time="0.002276" classname="test"/>
+	<testcase name="POST /realtime/groups/%E0%A4%A/reaction-counts as owner: 400 invalid_request" time="0.002644" classname="test"/>
+	<testcase name="POST /realtime/groups/{g}/reaction-counts as owner: 400 invalid_reaction_snapshot" time="0.002412" classname="test"/>
+	<testcase name="POST /realtime/groups/{g}/reaction-counts as owner: 400 invalid_reaction_snapshot" time="0.003107" classname="test"/>
+	<testcase name="POST /realtime/groups/{g}/reaction-counts as owner: 400 invalid_reaction_snapshot" time="0.002479" classname="test"/>
+	<testcase name="POST /realtime/groups/{g}/reaction-counts as owner: 400 invalid_reaction_snapshot" time="0.002727" classname="test"/>
+	<testcase name="POST /realtime/groups/{g}/reaction-counts as owner: 413 payload_too_large" time="0.002789" classname="test"/>
+	<testcase name="POST /realtime/groups/{g}/reaction-counts as owner: 200" time="0.002956" classname="test"/>
+	<testcase name="POST /contributions/upload/source?idempotencyKey=route-contract-key&amp;groupId={g} as none: 401 session_required" time="0.002510" classname="test"/>
+	<testcase name="POST /contributions/upload/source?idempotencyKey=route-contract-key&amp;groupId={g} as unknown: 401 session_required" time="0.007501" classname="test"/>
+	<testcase name="POST /contributions/upload/source?idempotencyKey=route-contract-key&amp;groupId={g} as garbage: 401 session_required" time="0.001917" classname="test"/>
+	<testcase name="POST /contributions/upload/source?idempotencyKey=route-contract-key&amp;groupId={g} as outsider: 403 forbidden" time="0.001908" classname="test"/>
+	<testcase name="POST /contributions/upload/source?idempotencyKey=route-contract-key as owner: 403 forbidden" time="0.001845" classname="test"/>
+	<testcase name="POST /contributions/upload/source?idempotencyKey=route-contract-key&amp;groupId= as owner: 403 forbidden" time="0.001809" classname="test"/>
+	<testcase name="POST /contributions/upload/source?idempotencyKey=route-contract-key&amp;groupId=%E0%A4%A as owner: 403 forbidden" time="0.001871" classname="test"/>
+	<testcase name="POST /contributions/upload/source?groupId={g} as owner: missing idempotency key" time="0.001968" classname="test"/>
+	<testcase name="POST /contributions/upload/source?groupId={g}&amp;idempotencyKey=short as owner: 400 upload_invalid_key" time="0.002000" classname="test"/>
+	<testcase name="POST /contributions/upload/source?groupId={g}&amp;idempotencyKey=route-contract-key as owner: 400 upload_invalid_media" time="0.001856" classname="test"/>
+	<testcase name="POST /contributions/upload/source?groupId={g}&amp;idempotencyKey=route-contract-key as owner: no content type" time="0.001843" classname="test"/>
+	<testcase name="GET /contributions/upload/source?groupId={g}&amp;idempotencyKey=route-contract-key as owner: wrong method" time="0.001889" classname="test"/>
+	<testcase name="POST /contributions/upload?groupId={g} as none: 401 session_required" time="0.002268" classname="test"/>
+	<testcase name="POST /contributions/upload?groupId={g} as unknown: 401 session_required" time="0.002365" classname="test"/>
+	<testcase name="POST /contributions/upload?groupId={g} as garbage: 401 session_required" time="0.002006" classname="test"/>
+	<testcase name="POST /contributions/upload?groupId={g} as outsider: 403 forbidden" time="0.002047" classname="test"/>
+	<testcase name="POST /contributions/upload as owner: 403 forbidden" time="0.002034" classname="test"/>
+	<testcase name="POST /contributions/upload?groupId= as owner: 403 forbidden" time="0.002103" classname="test"/>
+	<testcase name="POST /contributions/upload?groupId=%E0%A4%A as owner: 403 forbidden" time="0.002074" classname="test"/>
+	<testcase name="POST /contributions/upload?groupId={g} as owner: 400 upload_invalid_replacement_target" time="0.002318" classname="test"/>
+	<testcase name="POST /contributions/upload?groupId={g} as owner: 400 upload_invalid_key" time="0.003639" classname="test"/>
+	<testcase name="POST /contributions/upload?groupId={g} as owner: invalid JSON is treated as an empty body" time="0.003039" classname="test"/>
+	<testcase name="POST /contributions/upload?groupId={g} as owner: 413 payload_too_large" time="0.003582" classname="test"/>
+	<testcase name="DELETE /contributions/upload/no-such-job?groupId={g} as none: 401 session_required" time="0.002119" classname="test"/>
+	<testcase name="DELETE /contributions/upload/no-such-job?groupId={g} as unknown: 401 session_required" time="0.001673" classname="test"/>
+	<testcase name="DELETE /contributions/upload/no-such-job?groupId={g} as garbage: 401 session_required" time="0.001821" classname="test"/>
+	<testcase name="DELETE /contributions/upload/no-such-job?groupId={g} as outsider: 403 forbidden" time="0.001965" classname="test"/>
+	<testcase name="DELETE /contributions/upload/no-such-job as owner: 403 forbidden" time="0.001589" classname="test"/>
+	<testcase name="DELETE /contributions/upload/no-such-job?groupId= as owner: 403 forbidden" time="0.002208" classname="test"/>
+	<testcase name="DELETE /contributions/upload/no-such-job?groupId=%E0%A4%A as owner: 403 forbidden" time="0.001780" classname="test"/>
+	<testcase name="DELETE /contributions/upload/%E0%A4%A?groupId={g} as owner: 400 invalid_request" time="0.001605" classname="test"/>
+	<testcase name="DELETE /contributions/upload/no-such-job?groupId={g} as owner: 404 not_found" time="0.002030" classname="test"/>
+	<testcase name="POST /contributions/jobs/no-such-job/process?groupId={g} as none: 401 session_required" time="0.001988" classname="test"/>
+	<testcase name="POST /contributions/jobs/no-such-job/process?groupId={g} as unknown: 401 session_required" time="0.001742" classname="test"/>
+	<testcase name="POST /contributions/jobs/no-such-job/process?groupId={g} as garbage: 401 session_required" time="0.001675" classname="test"/>
+	<testcase name="POST /contributions/jobs/no-such-job/process?groupId={g} as outsider: 403 forbidden" time="0.006135" classname="test"/>
+	<testcase name="POST /contributions/jobs/no-such-job/process as owner: 403 forbidden" time="0.003665" classname="test"/>
+	<testcase name="POST /contributions/jobs/no-such-job/process?groupId= as owner: 403 forbidden" time="0.002738" classname="test"/>
+	<testcase name="POST /contributions/jobs/no-such-job/process?groupId=%E0%A4%A as owner: 403 forbidden" time="0.002487" classname="test"/>
+	<testcase name="POST /contributions/jobs/%E0%A4%A/process?groupId={g} as owner: 400 invalid_request" time="0.002468" classname="test"/>
+	<testcase name="POST /contributions/jobs/no-such-job/process?groupId={g} as owner: 404 not_found" time="0.003384" classname="test"/>
+	<testcase name="GET /contributions/jobs/no-such-job/process?groupId={g} as owner: wrong method" time="0.002155" classname="test"/>
+	<testcase name="GET /clips/no-such-clip?groupId={g} as none: 401 session_required" time="0.002383" classname="test"/>
+	<testcase name="GET /clips/no-such-clip?groupId={g} as unknown: 401 session_required" time="0.002324" classname="test"/>
+	<testcase name="GET /clips/no-such-clip?groupId={g} as garbage: 401 session_required" time="0.002360" classname="test"/>
+	<testcase name="GET /clips/no-such-clip?groupId={g} as outsider: 403 forbidden" time="0.002982" classname="test"/>
+	<testcase name="GET /clips/no-such-clip as owner: 403 forbidden" time="0.002357" classname="test"/>
+	<testcase name="GET /clips/no-such-clip?groupId= as owner: 403 forbidden" time="0.002302" classname="test"/>
+	<testcase name="GET /clips/no-such-clip?groupId=%E0%A4%A as owner: 403 forbidden" time="0.002828" classname="test"/>
+	<testcase name="GET /clips/%E0%A4%A?groupId={g} as owner: 400 invalid_request" time="0.002497" classname="test"/>
+	<testcase name="GET /clips/no-such-clip?groupId={g} as owner: 404 not_found" time="0.002775" classname="test"/>
+	<testcase name="POST /clips/no-such-clip?groupId={g} as owner: wrong method" time="0.002241" classname="test"/>
+	<testcase name="GET /clips/%E0%A4%A as none: decoding happens before authentication" time="0.002253" classname="test"/>
+	<testcase name="GET /contributions?groupId={g} as none: 401 session_required" time="0.002506" classname="test"/>
+	<testcase name="GET /contributions?groupId={g} as unknown: 401 session_required" time="0.002568" classname="test"/>
+	<testcase name="GET /contributions?groupId={g} as garbage: 401 session_required" time="0.002364" classname="test"/>
+	<testcase name="GET /contributions?groupId={g} as outsider: 403 forbidden" time="0.002478" classname="test"/>
+	<testcase name="GET /contributions as owner: 403 forbidden" time="0.002651" classname="test"/>
+	<testcase name="GET /contributions?groupId= as owner: 403 forbidden" time="0.002594" classname="test"/>
+	<testcase name="GET /contributions?groupId=%E0%A4%A as owner: 403 forbidden" time="0.002400" classname="test"/>
+	<testcase name="GET /contributions?groupId={g} as owner: empty ledger" time="0.003948" classname="test"/>
+	<testcase name="GET /contributions?groupId={g}&amp;state=bogus as owner: 400 invalid_ledger_request" time="0.002490" classname="test"/>
+	<testcase name="GET /contributions?groupId={g}&amp;limit=0 as owner: 400 invalid_ledger_request" time="0.002319" classname="test"/>
+	<testcase name="GET /contributions?groupId={g}&amp;cursor=bogus as owner: 400 invalid_ledger_request" time="0.002809" classname="test"/>
+	<testcase name="GET /contributions/no-such-contribution?groupId={g} as none: 401 session_required" time="0.002515" classname="test"/>
+	<testcase name="GET /contributions/no-such-contribution?groupId={g} as unknown: 401 session_required" time="0.002363" classname="test"/>
+	<testcase name="GET /contributions/no-such-contribution?groupId={g} as garbage: 401 session_required" time="0.002323" classname="test"/>
+	<testcase name="GET /contributions/no-such-contribution?groupId={g} as outsider: 403 forbidden" time="0.002225" classname="test"/>
+	<testcase name="GET /contributions/no-such-contribution as owner: 403 forbidden" time="0.002282" classname="test"/>
+	<testcase name="GET /contributions/no-such-contribution?groupId= as owner: 403 forbidden" time="0.002211" classname="test"/>
+	<testcase name="GET /contributions/no-such-contribution?groupId=%E0%A4%A as owner: 403 forbidden" time="0.002168" classname="test"/>
+	<testcase name="GET /contributions/%E0%A4%A?groupId={g} as owner: 400 invalid_request" time="0.002124" classname="test"/>
+	<testcase name="DELETE /contributions/no-such-contribution?groupId={g} as none: 401 session_required" time="0.002139" classname="test"/>
+	<testcase name="DELETE /contributions/no-such-contribution?groupId={g} as unknown: 401 session_required" time="0.008294" classname="test"/>
+	<testcase name="DELETE /contributions/no-such-contribution?groupId={g} as garbage: 401 session_required" time="0.012942" classname="test"/>
+	<testcase name="DELETE /contributions/no-such-contribution?groupId={g} as outsider: 403 forbidden" time="0.001942" classname="test"/>
+	<testcase name="DELETE /contributions/no-such-contribution as owner: 403 forbidden" time="0.002330" classname="test"/>
+	<testcase name="DELETE /contributions/no-such-contribution?groupId= as owner: 403 forbidden" time="0.001672" classname="test"/>
+	<testcase name="DELETE /contributions/no-such-contribution?groupId=%E0%A4%A as owner: 403 forbidden" time="0.001672" classname="test"/>
+	<testcase name="DELETE /contributions/%E0%A4%A?groupId={g} as owner: 400 invalid_request" time="0.001554" classname="test"/>
+	<testcase name="GET /contributions/no-such-contribution?groupId={g} as owner: 404 not_found" time="0.001774" classname="test"/>
+	<testcase name="DELETE /contributions/no-such-contribution?groupId={g} as owner: 404 contribution_not_found" time="0.002058" classname="test"/>
+	<testcase name="POST /contributions/no-such-contribution?groupId={g} as owner: POST is served like GET" time="0.001690" classname="test"/>
+	<testcase name="POST /contributions?groupId={g} as owner: POST collection is served like GET detail" time="0.001498" classname="test"/>
+	<testcase name="GET /contributions/a/b?groupId={g} as owner: 404 not_found" time="0.001469" classname="test"/>
+	<testcase name="GET /cycles/{c}/premiere?groupId={g} as none: 401 session_required" time="0.001953" classname="test"/>
+	<testcase name="GET /cycles/{c}/premiere?groupId={g} as unknown: 401 session_required" time="0.002051" classname="test"/>
+	<testcase name="GET /cycles/{c}/premiere?groupId={g} as garbage: 401 session_required" time="0.001780" classname="test"/>
+	<testcase name="GET /cycles/{c}/premiere?groupId={g} as outsider: 403 forbidden" time="0.001978" classname="test"/>
+	<testcase name="GET /cycles/{c}/premiere as owner: 403 forbidden" time="0.001623" classname="test"/>
+	<testcase name="GET /cycles/{c}/premiere?groupId= as owner: 403 forbidden" time="0.001565" classname="test"/>
+	<testcase name="GET /cycles/{c}/premiere?groupId=%E0%A4%A as owner: 403 forbidden" time="0.001744" classname="test"/>
+	<testcase name="GET /cycles/%E0%A4%A/premiere?groupId={g} as owner: 400 invalid_request" time="0.002143" classname="test"/>
+	<testcase name="GET /cycles/no-such-cycle/premiere?groupId={g} as owner: 404 not_found" time="0.003132" classname="test"/>
+	<testcase name="GET /cycles/{c}/premiere?groupId={g} as owner: locked premiere" time="0.002789" classname="test"/>
+	<testcase name="GET /cycles/{c}/premiere?groupId={g} as member: member sees the premiere" time="0.003486" classname="test"/>
+	<testcase name="POST /cycles/{c}/premiere?groupId={g} as owner: wrong method" time="0.002311" classname="test"/>
+	<testcase name="GET /cycles/{c}?groupId={g} as owner: 404 not_found" time="0.003023" classname="test"/>
+	<testcase name="GET /archive?groupId={g} as none: 401 session_required" time="0.002536" classname="test"/>
+	<testcase name="GET /archive?groupId={g} as unknown: 401 session_required" time="0.002360" classname="test"/>
+	<testcase name="GET /archive?groupId={g} as garbage: 401 session_required" time="0.002310" classname="test"/>
+	<testcase name="GET /archive?groupId={g} as outsider: 403 forbidden" time="0.005373" classname="test"/>
+	<testcase name="GET /archive as owner: 403 forbidden" time="0.002705" classname="test"/>
+	<testcase name="GET /archive?groupId= as owner: 403 forbidden" time="0.002312" classname="test"/>
+	<testcase name="GET /archive?groupId=%E0%A4%A as owner: 403 forbidden" time="0.002299" classname="test"/>
+	<testcase name="GET /archive?groupId={g} as owner: empty archive" time="0.003526" classname="test"/>
+	<testcase name="GET /archive?groupId={g}&amp;filmCursor=bogus as owner: 400 invalid_page_cursor" time="0.002408" classname="test"/>
+	<testcase name="GET /archive?groupId={g}&amp;clipCursor=bogus as owner: 400 invalid_page_cursor" time="0.002325" classname="test"/>
+	<testcase name="GET /archive?groupId={g}&amp;limit=abc&amp;includeFilms=false&amp;includeClips=false as owner: 200" time="0.002340" classname="test"/>
+	<testcase name="POST /archive?groupId={g} as owner: wrong method" time="0.002443" classname="test"/>
+	<testcase name="DELETE /archive?groupId={g} as owner: wrong method" time="0.002286" classname="test"/>
+	<testcase name="GET /archive/extra?groupId={g} as owner: 404 not_found" time="0.003736" classname="test"/>
+	<testcase name="smoke: bodies of the happy paths carry no volatile top-level surprises" time="0.016987" classname="test"/>
+	<testcase name="a chat denial for an EventSource caller is a terminal SSE frame, not a JSON error" time="0.010024" classname="test"/>
+	<testcase name="JSON routes outside /auth and /real send the configured wildcard origin; auth-guarded ones do not" time="0.007030" classname="test"/>
+	<testcase name="fill() encodes placeholders" time="0.000231" classname="test"/>
+	<testcase name="GET /real/reminders/config as none: 401 session_required" time="0.072395" classname="test"/>
+	<testcase name="GET /real/reminders/config as unknown: 401 session_required" time="0.004068" classname="test"/>
+	<testcase name="GET /real/reminders/config as garbage: 401 session_required" time="0.003601" classname="test"/>
+	<testcase name="GET /real/media/config as none: 401 session_required" time="0.003651" classname="test"/>
+	<testcase name="GET /real/media/config as unknown: 401 session_required" time="0.008591" classname="test"/>
+	<testcase name="GET /real/media/config as garbage: 401 session_required" time="0.003829" classname="test"/>
+	<testcase name="GET /real/groups as none: 401 session_required" time="0.002772" classname="test"/>
+	<testcase name="GET /real/groups as unknown: 401 session_required" time="0.003555" classname="test"/>
+	<testcase name="GET /real/groups as garbage: 401 session_required" time="0.003598" classname="test"/>
+	<testcase name="GET /real/groups/current as none: 401 session_required" time="0.003019" classname="test"/>
+	<testcase name="GET /real/groups/current as unknown: 401 session_required" time="0.003231" classname="test"/>
+	<testcase name="GET /real/groups/current as garbage: 401 session_required" time="0.003342" classname="test"/>
+	<testcase name="POST /real/groups/current as none: 401 session_required" time="0.004096" classname="test"/>
+	<testcase name="POST /real/groups/current as unknown: 401 session_required" time="0.004242" classname="test"/>
+	<testcase name="POST /real/groups/current as garbage: 401 session_required" time="0.004129" classname="test"/>
+	<testcase name="POST /real/groups as none: 401 session_required" time="0.003126" classname="test"/>
+	<testcase name="POST /real/groups as unknown: 401 session_required" time="0.003373" classname="test"/>
+	<testcase name="POST /real/groups as garbage: 401 session_required" time="0.003368" classname="test"/>
+	<testcase name="GET /real/groups/{g} as none: 401 session_required" time="0.002894" classname="test"/>
+	<testcase name="GET /real/groups/{g} as unknown: 401 session_required" time="0.002861" classname="test"/>
+	<testcase name="GET /real/groups/{g} as garbage: 401 session_required" time="0.002600" classname="test"/>
+	<testcase name="GET /real/groups/{g}/members as none: 401 session_required" time="0.004248" classname="test"/>
+	<testcase name="GET /real/groups/{g}/members as unknown: 401 session_required" time="0.004987" classname="test"/>
+	<testcase name="GET /real/groups/{g}/members as garbage: 401 session_required" time="0.005851" classname="test"/>
+	<testcase name="GET /real/groups/{g}/settings as none: 401 session_required" time="0.002755" classname="test"/>
+	<testcase name="GET /real/groups/{g}/settings as unknown: 401 session_required" time="0.006147" classname="test"/>
+	<testcase name="GET /real/groups/{g}/settings as garbage: 401 session_required" time="0.004739" classname="test"/>
+	<testcase name="POST /real/groups/{g}/settings as none: 401 session_required" time="0.003925" classname="test"/>
+	<testcase name="POST /real/groups/{g}/settings as unknown: 401 session_required" time="0.003499" classname="test"/>
+	<testcase name="POST /real/groups/{g}/settings as garbage: 401 session_required" time="0.003491" classname="test"/>
+	<testcase name="GET /real/groups/{g}/reminders as none: 401 session_required" time="0.002601" classname="test"/>
+	<testcase name="GET /real/groups/{g}/reminders as unknown: 401 session_required" time="0.005259" classname="test"/>
+	<testcase name="GET /real/groups/{g}/reminders as garbage: 401 session_required" time="0.005420" classname="test"/>
+	<testcase name="POST /real/groups/{g}/reminders as none: 401 session_required" time="0.003437" classname="test"/>
+	<testcase name="POST /real/groups/{g}/reminders as unknown: 401 session_required" time="0.004124" classname="test"/>
+	<testcase name="POST /real/groups/{g}/reminders as garbage: 401 session_required" time="0.004202" classname="test"/>
+	<testcase name="GET /real/groups/{g}/reminders/destinations as none: 401 session_required" time="0.004354" classname="test"/>
+	<testcase name="GET /real/groups/{g}/reminders/destinations as unknown: 401 session_required" time="0.002838" classname="test"/>
+	<testcase name="GET /real/groups/{g}/reminders/destinations as garbage: 401 session_required" time="0.003375" classname="test"/>
+	<testcase name="GET /real/groups/{g}/reminders/outbox as none: 401 session_required" time="0.002947" classname="test"/>
+	<testcase name="GET /real/groups/{g}/reminders/outbox as unknown: 401 session_required" time="0.002884" classname="test"/>
+	<testcase name="GET /real/groups/{g}/reminders/outbox as garbage: 401 session_required" time="0.004437" classname="test"/>
+	<testcase name="POST /real/groups/{g}/reminders/destinations as none: 401 session_required" time="0.004710" classname="test"/>
+	<testcase name="POST /real/groups/{g}/reminders/destinations as unknown: 401 session_required" time="0.003602" classname="test"/>
+	<testcase name="POST /real/groups/{g}/reminders/destinations as garbage: 401 session_required" time="0.003482" classname="test"/>
+	<testcase name="POST /real/groups/{g}/reminders/destinations/d1 as none: 401 session_required" time="0.008872" classname="test"/>
+	<testcase name="POST /real/groups/{g}/reminders/destinations/d1 as unknown: 401 session_required" time="0.003578" classname="test"/>
+	<testcase name="POST /real/groups/{g}/reminders/destinations/d1 as garbage: 401 session_required" time="0.003280" classname="test"/>
+	<testcase name="GET /real/groups/{g}/upload-intents as none: 401 session_required" time="0.002464" classname="test"/>
+	<testcase name="GET /real/groups/{g}/upload-intents as unknown: 401 session_required" time="0.002766" classname="test"/>
+	<testcase name="GET /real/groups/{g}/upload-intents as garbage: 401 session_required" time="0.004392" classname="test"/>
+	<testcase name="POST /real/groups/{g}/upload-intents as none: 401 session_required" time="0.003368" classname="test"/>
+	<testcase name="POST /real/groups/{g}/upload-intents as unknown: 401 session_required" time="0.003023" classname="test"/>
+	<testcase name="POST /real/groups/{g}/upload-intents as garbage: 401 session_required" time="0.002936" classname="test"/>
+	<testcase name="GET /real/groups/{g}/upload-intents/i1 as none: 401 session_required" time="0.002800" classname="test"/>
+	<testcase name="GET /real/groups/{g}/upload-intents/i1 as unknown: 401 session_required" time="0.003426" classname="test"/>
+	<testcase name="GET /real/groups/{g}/upload-intents/i1 as garbage: 401 session_required" time="0.002768" classname="test"/>
+	<testcase name="POST /real/groups/{g}/upload-intents/i1/complete as none: 401 session_required" time="0.002639" classname="test"/>
+	<testcase name="POST /real/groups/{g}/upload-intents/i1/complete as unknown: 401 session_required" time="0.002917" classname="test"/>
+	<testcase name="POST /real/groups/{g}/upload-intents/i1/complete as garbage: 401 session_required" time="0.002310" classname="test"/>
+	<testcase name="POST /real/groups/{g}/upload-intents/i1/reconcile as none: 401 session_required" time="0.002591" classname="test"/>
+	<testcase name="POST /real/groups/{g}/upload-intents/i1/reconcile as unknown: 401 session_required" time="0.002812" classname="test"/>
+	<testcase name="POST /real/groups/{g}/upload-intents/i1/reconcile as garbage: 401 session_required" time="0.002289" classname="test"/>
+	<testcase name="POST /real/groups/{g}/reports as none: 401 session_required" time="0.005166" classname="test"/>
+	<testcase name="POST /real/groups/{g}/reports as unknown: 401 session_required" time="0.003459" classname="test"/>
+	<testcase name="POST /real/groups/{g}/reports as garbage: 401 session_required" time="0.002357" classname="test"/>
+	<testcase name="POST /real/groups/{g}/contributions/x/remove as none: 401 session_required" time="0.002827" classname="test"/>
+	<testcase name="POST /real/groups/{g}/contributions/x/remove as unknown: 401 session_required" time="0.003014" classname="test"/>
+	<testcase name="POST /real/groups/{g}/contributions/x/remove as garbage: 401 session_required" time="0.003073" classname="test"/>
+	<testcase name="POST /real/groups/{g}/invites as none: 401 session_required" time="0.003067" classname="test"/>
+	<testcase name="POST /real/groups/{g}/invites as unknown: 401 session_required" time="0.003271" classname="test"/>
+	<testcase name="POST /real/groups/{g}/invites as garbage: 401 session_required" time="0.003173" classname="test"/>
+	<testcase name="DELETE /real/groups/{g}/invites/i1 as none: 401 session_required" time="0.003087" classname="test"/>
+	<testcase name="DELETE /real/groups/{g}/invites/i1 as unknown: 401 session_required" time="0.002287" classname="test"/>
+	<testcase name="DELETE /real/groups/{g}/invites/i1 as garbage: 401 session_required" time="0.002192" classname="test"/>
+	<testcase name="POST /real/invites/accept as none: 401 session_required" time="0.002379" classname="test"/>
+	<testcase name="POST /real/invites/accept as unknown: 401 session_required" time="0.002583" classname="test"/>
+	<testcase name="POST /real/invites/accept as garbage: 401 session_required" time="0.002403" classname="test"/>
+	<testcase name="GET /real/blocks as none: 401 session_required" time="0.002391" classname="test"/>
+	<testcase name="GET /real/blocks as unknown: 401 session_required" time="0.009384" classname="test"/>
+	<testcase name="GET /real/blocks as garbage: 401 session_required" time="0.003070" classname="test"/>
+	<testcase name="POST /real/blocks as none: 401 session_required" time="0.002942" classname="test"/>
+	<testcase name="POST /real/blocks as unknown: 401 session_required" time="0.003283" classname="test"/>
+	<testcase name="POST /real/blocks as garbage: 401 session_required" time="0.002394" classname="test"/>
+	<testcase name="DELETE /real/blocks/p1 as none: 401 session_required" time="0.002393" classname="test"/>
+	<testcase name="DELETE /real/blocks/p1 as unknown: 401 session_required" time="0.002574" classname="test"/>
+	<testcase name="DELETE /real/blocks/p1 as garbage: 401 session_required" time="0.002456" classname="test"/>
+	<testcase name="GET /real/unknown-route as none: 401 session_required" time="0.002487" classname="test"/>
+	<testcase name="GET /real/unknown-route as unknown: 401 session_required" time="0.002503" classname="test"/>
+	<testcase name="GET /real/unknown-route as garbage: 401 session_required" time="0.002506" classname="test"/>
+	<testcase name="GET /real/groups/%E0%A4%A/members as none: 401 session_required" time="0.002229" classname="test"/>
+	<testcase name="GET /real/groups as owner: foreign Origin" time="0.002114" classname="test"/>
+	<testcase name="GET /real/groups as owner: Origin that is not the configured one" time="0.002259" classname="test"/>
+	<testcase name="GET /real/groups as owner: x-forwarded-proto without the origin-auth secret" time="0.002729" classname="test"/>
+	<testcase name="GET /real/groups as owner: wrong origin-auth secret" time="0.002033" classname="test"/>
+	<testcase name="GET /real/groups as owner: proxy secret with http scheme" time="0.005202" classname="test"/>
+	<testcase name="GET /real/groups as none: transport is checked before the session" time="0.002065" classname="test"/>
+	<testcase name="GET /real/groups as owner: authenticated proxy with the configured origin" time="0.004380" classname="test"/>
+	<testcase name="GET /real/groups as owner: 403 auth_transport_unavailable" time="0.002229" classname="test"/>
+	<testcase name="GET /real/groups as owner: configured Origin on loopback" time="0.002448" classname="test"/>
+	<testcase name="GET /real/reminders/config as owner: 200" time="0.002213" classname="test"/>
+	<testcase name="GET /real/media/config as owner: 200" time="0.002113" classname="test"/>
+	<testcase name="GET /real/media/config?uploadProtocol=2 as owner: 200" time="0.003780" classname="test"/>
+	<testcase name="POST /real/reminders/config as owner: 404 not_found" time="0.002356" classname="test"/>
+	<testcase name="POST /real/media/config as owner: 404 not_found" time="0.002219" classname="test"/>
+	<testcase name="GET /real/groups as owner: 200" time="0.002575" classname="test"/>
+	<testcase name="GET /real/groups as outsider: lists only own groups" time="0.002640" classname="test"/>
+	<testcase name="GET /real/groups/current as owner: 200" time="0.002553" classname="test"/>
+	<testcase name="POST /real/groups/current as owner: 400 invalid_group" time="0.002858" classname="test"/>
+	<testcase name="POST /real/groups/current as owner: 400 invalid_group" time="0.003241" classname="test"/>
+	<testcase name="POST /real/groups/current as owner: 400 invalid_group" time="0.003403" classname="test"/>
+	<testcase name="POST /real/groups/current as outsider: selecting a group the caller is not in" time="0.003732" classname="test"/>
+	<testcase name="POST /real/groups/current as owner: 404 forbidden" time="0.003484" classname="test"/>
+	<testcase name="POST /real/groups/current as owner: 413 payload_too_large" time="0.004763" classname="test"/>
+	<testcase name="POST /real/groups/current as owner: reselect own group" time="0.004192" classname="test"/>
+	<testcase name="POST /real/groups as creator: create a group" time="0.012500" classname="test"/>
+	<testcase name="POST /real/groups as creator: 400 invalid_group" time="0.004380" classname="test"/>
+	<testcase name="POST /real/groups as creator: 400 invalid_group" time="0.003942" classname="test"/>
+	<testcase name="POST /real/groups as creator: 400 invalid_group" time="0.003824" classname="test"/>
+	<testcase name="POST /real/groups as creator: 413 payload_too_large" time="0.004059" classname="test"/>
+	<testcase name="POST /real/groups as creator: sixth attempt in the window" time="0.006174" classname="test"/>
+	<testcase name="DELETE /real/groups as owner: wrong method" time="0.002828" classname="test"/>
+	<testcase name="DELETE /real/groups/current as owner: wrong method" time="0.003227" classname="test"/>
+	<testcase name="GET /real/groups/{g} as owner: 200" time="0.003356" classname="test"/>
+	<testcase name="GET /real/groups/{g} as member: 200" time="0.006392" classname="test"/>
+	<testcase name="GET /real/groups/{g} as outsider: 404 forbidden" time="0.002912" classname="test"/>
+	<testcase name="GET /real/groups/no-such-group as owner: 404 forbidden" time="0.004862" classname="test"/>
+	<testcase name="GET /real/groups/%E0%A4%A as owner: 400 invalid_request" time="0.003357" classname="test"/>
+	<testcase name="POST /real/groups/{g} as owner: wrong method" time="0.003210" classname="test"/>
+	<testcase name="DELETE /real/groups/{g} as owner: wrong method" time="0.002617" classname="test"/>
+	<testcase name="GET /real/groups/{g}/members as owner: 200" time="0.003473" classname="test"/>
+	<testcase name="GET /real/groups/{g}/members as member: 200" time="0.002994" classname="test"/>
+	<testcase name="GET /real/groups/{g}/members as outsider: 404 forbidden" time="0.002845" classname="test"/>
+	<testcase name="GET /real/groups/%E0%A4%A/members as owner: 400 invalid_request" time="0.002463" classname="test"/>
+	<testcase name="POST /real/groups/{g}/members as owner: wrong method" time="0.003460" classname="test"/>
+	<testcase name="GET /real/groups/{g}/nope as owner: 404 not_found" time="0.003055" classname="test"/>
+	<testcase name="GET /real/groups/{g}/reminders as owner: 200" time="0.007024" classname="test"/>
+	<testcase name="GET /real/groups/{g}/reminders as outsider: 403 forbidden" time="0.003850" classname="test"/>
+	<testcase name="GET /real/groups/%E0%A4%A/reminders as owner: 400 invalid_request" time="0.002559" classname="test"/>
+	<testcase name="GET /real/groups/{g}/settings as owner: GET settings has no handler (POST only)" time="0.002592" classname="test"/>
+	<testcase name="GET /real/groups/{g}/settings as outsider: 403 forbidden" time="0.002285" classname="test"/>
+	<testcase name="GET /real/groups/%E0%A4%A/settings as owner: 400 invalid_request" time="0.002178" classname="test"/>
+	<testcase name="POST /real/groups/{g}/settings as outsider: 403 forbidden" time="0.002654" classname="test"/>
+	<testcase name="POST /real/groups/{g}/settings as member: only the owner may change settings" time="0.003778" classname="test"/>
+	<testcase name="POST /real/groups/%E0%A4%A/settings as owner: 400 invalid_request" time="0.002568" classname="test"/>
+	<testcase name="POST /real/groups/{g}/settings as owner: 400 invalid_settings" time="0.003013" classname="test"/>
+	<testcase name="POST /real/groups/{g}/settings as owner: 400 invalid_settings" time="0.002916" classname="test"/>
+	<testcase name="POST /real/groups/{g}/settings as owner: invalid prompt" time="0.002951" classname="test"/>
+	<testcase name="POST /real/groups/{g}/settings as owner: 413 payload_too_large" time="0.013677" classname="test"/>
+	<testcase name="POST /real/groups/{g}/settings as owner: owner updates settings" time="0.004682" classname="test"/>
+	<testcase name="POST /real/groups/{g}/reminders as outsider: 403 forbidden" time="0.002817" classname="test"/>
+	<testcase name="POST /real/groups/{g}/reminders as member: 400 invalid_settings" time="0.002912" classname="test"/>
+	<testcase name="POST /real/groups/{g}/reminders as member: settings keys are rejected on reminders" time="0.002846" classname="test"/>
+	<testcase name="POST /real/groups/{g}/reminders as member: snoozedUntil is required" time="0.003104" classname="test"/>
+	<testcase name="POST /real/groups/{g}/reminders as member: member sets own preference" time="0.004477" classname="test"/>
+	<testcase name="DELETE /real/groups/{g}/settings as owner: wrong method" time="0.002477" classname="test"/>
+	<testcase name="GET /real/groups/{g}/reminders/destinations as owner: 200" time="0.004151" classname="test"/>
+	<testcase name="GET /real/groups/{g}/reminders/outbox as owner: 200" time="0.002825" classname="test"/>
+	<testcase name="GET /real/groups/{g}/reminders/destinations as outsider: 403 forbidden" time="0.002601" classname="test"/>
+	<testcase name="GET /real/groups/{g}/reminders/outbox as outsider: 403 forbidden" time="0.002159" classname="test"/>
+	<testcase name="GET /real/groups/%E0%A4%A/reminders/destinations as owner: 400 invalid_request" time="0.002450" classname="test"/>
+	<testcase name="GET /real/groups/{g}/reminders/destinations/%E0%A4%A as owner: 400 invalid_request" time="0.002111" classname="test"/>
+	<testcase name="GET /real/groups/{g}/reminders/destinations?deviceId=short as owner: 400 invalid_destination" time="0.002156" classname="test"/>
+	<testcase name="GET /real/groups/{g}/reminders/outbox?deviceId=aaaaaaaaaaaaaaaa as owner: 400 invalid_destination" time="0.002197" classname="test"/>
+	<testcase name="GET /real/groups/{g}/reminders/destinations?deviceId=aaaaaaaaaaaaaaaa&amp;deviceId=bbbbbbbbbbbbbbbb as owner: 400 invalid_destination" time="0.002118" classname="test"/>
+	<testcase name="GET /real/groups/{g}/reminders/destinations?deviceId=aaaaaaaaaaaaaaaa as owner: 200" time="0.002876" classname="test"/>
+	<testcase name="POST /real/groups/{g}/reminders/destinations as outsider: 403 forbidden" time="0.002555" classname="test"/>
+	<testcase name="POST /real/groups/{g}/reminders/destinations as owner: 400 invalid_destination" time="0.002765" classname="test"/>
+	<testcase name="POST /real/groups/{g}/reminders/destinations as owner: 400 invalid_destination" time="0.002957" classname="test"/>
+	<testcase name="POST /real/groups/{g}/reminders/destinations as owner: 413 payload_too_large" time="0.003477" classname="test"/>
+	<testcase name="POST /real/groups/{g}/reminders/destinations as owner: no provider configured" time="0.003088" classname="test"/>
+	<testcase name="POST /real/groups/{g}/reminders/destinations/d1 as owner: only enabled:false is accepted" time="0.004085" classname="test"/>
+	<testcase name="POST /real/groups/{g}/reminders/destinations/d1 as owner: 400 invalid_destination" time="0.003714" classname="test"/>
+	<testcase name="POST /real/groups/{g}/reminders/destinations/d1 as owner: 404 destination_unavailable" time="0.004115" classname="test"/>
+	<testcase name="POST /real/groups/{g}/reminders/outbox as owner: 405 method_not_allowed" time="0.003294" classname="test"/>
+	<testcase name="DELETE /real/groups/{g}/reminders/destinations as owner: 405 method_not_allowed" time="0.002779" classname="test"/>
+	<testcase name="GET /real/groups/{g}/reminders/destinations/d1 as owner: 405 method_not_allowed" time="0.002737" classname="test"/>
+	<testcase name="GET /real/groups/{g}/upload-intents as outsider: 403 forbidden" time="0.003259" classname="test"/>
+	<testcase name="POST /real/groups/{g}/upload-intents as outsider: 403 forbidden" time="0.002738" classname="test"/>
+	<testcase name="GET /real/groups/%E0%A4%A/upload-intents as owner: 400 invalid_request" time="0.002939" classname="test"/>
+	<testcase name="GET /real/groups/{g}/upload-intents/%E0%A4%A as owner: 400 invalid_request" time="0.003569" classname="test"/>
+	<testcase name="GET /real/groups/{g}/upload-intents as owner: 503 upload_intents_unavailable" time="0.003076" classname="test"/>
+	<testcase name="POST /real/groups/{g}/upload-intents as owner: 503 upload_intents_unavailable" time="0.003396" classname="test"/>
+	<testcase name="GET /real/groups/{g}/upload-intents/i1 as owner: 503 upload_intents_unavailable" time="0.002103" classname="test"/>
+	<testcase name="POST /real/groups/{g}/upload-intents/i1/complete as owner: 503 upload_intents_unavailable" time="0.003376" classname="test"/>
+	<testcase name="POST /real/groups/{g}/upload-intents/i1/reconcile as owner: 503 upload_intents_unavailable" time="0.003107" classname="test"/>
+	<testcase name="POST /real/groups/%E0%A4%A/reports as owner: 400 invalid_request" time="0.003266" classname="test"/>
+	<testcase name="POST /real/groups/{g}/reports as owner: 400 invalid_report" time="0.003524" classname="test"/>
+	<testcase name="POST /real/groups/{g}/reports as owner: 400 invalid_report" time="0.003477" classname="test"/>
+	<testcase name="POST /real/groups/{g}/reports as owner: 413 payload_too_large" time="0.003473" classname="test"/>
+	<testcase name="POST /real/groups/{g}/reports as owner: 404 not_found" time="0.003061" classname="test"/>
+	<testcase name="POST /real/groups/{g}/reports as outsider: 404 not_found" time="0.003103" classname="test"/>
+	<testcase name="GET /real/groups/{g}/reports as owner: wrong method" time="0.002475" classname="test"/>
+	<testcase name="POST /real/groups/%E0%A4%A/contributions/x/remove as owner: 400 invalid_request" time="0.003004" classname="test"/>
+	<testcase name="POST /real/groups/{g}/contributions/%E0%A4%A/remove as owner: 400 invalid_request" time="0.003185" classname="test"/>
+	<testcase name="POST /real/groups/{g}/contributions/no-such-contribution/remove as owner: 404 not_found" time="0.002701" classname="test"/>
+	<testcase name="POST /real/groups/{g}/contributions/no-such-contribution/remove as member: only the owner may remove moments" time="0.002486" classname="test"/>
+	<testcase name="POST /real/groups/{g}/contributions/no-such-contribution/remove as outsider: 404 not_found" time="0.002522" classname="test"/>
+	<testcase name="GET /real/groups/{g}/contributions/no-such-contribution/remove as owner: wrong method" time="0.002001" classname="test"/>
+	<testcase name="GET /real/blocks as owner: 200" time="0.002186" classname="test"/>
+	<testcase name="POST /real/blocks as owner: 404 not_found" time="0.002568" classname="test"/>
+	<testcase name="POST /real/blocks as owner: 404 not_found" time="0.002315" classname="test"/>
+	<testcase name="POST /real/blocks as owner: 404 not_found" time="0.002533" classname="test"/>
+	<testcase name="POST /real/blocks as owner: 413 payload_too_large" time="0.002660" classname="test"/>
+	<testcase name="DELETE /real/blocks/no-such-profile as owner: 200" time="0.002091" classname="test"/>
+	<testcase name="DELETE /real/blocks/%E0%A4%A as owner: 400 invalid_request" time="0.002173" classname="test"/>
+	<testcase name="GET /real/blocks/p1 as owner: wrong method" time="0.001897" classname="test"/>
+	<testcase name="DELETE /real/blocks as owner: wrong method" time="0.001900" classname="test"/>
+	<testcase name="POST /real/invites/accept as outsider: 400 invalid_invite" time="0.002403" classname="test"/>
+	<testcase name="POST /real/invites/accept as outsider: 400 invalid_invite" time="0.002301" classname="test"/>
+	<testcase name="POST /real/invites/accept as outsider: 400 invite_malformed" time="0.003406" classname="test"/>
+	<testcase name="POST /real/invites/accept as outsider: wrong shape" time="0.003924" classname="test"/>
+	<testcase name="POST /real/invites/accept as outsider: unknown well-formed code (no oracle)" time="0.003838" classname="test"/>
+	<testcase name="POST /real/invites/accept as outsider: 413 payload_too_large" time="0.003465" classname="test"/>
+	<testcase name="GET /real/invites/accept as outsider: wrong method" time="0.002047" classname="test"/>
+	<testcase name="POST /real/groups/{g}/invites as outsider: 404 invite_not_found" time="0.002621" classname="test"/>
+	<testcase name="POST /real/groups/{g}/invites as member: 403 invite_forbidden" time="0.002677" classname="test"/>
+	<testcase name="POST /real/groups/%E0%A4%A/invites as owner: 400 invalid_request" time="0.002614" classname="test"/>
+	<testcase name="POST /real/groups/{g}/invites as owner: 400 invalid_invite" time="0.018401" classname="test"/>
+	<testcase name="POST /real/groups/{g}/invites as owner: 400 invite_invalid_expiry" time="0.003134" classname="test"/>
+	<testcase name="POST /real/groups/{g}/invites as owner: 413 payload_too_large" time="0.003897" classname="test"/>
+	<testcase name="POST /real/groups/{g}/invites as owner: create invite" time="0.003367" classname="test"/>
+	<testcase name="GET /real/groups/{g}/invites as owner: wrong method" time="0.002068" classname="test"/>
+	<testcase name="DELETE /real/groups/{g}/invites/no-such-invite as owner: 404 invite_not_found" time="0.002363" classname="test"/>
+	<testcase name="DELETE /real/groups/{g}/invites/no-such-invite as outsider: 404 invite_not_found" time="0.002023" classname="test"/>
+	<testcase name="DELETE /real/groups/{g}/invites/%E0%A4%A as owner: 400 invalid_request" time="0.002018" classname="test"/>
+	<testcase name="DELETE /real/groups/%E0%A4%A/invites/i1 as owner: 400 invalid_request" time="0.001985" classname="test"/>
+	<testcase name="POST /real/groups/{g}/invites/i1 as owner: wrong method" time="0.002279" classname="test"/>
+	<testcase name="GET /real/unknown-route as owner: 404 not_found" time="0.001872" classname="test"/>
+	<testcase name="GET /real/ as owner: 404 not_found" time="0.001922" classname="test"/>
+	<testcase name="GET /real/groups/{g}/members/extra as owner: 404 not_found" time="0.001942" classname="test"/>
+	<testcase name="PUT /real/groups as owner: 405 method_not_allowed" time="0.002037" classname="test"/>
+	<testcase name="PATCH /real/groups/{g} as owner: 405 method_not_allowed" time="0.001973" classname="test"/>
+	<testcase name="HEAD /real/groups as owner: 405" time="0.001741" classname="test"/>
+	<testcase name="PUT /real/groups as none: method gate runs before the session check" time="0.001774" classname="test"/>
+	<testcase name="a non-loopback Host without proxy credentials is refused on /real" time="0.006609" classname="test"/>
+	<testcase name="real routes: JSON replies keep their own CORS posture" time="0.006216" classname="test"/>
+	<testcase name="real routes: OPTIONS preflight answers 204 without a session or transport check" time="0.033825" classname="test"/>
+	<testcase name="a validated session is answered from memory until it changes" time="0.253787" classname="test"/>
+	<testcase name="the server's own sign-out applies immediately" time="0.212723" classname="test"/>
+	<testcase name="the idle expiry slides in memory and is written at most every ten minutes" time="0.226595" classname="test"/>
+	<testcase name="hashFileSync hashes regular files and refuses symlink paths" time="0.013002" classname="test"/>
+	<testcase name="media capabilities pin one real session/group/released asset and fail closed after revocation, expiry or substitution" time="0.265125" classname="test"/>
+	<testcase name="finalization persists a matching SHA-256 and byte length for a real clip" time="0.257301" classname="test"/>
+	<testcase name="a tampered finalized clip is refused and audited when served" time="0.570184" classname="test"/>
+	<testcase name="concurrent connections record one integrity audit event" time="0.153630" classname="test"/>
+	<testcase name="a truncated finalized clip is unavailable and never streamed" time="0.416674" classname="test"/>
+	<testcase name="a missing or unreadable output is reported unavailable rather than silently served" time="0.227080" classname="test"/>
+	<testcase name="HTTP audits a deleted finalized output once and returns 404" time="0.506314" classname="test"/>
+	<testcase name="HTTP audits a zero-byte finalized output once and returns 404" time="0.474050" classname="test"/>
+	<testcase name="deletion and failed processing clear the output path and integrity metadata together" time="0.487472" classname="test"/>
+	<testcase name="a zero-row ready update cannot complete clip finalization" time="0.395265" classname="test"/>
+	<testcase name="a stale clip worker cannot delete output published by a reclaimed worker" time="0.343534" classname="test"/>
+	<testcase name="a row finalized before #157 is unverifiable and the migration backfills it" time="0.339288" classname="test"/>
+	<testcase name="legacy backfill releases writer locks while hashing and resumes after restart" time="0.540602" classname="test"/>
+	<testcase name="the integrity migration is idempotent, preserves audit rows, and widens the event guard" time="0.022083" classname="test"/>
+	<testcase name="film finalization persists a digest and verifies its retained clip inputs" time="1.618390" classname="test"/>
+	<testcase name="a tampered retained clip input blocks film compilation instead of minting a fresh digest" time="0.268397" classname="test"/>
+	<testcase name="a stale failing film worker cannot remove a reclaimed generation output" time="1.313705" classname="test"/>
+	<testcase name="media streaming retains a verified snapshot after its source pathname is replaced" time="0.201857" classname="test"/>
+	<testcase name="media streaming rejects a mixed snapshot after an in-place source mutation" time="0.269915" classname="test"/>
+	<testcase name="a published film whose bytes changed is never streamed" time="0.331235" classname="test"/>
+	<testcase name="hashFileSync and hashFile agree, and reject empty or absent files" time="0.014201" classname="test"/>
+	<testcase name="FFmpeg produces a playable disposable-flash clip with bounded trim and raw cleanup" time="0.402215" classname="test"/>
+	<testcase name="FFmpeg produces a playable ccd clip with bounded trim and raw cleanup" time="0.384372" classname="test"/>
+	<testcase name="FFmpeg produces a playable 8mm clip with bounded trim and raw cleanup" time="0.379951" classname="test"/>
+	<testcase name="FFmpeg produces a playable vhs clip with bounded trim and raw cleanup" time="0.328047" classname="test"/>
+	<testcase name="FFmpeg produces a playable soft-focus clip with bounded trim and raw cleanup" time="0.292906" classname="test"/>
+	<testcase name="FFmpeg produces a playable high-contrast clip with bounded trim and raw cleanup" time="0.280811" classname="test"/>
+	<testcase name="retro modes and the clientProcessed flag are validated" time="0.000837" classname="test"/>
+	<testcase name="a client-processed clip is normalized without re-applying its look; native uploads get it" time="0.487355" classname="test"/>
+	<testcase name="photo processing accepts every retro look and the client-processed pass-through" time="4.549110" classname="test"/>
+	<testcase name="the shared probe accepts only playable portrait MP4 sources with audio" time="0.518047" classname="test"/>
+	<testcase name="same-key staging claims one pending source and rejects a concurrent distinct payload" time="0.595170" classname="test"/>
+	<testcase name="stale intake callbacks cannot complete or reset a reclaimed generation" time="0.025996" classname="test"/>
+	<testcase name="claim reset and fenced metadata deletion exclude a concurrent generation-two writer" time="0.312078" classname="test"/>
+	<testcase name="expired pending intake claims can be reclaimed to a new generation" time="0.015198" classname="test"/>
+	<testcase name="enqueue retries rebind a pending job to the recovered staged generation" time="0.017286" classname="test"/>
+	<testcase name="a worker restart finalizes a durable output marker after raw deletion" time="0.107872" classname="test"/>
+	<testcase name="cleanup preserves a live leased intake claim even when its file is old" time="0.130022" classname="test"/>
+	<testcase name="restart cleanup removes stale partial intake state and permits an immediate retry" time="0.021530" classname="test"/>
+	<testcase name="orphan cleanup never deletes a reclaimed generation or escapes a staging symlink" time="0.022830" classname="test"/>
+	<testcase name="processing failure is recoverable and never discloses media paths" time="0.313069" classname="test"/>
+	<testcase name="a stale processing claim is recoverable after a worker restart" time="0.190243" classname="test"/>
+	<testcase name="cancellation rechecks the job state after a concurrent processor claim" time="0.198642" classname="test"/>
+	<testcase name="cancellation fences a capability that is concurrently recovered to a new path" time="0.118415" classname="test"/>
+	<testcase name="session-authorized HTTP processing completes a staged capture workflow" time="0.736945" classname="test"/>
+	<testcase name="staged orphan cleanup is bounded and leaves active job sources untouched" time="0.104628" classname="test"/>
+	<testcase name="staged source tokens cannot be enqueued across owner or group boundaries" time="0.018625" classname="test"/>
+	<testcase name="production enqueue rejects arbitrary local paths without verified staged metadata" time="0.011381" classname="test"/>
+	<testcase name="token downloads support suffix, open-ended and clamped ranges with exact bytes and empty HEAD bodies" time="0.503788" classname="test"/>
+	<testcase name="captured media tokens recheck selected group, session revocation and their exact expiry" time="0.590371" classname="test"/>
+	<testcase name="clip upload validates media before creating a job and retries idempotently" time="0.024279" classname="test"/>
+	<testcase name="video and photo reservations share server quota and ignore forged photo duration" time="0.023104" classname="test"/>
+	<testcase name="photo duration claims cannot bypass the shared 30-second server limit" time="0.025065" classname="test"/>
+	<testcase name="clip upload rejects ended cycles and malformed dimensions before writing" time="0.016780" classname="test"/>
+	<testcase name="HTTP clip upload requires a session and cancellation releases quota for retry" time="0.538822" classname="test"/>
+	<testcase name="HTTP delete-and-replace is session-bound and restores the exact weekly allowance" time="0.246206" classname="test"/>
+	<testcase name="a fresh database gets exactly the schema of the retired chain" time="0.040277" classname="test"/>
+	<testcase name="a database already at version 31 opens without any change" time="0.038950" classname="test"/>
+	<testcase name="a database below version 31 is refused with an upgrade instruction" time="0.013928" classname="test"/>
+	<testcase name="a database with tables but no migration receipts is refused, not overwritten" time="0.006776" classname="test"/>
+	<testcase name="real invite and media schema (020–024) is recorded once and part of schema readiness" time="0.037380" classname="test"/>
+	<testcase name="moderation records keep reports when an account goes and index every deletion lookup" time="0.320784" classname="test"/>
+	<testcase name="actual SQLite HTTP failure logs only generated correlation, status and duration" time="0.701587" classname="test"/>
+	<testcase name="actual invalid job metadata and tampered local bytes produce aggregate failure signals" time="0.042234" classname="test"/>
+	<testcase name="readonly CLI reports numeric queue, reminder and scheduled state without changing database" time="0.340436" classname="test"/>
+	<testcase name="completed and failed attempt durations survive terminal processing timestamp cleanup" time="0.027844" classname="test"/>
+	<testcase name="archive films and clips keyset-page independently and drop resized media" time="0.786973" classname="test"/>
+	<testcase name="media serving budget rejects excess concurrency/bytes and releases capacity once" time="0.000443" classname="test"/>
+	<testcase name="default media snapshot budget leaves tmpfs headroom and rejects an oversized file" time="0.000171" classname="test"/>
+	<testcase name="aborted media response retains its lease until the snapshot stream closes" time="0.001039" classname="test"/>
+	<testcase name="integrity snapshot refuses a source larger than its reserved temporary-byte budget" time="0.043703" classname="test"/>
+	<testcase name="post-cutover writes survive the export, table for table" time="0.001277" classname="test">
+		<skipped type="skipped" message="needs REWIND_TEST_DATABASE_URL"/>
+	</testcase>
+	<testcase name="the export never writes to PostgreSQL" time="0.000266" classname="test">
+		<skipped type="skipped" message="needs REWIND_TEST_DATABASE_URL"/>
+	</testcase>
+	<testcase name="a database bound to another environment is refused" time="0.000111" classname="test">
+		<skipped type="skipped" message="needs REWIND_TEST_DATABASE_URL"/>
+	</testcase>
+	<testcase name="an incompatible PostgreSQL schema is refused" time="0.000103" classname="test">
+		<skipped type="skipped" message="needs REWIND_TEST_DATABASE_URL"/>
+	</testcase>
+	<testcase name="an existing or unsafe destination is refused untouched" time="0.000097" classname="test">
+		<skipped type="skipped" message="needs REWIND_TEST_DATABASE_URL"/>
+	</testcase>
+	<testcase name="a reconciliation failure leaves no destination" time="0.000099" classname="test">
+		<skipped type="skipped" message="needs REWIND_TEST_DATABASE_URL"/>
+	</testcase>
+	<testcase name="a write that lands after the snapshot fails the export" time="0.000098" classname="test">
+		<skipped type="skipped" message="needs REWIND_TEST_DATABASE_URL"/>
+	</testcase>
+	<testcase name="connected writers block the export unless explicitly allowed" time="0.000098" classname="test">
+		<skipped type="skipped" message="needs REWIND_TEST_DATABASE_URL"/>
+	</testcase>
+	<testcase name="an interrupted export leaves no destination and the next one succeeds" time="0.000105" classname="test">
+		<skipped type="skipped" message="needs REWIND_TEST_DATABASE_URL"/>
+	</testcase>
+	<testcase name="install swaps the database only, keeps the old file and restores on failure" time="0.000098" classname="test">
+		<skipped type="skipped" message="needs REWIND_TEST_DATABASE_URL"/>
+	</testcase>
+	<testcase name="install refuses an export once PostgreSQL has moved on" time="0.000092" classname="test">
+		<skipped type="skipped" message="needs REWIND_TEST_DATABASE_URL"/>
+	</testcase>
+	<testcase name="database-export and database-install run end to end from the CLI" time="0.000101" classname="test">
+		<skipped type="skipped" message="needs REWIND_TEST_DATABASE_URL"/>
+	</testcase>
+	<testcase name="translation keeps portable SQL and rewrites the inventoried SQLite idioms" time="0.011940" classname="test"/>
+	<testcase name="REWIND_DATABASE_URL settings are validated" time="0.002136" classname="test"/>
+	<testcase name="the PostgreSQL migration directory has the baseline and no gaps" time="0.000630" classname="test"/>
+	<testcase name="the PostgreSQL schema matches the migrated SQLite schema" time="0.000133" classname="test">
+		<skipped type="skipped" message="needs REWIND_TEST_DATABASE_URL"/>
+	</testcase>
+	<testcase name="statement failures inside a transaction behave as on SQLite" time="0.000126" classname="test">
+		<skipped type="skipped" message="needs REWIND_TEST_DATABASE_URL"/>
+	</testcase>
+	<testcase name="a held writer lock makes a second connection report database is locked" time="0.000112" classname="test">
+		<skipped type="skipped" message="needs REWIND_TEST_DATABASE_URL"/>
+	</testcase>
+	<testcase name="a dropped connection (failover, restart) reconnects on the next statement" time="0.000111" classname="test">
+		<skipped type="skipped" message="needs REWIND_TEST_DATABASE_URL"/>
+	</testcase>
+	<testcase name="a database bound to one environment refuses another" time="0.000105" classname="test">
+		<skipped type="skipped" message="needs REWIND_TEST_DATABASE_URL"/>
+	</testcase>
+	<testcase name="a SQLite snapshot imports into PostgreSQL with reconciled tables" time="0.000135" classname="test">
+		<skipped type="skipped" message="needs REWIND_TEST_DATABASE_URL"/>
+	</testcase>
+	<testcase name="an import that cannot be exact commits nothing" time="0.000112" classname="test">
+		<skipped type="skipped" message="needs REWIND_TEST_DATABASE_URL"/>
+	</testcase>
+	<testcase name="bootstrap creates an owning app role and a read-only role" time="0.000104" classname="test">
+		<skipped type="skipped" message="needs REWIND_TEST_DATABASE_URL"/>
+	</testcase>
+	<testcase name="backup fingerprint and exported snapshot retain old content during concurrent writes" time="0.000102" classname="test">
+		<skipped type="skipped" message="needs REWIND_TEST_DATABASE_URL"/>
+	</testcase>
+	<testcase name="one-command preflight passes service, SQLite, LAN, and FFmpeg gates" time="0.606422" classname="test"/>
+	<testcase name="worker pins original version, stores verified private clip and film, leaves no raw scratch bytes" time="0.429016" classname="test"/>
+	<testcase name="cleanup failure retains prepared identity; restart finalizes without raw reads or FFmpeg and bounds attempts" time="0.127391" classname="test"/>
+	<testcase name="crash after deleting input recovers durable prepared output; no missing-source reprocess" time="0.127721" classname="test"/>
+	<testcase name="private source missing fails closed with bounded automatic retries" time="0.028425" classname="test"/>
+	<testcase name="private source mismatch fails closed with bounded automatic retries" time="0.035078" classname="test"/>
+	<testcase name="private source wrong_group fails closed with bounded automatic retries" time="0.026266" classname="test"/>
+	<testcase name="private source expired fails closed with bounded automatic retries" time="0.032169" classname="test"/>
+	<testcase name="private source cleanup_exhaustion fails closed with bounded automatic retries" time="0.131815" classname="test"/>
+	<testcase name="corrupt prepared output cannot trigger original deletion or become ready" time="0.152765" classname="test"/>
+	<testcase name="stale clip generation cannot prepare/publish output or delete accepted input" time="0.123056" classname="test"/>
+	<testcase name="remote input without adapter fails closed; local adapter processes independently of S3" time="0.109197" classname="test"/>
+	<testcase name="film waits across restart without attempts, freezes all settled accepted clips once" time="0.577041" classname="test"/>
+	<testcase name="film cannot silently omit missing accepted contribution" time="0.141533" classname="test"/>
+	<testcase name="film cannot silently omit exhausted accepted contribution" time="0.140968" classname="test"/>
+	<testcase name="film cannot silently omit corrupt accepted contribution" time="0.219213" classname="test"/>
+	<testcase name="local: pinned versions, authorization scope, expiry, integrity and exact cleanup" time="0.038786" classname="test"/>
+	<testcase name="s3: pinned versions, authorization scope, expiry, integrity and exact cleanup" time="0.008977" classname="test"/>
+	<testcase name="S3 refuses unversioned writes, forged HEAD identity, encryption mismatch and unsafe transport errors" time="0.001697" classname="test"/>
+	<testcase name="local rejects parent symlink escapes" time="0.008958" classname="test"/>
+	<testcase name="bounded expiry cleanup protects retained output and referenced input, reports failed deletions" time="0.027924" classname="test"/>
+	<testcase name="S3 KMS policy and metadata verification are mandatory; failed HEAD cleans exact PUT version" time="0.002558" classname="test"/>
+	<testcase name="retains active job outputs and every compilation input, including unverifiable failed bytes" time="0.050715" classname="test"/>
+	<testcase name="dry-run CLI reports sanitized names without deleting; apply revalidates references and is idempotent" time="0.248293" classname="test"/>
+	<testcase name="skips symlinks and applies the 24-hour cutoff and bounded limit" time="0.028036" classname="test"/>
+	<testcase name="queue failures expose safe categories and distinguish manual clip retries from exhausted films" time="0.400482" classname="test"/>
+	<testcase name="queue cursors cannot be reused across groups or filters, and equal timestamps page without gaps" time="0.464443" classname="test"/>
+	<testcase name="queue CLI refuses invalid kinds, statuses and unbounded pages with a nonzero exit" time="1.977773" classname="test"/>
+	<testcase name="queue read model is paginated, redacted, and retry-aware" time="0.027154" classname="test"/>
+	<testcase name="jobs CLI emits the same redacted bounded contract" time="0.241591" classname="test"/>
+	<testcase name="queue read model uses keyset order without exposing ready or download rows" time="0.014547" classname="test"/>
+	<testcase name="account creation, reset and reopening preserve synthetic fixture-group data" time="0.394022" classname="test"/>
+	<testcase name="external auth transport rejects forged forwarded HTTPS without the origin secret" time="0.001182" classname="test"/>
+	<testcase name="auth preflight and failure responses never expose wildcard CORS" time="0.121018" classname="test"/>
+	<testcase name="real login returns an opaque native token, supports current/logout, and browser cookies stay secure" time="0.453301" classname="test"/>
+	<testcase name="wrong credentials are generic, throttled by account and source, and reset revokes sessions" time="1.323812" classname="test"/>
+	<testcase name="an unknown username locks exactly like a real one, so 429 reveals no account" time="1.741209" classname="test"/>
+	<testcase name="parallel guesses cannot race past the five-failure cooldown" time="0.562598" classname="test"/>
+	<testcase name="session idle and absolute expiry are enforced, and reset revokes tokens" time="0.517425" classname="test"/>
+	<testcase name="session restore distinguishes a missing browser session from a revoked credential" time="0.178385" classname="test"/>
+	<testcase name="a reset committed after password verification blocks session insertion on a separate connection" time="0.332911" classname="test"/>
+	<testcase name="a reset committed after guarded session insertion revokes that session" time="0.335696" classname="test"/>
+	<testcase name="malformed and duplicate account input has no partial writes" time="0.170051" classname="test"/>
+	<testcase name="public registration creates a sign-in-ready account without group membership" time="0.199349" classname="test"/>
+	<testcase name="registration gives the same safe failure for invalid, weak, and duplicate inputs" time="0.191060" classname="test"/>
+	<testcase name="registration throttles repeated attempts before account creation" time="0.020949" classname="test"/>
+	<testcase name="real photo upload is idempotent, private, and processed as a three-second silent portrait MP4" time="1.124348" classname="test"/>
+	<testcase name="real account can upload and process a clip only in its selected group" time="0.863515" classname="test"/>
+	<testcase name="real Archive seals media until release and scopes films/own clips to live selected membership" time="1.258664" classname="test"/>
+	<testcase name="capability expiry and corrupt retained bytes deny playback and remove Archive advertising" time="0.734474" classname="test"/>
+	<testcase name="private store Archive serves only pinned versions and discards materialized scratch bytes" time="0.532837" classname="test"/>
+	<testcase name="private stored film publication and full-day Archive require verified pinned bytes" time="0.514262" classname="test"/>
+	<testcase name="playback alone refuses changed bytes on disk and in S3, and audits them (#475)" time="1.087140" classname="test"/>
+	<testcase name="stored publication refuses an asset changed during its verified read" time="0.527458" classname="test"/>
+	<testcase name="film segments hide blocked, reported and owner-removed moments per viewer" time="0.645505" classname="test"/>
+	<testcase name="real members can read, subscribe, reply and react while another group is denied every route" time="5.203854" classname="test"/>
+	<testcase name="REWIND_REAL_CYCLE_MINUTES sets the real cycle length, defaulting to four weeks" time="0.002661" classname="test"/>
+	<testcase name="a new real group uses the configured first-cycle length" time="0.115323" classname="test"/>
+	<testcase name="real owner can create an expiring invite through an authenticated real-group session" time="0.289277" classname="test"/>
+	<testcase name="only the owner can revoke an active short code; revoked codes cannot be accepted" time="0.399276" classname="test"/>
+	<testcase name="real invite joins the session account, changes selected group, and rejects replay" time="0.396957" classname="test"/>
+	<testcase name="real invite acceptance keeps legacy eight-character codes working" time="0.387387" classname="test"/>
+	<testcase name="unknown well-formed codes explain invalid or expired without creating a membership" time="0.280167" classname="test"/>
+	<testcase name="real invite acceptance reports malformed and expired invitations safely" time="0.534375" classname="test"/>
+	<testcase name="real invite code guessing is durably rate limited by account and source" time="0.310794" classname="test"/>
+	<testcase name="an unrelated real account cannot read or select a private group by changing group IDs" time="0.491337" classname="test"/>
+	<testcase name="member summaries follow the selected group and include only joined profiles" time="0.783432" classname="test"/>
+	<testcase name="an unrelated or unauthenticated account cannot read real group member summaries" time="0.438202" classname="test"/>
+	<testcase name="Sunday 19:00 resolves group timezone across DST and non-DST weeks" time="0.029028" classname="test"/>
+	<testcase name="only owner edits current/future prompts and zone; no actor can mutate deadlines" time="0.828480" classname="test"/>
+	<testcase name="self-only enabled/snooze/disable survives restart; forged identity and revoked session fail" time="0.731531" classname="test"/>
+	<testcase name="groups default to UTC and a missing reminder preference table is refused" time="0.736669" classname="test"/>
+	<testcase name="real groups require a real session and are isolated from fixture-group profiles and memberships" time="0.431492" classname="test"/>
+	<testcase name="real group form and database constraints enforce 2–10 member capacity" time="0.243192" classname="test"/>
+	<testcase name="failed real-group creation rolls back profile, group, cycle, membership, and selection writes" time="0.245529" classname="test"/>
+	<testcase name="four-week duration is exact from the server-owned cycle clock" time="0.000465" classname="test"/>
+	<testcase name="chat history pages are bounded, ordered, and include batched reactions" time="0.048498" classname="test"/>
+	<testcase name="authorized chat history HTTP pages resume after their watermark without dropping older events" time="0.377008" classname="test"/>
+	<testcase name="two authorised sessions receive a persisted group message over SSE" time="0.532089" classname="test"/>
+	<testcase name="a non-member cannot open a group realtime subscription or post" time="0.233938" classname="test"/>
+	<testcase name="an EventSource-compatible denial sends a terminal SSE event" time="0.241543" classname="test"/>
+	<testcase name="a session invalidated while the request body is delayed cannot persist a message" time="0.233344" classname="test"/>
+	<testcase name="realtime delivery is isolated to the subscribed group" time="0.554545" classname="test"/>
+	<testcase name="heartbeat closes and removes a subscription after its session is revoked" time="0.263864" classname="test"/>
+	<testcase name="disconnect during paginated replay immediately removes the hub subscription" time="0.442113" classname="test"/>
+	<testcase name="persisted message events replay after the runtime and database are reopened" time="0.277592" classname="test"/>
+	<testcase name="a zero checkpoint cursor replays messages after an unread stream replacement" time="0.270994" classname="test"/>
+	<testcase name="reconnect replay drains every page and delivers events committed during the drain once" time="0.379599" classname="test"/>
+	<testcase name="metadata-only unread SSE omits message and reply bodies while timeline SSE keeps them" time="0.492249" classname="test"/>
+	<testcase name="a new unread observer skips persisted history but receives messages after its checkpoint" time="0.263432" classname="test"/>
+	<testcase name="retrying the same client message id replays one persisted event" time="0.278708" classname="test"/>
+	<testcase name="re-registration in another group cannot revive old-group reminders at scan or send" time="0.063186" classname="test"/>
+	<testcase name="a new login does not mistake the previous session device registration for an active association" time="0.018722" classname="test"/>
+	<testcase name="delivery status reflects configured providers and live registration without claiming delivery" time="0.015498" classname="test"/>
+	<testcase name="group-local Sunday queues once across duplicate scans, DB reopen and repeated sends" time="0.027519" classname="test"/>
+	<testcase name="duplicate destinations collapse; outsider, foreign endpoint and arbitrary keys cannot overwrite ownership" time="0.023368" classname="test"/>
+	<testcase name="disabled before send cancels the queued reminder without provider traffic" time="0.025103" classname="test"/>
+	<testcase name="snoozed before send cancels the queued reminder without provider traffic" time="0.024697" classname="test"/>
+	<testcase name="signed-out before send cancels the queued reminder without provider traffic" time="0.022200" classname="test"/>
+	<testcase name="expired before send cancels the queued reminder without provider traffic" time="0.025286" classname="test"/>
+	<testcase name="rotated before send cancels the queued reminder without provider traffic" time="0.032269" classname="test"/>
+	<testcase name="group-switched before send cancels the queued reminder without provider traffic" time="0.023835" classname="test"/>
+	<testcase name="disabled/snoozed members are skipped at scan and bounded cursor does not starve later preferences" time="0.025654" classname="test"/>
+	<testcase name="transient provider failures retry only after backoff and stop at three attempts" time="0.026360" classname="test"/>
+	<testcase name="Expo receipt failure disables a destination without resending the accepted ticket" time="0.040636" classname="test"/>
+	<testcase name="missing provider receipts remain bounded and never resend an accepted notification" time="0.030141" classname="test"/>
+	<testcase name="reclaimed lease fences stale provider results and keeps one persisted job" time="0.048157" classname="test"/>
+	<testcase name="destination association can move after sign-out, and old pending work cannot reach the new account" time="0.026198" classname="test"/>
+	<testcase name="HTTPS-policy API binds registration/status/disable to the current real member with no secret response" time="0.146210" classname="test"/>
+	<testcase name="CLI without configured providers performs no scan, network work or database creation" time="0.662693" classname="test"/>
+	<testcase name="three crashed receipt leases finish inspectably without an extra provider call" time="0.026897" classname="test"/>
+	<testcase name="a database missing the outbox table is refused without losing accounts" time="0.024849" classname="test"/>
+	<testcase name="the runtime reminder loop queues and sends a due reminder once (#347)" time="0.029821" classname="test"/>
+	<testcase name="web push destinations accept the Safari, Firefox, Chrome and Edge push services only" time="0.001855" classname="test"/>
+	<testcase name="valid VAPID scalars with leading zero bytes retain their fixed-width encoding" time="0.032239" classname="test"/>
+	<testcase name="VAPID rejects valid-length mismatched keys, invalid points/scalars and noncanonical encodings before SDK work" time="0.002059" classname="test"/>
+	<testcase name="expo total deadline bounds a transport that ignores abort" time="0.014336" classname="test"/>
+	<testcase name="expo trickling response cannot extend the hard deadline and hanging cancellation does not block" time="0.005122" classname="test"/>
+	<testcase name="expo rejects redirects and streamed oversized bodies without exposing provider details" time="0.008268" classname="test"/>
+	<testcase name="webpush total deadline bounds a transport that ignores abort" time="0.003969" classname="test"/>
+	<testcase name="webpush trickling response cannot extend the hard deadline and hanging cancellation does not block" time="0.004014" classname="test"/>
+	<testcase name="webpush rejects redirects and streamed oversized bodies without exposing provider details" time="0.005260" classname="test"/>
+	<testcase name="packaged Web Push request generation encrypts locally; bounded fetch carries VAPID only in headers and never redirects" time="0.001957" classname="test"/>
+	<testcase name="actual packaged Web Push HTTPS delivery does not follow a redirect to a private host" time="0.002354" classname="test"/>
+	<testcase name="Expo accepts exactly 64 KiB but cancels a multi-chunk response immediately beyond the limit" time="0.003095" classname="test"/>
+	<testcase name="provider error responses are cancelled without reading private/unbounded bodies" time="0.000471" classname="test"/>
+	<testcase name="a transport returning an already redirected private URL is rejected without parsing its body" time="0.000580" classname="test"/>
+	<testcase name="provider config is explicit, rejects partial/unsafe material and never echoes credentials" time="0.003470" classname="test"/>
+	<testcase name="configured SDK construction is inert and exposes no provider secret in public configuration" time="0.000744" classname="test"/>
+	<testcase name="Expo sends a generic bounded payload and persists acceptance ticket separately from receipt" time="0.002050" classname="test"/>
+	<testcase name="Expo HTTP 429 produces only the safe rate_limited category" time="0.000465" classname="test"/>
+	<testcase name="Expo HTTP 503 produces only the safe temporary_failure category" time="0.000700" classname="test"/>
+	<testcase name="Expo HTTP 403 produces only the safe provider_rejected category" time="0.000270" classname="test"/>
+	<testcase name="Expo malformed/oversized/absent receipts cannot leak responses or trigger redirects" time="0.001074" classname="test"/>
+	<testcase name="Web Push adapter binds VAPID only to SDK options and coalesces the generic reminder topic" time="0.000833" classname="test"/>
+	<testcase name="Web Push 410 response/error is classified without persisting provider data" time="0.000604" classname="test"/>
+	<testcase name="Web Push 429 response/error is classified without persisting provider data" time="0.000416" classname="test"/>
+	<testcase name="Web Push 500 response/error is classified without persisting provider data" time="0.000382" classname="test"/>
+	<testcase name="Web Push 401 response/error is classified without persisting provider data" time="0.000332" classname="test"/>
+	<testcase name="request routes drop queries and identifier-like segments (#321)" time="0.001356" classname="test"/>
+	<testcase name="REWIND_REQUEST_TIMING logs one JSON line per request; off by default" time="0.152773" classname="test"/>
+	<testcase name="standalone runtime reproduces missing SDKs, then loads the locked minimal provider closure offline" time="3.712860" classname="test"/>
+	<testcase name="packager fails clearly when a locked transitive dependency is missing or mismatched" time="2.580263" classname="test"/>
+	<testcase name="Docker runtime consumes the closure built from its own npm ci installation" time="0.001162" classname="test"/>
+	<testcase name="local runtime remains an independent private rollback adapter without SDK imports" time="0.024991" classname="test"/>
+	<testcase name="invalid runtime configuration rejects before client use" time="0.001427" classname="test"/>
+	<testcase name="S3 construction is inert and injected client ownership is preserved" time="0.000608" classname="test"/>
+	<testcase name="runtime snapshots constructor config and rejects later scope mutation" time="0.004685" classname="test"/>
+	<testcase name="SDK bridge streams verified bytes, pins every command and deletes only exact versions" time="0.006779" classname="test"/>
+	<testcase name="verified stream failure and premature transport success cannot publish a ref" time="0.002252" classname="test"/>
+	<testcase name="malformed GET body and provider errors are safe and cannot bypass integrity" time="0.002276" classname="test"/>
+	<testcase name="PUT capability binds type, size, checksum, metadata, owner and AES256" time="0.005423" classname="test"/>
+	<testcase name="PUT capability binds type, size, checksum, metadata, owner and KMS" time="0.005388" classname="test"/>
+	<testcase name="signing rejects scope, expiry, retained targets and unsafe URLs before exposing capability" time="0.003693" classname="test"/>
+	<testcase name="capability expiry rounds down and expired signing responses are discarded" time="0.002105" classname="test"/>
+	<testcase name="exact-key version inventory is bounded, restartable, owner-bound and includes delete markers" time="0.002830" classname="test"/>
+	<testcase name="inventory ignores prefix siblings and ends at a marker outside the exact key" time="0.001727" classname="test"/>
+	<testcase name="foreign, malformed and looping version cursors fail closed without arbitrary listings" time="0.002205" classname="test"/>
+	<testcase name="invalid version inventory cannot authorize an unversioned or oversized cleanup" time="0.001992" classname="test"/>
+	<testcase name="runtime bridge drives real-account intent completion, worker output and bounded expired cleanup offline" time="0.201933" classname="test"/>
+	<testcase name="configuration rejects an unsafe bind address with an actionable hint" time="0.002556" classname="test"/>
+	<testcase name="fresh migration, restart, and reset preserve or restore deterministic state" time="0.036800" classname="test"/>
+	<testcase name="fixture media stays consistent and restart preserves genuine missing-output failures" time="0.084569" classname="test"/>
+	<testcase name="health reports schema readiness over the local service" time="0.060905" classname="test"/>
+	<testcase name="every protected endpoint category requires a real session and ignores caller identity values" time="0.299710" classname="test"/>
+	<testcase name="released archive downloads are session-bound, owner-scoped, release-gated, and never expose paths" time="0.517414" classname="test"/>
+	<testcase name="malformed percent-encoded path segments return a client error for every route family" time="0.217968" classname="test"/>
+	<testcase name="a delayed contribution body cannot commit after real session revocation" time="0.273977" classname="test"/>
+	<testcase name="chat token buckets allow thirty messages, refuse the next and refill independently by account" time="0.758533" classname="test"/>
+	<testcase name="group creation has a five/day bucket and a durable maximum of twenty owned groups" time="0.523878" classname="test"/>
+	<testcase name="reports and blocks share twenty requests per ten minutes for one account" time="0.542910" classname="test"/>
+	<testcase name="five chat streams per account, sixth refused, disconnected stream releases its slot" time="0.297875" classname="test"/>
+	<testcase name="real HTTPS-policy JSON request→direct PUT→complete→process is idempotent and denies outsider/forged identity" time="0.809458" classname="test"/>
+	<testcase name="lost PUT receipt recovery uses authenticated empty-body reconciliation and registers once" time="0.490511" classname="test"/>
+	<testcase name="upload-intent HTTP rechecks closure/quota and refuses a damaged schema" time="0.479647" classname="test"/>
+	<testcase name="signed SDK HTTP: immutable versions survive overwrite around HEAD, API/DB restart, concurrent completion and private processing" time="1.483706" classname="test"/>
+	<testcase name="signed SDK HTTP: lost receipt reconciliation, authoritative quota, missing identity and expired abandoned cleanup" time="0.782866" classname="test"/>
+	<testcase name="signed SDK HTTP: completion rechecks actual quota and closed cycle without registering or spending twice" time="0.677086" classname="test"/>
+	<testcase name="lost PUT reconciliation verifies one immutable version, survives reopen and registers/processes exactly once" time="0.274539" classname="test"/>
+	<testcase name="reconciliation rejects empty inventory without guessing or pinning" time="0.047082" classname="test"/>
+	<testcase name="reconciliation rejects two_matching inventory without guessing or pinning" time="0.030236" classname="test"/>
+	<testcase name="reconciliation rejects foreign inventory without guessing or pinning" time="0.039347" classname="test"/>
+	<testcase name="reconciliation rejects adjacent_key inventory without guessing or pinning" time="0.053877" classname="test"/>
+	<testcase name="reconciliation rejects wrong_store inventory without guessing or pinning" time="0.040796" classname="test"/>
+	<testcase name="reconciliation rejects pending inventory without guessing or pinning" time="0.022780" classname="test"/>
+	<testcase name="reconciliation rejects duplicate inventory without guessing or pinning" time="0.023136" classname="test"/>
+	<testcase name="reconciliation rejects truncated inventory without guessing or pinning" time="0.022247" classname="test"/>
+	<testcase name="reconciliation rejects oversize_page inventory without guessing or pinning" time="0.029202" classname="test"/>
+	<testcase name="reconciliation rejects malformed_page inventory without guessing or pinning" time="0.028861" classname="test"/>
+	<testcase name="reconciliation rejects malformed_ref inventory without guessing or pinning" time="0.021432" classname="test"/>
+	<testcase name="reconciliation rejects metadata_changed inventory without guessing or pinning" time="0.017668" classname="test"/>
+	<testcase name="reconciliation rejects provider_error inventory without guessing or pinning" time="0.022497" classname="test"/>
+	<testcase name="reconciliation ignores conclusively nonmatching bytes and selects the only verified version, not latest" time="0.052582" classname="test"/>
+	<testcase name="reconciliation hashes actual GET bytes even when HEAD advertises the requested checksum" time="0.023372" classname="test"/>
+	<testcase name="reconciliation fences session changing during asynchronous inventory/read" time="0.029642" classname="test"/>
+	<testcase name="reconciliation fences selection changing during asynchronous inventory/read" time="0.021013" classname="test"/>
+	<testcase name="reconciliation fences membership changing during asynchronous inventory/read" time="0.021259" classname="test"/>
+	<testcase name="reconciliation fences expiry changing during asynchronous inventory/read" time="0.023744" classname="test"/>
+	<testcase name="reconciliation fences closure changing during asynchronous inventory/read" time="0.023232" classname="test"/>
+	<testcase name="reconciliation fences rollover changing during asynchronous inventory/read" time="0.026153" classname="test"/>
+	<testcase name="reconciliation fences quota changing during asynchronous inventory/read" time="0.047386" classname="test"/>
+	<testcase name="reconciliation fences cleanup changing during asynchronous inventory/read" time="0.026663" classname="test"/>
+	<testcase name="an independently CAS-pinned version wins during reconciliation; replay never substitutes discovered identity" time="0.047149" classname="test"/>
+	<testcase name="pinned retry uses the existing verifier/quota transaction without inventing an inventory winner" time="0.071067" classname="test"/>
+	<testcase name="real request→PUT→complete→processed survives restart and preserves private immutable identity" time="0.194940" classname="test"/>
+	<testcase name="client-processed retro uploads store a no-reapply mode; legacy and native modes still register" time="0.104513" classname="test"/>
+	<testcase name="idempotency is scoped, rejects payload changes, survives reopen and never spends allowance twice" time="0.055720" classname="test"/>
+	<testcase name="request denies missing_session before signing" time="0.013262" classname="test"/>
+	<testcase name="request denies outsider before signing" time="0.020340" classname="test"/>
+	<testcase name="request denies demo before signing" time="0.014758" classname="test"/>
+	<testcase name="request denies closed_cycle before signing" time="0.014361" classname="test"/>
+	<testcase name="request denies invalid_size before signing" time="0.018166" classname="test"/>
+	<testcase name="request denies invalid_type before signing" time="0.027007" classname="test"/>
+	<testcase name="request denies invalid_sha before signing" time="0.018575" classname="test"/>
+	<testcase name="request denies invalid_trim before signing" time="0.017517" classname="test"/>
+	<testcase name="pending intent quota is atomic at request; completion rechecks ledger and expiry releases holds" time="0.058455" classname="test"/>
+	<testcase name="first completion version is CAS-pinned; before/after HEAD overwrite and lost PUT response cannot replace it" time="0.043221" classname="test"/>
+	<testcase name="completion missing_identity fails closed without contribution/quota mutation" time="0.020088" classname="test"/>
+	<testcase name="completion missing_object fails closed without contribution/quota mutation" time="0.017701" classname="test"/>
+	<testcase name="completion wrong_size fails closed without contribution/quota mutation" time="0.014904" classname="test"/>
+	<testcase name="completion checksum_mismatch fails closed without contribution/quota mutation" time="0.015148" classname="test"/>
+	<testcase name="completion revocation fails closed without contribution/quota mutation" time="0.035609" classname="test"/>
+	<testcase name="completion rollover fails closed without contribution/quota mutation" time="0.033942" classname="test"/>
+	<testcase name="completion expired fails closed without contribution/quota mutation" time="0.039889" classname="test"/>
+	<testcase name="wrong owner and environment status/completion disclose no intent or storage capability" time="0.015380" classname="test"/>
+	<testcase name="bounded cleanup expires uncompleted and noncurrent versions, preserves accepted source and reports failed deletion" time="0.038503" classname="test"/>
+	<testcase name="invalid actual media and forged photo duration never bypass server verification or quota" time="0.030815" classname="test"/>
+	<testcase name="two database handles complete the same pinned version exactly once" time="0.046207" classname="test"/>
+	<testcase name="pinned identity survives failed verification and reopen, returns safe status for lost completion response" time="0.042934" classname="test"/>
+	<testcase name="successor collecting cycle does not absorb an old pinned intent" time="0.040026" classname="test"/>
+	<testcase name="registration failure rolls back quota, staged metadata and jobs; retry registers once" time="0.060649" classname="test"/>
+	<testcase name="actual photo uses three seconds in pending hold, committed quota and private worker" time="0.662913" classname="test"/>
+	<testcase name="expiry cleanup refuses foreign inventory and preserves pinned source even with changed metadata fields" time="0.040472" classname="test"/>
+	<testcase name="schema proposal is additive to existing media and enforces idempotency/completion shape" time="0.015382" classname="test"/>
+	<testcase name="quota seconds, weekly expiry, and replacement conflicts remain authoritative" time="0.070815" classname="test"/>
+	<testcase name="idempotency keys are hashed only; pinned requests return identity without new PUT capability" time="0.018293" classname="test"/>
+	<testcase name="local filesystem store supports the same request/immutable-completion contract without S3" time="0.125548" classname="test"/>
+	<testcase name="web push retries malformed responses and thrown failures with bounded backoff and a stable reminder identity" time="0.411278" classname="test"/>
+	<testcase name="an invalid web push subscription disables future delivery without another send" time="0.241973" classname="test"/>
+	<testcase name="late scans skip notifications older than a day instead of sending stale reminders" time="0.253125" classname="test"/>
+	<testcase name="weekly scheduling advances strictly past the current slot across year and fractional-offset boundaries" time="0.001635" classname="test"/>
+	<!-- tests 1006 -->
+	<!-- suites 0 -->
+	<!-- pass 985 -->
+	<!-- fail 0 -->
+	<!-- cancelled 0 -->
+	<!-- skipped 21 -->
+	<!-- todo 0 -->
+	<!-- duration_ms 50932.645031 -->
+</testsuites>

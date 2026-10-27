@@ -1,0 +1,51 @@
+{
+  "status": "READY",
+  "format": "1920x1080 30fps H.264 High yuv420p BT.709 AAC 48kHz stereo",
+  "write_scope": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/cuts-c",
+  "ocr_limit": "One phone crop per second, supplemented with visual/source boundary review; not every-frame OCR.",
+  "audio_note": "09 and 11 silent. 10 uses only supplied real film audio in two complete 21.2-second intervals; source mean -91 dB, peak -84.3 dB, effectively silent.",
+  "clips": [
+    {
+      "file": "09-cycle-ends-film-ready.mp4",
+      "absolute_path": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/cuts-c/09-cycle-ends-film-ready.mp4",
+      "duration_seconds": 40,
+      "bytes": 787417,
+      "sha256": "39905f31f0c117b7ed534a510f3b7dd6ce75ed2bc145dbcac29b2d6327f7c20f",
+      "encoding_pass": true,
+      "ocr_samples": 40,
+      "forbidden_text_hits": 0,
+      "phone_contact": "09-cycle-ends-film-ready.phone-contact.jpg",
+      "edl": "09-cycle-ends-film-ready.edl",
+      "editable_edl": "09-cycle-ends-film-ready.edl.json",
+      "qa": "09-cycle-ends-film-ready.qa.json"
+    },
+    {
+      "file": "10-watch-the-film.mp4",
+      "absolute_path": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/cuts-c/10-watch-the-film.mp4",
+      "duration_seconds": 80.0,
+      "bytes": 7609394,
+      "sha256": "2e0812cd2b911d3240a286d16be0251af5c19577d42b206e2a866bd5f240dfdf",
+      "encoding_pass": true,
+      "ocr_samples": 80,
+      "forbidden_text_hits": 0,
+      "phone_contact": "10-watch-the-film.phone-contact.jpg",
+      "edl": "10-watch-the-film.edl",
+      "editable_edl": "10-watch-the-film.edl.json",
+      "qa": "10-watch-the-film.qa.json"
+    },
+    {
+      "file": "11-archive-and-save.mp4",
+      "absolute_path": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/cuts-c/11-archive-and-save.mp4",
+      "duration_seconds": 55,
+      "bytes": 1947076,
+      "sha256": "6d8ed6d9efe9b5eeee01d77c0836a834b4ce94f0838119dde36892568b22f264",
+      "encoding_pass": true,
+      "ocr_samples": 55,
+      "forbidden_text_hits": 0,
+      "phone_contact": "11-archive-and-save.phone-contact.jpg",
+      "edl": "11-archive-and-save.edl",
+      "editable_edl": "11-archive-and-save.edl.json",
+      "qa": "11-archive-and-save.qa.json"
+    }
+  ]
+}

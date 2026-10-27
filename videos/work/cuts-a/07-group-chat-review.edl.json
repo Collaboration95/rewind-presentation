@@ -1,0 +1,70 @@
+{
+  "number": 7,
+  "name": "Group chat",
+  "output": "07-group-chat-review.mp4",
+  "segments": [
+    {
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/07-chat.mov",
+      "in": 0,
+      "out": 6,
+      "duration": 6,
+      "audio": false,
+      "note": "Real Jun message arrives at recording start"
+    },
+    {
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/07-chat.mov",
+      "in": 27,
+      "out": 33,
+      "duration": 6,
+      "audio": false,
+      "note": "Focus the group message composer"
+    },
+    {
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/07-chat.mov",
+      "in": 43,
+      "out": 46,
+      "duration": 8,
+      "audio": false,
+      "note": "Maya types reply at recorded speed; hold completed draft"
+    },
+    {
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/07-chat.mov",
+      "in": 56,
+      "out": 60,
+      "duration": 8,
+      "audio": false,
+      "note": "Send reply; real sent message appears"
+    },
+    {
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/stills/07-chat-exchange.png",
+      "duration": 7,
+      "audio": false,
+      "note": "Read both real chat messages",
+      "add_island": true
+    },
+    {
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/07-chat.mov",
+      "in": 118,
+      "out": 126,
+      "duration": 8,
+      "audio": false,
+      "note": "Select Jun message; real React, Reply, Report actions"
+    },
+    {
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/07-chat.mov",
+      "in": 134,
+      "out": 138,
+      "duration": 4,
+      "audio": false,
+      "note": "Apply real sparkle reaction; no invented UI"
+    },
+    {
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/stills/07-chat-reaction.png",
+      "duration": 8,
+      "audio": false,
+      "note": "End on real exchange and sparkle reaction",
+      "add_island": false
+    }
+  ],
+  "add_island": false
+}

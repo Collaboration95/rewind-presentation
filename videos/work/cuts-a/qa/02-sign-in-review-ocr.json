@@ -1,0 +1,386 @@
+[
+  {
+    "time": 0,
+    "frame": "qa/02-sign-in-review/ocr/0001.png",
+    "text": "9:41\n\n=>\n\n-_\n\n(47)\n\nGD\n\nSign in\n\nContinue with Cognito\n\nUsername\n\nPassword\n\nSign in\n\nNew here? Create an account\n\nPrivacy policy\n\nHelp and support\n\ndev-47ea5fO\n\nd2m6kz76y4kuvm.cloudfront.net\n\nVJ\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 1,
+    "frame": "qa/02-sign-in-review/ocr/0002.png",
+    "text": "9:41\n\n=>\n\n-_\n\n2\n\nGaD\n\nSign in\n\nContinue with Cognito\n\nUsername\n\nPassword\n\nSignin\n\nNew here? Create an account\n\nPrivacy policy\n\nHelp and support\n\ndev-47ea5fO\n\nd2m6kz76y4kuvm.cloudfront.net\n\nVJ\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 2,
+    "frame": "qa/02-sign-in-review/ocr/0003.png",
+    "text": "9:41\n\n=>\n\n-_\n\n2\n\nGaD\n\nSign in\n\nContinue with Cognito\n\nUsername\n\nPassword\n\nSign in\n\nNew here? Create an account\n\nPrivacy policy\n\nHelp and support\n\ndev-47ea5foO\n\nd2m6kz76y4kuvm.cloudfront.net\n\nVJ\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 3,
+    "frame": "qa/02-sign-in-review/ocr/0004.png",
+    "text": "9:41\n\n=>\n\n-_\n\n2\n\nGaD\n\nSign in\n\nContinue with Cognito\n\nUsername\n\nPassword\n\nSign in\n\nNew here? Create an account\n\nPrivacy policy\n\nHelp and support\n\ndev-47ea5fO\n\nd2m6kz76y4kuvm.cloudfront.net\n\nVJ\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 4,
+    "frame": "qa/02-sign-in-review/ocr/0005.png",
+    "text": "9:41\n\n=>\n\n-_\n\n2\n\nGaD\n\nSign in\n\nContinue with Cognito\n\nUsername\n\nPassword\n\nSign in\n\nNew here? Create an account\n\nPrivacy policy\n\nHelp and support\n\ndev-47ea5fO\n\nd2m6kz76y4kuvm.cloudfront.net\n\nVJ\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 5,
+    "frame": "qa/02-sign-in-review/ocr/0006.png",
+    "text": "9:41\n\n=>\n\n-_\n\n2\n\nGaD\n\nSign in\n\nContinue with Cognito\n\nUsername\n\nPassword\n\nSign in\n\nNew here? Create an account\n\nPrivacy policy\n\nHelp and support\n\ndev-47ea5fO\n\nd2m6kz76y4kuvm.cloudfront.net\n\nVJ\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 6,
+    "frame": "qa/02-sign-in-review/ocr/0007.png",
+    "text": "=>\n\n-_\n\n&\n\nSign in\n\nContinue with Cognito\n\nUsername\n\nmaya\n\nPassword\n\nSignin\n\nNew here? Create an account\n\nPrivacy policy\n\nHelp and support\n\ndev-47ea5fO\n\nd2m6kz76y4kuvm.cloudfront.net\n\nVJ\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 7,
+    "frame": "qa/02-sign-in-review/ocr/0008.png",
+    "text": "=>\n\n-_\n\n&\n\nSign in\n\nContinue with Cognito\n\nUsername\n\nmaya.chen\n\nPassword\n\nSign in\n\nNew here? Create an account\n\nPrivacy policy\n\nHelp and support\n\ndev-47ea5fO\n\nd2m6kz76y4kuvm.cloudfront.net\n\nVJ\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 8,
+    "frame": "qa/02-sign-in-review/ocr/0009.png",
+    "text": "=>\n\n-_\n\n&\n\nSign in\n\nContinue with Cognito\n\nUsername\n\nmaya.chen\n\nPassword\n\nSign in\n\nNew here? Create an account\n\nPrivacy policy\n\nHelp and support\n\ndev-47ea5fO\n\nd2m6kz76y4kuvm.cloudfront.net\n\nVJ\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 9,
+    "frame": "qa/02-sign-in-review/ocr/0010.png",
+    "text": "=>\n\n-_\n\n&\n\nSign in\n\nContinue with Cognito\n\nUsername\n\nmaya.chen\n\nPassword\n\nSign in\n\nNew here? Create an account\n\nPrivacy policy\n\nHelp and support\n\ndev-47ea5fO\n\nd2m6kz76y4kuvm.cloudfront.net\n\nVJ\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 10,
+    "frame": "qa/02-sign-in-review/ocr/0011.png",
+    "text": "=>\n\n-_\n\n&\n\nSign in\n\nContinue with Cognito\n\nUsername\n\nmaya.chen\n\nPassword\n\nSign in\n\nNew here? Create an account\n\nPrivacy policy\n\nHelp and support\n\ndev-47ea5fO\n\nd2m6kz76y4kuvm.cloudfront.net\n\nVJ\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 11,
+    "frame": "qa/02-sign-in-review/ocr/0012.png",
+    "text": "=>\n\n-_\n\n&\n\nSign in\n\nContinue with Cognito\n\nUsername\n\nmaya.chen\n\nPassword\n\nSign in\n\nNew here? Create an account\n\nPrivacy policy\n\nHelp and support\n\ndev-47ea5fO\n\nd2m6kz76y4kuvm.cloudfront.net\n\nVJ\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 12,
+    "frame": "qa/02-sign-in-review/ocr/0013.png",
+    "text": "9:41\n\n=>\n\n-_\n\n2\n\nGa\u00bb\n\nSign in\n\nContinue with Cognito\n\nUsername\n\nmaya.chen.27\n\nPassword\n\n1900000000000 08088\n\n\u00a9\n\nSign in\n\nNew here? Create an account\n\nPrivacy policy\n\nHelp and support\n\ndev-47ea5fO\n\nd2m6kz76y4kuvm.cloudfront.net\n\nvy\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 13,
+    "frame": "qa/02-sign-in-review/ocr/0014.png",
+    "text": "9:41\n\nFr @\n\nGa\u00bb\n\nSign in\n\na\n\nUsername\n\nmayachen27\n\nPassword\n\n1@e00@\n\n|\n\nNew here? Create an account\n\nPrivacy policy\n\nHelp and support\n\ndev-47ea5fO\n\nd2m6kz76y4kuvm.cloudfront.net\n\nav\n\nyy\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 14,
+    "frame": "qa/02-sign-in-review/ocr/0015.png",
+    "text": "9:41\n\nFr @\n\nGa\u00bb\n\nSign in\n\na\n\nUsername\n\nmayachen27\n\nPassword\n\n1@e0@\n\n|\n\nNew here? Create an account\n\nPrivacy policy\n\nHelp and support\n\ndev-47ea5fO\n\nd2m6kz76y4kuvm.cloudfront.net\n\nav\n\nyy\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 15,
+    "frame": "qa/02-sign-in-review/ocr/0016.png",
+    "text": "9:41\n\nFr @\n\nGa\u00bb\n\nSign in\n\na\n\nUsername\n\nmayachen27\n\nPassword\n\n1@e00@\n\nNew here? Create an account\n\nPrivacy policy\n\nHelp and support\n\ndev-47ea5fO\n\nd2m6kz76y4kuvm.cloudfront.net\n\nav\n\nyy\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 16,
+    "frame": "qa/02-sign-in-review/ocr/0017.png",
+    "text": "9:41\n\nFr @\n\nGa\u00bb\n\nSign in\n\na\n\nUsername\n\nmayachen27\n\nPassword\n\n1@e00@\n\nNew here? Create an account\n\nPrivacy policy\n\nHelp and support\n\ndev-47ea5fO\n\nd2m6kz76y4kuvm.cloudfront.net\n\nav\n\nyy\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 17,
+    "frame": "qa/02-sign-in-review/ocr/0018.png",
+    "text": "9:41\n\nFr @\n\nGa\u00bb\n\nSign in\n\na\n\nUsername\n\nmayachen27\n\nPassword\n\n1@e00@\n\nNew here? Create an account\n\nPrivacy policy\n\nHelp and support\n\ndev-47ea5fO\n\nd2m6kz76y4kuvm.cloudfront.net\n\nav\n\nyy\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 18,
+    "frame": "qa/02-sign-in-review/ocr/0019.png",
+    "text": "9:41\n\nFr @\n\nGa\u00bb\n\nSign in\n\na\n\nUsername\n\nmayachen27\n\nPassword\n\n1@e00@\n\nNew here? Create an account\n\nPrivacy policy\n\nHelp and support\n\ndev-47ea5fO\n\nd2m6kz76y4kuvm.cloudfront.net\n\nav\n\nyy\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 19,
+    "frame": "qa/02-sign-in-review/ocr/0020.png",
+    "text": "9:41\n\nFr @\n\nGa\u00bb\n\nSign in\n\na\n\nUsername\n\nmayachen27\n\nPassword\n\n1@e0@\n\nNew here? Create an account\n\nPrivacy policy\n\nHelp and support\n\ndev-47ea5fO\n\nd2m6kz76y4kuvm.cloudfront.net\n\nav\n\nyy\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 20,
+    "frame": "qa/02-sign-in-review/ocr/0021.png",
+    "text": "9:41\n\nFr @&\n\nGa\u00bb\n\nSign in\n\n\u2014\n\nUsername\n\nmayachen27\n\nPassword\n\n1@e0@\n\n|\n\nNew here? Create an account\n\nPrivacy policy\n\nHelp and support\n\ndev-47ea5fO\n\nd2m6kz76y4kuvm.cloudfront.net\n\n@ v\n\ney\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 21,
+    "frame": "qa/02-sign-in-review/ocr/0022.png",
+    "text": "9:41\n\nFr @&\n\nGa\u00bb\n\nSign in\n\n\u2014\n\nUsername\n\nmaya.chen.27\n\nPassword\n\neee\n\nNew here? Create an account\n\nPrivacy policy\n\nHelp and support\n\ndev-47ea5fO\n\nd2m6kz76y4kuvm.cloudfront.net\n\n@ v\n\ney\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 22,
+    "frame": "qa/02-sign-in-review/ocr/0023.png",
+    "text": "9:41\n\nFr @&\n\nGa\u00bb\n\nSign in\n\n\u2014\n\nUsername\n\nmayachen27\n\nPassword\n\n1@e00@\n\nNew here? Create an account\n\nPrivacy policy\n\nHelp and support\n\ndev-47ea5fO\n\nd2m6kz76y4kuvm.cloudfront.net\n\n@ v\n\ney\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 23,
+    "frame": "qa/02-sign-in-review/ocr/0024.png",
+    "text": "9:41\n\n=>\n\n-_\n\n(42 )\n\nGa\u00bb\n\nSign in\n\nContinue with Cognito\n\nUsername\n\nmaya.chen.27\n\nPassword\n\n1900000000000 08088\n\n\u00a9\n\nSign in\n\nNew here? Create an account\n\nPrivacy policy\n\nHelp and support\n\ndev-47ea5fO\n\nd2m6kz76y4kuvm.cloudfront.net\n\nVJ\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 24,
+    "frame": "qa/02-sign-in-review/ocr/0025.png",
+    "text": "9:41\n\n=>\n\n-_\n\n(42 )\n\nGa\u00bb\n\nSign in\n\nContinue with Cognito\n\nUsername\n\nmaya.chen.27\n\nPassword\n\n1900000000000 08888\n\n@\u00ae\n\nSign in\n\nNew here? Create an account\n\nPrivacy policy\n\nHelp and support\n\ndev-47ea5fo\n\nd2m6kz76y4kuvm.cloudfront.net\n\nVJ\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 25,
+    "frame": "qa/02-sign-in-review/ocr/0026.png",
+    "text": "9:41\n\n=>\n\n-_\n\n(42 )\n\nGa\u00bb\n\nSign in\n\nContinue with Cognito\n\nUsername\n\nmaya.chen.27\n\nPassword\n\n1@00 000000000808 888\n\n\u00a9\n\nSign in\n\nNew here? Create an account\n\nPrivacy policy\n\nHelp and support\n\ndev-47ea5fO\n\nd2m6kz76y4kuvm.cloudfront.net\n\nVJ\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 26,
+    "frame": "qa/02-sign-in-review/ocr/0027.png",
+    "text": "9:41\n\n=>\n\n-_\n\n(42 )\n\nGa\u00bb\n\nSign in\n\nContinue with Cognito\n\nUsername\n\nmaya.chen.27\n\nPassword\n\n1@00000000000808088\n\n\u00a9\n\nSign in\n\nNew here? Create an account\n\nPrivacy policy\n\nHelp and support\n\ndev-47ea5foO\n\nd2m6kz76y4kuvm.cloudfront.net\n\nVJ\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 27,
+    "frame": "qa/02-sign-in-review/ocr/0028.png",
+    "text": "9:41\n\n=>\n\n-_\n\n(42 )\n\nGa\u00bb\n\nSign in\n\nContinue with Cognito\n\nUsername\n\nmaya.chen.27\n\nPassword\n\n1900000000000 08808\n\n\u00a9\n\nSign in\n\nNew here? Create an account\n\nPrivacy policy\n\nHelp and support\n\ndev-47ea5fO\n\nd2m6kz76y4kuvm.cloudfront.net\n\nVJ\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 28,
+    "frame": "qa/02-sign-in-review/ocr/0029.png",
+    "text": "9:41\n\n=>\n\n-_\n\n(42 )\n\nGa\u00bb\n\nSign in\n\nContinue with Cognito\n\nUsername\n\nmaya.chen.27\n\nPassword\n\n1900000000000 08088\n\n<)\n\nSign in\n\nNew here? Create an account\n\nPrivacy policy\n\nHelp and support\n\ndev-47ea5fO\n\nd2m6kz76y4kuvm.cloudfront.net\n\nvy\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 29,
+    "frame": "qa/02-sign-in-review/ocr/0030.png",
+    "text": "=>\n\n-_\n\n(42 )\n\nSign in\n\nContinue with Cognito\n\nUsername\n\nmaya.chen.27\n\nPassword\n\n\u00a90080 08008000080880080'\n\n\u00a9\n\nSigning in...\n\nNew here? Create an account\n\nSigning in...\n\nPrivacy policy\n\nHelp and support\n\ndev-47ea5fO\n\noO\n\n_\u2014)\n\nkuvm.cloudfront.net @\n\ncoe\n\niy\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 30,
+    "frame": "qa/02-sign-in-review/ocr/0031.png",
+    "text": "=>\n\n-_\n\n(42 )\n\nSign in\n\nContinue with Cognito\n\nUsername\n\nmaya.chen.27\n\nPassword\n\n\u00a90080 080800008000080801\n\n@\u00ae\n\nSigning in...\n\nNew here? Create an account\n\nSigning in...\n\nPrivacy policy\n\nHelp and support\n\ndev-47ea5fO\n\noO\n\n_\u2014)\n\nkuvm.cloudfront.net @\n\ncoe\n\ny\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 31,
+    "frame": "qa/02-sign-in-review/ocr/0032.png",
+    "text": "=>\n\n-_\n\n(42 )\n\nSign in\n\nContinue with Cognito\n\nUsername\n\nmaya.chen.27\n\nPassword\n\n\u00a90080 080800008000080801\n\n@\u00ae\n\nSigning in...\n\nNew here? Create an account\n\nSigning in...\n\nPrivacy policy\n\nHelp and support\n\ndev-47ea5fO\n\noO\n\n_\u2014)\n\nkuvm.cloudfront.net @\n\ncoe\n\ny\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 32,
+    "frame": "qa/02-sign-in-review/ocr/0033.png",
+    "text": "=>\n\n-_\n\n(42 )\n\nSign in\n\nContinue with Cognito\n\nUsername\n\nmaya.chen.27\n\nPassword\n\n\u00a90080 080800008000080801\n\n@\u00ae\n\nSigning in...\n\nNew here? Create an account\n\nSigning in...\n\nPrivacy policy\n\nHelp and support\n\ndev-47ea5fO\n\noO\n\n_\u2014)\n\nkuvm.cloudfront.net @\n\ncoe\n\ny\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 33,
+    "frame": "qa/02-sign-in-review/ocr/0034.png",
+    "text": "=>\n\n-_\n\n(42 )\n\nSign in\n\nContinue with Cognito\n\nUsername\n\nmaya.chen.27\n\nPassword\n\n\u00a90080 080800008000080801\n\n@\u00ae\n\nSigning in...\n\nNew here? Create an account\n\nSigning in...\n\nPrivacy policy\n\nHelp and support\n\ndev-47ea5fO\n\noO\n\n_\u2014)\n\nkuvm.cloudfront.net @\n\ncoe\n\ny\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 34,
+    "frame": "qa/02-sign-in-review/ocr/0035.png",
+    "text": "=>\n\n-_\n\n(42 )\n\nSign in\n\nContinue with Cognito\n\nUsername\n\nmaya.chen.27\n\nPassword\n\n\u00a90080 080800008000080801\n\n@\u00ae\n\nSigning in...\n\nNew here? Create an account\n\nSigning in...\n\nPrivacy policy\n\nHelp and support\n\ndev-47ea5fO\n\noO\n\n_\u2014)\n\nkuvm.cloudfront.net @\n\ncoe\n\ny\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 35,
+    "frame": "qa/02-sign-in-review/ocr/0036.png",
+    "text": "=>\n\n-_\n\n(42 )\n\nSign in\n\nContinue with Cognito\n\nUsername\n\nmaya.chen.27\n\nPassword\n\n\u00a90080 080800008000080801\n\n@\u00ae\n\nSigning in...\n\nNew here? Create an account\n\nSigning in...\n\nPrivacy policy\n\nHelp and support\n\ndev-47ea5fO\n\noO\n\n_\u2014)\n\nkuvm.cloudfront.net @\n\ncoe\n\ny\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 36,
+    "frame": "qa/02-sign-in-review/ocr/0037.png",
+    "text": "=>\n\n-_\n\n(27)\n\nSign in\n\nContinue with Cognito\n\nUsername\n\nmaya.chen.27\n\nPassword\n\nOOOO OOOOOOOOOOOOOOL \u00a9\n\nSigning in...\n\nNew here? Create an account\n\nSigning in...\n\nPrivacy policy\n\nHelp and support\n\ndev-47ea5fO\n\noO\n\n\u20144\n\ncoe\n\nkuvm.cloudfront.net (GF\n\nyw\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 37,
+    "frame": "qa/02-sign-in-review/ocr/0038.png",
+    "text": "9:41\n\nGD\n\nFr @\n\n<\n\nSettings\n\nMaya\n\nmaya.chen.27\n\nThe |\n\nttle t\n\nM J\n\nOwner : 2 0}\n\nm\n\nn!\n\nPr\n\nre\n\nThe\n\nTime\n\nAsia/Sing\n\nInvite friends\n\n\u2014\n\n2\n\nMembers\n\n2 of 6\n\n2\n\nSwitch group\n\n2 groups\n\nHave an invite?\n\n+\n\nCreate a group\n\nREMINDER\n\noO\n\ncoe\n\n\u2014\n\ntkuvm.cloudfront.net G\n\n%\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 38,
+    "frame": "qa/02-sign-in-review/ocr/0039.png",
+    "text": "9:41\n\nGD\n\nFr @\n\n<\n\nSettings\n\nMaya\n\nmaya.chen.27\n\nThe |\n\nttle t\n\nM J\n\nOwner : 2 0}\n\nm\n\nn!\n\nPr\n\nre\n\nThe\n\nTime\n\nAsia/Sing\n\nInvite friends\n\n\u2014\n\n2\n\nMembers\n\n2 of 6\n\n2\n\nSwitch group\n\n2 groups\n\nHave an invite?\n\n+\n\nCreate a group\n\nREMINDER\n\noO\n\ncoe\n\n\u2014\n\ntkuvm.cloudfront.net G\n\n%\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 39,
+    "frame": "qa/02-sign-in-review/ocr/0040.png",
+    "text": "9:41\n\nGD\n\nFr @\n\n<\n\nSettings\n\nMaya\n\nmaya.chen.27\n\nThe |\n\nttle t\n\nM J\n\nOwner : 2 0}\n\nm\n\nn!\n\nPr\n\nre\n\nThe\n\nTime\n\nAsia/Sing\n\nInvite friends\n\n\u2014\n\n2\n\nMembers\n\n2 of 6\n\n2\n\nSwitch group\n\n2 groups\n\nHave an invite?\n\n+\n\nCreate a group\n\nREMINDER\n\noO\n\ncoe\n\n\u2014\n\ntkuvm.cloudfront.net G\n\n%\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 40,
+    "frame": "qa/02-sign-in-review/ocr/0041.png",
+    "text": "9:41\n\nGD\n\nFr @\n\n<\n\nSettings\n\nMaya\n\nmaya.chen.27\n\nThe |\n\nttle t\n\nM J\n\nOwner : 2 0}\n\nm\n\nn!\n\nPr\n\nre\n\nThe\n\nTime\n\nAsia/Sing\n\nInvite friends\n\n\u2014\n\n2\n\nMembers\n\n2 of 6\n\n2\n\nSwitch group\n\n2 groups\n\nHave an invite?\n\n+\n\nCreate a group\n\nREMINDER\n\noO\n\ncoe\n\n\u2014\n\ntkuvm.cloudfront.net G\n\n%\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 41,
+    "frame": "qa/02-sign-in-review/ocr/0042.png",
+    "text": "9:41\n\nGD\n\nFr @\n\n<\n\nSettings\n\nMaya\n\nmaya.chen.27\n\nThe |\n\nttle t\n\nM J\n\nOwner : 2 0}\n\nm\n\nn!\n\nPr\n\nre\n\nThe\n\nTime\n\nAsia/Sing\n\nInvite friends\n\n\u2014\n\n2\n\nMembers\n\n2 of 6\n\n2\n\nSwitch group\n\n2 groups\n\nHave an invite?\n\n+\n\nCreate a group\n\nREMINDER\n\noO\n\ncoe\n\n\u2014\n\ntkuvm.cloudfront.net G\n\n%\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 42,
+    "frame": "qa/02-sign-in-review/ocr/0043.png",
+    "text": "9:41\n\nGD\n\nFr @\n\n<\n\nSettings\n\nMaya\n\nmaya.chen.27\n\nThe |\n\nttle t\n\nM J\n\nOwner : 2 0}\n\nm\n\nn!\n\nPr\n\nre\n\nThe\n\nTime\n\nAsia/Sing\n\nInvite friends\n\n\u2014\n\n2\n\nMembers\n\n2 of 6\n\n2\n\nSwitch group\n\n2 groups\n\nHave an invite?\n\n+\n\nCreate a group\n\nREMINDER\n\noO\n\ncoe\n\n\u2014\n\ntkuvm.cloudfront.net G\n\n%\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 43,
+    "frame": "qa/02-sign-in-review/ocr/0044.png",
+    "text": "9:41\n\nGD\n\nFr @\n\n<\n\nSettings\n\nMaya\n\nmaya.chen.27\n\nThe |\n\nttle t\n\nM J\n\nOwner : 2 0}\n\nm\n\nn!\n\nPr\n\nre\n\nThe\n\nTime\n\nAsia/Sing\n\nInvite friends\n\n\u2014\n\n2\n\nMembers\n\n2 of 6\n\n2\n\nSwitch group\n\n2 groups\n\nHave an invite?\n\n+\n\nCreate a group\n\nREMINDER\n\noO\n\ncoe\n\n\u2014\n\ntkuvm.cloudfront.net G\n\n%\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 44,
+    "frame": "qa/02-sign-in-review/ocr/0045.png",
+    "text": "9:41\n\nGD\n\nFr @\n\n<\n\nSettings\n\nMaya\n\nmaya.chen.27\n\nThe |\n\nttle t\n\nM J\n\nOwner : 2 0}\n\nmn\n\nn!\n\nPr\n\nre\n\nThe\n\nTime\n\nAsia/Sing\n\nInvite friends\n\n\u2014\n\n2\n\nMembers\n\n2 of 6\n\n2\n\nSwitch group\n\n2 groups\n\nHave an invite?\n\n+\n\nCreate a group\n\nREMINDER\n\noO\n\ncoe\n\n\u2014\n\ntkuvm.cloudfront.net G\n\n%\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 0.0,
+    "frame": "qa/02-sign-in-review/ocr/boundary-00000.png",
+    "text": "9:41\n\n=>\n\n\u2014\n\n-\n\n(42 )\n\nGD\n\nSign in\n\nContinue with Cognito\n\nUsername\n\nPassword\n\nSignin\n\nNew here? Create an account\n\nPrivacy policy\n\nHelp and support\n\ndev-47ea5fO\n\nd2m6kz76y4kuvm.cloudfront.net\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 5.0,
+    "frame": "qa/02-sign-in-review/ocr/boundary-00150.png",
+    "text": "9:41\n\n=>\n\n\u2014\n\n-\n\n(42 }\n\nGD\n\nSign in\n\nContinue with Cognito\n\nUsername\n\nPassword\n\nSign in\n\nNew here? Create an account\n\nPrivacy policy\n\nHelp and support\n\ndev-47ea5fO\n\nd2m6kz76y4kuvm.cloudfront.net\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 5.966666666666667,
+    "frame": "qa/02-sign-in-review/ocr/boundary-00179.png",
+    "text": "9:41\n\n=>\n\n\u2014\n\n-\n\n(42 }\n\nGD\n\nSign in\n\nContinue with Cognito\n\nUsername\n\nPassword\n\nSign in\n\nNew here? Create an account\n\nPrivacy policy\n\nHelp and support\n\ndev-47ea5fO\n\nd2m6kz76y4kuvm.cloudfront.net\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 6.0,
+    "frame": "qa/02-sign-in-review/ocr/boundary-00180.png",
+    "text": "9:41\n\n=>\n\n\u2014\n\n-\n\n(42 }\n\nGa\u00bb\n\nSign in\n\nContinue with Cognito\n\nUsername\n\nPassword\n\nSign in\n\nNew here? Create an account\n\nPrivacy policy\n\nHelp and support\n\ndev-47ea5fO\n\nd2m6kz76y4kuvm.cloudfront.net\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 10.0,
+    "frame": "qa/02-sign-in-review/ocr/boundary-00300.png",
+    "text": "=>\n\n\u2014\n\n-\n\n(42 }\n\nSign in\n\nContinue with Cognito\n\nUsername\n\nmaya.chen\n\nPassword\n\nSignin\n\nNew here? Create an account\n\nPrivacy policy\n\nHelp and support\n\ndev-47ea5fO\n\nd2m6kz76y4kuvm.cloudfront.net\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 11.966666666666667,
+    "frame": "qa/02-sign-in-review/ocr/boundary-00359.png",
+    "text": "=>\n\n\u2014\n\n-\n\n(42 }\n\nSign in\n\nContinue with Cognito\n\nUsername\n\nmaya.chen\n\nPassword\n\nSignin\n\nNew here? Create an account\n\nPrivacy policy\n\nHelp and support\n\ndev-47ea5fO\n\nd2m6kz76y4kuvm.cloudfront.net\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 12.0,
+    "frame": "qa/02-sign-in-review/ocr/boundary-00360.png",
+    "text": "9:41\n\n=>\n\n\u2014\n\n-\n\n(42 }\n\nGD\n\nSign in\n\nContinue with Cognito\n\nUsername\n\nmaya.chen.27\n\nPassword\n\nSignin\n\nNew here? Create an account\n\nPrivacy policy\n\nHelp and support\n\ndev-47ea5fO\n\nd2m6kz76y4kuvm.cloudfront.net\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 15.0,
+    "frame": "qa/02-sign-in-review/ocr/boundary-00450.png",
+    "text": "9:41\n\nGD\n\nFe @&\n\n<\n\nSign in\n\na\n\nUsername\n\nmayachen27\n\nPassword\n\n(\n\neee\n\nNew here\u2019\n\nreat\n\nccoun\n\nCC\n\nPrivacy policy\n\nHelp and support\n\ndev-47ea5fO\n\nd2m6kz76y4kuvm.cloudfront.net\n\n\u2018G v\n\nvy\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 19.966666666666665,
+    "frame": "qa/02-sign-in-review/ocr/boundary-00599.png",
+    "text": "9:41\n\nGD\n\nFe @&\n\n<\n\nSign in\n\na\n\nUsername\n\nmayachen27\n\nPassword\n\n(\n\neee\n\nNew here\u2019\n\nreat\n\nccoun\n\nCC\n\nPrivacy policy\n\nHelp and support\n\ndev-47ea5fO\n\nd2m6kz76y4kuvm.cloudfront.net\n\n\u2018G v\n\nvy\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 20.0,
+    "frame": "qa/02-sign-in-review/ocr/boundary-00600.png",
+    "text": "9:41\n\n=>\n\n\u2014\n\n(42 )\n\nGD\n\nSign in\n\nContinue with Cognito\n\nUsername\n\nmaya.chen.27\n\nPassword\n\n'@SOOOOCOCOOOOOOEOESD \u00a9\n\nSignin\n\nNew here? Create an account\n\nPrivacy policy\n\nHelp and support\n\ndev-47ea5fO\n\nd2m6kz76y4kuvm.cloudfront.net\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 25.0,
+    "frame": "qa/02-sign-in-review/ocr/boundary-00750.png",
+    "text": "9:41\n\n=>\n\n\u2014\n\n(42 )\n\nGD\n\nSign in\n\nContinue with Cognito\n\nUsername\n\nmaya.chen.27\n\nPassword\n\n'@OOOOCOCOOOOOOO8ESD \u00a9\n\nSignin\n\nNew here? Create an account\n\nPrivacy policy\n\nHelp and support\n\ndev-47ea5fO\n\nd2m6kz76y4kuvm.cloudfront.net\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 27.966666666666665,
+    "frame": "qa/02-sign-in-review/ocr/boundary-00839.png",
+    "text": "9:41\n\n=>\n\n\u2014\n\n(42 )\n\nGD\n\nSign in\n\nContinue with Cognito\n\nUsername\n\nmaya.chen.27\n\nPassword\n\n1@OOOOOOOOOOOOOOEES \u00a9\n\nSignin\n\nNew here? Create an account\n\nPrivacy policy\n\nHelp and support\n\ndev-47ea5fO\n\nd2m6kz76y4kuvm.cloudfront.net\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 28.0,
+    "frame": "qa/02-sign-in-review/ocr/boundary-00840.png",
+    "text": "9:41\n\n=>\n\n\u2014\n\n(42 )\n\nGD\n\nSign in\n\nContinue with Cognito\n\nUsername\n\nmaya.chen.27\n\nPassword\n\n'@OOOOOCOCOCOOCOOOSSD \u00a9\n\nSignin\n\nNew here? Create an account\n\nPrivacy policy\n\nHelp and support\n\ndev-47ea5fO\n\nd2m6kz76y4kuvm.cloudfront.net\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 30.0,
+    "frame": "qa/02-sign-in-review/ocr/boundary-00900.png",
+    "text": "=>\n\n\u2014\n\n-\n\n(42 )\n\nSign in\n\nContinue with Cognito\n\nUsername\n\nmaya.chen.27\n\nPassword\n\n\u00a90000 000080808000001\n\n\u00a9\n\nSigning in...\n\nNew here? Create an account\n\nSigning in...\n\nPrivacy policy\n\nHelp and support\n\ndev-47ea5fO\n\noO\n\nb\u20144\n\nkuvm.cloudfront.net G\n\neee\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 35.0,
+    "frame": "qa/02-sign-in-review/ocr/boundary-01050.png",
+    "text": "=>\n\n\u2014\n\n-\n\n(42 )\n\nSign in\n\nContinue with Cognito\n\nUsername\n\nmaya.chen.27\n\nPassword\n\n\u00a90000 000080808000001\n\n\u00a9\n\nSigning in...\n\nNew here? Create an account\n\nSigning in...\n\nPrivacy policy\n\nHelp and support\n\ndev-47ea5fO\n\noO\n\nb\u20144\n\nkuvm.cloudfront.net G\n\neee\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 36.96666666666667,
+    "frame": "qa/02-sign-in-review/ocr/boundary-01109.png",
+    "text": "=>\n\n-_\n\n(42 }\n\nSign in\n\nContinue with Cognito\n\nUsername\n\nmaya.chen.27\n\nPassword\n\n\u00a90000 08008000080008001\n\n\u00a9\n\nSigning in...\n\nNew here? Create an account\n\nSigning in...\n\nPrivacy policy\n\nHelp and support\n\ndev-47ea5fO\n\noO\n\nb\u20144\n\nkuvm.cloudfront.net S;\n\neee\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 37.0,
+    "frame": "qa/02-sign-in-review/ocr/boundary-01110.png",
+    "text": "9:41\n\nGa\u00bb\n\n&\n\n<\n\nSettings\n\nMaya\n\nmaya.chen.27\n\n=\n\na\n\nThe little\n\nn\n\nMJ\n\nOwner - 2 of 6\n\nProm\n\nre\n\nThe sm\n\nTime\n\nAsia/Si\n\n>\n\n.\n\nInvite friends\n\n2\n\nMembers\n\n20f 6\n\n>\n\nSwitch group\n\n2 groups\n\nHave an invite?\n\nCreate a group\n\nREMINDER\n\noO\n\n\u2014\n\nikuvm.cloudfront.net\n\n@\n\neee\n\nNe\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 40.0,
+    "frame": "qa/02-sign-in-review/ocr/boundary-01200.png",
+    "text": "9:41\n\nGa\u00bb\n\nFe @\n\n<\n\nSettings\n\nMaya\n\nmaya.chen.27\n\n=\n\nThe little\n\nMJ\n\nOwner - 2 of 6m\n\nProm\n\niT\n\nre\n\nThe sm\n\nTime z\n\nAsia/Si\n\n>\n\n\\\n\nInvite friends\n\n2\n\nMembers\n\n2 of 6\n\n>\n\nSwitch group\n\n2 groups\n\nHave an invite?\n\n+\n\nCreate a group\n\nREMINDER\n\noO\n\neee\n\n\u2014\n\nikuvm.cloudfront.net\n\n@\n\nNe\n",
+    "forbidden_matches": []
+  },
+  {
+    "time": 44.96666666666667,
+    "frame": "qa/02-sign-in-review/ocr/boundary-01349.png",
+    "text": "9:41\n\nGa\u00bb\n\n&\n\n<\n\nSettings\n\nMaya\n\nmaya.chen.27\n\n=\n\na\n\nThe little\n\nn\n\nMJ\n\nOwner - 2 of 6\n\nProm\n\nre\n\nThe sm\n\nTime\n\nAsia/Si\n\n>\n\n\\\n\nInvite friends\n\n2\n\nMembers\n\n2 of 6\n\n>\n\nSwitch group\n\n2 groups\n\nHave an invite?\n\nCreate a group\n\nREMINDER\n\noO\n\n\u2014\n\nikuvm.cloudfront.net\n\n@\n\neee\n\nNe\n",
+    "forbidden_matches": []
+  }
+]

@@ -1,0 +1,122 @@
+{
+  "pullRequest": "https://github.com/Collaboration95/rewind-app/pull/592",
+  "headSha": "55517912af7af1d95b203f2b6a1969bcf13572b5",
+  "ciStateAtHandoff": {
+    "headRefOid": "55517912af7af1d95b203f2b6a1969bcf13572b5",
+    "reviewDecision": "",
+    "statusCheckRollup": [
+      {
+        "__typename": "CheckRun",
+        "completedAt": "0001-01-01T00:00:00Z",
+        "conclusion": "",
+        "detailsUrl": "https://github.com/Collaboration95/rewind-app/actions/runs/40344033936/job/121646057863",
+        "name": "Scan runtime image",
+        "startedAt": "2026-10-26T14:54:23Z",
+        "status": "IN_PROGRESS",
+        "workflowName": "Release security"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-10-26T14:54:28Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/Collaboration95/rewind-app/actions/runs/40344033935/job/121646057295",
+        "name": "Classify change scope",
+        "startedAt": "2026-10-26T14:54:23Z",
+        "status": "COMPLETED",
+        "workflowName": "CodeQL"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "0001-01-01T00:00:00Z",
+        "conclusion": "",
+        "detailsUrl": "https://github.com/Collaboration95/rewind-app/actions/runs/40344033936/job/121646057890",
+        "name": "Scan web image",
+        "startedAt": "2026-10-26T14:54:23Z",
+        "status": "IN_PROGRESS",
+        "workflowName": "Release security"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "0001-01-01T00:00:00Z",
+        "conclusion": "",
+        "detailsUrl": "https://github.com/Collaboration95/rewind-app/actions/runs/40344033935/job/121646138134",
+        "name": "CodeQL (javascript-typescript)",
+        "startedAt": "2026-10-26T14:54:31Z",
+        "status": "IN_PROGRESS",
+        "workflowName": "CodeQL"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-10-26T14:54:41Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/Collaboration95/rewind-app/actions/runs/40344033936/job/121646057740",
+        "name": "Scan IaC configuration",
+        "startedAt": "2026-10-26T14:54:23Z",
+        "status": "COMPLETED",
+        "workflowName": "Release security"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "0001-01-01T00:00:00Z",
+        "conclusion": "",
+        "detailsUrl": "https://github.com/Collaboration95/rewind-app/actions/runs/40344033935/job/121646138391",
+        "name": "CodeQL (python)",
+        "startedAt": "2026-10-26T14:54:32Z",
+        "status": "IN_PROGRESS",
+        "workflowName": "CodeQL"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "0001-01-01T00:00:00Z",
+        "conclusion": "",
+        "detailsUrl": "https://github.com/Collaboration95/rewind-app/actions/runs/40344033935/job/121646138130",
+        "name": "CodeQL (actions)",
+        "startedAt": "2026-10-26T14:54:32Z",
+        "status": "IN_PROGRESS",
+        "workflowName": "CodeQL"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-10-26T14:54:19Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://dashboard.gitguardian.com",
+        "name": "GitGuardian Security Checks",
+        "startedAt": "2026-10-26T14:54:17Z",
+        "status": "COMPLETED",
+        "workflowName": ""
+      }
+    ]
+  },
+  "checks": {
+    "npm ci": "PASS",
+    "npm run test:root": "PASS: 122 passing, 1 skipped",
+    "npm run test:fast": "PASS: root/server/frontend",
+    "prePush": "PASS: root/security/server/frontend coverage/deployment fixtures",
+    "formatAndLint": "PASS",
+    "knownParameterRecovery": "PASS",
+    "pngDimensions": "PASS: three 1280x720 PNGs",
+    "tokenRedactionScan": "PASS"
+  },
+  "initialResult": "FAIL: deployment overlap",
+  "postDeployReadOnlyResult": "PASS",
+  "files": {
+    "METHODOLOGY.md": "9d55d78126e2f6b14fc480f1a02ed264f4c730ce82417143b5036afba02df121",
+    "RESULTS.md": "71a0402d989e87df63cc9dec6ed275fd5b58a8244c31d43b4c259c8915bcf12c",
+    "charts/throughput-vs-vus.png": "9c7793aebb6feb8875e1d73650774937baabc74ea8d3ff46c2e0158379dd8a99",
+    "charts/latency-vs-vus.png": "bfb7c87ee940a1d59877b592f66be3b638cd58049e16c778aef5bf34f5c41519",
+    "charts/measured-vs-projected.png": "8ff4c00ad8558952de68506fdf80a2f77c67105ca1b4d6bb0e25cbdbb13a50ce",
+    "results/hosted.json": "3f81458426d8806c5635acb69f2c53166dc74d4a28da6d7541f4a7af8a9268bb",
+    "results/incident.json": "1c9fe8ebf3b189455e49b4428eb8d5cd0b3f4e77e0e3fe14496df1101082e82d",
+    "results/post-deploy-summary.md": "26a2b7771fc94d7aad9201a09243cf00e7f4d8b818960512b608e02081318475",
+    "results/SUMMARY.md": "4c94a4c1074bf6d578fb1e31cc65200134232a4bf14197f8a4c84db59a5ec8bc",
+    "results/hosted-summary.md": "4c94a4c1074bf6d578fb1e31cc65200134232a4bf14197f8a4c84db59a5ec8bc",
+    "results/pilot-stage-summaries.json": "fc377f3e27447645c60567c4ca2588a605d3595c9acbdc8f30b61e9476ac48e2",
+    "results/post-deploy-100vu.json": "7a3e117d176398a18d08853a2300a0a78bc601a4c8b797fd81b164bd10ad8bcd",
+    "results/capacity-model.json": "f7211fe01b25faa3fc980fc42d924176a9cbb5f096678e03c9e624705e4c5ec9",
+    "sources/performance.yml": "c6b90e6a34ac2f0e744f0ceddcffbcd1ede770dbd0f6c012bbd863a0de6dcdd5",
+    "sources/README.md": "036b9875b3c4ac5070ecd8d99f8c0c79a95f4ef32a1dad73a146fccc2878704d",
+    "sources/load-test.test.mjs": "bf71f01464a5a58fb5c0bf36f1f561795f4ec47c21d6fb97b88d7f5b7b3fae41",
+    "sources/hosted.mjs": "8a4444ff5c95d33bf06a84cb16af113ef94703f4f09b1422d06de6904b65571f",
+    "sources/analyze.py": "ee4b96f8a5d5ca0b64f655204953bf445a2fc34172f01a7685b2f0a7c8487248"
+  }
+}

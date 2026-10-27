@@ -1,0 +1,27 @@
+Rendering 1/10 (8s)
+Rendering 2/10 (7.8s)
+Rendering 3/10 (6s)
+Rendering 4/10 (6s)
+Rendering 5/10 (7.8s)
+Rendering 6/10 (5s)
+Rendering 7/10 (7.8s)
+Rendering 8/10 (1s)
+Rendering 9/10 (7.6s)
+Rendering 10/10 (8s)
+{
+  "output": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/cuts-b/06-video-and-allowance-review.mp4",
+  "frames": 1950,
+  "duration": 65.0,
+  "checks": {
+    "codec": true,
+    "profile": true,
+    "size": true,
+    "pixel_format": true,
+    "fps": true,
+    "frame_count": true,
+    "video_duration": true,
+    "container_duration": true,
+    "audio": true,
+    "audio_duration": true
+  }
+}

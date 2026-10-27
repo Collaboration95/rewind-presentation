@@ -1,0 +1,73 @@
+{
+  "number": 10,
+  "name": "Watch the film",
+  "title_card": false,
+  "output": "10-watch-the-film.mp4",
+  "notes": [
+    "80 seconds. Only real supplied phone footage. No Home shot. Two complete 21.2-second film intervals use external real film AAC from zero; all other audio silent. Scene-cut matching: source first 20.8967/23.9283/29.9600/35.9933 vs film 3/6.0333/12.0667/18.1; replay 120.9600/123.9933/130.0233/136.0617. Match error <= one 30fps frame after startup-repeat trim."
+  ],
+  "segments": [
+    {
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/10-watch.mov",
+      "in": 14.8,
+      "duration": 4.366666666666666,
+      "audio": false,
+      "note": "Opening film UI only; initial Home excluded. Actual 2.3667 s plus a 2 s loading-frame hold.",
+      "out": 17.166666667
+    },
+    {
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/10-watch.mov",
+      "in": 17.896666667,
+      "duration": 21.2,
+      "audio": {
+        "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/film/rewind-hosted-film.mp4",
+        "in": 0
+      },
+      "note": "Complete first native film. Native fullscreen startup repeats trimmed to match first photo at film t=0. All five contributions retained.",
+      "out": 39.096666667
+    },
+    {
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/10-watch.mov",
+      "in": 109.72,
+      "duration": 8,
+      "audio": false,
+      "note": "Native last frame paused, then actual replay action at boundary; long idle removed.",
+      "out": 117.72
+    },
+    {
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/10-watch.mov",
+      "in": 117.96,
+      "duration": 21.2,
+      "audio": {
+        "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/film/rewind-hosted-film.mp4",
+        "in": 0
+      },
+      "note": "Complete native replay, photo and later scene boundaries aligned to real film audio t=0.",
+      "out": 139.16
+    },
+    {
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/10-watch.mov",
+      "in": 139.16,
+      "duration": 8,
+      "audio": false,
+      "note": "Native playback finishes; pause controls appear.",
+      "out": 147.16
+    },
+    {
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/10-watch.mov",
+      "in": 155,
+      "duration": 7.233333333333333,
+      "audio": false,
+      "note": "Native controls and real Close transition to application end UI.",
+      "out": 162.233333333
+    },
+    {
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/10-watch.mov",
+      "in": 168,
+      "duration": 10,
+      "audio": false,
+      "note": "Actual application The end / Replay / Save film screen, ten seconds.",
+      "out": 178
+    }
+  ]
+}

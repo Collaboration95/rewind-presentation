@@ -1,0 +1,39 @@
+@startuml
+!include _style.iuml
+title Design sequence · UC08 Compile the cycle film
+hide footbox
+autonumber
+skinparam Padding 0
+skinparam sequence {
+ MessageSpacing 0
+ ParticipantPadding 5
+ BoxPadding 3
+}
+skinparam ParticipantFontSize 19
+skinparam SequenceGroupHeaderFontSize 19
+skinparam maxMessageSize 500
+skinparam sequenceMessageSpan true
+participant "worker.ts\n«module»" as W
+participant "compilation.ts\n«module»" as C
+participant ":MediaStore\n«interface»" as M
+participant "ffmpeg.ts\n«module»" as F
+W -> C : processCompilationJobForWorker()
+C -> C : claimCompilationJob() · transaction
+alt inputs unsettled
+ C --> W : waiting_for_inputs · no attempt spent
+else claim obtained
+ note over C : First claim freezes inputs; DB processing; generation + 1.
+ loop retained clips
+  C -> M : read(scope, ref) · materializeStoredMedia()
+ end
+ C -> C : firstFailingInput() · digest / size check
+ C -> F : compileFilmWithFfmpeg(); probeClipWithFfmpeg()
+ C -> M : put(scope, input) · putProcessedFile()
+ C -> C : publishCompilationOutput() · fenced transaction
+ alt current generation + unchanged inputs
+  C --> W : ready · DB output proof committed
+ else processing / fence failure
+  C --> W : failed · markCompilationFailed() generation guarded
+ end
+end
+@enduml

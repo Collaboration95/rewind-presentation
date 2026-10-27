@@ -1,0 +1,263 @@
+number,title,milestone_current,state,base,merged_at_utc,merged_date_sgt,url
+591,fix(ci): unblock the dependency audit and runtime image build,Unassigned,OPEN,dev,,,https://github.com/Collaboration95/rewind-app/pull/591
+590,fix: preserve emoji and local calendar labels in chat,Unassigned,OPEN,dev,,,https://github.com/Collaboration95/rewind-app/pull/590
+589,fix: allow focused script tests and document Sprint selection,Unassigned,OPEN,dev,,,https://github.com/Collaboration95/rewind-app/pull/589
+586,"release: promote dev to main (20 Oct cleanup, refactor, migration squash, explainer site)",Unassigned,OPEN,main,,,https://github.com/Collaboration95/rewind-app/pull/586
+585,docs(site): fact-check fixes and updates for #583/#584,Unassigned,MERGED,dev,2026-10-20T14:38:13Z,2026-10-20,https://github.com/Collaboration95/rewind-app/pull/585
+584,"chore: squash SQLite migrations, real audit actors, remove power controller, split jobs/media",Unassigned,MERGED,dev,2026-10-20T14:23:34Z,2026-10-20,https://github.com/Collaboration95/rewind-app/pull/584
+583,fix(deploy): read schema version from schema.ts after #581,Unassigned,MERGED,dev,2026-10-20T13:56:08Z,2026-10-20,https://github.com/Collaboration95/rewind-app/pull/583
+582,docs: explainer site for the presentation and report,Unassigned,MERGED,dev,2026-10-20T13:45:23Z,2026-10-20,https://github.com/Collaboration95/rewind-app/pull/582
+581,"refactor: pin behaviour with tests, then simplify server routes, big screens and legacy paths",Unassigned,MERGED,dev,2026-10-20T13:37:32Z,2026-10-20,https://github.com/Collaboration95/rewind-app/pull/581
+580,fix: shutter hint key collision and bare same-origin realtime URL,Unassigned,MERGED,dev,2026-10-20T07:33:44Z,2026-10-20,https://github.com/Collaboration95/rewind-app/pull/580
+579,test(frontend): raise client coverage with behavioural tests,Unassigned,MERGED,dev,2026-10-20T07:23:49Z,2026-10-20,https://github.com/Collaboration95/rewind-app/pull/579
+578,chore: delete dead code found by the 20 Oct audit,Unassigned,MERGED,dev,2026-10-20T06:48:03Z,2026-10-20,https://github.com/Collaboration95/rewind-app/pull/578
+577,test(server): cover API denials and lifecycle edge cases,Unassigned,MERGED,dev,2026-10-20T06:40:48Z,2026-10-20,https://github.com/Collaboration95/rewind-app/pull/577
+576,docs: cull superseded plans and refresh current documentation,Unassigned,MERGED,dev,2026-10-20T06:07:01Z,2026-10-20,https://github.com/Collaboration95/rewind-app/pull/576
+575,fix: preserve JPEG MIME type for native photo sealing,Unassigned,MERGED,dev,2026-10-19T06:24:41Z,2026-10-19,https://github.com/Collaboration95/rewind-app/pull/575
+573,fix: detect Android camera and microphone hardware,Unassigned,MERGED,dev,2026-10-19T06:10:49Z,2026-10-19,https://github.com/Collaboration95/rewind-app/pull/573
+571,chore(deps): bump the actions-all group with 4 updates,Unassigned,OPEN,dev,,,https://github.com/Collaboration95/rewind-app/pull/571
+570,chore(deps): bump the npm-all group across 1 directory with 13 updates,Unassigned,OPEN,dev,,,https://github.com/Collaboration95/rewind-app/pull/570
+569,chore(deps): bump the docker-all group in /deploy with 2 updates,Unassigned,OPEN,dev,,,https://github.com/Collaboration95/rewind-app/pull/569
+568,fix(pwa): release browser-owned realtime streams on chat close,Unassigned,MERGED,dev,2026-10-19T04:36:39Z,2026-10-19,https://github.com/Collaboration95/rewind-app/pull/568
+566,Fix group changes blocked by optional push discovery,Unassigned,MERGED,dev,2026-10-19T04:22:56Z,2026-10-19,https://github.com/Collaboration95/rewind-app/pull/566
+564,"Guard release startup, import activation and recovery reconciliation",Unassigned,MERGED,dev,2026-10-18T15:08:41Z,2026-10-18,https://github.com/Collaboration95/rewind-app/pull/564
+563,test: isolate recording fixtures and await processed clips,Unassigned,MERGED,dev,2026-10-18T14:27:58Z,2026-10-18,https://github.com/Collaboration95/rewind-app/pull/563
+562,ops: prepare release PostgreSQL cutover after reconciliation,Unassigned,OPEN,dev,,,https://github.com/Collaboration95/rewind-app/pull/562
+560,chore(deps): bump compression from 1.8.1 to 1.8.2,Unassigned,CLOSED,main,,,https://github.com/Collaboration95/rewind-app/pull/560
+559,"docs: complete correction, installation, safety and operations models",Unassigned,MERGED,dev,2026-10-15T07:28:22Z,2026-10-15,https://github.com/Collaboration95/rewind-app/pull/559
+557,docs: reconcile merged links and canonical model coverage,Unassigned,MERGED,dev,2026-10-15T07:18:50Z,2026-10-15,https://github.com/Collaboration95/rewind-app/pull/557
+555,docs: make current reusable references discoverable,Unassigned,MERGED,dev,2026-10-15T06:50:49Z,2026-10-15,https://github.com/Collaboration95/rewind-app/pull/555
+553,test: restore current real-account journey coverage,Unassigned,MERGED,dev,2026-10-19T04:53:04Z,2026-10-19,https://github.com/Collaboration95/rewind-app/pull/553
+552,Document current-code analysis and design models,Unassigned,MERGED,dev,2026-10-15T06:48:20Z,2026-10-15,https://github.com/Collaboration95/rewind-app/pull/552
+550,fix(capture): preserve the photo fallback after retake,Unassigned,MERGED,dev,2026-10-15T07:02:32Z,2026-10-15,https://github.com/Collaboration95/rewind-app/pull/550
+549,Prepare isolated release PostgreSQL and guarded recovery operations,Unassigned,MERGED,dev,2026-10-15T07:10:07Z,2026-10-15,https://github.com/Collaboration95/rewind-app/pull/549
+548,docs: map current architecture and correct learning guides,Unassigned,MERGED,dev,2026-10-15T06:43:11Z,2026-10-15,https://github.com/Collaboration95/rewind-app/pull/548
+547,"Document product walkthrough, client artifacts and current account guidance",Unassigned,MERGED,dev,2026-10-15T06:56:37Z,2026-10-15,https://github.com/Collaboration95/rewind-app/pull/547
+546,docs: index factual Sprint 0–3 project-conduct evidence,Unassigned,MERGED,dev,2026-10-15T06:32:46Z,2026-10-15,https://github.com/Collaboration95/rewind-app/pull/546
+544,docs: describe delivery pipeline and verification boundaries,Unassigned,MERGED,dev,2026-10-15T06:46:11Z,2026-10-15,https://github.com/Collaboration95/rewind-app/pull/544
+543,docs: explain the current relational database design,Unassigned,MERGED,dev,2026-10-15T06:30:01Z,2026-10-15,https://github.com/Collaboration95/rewind-app/pull/543
+542,docs: define current product baseline and use cases,Unassigned,MERGED,dev,2026-10-15T06:34:57Z,2026-10-15,https://github.com/Collaboration95/rewind-app/pull/542
+534,"[experiment, do not merge] browser checks on pre-batch dev",Unassigned,CLOSED,main,,,https://github.com/Collaboration95/rewind-app/pull/534
+533,"[experiment, do not merge] browser checks without #521",Unassigned,CLOSED,main,,,https://github.com/Collaboration95/rewind-app/pull/533
+532,fix(web-proxy): keep idle event streams open and release them with the browser,Unassigned,MERGED,dev,2026-10-12T10:31:30Z,2026-10-12,https://github.com/Collaboration95/rewind-app/pull/532
+531,Promote dev to main (Sprint 3 completion),Unassigned,MERGED,main,2026-10-19T05:41:19Z,2026-10-19,https://github.com/Collaboration95/rewind-app/pull/531
+530,chore(android): versionCode 2 for the refreshed test APK (#528),Unassigned,MERGED,dev,2026-10-12T10:03:24Z,2026-10-12,https://github.com/Collaboration95/rewind-app/pull/530
+529,"Sprint 3 completion batch: live state, downloads, reactions, reminders, benchmark, PG export",Unassigned,MERGED,dev,2026-10-12T09:31:14Z,2026-10-12,https://github.com/Collaboration95/rewind-app/pull/529
+520,docs: retain final Sprint 2 progress report,Unassigned,MERGED,dev,2026-10-10T16:45:13Z,2026-10-11,https://github.com/Collaboration95/rewind-app/pull/520
+519,chore(infra): retire backup-gated hibernation (#512),Unassigned,MERGED,dev,2026-10-09T05:17:13Z,2026-10-09,https://github.com/Collaboration95/rewind-app/pull/519
+518,"docs(ops): §5.5 signal locations and media lifecycle safety (#513, #514)",Unassigned,MERGED,dev,2026-10-09T04:45:03Z,2026-10-09,https://github.com/Collaboration95/rewind-app/pull/518
+517,ci: speed up Quality and test:fast (#493-#496),Unassigned,MERGED,dev,2026-10-08T14:39:05Z,2026-10-08,https://github.com/Collaboration95/rewind-app/pull/517
+516,chore(infra): remove the cost-safety audit Lambda,Unassigned,MERGED,dev,2026-10-09T05:04:58Z,2026-10-09,https://github.com/Collaboration95/rewind-app/pull/516
+511,fix(deploy): package the Cognito runtime dependencies in the server image,Unassigned,MERGED,dev,2026-10-08T08:30:37Z,2026-10-08,https://github.com/Collaboration95/rewind-app/pull/511
+510,feat(auth): sign in with Amazon Cognito Managed Login,Unassigned,MERGED,dev,2026-10-08T07:53:13Z,2026-10-08,https://github.com/Collaboration95/rewind-app/pull/510
+509,fix(hooks): stop git hook env vars leaking into tests,Unassigned,MERGED,dev,2026-10-08T14:17:14Z,2026-10-08,https://github.com/Collaboration95/rewind-app/pull/509
+508,Record the PostgreSQL restore rehearsal in the runbook,Unassigned,MERGED,dev,2026-10-07T16:41:05Z,2026-10-08,https://github.com/Collaboration95/rewind-app/pull/508
+507,Cut hosted dev over to PostgreSQL,Unassigned,MERGED,dev,2026-10-07T15:40:46Z,2026-10-07,https://github.com/Collaboration95/rewind-app/pull/507
+506,"PostgreSQL persistence, S3 import, managed backups and recovery",Unassigned,MERGED,dev,2026-10-07T15:28:29Z,2026-10-07,https://github.com/Collaboration95/rewind-app/pull/506
+501,"chore(agents): make review, review only on request or batch runs, worktree rule",Unassigned,MERGED,dev,2026-10-07T02:38:01Z,2026-10-07,https://github.com/Collaboration95/rewind-app/pull/501
+500,docs(analytics): cover sub-issues and refresh Sprint dashboard,Unassigned,MERGED,dev,2026-10-06T11:27:50Z,2026-10-06,https://github.com/Collaboration95/rewind-app/pull/500
+492,fix(deploy): make the daily host backup succeed,Unassigned,MERGED,dev,2026-10-07T13:45:30Z,2026-10-07,https://github.com/Collaboration95/rewind-app/pull/492
+490,"feat(ux): clearer sign-in, error and invite details",Unassigned,MERGED,dev,2026-10-06T11:24:31Z,2026-10-06,https://github.com/Collaboration95/rewind-app/pull/490
+489,fix(capture): match live look preview to sealed photo grading,Unassigned,MERGED,dev,2026-10-06T10:56:39Z,2026-10-06,https://github.com/Collaboration95/rewind-app/pull/489
+488,feat(auth): password eye toggle and build version flag,Unassigned,MERGED,dev,2026-10-06T12:25:19Z,2026-10-06,https://github.com/Collaboration95/rewind-app/pull/488
+487,feat(reminders): deliver weekly web push to browsers and the iPhone Home Screen app,Unassigned,MERGED,dev,2026-10-06T10:51:16Z,2026-10-06,https://github.com/Collaboration95/rewind-app/pull/487
+486,fix(capture): accept valid H.264/AAC files in WebKit,Unassigned,MERGED,dev,2026-10-06T10:35:23Z,2026-10-06,https://github.com/Collaboration95/rewind-app/pull/486
+485,"refactor(media): check stored media once, at playback, not on every listing",Unassigned,MERGED,dev,2026-10-06T10:45:27Z,2026-10-06,https://github.com/Collaboration95/rewind-app/pull/485
+480,chore(deps): bundle Dependabot updates that fit Expo SDK 57,Unassigned,MERGED,dev,2026-10-06T09:53:18Z,2026-10-06,https://github.com/Collaboration95/rewind-app/pull/480
+479,"fix(real): close out legal, capture, safety and Safari keyboard fixes",Unassigned,MERGED,dev,2026-10-06T09:32:18Z,2026-10-06,https://github.com/Collaboration95/rewind-app/pull/479
+474,feat(server): read-only admin table browser at /admin,Unassigned,MERGED,dev,2026-10-06T08:05:19Z,2026-10-06,https://github.com/Collaboration95/rewind-app/pull/474
+473,refactor!: remove synthetic Demo,Unassigned,MERGED,dev,2026-10-06T03:23:54Z,2026-10-06,https://github.com/Collaboration95/rewind-app/pull/473
+472,chore(deps): bump the npm-all group across 1 directory with 13 updates,Unassigned,CLOSED,dev,,,https://github.com/Collaboration95/rewind-app/pull/472
+471,docs(analytics): add generated Sprint analytics page,Unassigned,MERGED,dev,2026-10-06T01:39:33Z,2026-10-06,https://github.com/Collaboration95/rewind-app/pull/471
+466,"Capture: live looks, reliable upload, readable review",Unassigned,MERGED,dev,2026-10-05T15:20:47Z,2026-10-05,https://github.com/Collaboration95/rewind-app/pull/466
+465,Try Demo on the Warm Glass UI,Unassigned,MERGED,dev,2026-10-05T16:20:34Z,2026-10-06,https://github.com/Collaboration95/rewind-app/pull/465
+464,"Safety: rate limits, headers, moderation records, session expiry and complete test discovery",Unassigned,MERGED,dev,2026-10-05T15:00:51Z,2026-10-05,https://github.com/Collaboration95/rewind-app/pull/464
+462,"Real app: film end, small-phone chat, offline sign-in, copy fixes, Settings safety tests",Unassigned,MERGED,dev,2026-10-05T15:30:42Z,2026-10-05,https://github.com/Collaboration95/rewind-app/pull/462
+442,"iPhone walkthrough fixes: keyboard cover, film playback, removed moments",Unassigned,MERGED,dev,2026-10-05T12:23:57Z,2026-10-05,https://github.com/Collaboration95/rewind-app/pull/442
+441,chore(deps): bump the npm-all group across 1 directory with 11 updates,Unassigned,CLOSED,dev,,,https://github.com/Collaboration95/rewind-app/pull/441
+440,Warm Glass UI rewrite,Unassigned,MERGED,dev,2026-10-05T11:13:37Z,2026-10-05,https://github.com/Collaboration95/rewind-app/pull/440
+439,fix: wait for camera frame before stills; explain rejected sign-up fields,Unassigned,MERGED,dev,2026-10-05T05:42:25Z,2026-10-05,https://github.com/Collaboration95/rewind-app/pull/439
+438,Add native and agentic Vigolium DAST trials,Unassigned,OPEN,dev,,,https://github.com/Collaboration95/rewind-app/pull/438
+437,"App Store readiness: account deletion, report/block, privacy pages, iOS config",Unassigned,MERGED,dev,2026-10-05T05:12:58Z,2026-10-05,https://github.com/Collaboration95/rewind-app/pull/437
+426,chore(deps): bump the actions-all group across 1 directory with 4 updates,Unassigned,CLOSED,dev,,,https://github.com/Collaboration95/rewind-app/pull/426
+425,chore(deps): bump the npm-all group with 10 updates,Unassigned,CLOSED,dev,,,https://github.com/Collaboration95/rewind-app/pull/425
+424,chore(deps): bump nginx from 1.31.5-alpine to 1.31.6-alpine in /deploy in the docker-all group across 1 directory,Unassigned,CLOSED,dev,,,https://github.com/Collaboration95/rewind-app/pull/424
+423,test(browser): accept VP9 video from open-source Chromium recordings,Unassigned,MERGED,dev,2026-10-04T14:08:57Z,2026-10-04,https://github.com/Collaboration95/rewind-app/pull/423
+422,test(browser): accept Opus audio from open-source Chromium recordings,Unassigned,MERGED,dev,2026-10-04T13:58:19Z,2026-10-04,https://github.com/Collaboration95/rewind-app/pull/422
+421,Promote dev to main: first release (4 Oct 2026),Unassigned,MERGED,main,2026-10-04T14:59:01Z,2026-10-04,https://github.com/Collaboration95/rewind-app/pull/421
+420,feat(release): independent release environment deployed from main (#230),Unassigned,MERGED,dev,2026-10-04T13:50:52Z,2026-10-04,https://github.com/Collaboration95/rewind-app/pull/420
+419,"feat(capture): retro looks before upload (#366, #367)",Unassigned,MERGED,dev,2026-10-04T13:42:30Z,2026-10-04,https://github.com/Collaboration95/rewind-app/pull/419
+418,"feat(observability): request timing logs, client timing marks, host alarms",Unassigned,MERGED,dev,2026-10-04T13:32:50Z,2026-10-04,https://github.com/Collaboration95/rewind-app/pull/418
+417,feat(hosted): deliver hosted settings from Terraform; host-generated web push keys,Unassigned,MERGED,dev,2026-10-04T13:12:25Z,2026-10-04,https://github.com/Collaboration95/rewind-app/pull/417
+416,feat(hosted): private S3 media and scheduled web push reminders,Unassigned,MERGED,dev,2026-10-04T12:28:12Z,2026-10-04,https://github.com/Collaboration95/rewind-app/pull/416
+415,feat(capture): 1080p in-page video with a camera-shaped viewfinder,Unassigned,MERGED,dev,2026-10-04T11:43:34Z,2026-10-04,https://github.com/Collaboration95/rewind-app/pull/415
+414,"feat(capture): phone camera sheet on web, landscape capture, 720p film",Unassigned,MERGED,dev,2026-10-04T11:11:06Z,2026-10-04,https://github.com/Collaboration95/rewind-app/pull/414
+412,chore(dev): give make run-real groups a 10-minute cycle,Unassigned,MERGED,dev,2026-10-04T10:21:44Z,2026-10-04,https://github.com/Collaboration95/rewind-app/pull/412
+411,feat(server): configurable real-group cycle length,Unassigned,MERGED,dev,2026-10-04T10:17:52Z,2026-10-04,https://github.com/Collaboration95/rewind-app/pull/411
+410,docs(claude): Claude-only merge authority and review-agent tiers,Unassigned,MERGED,dev,2026-10-04T10:04:38Z,2026-10-04,https://github.com/Collaboration95/rewind-app/pull/410
+409,fix(deploy): prune old releases and check disk before staging,Unassigned,MERGED,dev,2026-10-04T10:08:22Z,2026-10-04,https://github.com/Collaboration95/rewind-app/pull/409
+408,feat(dev): run the real-account app locally with make run-real,Unassigned,MERGED,dev,2026-10-04T10:15:02Z,2026-10-04,https://github.com/Collaboration95/rewind-app/pull/408
+407,"fix(real-account): bottom navigation, capture back, still warm-up retry, portrait cover",Unassigned,MERGED,dev,2026-10-04T10:01:55Z,2026-10-04,https://github.com/Collaboration95/rewind-app/pull/407
+406,"chore(harness): simplify tracking, skills and planning docs",Unassigned,MERGED,dev,2026-10-04T09:31:37Z,2026-10-04,https://github.com/Collaboration95/rewind-app/pull/406
+405,docs(agents): adopt lean Definition of Done and verification tiers,Unassigned,MERGED,dev,2026-10-04T08:49:00Z,2026-10-04,https://github.com/Collaboration95/rewind-app/pull/405
+404,Show the deployed build commit on Home,Unassigned,MERGED,dev,2026-10-04T05:21:10Z,2026-10-04,https://github.com/Collaboration95/rewind-app/pull/404
+400,fix(demo): protect real-account data and incorporate report models,Unassigned,MERGED,dev,2026-10-04T03:35:09Z,2026-10-04,https://github.com/Collaboration95/rewind-app/pull/400
+398,feat(observability): add optional filesystem capacity probe,Unassigned,MERGED,dev,2026-10-04T00:20:33Z,2026-10-04,https://github.com/Collaboration95/rewind-app/pull/398
+397,docs(report): assemble factual Sprint 2 report draft,Unassigned,MERGED,dev,2026-10-03T19:49:27Z,2026-10-04,https://github.com/Collaboration95/rewind-app/pull/397
+396,test(groups): verify real browser group switching,Unassigned,MERGED,dev,2026-10-03T18:13:22Z,2026-10-04,https://github.com/Collaboration95/rewind-app/pull/396
+395,docs(report-participation): model prompts reminders and chat,Unassigned,MERGED,dev,2026-10-03T18:55:29Z,2026-10-04,https://github.com/Collaboration95/rewind-app/pull/395
+394,docs(report-archive): model archive access and client delivery,Unassigned,MERGED,dev,2026-10-03T19:21:38Z,2026-10-04,https://github.com/Collaboration95/rewind-app/pull/394
+393,docs(perf): reconcile reported profiling observations,Unassigned,MERGED,dev,2026-10-03T17:45:51Z,2026-10-04,https://github.com/Collaboration95/rewind-app/pull/393
+392,fix(capture): explain web portrait guidance before recording,Unassigned,MERGED,dev,2026-10-03T17:38:18Z,2026-10-04,https://github.com/Collaboration95/rewind-app/pull/392
+391,docs(report-capture): complete UC04–UC06 models,Unassigned,MERGED,dev,2026-10-03T18:09:08Z,2026-10-04,https://github.com/Collaboration95/rewind-app/pull/391
+390,docs(report-cycle): cover UC07 and UC08 models,Unassigned,MERGED,dev,2026-10-03T17:53:48Z,2026-10-04,https://github.com/Collaboration95/rewind-app/pull/390
+389,docs(report-access): complete requirement trace and source pins,Unassigned,MERGED,dev,2026-10-03T16:36:00Z,2026-10-04,https://github.com/Collaboration95/rewind-app/pull/389
+388,fix(chat): preserve API prefix once in authenticated writes,Unassigned,MERGED,dev,2026-10-03T17:26:37Z,2026-10-04,https://github.com/Collaboration95/rewind-app/pull/388
+387,fix(capture): show the selected group throughout photo capture,Unassigned,MERGED,dev,2026-10-03T16:06:39Z,2026-10-04,https://github.com/Collaboration95/rewind-app/pull/387
+383,feat(platform): add private signals and unblock delivery checks,Unassigned,MERGED,dev,2026-10-03T13:20:05Z,2026-10-03,https://github.com/Collaboration95/rewind-app/pull/383
+382,docs(delivery): link native builds and explain CI behavior,Unassigned,MERGED,dev,2026-10-03T12:20:47Z,2026-10-03,https://github.com/Collaboration95/rewind-app/pull/382
+381,feat(terraform): prepare bounded environment plan and apply identities,Unassigned,CLOSED,dev,,,https://github.com/Collaboration95/rewind-app/pull/381
+380,feat(build): prepare reproducible native preview artifacts,Unassigned,CLOSED,dev,,,https://github.com/Collaboration95/rewind-app/pull/380
+379,"feat(platform): consolidate CI, native builds, capture and environments",Unassigned,MERGED,dev,2026-10-03T12:05:59Z,2026-10-03,https://github.com/Collaboration95/rewind-app/pull/379
+378,Wire private device reminders and authorized notification taps,Unassigned,MERGED,dev,2026-10-03T11:25:28Z,2026-10-03,https://github.com/Collaboration95/rewind-app/pull/378
+377,Prepare read-only retained-media inventory and resumable copies,Unassigned,MERGED,dev,2026-10-03T10:34:55Z,2026-10-03,https://github.com/Collaboration95/rewind-app/pull/377
+376,Measure bounded real-group API and film performance,Unassigned,MERGED,dev,2026-10-03T09:24:44Z,2026-10-03,https://github.com/Collaboration95/rewind-app/pull/376
+375,Prepare private environment media roots and signed retention tags,Unassigned,MERGED,dev,2026-10-03T09:35:19Z,2026-10-03,https://github.com/Collaboration95/rewind-app/pull/375
+374,test(capture): verify real WebKit audio and recording cleanup,Unassigned,MERGED,dev,2026-10-03T08:14:14Z,2026-10-03,https://github.com/Collaboration95/rewind-app/pull/374
+373,fix(reminders): discard settings responses after context changes,Unassigned,MERGED,dev,2026-10-03T07:59:36Z,2026-10-03,https://github.com/Collaboration95/rewind-app/pull/373
+372,test(media): verify real recording and private upload boundaries,Unassigned,MERGED,dev,2026-10-03T02:57:09Z,2026-10-03,https://github.com/Collaboration95/rewind-app/pull/372
+371,fix(capture): keep Safari review inline and restore dependency audit,Unassigned,MERGED,dev,2026-10-03T02:14:32Z,2026-10-03,https://github.com/Collaboration95/rewind-app/pull/371
+370,fix(server-tests): pin media fixtures to owned loopback servers,Unassigned,MERGED,dev,2026-10-02T19:00:43Z,2026-10-03,https://github.com/Collaboration95/rewind-app/pull/370
+369,fix: correct hosted acceptance failures after #368,Unassigned,MERGED,dev,2026-10-02T18:42:08Z,2026-10-03,https://github.com/Collaboration95/rewind-app/pull/369
+368,feat(sprint-2): automate private group capture and releases,Unassigned,MERGED,dev,2026-10-02T17:01:13Z,2026-10-03,https://github.com/Collaboration95/rewind-app/pull/368
+335,security: prepare local agentic coverage review,Unassigned,CLOSED,codex/vigolium-dast-review,,,https://github.com/Collaboration95/rewind-app/pull/335
+334,ci: move browser checks to main PRs,Unassigned,MERGED,dev,2026-10-01T06:45:21Z,2026-10-01,https://github.com/Collaboration95/rewind-app/pull/334
+333,Retire old Demo distribution and publish one hosted HTTPS URL,Unassigned,MERGED,dev,2026-10-04T09:43:45Z,2026-10-04,https://github.com/Collaboration95/rewind-app/pull/333
+332,security: add Vigolium dev DAST trial for review,Unassigned,CLOSED,dev,,,https://github.com/Collaboration95/rewind-app/pull/332
+331,revert: keep Vigolium setup pending review,Unassigned,MERGED,dev,2026-10-01T03:58:51Z,2026-10-01,https://github.com/Collaboration95/rewind-app/pull/331
+330,security: automate bounded Vigolium DAST on dev,Unassigned,MERGED,dev,2026-10-01T03:49:25Z,2026-10-01,https://github.com/Collaboration95/rewind-app/pull/330
+326,fix(ci): trust GitHub's immutable OIDC subject for the dev deploy role,Unassigned,MERGED,dev,2026-10-01T02:28:00Z,2026-10-01,https://github.com/Collaboration95/rewind-app/pull/326
+325,docs(perf): sync #267 research brief with reviewed content + Long's iOS findings,Unassigned,CLOSED,dev,,,https://github.com/Collaboration95/rewind-app/pull/325
+324,ci: deploy dev to the hosted Lightsail host from GitHub Actions,Unassigned,MERGED,dev,2026-10-01T02:11:03Z,2026-10-01,https://github.com/Collaboration95/rewind-app/pull/324
+323,"Fix entry flows, focus transitions, and mobile welcome spacing",Unassigned,MERGED,dev,2026-10-01T00:14:51Z,2026-10-01,https://github.com/Collaboration95/rewind-app/pull/323
+322,fix(ui): remove sample label from Home,Unassigned,MERGED,dev,2026-09-30T15:25:40Z,2026-09-30,https://github.com/Collaboration95/rewind-app/pull/322
+320,"Ship Project 11 entry, registration, and evidence",Unassigned,MERGED,dev,2026-09-30T13:13:03Z,2026-09-30,https://github.com/Collaboration95/rewind-app/pull/320
+318,Route Lightsail CDN visitors to authenticated Rewind URL,Unassigned,MERGED,dev,2026-09-30T04:43:32Z,2026-09-30,https://github.com/Collaboration95/rewind-app/pull/318
+317,Allow owners to revoke short invitation codes,Unassigned,MERGED,dev,2026-09-29T18:41:28Z,2026-09-30,https://github.com/Collaboration95/rewind-app/pull/317
+316,Add short invites and a full-screen photo shutter,Unassigned,MERGED,dev,2026-09-29T18:22:37Z,2026-09-30,https://github.com/Collaboration95/rewind-app/pull/316
+315,"Fix iPhone app frame, capture scrolling, and member copy",Unassigned,MERGED,dev,2026-09-29T17:56:05Z,2026-09-30,https://github.com/Collaboration95/rewind-app/pull/315
+310,Fix Android Expo Go startup for #243,Unassigned,MERGED,dev,2026-09-29T17:38:03Z,2026-09-30,https://github.com/Collaboration95/rewind-app/pull/310
+303,Fix #243 CloudFront HTTPS origin forwarding,Unassigned,MERGED,dev,2026-09-29T17:08:19Z,2026-09-30,https://github.com/Collaboration95/rewind-app/pull/303
+302,feat(auth): enable trusted HTTPS edge for real sign-in,Unassigned,MERGED,dev,2026-09-29T16:59:19Z,2026-09-30,https://github.com/Collaboration95/rewind-app/pull/302
+301,feat(auth): enable trusted HTTPS edge for real sign-in,Unassigned,CLOSED,dev,,,https://github.com/Collaboration95/rewind-app/pull/301
+300,Fix release guard for Docker-loaded images,Unassigned,MERGED,dev,2026-09-29T15:54:25Z,2026-09-29,https://github.com/Collaboration95/rewind-app/pull/300
+298,infra: reserve isolated dev and prod state keys,Unassigned,MERGED,dev,2026-10-03T11:01:24Z,2026-10-03,https://github.com/Collaboration95/rewind-app/pull/298
+297,fix(auth): clarify local HTTP entry feedback,Unassigned,MERGED,dev,2026-09-29T08:00:53Z,2026-09-29,https://github.com/Collaboration95/rewind-app/pull/297
+293,docs: record sprint 2 aws cost ceiling,Unassigned,MERGED,dev,2026-09-29T05:50:33Z,2026-09-29,https://github.com/Collaboration95/rewind-app/pull/293
+292,docs: align Sprint 2 Done gate with accepted dev changes,Unassigned,MERGED,dev,2026-09-29T02:47:07Z,2026-09-29,https://github.com/Collaboration95/rewind-app/pull/292
+291,test: restore production Demo reset-to-reveal journey,Unassigned,MERGED,dev,2026-09-29T01:46:25Z,2026-09-29,https://github.com/Collaboration95/rewind-app/pull/291
+290,chore: target Dependabot updates at dev,Unassigned,MERGED,dev,2026-09-29T00:57:58Z,2026-09-29,https://github.com/Collaboration95/rewind-app/pull/290
+289,Implement Sprint 2 contribution ledger and limits,Unassigned,MERGED,dev,2026-09-29T00:46:44Z,2026-09-29,https://github.com/Collaboration95/rewind-app/pull/289
+288,feat(chat): connect real group conversations,Unassigned,MERGED,dev,2026-09-29T00:38:00Z,2026-09-29,https://github.com/Collaboration95/rewind-app/pull/288
+287,feat(capture): submit photo contributions,Unassigned,MERGED,dev,2026-09-29T00:34:28Z,2026-09-29,https://github.com/Collaboration95/rewind-app/pull/287
+286,feat(capture): record video in web app,Unassigned,MERGED,dev,2026-09-29T00:30:09Z,2026-09-29,https://github.com/Collaboration95/rewind-app/pull/286
+285,[S2] Record and submit a 15-second video from a real phone (#247),Unassigned,MERGED,dev,2026-09-29T00:23:42Z,2026-09-29,https://github.com/Collaboration95/rewind-app/pull/285
+284,feat(groups): show real group members and selected-group context,Unassigned,MERGED,dev,2026-09-29T00:26:46Z,2026-09-29,https://github.com/Collaboration95/rewind-app/pull/284
+283,test: align reset-to-reveal journey with current Demo entry,Unassigned,MERGED,dev,2026-09-29T00:09:05Z,2026-09-29,https://github.com/Collaboration95/rewind-app/pull/283
+282,[S2] Join real groups by invitation (#246),Unassigned,MERGED,dev,2026-09-29T00:19:16Z,2026-09-29,https://github.com/Collaboration95/rewind-app/pull/282
+281,[S2] Create and share real group invitations (#245),Unassigned,MERGED,dev,2026-09-29T00:16:15Z,2026-09-29,https://github.com/Collaboration95/rewind-app/pull/281
+280,[S2] Create private real four-week groups (#244),Unassigned,MERGED,dev,2026-09-29T00:13:03Z,2026-09-29,https://github.com/Collaboration95/rewind-app/pull/280
+279,chore(deps): bump github/codeql-action/analyze from 4.38.1 to 4.38.2,Unassigned,CLOSED,dev,,,https://github.com/Collaboration95/rewind-app/pull/279
+278,chore(deps): bump github/codeql-action/init from 4.38.1 to 4.38.2,Unassigned,CLOSED,dev,,,https://github.com/Collaboration95/rewind-app/pull/278
+277,chore(deps): bump react-native from 0.86.3 to 0.87.1,Unassigned,CLOSED,dev,,,https://github.com/Collaboration95/rewind-app/pull/277
+276,chore(deps): bump expo-file-system from 57.0.6 to 57.0.7,Unassigned,CLOSED,main,,,https://github.com/Collaboration95/rewind-app/pull/276
+275,chore(deps): bump expo-camera from 57.0.4 to 57.0.5,Unassigned,CLOSED,dev,,,https://github.com/Collaboration95/rewind-app/pull/275
+274,chore(deps-dev): bump typescript from 6.0.3 to 7.0.2,Unassigned,CLOSED,dev,,,https://github.com/Collaboration95/rewind-app/pull/274
+273,chore(deps): bump expo-clipboard from 57.0.1 to 57.0.2,Unassigned,MERGED,dev,2026-09-29T01:23:32Z,2026-09-29,https://github.com/Collaboration95/rewind-app/pull/273
+272,chore(deps): bump actions/checkout from 4.3.1 to 7.0.1,Unassigned,MERGED,dev,2026-09-29T01:36:12Z,2026-09-29,https://github.com/Collaboration95/rewind-app/pull/272
+271,chore(deps): bump nginx from 1.31.1-alpine to 1.31.5-alpine in /deploy,Unassigned,MERGED,dev,2026-09-29T01:31:07Z,2026-09-29,https://github.com/Collaboration95/rewind-app/pull/271
+270,docs: remove stale design document references (#229),Unassigned,MERGED,dev,2026-09-29T16:53:34Z,2026-09-30,https://github.com/Collaboration95/rewind-app/pull/270
+269,chore(release): promote current dev to main (#229),Unassigned,CLOSED,main,,,https://github.com/Collaboration95/rewind-app/pull/269
+268,feat(auth): add real account sign-in flow,Unassigned,MERGED,dev,2026-09-29T00:03:22Z,2026-09-29,https://github.com/Collaboration95/rewind-app/pull/268
+266,[S2] Add real account and session auth API,Unassigned,MERGED,dev,2026-09-29T00:00:20Z,2026-09-29,https://github.com/Collaboration95/rewind-app/pull/266
+265,Document guarded Sprint 2 environment transition,Unassigned,MERGED,dev,2026-09-29T00:06:24Z,2026-09-29,https://github.com/Collaboration95/rewind-app/pull/265
+264,feat: add explicit Rewind first-run entry,Unassigned,MERGED,dev,2026-09-28T23:56:50Z,2026-09-29,https://github.com/Collaboration95/rewind-app/pull/264
+263,docs: record Sprint 2 AWS cost ceiling,Unassigned,MERGED,dev,2026-09-29T08:27:13Z,2026-09-29,https://github.com/Collaboration95/rewind-app/pull/263
+262,docs: revise Rewind base plan for live AWS state and S3 uploads,Unassigned,MERGED,dev,2026-09-28T10:12:22Z,2026-09-28,https://github.com/Collaboration95/rewind-app/pull/262
+260,Make native camera and clip capture work on real phones,Unassigned,CLOSED,dev,,,https://github.com/Collaboration95/rewind-app/pull/260
+257,ci: skip Quality and CodeQL for documentation-only changes,Unassigned,MERGED,dev,2026-09-30T11:17:52Z,2026-09-30,https://github.com/Collaboration95/rewind-app/pull/257
+256,feat(ui): Atelier Home concept for peer review,Unassigned,CLOSED,dev,,,https://github.com/Collaboration95/rewind-app/pull/256
+255,chore: remove obsolete review evidence,Unassigned,MERGED,dev,2026-09-28T01:48:43Z,2026-09-28,https://github.com/Collaboration95/rewind-app/pull/255
+237,Add verify-issue intake skill,Unassigned,MERGED,dev,2026-09-27T22:42:05Z,2026-09-28,https://github.com/Collaboration95/rewind-app/pull/237
+236,Map Sprint 2 product journey and first delivery slice,Unassigned,MERGED,dev,2026-09-27T13:25:01Z,2026-09-27,https://github.com/Collaboration95/rewind-app/pull/236
+235,Move Demo member switching into Settings,Unassigned,MERGED,dev,2026-09-27T11:58:48Z,2026-09-27,https://github.com/Collaboration95/rewind-app/pull/235
+233,Align Sprint 2 and 3 forecast dates,Unassigned,MERGED,dev,2026-09-27T10:14:58Z,2026-09-27,https://github.com/Collaboration95/rewind-app/pull/233
+231,Establish protected dev integration workflow,Unassigned,MERGED,dev,2026-09-27T10:07:19Z,2026-09-27,https://github.com/Collaboration95/rewind-app/pull/231
+227,Add one-command iPhone and web LAN development launch,Unassigned,MERGED,dev,2026-09-27T10:10:41Z,2026-09-27,https://github.com/Collaboration95/rewind-app/pull/227
+226,docs: remove obsolete Sprint 1 artifacts,Unassigned,MERGED,codex/sprint-label-reconciliation,2026-09-27T08:16:10Z,2026-09-27,https://github.com/Collaboration95/rewind-app/pull/226
+225,chore(deps): consolidate compatible Dependabot updates,Unassigned,MERGED,main,2026-09-27T08:43:06Z,2026-09-27,https://github.com/Collaboration95/rewind-app/pull/225
+224,Fix post-merge security baseline and uuid advisory,Unassigned,MERGED,main,2026-09-26T10:56:47Z,2026-09-26,https://github.com/Collaboration95/rewind-app/pull/224
+223,fix(deps): replace vulnerable transitive uuid version,Unassigned,CLOSED,main,,,https://github.com/Collaboration95/rewind-app/pull/223
+222,fix(server): hash media through stable file descriptors,Unassigned,CLOSED,main,,,https://github.com/Collaboration95/rewind-app/pull/222
+221,fix(capture): restrict browser video source to blob URLs,Unassigned,CLOSED,main,,,https://github.com/Collaboration95/rewind-app/pull/221
+220,fix(web): pin proxy requests to configured runtime,Unassigned,CLOSED,main,,,https://github.com/Collaboration95/rewind-app/pull/220
+219,Fix release source archive extraction safety,Unassigned,CLOSED,main,,,https://github.com/Collaboration95/rewind-app/pull/219
+218,build(deps): bump node from 22.23.3-bookworm-slim to 26.10.0-bookworm-slim in /deploy,Unassigned,CLOSED,main,,,https://github.com/Collaboration95/rewind-app/pull/218
+217,build(deps): bump github/codeql-action/analyze from 4.31.10 to 4.38.1,Unassigned,CLOSED,main,,,https://github.com/Collaboration95/rewind-app/pull/217
+216,build(deps): bump react-dom from 19.2.3 to 19.3.0,Unassigned,CLOSED,main,,,https://github.com/Collaboration95/rewind-app/pull/216
+215,build(deps): bump expo-video from 57.0.4 to 58.0.2,Unassigned,CLOSED,main,,,https://github.com/Collaboration95/rewind-app/pull/215
+214,build(deps-dev): bump eslint from 9.39.5 to 10.11.0,Unassigned,CLOSED,main,,,https://github.com/Collaboration95/rewind-app/pull/214
+213,build(deps): bump expo-device from 57.0.1 to 57.0.2,Unassigned,CLOSED,main,,,https://github.com/Collaboration95/rewind-app/pull/213
+212,build(deps-dev): bump prettier from 3.9.6 to 3.9.9 in the development-dependencies group across 1 directory,Unassigned,CLOSED,main,,,https://github.com/Collaboration95/rewind-app/pull/212
+211,build(deps): bump actions/setup-node from 4.4.0 to 7.0.0,Unassigned,CLOSED,main,,,https://github.com/Collaboration95/rewind-app/pull/211
+210,build(deps): bump actions/upload-artifact from 4.6.2 to 7.0.1,Unassigned,CLOSED,main,,,https://github.com/Collaboration95/rewind-app/pull/210
+209,build(deps): bump nginx from 1.30.5-alpine to 1.31.0-alpine in /deploy,Unassigned,CLOSED,main,,,https://github.com/Collaboration95/rewind-app/pull/209
+207,perf: bound chat and archive history delivery,Unassigned,MERGED,main,2026-09-26T09:13:54Z,2026-09-26,https://github.com/Collaboration95/rewind-app/pull/207
+206,"fix: restore Demo chat, reveal, and fixture consistency",Unassigned,MERGED,main,2026-09-26T08:36:10Z,2026-09-26,https://github.com/Collaboration95/rewind-app/pull/206
+205,Bind Demo releases to green image bundles and health-gated rollback,Unassigned,MERGED,main,2026-09-26T08:31:09Z,2026-09-26,https://github.com/Collaboration95/rewind-app/pull/205
+204,Add CI coverage and release security gates,Unassigned,MERGED,main,2026-09-26T09:07:59Z,2026-09-26,https://github.com/Collaboration95/rewind-app/pull/204
+202,docs: reconcile sprint 1 naming,Unassigned,MERGED,main,2026-09-27T08:15:10Z,2026-09-27,https://github.com/Collaboration95/rewind-app/pull/202
+201,Darkroom UI concept for review (#189),Unassigned,CLOSED,main,,,https://github.com/Collaboration95/rewind-app/pull/201
+198,"feat(media): add bounded retention and consistency repair (#176, #171)",Unassigned,MERGED,main,2026-09-25T06:59:45Z,2026-09-25,https://github.com/Collaboration95/rewind-app/pull/198
+197,feat(archive): add cycle history metadata (#156),Unassigned,MERGED,main,2026-09-25T06:37:45Z,2026-09-25,https://github.com/Collaboration95/rewind-app/pull/197
+196,feat(a11y): add browser accessibility gate and focus management (#155),Unassigned,MERGED,main,2026-09-25T06:05:12Z,2026-09-25,https://github.com/Collaboration95/rewind-app/pull/196
+195,feat(contributions): add metadata-only current-cycle ledger (#158),Unassigned,MERGED,main,2026-09-25T06:28:45Z,2026-09-25,https://github.com/Collaboration95/rewind-app/pull/195
+194,feat(chat): add scoped unread badge and connection status,Unassigned,MERGED,main,2026-09-25T05:47:50Z,2026-09-25,https://github.com/Collaboration95/rewind-app/pull/194
+193,fix(capture): make recording and upload interruption deterministic,Unassigned,MERGED,main,2026-09-25T05:47:42Z,2026-09-25,https://github.com/Collaboration95/rewind-app/pull/193
+192,feat(media): persist and verify finalized media integrity (#157),Unassigned,MERGED,main,2026-09-25T06:04:46Z,2026-09-25,https://github.com/Collaboration95/rewind-app/pull/192
+191,feat(jobs): run media and film jobs from a durable local worker loop,Unassigned,MERGED,main,2026-09-25T05:47:30Z,2026-09-25,https://github.com/Collaboration95/rewind-app/pull/191
+188,fix(deploy): expose hosted web origin (#147),Unassigned,MERGED,main,2026-09-23T06:24:16Z,2026-09-23,https://github.com/Collaboration95/rewind-app/pull/188
+187,fix(terraform): use Lightsail HTTP method enum,Unassigned,MERGED,main,2026-09-23T05:40:36Z,2026-09-23,https://github.com/Collaboration95/rewind-app/pull/187
+186,fix(terraform): route Lightsail distribution globally,Unassigned,MERGED,main,2026-09-23T05:33:52Z,2026-09-23,https://github.com/Collaboration95/rewind-app/pull/186
+185,fix(terraform): ignore bootstrap-only host drift,Unassigned,MERGED,main,2026-09-23T05:24:56Z,2026-09-23,https://github.com/Collaboration95/rewind-app/pull/185
+184,docs: record live Demo operating owners,Unassigned,MERGED,main,2026-09-23T03:05:49Z,2026-09-23,https://github.com/Collaboration95/rewind-app/pull/184
+183,feat: add platform-aware capture fallback and locked-state education,Unassigned,MERGED,main,2026-09-22T15:13:02Z,2026-09-22,https://github.com/Collaboration95/rewind-app/pull/183
+182,feat(queue): add group-scoped job observability,Unassigned,MERGED,main,2026-09-22T09:48:14Z,2026-09-22,https://github.com/Collaboration95/rewind-app/pull/182
+181,fix(media): guarantee aborted upload cleanup,Unassigned,MERGED,main,2026-09-22T09:22:36Z,2026-09-22,https://github.com/Collaboration95/rewind-app/pull/181
+180,feat: add installable offline-safe PWA shell,Unassigned,MERGED,main,2026-09-22T15:02:59Z,2026-09-22,https://github.com/Collaboration95/rewind-app/pull/180
+179,feat: prove film output and label archive filler,Unassigned,MERGED,main,2026-09-22T08:32:54Z,2026-09-22,https://github.com/Collaboration95/rewind-app/pull/179
+178,feat: bound HTTP request intake and processing,Unassigned,MERGED,main,2026-09-22T08:15:12Z,2026-09-22,https://github.com/Collaboration95/rewind-app/pull/178
+163,feat: add opt-in public HTTPS demo distribution,Unassigned,MERGED,main,2026-09-22T07:51:51Z,2026-09-22,https://github.com/Collaboration95/rewind-app/pull/163
+162,feat: add deep-link invite sharing,Unassigned,MERGED,main,2026-09-22T14:58:52Z,2026-09-22,https://github.com/Collaboration95/rewind-app/pull/162
+161,fix: make archive downloads collision-safe,Unassigned,MERGED,main,2026-09-22T07:41:35Z,2026-09-22,https://github.com/Collaboration95/rewind-app/pull/161
+152,test: prove production cross-group denial,Unassigned,MERGED,main,2026-09-22T07:27:20Z,2026-09-22,https://github.com/Collaboration95/rewind-app/pull/152
+151,test: cover navigation regressions and selected tabs,Unassigned,MERGED,main,2026-09-22T07:22:27Z,2026-09-22,https://github.com/Collaboration95/rewind-app/pull/151
+150,test: cover group and invite failure paths,Unassigned,MERGED,main,2026-09-22T07:18:59Z,2026-09-22,https://github.com/Collaboration95/rewind-app/pull/150
+135,Add local reminder preferences,Unassigned,MERGED,main,2026-09-22T14:55:15Z,2026-09-22,https://github.com/Collaboration95/rewind-app/pull/135
+134,fix: harden hosted Demo hibernation and recovery guards,Unassigned,MERGED,main,2026-09-21T08:45:09Z,2026-09-21,https://github.com/Collaboration95/rewind-app/pull/134
+133,feat: complete hosted demo hardening backlog,Unassigned,MERGED,main,2026-09-19T03:42:50Z,2026-09-19,https://github.com/Collaboration95/rewind-app/pull/133
+99,infra: codify AWS foundation and power automation,Unassigned,MERGED,main,2026-09-17T15:13:48Z,2026-09-17,https://github.com/Collaboration95/rewind-app/pull/99
+96,"Sprint 1: contribution, media, chat, cycle, and compilation workflows",Unassigned,MERGED,main,2026-09-14T05:52:35Z,2026-09-14,https://github.com/Collaboration95/rewind-app/pull/96
+94,docs: define autonomous-first Sprint 2 phases,Unassigned,MERGED,main,2026-09-13T03:55:41Z,2026-09-13,https://github.com/Collaboration95/rewind-app/pull/94
+93,fix: stabilize PR 92 quality checks,Unassigned,MERGED,main,2026-09-12T14:43:25Z,2026-09-12,https://github.com/Collaboration95/rewind-app/pull/93
+92,feat: polish demo capture and invite flows,Unassigned,MERGED,main,2026-09-12T14:31:57Z,2026-09-12,https://github.com/Collaboration95/rewind-app/pull/92
+91,feat: deliver Sprint 1 fixes and local capture flow,Unassigned,MERGED,main,2026-09-11T08:19:42Z,2026-09-11,https://github.com/Collaboration95/rewind-app/pull/91
+80,"feat: integrate local Demo, cycle controls, and still capture",Unassigned,MERGED,main,2026-09-11T08:33:11Z,2026-09-11,https://github.com/Collaboration95/rewind-app/pull/80
+79,feat: add explicit demo sessions and safe audit diagnostics,Unassigned,MERGED,main,2026-09-10T06:56:12Z,2026-09-10,https://github.com/Collaboration95/rewind-app/pull/79
+78,feat: add Sprint 0 local runtime foundation,Unassigned,MERGED,main,2026-09-10T05:51:03Z,2026-09-10,https://github.com/Collaboration95/rewind-app/pull/78
+77,docs: close Sprint 0 and record Sprint 1 extension,Unassigned,MERGED,main,2026-09-10T05:51:04Z,2026-09-10,https://github.com/Collaboration95/rewind-app/pull/77
+17,feat: add repository-backed group capsule summary,Unassigned,MERGED,main,2026-09-09T15:57:33Z,2026-09-09,https://github.com/Collaboration95/rewind-app/pull/17
+16,feat: complete US-01 home and navigation,Unassigned,MERGED,main,2026-09-09T10:28:41Z,2026-09-09,https://github.com/Collaboration95/rewind-app/pull/16
+15,feat: add low-fidelity Home screen,Unassigned,CLOSED,main,,,https://github.com/Collaboration95/rewind-app/pull/15
+14,feat: remember local demo profile selection,Unassigned,MERGED,main,2026-09-09T11:43:32Z,2026-09-09,https://github.com/Collaboration95/rewind-app/pull/14
+13,chore: establish Sprint 0 foundation,Unassigned,MERGED,main,2026-09-08T10:26:42Z,2026-09-08,https://github.com/Collaboration95/rewind-app/pull/13

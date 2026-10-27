@@ -1,0 +1,54 @@
+{
+  "format": 1,
+  "commit": "aea7478bce14131b821caaa99b1185077b4a9403",
+  "run_id": "40344230832",
+  "run_attempt": "1",
+  "workflow": "Deploy dev",
+  "workflow_ref": "Collaboration95/rewind-app/.github/workflows/deploy-dev.yml@refs/heads/dev",
+  "quality_run_id": "40344231052",
+  "timestamp": "2026-10-26T14:59:48.879835+00:00",
+  "scanner": {
+    "name": "Trivy",
+    "version": "v0.70.0"
+  },
+  "security_gate": "pass",
+  "images": {
+    "runtime": {
+      "image_id": "sha256:d5f91c11c630860298bead33f05f896d96c2aba75872a883053889cbf1f0cd2e",
+      "archive_digest": "sha256:bcabef1175ec2ee3baed538d4623303274502ec46869c2d0962beeaab440af21",
+      "manifest_digests": [
+        "sha256:fc877348b414afc8bbeb911053a75479b4db747d4f76bd06b698703f9ad88cd1"
+      ],
+      "repo_digests": [],
+      "counts": {
+        "UNKNOWN": 2,
+        "LOW": 0,
+        "MEDIUM": 1,
+        "HIGH": 0,
+        "CRITICAL": 0
+      }
+    },
+    "web": {
+      "image_id": "sha256:f183cf1438f47365cdfb7f0167b1c43d7191234ad878f3d4c37f0672fc7cbbc8",
+      "archive_digest": "sha256:0d230706fd95094463be5e2bea1b745b72150f935ecaee66d1342c0b794431e7",
+      "manifest_digests": [
+        "sha256:27ba6aaaad45c4bb0d5451d1c8c72788fb7dad5d90927e805e08db9b5e4bd2d2"
+      ],
+      "repo_digests": [],
+      "counts": {
+        "UNKNOWN": 0,
+        "LOW": 0,
+        "MEDIUM": 0,
+        "HIGH": 0,
+        "CRITICAL": 0
+      }
+    }
+  },
+  "sha256": {
+    "rewind-release.tar": "fef3c22a19a2e5ef8f64cba8b074dc1fc2f3f3bd9ff102831e7ea387a7696e01",
+    "sbom-runtime.cdx.json": "9730dfddd7a7cd6157c8a00f2f0ccf6530aa2c1c4f1a8b3e9c8922e8fd0e9da5",
+    "trivy-runtime.json": "a0b4f7b578db7108b92aa0adf1b7880c6971e9856dbf1a0a56d4efab5857483c",
+    "sbom-web.cdx.json": "417ac7a591716d126b06980b3a671367c241c56e2c089cf0de7c763002448985",
+    "trivy-web.json": "941eae3ffc6e051ec5fcc866fb3e944a73cfc07b11d4e2a7a88d9cd0cee860d6"
+  }
+}

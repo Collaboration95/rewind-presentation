@@ -1,0 +1,9 @@
+videos/raw/
+videos/stock/
+*.mov
+*.y4m
+videos/cicd/cicd-demo.mp4
+deck/out/resume-qa/hosted-video/
+__pycache__/
+node_modules/
+.DS_Store

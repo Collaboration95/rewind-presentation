@@ -1,0 +1,74 @@
+[
+  {
+    "file": "01-install-to-home-screen.mp4",
+    "duration": 45,
+    "feature": "Install to Home Screen (UC14)",
+    "narration": "I can add Rewind to my iPhone\u2019s Home Screen, so it\u2019s easy to open like an app."
+  },
+  {
+    "file": "02-sign-in.mp4",
+    "duration": 45,
+    "feature": "Sign in (UC01)",
+    "narration": "I sign in as Maya, and Rewind opens her private group space."
+  },
+  {
+    "file": "03-create-group.mp4",
+    "duration": 60,
+    "feature": "Create a private group (UC02, UC09)",
+    "narration": "I give the group a name, choose a prompt, and set a member limit. The group is private from the start."
+  },
+  {
+    "file": "04-invite-and-join.mp4",
+    "duration": 60,
+    "feature": "Invite a friend (UC03)",
+    "narration": "Each invite code works once and expires after 24 hours. Jun uses it to join, and then appears in the member list."
+  },
+  {
+    "file": "05-photo-with-a-look.mp4",
+    "duration": 55,
+    "feature": "Photo and look (UC05)",
+    "narration": "I take a photo and choose a look before sealing it. Once it\u2019s sealed, nobody can browse it before the film, including me."
+  },
+  {
+    "file": "06-video-and-allowance.mp4",
+    "duration": 65,
+    "feature": "Video and weekly allowance (UC04, UC06)",
+    "narration": "Photos and videos draw from the same weekly allowance. The ledger shows what I\u2019ve used and when something was added, while the content stays sealed."
+  },
+  {
+    "file": "07-group-chat.mp4",
+    "duration": 55,
+    "feature": "Chat and reactions (UC11)",
+    "narration": "Chat stays live while the capsule collects moments. Maya and Jun can exchange updates and react without revealing what\u2019s inside."
+  },
+  {
+    "file": "08-weekly-reminder.mp4",
+    "duration": 50,
+    "feature": "Reminder opt-in and banner (UC10)",
+    "narration": "I can opt in to a weekly reminder. It brings me back to add a small moment without needing to check the app all the time."
+  },
+  {
+    "file": "09-cycle-ends-film-ready.mp4",
+    "duration": 40,
+    "feature": "Cycle end and premiere (UC07)",
+    "narration": "Here\u2019s a completed capsule from Maya and Jun. Everyone\u2019s sealed moments have become one shared film, ready for its premiere."
+  },
+  {
+    "file": "10-watch-the-film.mp4",
+    "duration": 80,
+    "feature": "Watch and replay (UC08, UC12)",
+    "narration": "The film brings the group\u2019s moments into one viewing experience. I can watch it again and then take the conversation back to Chat."
+  },
+  {
+    "file": "11-archive-and-save.mp4",
+    "duration": 55,
+    "feature": "Archive and save (UC12, UC13)",
+    "narration": "The film stays in our Archive after the premiere. I can open it and save an MP4 copy on my phone."
+  },
+  {
+    "file": "12-outsider-denied.mp4",
+    "duration": 50,
+    "feature": "Private group access",
+    "narration": "Priya isn\u2019t a member of this group. Reusing Jun\u2019s invite fails, and the private group doesn\u2019t appear in her account."
+  }
+]

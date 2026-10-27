@@ -1,0 +1,36 @@
+@startuml
+!include _cicd.iuml
+title Legend · how to read the pipeline figures
+skinparam nodesep 40
+skinparam ranksep 30
+skinparam ArrowFontSize 20
+skinparam artifactFontSize 20
+
+frame "Enforcement tag (colour + first word)" as T {
+  rectangle "<b>BLOCKS MERGE</b>\n<size:20>required check red →</size>\n<size:20>PR cannot merge</size>" <<merge>> as M
+  rectangle "<b>BLOCKS DEPLOY</b>\n<size:20>stops upload or activation;</size>\n<size:20>hosted dev keeps last release</size>" <<deploy>> as D
+  rectangle "<b>BLOCKS PUSH / PROMOTION</b>\n<size:20>platform rule or</size>\n<size:20>a human approval</size>" <<human>> as H
+  rectangle "<b>REPORTS</b>\n<size:20>dashed: findings recorded,</size>\n<size:20>never stops merge/deploy</size>" <<report>> as R
+}
+
+frame "Shapes" as S {
+  rectangle "Step\n<size:20>a job or action</size>" as ST
+  hexagon "Gate?" as G
+  rectangle "Next step" as N
+  rectangle "Stop" <<deploy>> as X
+  artifact "<b>artifact</b>\n<size:20>retained file</size>" as A
+  database "<b>store</b>\n<size:20>where results live</size>" as DB
+  node "<b>host</b>\n<size:20>running system</size>" as HO
+}
+
+M -[hidden]right- D
+D -[hidden]right- H
+H -[hidden]right- R
+M -[hidden]down- ST
+ST -right-> G
+G -right-> N : yes
+G -down-> X : no
+N -[hidden]right- A
+A -[hidden]right- DB
+DB -[hidden]right- HO
+@enduml

@@ -1,0 +1,11 @@
+$ jq ".sha256" release-manifest.json
+{
+  "rewind-release.tar": "fef3c22a19a2e5ef8f64cba8b074dc1fc2f3f3bd9ff102831e7ea387a7696e01",
+  "sbom-runtime.cdx.json": "9730dfddd7a7cd6157c8a00f2f0ccf6530aa2c1c4f1a8b3e9c8922e8fd0e9da5",
+  "trivy-runtime.json": "a0b4f7b578db7108b92aa0adf1b7880c6971e9856dbf1a0a56d4efab5857483c",
+  "sbom-web.cdx.json": "417ac7a591716d126b06980b3a671367c241c56e2c089cf0de7c763002448985",
+  "trivy-web.json": "941eae3ffc6e051ec5fcc866fb3e944a73cfc07b11d4e2a7a88d9cd0cee860d6"
+}
+
+$ shasum -a 256 release-manifest.json
+59d9b9f7a3d22ce085776edfc08906677d4c238a27d367986c66c63bdc55d14c  release-manifest.json

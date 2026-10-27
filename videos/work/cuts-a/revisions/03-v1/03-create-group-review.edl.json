@@ -1,0 +1,155 @@
+{
+  "number": 3,
+  "name": "Create a group",
+  "output": "03-create-group-review.mp4",
+  "segments": [
+    {
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/03-create.mov",
+      "in": 6,
+      "out": 12,
+      "duration": 6,
+      "audio": false,
+      "note": "Settings with Create a group action"
+    },
+    {
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/03-create.mov",
+      "in": 13.8,
+      "out": 21.8,
+      "duration": 8,
+      "audio": false,
+      "note": "Blank New group form and prompt choices",
+      "smooth": [
+        [
+          455,
+          1824,
+          620,
+          64
+        ],
+        [
+          78,
+          1888,
+          310,
+          54
+        ]
+      ]
+    },
+    {
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/03-create.mov",
+      "in": 28,
+      "out": 34,
+      "duration": 7,
+      "audio": false,
+      "note": "Read default prompt choices and member limit; omit accidental Spotlight",
+      "smooth": [
+        [
+          455,
+          1824,
+          620,
+          64
+        ],
+        [
+          78,
+          1888,
+          310,
+          54
+        ]
+      ]
+    },
+    {
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/03-create.mov",
+      "in": 43,
+      "out": 45.5,
+      "duration": 7,
+      "audio": false,
+      "note": "Real recorded name completion and prompt choice; actual name At table",
+      "smooth": [
+        [
+          455,
+          1824,
+          620,
+          64
+        ],
+        [
+          78,
+          1888,
+          310,
+          54
+        ]
+      ]
+    },
+    {
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/03-create.mov",
+      "in": 45.5,
+      "out": 50,
+      "duration": 8,
+      "audio": false,
+      "note": "Real member-limit adjustment down to five",
+      "smooth": [
+        [
+          455,
+          1824,
+          620,
+          64
+        ],
+        [
+          78,
+          1888,
+          310,
+          54
+        ]
+      ]
+    },
+    {
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/03-create.mov",
+      "in": 92,
+      "out": 99,
+      "duration": 8,
+      "audio": false,
+      "note": "Read selected third prompt, group name, capacity, and Create group",
+      "smooth": [
+        [
+          455,
+          1824,
+          620,
+          64
+        ],
+        [
+          78,
+          1888,
+          310,
+          54
+        ]
+      ]
+    },
+    {
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/03-create.mov",
+      "in": 99.5,
+      "out": 100.8,
+      "duration": 8,
+      "audio": false,
+      "note": "Create press and Creating group progress; hold last safe form; omit ALL Home frames",
+      "smooth": [
+        [
+          455,
+          1824,
+          620,
+          64
+        ],
+        [
+          78,
+          1888,
+          310,
+          54
+        ]
+      ]
+    },
+    {
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/stills/03-created-settings.png",
+      "duration": 8,
+      "audio": false,
+      "note": "Successful At table group shown in real Settings",
+      "add_island": false
+    }
+  ],
+  "add_island": false
+}

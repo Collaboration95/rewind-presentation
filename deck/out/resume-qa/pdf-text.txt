@@ -1,0 +1,1282 @@
+PM · SWE5006 / TEAM 14
+
+
+A month of moments. One film
+
+
+Rewind ↶
+Small private groups. Sealed moments. A shared reveal.
+Contribute            →         Seal   →   Compile   →   Watch
+
+
+SWE5006 · TEAM 14 · 27 OCTOBER 2026
+Gopal Guruprasath
+
+
+
+
+BRIEF-SHARED.md · 27 Oct 2026                                    1 / 14
+Everyday moments need a shared reason to return
+PM · SECTION 1
+
+
+
+
+  Product view · private-group journey
+
+                                                                               Problem. Photos disappear into
+   01                                02                     03
+                                                                               busy chats; shared memories
+   Contribute                        Seal                   Watch              become scattered.
+   Photo or video                    Private until reveal   One group film     Scope. Accounts, invitation,
+   2–10 members                      28-day cycle           24-hour premiere   capture, chat, reminders, film and
+                                                                               Archive in a web/PWA product.
+                                                                               Value. A bounded contribution
+   5 moments / 30 seconds per member each week                                 habit leads to one shared reveal.
+
+
+audit/F1-system-demo.md §1 · product rules                                                                    2 / 14
+Four sprints delivered the hosted private-group journey
+PM · SECTION 1
+
+
+
+
+                                                                                    Team · equal effort. Nguyen Kim Long · Gopal Guruprasath ·
+                                                                                    Jiang Jiayu · Phan Mai Tan Loi · Sang Haoxiang.
+ Sprint                        Milestone
+
+ 0 · 1–12 Sep      Runtime foundation                                               20% each · 10 person-days each · agreed split.
+ 1 · 13–26 Sep     Integrated capture-to-film                                       Done. Outcome checked + fast tests + green Quality + merge
+                                                                                    to dev. Batch reviews resolve blocking findings.
+ 2 · 27 Sep–10 Oct Real accounts · S3 · PostgreSQL · Cognito                        Ceremonies. Project planning; Sprint Planning and Review
+ 3 · 11–24 Oct     Stability · recovery · regression tests                          each sprint. Backlog → stories → sprint plans → review →
+                                                                                    retro.
+                                                                                    Retro → next sprint. Integration gaps in S1 → real adapters in
+                                                                                    S2; stale state in S2 → interaction tests in S3.
+    Velocity · issues closed in each sprint window
+                                              145
+                              100
+               44                                              30
+
+               S0               S1             S2              S3
+
+
+
+
+26 OCT · OPEN       #587 focused runner · #588 chat labels · #527 Safari/PWA integration · #362 report assembly
+Full delivery register → B10
+records/TEAM.md · AGILE.md · charts/velocity.png · open issues checked 26 Oct                                                               3 / 14
+ Fourteen use cases follow one private-group journey
+                                                               Use case model · UC01-UC14 Rewind
+
+
+
+                                                               Account holder     Member                                  Owner
+
+                                                                                                  Rewind
+
+                                           Participation                   Capture                                          Cycle
+
+                                                UC01 · Sign in / out            UC05 · Photo               UC04 · Video       UC07 · Close / successor
+
+                                                                                        «extend»
+                                                                                                   «include» «include»
+                                                                                     [replacement]
+   «system»     «system»    «system»
+
+                                               UC02 · Create / select           UC06b · Correct      UC06a · Allowance            UC08 · Compile / publish
+Amazon Cognito Amazon S3 Cycle scheduler
+
+                                               UC03 · Invite / accept                                                               UC09 · Prompt / zone
+
+
+                                               UC10 · Web reminders                                                                    UC12 · Playback
+
+                                                                                                                                                                «system»
+
+                                                UC11 · Private chat                                                                   UC13 · Download
+                                                                                                                                                             Web push service
+
+                                             UC14 · Install / open link
+One Node application keeps rules close to transactions
+                                                               Logical architecture · UC01-UC14 Rewind
+                                                                                                       Web / PWA client
+
+                                                                                                         «boundary»           «boundary»                   «boundary»
+                                                                                                           App.tsx         GroupCaptureView         FilmScreen / ArchiveScreen
+
+
+                                                                                                                                «module»
+                                                                                                                          real-account-client.ts
+                                                                                                                          direct-transfer.ts
+
+
+                                                                                                                 HTTPS / SSE
+
+Node server · one application
+
+                                                                                «boundary»
+     «module»
+                                                                         http.ts + routes/*
+  cycles/* + jobs/*
+                                                                         HTTP / SSE boundaries
+
+                                                                                                                                                    presigned PUT
+
+                             «module»                  «module»
+     «module»                                                                   «module»
+                      auth/* + groups/*            reminders/loop.ts
+     ffmpeg.ts                                                               media/* + archive/*
+                      contributions/* + chat/*     reminders/outbox.ts
+
+
+                            «module»                                                                   «system»                                           «system»
+                                                                                                                              «system»
+                        db.ts                                                                        Cognito                                       S3
+                                                                                                                           Web push service
+                        RewindDatabase                                                               Managed Login                                 private object versions
+
+
+                                            Node hosts the scheduler, worker tick and reminders. PostgresDatabase adapts the DB surface.
+Analysis responsibilities become named implementation modules
+                          Analysis to design · UC07-UC08 Close cycle and release ﬁlm
+                                                                                  «module»
+                                             «boundary»         «reﬁne»      cycles/scheduler.ts
+                                        CycleClockBoundary
+                                                                          runCycleSchedulerTick()
+
+                                                                                   «module»
+                                         «control»          «reﬁne»           cycles/lifecycle.ts
+                                 CloseCycle + PublishFilm             advanceCycleLifecycleWithStore()
+                                                                      publishCycleReleaseWithStore()
+
+                                                                                   «module»
+                                          «control»     «reﬁne»              jobs/compilation.ts
+                                        CompileFilm
+                                                                      processCompilationJobForWorker()
+
+                                                                                  «interface»
+                                         «boundary»         «reﬁne»               «strategy»
+                                   PrivateMediaBoundary                         MediaStore
+                                                                      read(scope, ref) / put(scope, input)
+
+                                                                                    «entity»
+                                                                          Persistent records
+                                          «entity»             «reﬁne» cycles
+                                     Cycle + FilmJob
+                             CompilationInput + LifecycleEvent         compilation_job_inputs
+                                                                       cycle_lifecycle_events
+                                                                       media_jobs (kind = 'ﬁlm')
+Durable claims keep repeated cycle work safe
+                                                   Design classes · UC07-UC08 Close cycle and release ﬁlm
+                                              «module»
+                                           scheduler.ts
+                                     +runCycleSchedulerTick()
+
+                                                              «module»
+                                                       «guarded state machine»
+                              «module»                        lifecycle.ts
+                               worker.ts
+                                                  +advanceCycleLifecycleWithStore()
+                           +runWorkerTick()       +publishCycleReleaseWithStore()
+                                                  -ensureSuccessor()
+                                                    ensure job                     veriﬁed proof
+                                 «module»
+                            «durable job queue»
+                            compilation.ts                                                  «module»
+                  +ensureCompilationJob()                                                stored-output.ts
+                  +claimCompilationJob()                                            +verifyReadyJobOutput()
+                  +processCompilationJobForWorker()
+                  -publishCompilationOutput()
+                                                                                                   options
+               «module»                             «type alias»
+                                                                                           «interface»                          «concrete strategy»
+              «boundary»                        RewindDatabase
+                ffmpeg.ts                                                                   «context»                           PrivateS3MediaStore
+                                             (type: DatabaseSync)                      StoredJobOptions                                                     verify stored output
+        +compileFilmWithFfmpeg()                                                                                           -transport: PrivateS3Transport
+                                      +exec(sql: string): void                   +mediaEnvironment: string [0..1]
+        +probeClipWithFfmpeg()                                                                                             -options: PrivateS3Options
+                                      +prepare(sql: string): StatementSync
+                                                                                                             0..*   0..1
+                                                                                                                                    «interface»
+                                                                                                                                    «strategy»
+                                                                                                                               MediaStore
+                                                                                                              +read(scope: MediaScope, ref: MediaObjectRef)
+                                                                                                              +put(scope: MediaScope, input: MediaPut)
+
+                                              State machine = persisted states + guards. Job queue = records + generation fence.
+                                              Functions belong to «module» elements. Storage interface is the Strategy seam.
+A repeated tick reuses work and fences stale completion
+                               Design sequence · UC07 Close cycle and open successor
+                       scheduler.ts                          lifecycle.ts                 compilation.ts
+                        «module»                             «module»                       «module»                        :RewindDatabase
+
+ 1 runCycleSchedulerTick()
+                              2 SELECT due cycles
+                             loop     [each candidate]
+
+                              3 advanceCycleLifecycleWithStore()
+                                                                   advanceCycleLifecycleVeriﬁed() · one transaction
+                                                                    4 BEGIN IMMEDIATE
+                                                                    5 SQL: revealing + lifecycle event
+                                                                    6 ensureCompilationJob()
+                                                                                                     SQL: pending ﬁlm + provisional
+                                                                                                 7
+                                                                                                     inputs
+                                                                    8 ensureSuccessor()
+
+                                                                        SQL: successor if absent; guarded
+                                                                    9
+                                                                        group pointer
+                                                                    10 COMMIT
+
+
+
+                             Due collecting-cycle path. Continue with seq-cycle-compile and seq-cycle-release.
+Keys preserve membership and the film’s exact input set
+                                                        Data class view · Real membership, capture and compilation
+
+                                                                           «table»
+                  «table»                                                                                                          «table»
+                                                                 real_group_memberships
+                real_proﬁles              composite FK*                                         group_id                 real_group_metadata
+                                                                group_id: TEXT «PK, FK»
+id: TEXT «PK»                             1            0..*                                    0..*    1    group_id: TEXT «PK, FK groups»
+                                                                account_id: TEXT «PK, FK*»
+account_id: TEXT «FK real_accounts, UQ»                                                                     owner_account_id: TEXT «FK real_accounts»
+                                                                proﬁle_id: TEXT «FK*»
+                                                                                                                            0..1
+                                              trigger mirror                                                                1
+
+                                                                                                                     «table»                                              «table»
+                                                                 «table»
+                                                                                                                       groups                                             cycles
+                                                                 proﬁles                                                                      1         0..*
+                                                                                                           id: TEXT «PK»                                       id: TEXT «PK»
+                                                         id: TEXT «PK»
+                                                                                                           name: TEXT                                          group_id: TEXT «FK groups»
+                                                         display_name: TEXT
+                                                                                                           current_cycle_id: TEXT [0..1]                       status, release_status: TEXT
+                                                                                                                                                                           0..1   0..*
+                                                                  1
+                                                                0..*
+                                                                                                                                                                               «table»
+                                                                 «table»                                      «table»                                                       media_jobs
+                                                               contributions                           compilation_job_inputs                             id: TEXT «PK»
+                                              id: TEXT «PK»                               1    job_id: TEXT «PK, FK»                         job_id       group_id: TEXT «FK groups»
+                                              cycle_id: TEXT «FK cycles»                0..*   clip_job_id: TEXT «PK, FK media_jobs»         0..*   1     cycle_id: TEXT [0..1] «FK cycles»
+                                              member_id: TEXT «FK proﬁles»                     contribution_id: TEXT «FK»                                 contribution_id: TEXT [0..1] «FK contributions»
+                                              duration_seconds: DOUBLE PRECISION               position: BIGINT                                           kind, status: TEXT
+                                                                                                                                                          claim_generation: BIGINT
+
+
+                                     Selected columns. PK = primary key; FK = database foreign key; UQ = unique; [0..1] = nullable.
+                                     FK* = (account_id, proﬁle_id) → real_proﬁles(account_id, id). real_accounts is the account identity table.
+                                     current_cycle_id is an application link. UNIQUE(job_id, contribution_id). Archive reads published cycles + ﬁlm jobs.
+Each test layer catches a different integration failure
+TESTING · SECTION 3
+
+
+
+
+ Type                  Tool                            Count          CI lane      Blocks?      Catches
+
+Static                 Prettier / ESLint / tsc
+                                           4 checks   Static check matrix         YES          Types, style, imports
+Client                 Jest / Testing Library
+                                           1,674      Frontend + coverage         YES          Screens, state, retry
+Server                 node:test · SQLite  985 pass   Server + coverage           YES          API, privacy, cycles
+                                           21 skip
+Database         node:test · PostgreSQL 17 989 pass   PostgreSQL suite            YES          Dialect and schema
+Repository / IaC node:test + Python        123 + 13   Root / IaC                  YES          Policy and scan gate
+Deployment       Shell / Python fixtures   11 scripts Cloud-free fixtures         YES          Install and rollback
+Browser / a11y Playwright + Axe            41 / 6 Axe Web / browser               main         PWA, layout, keyboard
+Real-account Playwright · Firefox          1 flow     Local slow check            NO           Owner, member, outsider
+Performance Node HTTP + FFmpeg 1,200 API / 3 films Manual performance run         NO           Latency, film, privacy
+ 89.64%
+ Client statements · floor 70%
+                                                       92.33%
+                                                       Client lines
+                                                                                85.67%
+                                                                                Server lines · SQLite
+
+
+audit/E-testing.md · fast-suite counts: PIPELINE-ARTIFACTS.md                                                          10 / 14
+“Try again” must return to a usable viewfinder
+TESTING · SECTION 3
+
+
+
+
+  Behavioural regression view · CU-A photo retry · #581
+
+
+   GIVEN
+
+   Photo capture fails                                                 Fault. Retry called capture from a
+                                                                       state where its access guard
+   WHEN                                                                immediately returned.
+   User taps “Try again”                                               Repair. Return to the viewfinder so
+   THEN
+                                                                       the user can make a fresh capture.
+   Viewfinder returns;                                                 Check. Audit replayed the old
+   a fresh capture succeeds                                            source: the new test failed before
+                                                                       the fix and passed afterward.
+             Before fix
+             FAIL
+                                                →         At f6cd896
+                                                          PASS
+
+audit/E-testing.md §§7–8 · PR #581 · replay 26 Oct                                                   11 / 14
+The pipeline connects protected source to a verified deployment
+A private-group journey runs from prompt to film
+DEMO · SECTION 5
+
+
+
+
+ 01–02                                       03–06                             07–10
+
+ Create and invite                           Contribute                        Reveal and retain
+ Prompt · private membership                 Photo · video · chat · reminder   Ready · watch · save · access
+                                                                               check
+
+ 28-day product cycle · private groups · one feature per slide
+
+
+
+
+audit/F1-system-demo.md §4 · videos/clips/                                                                     13 / 14
+A shared prompt gives the group a common starting point
+     9:41                   ▮▮▮ ▰
+
+
+
+
+                                         01 / 10 · Create a group
+
+                                         DO.
+                                         Name the group, set the prompt and choose its size.
+                                         OBSERVE.
+                                         Home shows the new group; settings retain prompt and
+                                         time zone.
+                                         RULE.
+                                         The owner manages group settings.
+One accepted invitation creates one private membership
+      9:41                ▮▮▮ ▰
+
+
+
+
+                                         02 / 10 · Invite and join
+
+                                         DO.
+                                         Create and share the code; the friend accepts.
+                                         OBSERVE.
+                                         Both accounts see the same group and member list.
+                                         RULE.
+                                         Code works once and expires in 24 hours.
+A submitted photo becomes a sealed moment
+     9:41                 ▮▮▮ ▰
+
+
+
+
+                                      03 / 10 · Seal a photo
+
+                                      DO.
+                                      Take a photo, choose a look, review and submit.
+                                      OBSERVE.
+                                      Your moments records a sealed entry.
+                                      RULE.
+                                      One photo uses one moment and three film seconds.
+Video and photos share one enforced weekly allowance
+     9:41                  ▮▮▮ ▰
+
+
+
+
+                                        04 / 10 · Video and allowance
+
+                                        DO.
+                                        Record a video, review and submit.
+                                        OBSERVE.
+                                        The ledger updates moments and total seconds.
+                                        RULE.
+                                        5 moments / 30 seconds weekly; each video ≤15
+                                        seconds.
+Stored messages and live updates keep the group connected
+     9:41                  ▮▮▮ ▰
+
+
+
+
+                                        05 / 10 · Group chat
+
+                                        DO.
+                                        Send a message, reply and react from the other account.
+                                        OBSERVE.
+                                        The second view updates without a refresh.
+                                        DESIGN.
+                                        Stored messages plus SSE delivery and reconnect.
+Reminder permission leads to an explicit weekly choice
+     9:41                    ▮▮▮ ▰
+
+
+
+
+                                          06 / 10 · Weekly reminder
+
+                                          DO.
+                                          Open settings and choose the weekly reminder.
+                                          OBSERVE.
+                                          The switch and seven-day snooze keep the choice
+                                          explicit.
+                                          RULE.
+                                          Sunday 19:00 in the group time zone; iPhone web push
+                                          uses the Home Screen app.
+The completed capsule is ready for its shared premiere
+     9:41                    ▮▮▮ ▰
+
+
+
+
+                                          07 / 10 · Film ready
+
+                                          OBSERVE.
+                                          A completed capsule exposes its premiere card.
+                                          DESIGN.
+                                          The scheduler closes the cycle, queues work and opens
+                                          its successor.
+                                          RULE.
+                                          The product cycle is 28 days.
+The reveal turns sealed contributions into one shared film
+       9:41                 ▮▮▮ ▰
+
+
+
+
+                                            08 / 10 · Watch the film
+
+                                            DO.
+                                            Open the premiere and watch; skip between moments.
+                                            OBSERVE.
+                                            One film combines the group’s accepted inputs.
+                                            OUTPUT.
+                                            720 × 1280 · 30 fps · normalised audio.
+Archive keeps the film available after its premiere
+       9:41                  ▮▮▮ ▰
+
+
+
+
+                                             09 / 10 · Archive and save
+
+                                             DO.
+                                             Open Archive, select the film and save it.
+                                             OBSERVE.
+                                             The MP4 download opens as a playable file.
+                                             CONTROL.
+                                             Members can save the film and their own moments.
+A spent invitation gives an outsider no group access
+     9:41                    ▮▮▮ ▰
+
+
+
+
+                                           10 / 10 · Outsider denied
+
+                                           DO.
+                                           Reuse the spent invitation from an outsider account.
+                                           OBSERVE.
+                                           The invitation is rejected and the private group stays
+                                           absent.
+                                           BOUNDARY.
+                                           Private group and media reads require their access
+                                           checks.
+Load results identify the next scaling change
+TESTING · SECTION 5
+
+
+
+
+  Measured hosted mixed workload · 27 Oct                          Projected capacity · fitted to the quiet-host run
+
+   VUs           p95 ms            Errors             req/s                      Capacity projection · mean response (seconds)
+
+
+   1             1,058             0.00%               0.21
+                                                                            50
+
+                                                                            40
+
+   10            663               0.00%               1.83                 30
+
+
+   25            675               0.00%               4.59                 20
+
+                                                                            10
+
+   50            842               0.00%               9.06                  0
+
+   100           1,336             0.00%               17.84
+                                                                                   100             250             500            1000
+                                                                                          1 host         2 hosts         active users
+
+
+
+Method: Node HTTP · 1→100 VUs · 180 s steady per stage ·          Measured. 100 users leave 0.66 s below the 2 s p95 target.
+3–7 s think time.                                                 Scale. Separate media work; remove synchronous database
+Gate: p95 <2 s and errors <1%.                                    serialization; coordinate shared state.
+  All five stages pass                                            Maintain. The same pipeline checks the next change.
+  6,038 steady requests · 0 errors
+  100 VUs: 1.34 s p95 · 17.84 req/s
+load-test/results/summary.json · 27 Oct 00:13 SGT · dev 2390589                                                                          14 / 14
+Analysis separates interaction, coordination and state
+
+
+
+                                       Analysis classes · UC07-UC08 Close cycle and release ﬁlm
+                                                                         claim / ﬁnalise
+                                 «control»       read / write
+                work due        CompileFilm                               «boundary»
+                                                                         PrivateMedia                                      «entity»
+                                                verify bytes              Boundary                                          FilmJob                 «entity»
+                                                                                                                                           0..* CompilationInput
+«boundary»                                                                                                        id: String                1
+                release due      «control»                                                         compiled ﬁlm status: JobStatus               position: Integer
+CycleClock                      PublishFilm   publish / archive                                              0..1 claimGeneration: Integer
+Boundary     boundary reached                                               «entity»
+                                                                             Cycle
+                                                                                               1
+                                                                  id: String
+                                 «control»    close / successor   endsAt: Instant                                          «entity»
+                                CloseCycle                        status: CycleStatus          1                       LifecycleEvent
+                                                                                                               0..*
+                                                                  releaseStatus: ReleaseStatus                      transition: Transition
+                                                                                                                    occurredAt: Instant
+                                                                           schedule
+
+
+
+
+                                       Conceptual BCE responsibilities; mapped to implemented elements in a2d-cycle.
+Durable state survives interrupted compilation
+
+
+                                Statechart · UC07-UC08 Close cycle and release ﬁlm
+
+            createRealGroup()
+                                  advance [now >= ends_at]                Revealing / unpublished
+ Collecting              / ensureCompilationJob(); ensureSuccessor()
+ status = collecting                                                      status = revealing
+                                                                          release_status = unpublished
+
+                                                                                        publish [ready proof AND now >= ends_at]
+                                                                                              / release_published_at := now
+                       advance [24 h since publication AND ready proof]    Revealing / published
+Archived                                 / addEvent()                      status = revealing
+status = archived
+                                                                           release_status = published
+
+                     advance = advanceCycleLifecycleWithStore(); publish = publishCycleReleaseWithStore().
+                     Ready proof = veriﬁed ﬁlm bytes + unchanged ready job. Failed guards retain the state.
+                     Intake closes at ends_at via cyclePhase(). The successor collects during release.
+Capture acceptance checks identity, allowance and media
+                             Design sequence · UC05-UC06 Contribute a photo within allowance
+                              direct-transfer.ts                                      real-routes.ts                           Amazon S3
+                                  «module»                                              «module»                                «system»
+
+     1 transferContribution() · photo
+                                          2 POST /real/groups/:g/upload-intents
+                                           3 requestUploadIntent(): intent + presigned PUT
+                                          4 PUT photo bytes
+                                         alt     [reply received]
+                                           5 x-amz-version-id
+                                        [PUT reply lost]
+                                          6 GET intent; POST …/:id/reconcile
+                                                                                      ref
+                                                                                     reconcileUploadIntent(): exactly one matching version
+                                           7 pinned version / failure
+
+                                          8 POST …/upload-intents/:id/complete {versionId}
+                                                                                       ref
+                                                                                       seq-capture-accept · pin, probe, atomic acceptance
+                                           9 completed receipt
+
+
+                                CameraCaptureScreen → GroupCaptureView callback → submitPhotoContribution()
+                                → runtime uploadClip() → transferContribution(). Processing: seq-capture-process.
+Relational keys make the private film traceable
+                                                        Data class view · Real membership, capture and compilation
+
+                                                                           «table»
+                  «table»                                                                                                          «table»
+                                                                 real_group_memberships
+                real_proﬁles              composite FK*                                         group_id                 real_group_metadata
+                                                                group_id: TEXT «PK, FK»
+id: TEXT «PK»                             1            0..*                                    0..*    1    group_id: TEXT «PK, FK groups»
+                                                                account_id: TEXT «PK, FK*»
+account_id: TEXT «FK real_accounts, UQ»                                                                     owner_account_id: TEXT «FK real_accounts»
+                                                                proﬁle_id: TEXT «FK*»
+                                                                                                                            0..1
+                                              trigger mirror                                                                1
+
+                                                                                                                     «table»                                              «table»
+                                                                 «table»
+                                                                                                                       groups                                             cycles
+                                                                 proﬁles                                                                      1         0..*
+                                                                                                           id: TEXT «PK»                                       id: TEXT «PK»
+                                                         id: TEXT «PK»
+                                                                                                           name: TEXT                                          group_id: TEXT «FK groups»
+                                                         display_name: TEXT
+                                                                                                           current_cycle_id: TEXT [0..1]                       status, release_status: TEXT
+                                                                                                                                                                           0..1   0..*
+                                                                  1
+                                                                0..*
+                                                                                                                                                                               «table»
+                                                                 «table»                                      «table»                                                       media_jobs
+                                                               contributions                           compilation_job_inputs                             id: TEXT «PK»
+                                              id: TEXT «PK»                               1    job_id: TEXT «PK, FK»                         job_id       group_id: TEXT «FK groups»
+                                              cycle_id: TEXT «FK cycles»                0..*   clip_job_id: TEXT «PK, FK media_jobs»         0..*   1     cycle_id: TEXT [0..1] «FK cycles»
+                                              member_id: TEXT «FK proﬁles»                     contribution_id: TEXT «FK»                                 contribution_id: TEXT [0..1] «FK contributions»
+                                              duration_seconds: DOUBLE PRECISION               position: BIGINT                                           kind, status: TEXT
+                                                                                                                                                          claim_generation: BIGINT
+
+
+                                     Selected columns. PK = primary key; FK = database foreign key; UQ = unique; [0..1] = nullable.
+                                     FK* = (account_id, proﬁle_id) → real_proﬁles(account_id, id). real_accounts is the account identity table.
+                                     current_cycle_id is an application link. UNIQUE(job_id, contribution_id). Archive reads published cycles + ﬁlm jobs.
+The deployment view names each runtime boundary
+                                                               Deployment view · Hosted dev
+
+                      «executionEnvironment»       11           «service»                            «service»
+                         GitHub Actions                    AWS STS                               Cognito · rewind-dev
+                         rewind-release.tar                rewind-demo-deploy                    Managed Login
+
+                                                                            4                     2 · HTTP :80                5                12
+
+
+                                                                                                               «device»
+                                                                                                       Lightsail · rewind-demo
+                                                                                                    Ubuntu 24.04 · Docker Compose
+
+
+
+
+                       «device»                                  «CDN»
+                                          1 · HTTPS :443                               web image                        3    runtime image
+               Member device                                                           nginx :8080                           Node :8787 + ffmpeg
+               Browser / installed PWA                      CloudFront
+                                                            d2m6kz76y4kuvm             Expo web export + nginx.conf          server/dist/cli.js
+               public/sw.js
+
+
+                                                                                                            8    7 10             9   6
+
+
+                                 «service»                                                                               «DBMS»
+                                                                «service»
+                            S3 · private media             Browser push service                                  Lightsail PostgreSQL 17
+                            versioned · SSE-S3                                                                   rewind-dev-postgres
+
+
+                                 1 Browser → CloudFront: HTTPS :443. 2 CloudFront → nginx: HTTP :80 → :8080 + origin auth header.
+                                 3 nginx → Node: HTTP :8787 /api + SSE. 4 Browser → Cognito: HTTPS :443, authorization code + PKCE.
+                                 5 Node → Cognito: HTTPS :443 token exchange. 6 Node → PostgreSQL: TLS :5432.
+                                 7 Browser → S3: HTTPS :443 presigned PUT. 8 Node → S3: HTTPS :443 with IAM user credentials.
+                                 9 Node → push service: HTTPS :443 / VAPID. 10 Push service → PWA: push event.
+                                 11 Actions → STS: OIDC / HTTPS :443, 1 h dev role. 12 Actions → host: SCP / SSH :22, runner /32.
+                                 AWS ap-southeast-1. OIDC: dev branch + environment. Node owns the cycle, media and reminder loops.
+Coverage and enforcement answer different questions
+TESTING · SECTION 3
+
+
+
+
+ Coverage                              Local 26 Oct           CI 20 Oct         Policy
+
+
+ Client statements                     89.64%                 89.66%            70% statement floor
+ Client branches                       85.68%                 85.66%            Reported
+ Client functions                      89.55%                 89.61%            Reported
+ Client lines                          92.33%                 92.33%            Reported
+ Server lines                          85.67%                 85.50%            Reported
+ Server branches                       85.62%                 85.66%            Reported
+ Server functions                      85.05%                 86.41%            Reported
+Cases. 1,674 frontend; 985 server pass Privacy. Route contracts and outsider    Performance. Local: 1,200 requests; 3
++ 21 skip; 123 root pass + 1 skip; 41  tests exercise group, budget, chat and   × 25-clip films in 4.9–8.1 seconds.
+browser / 6 Axe.                       private media denials.
+audit/E-testing.md §§1–3,6 · f6cd896                                                                       B6 · backup
+Storage changes behind Strategy and Adapter roles
+                                                             Design class view · Media storage
+
+                                                           «strategy»
+                                                           MediaStore
+                 «context»
+                                          uses 0..1    +put(scope, input)
+              stored-output.ts
+                                                       +head(scope, ref)
+      +storedContext(options, groupId)
+                                                       +read(scope, ref)
+                                                       +delete(scope, ref)
+
+
+                                                                                                    «target»
+                                                                                              PrivateS3Transport
+                                                                  «concrete strategy»
+                                     «concrete strategy»                                      +putObject(input)
+                                                                 PrivateS3MediaStore
+                                     LocalMediaStore                                          +headObject(input)
+                                                             -transport: PrivateS3Transport
+                                                                                              +getObject(input)
+                                                                                              +deleteObject(input)
+
+                                                                                                         returns object
+
+                                                                                                   «adapter»          send(command)        «adaptee»
+                                                                                                 runtime-store.ts                        AWS SDK v3
+                                                                                              privateTransport(sdk)                   S3Client + *Command
+
+
+                                             createMediaRuntime(conﬁg) selects LocalMediaStore or PrivateS3MediaStore.
+                                             Hosted dev uses S3. Local disk mode sets conﬁg.media = null.
+Observer distributes chat updates alongside stored history
+
+                                                               Design class view · Chat event delivery
+
+                                                                           «subject»
+      «publisher»                                                       RealtimeHub
+                                                                                                                                                      «observer»
+     chat-routes.ts
+                          publish after commit     -subscribers: Map<string, Set<RealtimeEventWriter>>           group writers                   RealtimeEventWriter
+    POST handlers
+                                                                                                                                                   (function type)
+                                                   +subscribe(groupId, writer): () => void                       1         0..*
+createChatMessage(...)
+                                                                                                                                  (event: ChatMessageEvent | ChatReactionEvent): void
+toggleChatReaction(...)                            +publish(event): void
+                                                   +subscriberCount(groupId?): number
+
+
+                                                       listChatEvents
+              persist                                                                            subscribe / unsubscribe
+                                                      (Last-Event-ID)
+
+
+                                                                                                «concrete observer»
+       «module»                                               «table»                              chat-routes.ts
+      chat/index.ts       message events                 realtime_events                           SSE callback
+
++createChatMessage(...)                          id: BIGINT «PK»                             writeEvent(event)
+
++listChatEvents(...)                             message_id: TEXT «FK, UNIQUE»               writeReaction(event)
+                                                                                             subscribeToGroup(listener)
+
+
+                                            Each HTTP runtime owns one RealtimeHub; writers are callbacks, not observer classes.
+                                            Messages replay from realtime_events. Reactions do not move the replay cursor.
+The persistence adapter preserves a common data-access contract
+                                                            Design class view · PostgreSQL persistence adapter
+
+                                                                        «target»
+                  «client»
+                                                                     node:sqlite
+             cycles/lifecycle.ts                                    DatabaseSync
+                                            typed surface
+          jobs/*.ts · chat/index.ts
+                                                             +prepare(sql): StatementSync
+    database.prepare(sql).get / run / all
+                                                             +exec(sql): void
+    database.exec(sql)
+                                                             +close(): void
+
+                                                                                creates SQLite
+
+
+                                                                                                                                «adapter»                                    «adapter»
+                                                                       «factory»
+                                                                                                                             PostgresDatabase                            PostgresStatement
+                                                                          db.ts
+                                                                                             creates PostgreSQL     +prepare(sql): PostgresStatement        creates      +run(...params)
+                                                                RewindDatabase =
+                                                                                                                    +exec(sql): void                        1     0..*   +get(...params)
+                                                                DatabaseSync
+                                                                                                                    +query(source, params)                               +all(...params)
+                                                                +openDatabase(conﬁg)
+                                                                                                                    +close(): void                                       +iterate(...params)
+
+                                                                                                                                                   postMessage
+                                                                                                                              translate(sql)
+                                                                                                                                                   Atomics.wait
+
+
+                                                                                                               «module»
+                                                                                                                                                «adaptee»
+                                                                                                              translate.ts
+                                                                                                                                               sync-worker.ts
+                                                                                                                                                 pg.Client
+                                                                                                  +translate(sql): TranslatedStatement
+
+
+                                                 db.ts casts PostgresDatabase to RewindDatabase; the adapter has matching methods.
+                                                 Worker-thread pg.Client performs PostgreSQL I/O; callers keep synchronous operations.
+Agile records retain scope changes and equal effort
+The capacity curve follows the closed-user workload
+Retained artifacts make the deployment independently inspectable
+DEVSECOPS · SECTION 4
+
+
+
+
+ File / output                                          Question it answers
+
+ quality-test-results-root · server/frontend coverage   Which behaviours and coverage were exercised?
+ npm-audit.json · gitleaks.sarif · iac-full.json        Which dependency, secret and configuration findings were reported?
+ sbom-runtime.cdx.json · sbom-web.cdx.json              Which components are inside the image pair?
+ trivy-runtime.json · trivy-web.json                    Which findings belong to those exact images?
+ release-manifest.json · rewind-release.tar             Which commit, bytes and report hashes travelled together?
+ Signed provenance · gh attestation verify              Which workflow produced the retained subjects?
+ ZAP report_html.html · report_json.json                Which running-page findings were observed?
+gh attestation verify --repo Collaboration95/rewind-app release-manifest.json
+
+IaC JSON · 15 findings Signed manifest JSON ZAP JSON
+
+PIPELINE-ARTIFACTS.md · pipeline-run-40344230832/                                                                B12 · backup
+Acceptance pins and probes the exact media version and replays an existing receipt
+
+                            Design sequence · UC05-UC06 Pin and validate the photo
+real-routes.ts                 upload-intents.ts                                                             :MediaStore    ffmpeg.ts
+  «module»                        «module»                                                 :RewindDatabase    «interface»   «module»
+
+        1 completeUploadIntent()
+                                         2 txn 1: authorize; pin open intent if needed; COMMIT
+       alt       [already completed]
+         3 same completed receipt
+      [pinned]
+                                         4 read(scope, ref) · materialize pinned version
+                                         5 probePhotoWithFfmpeg()
+                                         6 validate bytes / type; validateClipUpload()
+
+                                ref
+                                          seq-capture-commit · one acceptance transaction
+         7 completed receipt / failure
+One transaction records quota, contribution, processing job and completion
+                     Design sequence · UC06 Commit the allowance and contribution
+ upload-intents.ts                              contributions/index.ts       contributions/ledger.ts
+    «module»                                          «module»                     «module»                         :RewindDatabase
+
+       acceptance transaction · rollback on any failed guard / write
+           1 BEGIN IMMEDIATE
+           2 authorize(); currentIntent(); checkQuota()
+
+           3 reserveContributionAllowance()
+                                                             4 SQL: conditional quota UPDATE
+           5 SQL: INSERT staged_sources, contributions, media_jobs
+          opt        [replacesContributionId]
+           6 linkContributionReplacement()
+                                                                                         7 SQL: link original to replacement
+
+           8 SQL: UPDATE cycle counters; intent completed
+           9 COMMIT
+
+           10 completed receipt
+Processing stores an MP4 and proves current ownership before marking ready
+
+
+                                            Design sequence · UC05 Process the accepted photo
+             photo-submit.ts                         contribution-routes.ts     jobs/clip.ts                                      :MediaStore    ffmpeg.ts
+               «module»                                    «module»              «module»                                          «interface»   «module»
+
+                       POST /contributions/jobs/:jobId/process
+                     1 via runtime processClipJob()
+
+                                                                 2 processClipJob()
+                                                                                      3 claimClipJob() · DB generation + 1
+
+                                                                                      4 read(scope, ref) · materialize incoming version
+                                                                                      5 processPhotoWithFfmpeg(); probeClipWithFfmpeg()
+                                                                                      6 put(scope, input) · processed MP4
+
+                                                                                      7 ﬁnalizeStoredClip() · verify stored bytes;
+                                                                                        delete raw version; fenced DB UPDATE ready
+
+                                                                  8 status: ready
+                      9 job.status: ready
+
+photoContributionStatusForJob() → sealed
+The worker claims settled inputs, materialises media and fences finalisation
+                                                 Design sequence · UC08 Compile the cycle ﬁlm
+             worker.ts                                                compilation.ts                                       :MediaStore    ffmpeg.ts
+             «module»                                                   «module»                                            «interface»   «module»
+
+                     1 processCompilationJobForWorker()
+                                                                              2 claimCompilationJob() · transaction
+
+               alt       [inputs unsettled]
+                      3 waiting_for_inputs · no attempt spent
+              [claim obtained]
+                                                First claim freezes inputs; DB processing; generation + 1.
+                                                                             loop      [retained clips]
+                                                                              4 read(scope, ref) · materializeStoredMedia()
+
+                                                                              5 ﬁrstFailingInput() · digest / size check
+
+                                                                              6 compileFilmWithFfmpeg(); probeClipWithFfmpeg()
+                                                                              7 put(scope, input) · putProcessedFile()
+                                                                              8 publishCompilationOutput() · fenced transaction
+
+                 alt       [current generation + unchanged inputs]
+                      9 ready · DB output proof committed
+                [processing / fence failure]
+                   10 failed · markCompilationFailed() generation guarded
+Stored bytes and the current ready row are verified before publication and archiving
+
+
+
+                                                     Design sequence · UC08 Publish and archive the ﬁlm
+scheduler.ts                          lifecycle.ts                                              stored-output.ts                           :MediaStore
+ «module»                             «module»                                                     «module»                                 «interface»   :RewindDatabase
+
+        1 publishCycleReleaseWithStore()
+                                            2 verifyReadyJobOutput() via verifyCompilationOutput()
+                                                                                                         3 head() + read() · verifyStoredMedia()
+                                                                                                         4 compare current ready row to veriﬁed row
+       alt     [proof missing / changed]
+         5 not_ready
+      [proof + revealing + now >= ends_at]
+                                            6 txn: UPDATE published + release_published_at; COMMIT
+         7 published / already_published
+
+ref
+                                                       24 h later: advanceCycleLifecycleWithStore() re-veriﬁes output,
+                                                     then transactionally archives + adds lifecycle event (see state-cycle)
+Account and group goals connect to Cognito, chat and web push
+              Use case model · UC01-UC03, UC10-UC11, UC14 Participate in a group
+                                                                          Rewind
+                                                                                                    «system»
+                                                                      UC10
+                                                           Reminder preference / delivery
+                                                                                                 Web push service
+                                                                           UC11
+                                                                        Private chat
+                                                                                                    «system»
+                                                                          UC01
+                                                                      Sign in and out
+                                                                                                 Amazon Cognito
+                       Member                                               UC14
+                                                                Install / update / open invite
+                                   Account holder
+                                                                          UC02
+                                                                   Create / select group
+            Owner
+                                                                        UC03
+                                                            Issue / revoke / accept invite
+Photo and video acceptance include the shared allowance and optional correction
+              Use case model · UC04-UC06 Contribute within allowance
+                                                Rewind
+
+                                               UC06a
+                                          Reserve allowance
+
+                                              «include»
+                    «include»
+                                                  UC04                 «system»
+                                       Record, trim, submit video
+
+                                                UC05                  Amazon S3
+                                          Contribute a photo
+      Member
+                     «extend»                 «extend»
+               [replacement target]     [replacement target]
+                                                UC06b
+                                        Correct one contribution
+Cycle closure produces a film, premiere, Archive and authorised downloads
+        Use case model · UC07-UC09, UC12-UC13 Release and revisit the ﬁlm
+                                                                Rewind
+
+                                                            UC07                    «system»
+                                                 Close cycle / open successor
+
+
+                                                            UC08                  Cycle scheduler
+                                                Compile / publish / archive ﬁlm
+                                                                                    «system»
+                                                             UC13
+                                                        Download clip / ﬁlm
+                                                                                    Amazon S3
+                                                             UC12
+                                                  Premiere / Archive playback
+                              Member
+                  Owner                                      UC09
+                                                    Owner prompt / time zone
+Sprint 0 records opening scope and daily delivery
+Sprint 1 records opening scope and daily delivery
+Sprint 2 records opening scope and daily delivery
+Issue closures and merged PRs track sprint delivery
+Backlog stories connect sprint goals to delivered use cases
+PM · SECTION 1
+
+
+
+
+ Artifact                        26 October record / trace
+
+
+ Product backlog 329 issues · 319 closed · 10 open; mvp delivery path has 7 open
+ User story · UC05 As a member, seal a photo as a three-second segment. S2 #313 → S3 #545 / #574
+ Sprint plans         S0 foundation → S1 integrated journey → S2 real accounts → S3 stability
+ Sprint Review        Each sprint reviews its increment against the selected scope
+ Retrospective        S1 integration gaps → S2 real adapters; S2 stale state → S3 interaction tests
+Source: records/AGILE.md · milestones, story map and sprint plans
+
+
+
+records/AGILE.md · saved GitHub issue and milestone census                                       B25 · backup
+A commit carries tests, inventory and deployment evidence
+                                                Artifact view · Source, evidence and deployable bundle
+
+                                                                              security workﬂows
+
+
+                                                                     Quality → Actions artifacts
+                                                                                                                            Candidate scans → Actions artifacts
+                                                                     quality-test-results-root: test-results-root.xml
+                                                                                                                            release-security-{runtime,web}-<sha>
+    Git · source + lockﬁle + workﬂows + IaC                          server-coverage: test-results-server.xml
+    Issue branch → PR → protected dev
+                                                      PR + push                                                              {image}-sbom.cdx.json
+                                                                       coverage-summary.json; server-summary.txt
+    PR dev → main: Quality + 1 approval
+                                                                                                                             {image}-vulnerabilities.txt
+                                                                       server-v8/*.json
+                                                                                                                             {image}-image-identity.txt
+    Both branches: up-to-date + conversations                        frontend-coverage: frontend-results.json
+                                                                                                                            release-security-iac-<sha>: iac-full.json
+                                                                       coverage-summary.json
+                                                                                                                            gitleaks-<sha>: gitleaks.sarif
+                                                                     quality-npm-audit: npm-audit.json
+
+                                  dev push                                                                                                    SARIF
+
+
+         Deploy dev → Actions artifacts
+         dev-release-security-<sha>                                       Hosted checks → Actions artifacts
+          sbom-{runtime,web}.cdx.json                                     zap-baseline-<sha>
+                                                                                                                        GitHub Security
+          trivy-{runtime,web}.json                                         report_json.json / report_html.html
+                                                                                                                        CodeQL analyses / alerts
+          release-manifest.json                                            report_md.md
+                                                                                                                        Gitleaks redacted SARIF results
+         dev-release-bundle-<sha>                                         hosted-performance-<run-id>
+          rewind-release.tar + Sigstore JSON                               results.json + SUMMARY.md
+          tar: source.tar, runtime.tar, web.tar, manifest.json
+
+                                    SCP :22 + health              ZAP / manual load
+
+
+                   Lightsail · /srv/rewind/releases
+                   Veriﬁed runtime + web images
+
+
+                          Actions retention: 30 d; server/frontend coverage and hosted performance: 14 d. CodeQL results live in Security.
+                          Manifest binds commit + Quality run + image IDs + SHA-256(tar, SBOMs, Trivy). Attestation signs tar + manifest.
+                          <sha> = commit; {runtime,web} = both images. Main browser checks join Quality; hosted dev is the deployment target.
+Pipeline decisions separate merge gates from host activation
+                                                        Activity view · DevSecOps checks and hosted delivery
+
+ Developer
+
+
+                                       GitHub PR checks                                  Deploy dev
+
+                                                  BLOCKS MERGE · Quality                   Merge → push dev
+                                                  static ×4; tests + ﬁxtures               BLOCKS DEPLOY: Quality + Trivy
+                                                  SQLite + PostgreSQL; Jest ≥70%           Same-commit Quality; build / verify tar
+   Commit / PR to dev                             SCA: npm audit HIGH+                     Exact-bundle Trivy: HIGH / CRITICAL
+   Push protection rejects secrets                → quality-test-results-root              → sbom-{runtime,web}.cdx.json
+                                                  → server-coverage                        → trivy-{runtime,web}.json
+                                                  → frontend-coverage                      → release-manifest.json
+                                                  → quality-npm-audit                      archive: dev-release-security-<sha>
+
+
+                                         REPORTS · parallel workﬂows                                                                  Hosted dev
+                                         SAST CodeQL → Security
+                                         Gitleaks → gitleaks-<sha>                               Attest tar + manifest
+                                         Trivy images + SBOM →                                   → Sigstore JSON bundle                 Install + health check
+                                         release-security-{runtime,web}-<sha>                    → dev-release-bundle-<sha>             BLOCKS DEPLOY: bad health
+                                         IaC → release-security-iac-<sha>                        OIDC → SSH upload
+                                                                                                                                        Restore previous on failure
+                                         GitGuardian app → PR status
+                                         GitHub secrets / Dependabot → alerts
+
+
+                                                                                                                                        REPORTS · ZAP baseline
+                                                                                                                                        → zap-baseline-<sha>
+                                                                                                                                        report_json.json
+                                                                                                                                        report_html.html / report_md.md
+
+
+
+
+                        BLOCKS MERGE = required Quality. BLOCKS DEPLOY = stops upload / activation. REPORTS = outside both gates.
+                        PR + push: Quality, CodeQL, Gitleaks; CodeQL also weekly. Candidate scans: path-ﬁltered PR, dev/main push, v*, manual.
+                        Deploy: dev push / manual; docs-only skips host work and app checks. Main adds browser checks to Quality.
+                        Manual performance REPORTS → hosted-performance-<run-id>: results.json + SUMMARY.md. Independent scans can fail their jobs.
+Security checks cover code, packages, secrets and running pages
+DEVSECOPS · SECTION 4
+
+
+
+
+ Procedure       Tool / scope                                            Result or policy   Decision
+
+
+ SAST            CodeQL · JS/TS, Python, Actions
+                                               3 load-script alerts → “used in tests” Reports / triage
+ DAST            ZAP baseline · hosted dev     0 High · 4 Medium CSP · 7 Low · 6 Info Post-deploy report
+ SCA             npm audit + Dependabot        Production audit HIGH+ joins Quality Blocks merge
+ Secrets         Gitleaks + push protection    Full history scan + push-time secret Scan + prevention
+                                               checks
+ IaC       Trivy config · Terraform / Docker   15 findings · exact exceptions and Scan workflow gate
+                                               expiry
+ Images Trivy · exact bundled runtime + web 0 High / Critical on both images          Blocks host upload
+ZAP run 40344230832 · the four Medium findings concern Content Security Policy.
+PIPELINE-ARTIFACTS.md · pipeline-run-40344230832/zap · CodeQL triage 26 Oct                            B28 · backup
+The manifest binds deployed images to their scans
+DEVSECOPS · SECTION 4
+
+
+
+
+                                                                                                Inventory. CycloneDX SBOM for
+  Real excerpt · release-manifest.json · run 40344230832
+
+
+
+                                                                                                each bundled image.
+  {
+      "commit": "aea7478bce14131b821caaa99b1185077b4a9403",
+      "run_id": "40344230832",
+                                                                                                Identity. Commit, Quality run,
+                                                                                                image IDs, archive digests and
+      "quality_run_id": "40344231052",
+      "security_gate": "pass",
+      "sha256": {                                                                               report hashes.
+                                                                                                Provenance. GitHub-signed
+          "rewind-release.tar":
+          "fef3c22a19a2e5ef8f64cba8b074dc1fc2f3f3bd9ff102831e7ea387a7696e01"
+      }                                                                                         attestations bind the bundle and
+  }                                                                                             manifest to the workflow.
+                                                                                                Verify. Use gh attestation verify on
+  Runtime 0 H / 0 C · 1 M · 2 Unknown
+  Web 0 H / 0 C · 0 M
+                                                                                                the downloaded manifest.
+
+pipeline-run-40344230832/security/release-manifest.json · manifest timestamp 26 Oct 14:59 UTC                             B29 · backup
+Hosted dev activates after candidate health succeeds
+                                                                Deployment view · Hosted dev
+
+                       «executionEnvironment»       11           «service»                            «service»
+                          GitHub Actions                    AWS STS                               Cognito · rewind-dev
+                          rewind-release.tar                rewind-demo-deploy                    Managed Login
+
+                                                                             4                     2 · HTTP :80                5                12
+
+
+                                                                                                                «device»
+                                                                                                        Lightsail · rewind-demo
+                                                                                                     Ubuntu 24.04 · Docker Compose
+
+
+
+
+                        «device»                                  «CDN»
+                                           1 · HTTPS :443                               web image                        3    runtime image
+                Member device                                                           nginx :8080                           Node :8787 + ffmpeg
+                Browser / installed PWA                      CloudFront
+                                                             d2m6kz76y4kuvm             Expo web export + nginx.conf          server/dist/cli.js
+                public/sw.js
+
+
+                                                                                                             8    7 10             9   6
+
+
+                                  «service»                                                                               «DBMS»
+                                                                 «service»
+                             S3 · private media             Browser push service                                  Lightsail PostgreSQL 17
+                             versioned · SSE-S3                                                                   rewind-dev-postgres
+
+
+                                  1 Browser → CloudFront: HTTPS :443. 2 CloudFront → nginx: HTTP :80 → :8080 + origin auth header.
+                                  3 nginx → Node: HTTP :8787 /api + SSE. 4 Browser → Cognito: HTTPS :443, authorization code + PKCE.
+                                  5 Node → Cognito: HTTPS :443 token exchange. 6 Node → PostgreSQL: TLS :5432.
+                                  7 Browser → S3: HTTPS :443 presigned PUT. 8 Node → S3: HTTPS :443 with IAM user credentials.
+                                  9 Node → push service: HTTPS :443 / VAPID. 10 Push service → PWA: push event.
+                                  11 Actions → STS: OIDC / HTTPS :443, 1 h dev role. 12 Actions → host: SCP / SSH :22, runner /32.
+                                  AWS ap-southeast-1. OIDC: dev branch + environment. Node owns the cycle, media and reminder loops.
+Packaging and runtime boundaries exposed useful defects
+DEVSECOPS · SECTION 4
+
+
+
+
+ Finding                                          Consequence                      Repair / learning
+
+
+ New advisory in a locked dependency              3 High zod findings blocked      Override update + clean audit
+ tree                                             Quality
+ Alpine removed a pinned FFmpeg                   Image build failed before scan   Update to available 8.1.3-r0 pin
+ package
+ Schema registry moved during                     Bundle verifier read the old     Read the declared schema version
+ refactoring                                      location
+ Service worker retained SSE                      Group switching exhausted        Browser-owned SSE + cancellation
+ forwarding                                       streams                          checks
+ Retry UI preserved the failed state              “Try again” returned without     Behavioural test + viewfinder reset
+                                                  capture
+Test the adapter, the built image and the whole interaction.
+records/FINDINGS.md · #591 · #583 · #568 · #581                                                                 B31 · backup
+Installation keeps the app one tap away
+DEMO · SECTION 5
+
+
+
+
+                                                                      Do. Safari → Share → Add to Home
+                                                                      Screen → open.
+                                                                      Observe. The installed app opens
+                                                                      in its own Home Screen window.
+                                                                      Why. This is the iPhone delivery
+                                                                      surface.
+                                                                      P / click · play or pause
+                                                                      26 OCT 2026 · HOSTED DEV
+
+
+
+
+videos/clips/01-install-to-home-screen.mp4 · UC14 · Home Screen PWA                               B32 · backup
+Sign-in returns the member to the private-group journey
+DEMO · SECTION 5
+
+
+
+
+                                                       Do. Sign in as Maya and open her
+                                                       group space.
+                                                       Observe. The authenticated
+                                                       account returns to Rewind.
+                                                       Design. Web identity supports
+                                                       Cognito code + PKCE with server-
+                                                       side exchange.
+                                                       P / click · play or pause
+                                                       26 OCT 2026 · HOSTED DEV
+
+
+
+
+videos/clips/02-sign-in.mp4 · UC01 · account sign-in                               B33 · backup
+Every steady load stage stays below the latency target
+Measured throughput rises with the active user count
+

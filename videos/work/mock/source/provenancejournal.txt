@@ -1,0 +1,86 @@
+Rewind recording pages - provenance and handoff
+Prepared 26 October 2026, Asia/Singapore.
+
+AUTHORIZED SCOPE
+All created or edited files are inside presentation-prep/videos/work/mock/.
+No repository code, infrastructure, film inputs, or simulator was changed.
+Maya's existing session was read from videos/work/film/session.json into an ephemeral desktop browser. No credentials or storage state were copied to this output.
+Only the group real-group-55f1f1de-e005-4421-b591-38c1a12625b6, named At table, received contributions. No data was deleted. The other groups received no writes.
+
+PRIMARY SOURCES
+Read audit/F1-system-demo.md and audit/F2-video.md.
+Read the actual camera, video, review, moments, look and style code in rewind-present-audit at f6cd896.
+Hosted application: https://d2m6kz76y4kuvm.cloudfront.net/
+Reference: videos/work/stills/05-camera-reference.png, 1206 x 2622.
+Reference browser content crop: 1206 x 2142 starting at y=186. CSS viewport: 402 x 714. DPR: 3.
+
+ACTUAL CONTRIBUTIONS
+Desktop Playwright, using the installation in rewind-present-audit, opened the app's real file chooser.
+Photo: videos/stock/friends-selfie.jpg, Disposable Flash, submitted and sealed. Real ledger then showed 1 of 5 and 3 of 30 seconds.
+Video: videos/stock/friends-food.mp4, VHS Camcorder, submitted and sealed. Real ledger then showed 2 of 5 and 9 of 30 seconds, with Photo 3 s and Video 6 s both sealed.
+A separate fake-device desktop recording supplied the exact recording controls. It was not submitted.
+The app's actual file-source copy, including Chosen from a file and MP4 facts, remains in review images.
+
+HOW THE OUTPUT WAS MADE
+Live camera controls are cloned from actual rendered DOM with computed CSS and locally copied app fonts. No substitute control design was drawn.
+The live media layer is replaced with the authorized stock image/video. The photo uses Disposable Flash after the initial Compact Digital hold. The video uses VHS.
+The copied real retro-looks.ts and lookOverlays function from LookPreview.tsx generate the look geometry for the actual stock aspect ratios. The executable copy is source/retro.mjs. It runs only during building; the shipped frames contain the resulting CSS layers.
+Live allowance pills are copied from the preceding actual review state, restoring 5 left / 30 s before the photo and 4 left / 27 s before the video. The corresponding moments count is absent / 1. These are presentation continuity edits to the cloned DOM, not app or server changes.
+Photo review, upload, sealed and ledger are unredesigned DPR-3 screenshots of the actual app state.
+Video applying-look, sealed and ledger are unredesigned DPR-3 screenshots of the actual app state. The initially paused video did not paint a first frame; video-review-ready.png renders the captured real review DOM/CSS with the same local stock video at 1 second, preserving all controls and copy.
+All state PNGs are 1206 x 2142. They contain only browser content, not status bars or Safari chrome.
+The banner is authorized native-style HTML, not evidence of push delivery. Its icon is the app's actual public icon. Its default background is the actual At table Home screen with the countdown block and week/reset row hidden before capture. No cycle-duration text is visible.
+No feature title, recording stamp or disclaimer is added to any page.
+
+OPEN / RECORD
+Serve the mock directory as a static localhost directory; keep assets/, source/, states/ together.
+Open photo.html or video.html in the parent's simulator Safari, then begin recording during the 5-second opening hold.
+Each camera page has a 46-second timeline plus the default 5-second initial delay: 51 seconds from readiness. It holds the final ledger indefinitely; it does not loop.
+The stage is 402 x 714 CSS pixels, scaled to the actual content viewport. Native Safari chrome is provided by Safari, not baked into these pages.
+?delay=0 removes the initial delay. ?delay=10 gives ten seconds to start recording.
+?pause&at=7&delay=0 holds a selected timeline time for inspection. window.rewindSeek(seconds) changes the timeline. ArrowRight advances to the next state. R reloads the camera timeline.
+The cloned look/shutter/record buttons and the screenshot Seal hotspot can advance the timeline. Automatic timing is the default and needs no taps.
+Main camera pages and their frames make only same-origin static requests. No sign-in is required.
+
+PHOTO TIMELINE (seconds after initial delay)
+0-6: Compact Digital live camera with stock selfie.
+6-14: Disposable Flash selected, same real controls.
+14-22: Actual photo review; shutter flash occurs at the transition.
+22-30: Actual Uploading screen.
+30-38: Actual Sealed confirmation.
+38-46: Actual photo ledger; then holds indefinitely.
+
+VIDEO TIMELINE (seconds after initial delay)
+0-8: VHS live viewfinder with the stock video playing.
+8-14: Actual recording controls, moving stock, elapsed timer 0-6 seconds.
+14-22: Actual review DOM/CSS render with stock frame, trim controls and Seal.
+22-30: Actual Applying look 6% screenshot from the real submission.
+30-38: Actual Sealed confirmation.
+38-46: Actual two-entry ledger; then holds indefinitely.
+
+BANNER TIMELINE
+banner.html: 18-second capture window. Opening hold 5 s, banner visible 10 s, then 3 s of Home.
+Banner text: A small moment is waiting / Share something with your people.
+Default Home background is states/home-safe.png, already free of countdown and week text.
+Optional override: banner.html?bg=assets/actual-home.png . The parent must supply a background that already excludes cycle-duration text. No placeholder file needs to be present for the default page.
+Tap the banner page to toggle the banner. ?pause&at=6 holds it visible. ?delay=0 shows it immediately.
+
+READY STATE IMAGES (relative to mock/)
+Photo: states/photo-default.png, states/photo-live.png, states/photo-review.png, states/photo-upload.png, states/photo-sealed.png, states/photo-ledger.png.
+Video: states/video-live.png, states/video-recording.png, states/video-review-ready.png, states/video-applying-look.png, states/video-sealed.png, states/video-ledger.png.
+Banner/Home: states/home-safe.png, states/qa-banner-webkit.png.
+Native-engine browser QA: states/qa-photo-webkit.png, states/qa-video-webkit.png, states/qa-photo-ledger-webkit.png, states/qa-video-ledger-webkit.png.
+Raw DOM and raw screen captures ending -real are provenance inputs, not the preferred recording pages.
+
+VERIFICATION / CONSTRAINTS
+source/verification.json records successful Chromium and WebKit checks at 402 x 714, DPR 3. Both engines loaded moving 720 x 1280 stock video, readyState 4, muted, playing. No page errors, external requests, or prohibited duration text were found.
+The screen-image states preserve the captured pixels. The live DOM retains real layout, fonts, borders and controls; exact native Safari rasterization and Safari chrome placement remain for the parent's simulator recording check. No simulator was driven by this task.
+The video stock is a 6-second excerpt and loops in the idle live view. Its recording hold lasts six seconds. Review and applying-look states are held images; the latter retains the actual captured 6% rather than inventing progress.
+As F2 notes, simulator capture can omit static trailing time. The parent renderer may need to hold the final frame for the intended ledger duration.
+No real camera or push-delivery success is asserted by these pages.
+
+STOCK PROVENANCE
+Source inventory: videos/stock/SOURCES.md, read only.
+Selfie: Mizuno K, Pexels Friends Taking Selfie, #13929778, https://www.pexels.com/photo/friends-taking-selfie-13929778/ . Existing prepared asset 1600 x 2400, no added watermark.
+Video: Gul Isik, Pexels A group of people are eating food on a table, #20521671, https://www.pexels.com/video/a-group-of-people-are-eating-food-on-a-table-20521671/ . Existing prepared asset 720 x 1280, 6.000 s, H.264/AAC, source audio retained. This page plays it muted for recording.
+The two existing prepared assets were copied unchanged into mock/assets/.

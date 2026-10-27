@@ -1,0 +1,61 @@
+{
+  "number": 4,
+  "name": "Invite and join",
+  "output": "04-invite-and-join.mp4",
+  "segments": [
+    {
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/stills/04-invite-code.png",
+      "duration": 8,
+      "audio": false,
+      "note": "Invite code EMX-TVD; start after initial one-person Settings",
+      "add_island": false
+    },
+    {
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/04-invite.mov",
+      "in": 61,
+      "out": 66,
+      "duration": 8,
+      "audio": false,
+      "note": "Share code opens real native share sheet"
+    },
+    {
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/04-invite.mov",
+      "in": 100,
+      "out": 109,
+      "duration": 9,
+      "audio": false,
+      "note": "Read invitation share content and available destinations"
+    },
+    {
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/stills/04-invite-code.png",
+      "duration": 8,
+      "audio": false,
+      "add_island": false,
+      "note": "Clean invitation after native share-sheet close"
+    },
+    {
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/04-invite.mov",
+      "in": 224.5,
+      "out": 234.5,
+      "duration": 10,
+      "audio": false,
+      "note": "After join: Settings shows 2 of 5 members; no refresh/Home footage"
+    },
+    {
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/04-invite.mov",
+      "in": 234.5,
+      "out": 237,
+      "duration": 10,
+      "audio": false,
+      "note": "Open fresh Members showing Maya and Jun"
+    },
+    {
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/stills/04-members-joined.png",
+      "duration": 7,
+      "audio": false,
+      "note": "End on verified joined-members still with both Maya and Jun",
+      "add_island": false
+    }
+  ],
+  "add_island": false
+}

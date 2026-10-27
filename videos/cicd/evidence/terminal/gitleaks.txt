@@ -1,0 +1,5 @@
+$ jq -r '.runs[0].tool.driver.name, (.runs[0].tool.driver.rules|length), (.runs[0].results|length)' gitleaks.sarif
+gitleaks
+222
+0
+

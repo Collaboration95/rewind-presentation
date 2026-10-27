@@ -1,0 +1,35 @@
+@startuml
+!include _cicd.iuml
+title Deploy stage 1/2 · deploy-dev.yml builds, scans and signs the exact bundle before upload
+skinparam nodesep 34
+skinparam ranksep 46
+skinparam ArrowFontSize 20
+skinparam artifactFontSize 20
+
+frame "GitHub Actions · job “Deploy dev to the hosted host” · environment dev" as RUN {
+  rectangle "Merge commit\npushed to dev\n<size:20>(docs-only: skip)</size>" as P
+  hexagon "Quality run for\nthis commit\nsucceeded?\n<size:20>polls ≤ 25 min</size>" <<deploy>> as Q
+  rectangle "<b>Build the verified</b>\n<b>release bundle</b>\n<size:20>release.py build + verify</size>\n<size:20>runtime + web images</size>" as B
+  rectangle "<b>Scan the exact</b>\n<b>bundled images</b>\n<size:20>scan-release.py · Trivy</size>\n<size:20>no image rebuild</size>" as S
+  hexagon "Same image IDs,\nAlpine scanned,\n0 HIGH / CRITICAL?" <<deploy>> as G
+  rectangle "<b>Attest</b> tar +\nmanifest\n<size:20>attest-build-provenance</size>\n<size:20>Sigstore · OIDC signed</size>" as A
+  rectangle "Continue to\nOIDC + upload\n<size:20>(stage 2/2)</size>" as N
+}
+
+rectangle "<b>BLOCKS DEPLOY</b>\nRefuse: job red,\nhost unchanged" <<deploy>> as R1
+rectangle "<b>BLOCKS DEPLOY</b>\nStop before upload;\nreports still retained" <<deploy>> as R2
+
+artifact "<b>dev-release-security-<sha></b>\nsbom-runtime.cdx.json · sbom-web.cdx.json\ntrivy-runtime.json · trivy-web.json\nrelease-manifest.json" as A1
+artifact "<b>dev-release-bundle-<sha></b>\nrewind-release.tar\nSigstore attestation bundle" as A2
+
+P -right-> Q
+Q -right-> B : yes
+B -down-> S
+S -left-> G
+G -left-> A : yes
+A -left-> N
+Q -up-> R1 : no
+G -down-> R2 : no
+S -down-> A1 : always
+A -down-> A2
+@enduml

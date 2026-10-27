@@ -1,0 +1,337 @@
+{
+  "output": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/cuts-b/06-video-and-allowance-review.mp4",
+  "frames": 1950,
+  "duration": 65.0,
+  "segments": [
+    {
+      "type": "phone",
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/cuts-b/holds/06-before-allowance.png",
+      "still": true,
+      "start": 0.0,
+      "end": null,
+      "frames": 240,
+      "duration": 8.0,
+      "width": 1206,
+      "height": 2622,
+      "crop": null,
+      "masks": [],
+      "audio_file": null,
+      "audio_in": 0,
+      "gain": 1,
+      "source_audio": false,
+      "island": false,
+      "signature": {
+        "row": {
+          "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/cuts-b/holds/06-before-allowance.png",
+          "duration": 8,
+          "audio": false,
+          "note": "Actual initial ledger: Photo 3s, 1 of 5, 3 of 30s"
+        },
+        "source": [
+          "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/cuts-b/holds/06-before-allowance.png",
+          355792,
+          1793028797654466824
+        ],
+        "audio": null
+      }
+    },
+    {
+      "type": "phone",
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/cuts-b/sources/06-video.mp4",
+      "still": false,
+      "start": 4.1,
+      "end": 11.9,
+      "frames": 234,
+      "duration": 7.8,
+      "width": 1206,
+      "height": 2622,
+      "crop": null,
+      "masks": [],
+      "audio_file": null,
+      "audio_in": 0,
+      "gain": 1,
+      "source_audio": false,
+      "island": false,
+      "signature": {
+        "row": {
+          "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/cuts-b/sources/06-video.mp4",
+          "in": 4.1,
+          "out": 11.9,
+          "duration": 7.8,
+          "audio": false,
+          "note": "Animated VHS viewfinder"
+        },
+        "source": [
+          "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/cuts-b/sources/06-video.mp4",
+          82558003,
+          1793028698769108015
+        ],
+        "audio": null
+      }
+    },
+    {
+      "type": "phone",
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/cuts-b/holds/06-vhs-look.png",
+      "still": true,
+      "start": 0.0,
+      "end": null,
+      "frames": 180,
+      "duration": 6.0,
+      "width": 1206,
+      "height": 2622,
+      "crop": null,
+      "masks": [],
+      "audio_file": null,
+      "audio_in": 0,
+      "gain": 1,
+      "source_audio": false,
+      "island": false,
+      "signature": {
+        "row": {
+          "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/cuts-b/holds/06-vhs-look.png",
+          "duration": 6,
+          "audio": false,
+          "note": "Readable VHS selection before recording"
+        },
+        "source": [
+          "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/cuts-b/holds/06-vhs-look.png",
+          1872561,
+          1793028798009137700
+        ],
+        "audio": null
+      }
+    },
+    {
+      "type": "phone",
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/cuts-b/sources/06-video.mp4",
+      "still": false,
+      "start": 11.9,
+      "end": 17.9,
+      "frames": 180,
+      "duration": 6.0,
+      "width": 1206,
+      "height": 2622,
+      "crop": null,
+      "masks": [],
+      "audio_file": null,
+      "audio_in": 0,
+      "gain": 1,
+      "source_audio": false,
+      "island": false,
+      "signature": {
+        "row": {
+          "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/cuts-b/sources/06-video.mp4",
+          "in": 11.9,
+          "out": 17.9,
+          "duration": 6.0,
+          "audio": false,
+          "note": "Six seconds of actual animated recording"
+        },
+        "source": [
+          "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/cuts-b/sources/06-video.mp4",
+          82558003,
+          1793028698769108015
+        ],
+        "audio": null
+      }
+    },
+    {
+      "type": "phone",
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/cuts-b/sources/06-video.mp4",
+      "still": false,
+      "start": 18.1,
+      "end": 25.9,
+      "frames": 234,
+      "duration": 7.8,
+      "width": 1206,
+      "height": 2622,
+      "crop": null,
+      "masks": [],
+      "audio_file": null,
+      "audio_in": 0,
+      "gain": 1,
+      "source_audio": false,
+      "island": false,
+      "signature": {
+        "row": {
+          "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/cuts-b/sources/06-video.mp4",
+          "in": 18.1,
+          "out": 25.9,
+          "duration": 7.8,
+          "audio": false,
+          "note": "Actual video review"
+        },
+        "source": [
+          "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/cuts-b/sources/06-video.mp4",
+          82558003,
+          1793028698769108015
+        ],
+        "audio": null
+      }
+    },
+    {
+      "type": "phone",
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/cuts-b/holds/06-review.png",
+      "still": true,
+      "start": 0.0,
+      "end": null,
+      "frames": 150,
+      "duration": 5.0,
+      "width": 1206,
+      "height": 2622,
+      "crop": null,
+      "masks": [],
+      "audio_file": null,
+      "audio_in": 0,
+      "gain": 1,
+      "source_audio": false,
+      "island": false,
+      "signature": {
+        "row": {
+          "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/cuts-b/holds/06-review.png",
+          "duration": 5,
+          "audio": false,
+          "note": "Readable trim/review hold"
+        },
+        "source": [
+          "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/cuts-b/holds/06-review.png",
+          534235,
+          1793028798185136334
+        ],
+        "audio": null
+      }
+    },
+    {
+      "type": "phone",
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/cuts-b/sources/06-video.mp4",
+      "still": false,
+      "start": 26.1,
+      "end": 33.9,
+      "frames": 234,
+      "duration": 7.8,
+      "width": 1206,
+      "height": 2622,
+      "crop": null,
+      "masks": [],
+      "audio_file": null,
+      "audio_in": 0,
+      "gain": 1,
+      "source_audio": false,
+      "island": false,
+      "signature": {
+        "row": {
+          "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/cuts-b/sources/06-video.mp4",
+          "in": 26.1,
+          "out": 33.9,
+          "duration": 7.8,
+          "audio": false,
+          "note": "Actual applying-look transition"
+        },
+        "source": [
+          "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/cuts-b/sources/06-video.mp4",
+          82558003,
+          1793028698769108015
+        ],
+        "audio": null
+      }
+    },
+    {
+      "type": "phone",
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/cuts-b/sources/06-video.mp4",
+      "still": false,
+      "start": 34.1,
+      "end": 35.1,
+      "frames": 30,
+      "duration": 1.0,
+      "width": 1206,
+      "height": 2622,
+      "crop": null,
+      "masks": [],
+      "audio_file": null,
+      "audio_in": 0,
+      "gain": 1,
+      "source_audio": false,
+      "island": false,
+      "signature": {
+        "row": {
+          "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/cuts-b/sources/06-video.mp4",
+          "in": 34.1,
+          "out": 35.1,
+          "duration": 1.0,
+          "audio": false,
+          "note": "Sealed"
+        },
+        "source": [
+          "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/cuts-b/sources/06-video.mp4",
+          82558003,
+          1793028698769108015
+        ],
+        "audio": null
+      }
+    },
+    {
+      "type": "phone",
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/cuts-b/holds/06-sealed.png",
+      "still": true,
+      "start": 0.0,
+      "end": null,
+      "frames": 228,
+      "duration": 7.6,
+      "width": 1206,
+      "height": 2622,
+      "crop": null,
+      "masks": [],
+      "audio_file": null,
+      "audio_in": 0,
+      "gain": 1,
+      "source_audio": false,
+      "island": false,
+      "signature": {
+        "row": {
+          "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/cuts-b/holds/06-sealed.png",
+          "duration": 7.6,
+          "audio": false,
+          "note": "Sealed reading hold"
+        },
+        "source": [
+          "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/cuts-b/holds/06-sealed.png",
+          463067,
+          1793028798303815679
+        ],
+        "audio": null
+      }
+    },
+    {
+      "type": "phone",
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/stills/06-ledger.png",
+      "still": true,
+      "start": 0.0,
+      "end": null,
+      "frames": 240,
+      "duration": 8.0,
+      "width": 1206,
+      "height": 2622,
+      "crop": null,
+      "masks": [],
+      "audio_file": null,
+      "audio_in": 0,
+      "gain": 1,
+      "source_audio": false,
+      "island": false,
+      "signature": {
+        "row": {
+          "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/stills/06-ledger.png",
+          "duration": 8,
+          "audio": false,
+          "note": "Native captured final ledger: 2 of 5, 9 of 30s, Photo 3s and Video 6s sealed"
+        },
+        "source": [
+          "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/stills/06-ledger.png",
+          862130,
+          1793028374772772922
+        ],
+        "audio": null
+      }
+    }
+  ]
+}

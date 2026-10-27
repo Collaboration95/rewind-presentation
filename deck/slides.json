@@ -1,0 +1,2043 @@
+[
+  {
+    "id": "s1",
+    "sec": 1,
+    "tag": "PM",
+    "title": "A month of moments. One film",
+    "secs": 10,
+    "say": [
+      "Rewind gives a small group one shared film from a month of everyday moments."
+    ],
+    "transition": "First, the problem and the product boundary.",
+    "refs": [
+      "P1"
+    ],
+    "source": "BRIEF-SHARED.md \u00b7 27 Oct 2026",
+    "script": "Good afternoon. I am Gopal Guruprasath, presenting Rewind for Team 14: a month of everyday moments from a small private group, turned into one shared film.",
+    "kind": "main",
+    "extra": "cover",
+    "label": "1",
+    "clock": 0,
+    "mainindex": 1
+  },
+  {
+    "id": "s2",
+    "sec": 1,
+    "tag": "PM",
+    "title": "Everyday moments need a shared reason to return",
+    "secs": 50,
+    "say": [
+      "The problem is fragmented memories in busy group chats.",
+      "The product uses small groups, a 28-day cycle and weekly contribution limits.",
+      "Photo and video both stay; the iPhone experience is the Home Screen app."
+    ],
+    "transition": "The four sprints show how we delivered this boundary.",
+    "refs": [
+      "B1",
+      "P1"
+    ],
+    "source": "audit/F1-system-demo.md \u00a71 \u00b7 product rules",
+    "script": "Our business problem is simple: people already capture moments, but the moments disappear inside busy chats and camera rolls. A group has no common point at which to look back together. Rewind adds that point. Two to ten members contribute photos or short videos, and the contributions remain sealed until a twenty-eight-day cycle closes. Each member has five moments and thirty seconds per week. The limit keeps the contribution small enough to become a habit. At the end, the group receives one film and a twenty-four-hour premiere before the film remains in Archive. Our scope is the real-account web and PWA journey: identity, private groups, invitations, capture, chat, reminders and films. That is the boundary used in the design and in the demonstration.",
+    "kind": "main",
+    "extra": "",
+    "label": "2",
+    "clock": 10,
+    "mainindex": 2
+  },
+  {
+    "id": "s3",
+    "sec": 1,
+    "tag": "PM",
+    "title": "Four sprints took Rewind from foundation to hosted real accounts",
+    "secs": 60,
+    "say": [
+      "The four milestones move from a runnable skeleton to real accounts and stabilisation.",
+      "Each of our five members has an agreed twenty-percent effort share.",
+      "Planning and reviews happened each sprint; retrospective actions changed the next sprint\u2019s checks."
+    ],
+    "transition": "The use cases now give that scope a formal boundary.",
+    "refs": [
+      "P1"
+    ],
+    "source": "records/TEAM.md \u00b7 AGILE.md \u00b7 charts/velocity.png \u00b7 open issues checked 26 Oct",
+    "script": "We used four sprints with zero-based names. Sprint zero built the runnable foundation; Sprint one integrated capture, the cycle and Archive; Sprint two delivered real accounts, private S3 media, PostgreSQL and Cognito; Sprint three concentrated on stability, recovery and regression tests. Velocity, as issues closed in each sprint window, was forty-four, one hundred, one hundred and forty-five and thirty. Today the real-account web and PWA journey runs end to end on hosted dev, and three hundred and nineteen of three hundred and twenty-nine backlog issues are closed. We held project planning, and Sprint Planning and Sprint Review every sprint. Done means the outcome checked in the cheapest real environment, fast tests, a green Quality check and a merge to dev.",
+    "kind": "main",
+    "extra": "",
+    "label": "3",
+    "clock": 60,
+    "mainindex": 3
+  },
+  {
+    "id": "P1",
+    "sec": 1,
+    "tag": "PM",
+    "title": "Four burndowns, velocity and each member\u2019s share of the effort",
+    "secs": 60,
+    "say": [
+      "Four burndowns, velocity and each member\u2019s share of the effort"
+    ],
+    "transition": "",
+    "refs": [
+      "B25"
+    ],
+    "source": "",
+    "script": "These are the four sprint burndowns and the velocity. Sprint one is the clean case: fifty issues in scope, thirty-seven open at the start and zero by the twenty-third of September. Sprint two is the counter-example: scope kept growing, to one hundred and thirty-five, as real accounts landed, and it closed with nine open. Velocity peaked in Sprint two with one hundred and forty-five issues closed and one hundred and thirty-two pull requests merged. Effort was not equal: I carried forty percent; Nguyen Kim Long, Jiang Jiayu and Phan Mai Tan Loi twenty percent each; Sang Haoxiang made a minimal contribution. Each retrospective changed the next sprint: integration gaps led to real adapters, stale state led to interaction tests.",
+    "kind": "main",
+    "extra": "",
+    "label": "4",
+    "clock": 120,
+    "mainindex": 4
+  },
+  {
+    "id": "s4",
+    "sec": 2,
+    "tag": "SAD",
+    "title": "Fourteen use cases follow one private-group journey",
+    "secs": 30,
+    "say": [
+      "Read the human goals inside the boundary before following implementation details.",
+      "CU-B is close cycle, compile and release the group film."
+    ],
+    "transition": "The logical view shows where those responsibilities live.",
+    "refs": [
+      "B1",
+      "B3"
+    ],
+    "source": "audit/B1-analysis.md \u00b7 uc-model",
+    "script": "The use case view starts with user goals. Members join a private group, contribute, chat and watch; the owner also manages membership and settings. The boundary makes the secondary systems explicit: identity, object storage, web push and scheduled time. For detailed design I follow CU-B: close the cycle, compile the film and release it, which joins UC07 and UC08.",
+    "kind": "main",
+    "extra": " figure-slide",
+    "label": "5",
+    "clock": 180,
+    "mainindex": 5
+  },
+  {
+    "id": "s5",
+    "sec": 2,
+    "tag": "SAD",
+    "title": "One Node application keeps rules close to transactions",
+    "secs": 35,
+    "say": [
+      "We chose a modular monolith because the private-group rules share transactions.",
+      "PostgreSQL stores durable state and S3 stores media.",
+      "Interfaces isolate identity, storage and capture differences."
+    ],
+    "transition": "Now map the analysis responsibilities onto that implementation.",
+    "refs": [
+      "B4",
+      "B5",
+      "B9"
+    ],
+    "source": "audit/B1-analysis.md \u00b7 B2-design.md \u00b7 ADR-0003",
+    "script": "The main architecture decision is a modular monolith. Splitting membership, contributions and cycles into services would add coordination without helping this workflow; keeping the rules beside one transaction makes acceptance and cycle transitions easier to reason about. Hosted PostgreSQL holds durable relational state, private S3 holds media, and Cognito supplies web identity. Adapters keep those protocols out of the domain decisions.",
+    "kind": "main",
+    "extra": " figure-slide",
+    "label": "6",
+    "clock": 210,
+    "mainindex": 6
+  },
+  {
+    "id": "s6",
+    "sec": 2,
+    "tag": "SAD",
+    "title": "Analysis responsibilities become named implementation modules",
+    "secs": 35,
+    "say": [
+      "The analysis model names responsibilities before implementation.",
+      "The design model maps those responsibilities to real modules and tables.",
+      "Function modules are labelled as modules, not invented classes."
+    ],
+    "transition": "The hardest design problem is safely repeating this background work.",
+    "refs": [
+      "B1",
+      "D1"
+    ],
+    "source": "audit/B1-analysis.md \u00b7 CU-B mapping",
+    "script": "The left side is analysis: a boundary receives interaction, a control coordinates the use case, and entities hold the state the business must retain. On the right we refine those responsibilities into real names. The scheduler finds work, lifecycle owns the cycle transition, compilation prepares and finalises the film, and the database keeps cycles, jobs and frozen inputs. A collection of functions is drawn as a module; a class symbol is reserved for a real class, so the model stays traceable to the code.",
+    "kind": "main",
+    "extra": " figure-slide",
+    "label": "7",
+    "clock": 245,
+    "mainindex": 7
+  },
+  {
+    "id": "s8",
+    "sec": 2,
+    "tag": "SAD",
+    "title": "Durable claims make a repeated tick safe: close, claim, render, fence",
+    "secs": 50,
+    "say": [
+      "Follow close, claim, render and finalise in that order.",
+      "The alternatives show duplicate ticks and stale workers.",
+      "A retry reuses durable state instead of creating a second film."
+    ],
+    "transition": "The same reasoning gave three more named patterns.",
+    "refs": [
+      "s7",
+      "B16",
+      "B17"
+    ],
+    "source": "audit/B1-analysis.md \u00b7 seq-cycle \u00b7 jobs/worker.ts",
+    "script": "This sequence is our hardest design problem: a scheduler tick can repeat, and an old worker can finish after its lease expires. Polling alone finds work but does not make repetition safe, so we compared State and Command object hierarchies with persisted state plus a durable job, and chose the durable job. One lifecycle transaction closes the cycle, freezes the inputs, queues the film job and opens the successor. The worker claims the job and renders outside the transaction. At finalisation it proves it still holds the current lease and generation, so a repeated tick reuses the job and a stale worker cannot publish.",
+    "kind": "main",
+    "extra": " figure-slide",
+    "label": "8",
+    "clock": 280,
+    "mainindex": 8
+  },
+  {
+    "id": "PAT",
+    "sec": 2,
+    "tag": "SDP",
+    "title": "Three design problems, three named patterns in the code",
+    "secs": 45,
+    "say": [
+      "Three design problems, three named patterns in the code"
+    ],
+    "transition": "",
+    "refs": [
+      "B7",
+      "B8",
+      "B9",
+      "s7"
+    ],
+    "source": "",
+    "script": "Three more design problems, each solved with a named pattern; click a diagram to enlarge it. Top left, media storage: local disk in development and private S3 when hosted. MediaStore is the Strategy, with a local and a private-S3 implementation, and the S3 side adapts the AWS SDK, so the worker never branches. Top right, chat: every open screen needs each new message, so RealtimeHub is the Observer subject and each SSE connection subscribes. Bottom left, persistence: hosted PostgreSQL has a different API from local SQLite, so PostgresDatabase is an Adapter behind one data-access contract. Bottom right sums it up: problem, pattern, benefit.\n\n[Cite if asked] Repeated work: lifecycle.ts and jobs/compilation.ts (the durable job on slide 8). Storage: privateTransport adapts the AWS SDK commands. Chat: stored messages replay on reconnect.",
+    "kind": "main",
+    "extra": "",
+    "label": "9",
+    "clock": 330,
+    "mainindex": 9
+  },
+  {
+    "id": "s9",
+    "sec": 2,
+    "tag": "SAD",
+    "title": "Keys preserve membership and the film\u2019s exact input set",
+    "secs": 40,
+    "say": [
+      "Membership is a relation used by access decisions.",
+      "Cycles own contributions and durable media jobs.",
+      "Frozen compilation inputs preserve the film\u2019s exact input set."
+    ],
+    "transition": "The cycle statechart came before the screens.",
+    "refs": [
+      "B4",
+      "B9"
+    ],
+    "source": "audit/B2-design.md \u00b7 er-core \u00b7 PostgreSQL schema",
+    "script": "This is the database schema for the same use case. Membership relates an account to a group and its role, and every access decision uses it. A group has cycles; a cycle has contributions; media jobs retain processing state. Compilation inputs freeze exactly which media belongs to a film, so a retry cannot reinterpret a changing collection. We chose PostgreSQL because this path depends on joins and transactions across related records. Before the screens, one more model: the cycle\u2019s states.",
+    "kind": "main",
+    "extra": " figure-slide",
+    "label": "10",
+    "clock": 375,
+    "mainindex": 10
+  },
+  {
+    "id": "D1",
+    "sec": 2,
+    "tag": "SAD",
+    "title": "The cycle\u2019s states were fixed before any screen",
+    "secs": 25,
+    "say": [
+      "Collecting \u2192 revealing (unpublished) \u2192 published premiere \u2192 archived; the server owns every transition."
+    ],
+    "transition": "Each screen then maps to one of these states.",
+    "refs": [
+      "B16",
+      "B17"
+    ],
+    "source": "audit/B1-analysis.md \u00b7 state-cycle",
+    "script": "Stored lifecycle state and durable jobs make work recoverable; a current lease and generation determine who may finalise.",
+    "kind": "main",
+    "extra": " figure-slide",
+    "label": "11",
+    "clock": 415,
+    "mainindex": 11
+  },
+  {
+    "id": "D2",
+    "sec": 2,
+    "tag": "SAD",
+    "title": "Each screen renders one state of the cycle",
+    "secs": 40,
+    "say": [
+      "Home, capture, developing, premiere and Archive each render one server state."
+    ],
+    "transition": "Testing checks those states through their real boundaries.",
+    "refs": [
+      "D1",
+      "U1",
+      "U2",
+      "U3",
+      "U4"
+    ],
+    "source": "uiflow/index.html",
+    "script": "[Click inside the page to step through a flow; Esc returns to the slides. If the page does not load, press S for the storyboards.]\n\nThe screens came second, and each one maps to a state. While the cycle is collecting, Home shows the countdown, the week and the member\u2019s allowance, and capture is offered. When the cycle closes, Home shows the film developing. Once it is published, the premiere card opens the film for twenty-four hours, and after that the film lives in Archive. Every screen reads the server\u2019s state instead of keeping its own, so a refresh or a second device always agrees.",
+    "kind": "main",
+    "extra": "uiflow-slide",
+    "label": "12",
+    "clock": 440,
+    "mainindex": 12
+  },
+  {
+    "id": "s10",
+    "sec": 3,
+    "tag": "TESTING",
+    "title": "Twelve test types each catch a different failure",
+    "secs": 50,
+    "say": [
+      "Fast suites block every merge; browser checks join for main; load and the real-account journey run on demand."
+    ],
+    "transition": "Start at the bottom: static checks.",
+    "refs": [
+      "B6"
+    ],
+    "source": "",
+    "script": "Here is the whole test map: twelve types, each with its tool, count and when it runs. The tag says what a failure does. Blocks merge means the required Quality check turns red and the pull request cannot merge; reports means the result is recorded for review but never stops a merge. The top six block every pull request; browser, PWA and accessibility checks join for pull requests to main; the real-account journey and the load test run on demand. I will group them as unit, integration, end-to-end and security.",
+    "kind": "main",
+    "extra": "",
+    "label": "13",
+    "clock": 480,
+    "mainindex": 13
+  },
+  {
+    "id": "TT",
+    "sec": 3,
+    "tag": "TESTING",
+    "title": "Six test layers, each with a real example of what it catches",
+    "secs": 80,
+    "say": [
+      "Six test layers, each with a real example of what it catches"
+    ],
+    "transition": "",
+    "refs": [
+      "T2",
+      "T3",
+      "T4",
+      "T7",
+      "T8",
+      "T9"
+    ],
+    "source": "",
+    "script": "Six layers, each with a real example. Unit and component tests: one thousand six hundred and seventy-four Jest tests check screens and state without a device, with node:test for server units. Integration: one thousand and six server tests call the real routes over HTTP, and the same suite runs again on PostgreSQL 17, so a dialect difference or migration drift fails the pull request. These block every merge. End to end, forty-one Playwright tests drive the exported app with an owner, an invited member and an outsider; the PWA build is checked as it will be installed; and axe with keyboard tests checks the main screens for WCAG 2.1 AA. Those three join for pull requests to main. Each card names one real test and the bug it catches.",
+    "kind": "main",
+    "extra": "",
+    "label": "14",
+    "clock": 530,
+    "mainindex": 14
+  },
+  {
+    "id": "TS",
+    "sec": 3,
+    "tag": "TESTING",
+    "title": "A regression test for a real bug, and security inside the suites",
+    "secs": 50,
+    "say": [
+      "A regression test for a real bug, and security inside the suites"
+    ],
+    "transition": "",
+    "refs": [
+      "s11",
+      "T10"
+    ],
+    "source": "",
+    "script": "One real bug shows why we test behaviour. After a failed photo, Try again did nothing, because retry called capture from a state whose guard returned at once. The regression test fails the capture, taps Try again and expects the viewfinder and a fresh capture: it fails on the old code and passes with the fix. Security is also tested inside the suites: cross-group privacy denials, rate limits, our patched dependencies and the scan gates themselves. The pipeline scans come in the CI/CD section, and performance in the system demo.\n\n[Cite if asked] Regression test: camera-capture.characterisation.test.tsx. Rate limits: safety-rate-limits.test.mjs. Patched dependencies: braces and node-forge, where the original node-forge accepts a forged signature. Access tests cover account safety too; scan gates reject expired, wrong or incomplete scans.",
+    "kind": "main",
+    "extra": "",
+    "label": "15",
+    "clock": 610,
+    "mainindex": 15
+  },
+  {
+    "id": "C1",
+    "sec": 4,
+    "tag": "DEVSECOPS",
+    "title": "One change passes four gates; colour says what a failure blocks",
+    "secs": 45,
+    "say": [
+      "This is the whole pipeline on one page; the next pages zoom into each band. A developer commits on an issue branch. Local git hooks run format, lint, architectu"
+    ],
+    "transition": "Before the detail, a quick key to the shapes and colours.",
+    "refs": [
+      "C2 legend",
+      "C3 source and artifacts"
+    ],
+    "source": "",
+    "script": "This is the whole pipeline on one page. The legend in the corner reads every pipeline figure: colour says what a failure blocks, orange the merge, blue the deploy, purple a push or promotion rule, and dashed grey only reports; hexagons are decisions. Band one is the pull request into dev: Quality checks is the one required check, and CodeQL, Gitleaks, Trivy and GitGuardian report beside it. Band two starts on the same push to dev: wait for Quality on the merge commit, build one bundle, scan the exact images, sign, upload, and activate only if health passes. Band three is hosted dev, scanned by ZAP after every deploy; promotion to main needs one human approval.",
+    "kind": "main",
+    "extra": "figure-slide figure-slide",
+    "label": "16",
+    "clock": 660,
+    "mainindex": 16
+  },
+  {
+    "id": "C3",
+    "sec": 4,
+    "tag": "DEVSECOPS",
+    "title": "Protected branches carry source; every run leaves results we can inspect",
+    "secs": 45,
+    "say": [
+      "Source management: work starts on an issue branch from the latest dev and enters dev only through a pull request. The dev rule requires the check named Format, "
+    ],
+    "transition": "Now zoom into the pull request band.",
+    "refs": [
+      "CB2 branch protection settings"
+    ],
+    "source": "",
+    "script": "Source management: work starts on an issue branch from the latest dev and enters dev only through a pull request. The dev rule requires the Format, lint, typecheck, and test check, an up-to-date branch and resolved conversations, applies to administrators, and forbids force-pushes and deletion. Main adds one approving review and the browser and PWA checks. Artifact management: Git keeps source, the lockfile, workflows, Terraform and Dockerfiles. Each run keeps its results as artifacts named with the commit SHA: JUnit, npm audit, SARIF, Trivy, SBOMs, the manifest and the release tar for thirty days, coverage for fourteen and ZAP for ninety. Provenance sits in GitHub attestations, and the host keeps the current, previous and pending releases for rollback.",
+    "kind": "main",
+    "extra": "figure-slide figure-slide",
+    "label": "17",
+    "clock": 705,
+    "mainindex": 17
+  },
+  {
+    "id": "C4",
+    "sec": 4,
+    "tag": "DEVSECOPS",
+    "title": "Nine Quality jobs feed one required merge check; security reports beside it",
+    "secs": 50,
+    "say": [
+      "This is quality.yml on a pull request. The first job classifies the change. If only Markdown documentation changed, every job is skipped and the gate passes in "
+    ],
+    "transition": "Beside Quality, the security workflows run and report.",
+    "refs": [
+      "C16 tests and coverage numbers"
+    ],
+    "source": "",
+    "script": "This is quality.yml on a pull request. The first job classifies the change; a code change fans out into eight parallel lanes: four static checks, the production dependency audit, root and IaC tests, server tests on SQLite with coverage, the same suite on PostgreSQL 17, frontend Jest with a seventy percent statement floor, and the deployment fixtures. The last job, Format, lint, typecheck, and test, needs every lane green; it is the one check in branch protection, so a red lane disables the merge button.\n\n[V shows the security workflows; V again returns.] Beside it, CodeQL, Gitleaks, release security and GitGuardian report into the Security tab without blocking the merge.",
+    "kind": "main",
+    "extra": "figure-slide figure-slide",
+    "label": "18",
+    "clock": 750,
+    "mainindex": 18
+  },
+  {
+    "id": "C6",
+    "sec": 4,
+    "tag": "DEVSECOPS",
+    "title": "Deploy scans and signs the exact bundle, then activates only if healthy",
+    "secs": 50,
+    "say": [
+      "The merge to dev starts Deploy dev. Its first gate polls the Quality run for this exact merge commit; if that run fails, the deploy refuses and the host is unto"
+    ],
+    "transition": "Only then does the runner touch AWS.",
+    "refs": [
+      "C14 SBOM and provenance"
+    ],
+    "source": "",
+    "script": "The merge to dev starts Deploy dev. It first waits for the Quality run on this exact merge commit; if that fails, the host is untouched. release.py builds one tar with the runtime and web images. scan-release.py extracts those exact images, writes a CycloneDX SBOM and Trivy report for each, and stops on any High or Critical finding before upload. attest-build-provenance then signs the tar and the manifest.\n\n[V shows the second half; V returns.] For upload, GitHub holds no AWS keys: OIDC gives a one-hour role session limited to this repository and dev. The host checks the tar\u2019s SHA-256, starts the candidate and activates it only when health is ready; otherwise it restores the previous release.",
+    "kind": "main",
+    "extra": "figure-slide figure-slide",
+    "label": "19",
+    "clock": 800,
+    "mainindex": 19
+  },
+  {
+    "id": "C8",
+    "sec": 4,
+    "tag": "DEVSECOPS",
+    "title": "ZAP scans hosted dev after every deploy: 0 High, 4 Medium (CSP)",
+    "secs": 45,
+    "say": [
+      "DAST runs as a second job that needs the deploy. It uses the OWASP ZAP baseline action: a spider and an AJAX spider crawl the single-page app for two minutes, a"
+    ],
+    "transition": "That completes the pipeline. Here is everything it checks for, in one table.",
+    "refs": [
+      "C15 DAST results"
+    ],
+    "source": "",
+    "script": "After every deploy, a second job runs the OWASP ZAP baseline against the hosted site: a spider and an AJAX spider crawl it for two minutes and passive rules inspect every response, unauthenticated and without attacks, because hosted dev holds shared data. It is report-only.\n\n[V shows the real results; V returns.] This deploy found zero High and four Medium alerts, all from one Content Security Policy gap: our full policy is served Report-Only, so directives such as form-action are effectively unrestricted. The fix is to enforce that policy once its reports are clean.",
+    "kind": "main",
+    "extra": "figure-slide figure-slide",
+    "label": "20",
+    "clock": 850,
+    "mainindex": 20
+  },
+  {
+    "id": "C10",
+    "sec": 4,
+    "tag": "DEVSECOPS",
+    "title": "SAST findings are triaged with reasons; SCA blocked merges until fixed",
+    "secs": 50,
+    "say": [
+      "SAST is CodeQL with the security-extended query suite on three languages: our TypeScript and JavaScript, the Python deployment scripts, and the workflow files t"
+    ],
+    "transition": "Next, dependencies, where a real advisory blocked us.",
+    "refs": [
+      "alert 56 page live"
+    ],
+    "source": "",
+    "script": "SAST is CodeQL with the security-extended suite on TypeScript, Python and the workflow files, on every pull request, push and weekly. In pull request 592 it raised three medium alerts, 54 to 56, in the load-test script; we dismissed them as used in tests with a written reason, because that harness never ships in the image.\n\n[V shows SCA; V returns.] SCA is the production dependency audit inside the required check. On 24 October a new advisory marked zod below 4.6.6 as high severity; Quality turned red and two pull requests could not merge until PR 591 added a scoped override. The retained audit now shows zero vulnerabilities across 674 production dependencies.",
+    "kind": "main",
+    "extra": "",
+    "label": "21",
+    "clock": 895,
+    "mainindex": 21
+  },
+  {
+    "id": "C17",
+    "sec": 4,
+    "tag": "DEVSECOPS",
+    "title": "The pipeline caught problems that source-level tests could not",
+    "secs": 40,
+    "say": [
+      "Six technical findings. First, on 24 October a new zod advisory turned the audit red with no change from us, and the gate blocked two pull requests until PR 591"
+    ],
+    "transition": "Now the live route through GitHub.",
+    "refs": [
+      "B31 product findings"
+    ],
+    "source": "",
+    "script": "The technical findings. A new zod advisory blocked merges with no change from us until PR 591 fixed it. Alpine removed the FFmpeg version we pinned, so the image stopped building. An audit of our own pipeline found we scanned a rebuilt image rather than the deployed one; PR 595 moved the gate onto the exact bundle and added the manifest and attestation. Gitleaks reported twenty-seven historical false positives, so we allowlisted exact values. And Cognito code passed its tests while its runtime dependencies were missing from the image. The lesson: verify what ships, not just the source.",
+    "kind": "main",
+    "extra": "",
+    "label": "22",
+    "clock": 945,
+    "mainindex": 22
+  },
+  {
+    "id": "C18",
+    "sec": 4,
+    "tag": "DEVSECOPS",
+    "title": "Demo route: eight clicks from pull request to running site",
+    "secs": 275,
+    "say": [
+      "This is the click route for the live part. Each link opens the real page; the Film column gives the timestamp in the recorded walkthrough if the network fails. "
+    ],
+    "transition": "Now the product journey on hosted dev.",
+    "refs": [
+      "CB1 recorded film"
+    ],
+    "source": "",
+    "script": "[00:00\u201300:35 on this slide] This is the route for the live part: the pull request checks, the Quality run and its artifacts, a triaged CodeQL alert, the Deploy dev run and its steps, the attestation, the ZAP report and the hosted health endpoint.\n\n[00:35\u201304:35 live in GitHub, about thirty seconds per link. If the network fails, open backup CB1 and play the recorded walkthrough from the Film timestamps.]\n\n1. Pull request checks: Quality is the required context; the security workflows sit beside it.\n2. Quality run: the job graph fans out and joins the aggregate; open the artifacts list.\n3. CodeQL alert 56: the rule, the line and the written dismissal reason.\n4. Deploy dev 40344230832: wait for Quality, build, scan, attest, install.\n5. Deploy steps: the exact-image scan and the upload order.\n6. Attestation: the signed subject is the manifest for this commit.\n7. ZAP report: 0 High, 4 Medium, all Content Security Policy.\n8. Hosted health: the installed version and PostgreSQL readiness.\n\nReturn to the slides for the product journey.",
+    "kind": "main",
+    "extra": "",
+    "label": "23",
+    "clock": 985,
+    "mainindex": 23
+  },
+  {
+    "id": "s19",
+    "sec": 5,
+    "tag": "DEMO",
+    "title": "A private-group journey runs from prompt to film",
+    "secs": 15,
+    "say": [
+      "We will follow an owner and invited member, then check the outsider boundary."
+    ],
+    "transition": "Create the group and choose its shared prompt.",
+    "refs": [
+      "B1",
+      "B3"
+    ],
+    "source": "audit/F1-system-demo.md \u00a74 \u00b7 videos/clips/",
+    "script": "Two members have their accounts ready. We create the group, invite, contribute a photo and a video, chat, then watch the film, save it, and test the outsider boundary.",
+    "kind": "main",
+    "extra": "",
+    "label": "24",
+    "clock": 1260,
+    "mainindex": 24
+  },
+  {
+    "id": "F3",
+    "sec": 5,
+    "tag": "DEMO",
+    "title": "A shared prompt gives the group a common starting point",
+    "secs": 45,
+    "say": [
+      "Name the group, set the prompt and choose its size.",
+      "Home shows the new group; settings retain prompt and time zone.",
+      "The owner manages group settings."
+    ],
+    "transition": "Invite a friend with a single-use code.",
+    "refs": [
+      "B1"
+    ],
+    "source": "create group \u00b7 hosted dev \u00b7 26 Oct 2026",
+    "script": "[Space to start. Narrate over the clip; press \u2192 as soon as the stated result shows. The clip need not finish.]\n\nThe owner names the group, picks a shared prompt and sets the size, two to ten members. The prompt gives contributions a common theme. Pause when the new group and its prompt appear in settings.",
+    "kind": "clip",
+    "extra": "device-slide",
+    "label": "F3",
+    "clock": 1275,
+    "mainindex": 24
+  },
+  {
+    "id": "F4",
+    "sec": 5,
+    "tag": "DEMO",
+    "title": "One accepted invitation creates one private membership",
+    "secs": 60,
+    "say": [
+      "Create and share the code; the friend accepts.",
+      "Both accounts see the same group and member list.",
+      "Code works once and expires in 24 hours."
+    ],
+    "transition": "The first contribution is a photo.",
+    "refs": [
+      "B3"
+    ],
+    "source": "invite and join \u00b7 hosted dev \u00b7 26 Oct 2026",
+    "script": "[Space to start. Narrate over the clip; press \u2192 as soon as the stated result shows. The clip need not finish.]\n\nThe owner creates an invitation code; it works once and expires after twenty-four hours. Our friend accepts it from the prepared account, and both accounts now see the same group and member list. Acceptance is a server decision: a valid code and an authenticated account produce one durable membership. Reusing the code will not add anyone; we test that at the end.",
+    "kind": "clip",
+    "extra": "device-slide",
+    "label": "F4",
+    "clock": 1320,
+    "mainindex": 24
+  },
+  {
+    "id": "F5",
+    "sec": 5,
+    "tag": "DEMO",
+    "title": "A submitted photo becomes a sealed moment",
+    "secs": 60,
+    "say": [
+      "Take a photo, choose a look, review and submit.",
+      "Your moments records a sealed entry.",
+      "One photo uses one moment and three film seconds."
+    ],
+    "transition": "Video shares the same weekly allowance.",
+    "refs": [
+      "B3"
+    ],
+    "source": "photo contribution \u00b7 hosted dev \u00b7 27 Oct 2026",
+    "script": "[Space to start. Narrate over the clip; press \u2192 as soon as the stated result shows. The clip need not finish.]\n\nTake a photo and choose a look before submitting it. The user can review the contribution, but after acceptance it becomes sealed. Your moments retains the entry and allowance information without opening everyone\u2019s submitted content early. A photo counts as one moment and becomes a three-second segment in the film. Watch the state change from capture to a retained sealed entry.",
+    "kind": "clip",
+    "extra": "device-slide",
+    "label": "F5",
+    "clock": 1380,
+    "mainindex": 24
+  },
+  {
+    "id": "F6",
+    "sec": 5,
+    "tag": "DEMO",
+    "title": "Video and photos share one enforced weekly allowance",
+    "secs": 70,
+    "say": [
+      "Record with sound, trim and submit.",
+      "The ledger updates moments and total seconds.",
+      "5 moments / 30 seconds weekly; each video \u226415 seconds."
+    ],
+    "transition": "The group can talk while the moments stay sealed.",
+    "refs": [
+      "B3"
+    ],
+    "source": "video and allowance \u00b7 hosted dev \u00b7 27 Oct 2026",
+    "script": "[Space to start. Narrate over the clip; press \u2192 as soon as the stated result shows. The clip need not finish.]\n\nRecord a video, review the trim and submit it. A video can use up to fifteen seconds, and the total weekly allowance is shared with photos: five moments and thirty seconds per member. The visible ledger matters because the user needs to know what remains before trying another capture. The server checks the accepted contribution and media rather than trusting only the client display. Pause at the updated counts. The contribution is now part of the same sealed collection as the photo.",
+    "kind": "clip",
+    "extra": "device-slide",
+    "label": "F6",
+    "clock": 1440,
+    "mainindex": 24
+  },
+  {
+    "id": "F7",
+    "sec": 5,
+    "tag": "DEMO",
+    "title": "Stored messages and live updates keep the group connected",
+    "secs": 55,
+    "say": [
+      "Send a message, reply and react from the other account.",
+      "The second view updates without a refresh.",
+      "Stored messages plus SSE delivery and reconnect."
+    ],
+    "transition": "Next, opt into the weekly reminder.",
+    "refs": [
+      "B8"
+    ],
+    "source": "group chat \u00b7 hosted dev \u00b7 26 Oct 2026",
+    "script": "[Space to start. Narrate over the clip; press \u2192 as soon as the stated result shows. The clip need not finish.]\n\nOne member sends a message and the other sees it without refreshing. Replies and reactions remain in the shared conversation. The design combines stored messages with live SSE delivery and reconnect, so the live notification is not the only record of the message. This is where the Observer pattern from the design section becomes visible to a user.",
+    "kind": "clip",
+    "extra": "device-slide",
+    "label": "F7",
+    "clock": 1510,
+    "mainindex": 24
+  },
+  {
+    "id": "F9",
+    "sec": 5,
+    "tag": "DEMO",
+    "title": "The cycle closes, and the group watches its film",
+    "secs": 65,
+    "say": [
+      "A completed capsule exposes its premiere card.",
+      "The scheduler closes the cycle, queues work and opens its successor.",
+      "The product cycle is 28 days."
+    ],
+    "transition": "Open the group\u2019s film.",
+    "refs": [
+      "D1"
+    ],
+    "source": "automatic cycle closure \u00b7 hosted dev \u00b7 26 Oct 2026",
+    "script": "[Space to start. Narrate over the clip; press \u2192 as soon as the stated result shows. The clip need not finish.]\n\nSwitch to The little things, a completed capsule from Maya and Jun. The premiere card appears because the scheduler closed the cycle, compiled the film from the frozen inputs and opened the next cycle: the CU-B path from the design section. Open it: one portrait film, seven-twenty by twelve-eighty at thirty frames per second, built from everyone\u2019s sealed moments. Press M only if you want sound. Pause at the end screen.",
+    "kind": "clip",
+    "extra": "device-slide",
+    "label": "F9",
+    "clock": 1565,
+    "mainindex": 24
+  },
+  {
+    "id": "F11",
+    "sec": 5,
+    "tag": "DEMO",
+    "title": "Archive keeps the film available after its premiere",
+    "secs": 65,
+    "say": [
+      "Open Archive, select the film and save it.",
+      "The MP4 download opens as a playable file.",
+      "Members can save the film and their own moments."
+    ],
+    "transition": "Check the outsider boundary.",
+    "refs": [
+      "B4"
+    ],
+    "source": "Archive and save \u00b7 hosted dev \u00b7 26 Oct 2026",
+    "script": "[Space to start. Narrate over the clip; press \u2192 as soon as the stated result shows. The clip need not finish.]\n\nAfter the premiere, the film remains in Archive. Open the retained film, choose Save film and open the downloaded MP4. The end screen also lets a member save their own moments. This completes the journey from capture to a durable output the member can keep. Pause on the playable downloaded result. The final check uses a different account that has no membership.",
+    "kind": "clip",
+    "extra": "device-slide",
+    "label": "F11",
+    "clock": 1630,
+    "mainindex": 24
+  },
+  {
+    "id": "F12",
+    "sec": 5,
+    "tag": "DEMO",
+    "title": "A spent invitation gives an outsider no group access",
+    "secs": 60,
+    "say": [
+      "Reuse the spent invitation from an outsider account.",
+      "The invitation is rejected and the private group stays absent.",
+      "Private group and media reads require their access checks."
+    ],
+    "transition": "Finish with the hosted load results and the scaling mechanism.",
+    "refs": [
+      "B6"
+    ],
+    "source": "outsider account \u00b7 hosted dev \u00b7 26 Oct 2026",
+    "script": "[Space to start. Narrate over the clip; press \u2192 as soon as the stated result shows. The clip need not finish.]\n\nFrom the outsider\u2019s prepared account, try the invitation already used by our friend. The app rejects it as already used. The group does not appear in the outsider\u2019s list. This is the negative branch of the invitation rule shown earlier. The server tests also exercise direct group, budget, chat and media access with missing or wrong membership. The user demonstration and those API checks address the same privacy boundary at different layers. We have now completed the group journey.",
+    "kind": "clip",
+    "extra": "device-slide",
+    "label": "F12",
+    "clock": 1695,
+    "mainindex": 24
+  },
+  {
+    "id": "PERF",
+    "sec": 5,
+    "tag": "DEMO",
+    "title": "Load and stress: 100 users pass; the breakpoint is 200, set by the database bridge",
+    "secs": 120,
+    "say": [
+      "Load and stress: 100 users pass; the breakpoint is 200, set by the database bridge"
+    ],
+    "transition": "",
+    "refs": [
+      "T11",
+      "T12",
+      "B34",
+      "B11"
+    ],
+    "source": "",
+    "script": "Now the quality attributes. Performance was measured with a scripted load test against hosted dev: a Node HTTP runner drives the real API through CloudFront, Node and PostgreSQL, each user waits three to seven seconds between actions, and the mix is ninety-five percent reads. A stage passes with p95 under two seconds and errors under one percent. One to one hundred users all passed: at one hundred, p95 was 1.34 seconds, 17.8 requests per second, zero errors. This morning we pushed further. One hundred and fifty users still passed at 1.66 seconds. The breakpoint is two hundred users: p95 rose to 3.03 seconds, with still zero errors, and throughput saturated at twenty-nine requests per second, eighty percent of linear. At three hundred we stopped the ramp. The system fails by queueing, not by rejecting requests. The limiting factor is not the host CPU, which stayed under twenty-five percent, and not a rate limiter: every database call blocks the single Node event loop on one PostgreSQL client, so every request, even health, waits in the same queue.\n\n[Cite if asked] 1\u2013100 users: 180 s steady stages (26 Oct); 150\u2013300: 60 s stress stages (27 Oct). Every database call waits through Atomics.wait on a single pg client (server/src/postgres/database.ts, sync-worker.ts). Load-generator CPU peaked at 26% of one core, event-loop p99 \u2264 22 ms; zero 429s, 5xx, timeouts or socket errors.",
+    "kind": "main",
+    "extra": "",
+    "label": "25",
+    "clock": 1755,
+    "mainindex": 25
+  },
+  {
+    "id": "s20",
+    "sec": 5,
+    "tag": "DEMO",
+    "title": "The capacity model, checked by the stress test, shows where to scale next",
+    "secs": 105,
+    "say": [
+      "Every steady stage passed: 6,038 requests and zero errors.",
+      "At one hundred users, p95 was 1.34 seconds and throughput was 17.84 requests per second.",
+      "The capacity chart projects one and two API hosts from the quiet-host measurements."
+    ],
+    "transition": "We can take questions using the backup map.",
+    "refs": [
+      "B6",
+      "B11",
+      "B12"
+    ],
+    "source": "load-test/results/summary.json \u00b7 27 Oct 00:13 SGT \u00b7 dev 2390589",
+    "script": "Scalability: the capacity model fitted on the one-to-one-hundred run predicted a ceiling of about twenty-two requests per second and a knee near one hundred and sixteen users. The stress test confirms its shape and shows it is about 1.4 times conservative: the measured knee lies between one hundred and fifty and two hundred users, and saturation between twenty-nine and thirty-six requests per second. So the scale-out path follows the bottleneck. First, asynchronous persistence with a bounded connection pool, which removes the serialization. Second, a second API host behind a load balancer, which doubles the modelled ceiling; at two hundred and fifty users the mean drops from 6.4 to 1.1 seconds. Third, a separate media worker keeps film compilation off the API host. A larger instance alone would add little, because the CPU is not saturated. Maintainability is the pipeline we just walked through: those internal changes must pass the same behavioural tests, both database dialects, the exact-image scan and the health-gated deploy. Thank you; I am ready for questions.",
+    "kind": "main",
+    "extra": "",
+    "label": "26",
+    "clock": 1875,
+    "mainindex": 26
+  },
+  {
+    "id": "U1",
+    "sec": 2,
+    "tag": "SAD",
+    "title": "UI flow 1 \u00b7 Join a private group",
+    "secs": 0,
+    "say": [
+      "Join a private group"
+    ],
+    "transition": "Continue the storyboards, or move on to Testing.",
+    "refs": [
+      "D1",
+      "D2"
+    ],
+    "source": "uiflow/storyboards/1-join-a-private-group.png",
+    "script": "Storyboard for the Join a private group flow: each frame is labelled with the cycle state it renders. Use these if the interactive page is unavailable.",
+    "kind": "back",
+    "extra": "chart-slide fallback",
+    "label": "U1",
+    "clock": 1980,
+    "mainindex": 26
+  },
+  {
+    "id": "U2",
+    "sec": 2,
+    "tag": "SAD",
+    "title": "UI flow 2 \u00b7 Contribute within the allowance",
+    "secs": 0,
+    "say": [
+      "Contribute within the allowance"
+    ],
+    "transition": "Continue the storyboards, or move on to Testing.",
+    "refs": [
+      "D1",
+      "D2"
+    ],
+    "source": "uiflow/storyboards/2-contribute-within-the-allowance.png",
+    "script": "Storyboard for the Contribute within the allowance flow: each frame is labelled with the cycle state it renders. Use these if the interactive page is unavailable.",
+    "kind": "back",
+    "extra": "chart-slide fallback",
+    "label": "U2",
+    "clock": 1980,
+    "mainindex": 26
+  },
+  {
+    "id": "U3",
+    "sec": 2,
+    "tag": "SAD",
+    "title": "UI flow 3 \u00b7 Cycle lifecycle to archive",
+    "secs": 0,
+    "say": [
+      "Cycle lifecycle to archive"
+    ],
+    "transition": "Continue the storyboards, or move on to Testing.",
+    "refs": [
+      "D1",
+      "D2"
+    ],
+    "source": "uiflow/storyboards/3-cycle-lifecycle-to-archive.png",
+    "script": "Storyboard for the Cycle lifecycle to archive flow: each frame is labelled with the cycle state it renders. Use these if the interactive page is unavailable.",
+    "kind": "back",
+    "extra": "chart-slide fallback",
+    "label": "U3",
+    "clock": 1980,
+    "mainindex": 26
+  },
+  {
+    "id": "U4",
+    "sec": 2,
+    "tag": "SAD",
+    "title": "UI flow 4 \u00b7 Outsider is denied",
+    "secs": 0,
+    "say": [
+      "Outsider is denied"
+    ],
+    "transition": "Continue the storyboards, or move on to Testing.",
+    "refs": [
+      "D1",
+      "D2"
+    ],
+    "source": "uiflow/storyboards/4-outsider-is-denied.png",
+    "script": "Storyboard for the Outsider is denied flow: each frame is labelled with the cycle state it renders. Use these if the interactive page is unavailable.",
+    "kind": "back",
+    "extra": "chart-slide fallback",
+    "label": "U4",
+    "clock": 1980,
+    "mainindex": 26
+  },
+  {
+    "id": "C5",
+    "sec": 4,
+    "tag": "DEVSECOPS",
+    "title": "Security workflows run beside Quality and keep their findings",
+    "secs": 0,
+    "say": [
+      "Five security procedures run on the same pull request. CodeQL is our SAST. Gitleaks scans the full git history for secrets. Release security builds both images,"
+    ],
+    "transition": "After merge, the same push starts Deploy dev.",
+    "refs": [
+      "C9 catalogue"
+    ],
+    "source": "",
+    "script": "[Detail for C4: press V to return.] Five security procedures run on the same pull request. CodeQL is our SAST. Gitleaks scans the full git history for secrets. Release security builds both images, writes a CycloneDX SBOM and fails on High or Critical vulnerabilities, and scans Terraform and Dockerfiles. GitGuardian and Dependabot add secret and dependency alerts.\n\nThese are reporting controls: they can turn their own job red, and the findings land in the Security tab or as artifacts, but they are not required checks. The vulnerability gate that does block is in the deployment, on the exact images we ship. That is the next page.",
+    "kind": "back",
+    "extra": "figure-slide figure-slide fallback subview",
+    "label": "C5",
+    "clock": 1980,
+    "mainindex": 26
+  },
+  {
+    "id": "C7",
+    "sec": 4,
+    "tag": "DEVSECOPS",
+    "title": "Keyless AWS access and a health check decide activation",
+    "secs": 0,
+    "say": [
+      "GitHub has no AWS keys. The job exchanges its OIDC token for a one-hour role session, and the role trusts only this repository, the dev environment and refs/hea"
+    ],
+    "transition": "The DAST job is the last stage.",
+    "refs": [
+      "CB3 deploy job steps screenshot"
+    ],
+    "source": "",
+    "script": "[Detail for C6: press V to return.] GitHub has no AWS keys. The job exchanges its OIDC token for a one-hour role session, and the role trusts only this repository, the dev environment and refs/heads/dev. The runner checks the host is running, opens port 22 for its own address only with a short-lived key, ships the bundle and streams the hosted settings from a private S3 object.\n\nOn the host, the uploaded tar must match the built tar\u2019s SHA-256. The installer starts the candidate images and activates them only when health is ready and the running image IDs match; otherwise it restores the previous release and the job turns red. Then the public health endpoint is checked, SSH is closed and the key deleted, and the DAST job starts.",
+    "kind": "back",
+    "extra": "figure-slide figure-slide fallback subview",
+    "label": "C7",
+    "clock": 1980,
+    "mainindex": 26
+  },
+  {
+    "id": "C15",
+    "sec": 4,
+    "tag": "DEVSECOPS",
+    "title": "DAST: 0 High, 4 Medium, all from one Content Security Policy gap",
+    "secs": 0,
+    "say": [
+      "Here are the real ZAP results for the deployed commit: zero High, four Medium, seven Low and six informational alert types. All four Medium alerts are Content S"
+    ],
+    "transition": "Tests and coverage complete the catalogue.",
+    "refs": [
+      "open the HTML report"
+    ],
+    "source": "",
+    "script": "[Detail for C8: press V to return.] Here are the real ZAP results for the deployed commit: zero High, four Medium, seven Low and six informational alert types. All four Medium alerts are Content Security Policy findings.\n\nTake the first one. ZAP sent a GET to the hosted home page, robots.txt and sitemap.xml, read the Content-Security-Policy header, and found only frame-ancestors none. Directives such as form-action do not fall back to default-src, so they are effectively unrestricted. The informational alert explains why: our full policy is served as Content-Security-Policy-Report-Only, so browsers report violations but do not enforce them. The fix is to promote that policy to enforced once its reports are clean. The Low findings are missing hardening headers and the nginx version string.",
+    "kind": "back",
+    "extra": " fallback subview",
+    "label": "C15",
+    "clock": 1980,
+    "mainindex": 26
+  },
+  {
+    "id": "C11",
+    "sec": 4,
+    "tag": "DEVSECOPS",
+    "title": "SCA: a new zod advisory blocked merges until we fixed it",
+    "secs": 0,
+    "say": [
+      "SCA is the production dependency audit, inside the required check. On 24 October, with no code change from us, a new advisory, GHSA-mrhx-c7xc-m3w5, marked zod b"
+    ],
+    "transition": "Secrets next.",
+    "refs": [
+      "C17 findings row 1"
+    ],
+    "source": "",
+    "script": "[Detail for C10: press V to return.] SCA is the production dependency audit, inside the required check. On 24 October, with no code change from us, a new advisory, GHSA-mrhx-c7xc-m3w5, marked zod below 4.6.6 as high severity: oversized collections can exhaust memory. Our copy came in through Expo\u2019s CLI. Three high findings turned Quality red and two small pull requests could not merge. That is the gate working as designed.\n\nnpm suggested a forced, breaking Expo upgrade. Instead PR 591 added a scoped override so only Expo\u2019s CLI uses zod 4.6.6. The retained npm-audit.json for the deployed commit shows zero vulnerabilities at every severity across 674 production dependencies. Dependabot adds alerts and security update pull requests; the one open alert is a development-only package.",
+    "kind": "back",
+    "extra": " fallback subview",
+    "label": "C11",
+    "clock": 1980,
+    "mainindex": 26
+  },
+  {
+    "id": "B1",
+    "sec": 2,
+    "tag": "SAD",
+    "title": "Analysis separates interaction, coordination and state",
+    "secs": 0,
+    "say": [
+      "These are analysis responsibilities, then refined by the mapping on main frame six."
+    ],
+    "transition": "Return to the main analysis-to-design mapping.",
+    "refs": [
+      "D1"
+    ],
+    "source": "audit/B1-analysis.md \u00b7 bce-cycle",
+    "script": "The analysis model separates the interaction boundary, use-case coordination and durable business state; main frame six maps those responsibilities to code.",
+    "kind": "back",
+    "extra": " figure-slide",
+    "label": "B1",
+    "clock": 1980,
+    "mainindex": 26
+  },
+  {
+    "id": "B3",
+    "sec": 2,
+    "tag": "SAD",
+    "title": "Capture acceptance checks identity, allowance and media",
+    "secs": 0,
+    "say": [
+      "Acceptance crosses the server boundary and updates durable allowance state."
+    ],
+    "transition": "Return to the feature clip.",
+    "refs": [
+      "B6"
+    ],
+    "source": "audit/B1-analysis.md \u00b7 seq-capture",
+    "script": "The capture sequence follows reservation, media validation and acceptance, keeping membership and allowance decisions on the server.",
+    "kind": "back",
+    "extra": " figure-slide",
+    "label": "B3",
+    "clock": 1980,
+    "mainindex": 26
+  },
+  {
+    "id": "B4",
+    "sec": 2,
+    "tag": "SAD",
+    "title": "Relational keys make the private film traceable",
+    "secs": 0,
+    "say": [
+      "PostgreSQL supports the transactional relationships this workflow needs."
+    ],
+    "transition": "Return to the schema or Archive frame.",
+    "refs": [
+      "B9"
+    ],
+    "source": "audit/B2-design.md \u00b7 ADR-0003 \u00b7 er-core",
+    "script": "The relational choice follows transaction and consistency needs across membership, cycles, contributions and the frozen film input set.",
+    "kind": "back",
+    "extra": " figure-slide",
+    "label": "B4",
+    "clock": 1980,
+    "mainindex": 26
+  },
+  {
+    "id": "B5",
+    "sec": 4,
+    "tag": "DEVSECOPS",
+    "title": "The deployment view names each runtime boundary",
+    "secs": 0,
+    "say": [
+      "The diagram places the logical components on their hosted runtime and service boundaries."
+    ],
+    "transition": "Return to the CI/CD run.",
+    "refs": [
+      "B12"
+    ],
+    "source": "audit/B2-design.md \u00b7 deploy-dev",
+    "script": "CloudFront and nginx form the entry, Node runs the application, and PostgreSQL, S3 and Cognito provide the durable data and identity services.",
+    "kind": "back",
+    "extra": " figure-slide",
+    "label": "B5",
+    "clock": 1980,
+    "mainindex": 26
+  },
+  {
+    "id": "B6",
+    "sec": 3,
+    "tag": "TESTING",
+    "title": "Coverage and enforcement answer different questions",
+    "secs": 0,
+    "say": [
+      "Client statements have an enforced floor; server coverage is retained as a report."
+    ],
+    "transition": "Return to the testing table.",
+    "refs": [
+      "B11"
+    ],
+    "source": "audit/E-testing.md \u00a7\u00a71\u20133,6 \u00b7 f6cd896",
+    "script": "The statement floor is a regression safety net. Coverage reports identify branches to investigate, while behavioural tests assert the outcomes that matter.",
+    "kind": "back",
+    "extra": "",
+    "label": "B6",
+    "clock": 1980,
+    "mainindex": 26
+  },
+  {
+    "id": "B7",
+    "sec": 2,
+    "tag": "SDP",
+    "title": "Storage changes behind Strategy and Adapter roles",
+    "secs": 0,
+    "say": [
+      "The interface isolates the storage choice and each adapter handles its protocol."
+    ],
+    "transition": "Return to the architecture decision.",
+    "refs": [
+      "B9"
+    ],
+    "source": "audit/B2-design.md \u00b7 pattern-storage",
+    "script": "The problem is duplicated storage-specific branches in compilation and media code. We compared branching in each caller with an injected storage contract. We chose the MediaStore Strategy so the worker uses one interface. LocalMediaStore and PrivateS3MediaStore implement that contract, and privateTransport adapts AWS SDK commands. Hosted runtime selects PrivateS3MediaStore; disk mode has its separate filesystem path.",
+    "kind": "back",
+    "extra": " figure-slide",
+    "label": "B7",
+    "clock": 1980,
+    "mainindex": 26
+  },
+  {
+    "id": "B8",
+    "sec": 2,
+    "tag": "SDP",
+    "title": "Observer distributes chat updates alongside stored history",
+    "secs": 0,
+    "say": [
+      "RealtimeHub distributes live updates; stored messages support replay."
+    ],
+    "transition": "Return to the chat clip.",
+    "refs": [
+      "B5"
+    ],
+    "source": "audit/B2-design.md \u00b7 pattern-observer",
+    "script": "RealtimeHub acts as the live update subject and subscribers receive events, while stored messages provide the durable history and reconnect path.",
+    "kind": "back",
+    "extra": " figure-slide",
+    "label": "B8",
+    "clock": 1980,
+    "mainindex": 26
+  },
+  {
+    "id": "B9",
+    "sec": 2,
+    "tag": "SDP",
+    "title": "The persistence adapter preserves a common data-access contract",
+    "secs": 0,
+    "say": [
+      "The adapter centralises dialect work; its synchronous bridge also informs the scaling discussion."
+    ],
+    "transition": "Return to the capacity model.",
+    "refs": [
+      "B4",
+      "B11"
+    ],
+    "source": "audit/B2-design.md \u00b7 pattern-persistence",
+    "script": "PostgresDatabase adapts the common call contract to PostgreSQL; centralising that translation also makes the synchronous bridge a clear target for performance work.",
+    "kind": "back",
+    "extra": " figure-slide",
+    "label": "B9",
+    "clock": 1980,
+    "mainindex": 26
+  },
+  {
+    "id": "B11",
+    "sec": 5,
+    "tag": "TESTING",
+    "title": "The capacity curve follows the closed-user workload",
+    "secs": 0,
+    "say": [
+      "The model solves throughput and response time together as users wait between actions."
+    ],
+    "transition": "Return to the measured performance table.",
+    "refs": [
+      "B9"
+    ],
+    "source": "load-test/RESULTS.md \u00b7 results/capacity-model.json",
+    "script": "The quiet-host run fits S = 45.39 milliseconds per request, L = 377.9 milliseconds, and Z = 5 seconds. The model solves U = lambda S, R = L + S/(1-U), and lambda = N/(Z+R) together. Projected one-host throughput approaches 22.0 requests per second; the 90-percent-utilisation knee is about 116 users. At 250, 500 and 1,000 users, projected one-host means are 6.43, 17.75 and 40.44 seconds. The two-balanced-host means are 1.07, 6.43 and 17.75 seconds. The measured 100-user mean is 615.4 milliseconds, and its p95 is 1,335.9 milliseconds.",
+    "kind": "back",
+    "extra": " chart-slide",
+    "label": "B11",
+    "clock": 1980,
+    "mainindex": 26
+  },
+  {
+    "id": "B12",
+    "sec": 4,
+    "tag": "DEVSECOPS",
+    "title": "Retained artifacts make the deployment independently inspectable",
+    "secs": 0,
+    "say": [
+      "The manifest links identity and report hashes; provenance binds the retained subjects to the build."
+    ],
+    "transition": "Return to the CI/CD walkthrough.",
+    "refs": [
+      "B5"
+    ],
+    "source": "PIPELINE-ARTIFACTS.md \u00b7 pipeline-run-40344230832/",
+    "script": "Use the manifest for commit and image identity, SBOMs for inventory, scan JSON for findings, provenance for build origin and ZAP for the running hosted page. The demonstrated verification checks release-manifest.json and exits zero. The real IaC JSON is retained under pipeline-run-40344230832/iac/, from same-commit Release security run 40344231046.",
+    "kind": "back",
+    "extra": "",
+    "label": "B12",
+    "clock": 1980,
+    "mainindex": 26
+  },
+  {
+    "id": "B13",
+    "sec": 2,
+    "tag": "SAD",
+    "title": "Acceptance pins and probes the exact media version and replays an existing receipt",
+    "secs": 0,
+    "say": [
+      "Acceptance pins and probes the exact media version and replays an existing receipt."
+    ],
+    "transition": "Return to the related main view.",
+    "refs": [
+      "B1"
+    ],
+    "source": "deck/uml/seq-capture-accept.svg",
+    "script": "Acceptance pins and probes the exact media version and replays an existing receipt.",
+    "kind": "back",
+    "extra": " figure-slide",
+    "label": "B13",
+    "clock": 1980,
+    "mainindex": 26
+  },
+  {
+    "id": "B14",
+    "sec": 2,
+    "tag": "SAD",
+    "title": "One transaction records quota, contribution, processing job and completion",
+    "secs": 0,
+    "say": [
+      "One transaction records quota, contribution, processing job and completion."
+    ],
+    "transition": "Return to the related main view.",
+    "refs": [
+      "B1"
+    ],
+    "source": "deck/uml/seq-capture-commit.svg",
+    "script": "One transaction records quota, contribution, processing job and completion.",
+    "kind": "back",
+    "extra": " figure-slide",
+    "label": "B14",
+    "clock": 1980,
+    "mainindex": 26
+  },
+  {
+    "id": "B15",
+    "sec": 2,
+    "tag": "SAD",
+    "title": "Processing stores an MP4 and proves current ownership before marking ready",
+    "secs": 0,
+    "say": [
+      "Processing stores an MP4 and proves current ownership before marking ready."
+    ],
+    "transition": "Return to the related main view.",
+    "refs": [
+      "B1"
+    ],
+    "source": "deck/uml/seq-capture-process.svg",
+    "script": "Processing stores an MP4 and proves current ownership before marking ready.",
+    "kind": "back",
+    "extra": " figure-slide",
+    "label": "B15",
+    "clock": 1980,
+    "mainindex": 26
+  },
+  {
+    "id": "B16",
+    "sec": 2,
+    "tag": "SAD",
+    "title": "The worker claims settled inputs, materialises media and fences finalisation",
+    "secs": 0,
+    "say": [
+      "The worker claims settled inputs, materialises media and fences finalisation."
+    ],
+    "transition": "Return to the related main view.",
+    "refs": [
+      "B1"
+    ],
+    "source": "deck/uml/seq-cycle-compile.svg",
+    "script": "The worker claims settled inputs, materialises media and fences finalisation.",
+    "kind": "back",
+    "extra": " figure-slide",
+    "label": "B16",
+    "clock": 1980,
+    "mainindex": 26
+  },
+  {
+    "id": "B17",
+    "sec": 2,
+    "tag": "SAD",
+    "title": "Stored bytes and the current ready row are verified before publication and archiving",
+    "secs": 0,
+    "say": [
+      "Stored bytes and the current ready row are verified before publication and archiving."
+    ],
+    "transition": "Return to the related main view.",
+    "refs": [
+      "B1"
+    ],
+    "source": "deck/uml/seq-cycle-release.svg",
+    "script": "Stored bytes and the current ready row are verified before publication and archiving.",
+    "kind": "back",
+    "extra": " figure-slide",
+    "label": "B17",
+    "clock": 1980,
+    "mainindex": 26
+  },
+  {
+    "id": "B18",
+    "sec": 2,
+    "tag": "SAD",
+    "title": "Account and group goals connect to Cognito, chat and web push",
+    "secs": 0,
+    "say": [
+      "Account and group goals connect to Cognito, chat and web push."
+    ],
+    "transition": "Return to the related main view.",
+    "refs": [
+      "B1"
+    ],
+    "source": "deck/uml/uc-model-access.svg",
+    "script": "Account and group goals connect to Cognito, chat and web push.",
+    "kind": "back",
+    "extra": " figure-slide",
+    "label": "B18",
+    "clock": 1980,
+    "mainindex": 26
+  },
+  {
+    "id": "B19",
+    "sec": 2,
+    "tag": "SAD",
+    "title": "Photo and video acceptance include the shared allowance and optional correction",
+    "secs": 0,
+    "say": [
+      "Photo and video acceptance include the shared allowance and optional correction."
+    ],
+    "transition": "Return to the related main view.",
+    "refs": [
+      "B1"
+    ],
+    "source": "deck/uml/uc-model-capture.svg",
+    "script": "Photo and video acceptance include the shared allowance and optional correction.",
+    "kind": "back",
+    "extra": " figure-slide",
+    "label": "B19",
+    "clock": 1980,
+    "mainindex": 26
+  },
+  {
+    "id": "B20",
+    "sec": 2,
+    "tag": "SAD",
+    "title": "Cycle closure produces a film, premiere, Archive and authorised downloads",
+    "secs": 0,
+    "say": [
+      "Cycle closure produces a film, premiere, Archive and authorised downloads."
+    ],
+    "transition": "Return to the related main view.",
+    "refs": [
+      "B1"
+    ],
+    "source": "deck/uml/uc-model-cycle.svg",
+    "script": "Cycle closure produces a film, premiere, Archive and authorised downloads.",
+    "kind": "back",
+    "extra": " figure-slide",
+    "label": "B20",
+    "clock": 1980,
+    "mainindex": 26
+  },
+  {
+    "id": "B25",
+    "sec": 1,
+    "tag": "PM",
+    "title": "Backlog stories connect sprint goals to delivered use cases",
+    "secs": 0,
+    "say": [
+      "Backlog issues connect user outcomes to sprint goals and later regression checks."
+    ],
+    "transition": "Return to the project summary.",
+    "refs": [
+      "P1"
+    ],
+    "source": "records/AGILE.md \u00b7 saved GitHub issue and milestone census",
+    "script": "The saved backlog contains 329 issues, 319 closed and ten open. UC05 links the photo story to Sprint 2 issue 313 and Sprint 3 recovery and format issues 545 and 574. Sprint goals and retrospective actions retain that trace.",
+    "kind": "back",
+    "extra": "",
+    "label": "B25",
+    "clock": 1980,
+    "mainindex": 26
+  },
+  {
+    "id": "B26",
+    "sec": 4,
+    "tag": "DEVSECOPS",
+    "title": "A commit carries tests, inventory and deployment evidence",
+    "secs": 0,
+    "say": [
+      "Issue branches reach protected dev through a PR and green Quality.",
+      "Actions retain tests, coverage, scan reports, the bundle and its identity manifest.",
+      "The artifact is the built image pair, not a new build on the host."
+    ],
+    "transition": "The pipeline shows where each decision happens.",
+    "refs": [
+      "B12"
+    ],
+    "source": "PIPELINE-ARTIFACTS.md \u00b7 artifact-flow",
+    "script": "Source management starts with a focused issue branch and a pull request to protected dev. The required Quality result belongs to the exact commit. Once merged, that same source revision triggers dev deployment. The artifact flow matters because a passing test run and a deployed application must be connected by identity.\n\nQuality retains root JUnit, server results and coverage, frontend Jest JSON and coverage, and the production dependency audit report. Deployment retains the runtime and web image inventories, the exact-image Trivy reports, the security manifest and the deployable tarball. Signed provenance binds the retained bundle and manifest to the workflow. After deployment, the ZAP reports describe the running hosted target. The host receives the built image pair in the verified bundle. It does not independently rebuild the application from a moving branch. These artifact families let us move from a source question to a test, package, scan or running-page result without treating those as interchangeable evidence.",
+    "kind": "back",
+    "extra": " figure-slide",
+    "label": "B26",
+    "clock": 1980,
+    "mainindex": 26
+  },
+  {
+    "id": "B27",
+    "sec": 4,
+    "tag": "DEVSECOPS",
+    "title": "Pipeline decisions separate merge gates from host activation",
+    "secs": 0,
+    "say": [
+      "Read the decision points: scope, Quality, image security and candidate health.",
+      "Only aggregate Quality is branch-required; deployment has its own enforcing steps.",
+      "ZAP scans hosted dev after successful activation and reports its findings."
+    ],
+    "transition": "Here are the security procedures inside those lanes.",
+    "refs": [
+      "B5",
+      "B12"
+    ],
+    "source": "PIPELINE-ARTIFACTS.md \u00b7 pipeline \u00b7 Deploy dev 40344230832",
+    "script": "There are several decisions inside this activity view. First, change classification decides whether the commit needs application checks or is documentation-only. A code change fans out across parallel static, client, server, PostgreSQL, root and deployment-fixture lanes. The aggregate fails on a failed or unexpectedly skipped required lane. Production dependency audit is part of that aggregate.\n\nSecond, deployment waits for a successful dev Quality run for the same commit. It builds and verifies the bundle, inventories the exact runtime and web images and scans those images. High or Critical findings at that exact-bundle gate stop host upload. This is a deployment gate even though the independent scan workflows are not branch-required checks.\n\nThird, the host installs a candidate and checks it before activation. Failure takes the restoration path. Once the host is serving, the passive ZAP baseline spiders hosted dev and publishes its report. SAST and the other security reports remain visible as their own lanes. The distinction is operational: branch protection requires the aggregate Quality context; a deployment step can independently stop the upload; a reporting lane retains findings for triage. The words BLOCKS and REPORTS in the figure refer to those specific decisions.",
+    "kind": "back",
+    "extra": " figure-slide",
+    "label": "B27",
+    "clock": 1980,
+    "mainindex": 26
+  },
+  {
+    "id": "B30",
+    "sec": 4,
+    "tag": "DEVSECOPS",
+    "title": "Hosted dev activates after candidate health succeeds",
+    "secs": 0,
+    "say": [
+      "OIDC gives the workflow temporary deploy credentials.",
+      "The host checks the candidate before switching current.",
+      "This run passed its public health check after installation."
+    ],
+    "transition": "The technical findings show why those package and runtime checks matter.",
+    "refs": [
+      "B5",
+      "B12"
+    ],
+    "source": "Deploy dev 40344230832 \u00b7 deploy-dev \u00b7 release-host.sh",
+    "script": "The deployment view puts the logical design onto hosted dev. GitHub Actions obtains temporary deploy credentials through OIDC. It ships the verified bundle to the Lightsail host, where nginx fronts the Node process. The application uses PostgreSQL, private S3 storage, Cognito and web push. CloudFront is the public edge.\n\nActivation is a host decision. The installer prepares a candidate, verifies its health, then switches current. If the candidate is unhealthy, the installer restores the previous current. The deployment run then checks the public health endpoint. In our selected run, install completed at fifteen oh two forty-one UTC and the public check passed. The topology explains the runtime boundary, while the workflow and host installer explain who makes each decision. The following findings are examples of defects that escaped a narrower source-only view.",
+    "kind": "back",
+    "extra": " figure-slide",
+    "label": "B30",
+    "clock": 1980,
+    "mainindex": 26
+  },
+  {
+    "id": "B31",
+    "sec": 4,
+    "tag": "DEVSECOPS",
+    "title": "Packaging and runtime boundaries exposed useful defects",
+    "secs": 0,
+    "say": [
+      "A locked dependency tree can still meet a new advisory, and a pinned package can disappear.",
+      "Refactoring must include packaging consumers; realtime must be checked through the service worker.",
+      "Whole-interaction tests caught the failed retry path."
+    ],
+    "transition": "Now follow one deployment run from Quality through artifacts and hosted health.",
+    "refs": [
+      "B6",
+      "B12"
+    ],
+    "source": "records/FINDINGS.md \u00b7 #591 \u00b7 #583 \u00b7 #568 \u00b7 #581",
+    "script": "Five findings explain the checks we chose. A new zod advisory turned the production audit red even with a lockfile. The scoped dependency update restored a clean audit. Separately, Alpine removed the pinned FFmpeg package version, so the image failed before vulnerability scanning; the package pin had to move to the available version.\n\nA schema refactor moved the registry while deployment packaging still read the old location. Updating the packaging consumer restored bundle verification. In the PWA, service-worker forwarding prevented SSE cancellation from reaching upstream; repeated group changes then exhausted stream limits. Keeping SSE browser-owned repaired that lifetime. Finally, the failed-capture retry needed a behavioural test of the recovery path. The common lesson is to exercise the real boundary: the package repository, the built image, the service worker, or the full interaction. We can now see how those concerns appear in one retained deployment run.",
+    "kind": "back",
+    "extra": "",
+    "label": "B31",
+    "clock": 1980,
+    "mainindex": 26
+  },
+  {
+    "id": "B32",
+    "sec": 5,
+    "tag": "DEMO",
+    "title": "Installation keeps the app one tap away",
+    "secs": 0,
+    "say": [
+      "Safari \u2192 Share \u2192 Add to Home Screen \u2192 open.",
+      "The installed app opens in its own Home Screen window.",
+      "This is the iPhone delivery surface."
+    ],
+    "transition": "Now sign in as Maya.",
+    "refs": [
+      "B5"
+    ],
+    "source": "videos/clips/01-install-to-home-screen.mp4 \u00b7 UC14 \u00b7 Home Screen PWA",
+    "script": "We start in Safari and add Rewind to the Home Screen. The installed app then opens as its own window. This is the iPhone delivery surface used for the journey. Watch the transition from the browser to the standalone app. Once it opens, the next step is identity.",
+    "kind": "back",
+    "extra": "",
+    "label": "B32",
+    "clock": 1980,
+    "mainindex": 26
+  },
+  {
+    "id": "B33",
+    "sec": 5,
+    "tag": "DEMO",
+    "title": "Sign-in returns the member to the private-group journey",
+    "secs": 0,
+    "say": [
+      "Sign in as Maya and open her group space.",
+      "The authenticated account returns to Rewind.",
+      "Web identity supports Cognito code + PKCE with server-side exchange."
+    ],
+    "transition": "Create the group and its shared prompt.",
+    "refs": [
+      "B5"
+    ],
+    "source": "videos/clips/02-sign-in.mp4 \u00b7 UC01 \u00b7 account sign-in",
+    "script": "Maya signs in and arrives in her private group space. The hosted development form gives us an authenticated account for this walkthrough. The web identity design also supports Cognito Managed Login using an authorization code with PKCE and a server-side exchange. The next decisions are about which group this account owns or belongs to.",
+    "kind": "back",
+    "extra": "",
+    "label": "B33",
+    "clock": 1980,
+    "mainindex": 26
+  },
+  {
+    "id": "B34",
+    "sec": 5,
+    "tag": "TESTING",
+    "title": "Measured latency and throughput by stage on hosted dev",
+    "secs": 0,
+    "say": [
+      "The measured p50, p95 and p99 curves cover one through one hundred virtual users. All p95 stages stay below two seconds; the 100-user p95 is 1,335.9 milliseconds."
+    ],
+    "transition": "Return to the measured table or capacity curve.",
+    "refs": [
+      "B11"
+    ],
+    "source": "load-test/results/summary.json \u00b7 quiet-host run \u00b7 dev 2390589",
+    "script": "Latency p50, p95 and p99 per steady stage, beside throughput. Every p95 stays under two seconds; the 100-user p95 is 1,335.9 ms and throughput 17.84 requests per second, with zero errors.",
+    "kind": "back",
+    "extra": "",
+    "label": "B34",
+    "clock": 1980,
+    "mainindex": 26
+  },
+  {
+    "id": "CB1",
+    "sec": 4,
+    "tag": "DEMO",
+    "title": "Recorded walkthrough \u00b7 PR checks to hosted dev",
+    "secs": 0,
+    "say": [
+      "Protected source, retained artifacts, seven security procedures and hosted dev in one recorded walkthrough."
+    ],
+    "transition": "Return to C18.",
+    "refs": [
+      "C18"
+    ],
+    "source": "Filmed PR Quality 40343459119 \u00b7 Deploy dev 40344230832 \u00b7 same-commit dev Quality 40344231052 \u00b7 26\u201327 Oct 2026",
+    "script": "[00:00\u201300:20 section clock: introduce the recording, then press Space. Narrate the following cues over the 11:26 film. Its clip clock starts at zero.]\n\nThe recording starts with PR Quality 40343459119 at commit 38593b2. Deploy 40344230832 uses merged commit aea7478 and its separate dev Quality gate, 40344231052. Follow the actual artifacts and security findings; an advisory and FFmpeg pin explain why we verify built images.\n\n[00:00\u201300:20 video \u00b7 01 \u00b7 Pipeline decisions]\nFollow one change through six decisions: the pull request, parallel verification, security findings, the verified bundle, hosted dev and promotion. I will connect each decision to the check or artifact that records its result.\n\n[00:20\u201300:40 video \u00b7 02 \u00b7 PR #595 checks]\nPull request 595 contains the pipeline artifact changes. Its checks list shows static analysis, tests and the dependency audit feeding the aggregate Quality gate. The individual results remain visible alongside the required merge check.\n\n[00:40\u201300:56 video \u00b7 03 \u00b7 PR #595 security checks]\nThe same pull request also records CodeQL, image and IaC scans, and secret scanning. These results are visible for security review alongside Quality.\n\n[00:56\u201301:20 video \u00b7 04 \u00b7 Protected dev]\nThe dev branch requires a pull request, an up-to-date branch and the check named Format, lint, typecheck, and test. Conversation resolution and administrator enforcement are enabled. The required approving-review count is zero, which allows routine dev changes to proceed after the automated gate.\n\n[01:20\u201301:44 video \u00b7 05 \u00b7 Protected main]\nMain keeps the same required Quality context and adds one approving review, including approval of the last push. This is the promotion boundary: a change that has reached dev still passes through the main review rule.\n\n[01:44\u201302:12 video \u00b7 06 \u00b7 Quality run graph]\nThe Quality graph starts with change classification and fans out into parallel jobs. Tests, coverage, static checks and the production dependency audit feed the aggregate gate. Main-bound changes also run the web export and browser checks.\n\n[02:12\u201302:32 video \u00b7 07 \u00b7 Quality artifacts]\nThe run retains four artifact groups: root JUnit results, server coverage, frontend coverage and npm-audit JSON. They remain attached to the run and its commit, so a reviewer can inspect the machine-readable results behind the green check.\n\n[02:32\u201302:52 video \u00b7 08 \u00b7 JUnit results]\nThe JUnit report records individual test cases and their outcomes. The job summary presents the totals, while the XML keeps the detail for inspection. This links the test result to the exact Quality run rather than relying on a copied test count.\n\n[02:52\u201303:22 video \u00b7 09 \u00b7 Coverage summaries]\nThese are the coverage reports retained by the same run. Frontend statement coverage is 89.64 percent, and server line coverage is 85.50 percent. The reports preserve the underlying counts and coverage dimensions alongside the test results.\n\n[03:22\u201303:46 video \u00b7 10 \u00b7 Production dependency audit]\nThe production dependency audit reports zero findings at every severity in this run. The command audits production dependencies and fails on High or Critical findings. Because this job feeds the required Quality gate, a failed audit prevents the normal merge path.\n\n[03:46\u201304:08 video \u00b7 11 \u00b7 CodeQL security results]\nCodeQL publishes its analysis results to the Security area. The alert list records the rule, affected code and disposition. The captured dev results have no open alerts; closed alerts retain their review reasons so the decisions can be inspected.\n\n[04:08\u201304:38 video \u00b7 12 \u00b7 PR #592 alert triage]\nThe load-test harness in pull request 592 raised CodeQL findings. Alert 56 concerns writing a report to an operator-selected path. Its recorded disposition is used in tests, with an explanation that this harness is operator-run and never shipped in the application image.\n\n[04:38\u201305:02 video \u00b7 13 \u00b7 Gitleaks full-history scan]\nThe secret-scan workflow runs Gitleaks over the repository history and retains a redacted SARIF artifact. The run records the scan result. Historical exceptions are constrained to exact benign values and paths, so a new value in the same file still receives normal scanning.\n\n[05:02\u201305:18 video \u00b7 14 \u00b7 Deploy dev run 40344230832]\nDeploy dev 40344230832 records the artifact-rich deployment. The graph orders change classification, the deploy job and the ZAP baseline against hosted dev.\n\n[05:18\u201305:32 video \u00b7 15 \u00b7 Deploy job steps]\nThe steps wait for Quality on the same commit, build and scan the exact bundle, attest the artifacts, obtain temporary OIDC credentials and install the release.\n\n[05:32\u201306:04 video \u00b7 16 \u00b7 Exact-bundle Trivy gate]\nThis step scans the runtime and web images inside the bundle that will be uploaded. Both images have zero High and Critical findings in the manifest. The runtime image also records one Medium finding and two Unknown findings. The High and Critical gate runs before host upload.\n\n[06:04\u201306:28 video \u00b7 17 \u00b7 CycloneDX SBOM]\nThe CycloneDX files inventory components from the exact bundled runtime and web images. The SBOM and vulnerability reports describe the same image pair. Their hashes are recorded in the release manifest, connecting component inventory, scan results and the bundle identity.\n\n[06:28\u201306:46 video \u00b7 18 \u00b7 Release manifest]\nThe manifest records the commit, workflow run, successful Quality run, scanner and security-gate result. Its image entries and hashes connect the source verification to the retained deployment artifacts.\n\n[06:46\u201306:58 video \u00b7 19 \u00b7 Retained deployment artifacts]\nThe run retains the deployable bundle, the security reports and manifest, and the ZAP reports as three downloadable artifact groups.\n\n[06:58\u201307:18 video \u00b7 20 \u00b7 Manifest digests]\nThe SHA-256 entries bind the release tarball, both component inventories and both vulnerability reports. The second command computes the digest of the downloaded manifest itself. That exact digest is the subject checked by the attestation verification command.\n\n[07:18\u201307:42 video \u00b7 21 \u00b7 GitHub build attestation]\nThe deployment creates GitHub build attestations for the release bundle and security manifest. The provenance identifies the repository and deployment workflow that produced the subject. The next terminal command checks that signed provenance against the downloaded manifest bytes.\n\n[07:42\u201308:12 video \u00b7 22 \u00b7 Verify the attestation]\nHere is the real gh attestation verify output for release-manifest.json. Verification succeeds against the repository policy, the SLSA provenance predicate and the GitHub Actions OIDC issuer. The matched signer workflow is deploy-dev.yml on the dev branch, and the command exits with status zero.\n\n[08:12\u201308:40 video \u00b7 23 \u00b7 DAST job summary]\nAfter deployment, the ZAP baseline runs against hosted dev. Its summary records zero High, four Medium, seven Low and six Informational findings. The report is retained with the deploy run, and the baseline reports its findings without making them a deployment gate.\n\n[08:40\u201309:04 video \u00b7 24 \u00b7 ZAP HTML report]\nThe retained HTML report makes the dynamic findings inspectable. Each entry names the rule, risk and affected requests. The Medium findings concern Content Security Policy. This connects the summary counts to concrete observations on the running hosted application.\n\n[09:04\u201309:38 video \u00b7 25 \u00b7 Performance summary]\nThe full profile ran after deployment, with 1, 10, 25, 50 and 100 virtual users. At 100 VUs, the measured p95 is 1336 milliseconds and throughput is 17.84 requests per second, with 0 errors across 3212 requests. The retained summary records each steady stage.\n\n[09:38\u201310:06 video \u00b7 26 \u00b7 Performance chart]\nThe chart plots the clean run across the five load stages. The measured observations feed the response-time and throughput figures. The capacity table keeps the measured baseline alongside projected values for 250, 500 and 1,000 users.\n\n[10:06\u201310:30 video \u00b7 27 \u00b7 Hosted dev health]\nThe hosted dev health endpoint returns HTTP 200. The JSON reports PostgreSQL and a ready schema at migration 31. Deployment identity comes from the workflow and manifest; this endpoint provides a direct check that the hosted application and database are responding.\n\n[10:30\u201311:06 video \u00b7 29 \u00b7 Promotion PR #586]\nPull request 586 carries dev into main. The captured pull request already has an approving review, and the main protection rule requires that review. Its checks and merge state remain visible separately. I am showing the promotion controls and leaving the pull request unchanged.\n\n[11:06\u201311:26 video \u00b7 30 \u00b7 Decisions and retained artifacts]\nThe chain is now visible: protected source changes, retained test and audit results, reviewed security findings, an exact-bundle scan, a signed manifest, hosted health, dynamic findings and a load-test result. Each artifact stays connected to the commit and run that produced it.\n\n[11:46\u201312:00 section clock: pause on the final decision chain.]\nQuality controls integration, the exact-image scan controls upload, and candidate health controls activation. CodeQL, IaC, secrets and ZAP retain their findings for review. Those retained artifacts make the next internal change inspectable. Now follow the product journey.",
+    "kind": "back",
+    "extra": "pipeline-slide",
+    "label": "CB1",
+    "clock": 1980,
+    "mainindex": 26
+  },
+  {
+    "id": "CB2",
+    "sec": 4,
+    "tag": "DEVSECOPS",
+    "title": "Branch protection: dev automates the gate; main adds a human review",
+    "secs": 0,
+    "say": [
+      "Values read from the branch-protection API for dev and main on 27 October. Only one check is required on both branches; the other security workflows report. Mai"
+    ],
+    "transition": "Return to C3.",
+    "refs": [],
+    "source": "",
+    "script": "Values read from the branch-protection API for dev and main on 27 October. Only one check is required on both branches; the other security workflows report. Main adds one approving review with last-push approval and the browser lane.",
+    "kind": "back",
+    "extra": "",
+    "label": "CB2",
+    "clock": 1980,
+    "mainindex": 26
+  },
+  {
+    "id": "CB3",
+    "sec": 4,
+    "tag": "DEVSECOPS",
+    "title": "Deploy job steps in GitHub, in the order of the stage diagrams",
+    "secs": 0,
+    "say": [
+      "Real capture of the deploy job step list and its retained artifacts: dev-release-security, dev-release-bundle and zap-baseline, each named with the commit SHA."
+    ],
+    "transition": "Return to C7.",
+    "refs": [],
+    "source": "",
+    "script": "Real capture of the deploy job step list and its retained artifacts: dev-release-security, dev-release-bundle and zap-baseline, each named with the commit SHA.",
+    "kind": "back",
+    "extra": "",
+    "label": "CB3",
+    "clock": 1980,
+    "mainindex": 26
+  },
+  {
+    "id": "s7",
+    "sec": 2,
+    "tag": "SDP",
+    "title": "Durable claims keep repeated cycle work safe",
+    "secs": 0,
+    "say": [
+      "Polling finds work but does not make repeated execution safe.",
+      "We compared polling alone and object hierarchies with persisted state and durable jobs.",
+      "Durable claims reject stale completion; MediaStore supplies the storage Strategy role."
+    ],
+    "transition": "The sequence shows where those checks happen.",
+    "refs": [
+      "D1",
+      "B7",
+      "B8",
+      "B9"
+    ],
+    "source": "audit/B1-analysis.md \u00b7 B2-design.md \u00b7 server/src/jobs/compilation.ts",
+    "script": "A scheduler tick can repeat, and an old worker can finish after its lease expires. We compared polling alone, State or Command object hierarchies, and persisted state with a durable job. We chose the durable job with lease and generation checks: expensive rendering runs outside the transaction, then finalisation proves that this worker still owns the current claim. Storage creates a second design problem: duplicated backend branches would spread through the worker. Instead we inject the MediaStore Strategy. LocalMediaStore and PrivateS3MediaStore supply the implementations; the S3 transport Adapter translates the SDK operations. The pattern roles are labelled on the real design elements.",
+    "kind": "back",
+    "extra": " figure-slide",
+    "label": "s7",
+    "clock": 1980,
+    "mainindex": 26
+  },
+  {
+    "id": "T10",
+    "sec": 3,
+    "tag": "TESTING",
+    "title": "Security is tested in the suites and scanned in the pipeline",
+    "secs": 0,
+    "say": [
+      "Security tests run in the merge gate; six scans run in the pipeline."
+    ],
+    "transition": "Last, performance under load.",
+    "refs": [
+      "B12"
+    ],
+    "source": "",
+    "script": "Security is tested at two levels. Inside the suites: privacy denials across groups, rate limits, our patched dependencies and the scan gates themselves. In the pipeline: SAST, SCA, secrets, IaC, image and DAST scans, which I show next. Performance is shown in the system demo.",
+    "kind": "back",
+    "extra": "",
+    "label": "T10",
+    "clock": 1980,
+    "mainindex": 26
+  },
+  {
+    "id": "C2",
+    "sec": 4,
+    "tag": "DEVSECOPS",
+    "title": "Colour says what a failure blocks; shape says what the element is",
+    "secs": 0,
+    "say": [
+      "Every pipeline page uses the same key. The colour and the first word of a box tell you what happens when it fails. Orange, BLOCKS MERGE: the required Quality ch"
+    ],
+    "transition": "With that key, start with how source and results are managed.",
+    "refs": [
+      "C3"
+    ],
+    "source": "",
+    "script": "Every pipeline page uses the same key. The colour and the first word of a box tell you what happens when it fails. Orange, BLOCKS MERGE: the required Quality check turns red and the pull request cannot merge. Blue, BLOCKS DEPLOY: the deploy stops before upload or before activation, and hosted dev keeps the release it already has. Purple: a platform rule or a human approval, such as push protection or the review on main. Dashed grey, REPORTS: the finding is recorded and visible, but it never stops a merge or a deployment.\n\nHexagons are decision points. A yes continues the flow; a no stops it. The yellow page shape is a retained artifact, a cylinder is a store, and a box with depth is a running host.",
+    "kind": "back",
+    "extra": "",
+    "label": "C2",
+    "clock": 1980,
+    "mainindex": 26
+  },
+  {
+    "id": "C9",
+    "sec": 4,
+    "tag": "DEVSECOPS",
+    "title": "Nine kinds of check, each with a recorded result and a link",
+    "secs": 0,
+    "say": [
+      "This is the catalogue of what we check for. Each row is a procedure the course asks for, with its tool, its trigger, what a failure blocks, the real result for "
+    ],
+    "transition": "First row: SAST.",
+    "refs": [
+      "C10\u2013C16"
+    ],
+    "source": "",
+    "script": "This is the catalogue of what we check for. Each row is a procedure the course asks for, with its tool, its trigger, what a failure blocks, the real result for the commit we deployed, aea7478, and a link to the GitHub page that holds it.\n\nTwo rows block merges: the dependency audit and the tests, because both are inside Quality. Three block the deployment: the exact-bundle Trivy scan, a failed attestation step, and the health check. SAST, IaC, Gitleaks and DAST report. The next slides take one row each and show the real artifact behind it.",
+    "kind": "back",
+    "extra": "",
+    "label": "C9",
+    "clock": 1980,
+    "mainindex": 26
+  },
+  {
+    "id": "C12",
+    "sec": 4,
+    "tag": "DEVSECOPS",
+    "title": "Secrets are checked at push, on the PR and across history",
+    "secs": 0,
+    "say": [
+      "Secrets are checked in three places. At push time, GitHub push protection rejects known provider key patterns before they reach the repository. On the pull requ"
+    ],
+    "transition": "Containers and infrastructure.",
+    "refs": [
+      "C17 findings"
+    ],
+    "source": "",
+    "script": "Secrets are checked in three places. At push time, GitHub push protection rejects known provider key patterns before they reach the repository. On the pull request, GitGuardian scans the new commits. And the Secret scan workflow runs Gitleaks over the entire git history on every pull request and push, keeping a redacted SARIF report and sending it to the Security tab.\n\nThe default rules flagged migration identifiers and two test keys as generic API keys. Rather than silence the rule, the allowlist requires the exact file and the exact value, so a real key in the same file would still be found. The current result is zero findings.",
+    "kind": "back",
+    "extra": "",
+    "label": "C12",
+    "clock": 1980,
+    "mainindex": 26
+  },
+  {
+    "id": "C13",
+    "sec": 4,
+    "tag": "DEVSECOPS",
+    "title": "Trivy blocks risky images; IaC risks need dated exceptions",
+    "secs": 0,
+    "say": [
+      "Trivy scans our two container images twice. Release security scans candidate images on pull requests and pushes. The deployment then scans the images inside the"
+    ],
+    "transition": "The image scan feeds the SBOM and provenance.",
+    "refs": [
+      "C14"
+    ],
+    "source": "",
+    "script": "Trivy scans our two container images twice. Release security scans candidate images on pull requests and pushes. The deployment then scans the images inside the exact bundle it will upload, and that second scan is the one that blocks: any High or Critical stops the upload. For this deployment both images had zero High and Critical. The runtime image has one Medium in zlib with a fix available, and two Unknown entries in musl.\n\nFor infrastructure as code, Trivy config scans Terraform and Dockerfiles. It found fifteen issues: seven Low and eight High. Every High must match exactly one exception with an owner, a reason and an expiry date. Most are about customer-managed KMS keys and a WAF that would add cost. The exceptions expire on 31 October, and after that the job fails until each risk is reviewed again.",
+    "kind": "back",
+    "extra": "",
+    "label": "C13",
+    "clock": 1980,
+    "mainindex": 26
+  },
+  {
+    "id": "C14",
+    "sec": 4,
+    "tag": "DEVSECOPS",
+    "title": "SBOM and provenance bind shipped bytes to scans and workflow",
+    "secs": 0,
+    "say": [
+      "The SBOM is a CycloneDX inventory of each exact bundled image: 187 components in the runtime image, including the FFmpeg package we had to re-pin, and 72 in the"
+    ],
+    "transition": "The last security procedure looks at the running site.",
+    "refs": [
+      "C6"
+    ],
+    "source": "",
+    "script": "The SBOM is a CycloneDX inventory of each exact bundled image: 187 components in the runtime image, including the FFmpeg package we had to re-pin, and 72 in the web image. The release manifest records the commit, the run, the Quality run that allowed it, both image IDs and digests, the severity counts, and the SHA-256 of the tar, both SBOMs and both reports. So inventory, findings and bytes are bound together.\n\nProvenance: the deploy job signs the tar and the manifest with GitHub\u2019s attest-build-provenance, using Sigstore and the job\u2019s own OIDC identity. Anyone can check it: gh attestation verify on the downloaded manifest succeeds and names deploy-dev.yml on refs/heads/dev as the workflow that built it.",
+    "kind": "back",
+    "extra": "",
+    "label": "C14",
+    "clock": 1980,
+    "mainindex": 26
+  },
+  {
+    "id": "C16",
+    "sec": 4,
+    "tag": "DEVSECOPS",
+    "title": "Tests and coverage gate the merge and are kept as artifacts",
+    "secs": 0,
+    "say": [
+      "Tests are part of the same gate. On the filmed pull request run, root tests passed 123, the server suite passed 985 with 85.5 percent line coverage, and the fro"
+    ],
+    "transition": "What did the pipeline teach us?",
+    "refs": [
+      "C4"
+    ],
+    "source": "",
+    "script": "Tests are part of the same gate. On the filmed pull request run, root tests passed 123, the server suite passed 985 with 85.5 percent line coverage, and the frontend passed 1,674 with 89.6 percent statement coverage against a seventy percent threshold. The server suite also runs on PostgreSQL 17, the hosted engine. Every lane keeps JUnit, Jest JSON or coverage JSON as artifacts on the run.",
+    "kind": "back",
+    "extra": "",
+    "label": "C16",
+    "clock": 1980,
+    "mainindex": 26
+  },
+  {
+    "id": "T1",
+    "sec": 3,
+    "tag": "TESTING",
+    "title": "Static checks reject style, type and layering errors",
+    "secs": 0,
+    "say": [
+      "Four static checks run in parallel and block the merge."
+    ],
+    "transition": "Next, the frontend unit tests.",
+    "refs": [
+      "B6"
+    ],
+    "source": "",
+    "script": "Static checks come first: Prettier, ESLint, TypeScript and our own layer rule. Domain code may not import a framework, and routes may not touch device APIs. They block every merge.",
+    "kind": "back",
+    "extra": "",
+    "label": "T1",
+    "clock": 1980,
+    "mainindex": 26
+  },
+  {
+    "id": "T2",
+    "sec": 3,
+    "tag": "TESTING",
+    "title": "Component tests check screens and state without a device",
+    "secs": 0,
+    "say": [
+      "1,674 Jest tests; 89.6% statement coverage against a 70% floor."
+    ],
+    "transition": "Here is one of those tests in detail.",
+    "refs": [
+      "B6"
+    ],
+    "source": "",
+    "script": "The frontend has one thousand six hundred and seventy-four Jest tests. They render screens and drive state without a phone. Statement coverage is eighty-nine point six percent, with a seventy percent floor enforced in CI. This chat test fails if a session token ever appears in a request URL.",
+    "kind": "back",
+    "extra": "",
+    "label": "T2",
+    "clock": 1980,
+    "mainindex": 26
+  },
+  {
+    "id": "s11",
+    "sec": 3,
+    "tag": "TESTING",
+    "title": "\u201cTry again\u201d must return to a usable viewfinder",
+    "secs": 0,
+    "say": [
+      "A visible retry button did nothing after a failed capture.",
+      "The test asserts the viewfinder and a fresh capture, not just the button."
+    ],
+    "transition": "Next, the server and API tests.",
+    "refs": [
+      "B3",
+      "B6"
+    ],
+    "source": "",
+    "script": "One real bug shows why we test behaviour. After a failed photo, Try again did nothing: retry called capture from a state where its guard returned immediately. The test fails capture, taps Try again, and expects the viewfinder and a fresh capture. It fails on the old source and passes with the fix.",
+    "kind": "back",
+    "extra": "",
+    "label": "s11",
+    "clock": 1980,
+    "mainindex": 26
+  },
+  {
+    "id": "T3",
+    "sec": 3,
+    "tag": "TESTING",
+    "title": "API tests call real routes on a running server",
+    "secs": 0,
+    "say": [
+      "1,006 server tests drive real HTTP routes, including privacy denials."
+    ],
+    "transition": "The same suite then runs on PostgreSQL.",
+    "refs": [
+      "B6"
+    ],
+    "source": "",
+    "script": "The server suite has one thousand and six tests. Each starts the real HTTP server and calls real routes. This privacy test signs in as a member of another group and expects a 403 with no content for every protected resource.",
+    "kind": "back",
+    "extra": "",
+    "label": "T3",
+    "clock": 1980,
+    "mainindex": 26
+  },
+  {
+    "id": "T4",
+    "sec": 3,
+    "tag": "TESTING",
+    "title": "The server suite runs again on PostgreSQL 17",
+    "secs": 0,
+    "say": [
+      "The same suite passes 989 tests on PostgreSQL 17."
+    ],
+    "transition": "Repository rules guard the architecture itself.",
+    "refs": [
+      "B9"
+    ],
+    "source": "",
+    "script": "The same suite runs again on PostgreSQL seventeen in a throwaway container: nine hundred and eighty-nine pass. That catches SQL that works on SQLite but not on the hosted database.",
+    "kind": "back",
+    "extra": "",
+    "label": "T4",
+    "clock": 1980,
+    "mainindex": 26
+  },
+  {
+    "id": "T5",
+    "sec": 3,
+    "tag": "TESTING",
+    "title": "Repository tests stop the architecture and policies drifting",
+    "secs": 0,
+    "say": [
+      "Architecture, PWA, classifier and Terraform policies are tested like code."
+    ],
+    "transition": "Deployment scripts get the same treatment.",
+    "refs": [
+      "B6"
+    ],
+    "source": "",
+    "script": "Repository tests check our own rules. The architecture guard is itself tested: we plant a bad import in each layer and expect two violations. Terraform and deploy policy, such as only deploying a commit that passed Quality, are tested the same way.",
+    "kind": "back",
+    "extra": "",
+    "label": "T5",
+    "clock": 1980,
+    "mainindex": 26
+  },
+  {
+    "id": "T6",
+    "sec": 3,
+    "tag": "TESTING",
+    "title": "Deployment scripts are tested offline with injected failures",
+    "secs": 0,
+    "say": [
+      "Eleven cloud-free fixtures inject deployment failures."
+    ],
+    "transition": "Now the browser tests.",
+    "refs": [
+      "B5"
+    ],
+    "source": "",
+    "script": "Deployment scripts are tested offline. Eleven fixtures replace tar, chown and the health check with fakes, then inject failures. A failed restore must leave the previous state intact.",
+    "kind": "back",
+    "extra": "",
+    "label": "T6",
+    "clock": 1980,
+    "mainindex": 26
+  },
+  {
+    "id": "T7",
+    "sec": 3,
+    "tag": "TESTING",
+    "title": "Playwright drives the exported app in a real browser",
+    "secs": 0,
+    "say": [
+      "41 browser tests join for main; one real-account journey runs on demand."
+    ],
+    "transition": "The exported PWA is checked as installed.",
+    "refs": [
+      "B3"
+    ],
+    "source": "",
+    "script": "Playwright drives the exported web app in Chromium at iPhone sizes: forty-one tests, required for pull requests to main. A longer Firefox journey uses real accounts: owner, invited member and outsider, through to the next cycle.",
+    "kind": "back",
+    "extra": "",
+    "label": "T7",
+    "clock": 1980,
+    "mainindex": 26
+  },
+  {
+    "id": "T8",
+    "sec": 3,
+    "tag": "TESTING",
+    "title": "The PWA build is checked the way it will be installed",
+    "secs": 0,
+    "say": [
+      "The exported PWA build, offline shell and cache rules are tested."
+    ],
+    "transition": "Accessibility uses the same browser run.",
+    "refs": [
+      "B5"
+    ],
+    "source": "",
+    "script": "The exported PWA is tested as it will be installed: manifest, service worker, offline page and icons. A service-worker rule test makes sure private media and API answers never enter the cache.",
+    "kind": "back",
+    "extra": "",
+    "label": "T8",
+    "clock": 1980,
+    "mainindex": 26
+  },
+  {
+    "id": "T9",
+    "sec": 3,
+    "tag": "TESTING",
+    "title": "Axe and keyboard tests check the main screens for WCAG 2.1 AA",
+    "secs": 0,
+    "say": [
+      "Axe scans and keyboard tests fail on serious or critical violations."
+    ],
+    "transition": "Security is tested at two levels.",
+    "refs": [
+      "B6"
+    ],
+    "source": "",
+    "script": "Accessibility runs in the same browser job. Axe scans the main screens against WCAG 2.1 A and AA, and two keyboard tests check focus. Serious or critical violations fail the build.",
+    "kind": "back",
+    "extra": "",
+    "label": "T9",
+    "clock": 1980,
+    "mainindex": 26
+  },
+  {
+    "id": "T11",
+    "sec": 3,
+    "tag": "TESTING",
+    "title": "A scripted load test drives the hosted API in five stages",
+    "secs": 0,
+    "say": [
+      "Five stages from 1 to 100 users; pass rule p95 under 2 seconds and under 1% errors."
+    ],
+    "transition": "Here are the results.",
+    "refs": [
+      "B11"
+    ],
+    "source": "",
+    "script": "Performance has its own test. A Node runner drives the hosted API through CloudFront in five stages, from one to one hundred concurrent users. Each user acts, then waits three to seven seconds. The mix is ninety-five percent reads. Every stage must keep p95 under two seconds and errors under one percent.",
+    "kind": "back",
+    "extra": "",
+    "label": "T11",
+    "clock": 1980,
+    "mainindex": 26
+  },
+  {
+    "id": "T12",
+    "sec": 3,
+    "tag": "TESTING",
+    "title": "100 concurrent users stay under the 2-second target, error-free",
+    "secs": 0,
+    "say": [
+      "All five stages pass: 6,038 requests, zero errors, p95 1.34 s at 100 users."
+    ],
+    "transition": "Now the pipeline that runs these tests.",
+    "refs": [
+      "B11",
+      "B34"
+    ],
+    "source": "",
+    "script": "All five stages passed: six thousand and thirty-eight requests, zero errors. At one hundred users p95 was one point three four seconds, with seventeen point eight requests per second. I return to capacity in the system demo. Now, the pipeline that runs all of these tests.",
+    "kind": "back",
+    "extra": "",
+    "label": "T12",
+    "clock": 1980,
+    "mainindex": 26
+  },
+  {
+    "id": "F8",
+    "sec": 5,
+    "tag": "DEMO",
+    "title": "Reminder permission leads to an explicit weekly choice",
+    "secs": 0,
+    "say": [
+      "Open settings and enable the Sunday reminder.",
+      "The Home Screen app requests notification permission.",
+      "Sunday 19:00 in the group time zone; snooze seven days."
+    ],
+    "transition": "Now open the completed capsule and its premiere.",
+    "refs": [
+      "B5"
+    ],
+    "source": "weekly web-push reminder \u00b7 hosted dev \u00b7 26 Oct 2026",
+    "script": "[Press Space to start. Narrate over the clip; pause on the stated result. Playback begins muted. The allocated time includes nine seconds for the introduction and final hold.]\n\nOpen settings and choose the weekly reminder. The switch makes the preference explicit, and snooze lasts seven days. The weekly schedule is Sunday at seven in the evening in the group\u2019s time zone. On iPhone, add Rewind to the Home Screen for web push. Pause on the saved preference, then continue to a completed capsule and its premiere.",
+    "kind": "back",
+    "extra": "device-slide",
+    "label": "F8",
+    "clock": 1980,
+    "mainindex": 26
+  },
+  {
+    "id": "F10",
+    "sec": 5,
+    "tag": "DEMO",
+    "title": "The reveal turns sealed contributions into one shared film",
+    "secs": 0,
+    "say": [
+      "Open the premiere and watch; skip between moments.",
+      "One film combines the group\u2019s accepted inputs.",
+      "720 \u00d7 1280 \u00b7 30 fps \u00b7 normalised audio."
+    ],
+    "transition": "Archive keeps the film and offers saving.",
+    "refs": [
+      "D1"
+    ],
+    "source": "premiere and playback \u00b7 hosted dev \u00b7 26 Oct 2026",
+    "script": "[Press Space to start. Narrate over the clip; pause on the stated result. Playback begins muted. The allocated time includes nine seconds for the introduction and final hold.]\n\nThe film is now available to the group. Open the premiere and watch the contributions together. The player exposes moment segments and lets the viewer move between them. The output is a portrait film at seven-twenty by twelve-eighty, thirty frames per second, with normalised audio. Press M only if you want the film sound. Pause at the end screen. The film connects the sealed contribution habit to the shared payoff we described at the start.",
+    "kind": "back",
+    "extra": "device-slide",
+    "label": "F10",
+    "clock": 1980,
+    "mainindex": 26
+  }
+]

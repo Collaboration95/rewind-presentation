@@ -1,0 +1,55 @@
+{
+  "number": 2,
+  "name": "Sign in",
+  "output": "02-sign-in-review.mp4",
+  "segments": [
+    {
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/02-signin-clean.mov",
+      "in": 0,
+      "out": 6,
+      "duration": 6,
+      "audio": false,
+      "note": "Blank sign-in form"
+    },
+    {
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/02-signin-clean.mov",
+      "in": 10.5,
+      "out": 11.0666666667,
+      "duration": 6,
+      "audio": false,
+      "note": "Recorded Maya username typing; hold last real frame"
+    },
+    {
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/02-signin-clean.mov",
+      "in": 11.0666666667,
+      "out": 14,
+      "duration": 8,
+      "audio": false,
+      "note": "Recorded password typing at original speed; masked password"
+    },
+    {
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/02-signin-clean.mov",
+      "in": 23,
+      "out": 31,
+      "duration": 8,
+      "audio": false,
+      "note": "Read completed form before submitting"
+    },
+    {
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/02-signin-clean.mov",
+      "in": 31,
+      "out": 32.6,
+      "duration": 9,
+      "audio": false,
+      "note": "Real sign-in progress; freeze safe last frame; omit ALL app Home frames"
+    },
+    {
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/stills/02-signedin-settings.png",
+      "duration": 8,
+      "audio": false,
+      "note": "Cut directly to authenticated Settings and Maya profile",
+      "add_island": false
+    }
+  ],
+  "add_island": false
+}

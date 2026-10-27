@@ -1,0 +1,26 @@
+<!doctype html><html><head><meta charset="utf-8"><style>html{zoom:1.25}*{box-sizing:border-box}html,body{margin:0;width:1536px;height:864px;overflow:hidden;background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif}
+.bar{height:44px;background:#dee1e6;display:flex;align-items:center;gap:14px;padding:0 16px;border-bottom:1px solid #c4c7cc}
+.dots span{display:inline-block;width:12px;height:12px;border-radius:50%;margin-right:7px}.url{flex:1;height:30px;border-radius:15px;background:#fff;display:flex;align-items:center;padding:0 16px;font-size:14px;color:#202124}
+.url b{font-weight:400;color:#5f6368}.lock{width:12px;height:12px;margin-right:10px;border:2px solid #5f6368;border-radius:3px}.view{position:absolute;top:44px;left:0;width:1536px;height:820px;overflow:hidden}.term{position:absolute;inset:0;background:linear-gradient(135deg,#1d2b38,#14202B);padding:46px 70px}.win{height:100%;border-radius:12px;overflow:hidden;background:#101820;box-shadow:0 30px 80px #0008;border:1px solid #2b3a47}.wt{height:36px;background:#24313d;display:flex;align-items:center;padding:0 14px;color:#9fb0bf;font:13px -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif}.wt .dots{margin-right:auto}.wt .tt{position:absolute;left:0;right:0;text-align:center;pointer-events:none}
+pre{margin:0;padding:22px 26px;font:15.5px/1.5 ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,monospace;color:#d7e0e8;white-space:pre-wrap;word-break:break-all}.p{color:#7ee0a0}.c{color:#f2f5f7;font-weight:600}.g{color:#7ee0a0}.y{color:#f2c94c}.dim{color:#7d8d9b}</style></head><body><div class="term"><div class="win"><div class="wt" style="position:relative"><div class="dots"><span style="background:#ff5f57"></span><span style="background:#febc2e"></span><span style="background:#28c840"></span></div><div class="tt">zsh — hosted dev</div></div><pre><span class="p">$</span> <span class="c">curl -sS -i https://d2m6kz76y4kuvm.cloudfront.net/api/health</span>
+<span class="g" >HTTP/2 200 </span>
+content-type: application/json; charset=utf-8
+server: nginx/1.31.6
+date: Mon, 26 Oct 2026 15:50:49 GMT
+content-security-policy-report-only: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; me
+cache-control: no-store
+x-request-id: 4554affa-e83f-4fef-9ba1-cf095d985b80
+server-timing: db;dur=2.4;desc="3 statements, 3 round trips"
+access-control-allow-headers: Content-Type, Authorization, Range, Last-Event-ID
+access-control-allow-methods: GET, HEAD, POST, DELETE, OPTIONS
+access-control-allow-origin: https://d2m6kz76y4kuvm.cloudfront.net
+x-content-type-options: nosniff
+referrer-policy: strict-origin-when-cross-origin
+x-frame-options: DENY
+strict-transport-security: max-age=31536000
+content-security-policy: frame-ancestors 'none'
+x-cache: Miss from cloudfront
+via: 1.1 338ce8ab593fad90ead59f95cfe82d40.cloudfront.net (CloudFront)
+x-amz-cf-pop: MRS53-P4
+
+<span class="y foc" id="focus">{"ok":true,"service":"rewind-local-runtime","version":"0.1.0","ready":true,"checks":{"database":"postgresql","ffmpegConfigured":true,"schema":{"ready":true,"expectedMigrationVersion":31,"missingMigrationKeys":[]}},"addresses":{"local":"http://127.0.0.1:8787","lan":"http://172.18.0.2:8787"}}</span></pre></div></div></body></html>

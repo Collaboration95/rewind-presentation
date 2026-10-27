@@ -1,0 +1,12 @@
+@startuml
+!include _style.iuml
+title Statechart · Upload intent (upload_intents.state) · as built at f6cd896
+' Evidence: media/upload-intents.ts#L385-L490 (request, INSERT 'open' at #L442), #L606-L795 (complete: pin #L635, completed #L780), #L798-L830 (cleanup expires #L826); migration 030-baseline.sql CHECK state
+[*] --> open : requestUploadIntent [member, cycle collecting, quota ok] / reserved_seconds, signed PUT target
+open --> pinned : completeUploadIntent(versionId) / pinned_ref = media-object ref
+pinned --> completed : completeUploadIntent [object probed ok; checkQuota; reserveContributionAllowance]\n/ INSERT contributions + media_jobs(clip,'pending') + staged_sources; cycles.count_used + 1
+open --> expired : cleanupUploadIntents [expires_at passed]
+pinned --> expired : cleanupUploadIntents [expires_at passed]
+completed --> [*]
+expired --> [*]
+@enduml

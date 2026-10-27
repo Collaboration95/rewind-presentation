@@ -1,0 +1,39 @@
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'presentation-prep/videos/work/film/rewind-hosted-film.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf62.12.103
+  Duration: 00:00:21.20, start: 0.000000, bitrate: 1956 kb/s
+  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt470bg/unknown/unknown, progressive), 720x1280 [SAR 1:1 DAR 9:16], 1919 kb/s, 30 fps, 30 tbr, 15360 tbn (default)
+    Metadata:
+      handler_name    : VideoHandler
+      encoder         : Lavc62.28.103 libx264
+  Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 37 kb/s (default)
+    Metadata:
+      handler_name    : SoundHandler
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 (native) -> wrapped_avframe (native))
+Press [q] to stop, [?] for help
+[Parsed_showinfo_2 @ 0xc49061d40] config in time_base: 1/15360, frame_rate: 30/1
+[Parsed_showinfo_2 @ 0xc49061d40] config out time_base: 0/0, frame_rate: 0/0
+[Parsed_showinfo_2 @ 0xc49061d40] n:   0 pts:  46080 pts_time:3       duration:    512 duration_time:0.0333333 fmt:yuv420p cl:unspecified sar:321/320 s:120x214 i:P iskey:1 type:I checksum:8FA182C4 plane_checksum:[42397FA5 8E102CCD 5574D643] mean:[91 104 151] stdev:[35.6 10.8 13.3]
+[Parsed_showinfo_2 @ 0xc49061d40] color_range:tv color_space:bt470bg color_primaries:unknown color_trc:unknown
+Output #0, null, to 'pipe:':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf63.1.102
+  Stream #0:0(und): Video: wrapped_avframe, yuv420p(tv, bt470bg/unknown/unknown, progressive), 120x214 [SAR 321:320 DAR 9:16], q=2-31, 200 kb/s, 30 fps, 30 tbn (default)
+    Metadata:
+      encoder         : Lavc63.1.102 wrapped_avframe
+      handler_name    : VideoHandler
+[Parsed_showinfo_2 @ 0xc49061d40] n:   1 pts:  92672 pts_time:6.033333 duration:    512 duration_time:0.0333333 fmt:yuv420p cl:unspecified sar:321/320 s:120x214 i:P iskey:1 type:I checksum:A8D1FF53 plane_checksum:[979EF5B8 585D4D6A B9ACBC22] mean:[89 126 130] stdev:[47.3 3.5 3.2]
+[Parsed_showinfo_2 @ 0xc49061d40] color_range:tv color_space:bt470bg color_primaries:unknown color_trc:unknown
+[Parsed_showinfo_2 @ 0xc49061d40] n:   2 pts: 185344 pts_time:12.066667 duration:    512 duration_time:0.0333333 fmt:yuv420p cl:unspecified sar:321/320 s:120x214 i:P iskey:1 type:I checksum:29816CEE plane_checksum:[F6439D9F C2D755C4 9CBC797C] mean:[127 105 148] stdev:[34.9 9.1 9.9]
+[Parsed_showinfo_2 @ 0xc49061d40] color_range:tv color_space:bt470bg color_primaries:unknown color_trc:unknown
+[Parsed_showinfo_2 @ 0xc49061d40] n:   3 pts: 278016 pts_time:18.1    duration:    512 duration_time:0.0333333 fmt:yuv420p cl:unspecified sar:321/320 s:120x214 i:P iskey:1 type:I checksum:6E0EAEDC plane_checksum:[311429DE 7911A237 6867E2B8] mean:[113 109 152] stdev:[64.8 10.3 12.1]
+[Parsed_showinfo_2 @ 0xc49061d40] color_range:tv color_space:bt470bg color_primaries:unknown color_trc:unknown
+[out#0/null @ 0xc49060300] video:2KiB audio:0KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown
+frame=    4 fps=0.0 q=-0.0 Lsize=N/A time=00:00:18.13 bitrate=N/A speed=  87x elapsed=0:00:00.20    

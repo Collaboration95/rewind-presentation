@@ -1,0 +1,25 @@
+@startuml
+!include _style.iuml
+skinparam Padding 0
+skinparam ranksep 20
+skinparam nodesep 18
+left to right direction
+title Use case model · UC04–UC06 Contribute within allowance
+actor Member as M
+rectangle Rewind {
+ usecase "UC04\nRecord, trim, submit video" as V
+ usecase "UC05\nContribute a photo" as P
+ usecase "UC06a\nReserve allowance" as Q
+ usecase "UC06b\nCorrect one contribution" as R
+ V .> Q : <<include>>
+ P .> Q : <<include>>
+ R .> V : <<extend>>\n[replacement target]
+ R .> P : <<extend>>\n[replacement target]
+}
+actor "Amazon S3" as S <<system>>
+M -- V
+M -- P
+M -- R
+V -- S
+P -- S
+@enduml

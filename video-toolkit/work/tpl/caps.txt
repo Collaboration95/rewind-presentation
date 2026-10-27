@@ -1,0 +1,12 @@
+ffconcat version 1.0
+file '/private/tmp/rewind-video/work/tpl/blank.png'
+duration 1.000
+file '/private/tmp/rewind-video/work/tpl/cv1.png'
+duration 2.500
+file '/private/tmp/rewind-video/work/tpl/blank.png'
+duration 1.500
+file '/private/tmp/rewind-video/work/tpl/cv2.png'
+duration 3.000
+file '/private/tmp/rewind-video/work/tpl/blank.png'
+duration 3
+file '/private/tmp/rewind-video/work/tpl/blank.png'

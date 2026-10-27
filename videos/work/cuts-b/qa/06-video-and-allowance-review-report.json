@@ -1,0 +1,29 @@
+{
+  "output": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/cuts-b/06-video-and-allowance-review.mp4",
+  "duration_seconds": 65,
+  "frames": 1950,
+  "encoder_checks": {
+    "codec": true,
+    "profile": true,
+    "size": true,
+    "pixel_format": true,
+    "fps": true,
+    "frame_count": true,
+    "video_duration": true,
+    "container_duration": true,
+    "audio": true,
+    "audio_duration": true
+  },
+  "silent_aac": true,
+  "ocr_frames_scanned": 97,
+  "forbidden_text_hits": [],
+  "sha256": "405a8d8017709600e25fd0248d3cefb794d5cb6e6ce8d31188da6b64da6b05d4",
+  "visual_review": "PASS: final full-frame and phone contact sheets, final frames and edit boundaries inspected",
+  "frame_integrity": {
+    "file": "06-video-and-allowance-review.mp4",
+    "frames_scanned": 1950,
+    "blank_phone_frames": [],
+    "min_phone_mean_luma": 40.30442583732057,
+    "last_phone_mean_luma": 227.45962918660288
+  }
+}

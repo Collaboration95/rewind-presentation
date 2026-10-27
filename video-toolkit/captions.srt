@@ -1,0 +1,12 @@
+1
+00:00:04,000 --> 00:00:07,500
+Step 1: open the pull request
+
+2
+00:00:09,000 --> 00:00:13,000
+Quality check starts automatically
+and runs lint, tests and a build
+
+3
+00:00:24,500 --> 00:00:28,000
+Hosted dev updated: new commit is live

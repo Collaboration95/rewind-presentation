@@ -1,0 +1,22 @@
+{
+  "output": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/cuts-a/01-install-to-home-screen-review.mp4",
+  "duration_seconds": 45,
+  "frames": 1350,
+  "encoder_checks": {
+    "codec": true,
+    "profile": true,
+    "size": true,
+    "pixel_format": true,
+    "fps": true,
+    "frame_count": true,
+    "video_duration": true,
+    "container_duration": true,
+    "audio": true,
+    "audio_duration": true
+  },
+  "silent_aac": true,
+  "ocr_frames_scanned": 66,
+  "forbidden_text_hits": [],
+  "sha256": "30026a50b8d6c88cecd86a58aa6de400d4dea8df05f2d9b2b82f2aa1633dcbb9",
+  "visual_review": "PASS: final five-second full-frame/phone contact sheets and frames on both sides of all cuts inspected; UI legible; forbidden Home and cycle copy absent in reviewed frames."
+}

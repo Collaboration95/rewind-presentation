@@ -1,0 +1,39 @@
+@startuml
+!include _style.iuml
+title Design sequence · UC07 Close cycle and open successor
+hide footbox
+skinparam Padding 0
+skinparam sequence {
+  MessageSpacing 0
+  ParticipantPadding 5
+  BoxPadding 3
+  GroupBodyBackgroundColor #FFFFFF
+}
+skinparam ParticipantFontSize 18
+skinparam SequenceGroupHeaderFontSize 17
+skinparam sequenceGroupFontSize 17
+autonumber
+skinparam maxMessageSize 300
+skinparam sequenceMessageSpan true
+participant "scheduler.ts\n«module»" as S
+participant "lifecycle.ts\n«module»" as L
+participant "compilation.ts\n«module»" as C
+participant ":RewindDatabase" as DB
+[-> S : runCycleSchedulerTick()
+S -> DB : SELECT due cycles
+loop each candidate
+ S -> L : advanceCycleLifecycleWithStore()
+ group advanceCycleLifecycleVerified() · one transaction
+  L -> DB : BEGIN IMMEDIATE
+   L -> DB : SQL: revealing + lifecycle event
+  L -> C : ensureCompilationJob()
+  C -> DB : SQL: pending film + provisional inputs
+  L -> L : ensureSuccessor()
+  L -> DB : SQL: successor if absent; guarded group pointer
+  L -> DB : COMMIT
+ end
+end
+legend bottom
+Due collecting-cycle path. Continue with seq-cycle-compile and seq-cycle-release.
+endlegend
+@enduml

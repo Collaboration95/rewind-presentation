@@ -1,0 +1,45 @@
+@startuml
+!include _style.iuml
+title Design class view · Chat · Observer (RealtimeHub) · as built at f6cd896
+top to bottom direction
+' Evidence: server/src/realtime/index.ts#L3,#L9-L42 ; routes/chat-routes.ts#L223-L250,#L394,#L463 ; http.ts#L179 ; chat/index.ts#L347,#L498
+
+class RealtimeHub <<subject>> #ECFDF5 {
+  - subscribers: Map<string, Set<RealtimeEventWriter>>
+  + subscribe(groupId: string, writer: RealtimeEventWriter): () => void
+  + publish(event: ChatMessageEvent | ChatReactionEvent): void
+  + subscriberCount(groupId?: string): number
+}
+interface "RealtimeEventWriter\n(function type)" as W <<observer>> #DBEAFE {
+  (event: ChatMessageEvent | ChatReactionEvent): void
+}
+class "chat-routes.ts\nSSE handler" as SSE <<concrete observer>> {
+  writeEvent(event)
+  writeReaction(event)
+  subscribeToGroup(listener): () => void
+}
+class "chat/index.ts" as CH <<module>> {
+  {static} + createChatMessage(database, ...): result.event
+  {static} + toggleChatReaction(database, ...)
+  {static} + listChatEvents(database, ...)
+}
+class "chat-routes.ts\nPOST handlers" as POST <<publisher>> {
+  options.realtimeHub?.publish(result.event)
+}
+class "realtime_events" as TB <<table>> #FEF3C7 {
+  id BIGINT PK (replay cursor)
+  group_id FK, message_id UNIQUE FK
+}
+RealtimeHub o-- "*" W : subscribers per group
+SSE ..|> W
+SSE ..> RealtimeHub : subscribe(groupId, writer)\nunsubscribe on 'close'
+POST ..> CH : 1 persist
+POST ..> RealtimeHub : 2 publish after commit
+CH ..> TB : insert event row (messages only)
+SSE ..> CH : replay from Last-Event-ID
+note right of RealtimeHub
+  Process-local (http.ts#L179: new RealtimeHub()).
+  A reconnecting client replays persisted events,
+  not the hub.
+end note
+@enduml

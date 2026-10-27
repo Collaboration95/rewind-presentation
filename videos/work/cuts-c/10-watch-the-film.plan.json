@@ -1,0 +1,266 @@
+{
+  "output": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/cuts-c/10-watch-the-film.mp4",
+  "frames": 2400,
+  "duration": 80.0,
+  "segments": [
+    {
+      "type": "phone",
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/10-watch.mov",
+      "still": false,
+      "start": 14.8,
+      "end": 17.166666667,
+      "frames": 131,
+      "duration": 4.366666666666666,
+      "width": 1206,
+      "height": 2622,
+      "crop": null,
+      "masks": [],
+      "smooth": [],
+      "audio_file": null,
+      "audio_in": 0,
+      "gain": 1,
+      "source_audio": false,
+      "island": false,
+      "signature": {
+        "row": {
+          "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/10-watch.mov",
+          "in": 14.8,
+          "duration": 4.366666666666666,
+          "audio": false,
+          "note": "Opening film UI only; initial Home excluded. Actual 2.3667 s plus a 2 s loading-frame hold.",
+          "out": 17.166666667
+        },
+        "source": [
+          "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/10-watch.mov",
+          374093831,
+          1793028973519099349
+        ],
+        "audio": null
+      }
+    },
+    {
+      "type": "phone",
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/10-watch.mov",
+      "still": false,
+      "start": 17.896666667,
+      "end": 39.096666667,
+      "frames": 636,
+      "duration": 21.2,
+      "width": 1206,
+      "height": 2622,
+      "crop": null,
+      "masks": [],
+      "smooth": [],
+      "audio_file": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/film/rewind-hosted-film.mp4",
+      "audio_in": 0.0,
+      "gain": 1.0,
+      "source_audio": false,
+      "island": false,
+      "signature": {
+        "row": {
+          "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/10-watch.mov",
+          "in": 17.896666667,
+          "duration": 21.2,
+          "audio": {
+            "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/film/rewind-hosted-film.mp4",
+            "in": 0
+          },
+          "note": "Complete first native film. Native fullscreen startup repeats trimmed to match first photo at film t=0. All five contributions retained.",
+          "out": 39.096666667
+        },
+        "source": [
+          "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/10-watch.mov",
+          374093831,
+          1793028973519099349
+        ],
+        "audio": [
+          "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/film/rewind-hosted-film.mp4",
+          5183715,
+          1793028064640297323
+        ]
+      }
+    },
+    {
+      "type": "phone",
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/10-watch.mov",
+      "still": false,
+      "start": 109.72,
+      "end": 117.72,
+      "frames": 240,
+      "duration": 8.0,
+      "width": 1206,
+      "height": 2622,
+      "crop": null,
+      "masks": [],
+      "smooth": [],
+      "audio_file": null,
+      "audio_in": 0,
+      "gain": 1,
+      "source_audio": false,
+      "island": false,
+      "signature": {
+        "row": {
+          "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/10-watch.mov",
+          "in": 109.72,
+          "duration": 8,
+          "audio": false,
+          "note": "Native last frame paused, then actual replay action at boundary; long idle removed.",
+          "out": 117.72
+        },
+        "source": [
+          "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/10-watch.mov",
+          374093831,
+          1793028973519099349
+        ],
+        "audio": null
+      }
+    },
+    {
+      "type": "phone",
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/10-watch.mov",
+      "still": false,
+      "start": 117.96,
+      "end": 139.16,
+      "frames": 636,
+      "duration": 21.2,
+      "width": 1206,
+      "height": 2622,
+      "crop": null,
+      "masks": [],
+      "smooth": [],
+      "audio_file": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/film/rewind-hosted-film.mp4",
+      "audio_in": 0.0,
+      "gain": 1.0,
+      "source_audio": false,
+      "island": false,
+      "signature": {
+        "row": {
+          "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/10-watch.mov",
+          "in": 117.96,
+          "duration": 21.2,
+          "audio": {
+            "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/film/rewind-hosted-film.mp4",
+            "in": 0
+          },
+          "note": "Complete native replay, photo and later scene boundaries aligned to real film audio t=0.",
+          "out": 139.16
+        },
+        "source": [
+          "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/10-watch.mov",
+          374093831,
+          1793028973519099349
+        ],
+        "audio": [
+          "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/film/rewind-hosted-film.mp4",
+          5183715,
+          1793028064640297323
+        ]
+      }
+    },
+    {
+      "type": "phone",
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/10-watch.mov",
+      "still": false,
+      "start": 139.16,
+      "end": 147.16,
+      "frames": 240,
+      "duration": 8.0,
+      "width": 1206,
+      "height": 2622,
+      "crop": null,
+      "masks": [],
+      "smooth": [],
+      "audio_file": null,
+      "audio_in": 0,
+      "gain": 1,
+      "source_audio": false,
+      "island": false,
+      "signature": {
+        "row": {
+          "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/10-watch.mov",
+          "in": 139.16,
+          "duration": 8,
+          "audio": false,
+          "note": "Native playback finishes; pause controls appear.",
+          "out": 147.16
+        },
+        "source": [
+          "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/10-watch.mov",
+          374093831,
+          1793028973519099349
+        ],
+        "audio": null
+      }
+    },
+    {
+      "type": "phone",
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/10-watch.mov",
+      "still": false,
+      "start": 155.0,
+      "end": 162.233333333,
+      "frames": 217,
+      "duration": 7.233333333333333,
+      "width": 1206,
+      "height": 2622,
+      "crop": null,
+      "masks": [],
+      "smooth": [],
+      "audio_file": null,
+      "audio_in": 0,
+      "gain": 1,
+      "source_audio": false,
+      "island": false,
+      "signature": {
+        "row": {
+          "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/10-watch.mov",
+          "in": 155,
+          "duration": 7.233333333333333,
+          "audio": false,
+          "note": "Native controls and real Close transition to application end UI.",
+          "out": 162.233333333
+        },
+        "source": [
+          "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/10-watch.mov",
+          374093831,
+          1793028973519099349
+        ],
+        "audio": null
+      }
+    },
+    {
+      "type": "phone",
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/10-watch.mov",
+      "still": false,
+      "start": 168.0,
+      "end": 178.0,
+      "frames": 300,
+      "duration": 10.0,
+      "width": 1206,
+      "height": 2622,
+      "crop": null,
+      "masks": [],
+      "smooth": [],
+      "audio_file": null,
+      "audio_in": 0,
+      "gain": 1,
+      "source_audio": false,
+      "island": false,
+      "signature": {
+        "row": {
+          "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/10-watch.mov",
+          "in": 168,
+          "duration": 10,
+          "audio": false,
+          "note": "Actual application The end / Replay / Save film screen, ten seconds.",
+          "out": 178
+        },
+        "source": [
+          "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/10-watch.mov",
+          374093831,
+          1793028973519099349
+        ],
+        "audio": null
+      }
+    }
+  ]
+}

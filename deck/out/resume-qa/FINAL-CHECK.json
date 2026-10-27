@@ -1,0 +1,136 @@
+{
+  "viewport": [
+    1280,
+    720
+  ],
+  "frames": 59,
+  "narrative": 14,
+  "features": 10,
+  "backups": 35,
+  "timedSeconds": 2280,
+  "sectionSeconds": [
+    210,
+    300,
+    180,
+    720,
+    870
+  ],
+  "minUmlTextPx": 14.055,
+  "pageErrors": 0,
+  "overflow": 0,
+  "brokenImages": 0,
+  "pdfPages": 59,
+  "pdfPageSizePt": [
+    960,
+    540
+  ],
+  "pdfTitlesMatch": true,
+  "controls": {
+    "arrow": true,
+    "notes": true,
+    "overview": true,
+    "overviewFrames": 59,
+    "overviewClick": true,
+    "hash": true,
+    "clipPlays": true,
+    "mutedDefault": true,
+    "spacePauses": true,
+    "clickPlays": true,
+    "manualUnmute": true,
+    "restartPauses": true,
+    "clipPausesOnLeave": true,
+    "commands": true
+  },
+  "media": [
+    {
+      "id": "s18",
+      "duration": 686,
+      "width": 1280,
+      "height": 720,
+      "paused": true,
+      "muted": true
+    },
+    {
+      "id": "F3",
+      "duration": 60,
+      "width": 416,
+      "height": 776,
+      "paused": true,
+      "muted": true
+    },
+    {
+      "id": "F4",
+      "duration": 60,
+      "width": 416,
+      "height": 858,
+      "paused": true,
+      "muted": true
+    },
+    {
+      "id": "F5",
+      "duration": 55,
+      "width": 416,
+      "height": 776,
+      "paused": true,
+      "muted": true
+    },
+    {
+      "id": "F6",
+      "duration": 65,
+      "width": 416,
+      "height": 776,
+      "paused": true,
+      "muted": true
+    },
+    {
+      "id": "F7",
+      "duration": 55,
+      "width": 416,
+      "height": 776,
+      "paused": true,
+      "muted": true
+    },
+    {
+      "id": "F8",
+      "duration": 50,
+      "width": 416,
+      "height": 776,
+      "paused": true,
+      "muted": true
+    },
+    {
+      "id": "F9",
+      "duration": 40,
+      "width": 416,
+      "height": 776,
+      "paused": true,
+      "muted": true
+    },
+    {
+      "id": "F10",
+      "duration": 80,
+      "width": 416,
+      "height": 858,
+      "paused": true,
+      "muted": true
+    },
+    {
+      "id": "F11",
+      "duration": 55,
+      "width": 416,
+      "height": 858,
+      "paused": true,
+      "muted": true
+    },
+    {
+      "id": "F12",
+      "duration": 50,
+      "width": 416,
+      "height": 776,
+      "paused": true,
+      "muted": true
+    }
+  ],
+  "presenterUrl": "http://127.0.0.1:8778/deck/deck.html",
+  "presenterUrlMatchesFinalDeck": true
+}

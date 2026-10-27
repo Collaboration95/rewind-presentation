@@ -1,0 +1,1177 @@
+{
+  "origin": "https://d2m6kz76y4kuvm.cloudfront.net",
+  "createdAt": "2026-10-26T14:38:53.637Z",
+  "receipts": [
+    {
+      "at": "2026-10-26T14:38:54.512Z",
+      "kind": "register",
+      "account": "maya",
+      "status": 429,
+      "retryAfter": "349"
+    },
+    {
+      "at": "2026-10-26T14:45:17.612Z",
+      "kind": "register",
+      "account": "maya",
+      "status": 201
+    },
+    {
+      "at": "2026-10-26T14:45:18.631Z",
+      "kind": "account_ready",
+      "account": "maya",
+      "username": "maya.chen.27",
+      "displayName": "Maya"
+    },
+    {
+      "at": "2026-10-26T14:45:19.514Z",
+      "kind": "register",
+      "account": "jun",
+      "status": 201
+    },
+    {
+      "at": "2026-10-26T14:45:20.423Z",
+      "kind": "account_ready",
+      "account": "jun",
+      "username": "jun.lee.27",
+      "displayName": "Jun"
+    },
+    {
+      "at": "2026-10-26T14:45:21.251Z",
+      "kind": "register",
+      "account": "priya",
+      "status": 201
+    },
+    {
+      "at": "2026-10-26T14:45:22.117Z",
+      "kind": "account_ready",
+      "account": "priya",
+      "username": "priya.nair.27",
+      "displayName": "Priya"
+    },
+    {
+      "at": "2026-10-26T14:45:25.683Z",
+      "kind": "collecting",
+      "status": 201,
+      "group": {
+        "memberId": "real-profile-f7bb0362-0844-40ca-ade3-02179d76b957",
+        "group": {
+          "id": "real-group-ef0dc5d3-b66b-49f8-abe9-784509d2c3e6",
+          "name": "Our everyday",
+          "role": "owner",
+          "maxMembers": 6,
+          "timeZone": "Asia/Singapore"
+        },
+        "cycle": {
+          "id": "real-cycle-dc6bd068-5625-4fdd-a87e-b0a8d1f2e898",
+          "groupId": "real-group-ef0dc5d3-b66b-49f8-abe9-784509d2c3e6",
+          "prompt": "One small thing worth remembering",
+          "startsAt": "2026-10-26T14:45:25.472Z",
+          "endsAt": "2026-11-23T14:45:25.472Z",
+          "status": "collecting",
+          "lockState": "locked",
+          "quota": {
+            "maxCount": 5,
+            "maxSeconds": 30
+          },
+          "contributionUsage": {
+            "countUsed": 0,
+            "secondsUsed": 0
+          },
+          "contributionCount": 0
+        },
+        "releases": [],
+        "createdAt": "2026-10-26T14:45:25.683Z"
+      }
+    },
+    {
+      "at": "2026-10-26T14:45:35.410Z",
+      "kind": "collecting",
+      "invite": {
+        "id": "real-invite-a9fbb524dad16c7b33c7e82b",
+        "code": "LTZ-TIC",
+        "groupId": "real-group-ef0dc5d3-b66b-49f8-abe9-784509d2c3e6",
+        "status": "active",
+        "createdAt": "2026-10-26T14:45:35.300Z",
+        "expiresAt": "2026-10-27T14:45:35.300Z"
+      }
+    },
+    {
+      "at": "2026-10-26T14:45:36.234Z",
+      "kind": "collecting",
+      "account": "jun",
+      "status": 200
+    },
+    {
+      "at": "2026-10-26T14:46:09.799Z",
+      "kind": "screenshot",
+      "account": "maya",
+      "file": "collecting-home.png",
+      "url": "https://d2m6kz76y4kuvm.cloudfront.net/"
+    },
+    {
+      "at": "2026-10-26T14:47:29.705Z",
+      "kind": "film",
+      "status": 201,
+      "group": {
+        "memberId": "real-profile-f7bb0362-0844-40ca-ade3-02179d76b957",
+        "group": {
+          "id": "real-group-1ef6c358-817e-43dd-8752-19cb6b7e47ad",
+          "name": "The little things",
+          "role": "owner",
+          "maxMembers": 6,
+          "timeZone": "Asia/Singapore"
+        },
+        "cycle": {
+          "id": "real-cycle-8a66da82-c634-4f47-9016-9d2d4f0b0dcc",
+          "groupId": "real-group-1ef6c358-817e-43dd-8752-19cb6b7e47ad",
+          "prompt": "The small moments that made our week",
+          "startsAt": "2026-10-26T14:47:29.475Z",
+          "endsAt": "2026-10-26T15:17:29.475Z",
+          "status": "collecting",
+          "lockState": "locked",
+          "quota": {
+            "maxCount": 5,
+            "maxSeconds": 30
+          },
+          "contributionUsage": {
+            "countUsed": 0,
+            "secondsUsed": 0
+          },
+          "contributionCount": 0
+        },
+        "releases": [],
+        "createdAt": "2026-10-26T14:47:29.704Z",
+        "deploy": {
+          "conclusion": "success",
+          "createdAt": "2026-10-26T14:38:51Z",
+          "databaseId": 40341542790,
+          "headSha": "47ea5f0ec14c19d6c138876abd44837f598ebeee",
+          "status": "completed",
+          "updatedAt": "2026-10-26T14:46:36Z"
+        }
+      }
+    },
+    {
+      "at": "2026-10-26T14:47:30.751Z",
+      "kind": "film",
+      "invite": {
+        "id": "real-invite-4a2452939534d973b3544d36",
+        "code": "STA-FOK",
+        "groupId": "real-group-1ef6c358-817e-43dd-8752-19cb6b7e47ad",
+        "status": "active",
+        "createdAt": "2026-10-26T14:47:30.641Z",
+        "expiresAt": "2026-10-27T14:47:30.641Z"
+      }
+    },
+    {
+      "at": "2026-10-26T14:47:31.361Z",
+      "kind": "film",
+      "account": "jun",
+      "status": 200
+    },
+    {
+      "at": "2026-10-26T14:47:31.364Z",
+      "kind": "upload_prepared",
+      "key": "maya-photo-1",
+      "account": "maya"
+    },
+    {
+      "at": "2026-10-26T14:47:33.967Z",
+      "kind": "source_uploaded",
+      "key": "maya-photo-1",
+      "status": 201,
+      "bytes": 463049
+    },
+    {
+      "at": "2026-10-26T14:47:34.286Z",
+      "kind": "upload_created",
+      "key": "maya-photo-1",
+      "upload": {
+        "contribution": {
+          "id": "contribution-fcfa313ddd137b3e",
+          "cycleId": "real-cycle-8a66da82-c634-4f47-9016-9d2d4f0b0dcc",
+          "groupId": "real-group-1ef6c358-817e-43dd-8752-19cb6b7e47ad",
+          "memberId": "real-profile-f7bb0362-0844-40ca-ade3-02179d76b957",
+          "durationSeconds": 3,
+          "createdAt": "2026-10-26T14:47:34.194Z"
+        },
+        "job": {
+          "id": "clip-job-fcfa313ddd137b3e",
+          "groupId": "real-group-1ef6c358-817e-43dd-8752-19cb6b7e47ad",
+          "contributionId": "contribution-fcfa313ddd137b3e",
+          "kind": "clip",
+          "status": "pending",
+          "createdAt": "2026-10-26T14:47:34.194Z"
+        },
+        "existing": false
+      }
+    },
+    {
+      "at": "2026-10-26T14:47:34.730Z",
+      "kind": "processing_response",
+      "key": "maya-photo-1",
+      "status": 409,
+      "result": {
+        "error": "media_processing",
+        "message": "The media job is already processing."
+      }
+    },
+    {
+      "at": "2026-10-26T14:47:35.029Z",
+      "kind": "clip_status",
+      "key": "maya-photo-1",
+      "status": "processing"
+    },
+    {
+      "at": "2026-10-26T14:47:48.898Z",
+      "kind": "clip_status",
+      "key": "maya-photo-1",
+      "status": "ready"
+    },
+    {
+      "at": "2026-10-26T14:47:48.901Z",
+      "kind": "upload_prepared",
+      "key": "jun-photo-1",
+      "account": "jun"
+    },
+    {
+      "at": "2026-10-26T14:47:54.461Z",
+      "kind": "source_uploaded",
+      "key": "jun-photo-1",
+      "status": 201,
+      "bytes": 1025205
+    },
+    {
+      "at": "2026-10-26T14:47:54.879Z",
+      "kind": "upload_created",
+      "key": "jun-photo-1",
+      "upload": {
+        "contribution": {
+          "id": "contribution-1c09a627c08f6247",
+          "cycleId": "real-cycle-8a66da82-c634-4f47-9016-9d2d4f0b0dcc",
+          "groupId": "real-group-1ef6c358-817e-43dd-8752-19cb6b7e47ad",
+          "memberId": "real-profile-89cbf8b1-1cb9-40ae-b54f-b26c8b0c428c",
+          "durationSeconds": 3,
+          "createdAt": "2026-10-26T14:47:54.688Z"
+        },
+        "job": {
+          "id": "clip-job-1c09a627c08f6247",
+          "groupId": "real-group-1ef6c358-817e-43dd-8752-19cb6b7e47ad",
+          "contributionId": "contribution-1c09a627c08f6247",
+          "kind": "clip",
+          "status": "pending",
+          "createdAt": "2026-10-26T14:47:54.688Z"
+        },
+        "existing": false
+      }
+    },
+    {
+      "at": "2026-10-26T14:47:55.481Z",
+      "kind": "processing_response",
+      "key": "jun-photo-1",
+      "status": 409,
+      "result": {
+        "error": "media_processing",
+        "message": "The media job is already processing."
+      }
+    },
+    {
+      "at": "2026-10-26T14:47:55.820Z",
+      "kind": "clip_status",
+      "key": "jun-photo-1",
+      "status": "processing"
+    },
+    {
+      "at": "2026-10-26T14:47:55.823Z",
+      "kind": "upload_prepared",
+      "key": "maya-video",
+      "account": "maya"
+    },
+    {
+      "at": "2026-10-26T14:47:58.602Z",
+      "kind": "source_uploaded",
+      "key": "maya-video",
+      "status": 201,
+      "bytes": 3877301
+    },
+    {
+      "at": "2026-10-26T14:47:58.924Z",
+      "kind": "upload_created",
+      "key": "maya-video",
+      "upload": {
+        "contribution": {
+          "id": "contribution-a9a1e01c8d124120",
+          "cycleId": "real-cycle-8a66da82-c634-4f47-9016-9d2d4f0b0dcc",
+          "groupId": "real-group-1ef6c358-817e-43dd-8752-19cb6b7e47ad",
+          "memberId": "real-profile-f7bb0362-0844-40ca-ade3-02179d76b957",
+          "durationSeconds": 6,
+          "createdAt": "2026-10-26T14:47:58.826Z"
+        },
+        "job": {
+          "id": "clip-job-a9a1e01c8d124120",
+          "groupId": "real-group-1ef6c358-817e-43dd-8752-19cb6b7e47ad",
+          "contributionId": "contribution-a9a1e01c8d124120",
+          "kind": "clip",
+          "status": "pending",
+          "createdAt": "2026-10-26T14:47:58.826Z"
+        },
+        "existing": false
+      }
+    },
+    {
+      "at": "2026-10-26T14:48:12.758Z",
+      "kind": "processing_response",
+      "key": "maya-video",
+      "status": 503,
+      "result": {
+        "error": "media_processing_failed",
+        "message": "The clip could not be processed. Retry the job."
+      }
+    },
+    {
+      "at": "2026-10-26T14:48:13.248Z",
+      "kind": "clip_status",
+      "key": "maya-video",
+      "status": "failed"
+    },
+    {
+      "at": "2026-10-26T14:49:03.551Z",
+      "kind": "clip_status",
+      "key": "jun-photo-1",
+      "status": "ready"
+    },
+    {
+      "at": "2026-10-26T14:49:03.556Z",
+      "kind": "upload_prepared",
+      "key": "jun-video",
+      "account": "jun"
+    },
+    {
+      "at": "2026-10-26T14:49:06.697Z",
+      "kind": "source_uploaded",
+      "key": "jun-video",
+      "status": 201,
+      "bytes": 1270642
+    },
+    {
+      "at": "2026-10-26T14:49:07.048Z",
+      "kind": "upload_created",
+      "key": "jun-video",
+      "upload": {
+        "contribution": {
+          "id": "contribution-28c58cda16d16c69",
+          "cycleId": "real-cycle-8a66da82-c634-4f47-9016-9d2d4f0b0dcc",
+          "groupId": "real-group-1ef6c358-817e-43dd-8752-19cb6b7e47ad",
+          "memberId": "real-profile-89cbf8b1-1cb9-40ae-b54f-b26c8b0c428c",
+          "durationSeconds": 6,
+          "createdAt": "2026-10-26T14:49:06.924Z"
+        },
+        "job": {
+          "id": "clip-job-28c58cda16d16c69",
+          "groupId": "real-group-1ef6c358-817e-43dd-8752-19cb6b7e47ad",
+          "contributionId": "contribution-28c58cda16d16c69",
+          "kind": "clip",
+          "status": "pending",
+          "createdAt": "2026-10-26T14:49:06.924Z"
+        },
+        "existing": false
+      }
+    },
+    {
+      "at": "2026-10-26T14:49:07.617Z",
+      "kind": "processing_response",
+      "key": "jun-video",
+      "status": 409,
+      "result": {
+        "error": "media_processing",
+        "message": "The media job is already processing."
+      }
+    },
+    {
+      "at": "2026-10-26T14:49:07.958Z",
+      "kind": "clip_status",
+      "key": "jun-video",
+      "status": "processing"
+    },
+    {
+      "at": "2026-10-26T14:49:07.961Z",
+      "kind": "upload_prepared",
+      "key": "maya-photo-2",
+      "account": "maya"
+    },
+    {
+      "at": "2026-10-26T14:49:10.109Z",
+      "kind": "source_uploaded",
+      "key": "maya-photo-2",
+      "status": 201,
+      "bytes": 434504
+    },
+    {
+      "at": "2026-10-26T14:49:10.460Z",
+      "kind": "upload_created",
+      "key": "maya-photo-2",
+      "upload": {
+        "contribution": {
+          "id": "contribution-676dc3ef115117de",
+          "cycleId": "real-cycle-8a66da82-c634-4f47-9016-9d2d4f0b0dcc",
+          "groupId": "real-group-1ef6c358-817e-43dd-8752-19cb6b7e47ad",
+          "memberId": "real-profile-f7bb0362-0844-40ca-ade3-02179d76b957",
+          "durationSeconds": 3,
+          "createdAt": "2026-10-26T14:49:10.340Z"
+        },
+        "job": {
+          "id": "clip-job-676dc3ef115117de",
+          "groupId": "real-group-1ef6c358-817e-43dd-8752-19cb6b7e47ad",
+          "contributionId": "contribution-676dc3ef115117de",
+          "kind": "clip",
+          "status": "pending",
+          "createdAt": "2026-10-26T14:49:10.340Z"
+        },
+        "existing": false
+      }
+    },
+    {
+      "at": "2026-10-26T14:49:20.910Z",
+      "kind": "processing_response",
+      "key": "maya-photo-2",
+      "status": 200,
+      "result": {
+        "job": {
+          "id": "clip-job-676dc3ef115117de",
+          "status": "ready"
+        }
+      }
+    },
+    {
+      "at": "2026-10-26T14:49:21.374Z",
+      "kind": "clip_status",
+      "key": "maya-photo-2",
+      "status": "ready"
+    },
+    {
+      "at": "2026-10-26T14:49:33.307Z",
+      "kind": "clip_status",
+      "key": "maya-photo-1",
+      "status": "ready"
+    },
+    {
+      "at": "2026-10-26T14:49:33.957Z",
+      "kind": "clip_status",
+      "key": "jun-photo-1",
+      "status": "ready"
+    },
+    {
+      "at": "2026-10-26T14:49:35.016Z",
+      "kind": "clip_status",
+      "key": "maya-video",
+      "status": "ready"
+    },
+    {
+      "at": "2026-10-26T14:49:35.650Z",
+      "kind": "clip_status",
+      "key": "jun-video",
+      "status": "ready"
+    },
+    {
+      "at": "2026-10-26T14:49:36.393Z",
+      "kind": "clip_status",
+      "key": "maya-photo-2",
+      "status": "ready"
+    },
+    {
+      "at": "2026-10-26T14:50:02.720Z",
+      "kind": "screenshot",
+      "account": "maya",
+      "file": "film-collecting-home.png",
+      "url": "https://d2m6kz76y4kuvm.cloudfront.net/"
+    },
+    {
+      "at": "2026-10-26T14:50:05.512Z",
+      "kind": "poll",
+      "health": 200,
+      "premiere": "locked"
+    },
+    {
+      "at": "2026-10-26T14:51:37.424Z",
+      "kind": "poll",
+      "health": 200,
+      "premiere": "locked"
+    },
+    {
+      "at": "2026-10-26T14:52:34.380Z",
+      "kind": "poll",
+      "health": 200,
+      "premiere": "locked"
+    },
+    {
+      "at": "2026-10-26T14:53:31.530Z",
+      "kind": "poll",
+      "health": 200,
+      "premiere": "locked"
+    },
+    {
+      "at": "2026-10-26T14:54:28.500Z",
+      "kind": "poll",
+      "health": 200,
+      "premiere": "locked"
+    },
+    {
+      "at": "2026-10-26T14:55:25.342Z",
+      "kind": "poll",
+      "health": 200,
+      "premiere": "locked"
+    },
+    {
+      "at": "2026-10-26T14:56:22.323Z",
+      "kind": "poll",
+      "health": 200,
+      "premiere": "locked"
+    },
+    {
+      "at": "2026-10-26T14:57:19.159Z",
+      "kind": "poll",
+      "health": 200
+    },
+    {
+      "at": "2026-10-26T14:58:16.066Z",
+      "kind": "poll",
+      "health": 200
+    },
+    {
+      "at": "2026-10-26T14:59:12.879Z",
+      "kind": "poll",
+      "health": 200
+    },
+    {
+      "at": "2026-10-26T15:00:09.292Z",
+      "kind": "poll",
+      "health": 200,
+      "groupStatus": 200,
+      "premiere": "locked"
+    },
+    {
+      "at": "2026-10-26T15:01:05.915Z",
+      "kind": "poll",
+      "health": 200,
+      "groupStatus": 200,
+      "premiere": "locked"
+    },
+    {
+      "at": "2026-10-26T15:02:02.387Z",
+      "kind": "poll",
+      "health": 200,
+      "groupStatus": 200,
+      "premiere": "locked"
+    },
+    {
+      "at": "2026-10-26T15:02:58.817Z",
+      "kind": "poll",
+      "health": 200,
+      "groupStatus": 200,
+      "premiere": "locked"
+    },
+    {
+      "at": "2026-10-26T15:03:55.046Z",
+      "kind": "poll",
+      "health": 200,
+      "groupStatus": 200,
+      "premiere": "locked"
+    },
+    {
+      "at": "2026-10-26T15:04:51.472Z",
+      "kind": "poll",
+      "health": 200,
+      "groupStatus": 200,
+      "premiere": "locked"
+    },
+    {
+      "at": "2026-10-26T15:05:47.977Z",
+      "kind": "poll",
+      "health": 200,
+      "groupStatus": 200,
+      "premiere": "locked"
+    },
+    {
+      "at": "2026-10-26T15:06:44.606Z",
+      "kind": "poll",
+      "health": 200,
+      "groupStatus": 200,
+      "premiere": "locked"
+    },
+    {
+      "at": "2026-10-26T15:07:40.909Z",
+      "kind": "poll",
+      "health": 200,
+      "groupStatus": 200,
+      "premiere": "locked"
+    },
+    {
+      "at": "2026-10-26T15:08:37.333Z",
+      "kind": "poll",
+      "health": 200,
+      "groupStatus": 200,
+      "premiere": "locked"
+    },
+    {
+      "at": "2026-10-26T15:09:33.831Z",
+      "kind": "poll",
+      "health": 200,
+      "groupStatus": 200,
+      "premiere": "locked"
+    },
+    {
+      "at": "2026-10-26T15:10:30.369Z",
+      "kind": "poll",
+      "health": 200,
+      "groupStatus": 200,
+      "premiere": "locked"
+    },
+    {
+      "at": "2026-10-26T15:11:26.705Z",
+      "kind": "poll",
+      "health": 200,
+      "groupStatus": 200,
+      "premiere": "locked"
+    },
+    {
+      "at": "2026-10-26T15:12:23.122Z",
+      "kind": "poll",
+      "health": 200,
+      "groupStatus": 200,
+      "premiere": "locked"
+    },
+    {
+      "at": "2026-10-26T15:13:19.603Z",
+      "kind": "poll",
+      "health": 200,
+      "groupStatus": 200,
+      "premiere": "locked"
+    },
+    {
+      "at": "2026-10-26T15:14:16.197Z",
+      "kind": "poll",
+      "health": 200,
+      "groupStatus": 200,
+      "premiere": "locked"
+    },
+    {
+      "at": "2026-10-26T15:15:12.647Z",
+      "kind": "poll",
+      "health": 200,
+      "groupStatus": 200,
+      "premiere": "locked"
+    },
+    {
+      "at": "2026-10-26T15:16:09.063Z",
+      "kind": "poll",
+      "health": 200,
+      "groupStatus": 200,
+      "premiere": "locked"
+    },
+    {
+      "at": "2026-10-26T15:17:05.636Z",
+      "kind": "poll",
+      "health": 200,
+      "groupStatus": 200,
+      "premiere": "locked"
+    },
+    {
+      "at": "2026-10-26T15:18:02.140Z",
+      "kind": "poll",
+      "health": 200,
+      "groupStatus": 200,
+      "premiere": "locked"
+    },
+    {
+      "at": "2026-10-26T15:18:58.625Z",
+      "kind": "poll",
+      "health": 200,
+      "groupStatus": 200,
+      "premiere": "premiere"
+    },
+    {
+      "at": "2026-10-26T15:18:59.593Z",
+      "kind": "temporary_group_selection",
+      "account": "jun",
+      "previous": "real-group-55f1f1de-e005-4421-b591-38c1a12625b6",
+      "selected": "real-group-1ef6c358-817e-43dd-8752-19cb6b7e47ad"
+    },
+    {
+      "at": "2026-10-26T15:19:02.005Z",
+      "kind": "outsider_denial",
+      "downloadStatus": 200,
+      "groupStatus": 404,
+      "invalidProbe": true,
+      "invalidProbeReason": "Missing /api prefix; did not test the protected media endpoint."
+    },
+    {
+      "at": "2026-10-26T15:19:02.346Z",
+      "kind": "group_selection_restored",
+      "account": "jun",
+      "groupId": "real-group-55f1f1de-e005-4421-b591-38c1a12625b6",
+      "status": 200
+    },
+    {
+      "at": "2026-10-26T15:19:58.700Z",
+      "kind": "poll",
+      "health": 200,
+      "groupStatus": 200,
+      "premiere": "premiere"
+    },
+    {
+      "at": "2026-10-26T15:19:59.705Z",
+      "kind": "temporary_group_selection",
+      "account": "jun",
+      "previous": "real-group-55f1f1de-e005-4421-b591-38c1a12625b6",
+      "selected": "real-group-1ef6c358-817e-43dd-8752-19cb6b7e47ad"
+    },
+    {
+      "at": "2026-10-26T15:20:01.778Z",
+      "kind": "outsider_denial",
+      "downloadStatus": 200,
+      "groupStatus": 404,
+      "invalidProbe": true,
+      "invalidProbeReason": "Missing /api prefix; did not test the protected media endpoint."
+    },
+    {
+      "at": "2026-10-26T15:20:02.735Z",
+      "kind": "group_selection_restored",
+      "account": "jun",
+      "groupId": "real-group-55f1f1de-e005-4421-b591-38c1a12625b6",
+      "status": 200
+    },
+    {
+      "at": "2026-10-26T15:20:59.241Z",
+      "kind": "poll",
+      "health": 200,
+      "groupStatus": 200,
+      "premiere": "premiere"
+    },
+    {
+      "at": "2026-10-26T15:21:00.043Z",
+      "kind": "temporary_group_selection",
+      "account": "jun",
+      "previous": "real-group-55f1f1de-e005-4421-b591-38c1a12625b6",
+      "selected": "real-group-1ef6c358-817e-43dd-8752-19cb6b7e47ad"
+    },
+    {
+      "at": "2026-10-26T15:21:02.423Z",
+      "kind": "outsider_denial",
+      "downloadStatus": 404,
+      "groupStatus": 404
+    },
+    {
+      "at": "2026-10-26T15:21:04.643Z",
+      "kind": "film_downloaded",
+      "id": "film-bae7047be8d5782f0db5ab95",
+      "cycleId": "real-cycle-8a66da82-c634-4f47-9016-9d2d4f0b0dcc",
+      "groupId": "real-group-1ef6c358-817e-43dd-8752-19cb6b7e47ad",
+      "file": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/film/rewind-hosted-film.mp4",
+      "downloadedAt": "2026-10-26T15:20:58.905Z",
+      "bytes": 5183715,
+      "sha256": "e16082dae11c58f4c835344b7a5b70106fbba787ff25ec050714c153aac9e7b2",
+      "contentType": "video/mp4",
+      "contentDisposition": "attachment; filename=\"rewind-group-film.mp4\"",
+      "segments": [
+        {
+          "contributionId": "contribution-fcfa313ddd137b3e",
+          "startSeconds": 0,
+          "durationSeconds": 3,
+          "hidden": false,
+          "mine": false
+        },
+        {
+          "contributionId": "contribution-1c09a627c08f6247",
+          "startSeconds": 3,
+          "durationSeconds": 3,
+          "hidden": false,
+          "mine": true
+        },
+        {
+          "contributionId": "contribution-a9a1e01c8d124120",
+          "startSeconds": 6,
+          "durationSeconds": 6,
+          "hidden": false,
+          "mine": false
+        },
+        {
+          "contributionId": "contribution-28c58cda16d16c69",
+          "startSeconds": 12,
+          "durationSeconds": 6,
+          "hidden": false,
+          "mine": true
+        },
+        {
+          "contributionId": "contribution-676dc3ef115117de",
+          "startSeconds": 18,
+          "durationSeconds": 3,
+          "hidden": false,
+          "mine": false
+        }
+      ],
+      "outsiderDenied": true,
+      "archiveSaveReady": true
+    },
+    {
+      "at": "2026-10-26T15:21:04.966Z",
+      "kind": "group_selection_restored",
+      "account": "jun",
+      "groupId": "real-group-55f1f1de-e005-4421-b591-38c1a12625b6",
+      "status": 200
+    },
+    {
+      "at": "2026-10-26T15:21:53.839Z",
+      "kind": "ui_save",
+      "file": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/film/rewind-archive-save.mp4",
+      "bytes": 5183715,
+      "sha256": "e16082dae11c58f4c835344b7a5b70106fbba787ff25ec050714c153aac9e7b2",
+      "suggestedFilename": "rewind-group-film-real-cycle-8a66da82-c634-4f47-9016-9d2d4f0b0dcc-2026-10-26-film-bae7047be8d5782f0db5ab95.mp4",
+      "matchesAuthenticatedDownload": true
+    },
+    {
+      "at": "2026-10-26T15:21:54.493Z",
+      "kind": "ui_group_selection_restored",
+      "account": "jun",
+      "groupId": "real-group-55f1f1de-e005-4421-b591-38c1a12625b6",
+      "status": 200
+    }
+  ],
+  "groups": {
+    "collecting": {
+      "memberId": "real-profile-f7bb0362-0844-40ca-ade3-02179d76b957",
+      "group": {
+        "id": "real-group-ef0dc5d3-b66b-49f8-abe9-784509d2c3e6",
+        "name": "Our everyday",
+        "role": "owner",
+        "maxMembers": 6,
+        "timeZone": "Asia/Singapore"
+      },
+      "cycle": {
+        "id": "real-cycle-dc6bd068-5625-4fdd-a87e-b0a8d1f2e898",
+        "groupId": "real-group-ef0dc5d3-b66b-49f8-abe9-784509d2c3e6",
+        "prompt": "One small thing worth remembering",
+        "startsAt": "2026-10-26T14:45:25.472Z",
+        "endsAt": "2026-11-23T14:45:25.472Z",
+        "status": "collecting",
+        "lockState": "locked",
+        "quota": {
+          "maxCount": 5,
+          "maxSeconds": 30
+        },
+        "contributionUsage": {
+          "countUsed": 0,
+          "secondsUsed": 0
+        },
+        "contributionCount": 0
+      },
+      "releases": [],
+      "createdAt": "2026-10-26T14:45:25.683Z",
+      "joinInvite": {
+        "id": "real-invite-a9fbb524dad16c7b33c7e82b",
+        "code": "LTZ-TIC",
+        "groupId": "real-group-ef0dc5d3-b66b-49f8-abe9-784509d2c3e6",
+        "status": "active",
+        "createdAt": "2026-10-26T14:45:35.300Z",
+        "expiresAt": "2026-10-27T14:45:35.300Z"
+      },
+      "junJoined": true
+    },
+    "film": {
+      "memberId": "real-profile-f7bb0362-0844-40ca-ade3-02179d76b957",
+      "group": {
+        "id": "real-group-1ef6c358-817e-43dd-8752-19cb6b7e47ad",
+        "name": "The little things",
+        "role": "owner",
+        "maxMembers": 6,
+        "timeZone": "Asia/Singapore"
+      },
+      "cycle": {
+        "id": "real-cycle-8a66da82-c634-4f47-9016-9d2d4f0b0dcc",
+        "groupId": "real-group-1ef6c358-817e-43dd-8752-19cb6b7e47ad",
+        "prompt": "The small moments that made our week",
+        "startsAt": "2026-10-26T14:47:29.475Z",
+        "endsAt": "2026-10-26T15:17:29.475Z",
+        "status": "collecting",
+        "lockState": "locked",
+        "quota": {
+          "maxCount": 5,
+          "maxSeconds": 30
+        },
+        "contributionUsage": {
+          "countUsed": 0,
+          "secondsUsed": 0
+        },
+        "contributionCount": 0
+      },
+      "releases": [],
+      "createdAt": "2026-10-26T14:47:29.704Z",
+      "deploy": {
+        "conclusion": "success",
+        "createdAt": "2026-10-26T14:38:51Z",
+        "databaseId": 40341542790,
+        "headSha": "47ea5f0ec14c19d6c138876abd44837f598ebeee",
+        "status": "completed",
+        "updatedAt": "2026-10-26T14:46:36Z"
+      },
+      "joinInvite": {
+        "id": "real-invite-4a2452939534d973b3544d36",
+        "code": "STA-FOK",
+        "groupId": "real-group-1ef6c358-817e-43dd-8752-19cb6b7e47ad",
+        "status": "active",
+        "createdAt": "2026-10-26T14:47:30.641Z",
+        "expiresAt": "2026-10-27T14:47:30.641Z"
+      },
+      "junJoined": true
+    }
+  },
+  "uploads": [
+    {
+      "kind": "film",
+      "key": "maya-photo-1",
+      "account": "maya",
+      "file": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/stock/friends-selfie.jpg",
+      "mode": "ccd",
+      "idempotencyKey": "film_b1a491002953b0083c6707bd13f6",
+      "status": "ready",
+      "upload": {
+        "contribution": {
+          "id": "contribution-fcfa313ddd137b3e",
+          "cycleId": "real-cycle-8a66da82-c634-4f47-9016-9d2d4f0b0dcc",
+          "groupId": "real-group-1ef6c358-817e-43dd-8752-19cb6b7e47ad",
+          "memberId": "real-profile-f7bb0362-0844-40ca-ade3-02179d76b957",
+          "durationSeconds": 3,
+          "createdAt": "2026-10-26T14:47:34.194Z"
+        },
+        "job": {
+          "id": "clip-job-fcfa313ddd137b3e",
+          "groupId": "real-group-1ef6c358-817e-43dd-8752-19cb6b7e47ad",
+          "contributionId": "contribution-fcfa313ddd137b3e",
+          "kind": "clip",
+          "status": "pending",
+          "createdAt": "2026-10-26T14:47:34.194Z"
+        },
+        "existing": false
+      }
+    },
+    {
+      "kind": "film",
+      "key": "jun-photo-1",
+      "account": "jun",
+      "file": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/stock/food-sharing-table.jpg",
+      "mode": "disposable-flash",
+      "idempotencyKey": "film_0a5a7425ef3e10990cd695c34638",
+      "status": "ready",
+      "upload": {
+        "contribution": {
+          "id": "contribution-1c09a627c08f6247",
+          "cycleId": "real-cycle-8a66da82-c634-4f47-9016-9d2d4f0b0dcc",
+          "groupId": "real-group-1ef6c358-817e-43dd-8752-19cb6b7e47ad",
+          "memberId": "real-profile-89cbf8b1-1cb9-40ae-b54f-b26c8b0c428c",
+          "durationSeconds": 3,
+          "createdAt": "2026-10-26T14:47:54.688Z"
+        },
+        "job": {
+          "id": "clip-job-1c09a627c08f6247",
+          "groupId": "real-group-1ef6c358-817e-43dd-8752-19cb6b7e47ad",
+          "contributionId": "contribution-1c09a627c08f6247",
+          "kind": "clip",
+          "status": "pending",
+          "createdAt": "2026-10-26T14:47:54.688Z"
+        },
+        "existing": false
+      }
+    },
+    {
+      "kind": "film",
+      "key": "maya-video",
+      "account": "maya",
+      "file": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/stock/travel-market.mp4",
+      "mode": "8mm",
+      "idempotencyKey": "film_02852fecd5becee4553631f4211e",
+      "status": "ready",
+      "upload": {
+        "contribution": {
+          "id": "contribution-a9a1e01c8d124120",
+          "cycleId": "real-cycle-8a66da82-c634-4f47-9016-9d2d4f0b0dcc",
+          "groupId": "real-group-1ef6c358-817e-43dd-8752-19cb6b7e47ad",
+          "memberId": "real-profile-f7bb0362-0844-40ca-ade3-02179d76b957",
+          "durationSeconds": 6,
+          "createdAt": "2026-10-26T14:47:58.826Z"
+        },
+        "job": {
+          "id": "clip-job-a9a1e01c8d124120",
+          "groupId": "real-group-1ef6c358-817e-43dd-8752-19cb6b7e47ad",
+          "contributionId": "contribution-a9a1e01c8d124120",
+          "kind": "clip",
+          "status": "pending",
+          "createdAt": "2026-10-26T14:47:58.826Z"
+        },
+        "existing": false
+      }
+    },
+    {
+      "kind": "film",
+      "key": "jun-video",
+      "account": "jun",
+      "file": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/stock/friends-food.mp4",
+      "mode": "vhs",
+      "idempotencyKey": "film_0d486d1886354fbc2c6189d0a9c0",
+      "status": "ready",
+      "upload": {
+        "contribution": {
+          "id": "contribution-28c58cda16d16c69",
+          "cycleId": "real-cycle-8a66da82-c634-4f47-9016-9d2d4f0b0dcc",
+          "groupId": "real-group-1ef6c358-817e-43dd-8752-19cb6b7e47ad",
+          "memberId": "real-profile-89cbf8b1-1cb9-40ae-b54f-b26c8b0c428c",
+          "durationSeconds": 6,
+          "createdAt": "2026-10-26T14:49:06.924Z"
+        },
+        "job": {
+          "id": "clip-job-28c58cda16d16c69",
+          "groupId": "real-group-1ef6c358-817e-43dd-8752-19cb6b7e47ad",
+          "contributionId": "contribution-28c58cda16d16c69",
+          "kind": "clip",
+          "status": "pending",
+          "createdAt": "2026-10-26T14:49:06.924Z"
+        },
+        "existing": false
+      }
+    },
+    {
+      "kind": "film",
+      "key": "maya-photo-2",
+      "account": "maya",
+      "file": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/stock/travel-mountain-sunset.jpg",
+      "mode": "ccd",
+      "idempotencyKey": "film_cf1b2ad95da8858774196deacf0a",
+      "status": "ready",
+      "upload": {
+        "contribution": {
+          "id": "contribution-676dc3ef115117de",
+          "cycleId": "real-cycle-8a66da82-c634-4f47-9016-9d2d4f0b0dcc",
+          "groupId": "real-group-1ef6c358-817e-43dd-8752-19cb6b7e47ad",
+          "memberId": "real-profile-f7bb0362-0844-40ca-ade3-02179d76b957",
+          "durationSeconds": 3,
+          "createdAt": "2026-10-26T14:49:10.340Z"
+        },
+        "job": {
+          "id": "clip-job-676dc3ef115117de",
+          "groupId": "real-group-1ef6c358-817e-43dd-8752-19cb6b7e47ad",
+          "contributionId": "contribution-676dc3ef115117de",
+          "kind": "clip",
+          "status": "pending",
+          "createdAt": "2026-10-26T14:49:10.340Z"
+        },
+        "existing": false
+      }
+    }
+  ],
+  "lastPoll": {
+    "at": "2026-10-26T15:20:58.905Z",
+    "health": 200,
+    "groupStatus": 200,
+    "currentCycle": {
+      "id": "local-cycle-108a091b-e892-40a8-914c-c48eb436a778",
+      "groupId": "real-group-1ef6c358-817e-43dd-8752-19cb6b7e47ad",
+      "prompt": "The small moments that made our week",
+      "startsAt": "2026-10-26T15:17:29.475Z",
+      "endsAt": "2026-10-26T15:47:29.475Z",
+      "status": "collecting",
+      "lockState": "locked",
+      "quota": {
+        "maxCount": 5,
+        "maxSeconds": 30
+      },
+      "contributionUsage": {
+        "countUsed": 0,
+        "secondsUsed": 0
+      },
+      "contributionCount": 0
+    },
+    "premiere": {
+      "state": "premiere",
+      "cycleId": "real-cycle-8a66da82-c634-4f47-9016-9d2d4f0b0dcc"
+    }
+  },
+  "film": {
+    "id": "film-bae7047be8d5782f0db5ab95",
+    "cycleId": "real-cycle-8a66da82-c634-4f47-9016-9d2d4f0b0dcc",
+    "groupId": "real-group-1ef6c358-817e-43dd-8752-19cb6b7e47ad",
+    "file": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/film/rewind-hosted-film.mp4",
+    "downloadedAt": "2026-10-26T15:20:58.905Z",
+    "bytes": 5183715,
+    "sha256": "e16082dae11c58f4c835344b7a5b70106fbba787ff25ec050714c153aac9e7b2",
+    "contentType": "video/mp4",
+    "contentDisposition": "attachment; filename=\"rewind-group-film.mp4\"",
+    "segments": [
+      {
+        "contributionId": "contribution-fcfa313ddd137b3e",
+        "startSeconds": 0,
+        "durationSeconds": 3,
+        "hidden": false,
+        "mine": false
+      },
+      {
+        "contributionId": "contribution-1c09a627c08f6247",
+        "startSeconds": 3,
+        "durationSeconds": 3,
+        "hidden": false,
+        "mine": true
+      },
+      {
+        "contributionId": "contribution-a9a1e01c8d124120",
+        "startSeconds": 6,
+        "durationSeconds": 6,
+        "hidden": false,
+        "mine": false
+      },
+      {
+        "contributionId": "contribution-28c58cda16d16c69",
+        "startSeconds": 12,
+        "durationSeconds": 6,
+        "hidden": false,
+        "mine": true
+      },
+      {
+        "contributionId": "contribution-676dc3ef115117de",
+        "startSeconds": 18,
+        "durationSeconds": 3,
+        "hidden": false,
+        "mine": false
+      }
+    ],
+    "outsiderDenied": true,
+    "archiveSaveReady": true
+  },
+  "uiSave": {
+    "at": "2026-10-26T15:21:53.839Z",
+    "file": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/film/rewind-archive-save.mp4",
+    "bytes": 5183715,
+    "sha256": "e16082dae11c58f4c835344b7a5b70106fbba787ff25ec050714c153aac9e7b2",
+    "suggestedFilename": "rewind-group-film-real-cycle-8a66da82-c634-4f47-9016-9d2d4f0b0dcc-2026-10-26-film-bae7047be8d5782f0db5ab95.mp4",
+    "matchesAuthenticatedDownload": true
+  },
+  "readiness": {
+    "status": "ready",
+    "checkedAt": "2026-10-26T15:22:18.702424+00:00",
+    "realHostedFilm": true,
+    "originalCycleEndsAt": "2026-10-26T15:17:29.475Z",
+    "hostedDeploy": {
+      "conclusion": "success",
+      "createdAt": "2026-10-26T14:38:51Z",
+      "databaseId": 40341542790,
+      "headSha": "47ea5f0ec14c19d6c138876abd44837f598ebeee",
+      "status": "completed",
+      "updatedAt": "2026-10-26T14:46:36Z"
+    },
+    "durationSeconds": 21.2,
+    "codecs": [
+      "h264",
+      "aac"
+    ],
+    "archiveUiSaveVerified": true,
+    "outsiderDenied": true,
+    "credentialsFileMode": "0600",
+    "junSelectionRestored": true
+  }
+}

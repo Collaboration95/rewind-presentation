@@ -1,0 +1,15 @@
+{
+  "number": 2,
+  "name": "Sign in",
+  "output": "test6.mp4",
+  "add_island": false,
+  "segments": [
+    {
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/stills/02-signin-blank.png",
+      "in": 0,
+      "out": 6,
+      "duration": 6,
+      "audio": false
+    }
+  ]
+}

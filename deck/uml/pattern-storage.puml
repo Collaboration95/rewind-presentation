@@ -1,0 +1,42 @@
+@startuml
+!include _style.iuml
+' Speaker note: Problem: isolate private-media I/O and AWS command types from compilation/capture consumers.
+' Speaker note: Candidates: repeat backend branches in jobs, or inject a MediaStore strategy with an S3 transport adapter.
+' Speaker note: Choice: MediaStore + PrivateS3Transport; the privateTransport(sdk) returned object maps SDK commands. Local disk mode remains config.media=null.
+title Design class view · Media storage
+skinparam nodesep 25
+skinparam ranksep 30
+class "stored-output.ts" as CTX <<context>> {
+  + storedContext(options, groupId)
+}
+interface MediaStore <<strategy>> #EEE7F3 {
+  + put(scope, input)
+  + head(scope, ref)
+  + read(scope, ref)
+  + delete(scope, ref)
+}
+class LocalMediaStore <<concrete strategy>> #F5F2E9
+class PrivateS3MediaStore <<concrete strategy>> #F5F2E9 {
+  - transport: PrivateS3Transport
+}
+interface PrivateS3Transport <<target>> #EEE7F3 {
+  + putObject(input)
+  + headObject(input)
+  + getObject(input)
+  + deleteObject(input)
+}
+class "runtime-store.ts\nprivateTransport(sdk)" as AD <<adapter>> #F5F2E9
+class "AWS SDK v3\nS3Client + *Command" as SDK <<adaptee>> #FCF7E7
+CTX -right-> MediaStore : uses 0..1
+LocalMediaStore .up.|> MediaStore
+PrivateS3MediaStore .up.|> MediaStore
+' Realization is interface implementation for both stores.
+LocalMediaStore -[hidden]right- PrivateS3MediaStore
+PrivateS3MediaStore -right-> PrivateS3Transport
+AD .up.|> PrivateS3Transport : returns object
+AD -right-> SDK : send(command)
+legend bottom
+  createMediaRuntime(config) selects LocalMediaStore or PrivateS3MediaStore.
+  Hosted dev uses S3. Local disk mode sets config.media = null.
+endlegend
+@enduml

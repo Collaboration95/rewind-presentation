@@ -1,0 +1,22 @@
+Rendering 1/5 (8s)
+Rendering 2/5 (8s)
+Rendering 3/5 (8s)
+Rendering 4/5 (8s)
+Rendering 5/5 (8s)
+{
+  "output": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/cuts-c/09-cycle-ends-film-ready.mp4",
+  "frames": 1200,
+  "duration": 40.0,
+  "checks": {
+    "codec": true,
+    "profile": true,
+    "size": true,
+    "pixel_format": true,
+    "fps": true,
+    "frame_count": true,
+    "video_duration": true,
+    "container_duration": true,
+    "audio": true,
+    "audio_duration": true
+  }
+}

@@ -1,0 +1,48 @@
+TITLE: Create a group
+FCM: NON-DROP FRAME
+* 30 FPS; STRAIGHT CUTS; REAL FOOTAGE AT 1X; POSTROLL FREEZE WHERE NOTED
+* All source audio discarded; final AAC stereo is silent.
+* JSON EDL is authoritative for source in/out and postroll hold durations.
+
+001  AX       V     C        00:00:06:00 00:00:12:00 00:00:00:00 00:00:06:00
+* FROM CLIP NAME: 03-create.mov
+* Settings with Create a group action
+
+002  AX       V     C        00:00:15:00 00:00:23:00 00:00:06:00 00:00:14:00
+* FROM CLIP NAME: 03-create.mov
+* Blank New group form and prompt choices
+* AUTHORIZED DELOGO RECTANGLES (1206x2622 SOURCE): [[455, 1824, 620, 64], [78, 1888, 310, 54]]
+
+003  AX       V     C        00:00:28:00 00:00:34:00 00:00:14:00 00:00:21:00
+* FROM CLIP NAME: 03-create.mov
+* Read default prompt choices and member limit; omit accidental Spotlight
+* AUTHORIZED DELOGO RECTANGLES (1206x2622 SOURCE): [[455, 1824, 620, 64], [78, 1888, 310, 54]]
+* FREEZE LAST SAFE FRAME: 1.000000s
+
+004  AX       V     C        00:00:43:00 00:00:45:15 00:00:21:00 00:00:28:00
+* FROM CLIP NAME: 03-create.mov
+* Real recorded name completion and prompt choice; actual name At table
+* AUTHORIZED DELOGO RECTANGLES (1206x2622 SOURCE): [[455, 1824, 620, 64], [78, 1888, 310, 54]]
+* FREEZE LAST SAFE FRAME: 4.500000s
+
+005  AX       V     C        00:00:45:15 00:00:50:00 00:00:28:00 00:00:36:00
+* FROM CLIP NAME: 03-create.mov
+* Real member-limit adjustment down to five
+* AUTHORIZED DELOGO RECTANGLES (1206x2622 SOURCE): [[455, 1824, 620, 64], [78, 1888, 310, 54]]
+* FREEZE LAST SAFE FRAME: 3.500000s
+
+006  AX       V     C        00:01:32:00 00:01:39:00 00:00:36:00 00:00:44:00
+* FROM CLIP NAME: 03-create.mov
+* Read selected third prompt, group name, capacity, and Create group
+* AUTHORIZED DELOGO RECTANGLES (1206x2622 SOURCE): [[455, 1824, 620, 64], [78, 1888, 310, 54]]
+* FREEZE LAST SAFE FRAME: 1.000000s
+
+007  AX       V     C        00:01:39:15 00:01:40:24 00:00:44:00 00:00:52:00
+* FROM CLIP NAME: 03-create.mov
+* Create press and Creating group progress; hold last safe form; omit ALL Home frames
+* AUTHORIZED DELOGO RECTANGLES (1206x2622 SOURCE): [[455, 1824, 620, 64], [78, 1888, 310, 54]]
+* FREEZE LAST SAFE FRAME: 6.700000s
+
+008  AX       V     C        00:00:00:00 00:00:08:00 00:00:52:00 00:01:00:00
+* FROM CLIP NAME: 03-created-settings.png
+* Successful At table group shown in real Settings

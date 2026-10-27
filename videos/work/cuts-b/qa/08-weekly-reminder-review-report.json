@@ -1,0 +1,29 @@
+{
+  "output": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/cuts-b/08-weekly-reminder-review.mp4",
+  "duration_seconds": 50,
+  "frames": 1500,
+  "encoder_checks": {
+    "codec": true,
+    "profile": true,
+    "size": true,
+    "pixel_format": true,
+    "fps": true,
+    "frame_count": true,
+    "video_duration": true,
+    "container_duration": true,
+    "audio": true,
+    "audio_duration": true
+  },
+  "silent_aac": true,
+  "ocr_frames_scanned": 68,
+  "forbidden_text_hits": [],
+  "sha256": "f1850c0fd7fb865ca010eae999d43255b07736de8b62c73e0c65a1a1e96cb730",
+  "visual_review": "PASS: final full-frame and phone contact sheets, final frames and edit boundaries inspected",
+  "frame_integrity": {
+    "file": "08-weekly-reminder-review.mp4",
+    "frames_scanned": 1500,
+    "blank_phone_frames": [],
+    "min_phone_mean_luma": 224.54306220095694,
+    "last_phone_mean_luma": 224.7221889952153
+  }
+}

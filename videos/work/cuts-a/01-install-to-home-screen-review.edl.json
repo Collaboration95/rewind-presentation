@@ -1,0 +1,63 @@
+{
+  "number": 1,
+  "name": "Install to Home Screen",
+  "output": "01-install-to-home-screen-review.mp4",
+  "segments": [
+    {
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/01-install-clean.mov",
+      "in": 0,
+      "out": 6,
+      "duration": 6,
+      "audio": false,
+      "note": "Real Safari sign-in form; establish browser context"
+    },
+    {
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/01-install-clean.mov",
+      "in": 8,
+      "out": 12,
+      "duration": 5,
+      "audio": false,
+      "note": "Safari More menu opens; trim following idle pause"
+    },
+    {
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/01-install-clean.mov",
+      "in": 47,
+      "out": 52,
+      "duration": 6,
+      "audio": false,
+      "note": "Tap Share; native share sheet appears"
+    },
+    {
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/01-install-clean.mov",
+      "in": 62,
+      "out": 67,
+      "duration": 6,
+      "audio": false,
+      "note": "View More expands native Safari actions"
+    },
+    {
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/stills/01-share-actions.png",
+      "duration": 7,
+      "audio": false,
+      "note": "Read Add to Home Screen in the real native action sheet",
+      "add_island": false
+    },
+    {
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/01-install-clean.mov",
+      "in": 86,
+      "out": 91,
+      "duration": 7,
+      "audio": false,
+      "note": "Tap Add to Home Screen; real confirmation opens"
+    },
+    {
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/01-install-clean.mov",
+      "in": 133,
+      "out": 136.1,
+      "duration": 8,
+      "audio": false,
+      "note": "Tap Add; real installed iPhone Home Screen; hold final raw frame"
+    }
+  ],
+  "add_island": false
+}

@@ -1,0 +1,116 @@
+' CI/CD section look: shared Rewind UML base + enforcement-tag stereotypes.
+' White card background so figures sit cleanly on a light green or cream slide.
+!include ../uml/_style.iuml
+skinparam BackgroundColor #FFFFFF
+skinparam defaultFontSize 20
+skinparam titleFontSize 24
+skinparam ArrowFontSize 18
+skinparam ArrowThickness 1.6
+skinparam ArrowColor #475569
+skinparam roundCorner 10
+skinparam Padding 6
+skinparam nodesep 26
+skinparam ranksep 40
+skinparam wrapWidth 420
+hide stereotype
+
+' Swimlanes (frames): one per place where work happens.
+skinparam frame {
+  BackgroundColor #FFFFFF
+  BorderColor #247B72
+  FontColor #247B72
+  FontSize 21
+  FontStyle bold
+  BorderThickness 1.6
+}
+skinparam package {
+  BackgroundColor #FFFFFF
+  BorderColor #9BA5A4
+  FontColor #14202B
+  FontSize 20
+}
+
+' Neutral step (no enforcement of its own).
+skinparam rectangle {
+  BackgroundColor #FFFFFF
+  BorderColor #14202B
+  BorderThickness 1.4
+  FontColor #14202B
+}
+' BLOCKS MERGE: required Quality check on the PR.
+skinparam rectangle<<merge>> {
+  BackgroundColor #FBE7DA
+  BorderColor #B4501A
+  BorderThickness 2.6
+}
+' BLOCKS DEPLOY: stops upload or activation on hosted dev.
+skinparam rectangle<<deploy>> {
+  BackgroundColor #E1ECF7
+  BorderColor #2C64A0
+  BorderThickness 2.6
+}
+' BLOCKS PUSH / PROMOTION: human or platform gate before the change lands.
+skinparam rectangle<<human>> {
+  BackgroundColor #EEE7F3
+  BorderColor #75528F
+  BorderThickness 2.6
+}
+' REPORTS ONLY: findings recorded, turns its own job red at most; never stops merge or deploy.
+skinparam rectangle<<report>> {
+  BackgroundColor #F1F5F4
+  BorderColor #6B7A80
+  BorderThickness 1.6
+  BorderStyle dashed
+}
+' Gate = decision point (hexagon). Pass continues; fail stops the flow.
+skinparam hexagon {
+  BackgroundColor #FFFFFF
+  BorderColor #14202B
+  BorderThickness 2
+  FontStyle bold
+}
+skinparam hexagon<<merge>> {
+  BackgroundColor #FBE7DA
+  BorderColor #B4501A
+  BorderThickness 2.6
+}
+skinparam hexagon<<deploy>> {
+  BackgroundColor #E1ECF7
+  BorderColor #2C64A0
+  BorderThickness 2.6
+}
+skinparam hexagon<<human>> {
+  BackgroundColor #EEE7F3
+  BorderColor #75528F
+  BorderThickness 2.6
+}
+' Artifact = a retained file (UML artifact notation).
+skinparam artifact {
+  BackgroundColor #FCF7E7
+  BorderColor #A8995F
+  FontSize 18
+}
+' Store = where artifacts live.
+skinparam database {
+  BackgroundColor #F5F2E9
+  BorderColor #596473
+}
+skinparam folder {
+  BackgroundColor #F5F2E9
+  BorderColor #596473
+}
+skinparam node {
+  BackgroundColor #F5F2E9
+  BorderColor #596473
+}
+skinparam cloud {
+  BackgroundColor #F5F2E9
+  BorderColor #596473
+}
+skinparam actor {
+  BackgroundColor #FFFFFF
+  BorderColor #14202B
+}
+skinparam NoteBackgroundColor #FCF7E7
+skinparam NoteBorderColor #CBBE96
+skinparam NoteFontSize 18

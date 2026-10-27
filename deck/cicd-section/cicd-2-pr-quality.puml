@@ -1,0 +1,45 @@
+@startuml
+!include _cicd.iuml
+left to right direction
+title PR stage · Quality checks workflow (quality.yml) decides whether a PR may merge
+skinparam nodesep 10
+skinparam ranksep 60
+skinparam ArrowFontSize 20
+
+rectangle "Pull request\nor push to\ndev / main" as PR
+hexagon "Classify change\nscope:\ndocs only?" as CL
+
+frame "Parallel jobs · each must succeed" as J {
+  rectangle "Static check ×4: <b>format · lint · architecture · typecheck</b>" as S1
+  rectangle "<b>Production dependency audit</b> · npm audit HIGH+ → <i>quality-npm-audit</i>" as S2
+  rectangle "<b>Root and IaC tests</b> · node + IaC gate unit tests → <i>JUnit XML</i>" as S3
+  rectangle "<b>Server tests and coverage</b> · SQLite → <i>server-coverage</i>" as S4
+  rectangle "<b>Server tests on PostgreSQL</b> 17 · same suite, hosted engine" as S5
+  rectangle "<b>Frontend tests and coverage</b> · Jest, ≥70% statements" as S6
+  rectangle "<b>Cloud-free deployment fixtures</b> · backup, restore, host" as S7
+  rectangle "<b>Web export and browser checks</b> · PWA, a11y · main only" as S8
+}
+
+hexagon "Format, lint,\ntypecheck,\nand test\n<size:20>(required)</size>" <<merge>> as G
+rectangle "<b>BLOCKS MERGE</b>\nPR can merge\nonly when green\nand up to date" <<merge>> as M
+
+PR --> CL
+CL --> S1 : no
+CL --> S2
+CL --> S3
+CL --> S4
+CL --> S5
+CL --> S6
+CL --> S7
+CL --> S8
+S1 --> G
+S2 --> G
+S3 --> G
+S4 --> G
+S5 --> G
+S6 --> G
+S7 --> G
+S8 --> G
+G --> M
+CL --> G : yes · all jobs skip, gate passes in ~20 s
+@enduml

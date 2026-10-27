@@ -1,0 +1,32 @@
+[
+  {
+    "file": "deck/deck.html",
+    "bytes": 2055035,
+    "sha256": "5c6461d49c39484afc8300af8507319e197c0aad5ff6081fd85c66a513882dde"
+  },
+  {
+    "file": "deck/out/rewind-presentation.pdf",
+    "bytes": 3841969,
+    "sha256": "51eeff276c5520f9e82856c9d30434af7db22a93ffe5d1ca45f396ab6a98ff60"
+  },
+  {
+    "file": "deck/SCRIPT.md",
+    "bytes": 49184,
+    "sha256": "44d443e33533f0811301afb09331d5f0567041150c6d87f76221266373bad570"
+  },
+  {
+    "file": "deck/OUTLINE.md",
+    "bytes": 6249,
+    "sha256": "9a6f18f2264c81998828b8c967e0fcd2f79ee05dc702688fcc40e063e0615447"
+  },
+  {
+    "file": "deck/QA-REPORT.md",
+    "bytes": 6203,
+    "sha256": "482c1746de3e23d97648b9144d311fd60a20992f20d5b054d3e470a6bbcdbae7"
+  },
+  {
+    "file": "HANDOVER.md",
+    "bytes": 27688,
+    "sha256": "2a3f20c8fc45aa30e249ee9f88839774dadebe726cf7ad156aa8f227ab2e50a3"
+  }
+]

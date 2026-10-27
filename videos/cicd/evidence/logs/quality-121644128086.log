@@ -1,0 +1,715 @@
+Frontend tests and coverage	Set up job	﻿2026-10-26T14:51:21.2407944Z Current runner version: '2.338.0'
+Frontend tests and coverage	Set up job	2026-10-26T14:51:21.2427477Z ##[group]Runner Image Provisioner
+Frontend tests and coverage	Set up job	2026-10-26T14:51:21.2428226Z Hosted Compute Agent
+Frontend tests and coverage	Set up job	2026-10-26T14:51:21.2428735Z Version: 20261021.618
+Frontend tests and coverage	Set up job	2026-10-26T14:51:21.2429284Z Commit: 21505ad2541d5be6135ed84fc33697146cf75b8e
+Frontend tests and coverage	Set up job	2026-10-26T14:51:21.2429879Z Build Date: 2026-10-21T00:45:21Z
+Frontend tests and coverage	Set up job	2026-10-26T14:51:21.2430736Z Worker ID: {dc95ef75-6607-4d67-b234-850e5f97b97a}
+Frontend tests and coverage	Set up job	2026-10-26T14:51:21.2431330Z Region: centralus
+Frontend tests and coverage	Set up job	2026-10-26T14:51:21.2431794Z Cloud: Azure
+Frontend tests and coverage	Set up job	2026-10-26T14:51:21.2432264Z ##[endgroup]
+Frontend tests and coverage	Set up job	2026-10-26T14:51:21.2433680Z ##[group]Operating System
+Frontend tests and coverage	Set up job	2026-10-26T14:51:21.2434237Z Ubuntu
+Frontend tests and coverage	Set up job	2026-10-26T14:51:21.2434713Z 24.04.5
+Frontend tests and coverage	Set up job	2026-10-26T14:51:21.2435167Z LTS
+Frontend tests and coverage	Set up job	2026-10-26T14:51:21.2435642Z ##[endgroup]
+Frontend tests and coverage	Set up job	2026-10-26T14:51:21.2436093Z ##[group]Runner Image
+Frontend tests and coverage	Set up job	2026-10-26T14:51:21.2436632Z Image: ubuntu-24.04
+Frontend tests and coverage	Set up job	2026-10-26T14:51:21.2437095Z Version: 20261012.334.1
+Frontend tests and coverage	Set up job	2026-10-26T14:51:21.2437932Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261012.334/images/ubuntu/Ubuntu2404-Readme.md
+Frontend tests and coverage	Set up job	2026-10-26T14:51:21.2439343Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261012.334
+Frontend tests and coverage	Set up job	2026-10-26T14:51:21.2440234Z ##[endgroup]
+Frontend tests and coverage	Set up job	2026-10-26T14:51:21.2441239Z ##[group]GITHUB_TOKEN Permissions
+Frontend tests and coverage	Set up job	2026-10-26T14:51:21.2442975Z Contents: read
+Frontend tests and coverage	Set up job	2026-10-26T14:51:21.2443449Z Metadata: read
+Frontend tests and coverage	Set up job	2026-10-26T14:51:21.2443884Z ##[endgroup]
+Frontend tests and coverage	Set up job	2026-10-26T14:51:21.2445469Z Secret source: Actions
+Frontend tests and coverage	Set up job	2026-10-26T14:51:21.2446195Z Cache mode: write
+Frontend tests and coverage	Set up job	2026-10-26T14:51:21.2446800Z Prepare workflow directory
+Frontend tests and coverage	Set up job	2026-10-26T14:51:21.2715409Z Prepare all required actions
+Frontend tests and coverage	Set up job	2026-10-26T14:51:21.2756316Z Getting action download info
+Frontend tests and coverage	Set up job	2026-10-26T14:51:21.5281788Z Download action repository 'actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+Frontend tests and coverage	Set up job	2026-10-26T14:51:21.6093351Z Download action repository 'actions/setup-node@820762786026740c76f36085b0efc47a31fe5020' (SHA:820762786026740c76f36085b0efc47a31fe5020)
+Frontend tests and coverage	Set up job	2026-10-26T14:51:21.8078787Z Download action repository 'actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a' (SHA:043fb46d1a93c77aae656e7c1c64a875d1fc6a0a)
+Frontend tests and coverage	Set up job	2026-10-26T14:51:22.0420030Z Complete job name: Frontend tests and coverage
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	﻿2026-10-26T14:51:22.1078874Z ##[group]Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:22.1079767Z with:
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:22.1080215Z   persist-credentials: false
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:22.1081128Z   repository: Collaboration95/rewind-app
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:22.1084461Z   token: ***
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:22.1084922Z   ssh-strict: true
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:22.1085343Z   ssh-user: git
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:22.1085791Z   clean: true
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:22.1086227Z   sparse-checkout-cone-mode: true
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:22.1086714Z   fetch-depth: 1
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:22.1087166Z   fetch-tags: false
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:22.1087587Z   show-progress: true
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:22.1087991Z   lfs: false
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:22.1088408Z   submodules: false
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:22.1088829Z   set-safe-directory: true
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:22.1089345Z   allow-unsafe-pr-checkout: false
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:22.1090020Z ##[endgroup]
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:22.1902222Z Syncing repository: Collaboration95/rewind-app
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:22.1904268Z ##[group]Getting Git version info
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:22.1905409Z Working directory is '/home/runner/work/rewind-app/rewind-app'
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:22.1919303Z [command]/usr/bin/git version
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:22.2019403Z git version 2.55.0
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:22.2043304Z ##[endgroup]
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:22.2053700Z Temporarily overriding HOME='/home/runner/work/_temp/b41f92ce-b99c-4b66-bdd6-561c5f8bd78a' before making global git config changes
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:22.2054995Z Adding repository directory to the temporary git global config as a safe directory
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:22.2059409Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/rewind-app/rewind-app
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:22.2200071Z Deleting the contents of '/home/runner/work/rewind-app/rewind-app'
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:22.2234754Z ##[group]Determining repository object format
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:22.2236538Z ##[endgroup]
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:22.2237305Z ##[group]Initializing the repository
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:22.2239521Z [command]/usr/bin/git init /home/runner/work/rewind-app/rewind-app
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:22.2308849Z hint: Using 'master' as the name for the initial branch. This default branch name
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:22.2310414Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:22.2311758Z hint: to use in all of your new repositories, which will suppress this warning,
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:22.2312779Z hint: call:
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:22.2313334Z hint:
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:22.2314080Z hint: 	git config --global init.defaultBranch <name>
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:22.2314881Z hint:
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:22.2315662Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:22.2316876Z hint: 'development'. The just-created branch can be renamed via this command:
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:22.2317827Z hint:
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:22.2318451Z hint: 	git branch -m <name>
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:22.2319089Z hint:
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:22.2319882Z hint: Disable this message with "git config set advice.defaultBranchName false"
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:22.2331498Z Initialized empty Git repository in /home/runner/work/rewind-app/rewind-app/.git/
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:22.2334803Z [command]/usr/bin/git remote add origin https://github.com/Collaboration95/rewind-app
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:22.2396138Z ##[endgroup]
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:22.2396902Z ##[group]Disabling automatic garbage collection
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:22.2399268Z [command]/usr/bin/git config --local gc.auto 0
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:22.2426771Z ##[endgroup]
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:22.2427823Z ##[group]Setting up auth
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:22.2428655Z Removing SSH command configuration
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:22.2432440Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:22.2466392Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:22.2735578Z Removing HTTP extra header
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:22.2740183Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:22.2766930Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:22.2939389Z Removing includeIf entries pointing to credentials config files
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:22.2940768Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:22.2966403Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:22.3134687Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-0a6622be-c508-4548-8887-e2ded97cf244.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:22.3164640Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/rewind-app/rewind-app/.git.path /home/runner/work/_temp/git-credentials-0a6622be-c508-4548-8887-e2ded97cf244.config
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:22.3194325Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/rewind-app/rewind-app/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-0a6622be-c508-4548-8887-e2ded97cf244.config
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:22.3224187Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-0a6622be-c508-4548-8887-e2ded97cf244.config
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:22.3250939Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-0a6622be-c508-4548-8887-e2ded97cf244.config
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:22.3275469Z ##[endgroup]
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:22.3276517Z ##[group]Fetching the repository
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:22.3281804Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +5860b188af0e988ab74a8bcdbf524891744d0620:refs/remotes/pull/595/merge
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:23.4182356Z From https://github.com/Collaboration95/rewind-app
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:23.4185183Z  * [new ref]         5860b188af0e988ab74a8bcdbf524891744d0620 -> pull/595/merge
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:23.4191353Z ##[endgroup]
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:23.4193356Z ##[group]Determining the checkout info
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:23.4195860Z ##[endgroup]
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:23.4197336Z [command]/usr/bin/git sparse-checkout disable
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:23.4232826Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:23.4261846Z ##[group]Checking out the ref
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:23.4264128Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/595/merge
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:23.4922352Z Note: switching to 'refs/remotes/pull/595/merge'.
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:23.4923377Z 
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:23.4924232Z You are in 'detached HEAD' state. You can look around, make experimental
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:23.4926104Z changes and commit them, and you can discard any commits you make in this
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:23.4927843Z state without impacting any branches by switching back to a branch.
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:23.4928938Z 
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:23.4929613Z If you want to create a new branch to retain commits you create, you may
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:23.4931356Z do so (now or later) by using -c with the switch command. Example:
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:23.4932276Z 
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:23.4932746Z   git switch -c <new-branch-name>
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:23.4933450Z 
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:23.4934000Z Or undo this operation with:
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:23.4934770Z 
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:23.4935265Z   git switch -
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:23.4935939Z 
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:23.4936830Z Turn off this advice by setting config variable advice.detachedHead to false
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:23.4938089Z 
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:23.4939483Z HEAD is now at 5860b18 Merge 38593b225cf636062f2b1578ccfcc033f86fbd64 into 47ea5f0ec14c19d6c138876abd44837f598ebeee
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:23.4951627Z ##[endgroup]
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:23.4983225Z [command]/usr/bin/git log -1 --format=%H
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:23.5002744Z 5860b188af0e988ab74a8bcdbf524891744d0620
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:23.5011002Z ##[group]Removing auth
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:23.5013060Z Removing SSH command configuration
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:23.5015027Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:23.5038416Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:23.5197317Z Removing HTTP extra header
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:23.5200052Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:23.5223296Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:23.5377669Z Removing includeIf entries pointing to credentials config files
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:23.5380669Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:23.5399307Z includeif.gitdir:/home/runner/work/rewind-app/rewind-app/.git.path
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:23.5401973Z includeif.gitdir:/home/runner/work/rewind-app/rewind-app/.git/worktrees/*.path
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:23.5403903Z includeif.gitdir:/github/workspace/.git.path
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:23.5406107Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:23.5410001Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/rewind-app/rewind-app/.git.path
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:23.5422760Z /home/runner/work/_temp/git-credentials-0a6622be-c508-4548-8887-e2ded97cf244.config
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:23.5432866Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/rewind-app/rewind-app/.git.path \/home\/runner\/work\/_temp\/git\-credentials\-0a6622be\-c508\-4548\-8887\-e2ded97cf244\.config
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:23.5466040Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/rewind-app/rewind-app/.git/worktrees/*.path
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:23.5488152Z /home/runner/work/_temp/git-credentials-0a6622be-c508-4548-8887-e2ded97cf244.config
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:23.5494785Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/rewind-app/rewind-app/.git/worktrees/*.path \/home\/runner\/work\/_temp\/git\-credentials\-0a6622be\-c508\-4548\-8887\-e2ded97cf244\.config
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:23.5521899Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:23.5539288Z /github/runner_temp/git-credentials-0a6622be-c508-4548-8887-e2ded97cf244.config
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:23.5546845Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-0a6622be\-c508\-4548\-8887\-e2ded97cf244\.config
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:23.5577791Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:23.5597090Z /github/runner_temp/git-credentials-0a6622be-c508-4548-8887-e2ded97cf244.config
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:23.5604783Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-0a6622be\-c508\-4548\-8887\-e2ded97cf244\.config
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:23.5631607Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:23.5786036Z Removing credentials config '/home/runner/work/_temp/git-credentials-0a6622be-c508-4548-8887-e2ded97cf244.config'
+Frontend tests and coverage	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:51:23.5793261Z ##[endgroup]
+Frontend tests and coverage	Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020	﻿2026-10-26T14:51:23.6097654Z ##[group]Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+Frontend tests and coverage	Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020	2026-10-26T14:51:23.6099134Z with:
+Frontend tests and coverage	Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020	2026-10-26T14:51:23.6099943Z   node-version-file: .nvmrc
+Frontend tests and coverage	Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020	2026-10-26T14:51:23.6101254Z   cache: npm
+Frontend tests and coverage	Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020	2026-10-26T14:51:23.6102097Z   check-latest: false
+Frontend tests and coverage	Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020	2026-10-26T14:51:23.6110140Z   token: ***
+Frontend tests and coverage	Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020	2026-10-26T14:51:23.6111298Z   package-manager-cache: true
+Frontend tests and coverage	Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020	2026-10-26T14:51:23.6112265Z ##[endgroup]
+Frontend tests and coverage	Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020	2026-10-26T14:51:23.7143744Z Node version file is not JSON file
+Frontend tests and coverage	Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020	2026-10-26T14:51:23.7145666Z Resolved .nvmrc as 22.23.3
+Frontend tests and coverage	Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020	2026-10-26T14:51:23.7163292Z Found in cache @ /opt/hostedtoolcache/node/22.23.3/x64
+Frontend tests and coverage	Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020	2026-10-26T14:51:23.7166064Z ##[group]Environment details
+Frontend tests and coverage	Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020	2026-10-26T14:51:24.0298925Z node: v22.23.3
+Frontend tests and coverage	Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020	2026-10-26T14:51:24.0299846Z npm: 10.9.9
+Frontend tests and coverage	Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020	2026-10-26T14:51:24.0300438Z yarn: 1.22.22
+Frontend tests and coverage	Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020	2026-10-26T14:51:24.0301831Z ##[endgroup]
+Frontend tests and coverage	Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020	2026-10-26T14:51:24.0314634Z [command]/opt/hostedtoolcache/node/22.23.3/x64/bin/npm config get cache
+Frontend tests and coverage	Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020	2026-10-26T14:51:24.1154312Z /home/runner/.npm
+Frontend tests and coverage	Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020	2026-10-26T14:51:24.2678343Z Cache hit for: node-cache-Linux-x64-npm-9f4a26775c99843f6ed32aabfa37f5fd098a3a43160b70ac43219bd140cfa584
+Frontend tests and coverage	Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020	2026-10-26T14:51:25.4259782Z Received 113246208 of 162842212 (69.5%), 108.0 MBs/sec
+Frontend tests and coverage	Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020	2026-10-26T14:51:26.4266900Z Received 158647908 of 162842212 (97.4%), 75.6 MBs/sec
+Frontend tests and coverage	Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020	2026-10-26T14:51:26.6017293Z Received 162842212 of 162842212 (100.0%), 71.4 MBs/sec
+Frontend tests and coverage	Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020	2026-10-26T14:51:26.6045424Z Cache Size: ~155 MB (162842212 B)
+Frontend tests and coverage	Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020	2026-10-26T14:51:26.6046838Z [command]/usr/bin/tar -xf /home/runner/work/_temp/970615d0-da30-48e5-be16-d073ee52d68d/cache.tzst -P -C /home/runner/work/rewind-app/rewind-app --use-compress-program unzstd
+Frontend tests and coverage	Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020	2026-10-26T14:51:26.7952115Z Cache restored successfully
+Frontend tests and coverage	Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020	2026-10-26T14:51:26.8021582Z Cache restored from key: node-cache-Linux-x64-npm-9f4a26775c99843f6ed32aabfa37f5fd098a3a43160b70ac43219bd140cfa584
+Frontend tests and coverage	Run npm ci	﻿2026-10-26T14:51:26.8196795Z ##[group]Run npm ci
+Frontend tests and coverage	Run npm ci	2026-10-26T14:51:26.8197311Z ^[[36;1mnpm ci^[[0m
+Frontend tests and coverage	Run npm ci	2026-10-26T14:51:26.8364788Z shell: /usr/bin/bash -e {0}
+Frontend tests and coverage	Run npm ci	2026-10-26T14:51:26.8365252Z ##[endgroup]
+Frontend tests and coverage	Run npm ci	2026-10-26T14:51:30.4627513Z npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+Frontend tests and coverage	Run npm ci	2026-10-26T14:51:30.6237458Z npm warn deprecated abab@2.0.6: Use your platform's native atob() and btoa() methods instead
+Frontend tests and coverage	Run npm ci	2026-10-26T14:51:30.6466439Z npm warn deprecated glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+Frontend tests and coverage	Run npm ci	2026-10-26T14:51:30.6478311Z npm warn deprecated glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+Frontend tests and coverage	Run npm ci	2026-10-26T14:51:30.6491480Z npm warn deprecated glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+Frontend tests and coverage	Run npm ci	2026-10-26T14:51:30.6497352Z npm warn deprecated glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+Frontend tests and coverage	Run npm ci	2026-10-26T14:51:30.6511068Z npm warn deprecated whatwg-encoding@2.0.0: Use @exodus/bytes instead for a more spec-conformant and faster implementation
+Frontend tests and coverage	Run npm ci	2026-10-26T14:51:30.8288499Z npm warn deprecated domexception@4.0.0: Use your platform's native DOMException instead
+Frontend tests and coverage	Run npm ci	2026-10-26T14:51:33.6710616Z npm warn deprecated eslint@9.39.5: This version is no longer supported. Please see https://eslint.org/version-support for other options.
+Frontend tests and coverage	Run npm ci	2026-10-26T14:51:36.8269372Z 
+Frontend tests and coverage	Run npm ci	2026-10-26T14:51:36.8270385Z > rewind-app@0.1.0 prepare
+Frontend tests and coverage	Run npm ci	2026-10-26T14:51:36.8271354Z > git config core.hooksPath .githooks 2>/dev/null || true
+Frontend tests and coverage	Run npm ci	2026-10-26T14:51:36.8271975Z 
+Frontend tests and coverage	Run npm ci	2026-10-26T14:51:36.8548982Z 
+Frontend tests and coverage	Run npm ci	2026-10-26T14:51:36.8550217Z added 1083 packages, and audited 1084 packages in 10s
+Frontend tests and coverage	Run npm ci	2026-10-26T14:51:36.8550943Z 
+Frontend tests and coverage	Run npm ci	2026-10-26T14:51:36.8551285Z 195 packages are looking for funding
+Frontend tests and coverage	Run npm ci	2026-10-26T14:51:36.8552033Z   run `npm fund` for details
+Frontend tests and coverage	Run npm ci	2026-10-26T14:51:36.8552339Z 
+Frontend tests and coverage	Run npm ci	2026-10-26T14:51:36.8552611Z found 0 vulnerabilities
+Frontend tests and coverage	Run Jest with measured statement gate	﻿2026-10-26T14:51:36.9077446Z ##[group]Run mkdir -p coverage
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:51:36.9077834Z ^[[36;1mmkdir -p coverage^[[0m
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:51:36.9078288Z ^[[36;1mnpx jest --coverage --json --outputFile=coverage/frontend-results.json^[[0m
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:51:36.9117226Z shell: /usr/bin/bash -e {0}
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:51:36.9117602Z ##[endgroup]
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:51:48.0146824Z PASS tests/VideoCaptureScreen.test.tsx (9.78 s)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:51:48.1157997Z PASS tests/settings.characterisation.test.tsx (9.858 s)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:51:55.1774567Z PASS tests/group-experience.characterisation.test.tsx (6.925 s)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:51:55.5163005Z PASS tests/private-reminder-client.test.ts
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:51:55.8653993Z PASS tests/direct-transfer.coverage.test.ts
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:51:56.2111293Z PASS tests/direct-transfer.test.ts
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:51:56.4781509Z PASS tests/capture-platform.test.ts
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:51:58.0662010Z PASS tests/real-group-experience.test.tsx
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:51:58.0769618Z   ● Console
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:51:58.0770006Z 
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:51:58.0770487Z     console.error
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:51:58.0771335Z       Each child in a list should have a unique "key" prop.
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:51:58.0771777Z       
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:51:58.0772725Z       Check the render method of `View`. It was passed a child from SettingsMain. See https://react.dev/link/warning-keys for more information.
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:51:58.0773182Z 
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:51:58.0773471Z       at node_modules/react-reconciler/cjs/react-reconciler.development.js:17776:21
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:51:58.0774140Z       at runWithFiberInDEV (node_modules/react-reconciler/cjs/react-reconciler.development.js:2508:13)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:51:58.0774886Z       at warnForMissingKey (node_modules/react-reconciler/cjs/react-reconciler.development.js:17775:11)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:51:58.0775900Z       at warnOnInvalidKey (node_modules/react-reconciler/cjs/react-reconciler.development.js:4166:13)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:51:58.0776580Z       at reconcileChildrenArray (node_modules/react-reconciler/cjs/react-reconciler.development.js:4247:31)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:51:58.0777320Z       at reconcileChildFibersImpl (node_modules/react-reconciler/cjs/react-reconciler.development.js:4568:30)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:51:58.0778002Z       at node_modules/react-reconciler/cjs/react-reconciler.development.js:4673:33
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:51:58.0778619Z       at reconcileChildren (node_modules/react-reconciler/cjs/react-reconciler.development.js:7255:13)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:51:58.0779296Z       at beginWork (node_modules/react-reconciler/cjs/react-reconciler.development.js:9542:13)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:51:58.0779985Z       at runWithFiberInDEV (node_modules/react-reconciler/cjs/react-reconciler.development.js:2508:13)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:51:58.0781149Z       at performUnitOfWork (node_modules/react-reconciler/cjs/react-reconciler.development.js:15273:22)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:51:58.0781795Z       at workLoopSync (node_modules/react-reconciler/cjs/react-reconciler.development.js:15099:41)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:51:58.0782413Z       at renderRootSync (node_modules/react-reconciler/cjs/react-reconciler.development.js:15080:11)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:51:58.0783116Z       at performWorkOnRoot (node_modules/react-reconciler/cjs/react-reconciler.development.js:14165:11)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:51:58.0783826Z       at performWorkOnRootViaSchedulerTask (node_modules/react-reconciler/cjs/react-reconciler.development.js:3335:7)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:51:58.0784504Z       at flushActQueue (node_modules/react/cjs/react.development.js:590:34)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:51:58.0784964Z       at node_modules/react/cjs/react.development.js:847:21
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:51:58.0785203Z 
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:51:59.1814209Z PASS tests/real-account-chat.test.tsx
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:00.2056972Z PASS tests/video-capture.characterisation.test.tsx
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:00.7613036Z PASS tests/retro-browser.coverage.test.ts
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:01.6690979Z PASS tests/camera-capture.characterisation.test.tsx
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:01.9052671Z PASS tests/real-account-client.coverage.test.ts
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:02.1087513Z PASS tests/realtime-client.coverage.test.ts
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:02.2858255Z PASS tests/realtime-client.test.ts
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:03.0596520Z PASS tests/film.coverage.test.tsx
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:03.2571738Z PASS tests/real-account-video-runtime.coverage.test.ts
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:03.4276713Z PASS tests/private-reminder-client.coverage.test.ts
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:04.0204784Z PASS tests/CameraCaptureScreen.test.tsx
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:04.1785160Z PASS tests/file-store.coverage.test.ts
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:04.3152481Z PASS tests/archive-download.test.ts
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:06.2467231Z PASS tests/real-group-reminders.test.tsx
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:06.5003356Z PASS tests/primitives.coverage.test.tsx
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:17.4209805Z PASS tests/real-account-cognito.test.tsx (10.748 s)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:17.4215004Z   ● Console
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:17.4215300Z 
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:17.4215449Z     console.error
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:17.4216124Z       An update to Animated(ScrollView) inside a test was not wrapped in act(...).
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:17.4216631Z       
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:17.4217188Z       When testing, code that causes React state updates should be wrapped into act(...):
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:17.4217762Z       
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:17.4218125Z       act(() => {
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:17.4218535Z         /* fire events that update state */
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:17.4218959Z       });
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:17.4219368Z       /* assert on the output */
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:17.4219709Z       
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:17.4220755Z       This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:17.4221432Z 
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:17.4221836Z       at node_modules/react-reconciler/cjs/react-reconciler.development.js:16307:19
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:17.4222702Z       at runWithFiberInDEV (node_modules/react-reconciler/cjs/react-reconciler.development.js:2508:13)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:17.4224138Z       at warnIfUpdatesNotWrappedWithActDEV (node_modules/react-reconciler/cjs/react-reconciler.development.js:16306:9)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:17.4225153Z       at scheduleUpdateOnFiber (node_modules/react-reconciler/cjs/react-reconciler.development.js:14070:11)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:17.4226288Z       at dispatchReducerAction (node_modules/react-reconciler/cjs/react-reconciler.development.js:6731:13)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:17.4227364Z       at Object.scheduleUpdate [as current] (node_modules/react-native/src/private/animated/createAnimatedPropsHook.js:131:20)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:17.4228694Z       at AnimatedProps._callback (node_modules/react-native/src/private/animated/createAnimatedPropsHook.js:71:36)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:17.4229993Z       at AnimatedProps._callback [as update] (node_modules/react-native/Libraries/Animated/nodes/AnimatedProps.js:237:10)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:17.4231234Z       at update (node_modules/react-native/Libraries/Animated/nodes/AnimatedValue.js:67:31)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:17.4232043Z           at Set.forEach (<anonymous>)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:17.4232767Z       at forEach (node_modules/react-native/Libraries/Animated/nodes/AnimatedValue.js:67:10)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:17.4233893Z       at AnimatedValue.flushValue [as _updateValue] (node_modules/react-native/Libraries/Animated/nodes/AnimatedValue.js:361:7)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:17.4235218Z       at TimingAnimation._updateValue [as _onUpdate] (node_modules/react-native/Libraries/Animated/nodes/AnimatedValue.js:325:14)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:17.4236545Z       at TimingAnimation._onUpdate [as onUpdate] (node_modules/react-native/Libraries/Animated/animations/TimingAnimation.js:157:10)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:17.4237701Z       at Timeout.callback [as _onTimeout] (node_modules/@react-native/jest-preset/jest/setup.js:61:31)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:17.4238228Z 
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:17.6470124Z PASS tests/real-account-auth-client.test.ts
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:18.6694079Z PASS tests/group-experience-capture.characterisation.test.tsx
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.2260626Z PASS tests/film-screen.test.tsx
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5591454Z PASS tests/real-account-entry-auth.test.tsx (31.392 s)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5773876Z   ● Console
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5774135Z 
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5774287Z     console.error
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5774750Z       An update to Animated(ScrollView) inside a test was not wrapped in act(...).
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5775647Z       
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5776070Z       When testing, code that causes React state updates should be wrapped into act(...):
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5776540Z       
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5776793Z       act(() => {
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5777147Z         /* fire events that update state */
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5777472Z       });
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5777754Z       /* assert on the output */
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5778110Z       
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5778663Z       This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5779093Z 
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5779393Z       at node_modules/react-reconciler/cjs/react-reconciler.development.js:16307:19
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5780065Z       at runWithFiberInDEV (node_modules/react-reconciler/cjs/react-reconciler.development.js:2508:13)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5801561Z       at warnIfUpdatesNotWrappedWithActDEV (node_modules/react-reconciler/cjs/react-reconciler.development.js:16306:9)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5802884Z       at scheduleUpdateOnFiber (node_modules/react-reconciler/cjs/react-reconciler.development.js:14070:11)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5803947Z       at dispatchReducerAction (node_modules/react-reconciler/cjs/react-reconciler.development.js:6731:13)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5804930Z       at Object.scheduleUpdate [as current] (node_modules/react-native/src/private/animated/createAnimatedPropsHook.js:131:20)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5805718Z       at AnimatedProps._callback (node_modules/react-native/src/private/animated/createAnimatedPropsHook.js:71:36)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5806471Z       at AnimatedProps._callback [as update] (node_modules/react-native/Libraries/Animated/nodes/AnimatedProps.js:237:10)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5807384Z       at update (node_modules/react-native/Libraries/Animated/nodes/AnimatedValue.js:67:31)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5807857Z           at Set.forEach (<anonymous>)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5808427Z       at forEach (node_modules/react-native/Libraries/Animated/nodes/AnimatedValue.js:67:10)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5809117Z       at AnimatedValue.flushValue [as _updateValue] (node_modules/react-native/Libraries/Animated/nodes/AnimatedValue.js:361:7)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5809966Z       at TimingAnimation._updateValue [as _onUpdate] (node_modules/react-native/Libraries/Animated/nodes/AnimatedValue.js:325:14)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5810935Z       at TimingAnimation._onUpdate [as onUpdate] (node_modules/react-native/Libraries/Animated/animations/TimingAnimation.js:157:10)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5811678Z       at Timeout.callback [as _onTimeout] (node_modules/@react-native/jest-preset/jest/setup.js:61:31)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5812025Z 
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5812163Z     console.error
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5812579Z       An update to Animated(ScrollView) inside a test was not wrapped in act(...).
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5813040Z       
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5813428Z       When testing, code that causes React state updates should be wrapped into act(...):
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5813867Z       
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5814121Z       act(() => {
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5814488Z         /* fire events that update state */
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5814803Z       });
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5815072Z       /* assert on the output */
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5815418Z       
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5815967Z       This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5816478Z 
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5816770Z       at node_modules/react-reconciler/cjs/react-reconciler.development.js:16307:19
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5817443Z       at runWithFiberInDEV (node_modules/react-reconciler/cjs/react-reconciler.development.js:2508:13)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5818176Z       at warnIfUpdatesNotWrappedWithActDEV (node_modules/react-reconciler/cjs/react-reconciler.development.js:16306:9)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5818952Z       at scheduleUpdateOnFiber (node_modules/react-reconciler/cjs/react-reconciler.development.js:14070:11)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5819662Z       at dispatchReducerAction (node_modules/react-reconciler/cjs/react-reconciler.development.js:6731:13)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5820996Z       at Object.scheduleUpdate [as current] (node_modules/react-native/src/private/animated/createAnimatedPropsHook.js:131:20)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5822310Z       at AnimatedProps._callback (node_modules/react-native/src/private/animated/createAnimatedPropsHook.js:71:36)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5823519Z       at AnimatedProps._callback [as update] (node_modules/react-native/Libraries/Animated/nodes/AnimatedProps.js:237:10)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5824592Z       at update (node_modules/react-native/Libraries/Animated/nodes/AnimatedValue.js:67:31)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5825356Z           at Set.forEach (<anonymous>)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5826076Z       at forEach (node_modules/react-native/Libraries/Animated/nodes/AnimatedValue.js:67:10)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5827216Z       at AnimatedValue.flushValue [as _updateValue] (node_modules/react-native/Libraries/Animated/nodes/AnimatedValue.js:361:7)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5828569Z       at TimingAnimation._updateValue [as _onUpdate] (node_modules/react-native/Libraries/Animated/nodes/AnimatedValue.js:325:14)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5829989Z       at TimingAnimation._onUpdate [as onUpdate] (node_modules/react-native/Libraries/Animated/animations/TimingAnimation.js:157:10)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5831374Z       at Timeout.callback [as _onTimeout] (node_modules/@react-native/jest-preset/jest/setup.js:61:31)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5831967Z 
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5832125Z     console.error
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5832784Z       An update to Animated(ScrollView) inside a test was not wrapped in act(...).
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5833590Z       
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5834234Z       When testing, code that causes React state updates should be wrapped into act(...):
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5834931Z       
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5835285Z       act(() => {
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5835739Z         /* fire events that update state */
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5836267Z       });
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5836624Z       /* assert on the output */
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5837090Z       
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5837932Z       This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5838730Z 
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5839138Z       at node_modules/react-reconciler/cjs/react-reconciler.development.js:16307:19
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5840500Z       at runWithFiberInDEV (node_modules/react-reconciler/cjs/react-reconciler.development.js:2508:13)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5841699Z       at warnIfUpdatesNotWrappedWithActDEV (node_modules/react-reconciler/cjs/react-reconciler.development.js:16306:9)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5842895Z       at scheduleUpdateOnFiber (node_modules/react-reconciler/cjs/react-reconciler.development.js:14070:11)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5844037Z       at dispatchReducerAction (node_modules/react-reconciler/cjs/react-reconciler.development.js:6731:13)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5845296Z       at Object.scheduleUpdate [as current] (node_modules/react-native/src/private/animated/createAnimatedPropsHook.js:131:20)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5846619Z       at AnimatedProps._callback (node_modules/react-native/src/private/animated/createAnimatedPropsHook.js:71:36)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5847872Z       at AnimatedProps._callback [as update] (node_modules/react-native/Libraries/Animated/nodes/AnimatedProps.js:237:10)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5848980Z       at update (node_modules/react-native/Libraries/Animated/nodes/AnimatedValue.js:67:31)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5849769Z           at Set.forEach (<anonymous>)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5850652Z       at forEach (node_modules/react-native/Libraries/Animated/nodes/AnimatedValue.js:67:10)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5851900Z       at AnimatedValue.flushValue [as _updateValue] (node_modules/react-native/Libraries/Animated/nodes/AnimatedValue.js:361:7)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5853275Z       at TimingAnimation._updateValue [as _onUpdate] (node_modules/react-native/Libraries/Animated/nodes/AnimatedValue.js:325:14)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5854454Z       at TimingAnimation._onUpdate [as onUpdate] (node_modules/react-native/Libraries/Animated/animations/TimingAnimation.js:157:10)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5856252Z       at Timeout.callback [as _onTimeout] (node_modules/@react-native/jest-preset/jest/setup.js:61:31)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5856899Z 
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5857053Z     console.error
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5857684Z       An update to Animated(ScrollView) inside a test was not wrapped in act(...).
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5858276Z       
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5858811Z       When testing, code that causes React state updates should be wrapped into act(...):
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5859430Z       
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5859790Z       act(() => {
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5860233Z         /* fire events that update state */
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5860831Z       });
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5861244Z       /* assert on the output */
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5861742Z       
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5862645Z       This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5863399Z 
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5863882Z       at node_modules/react-reconciler/cjs/react-reconciler.development.js:16307:19
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5864875Z       at runWithFiberInDEV (node_modules/react-reconciler/cjs/react-reconciler.development.js:2508:13)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5866732Z       at warnIfUpdatesNotWrappedWithActDEV (node_modules/react-reconciler/cjs/react-reconciler.development.js:16306:9)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5868015Z       at scheduleUpdateOnFiber (node_modules/react-reconciler/cjs/react-reconciler.development.js:14070:11)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5869167Z       at dispatchReducerAction (node_modules/react-reconciler/cjs/react-reconciler.development.js:6731:13)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5870765Z       at Object.scheduleUpdate [as current] (node_modules/react-native/src/private/animated/createAnimatedPropsHook.js:131:20)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5872041Z       at AnimatedProps._callback (node_modules/react-native/src/private/animated/createAnimatedPropsHook.js:71:36)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5873305Z       at AnimatedProps._callback [as update] (node_modules/react-native/Libraries/Animated/nodes/AnimatedProps.js:237:10)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5874413Z       at update (node_modules/react-native/Libraries/Animated/nodes/AnimatedValue.js:67:31)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5875129Z           at Set.forEach (<anonymous>)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5875916Z       at forEach (node_modules/react-native/Libraries/Animated/nodes/AnimatedValue.js:67:10)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5877058Z       at AnimatedValue.flushValue [as _updateValue] (node_modules/react-native/Libraries/Animated/nodes/AnimatedValue.js:361:7)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5878388Z       at TimingAnimation._updateValue [as _onUpdate] (node_modules/react-native/Libraries/Animated/nodes/AnimatedValue.js:325:14)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5879789Z       at TimingAnimation._onUpdate [as onUpdate] (node_modules/react-native/Libraries/Animated/animations/TimingAnimation.js:157:10)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5911574Z       at Timeout.callback [as _onTimeout] (node_modules/@react-native/jest-preset/jest/setup.js:61:31)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5912215Z 
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5912386Z     console.error
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5913135Z       An update to Animated(ScrollView) inside a test was not wrapped in act(...).
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5913798Z       
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5914512Z       When testing, code that causes React state updates should be wrapped into act(...):
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5915162Z       
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5915511Z       act(() => {
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5916073Z         /* fire events that update state */
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5916537Z       });
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5916969Z       /* assert on the output */
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5917404Z       
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5918344Z       This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5919068Z 
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5919468Z       at node_modules/react-reconciler/cjs/react-reconciler.development.js:16307:19
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5920892Z       at runWithFiberInDEV (node_modules/react-reconciler/cjs/react-reconciler.development.js:2508:13)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5922145Z       at warnIfUpdatesNotWrappedWithActDEV (node_modules/react-reconciler/cjs/react-reconciler.development.js:16306:9)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5923345Z       at scheduleUpdateOnFiber (node_modules/react-reconciler/cjs/react-reconciler.development.js:14070:11)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5924708Z       at dispatchReducerAction (node_modules/react-reconciler/cjs/react-reconciler.development.js:6731:13)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5925949Z       at Object.scheduleUpdate [as current] (node_modules/react-native/src/private/animated/createAnimatedPropsHook.js:131:20)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5927219Z       at AnimatedProps._callback (node_modules/react-native/src/private/animated/createAnimatedPropsHook.js:71:36)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5928445Z       at AnimatedProps._callback [as update] (node_modules/react-native/Libraries/Animated/nodes/AnimatedProps.js:237:10)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5929554Z       at update (node_modules/react-native/Libraries/Animated/nodes/AnimatedValue.js:67:31)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5930525Z           at Set.forEach (<anonymous>)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5931320Z       at forEach (node_modules/react-native/Libraries/Animated/nodes/AnimatedValue.js:67:10)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5932553Z       at AnimatedValue.flushValue [as _updateValue] (node_modules/react-native/Libraries/Animated/nodes/AnimatedValue.js:361:7)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5933849Z       at TimingAnimation._updateValue [as _onUpdate] (node_modules/react-native/Libraries/Animated/nodes/AnimatedValue.js:325:14)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5935126Z       at TimingAnimation._onUpdate [as onUpdate] (node_modules/react-native/Libraries/Animated/animations/TimingAnimation.js:157:10)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5936624Z       at Timeout.callback [as _onTimeout] (node_modules/@react-native/jest-preset/jest/setup.js:61:31)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5937217Z 
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5937381Z     console.error
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5938078Z       An update to Animated(ScrollView) inside a test was not wrapped in act(...).
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5938730Z       
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5939400Z       When testing, code that causes React state updates should be wrapped into act(...):
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5940053Z       
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5944286Z       act(() => {
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5944883Z         /* fire events that update state */
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5945456Z       });
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5946048Z       /* assert on the output */
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5946504Z       
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5947366Z       This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5948075Z 
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5948500Z       at node_modules/react-reconciler/cjs/react-reconciler.development.js:16307:19
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5949526Z       at runWithFiberInDEV (node_modules/react-reconciler/cjs/react-reconciler.development.js:2508:13)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5951023Z       at warnIfUpdatesNotWrappedWithActDEV (node_modules/react-reconciler/cjs/react-reconciler.development.js:16306:9)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5952198Z       at scheduleUpdateOnFiber (node_modules/react-reconciler/cjs/react-reconciler.development.js:14070:11)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5953296Z       at dispatchReducerAction (node_modules/react-reconciler/cjs/react-reconciler.development.js:6731:13)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5954549Z       at Object.scheduleUpdate [as current] (node_modules/react-native/src/private/animated/createAnimatedPropsHook.js:131:20)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5955845Z       at AnimatedProps._callback (node_modules/react-native/src/private/animated/createAnimatedPropsHook.js:71:36)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5957197Z       at AnimatedProps._callback [as update] (node_modules/react-native/Libraries/Animated/nodes/AnimatedProps.js:237:10)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5958186Z       at update (node_modules/react-native/Libraries/Animated/nodes/AnimatedValue.js:67:31)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5958939Z           at Set.forEach (<anonymous>)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5959741Z       at forEach (node_modules/react-native/Libraries/Animated/nodes/AnimatedValue.js:67:10)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5961315Z       at AnimatedValue.flushValue [as _updateValue] (node_modules/react-native/Libraries/Animated/nodes/AnimatedValue.js:361:7)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5962628Z       at TimingAnimation._updateValue [as _onUpdate] (node_modules/react-native/Libraries/Animated/nodes/AnimatedValue.js:325:14)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5963988Z       at TimingAnimation._onUpdate [as onUpdate] (node_modules/react-native/Libraries/Animated/animations/TimingAnimation.js:157:10)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5965154Z       at Timeout.callback [as _onTimeout] (node_modules/@react-native/jest-preset/jest/setup.js:61:31)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5965894Z 
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5966083Z     console.error
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5966697Z       An update to Animated(ScrollView) inside a test was not wrapped in act(...).
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5967287Z       
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5967938Z       When testing, code that causes React state updates should be wrapped into act(...):
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5968607Z       
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5968947Z       act(() => {
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5969440Z         /* fire events that update state */
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.5969885Z       });
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6000697Z       /* assert on the output */
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6001362Z       
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6002250Z       This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6003089Z 
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6003483Z       at node_modules/react-reconciler/cjs/react-reconciler.development.js:16307:19
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6004479Z       at runWithFiberInDEV (node_modules/react-reconciler/cjs/react-reconciler.development.js:2508:13)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6005923Z       at warnIfUpdatesNotWrappedWithActDEV (node_modules/react-reconciler/cjs/react-reconciler.development.js:16306:9)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6007090Z       at scheduleUpdateOnFiber (node_modules/react-reconciler/cjs/react-reconciler.development.js:14070:11)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6008244Z       at dispatchReducerAction (node_modules/react-reconciler/cjs/react-reconciler.development.js:6731:13)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6009458Z       at Object.scheduleUpdate [as current] (node_modules/react-native/src/private/animated/createAnimatedPropsHook.js:131:20)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6010992Z       at AnimatedProps._callback (node_modules/react-native/src/private/animated/createAnimatedPropsHook.js:71:36)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6012269Z       at AnimatedProps._callback [as update] (node_modules/react-native/Libraries/Animated/nodes/AnimatedProps.js:237:10)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6013280Z       at update (node_modules/react-native/Libraries/Animated/nodes/AnimatedValue.js:67:31)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6014089Z           at Set.forEach (<anonymous>)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6014773Z       at forEach (node_modules/react-native/Libraries/Animated/nodes/AnimatedValue.js:67:10)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6015952Z       at AnimatedValue.flushValue [as _updateValue] (node_modules/react-native/Libraries/Animated/nodes/AnimatedValue.js:361:7)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6017234Z       at TimingAnimation._updateValue [as _onUpdate] (node_modules/react-native/Libraries/Animated/nodes/AnimatedValue.js:325:14)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6018505Z       at TimingAnimation._onUpdate [as onUpdate] (node_modules/react-native/Libraries/Animated/animations/TimingAnimation.js:157:10)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6019708Z       at Timeout.callback [as _onTimeout] (node_modules/@react-native/jest-preset/jest/setup.js:61:31)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6020247Z 
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6020538Z     console.error
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6021144Z       Each child in a list should have a unique "key" prop.
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6021651Z       
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6022491Z       Check the render method of `View`. It was passed a child from SettingsMain. See https://react.dev/link/warning-keys for more information.
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6023250Z 
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6023673Z       at node_modules/react-reconciler/cjs/react-reconciler.development.js:17776:21
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6024857Z       at runWithFiberInDEV (node_modules/react-reconciler/cjs/react-reconciler.development.js:2508:13)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6025944Z       at warnForMissingKey (node_modules/react-reconciler/cjs/react-reconciler.development.js:17775:11)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6027017Z       at warnOnInvalidKey (node_modules/react-reconciler/cjs/react-reconciler.development.js:4166:13)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6028103Z       at reconcileChildrenArray (node_modules/react-reconciler/cjs/react-reconciler.development.js:4247:31)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6029305Z       at reconcileChildFibersImpl (node_modules/react-reconciler/cjs/react-reconciler.development.js:4568:30)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6031331Z       at node_modules/react-reconciler/cjs/react-reconciler.development.js:4673:33
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6032412Z       at reconcileChildren (node_modules/react-reconciler/cjs/react-reconciler.development.js:7255:13)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6033428Z       at beginWork (node_modules/react-reconciler/cjs/react-reconciler.development.js:9542:13)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6034458Z       at runWithFiberInDEV (node_modules/react-reconciler/cjs/react-reconciler.development.js:2508:13)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6035575Z       at performUnitOfWork (node_modules/react-reconciler/cjs/react-reconciler.development.js:15273:22)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6036630Z       at workLoopSync (node_modules/react-reconciler/cjs/react-reconciler.development.js:15099:41)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6037645Z       at renderRootSync (node_modules/react-reconciler/cjs/react-reconciler.development.js:15080:11)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6038698Z       at performWorkOnRoot (node_modules/react-reconciler/cjs/react-reconciler.development.js:14165:11)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6040071Z       at performWorkOnRootViaSchedulerTask (node_modules/react-reconciler/cjs/react-reconciler.development.js:3335:7)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6041280Z       at flushActQueue (node_modules/react/cjs/react.development.js:590:34)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6042048Z       at node_modules/react/cjs/react.development.js:847:21
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6042412Z 
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6042574Z     console.error
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6043222Z       An update to Animated(ScrollView) inside a test was not wrapped in act(...).
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6043861Z       
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6044455Z       When testing, code that causes React state updates should be wrapped into act(...):
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6045084Z       
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6045457Z       act(() => {
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6045886Z         /* fire events that update state */
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6046366Z       });
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6046767Z       /* assert on the output */
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6047212Z       
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6048053Z       This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6048748Z 
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6049240Z       at node_modules/react-reconciler/cjs/react-reconciler.development.js:16307:19
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6050208Z       at runWithFiberInDEV (node_modules/react-reconciler/cjs/react-reconciler.development.js:2508:13)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6051637Z       at warnIfUpdatesNotWrappedWithActDEV (node_modules/react-reconciler/cjs/react-reconciler.development.js:16306:9)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6052824Z       at scheduleUpdateOnFiber (node_modules/react-reconciler/cjs/react-reconciler.development.js:14070:11)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6053906Z       at dispatchReducerAction (node_modules/react-reconciler/cjs/react-reconciler.development.js:6731:13)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6055178Z       at Object.scheduleUpdate [as current] (node_modules/react-native/src/private/animated/createAnimatedPropsHook.js:131:20)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6056373Z       at AnimatedProps._callback (node_modules/react-native/src/private/animated/createAnimatedPropsHook.js:71:36)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6057539Z       at AnimatedProps._callback [as update] (node_modules/react-native/Libraries/Animated/nodes/AnimatedProps.js:237:10)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6058545Z       at update (node_modules/react-native/Libraries/Animated/nodes/AnimatedValue.js:67:31)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6059397Z           at Set.forEach (<anonymous>)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6060226Z       at forEach (node_modules/react-native/Libraries/Animated/nodes/AnimatedValue.js:67:10)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6092152Z       at AnimatedValue.flushValue [as _updateValue] (node_modules/react-native/Libraries/Animated/nodes/AnimatedValue.js:361:7)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6093696Z       at TimingAnimation._updateValue [as _onUpdate] (node_modules/react-native/Libraries/Animated/nodes/AnimatedValue.js:325:14)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6095176Z       at TimingAnimation._onUpdate [as onUpdate] (node_modules/react-native/Libraries/Animated/animations/TimingAnimation.js:157:10)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6096465Z       at Timeout.callback [as _onTimeout] (node_modules/@react-native/jest-preset/jest/setup.js:61:31)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6097055Z 
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6097539Z     console.error
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6098129Z       An update to Animated(ScrollView) inside a test was not wrapped in act(...).
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6098858Z       
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6099492Z       When testing, code that causes React state updates should be wrapped into act(...):
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6100177Z       
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6100702Z       act(() => {
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6101151Z         /* fire events that update state */
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6101619Z       });
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6102018Z       /* assert on the output */
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6102450Z       
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6103268Z       This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6104389Z 
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6104888Z       at node_modules/react-reconciler/cjs/react-reconciler.development.js:16307:19
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6106058Z       at runWithFiberInDEV (node_modules/react-reconciler/cjs/react-reconciler.development.js:2508:13)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6107244Z       at warnIfUpdatesNotWrappedWithActDEV (node_modules/react-reconciler/cjs/react-reconciler.development.js:16306:9)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6108396Z       at scheduleUpdateOnFiber (node_modules/react-reconciler/cjs/react-reconciler.development.js:14070:11)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6109449Z       at dispatchReducerAction (node_modules/react-reconciler/cjs/react-reconciler.development.js:6731:13)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6110801Z       at Object.scheduleUpdate [as current] (node_modules/react-native/src/private/animated/createAnimatedPropsHook.js:131:20)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6111975Z       at AnimatedProps._callback (node_modules/react-native/src/private/animated/createAnimatedPropsHook.js:71:36)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6113192Z       at AnimatedProps._callback [as update] (node_modules/react-native/Libraries/Animated/nodes/AnimatedProps.js:237:10)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6114205Z       at update (node_modules/react-native/Libraries/Animated/nodes/AnimatedValue.js:67:31)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6114873Z           at Set.forEach (<anonymous>)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6115702Z       at forEach (node_modules/react-native/Libraries/Animated/nodes/AnimatedValue.js:67:10)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6116770Z       at AnimatedValue.flushValue [as _updateValue] (node_modules/react-native/Libraries/Animated/nodes/AnimatedValue.js:361:7)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6118097Z       at TimingAnimation._updateValue [as _onUpdate] (node_modules/react-native/Libraries/Animated/nodes/AnimatedValue.js:325:14)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6119350Z       at TimingAnimation._onUpdate [as onUpdate] (node_modules/react-native/Libraries/Animated/animations/TimingAnimation.js:157:10)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6150951Z       at onUpdate (node_modules/react-native/Libraries/Animated/animations/TimingAnimation.js:132:67)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6151873Z       at Timeout.callback [as _onTimeout] (node_modules/@react-native/jest-preset/jest/setup.js:61:31)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6152231Z 
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:19.6410042Z PASS tests/report-sheet.characterisation.test.tsx
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:20.0534578Z PASS tests/archive-screen.coverage.test.tsx
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:20.8174069Z PASS tests/real-group-members.test.tsx
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:20.8180022Z   ● Console
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:20.8181024Z 
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:20.8181213Z     console.error
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:20.8181612Z       Each child in a list should have a unique "key" prop.
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:20.8182045Z       
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:20.8182737Z       Check the render method of `View`. It was passed a child from SettingsMain. See https://react.dev/link/warning-keys for more information.
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:20.8183241Z 
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:20.8183545Z       at node_modules/react-reconciler/cjs/react-reconciler.development.js:17776:21
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:20.8184270Z       at runWithFiberInDEV (node_modules/react-reconciler/cjs/react-reconciler.development.js:2508:13)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:20.8185078Z       at warnForMissingKey (node_modules/react-reconciler/cjs/react-reconciler.development.js:17775:11)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:20.8185792Z       at warnOnInvalidKey (node_modules/react-reconciler/cjs/react-reconciler.development.js:4166:13)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:20.8186556Z       at reconcileChildrenArray (node_modules/react-reconciler/cjs/react-reconciler.development.js:4247:31)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:20.8187307Z       at reconcileChildFibersImpl (node_modules/react-reconciler/cjs/react-reconciler.development.js:4568:30)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:20.8187976Z       at node_modules/react-reconciler/cjs/react-reconciler.development.js:4673:33
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:20.8188688Z       at reconcileChildren (node_modules/react-reconciler/cjs/react-reconciler.development.js:7255:13)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:20.8189372Z       at beginWork (node_modules/react-reconciler/cjs/react-reconciler.development.js:9542:13)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:20.8190072Z       at runWithFiberInDEV (node_modules/react-reconciler/cjs/react-reconciler.development.js:2508:13)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:20.8191006Z       at performUnitOfWork (node_modules/react-reconciler/cjs/react-reconciler.development.js:15273:22)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:20.8191747Z       at workLoopSync (node_modules/react-reconciler/cjs/react-reconciler.development.js:15099:41)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:20.8192430Z       at renderRootSync (node_modules/react-reconciler/cjs/react-reconciler.development.js:15080:11)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:20.8193115Z       at performWorkOnRoot (node_modules/react-reconciler/cjs/react-reconciler.development.js:14165:11)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:20.8193856Z       at performWorkOnRootViaSchedulerTask (node_modules/react-reconciler/cjs/react-reconciler.development.js:3335:7)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:20.8194588Z       at flushActQueue (node_modules/react/cjs/react.development.js:590:34)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:20.8195093Z       at node_modules/react/cjs/react.development.js:847:21
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:20.8195357Z 
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:20.9275092Z PASS tests/native-event-source.coverage.test.ts
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:21.2549364Z PASS tests/real-moments.coverage.test.tsx
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:21.5745960Z PASS tests/group-flows.coverage.test.tsx
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:21.6799420Z PASS tests/still-image-session.test.ts
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:21.7603793Z PASS tests/contributions.coverage.test.ts
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:21.8890108Z PASS tests/real-account-video-runtime.test.ts
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:22.1914176Z PASS tests/shell.coverage.test.tsx
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:22.2624266Z PASS tests/home-model.coverage.test.ts
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:22.3405279Z PASS tests/clip-uploader.test.ts
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:22.4303023Z PASS tests/retro-looks.test.ts
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:22.5054179Z PASS tests/reminder-intents.coverage.test.ts
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:22.6303861Z PASS tests/real-safety.coverage.test.ts
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:22.7564685Z PASS tests/contribution-status.test.tsx
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:25.8255686Z PASS tests/real-settings-safety.test.tsx (5.644 s)
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:25.9474907Z PASS tests/use-network-online.coverage.test.tsx
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:26.0193334Z PASS tests/chat-unread-store.test.ts
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:26.1402301Z PASS tests/real-account-archive-client.test.ts
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:26.2192336Z PASS tests/deep-links.coverage.test.ts
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:26.4297485Z PASS tests/lookpreview-web.coverage.test.tsx
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:26.4988954Z PASS tests/capture-interruption.test.ts
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:27.0096201Z PASS tests/entry-navigation.test.tsx
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:27.1932200Z PASS tests/real-account-rate-limit-consumers.test.tsx
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:27.2637125Z PASS tests/real-capture-mode.test.tsx
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:27.3214994Z PASS tests/deep-link-invites.test.ts
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:27.3668626Z PASS tests/film-playback.test.ts
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:27.5286411Z PASS tests/LookPreview.test.tsx
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:27.5662008Z PASS tests/real-account-session-expiry.test.tsx
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:27.5976158Z PASS tests/reaction-sync.test.ts
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:27.6651641Z PASS tests/home-model.test.ts
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:27.7630460Z PASS tests/video-metadata.test.ts
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:27.8340432Z PASS tests/metadata-store.test.ts
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:27.9129277Z PASS tests/composer-keyboard.test.ts
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:27.9901112Z PASS tests/video-recording.test.ts
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:28.0381758Z PASS tests/lookpreview-grain.coverage.test.ts
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:28.0586353Z PASS tests/runtime-config.coverage.test.ts
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:28.1104391Z PASS tests/reset-capture-data.test.ts
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:28.1731887Z PASS tests/video-review.test.ts
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:28.2021456Z PASS tests/TrimBar.test.tsx
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:28.2640926Z PASS tests/portrait-guard.test.tsx
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:28.2661685Z PASS tests/capture-state.test.ts
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:28.3557253Z PASS tests/reminder-intents.test.ts
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:29.4922535Z PASS tests/App.test.tsx
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:29.6001887Z PASS tests/file-store.test.ts
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:29.6537439Z PASS tests/current-version.test.ts
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:29.7057119Z PASS tests/user-message.test.ts
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:29.8485160Z PASS tests/invite-code-entry.test.ts
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:29.9054562Z PASS tests/invites.test.ts
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:30.6700804Z PASS tests/entry-legal-links.test.tsx
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:31.1684204Z 
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:31.1685292Z =============================== Coverage summary ===============================
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:31.1685963Z Statements   : 89.64% ( 6789/7573 )
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:31.1686556Z Branches     : 85.66% ( 5522/6446 )
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:31.1686999Z Functions    : 89.55% ( 1423/1589 )
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:31.1687516Z Lines        : 92.33% ( 6145/6655 )
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:31.1688137Z ================================================================================
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:31.1791268Z 
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:31.1794424Z Test Suites: 79 passed, 79 total
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:31.1795194Z Tests:       1674 passed, 1674 total
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:31.1795658Z Snapshots:   0 total
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:31.1796086Z Time:        53.521 s
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:31.1796540Z Ran all test suites.
+Frontend tests and coverage	Run Jest with measured statement gate	2026-10-26T14:52:31.1973154Z Test results written to: coverage/frontend-results.json
+Frontend tests and coverage	Summarise frontend tests and coverage	﻿2026-10-26T14:52:31.2161425Z ##[group]Run python3 scripts/quality-summary.py frontend
+Frontend tests and coverage	Summarise frontend tests and coverage	2026-10-26T14:52:31.2161916Z ^[[36;1mpython3 scripts/quality-summary.py frontend^[[0m
+Frontend tests and coverage	Summarise frontend tests and coverage	2026-10-26T14:52:31.2197786Z shell: /usr/bin/bash -e {0}
+Frontend tests and coverage	Summarise frontend tests and coverage	2026-10-26T14:52:31.2198141Z ##[endgroup]
+Frontend tests and coverage	Retain frontend coverage	﻿2026-10-26T14:52:31.3002066Z ##[group]Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+Frontend tests and coverage	Retain frontend coverage	2026-10-26T14:52:31.3002469Z with:
+Frontend tests and coverage	Retain frontend coverage	2026-10-26T14:52:31.3002742Z   name: frontend-coverage
+Frontend tests and coverage	Retain frontend coverage	2026-10-26T14:52:31.3003129Z   path: coverage/coverage-summary.json
+Frontend tests and coverage	Retain frontend coverage	coverage/frontend-results.json
+Frontend tests and coverage	Retain frontend coverage	
+Frontend tests and coverage	Retain frontend coverage	2026-10-26T14:52:31.3003522Z   if-no-files-found: ignore
+Frontend tests and coverage	Retain frontend coverage	2026-10-26T14:52:31.3003808Z   retention-days: 14
+Frontend tests and coverage	Retain frontend coverage	2026-10-26T14:52:31.3004053Z   compression-level: 6
+Frontend tests and coverage	Retain frontend coverage	2026-10-26T14:52:31.3004350Z   overwrite: false
+Frontend tests and coverage	Retain frontend coverage	2026-10-26T14:52:31.3004601Z   include-hidden-files: false
+Frontend tests and coverage	Retain frontend coverage	2026-10-26T14:52:31.3004887Z   archive: true
+Frontend tests and coverage	Retain frontend coverage	2026-10-26T14:52:31.3005138Z ##[endgroup]
+Frontend tests and coverage	Retain frontend coverage	2026-10-26T14:52:31.4222163Z Multiple search paths detected. Calculating the least common ancestor of all paths
+Frontend tests and coverage	Retain frontend coverage	2026-10-26T14:52:31.4224435Z The least common ancestor is /home/runner/work/rewind-app/rewind-app/coverage. This will be the root directory of the artifact
+Frontend tests and coverage	Retain frontend coverage	2026-10-26T14:52:31.4225511Z With the provided path, there will be 2 files uploaded
+Frontend tests and coverage	Retain frontend coverage	2026-10-26T14:52:31.4226419Z Artifact name is valid!
+Frontend tests and coverage	Retain frontend coverage	2026-10-26T14:52:31.4227040Z Root directory input is valid!
+Frontend tests and coverage	Retain frontend coverage	2026-10-26T14:52:31.6932815Z Uploading artifact: frontend-coverage.zip
+Frontend tests and coverage	Retain frontend coverage	2026-10-26T14:52:31.6964317Z Beginning upload of artifact content to blob storage
+Frontend tests and coverage	Retain frontend coverage	2026-10-26T14:52:32.0146983Z Uploaded bytes 307906
+Frontend tests and coverage	Retain frontend coverage	2026-10-26T14:52:32.0588447Z Finished uploading artifact content to blob storage!
+Frontend tests and coverage	Retain frontend coverage	2026-10-26T14:52:32.0589717Z SHA256 digest of uploaded artifact is 661815bb73bde74e4a3e2f89411fe0c8715621782423a3c4e3c8015c106f1e41
+Frontend tests and coverage	Retain frontend coverage	2026-10-26T14:52:32.0591273Z Finalizing artifact upload
+Frontend tests and coverage	Retain frontend coverage	2026-10-26T14:52:32.5920473Z Artifact frontend-coverage successfully finalized. Artifact ID 12660347250
+Frontend tests and coverage	Retain frontend coverage	2026-10-26T14:52:32.5921612Z Artifact frontend-coverage has been successfully uploaded! Final size is 307906 bytes. Artifact ID is 12660347250
+Frontend tests and coverage	Retain frontend coverage	2026-10-26T14:52:32.5924616Z Artifact download URL: https://github.com/Collaboration95/rewind-app/actions/runs/40343459119/artifacts/12660347250
+Frontend tests and coverage	Post Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020	﻿2026-10-26T14:52:32.6070772Z Post job cleanup.
+Frontend tests and coverage	Post Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020	2026-10-26T14:52:32.7006553Z Cache hit occurred on the primary key node-cache-Linux-x64-npm-9f4a26775c99843f6ed32aabfa37f5fd098a3a43160b70ac43219bd140cfa584, not saving cache.
+Frontend tests and coverage	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	﻿2026-10-26T14:52:32.7113613Z Post job cleanup.
+Frontend tests and coverage	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:52:32.7840845Z [command]/usr/bin/git version
+Frontend tests and coverage	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:52:32.7878144Z git version 2.55.0
+Frontend tests and coverage	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:52:32.7905829Z Temporarily overriding HOME='/home/runner/work/_temp/f5e79a34-fb3b-4f8e-a740-dfa047520998' before making global git config changes
+Frontend tests and coverage	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:52:32.7907239Z Adding repository directory to the temporary git global config as a safe directory
+Frontend tests and coverage	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:52:32.7909913Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/rewind-app/rewind-app
+Frontend tests and coverage	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:52:32.7938545Z Removing SSH command configuration
+Frontend tests and coverage	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:52:32.7943397Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Frontend tests and coverage	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:52:32.7972582Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Frontend tests and coverage	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:52:32.8211301Z Removing HTTP extra header
+Frontend tests and coverage	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:52:32.8212499Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Frontend tests and coverage	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:52:32.8251365Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Frontend tests and coverage	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:52:32.8531557Z Removing includeIf entries pointing to credentials config files
+Frontend tests and coverage	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:52:32.8532652Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Frontend tests and coverage	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:52:32.8543826Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Frontend tests and coverage	Complete job	﻿2026-10-26T14:52:32.8856800Z Cleaning up orphan processes

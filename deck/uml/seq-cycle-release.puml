@@ -1,0 +1,32 @@
+@startuml
+!include _style.iuml
+title Design sequence · UC08 Publish and archive the film
+hide footbox
+autonumber
+skinparam Padding 0
+skinparam sequence {
+ MessageSpacing 0
+ ParticipantPadding 5
+ BoxPadding 3
+}
+skinparam ParticipantFontSize 19
+skinparam SequenceGroupHeaderFontSize 19
+skinparam maxMessageSize 500
+skinparam sequenceMessageSpan true
+participant "scheduler.ts\n«module»" as S
+participant "lifecycle.ts\n«module»" as L
+participant "stored-output.ts\n«module»" as O
+participant ":MediaStore\n«interface»" as M
+participant ":RewindDatabase" as DB
+S -> L : publishCycleReleaseWithStore()
+L -> O : verifyReadyJobOutput() via verifyCompilationOutput()
+O -> M : head() + read() · verifyStoredMedia()
+O -> DB : compare current ready row to verified row
+alt proof missing / changed
+ L --> S : not_ready
+else proof + revealing + now >= ends_at
+ L -> DB : txn: UPDATE published + release_published_at; COMMIT
+ L --> S : published / already_published
+end
+ref over S,DB : 24 h later: advanceCycleLifecycleWithStore() re-verifies output,\nthen transactionally archives + adds lifecycle event (see state-cycle)
+@enduml

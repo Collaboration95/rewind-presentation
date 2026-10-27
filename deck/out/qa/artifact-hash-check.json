@@ -1,0 +1,6 @@
+{
+  "sbom-runtime.cdx.json": true,
+  "trivy-runtime.json": true,
+  "sbom-web.cdx.json": true,
+  "trivy-web.json": true
+}

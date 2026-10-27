@@ -1,0 +1,5 @@
+source,in,out,speed,caption,layout,source2,in2,vo,stamp,crop
+title:Section 3 - CSV test|made from a CSV edit list,,2.5,,,,,,,
+in/desktop-wait-50s.mp4,0:05,0:15,2,Plain 2x with audio kept,fit,,,,,
+in/desktop-wait-50s.mp4,0:20,1:00,20,wait trimmed: actual {actual},fit,,,,,
+in/iphone-portrait-hevc.mov,0,5,1,Phone from CSV,phone,,,,"27 Oct 2026 · iPhone · def5678",

@@ -1,0 +1,39 @@
+TITLE: 10 Watch the film
+FCM: NON-DROP FRAME
+FPS: 30
+
+001 AX V C 00:00:14:24 00:00:17:05 00:00:00:00 00:00:04:11
+* SOURCE: /Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/10-watch.mov
+* Opening film UI only; initial Home excluded. Actual 2.3667 s plus a 2 s loading-frame hold.
+* AUDIO: false
+
+002 AX V C 00:00:17:27 00:00:39:03 00:00:04:11 00:00:25:17
+* SOURCE: /Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/10-watch.mov
+* Complete first native film. Native fullscreen startup repeats trimmed to match first photo at film t=0. All five contributions retained.
+* AUDIO: {"source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/film/rewind-hosted-film.mp4", "in": 0}
+
+003 AX V C 00:01:49:22 00:01:57:22 00:00:25:17 00:00:33:17
+* SOURCE: /Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/10-watch.mov
+* Native last frame paused, then actual replay action at boundary; long idle removed.
+* AUDIO: false
+
+004 AX V C 00:01:57:29 00:02:19:05 00:00:33:17 00:00:54:23
+* SOURCE: /Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/10-watch.mov
+* Complete native replay, photo and later scene boundaries aligned to real film audio t=0.
+* AUDIO: {"source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/film/rewind-hosted-film.mp4", "in": 0}
+
+005 AX V C 00:02:19:05 00:02:27:05 00:00:54:23 00:01:02:23
+* SOURCE: /Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/10-watch.mov
+* Native playback finishes; pause controls appear.
+* AUDIO: false
+
+006 AX V C 00:02:35:00 00:02:42:07 00:01:02:23 00:01:10:00
+* SOURCE: /Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/10-watch.mov
+* Native controls and real Close transition to application end UI.
+* AUDIO: false
+
+007 AX V C 00:02:48:00 00:02:58:00 00:01:10:00 00:01:20:00
+* SOURCE: /Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/10-watch.mov
+* Actual application The end / Replay / Save film screen, ten seconds.
+* AUDIO: false
+

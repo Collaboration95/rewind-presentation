@@ -1,0 +1,30 @@
+@startuml
+!include _cicd.iuml
+title Source and artifact management · where every change and every result is kept
+skinparam nodesep 16
+skinparam ranksep 90
+skinparam ArrowFontSize 20
+skinparam artifactFontSize 20
+
+frame "Source · Git (GitHub, public repo)" as SRC {
+  rectangle "Issue branch\n<size:20>from latest dev</size>" as IB
+  rectangle "<b>BLOCKS MERGE</b> · protected <b>dev</b>\n<size:20>PR required · required check up to date</size>\n<size:20>threads resolved · admins included</size>\n<size:20>no force-push · no deletion</size>" <<merge>> as DEV
+  rectangle "<b>BLOCKS PROMOTION</b> · protected <b>main</b>\n<size:20>same rules + 1 approving review</size>\n<size:20>+ approval of the last push</size>\n<size:20>+ browser and PWA checks</size>" <<human>> as MAIN
+}
+
+frame "Retained results" as KEEP {
+  database "<b>Git history</b>\n<size:20>source · lockfile</size>\n<size:20>workflows · Terraform</size>\n<size:20>Dockerfiles</size>\n<size:20>kept permanently</size>" as GIT
+  folder "<b>Actions artifacts</b>\n<size:20>JUnit · npm-audit</size>\n<size:20>SARIF · Trivy · IaC</size>\n<size:20>SBOM · manifest · tar</size>\n<size:20>30 d · coverage 14 d</size>\n<size:20>ZAP reports 90 d</size>" as ART
+  database "<b>Security tab</b>\n<size:20>CodeQL + Gitleaks</size>\n<size:20>code scanning</size>\n<size:20>Dependabot alerts</size>\n<size:20>secret alerts</size>" as SEC
+  database "<b>Attestations</b>\n<size:20>signed provenance</size>\n<size:20>tar + manifest</size>\n<size:20>Sigstore bundle</size>" as ATT
+  node "<b>Lightsail host</b>\n<size:20>releases kept:</size>\n<size:20>current · previous</size>\n<size:20>· pending</size>" as HOST
+}
+
+IB -right-> DEV : PR
+DEV -right-> MAIN : PR dev → main
+DEV -down-> GIT : merge
+DEV -down-> ART : every run
+DEV -down-> SEC : scans
+DEV -down-> ATT : deploy
+DEV -down-> HOST : deploy
+@enduml

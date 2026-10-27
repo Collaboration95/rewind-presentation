@@ -1,0 +1,39 @@
+TITLE: Group chat
+FCM: NON-DROP FRAME
+* 30 FPS; STRAIGHT CUTS; REAL FOOTAGE AT 1X; POSTROLL FREEZE WHERE NOTED
+* All source audio discarded; final AAC stereo is silent.
+* JSON EDL is authoritative for source in/out and postroll hold durations.
+
+001  AX       V     C        00:00:00:00 00:00:06:00 00:00:00:00 00:00:06:00
+* FROM CLIP NAME: 07-chat.mov
+* Real Jun message arrives at recording start
+
+002  AX       V     C        00:00:27:00 00:00:33:00 00:00:06:00 00:00:12:00
+* FROM CLIP NAME: 07-chat.mov
+* Focus the group message composer
+
+003  AX       V     C        00:00:43:00 00:00:46:00 00:00:12:00 00:00:20:00
+* FROM CLIP NAME: 07-chat.mov
+* Maya types reply at recorded speed; hold completed draft
+* FREEZE LAST SAFE FRAME: 5.000000s
+
+004  AX       V     C        00:00:56:00 00:01:00:00 00:00:20:00 00:00:28:00
+* FROM CLIP NAME: 07-chat.mov
+* Send reply; real sent message appears
+* FREEZE LAST SAFE FRAME: 4.000000s
+
+005  AX       V     C        00:00:00:00 00:00:07:00 00:00:28:00 00:00:35:00
+* FROM CLIP NAME: 07-chat-exchange.png
+* Read both real chat messages
+
+006  AX       V     C        00:01:58:00 00:02:06:00 00:00:35:00 00:00:43:00
+* FROM CLIP NAME: 07-chat.mov
+* Select Jun message; real React, Reply, Report actions
+
+007  AX       V     C        00:02:14:00 00:02:18:00 00:00:43:00 00:00:47:00
+* FROM CLIP NAME: 07-chat.mov
+* Apply real sparkle reaction; no invented UI
+
+008  AX       V     C        00:00:00:00 00:00:08:00 00:00:47:00 00:00:55:00
+* FROM CLIP NAME: 07-chat-reaction.png
+* End on real exchange and sparkle reaction

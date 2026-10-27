@@ -1,0 +1,24 @@
+FINAL REVIEW CUTS — PASS
+
+05-photo-with-a-look-review.mp4: 55.000s, 1650 frames
+06-video-and-allowance-review.mp4: 65.000s, 1950 frames
+08-weekly-reminder-review.mp4: 50.000s, 1500 frames
+12-outsider-denied-review.mp4: 50.000s, 1500 frames
+
+All: 1920x1080, 30fps, H.264 High yuv420p BT.709, silent AAC stereo 48kHz, faststart.
+Cream backdrop; phone screen 440x957 at (740,60); small renderer title only.
+All 6600 final phone frames checked: zero blank frames.
+317 OCR samples: every second plus edit boundaries, zero forbidden-text hits.
+All four final phone contact sheets and full-frame composition reviewed.
+06 recording: 180 frames over six seconds, motion verified; native ledger last eight seconds.
+08: install modal removed; Off-to-On cut; banner arrives and departs, ending on safe Home.
+12: Priya identity, empty group, EMX-TVD entry, actual Accept/error, empty ending.
+
+EDL.csv and per-cut .edl.json provide all source ranges and hold durations.
+Per-cut .plan.json and .validation.json retain renderer details and codec checks.
+qa/*-phone-contact.jpg are the final phone contact sheets.
+qa/validation-summary.json aggregates technical, visual, motion and OCR checks.
+qa/*-ocr.json retains complete sampled OCR text.
+
+All writes were confined to this cuts-b folder. No simulator, repo, accounts, parent files or recordings were changed.
+The 05/06 local intermediates preserve real timing via a sequential decode. Direct sparse-MOV seeking produced misleading blank-frame diagnostics; sequential source contacts and the final exports are authoritative. Only source ranges through 35.1s were selected for these two cuts. No time stretching.

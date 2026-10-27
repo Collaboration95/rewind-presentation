@@ -1,0 +1,61 @@
+@startuml
+!include _style.iuml
+title Design class view · Media storage · Strategy + Adapter · as built at f6cd896
+top to bottom direction
+' Evidence: server/src/media/store.ts#L29 ; local-store.ts#L18 ; s3-store.ts#L30,#L55 ; runtime-store.ts#L143,#L347 ; config.ts#L338 ; jobs/stored-output.ts#L17,#L38
+
+interface StoredJobOptions <<context>> {
+  + mediaStore?: MediaStore
+  + mediaEnvironment?: string
+}
+class "stored-output.ts" as CTX <<module>> {
+  {static} + storedContext(options: StoredJobOptions, groupId): { store: MediaStore; scope: MediaScope }
+}
+interface MediaStore <<strategy>> #DBEAFE {
+  + put(scope: MediaScope, input: MediaPut): Promise<MediaObjectRef>
+  + head(scope: MediaScope, ref: MediaObjectRef): Promise<MediaObjectRef>
+  + read(scope: MediaScope, ref: MediaObjectRef): AsyncIterable<Uint8Array>
+  + delete(scope: MediaScope, ref: MediaObjectRef): Promise<void>
+}
+class LocalMediaStore <<concrete strategy>> {
+  + storeId: string
+  - root: string
+}
+class PrivateS3MediaStore <<concrete strategy>> {
+  - transport: PrivateS3Transport
+  - options: PrivateS3Options
+}
+interface PrivateS3Transport <<target>> #DBEAFE {
+  + putObject(input): Promise<S3ObjectResult>
+  + headObject(input): Promise<S3ObjectResult>
+  + getObject(input): Promise<S3ObjectResult>
+  + deleteObject(input): Promise<unknown>
+}
+class "runtime-store.ts" as RT <<module>> <<adapter>> <<factory>> {
+  {static} + createMediaRuntime(config: MediaRuntimeConfig, options?): Promise<MediaRuntime>
+  {static} - privateTransport(sdk: S3RuntimeBindings): PrivateS3Transport
+}
+class "AWS SDK v3\nS3Client + *Command" as SDK <<adaptee>> #FEF3C7
+class "config.ts" as CFG <<module>> {
+  {static} + parseMediaConfig(env, dataDir): MediaRuntimeConfig | null
+}
+StoredJobOptions o-- "0..1" MediaStore
+CTX ..> StoredJobOptions : reads
+LocalMediaStore ..|> MediaStore
+PrivateS3MediaStore ..|> MediaStore
+PrivateS3MediaStore --> PrivateS3Transport
+RT ..> LocalMediaStore : «create» backend='local'
+RT ..> PrivateS3MediaStore : «create» backend='s3'
+RT ..> SDK : send(new PutObjectCommand ...)
+RT ..> PrivateS3Transport : privateTransport() returns an object literal
+CFG ..> RT : MediaRuntimeConfig
+note right of CFG
+  REWIND_MEDIA_BACKEND=disk returns null:
+  no MediaStore, callers keep the legacy path
+  (isMediaRef branches in jobs/ and media-access.ts).
+end note
+legend bottom
+  Strategy: MediaStore with two concrete stores, chosen once at startup. Adapter: privateTransport() maps AWS SDK commands to PrivateS3Transport.
+  Hosted dev runs S3 (REWIND_MEDIA_BACKEND=s3). The local object store is not a product environment; only tests use it. Local runs use the disk path.
+endlegend
+@enduml

@@ -1,0 +1,61 @@
+@startuml
+!include _style.iuml
+title Design class view · Persistence · Adapter (PostgreSQL behind the node:sqlite surface) · as built at f6cd896
+top to bottom direction
+' Evidence: server/src/db.ts#L3,#L48,#L56,#L68 ; postgres/database.ts#L106,#L139 ; postgres/translate.ts#L257 ; postgres/sync-worker.ts#L5,#L355 ; postgres/runtime.ts#L15,#L34
+
+class "domain modules\n(cycles/lifecycle.ts, jobs/*.ts, chat/index.ts ...)" as CLIENT <<client>> {
+  database.prepare(sql).get(...) / .run(...) / .all(...)
+  database.exec('BEGIN IMMEDIATE')
+}
+class DatabaseSync <<target>> #DBEAFE {
+  + prepare(sql): StatementSync
+  + exec(sql): void
+  + close(): void
+}
+class StatementSync <<target>> #DBEAFE {
+  + run(...params)
+  + get(...params)
+  + all(...params)
+}
+class PostgresDatabase <<adapter>> #ECFDF5 {
+  + dialect: 'postgres'
+  + prepare(sql): PostgresStatement
+  + exec(sql): void
+  + query(source, params): { rows; rowCount }
+  + close(): void
+  - call_(request): BridgeResponse
+}
+class PostgresStatement <<adapter>> #ECFDF5 {
+  + run(...params): { changes; lastInsertRowid }
+  + get(...params): Row | undefined
+  + all(...params): Row[]
+  + iterate(...params): IterableIterator<Row>
+}
+class "translate.ts" as TR <<module>> {
+  {static} + translate(sql): TranslatedStatement
+}
+class "sync-worker.ts\n(worker thread)" as WK <<adaptee>> #FEF3C7 {
+  pg.Client over TLS
+  port.on('message', handle)
+}
+class "db.ts" as DB <<module, factory>> {
+  {static} + openDatabase(config): RewindDatabase
+  type RewindDatabase = DatabaseSync
+}
+CLIENT ..> DatabaseSync : typed as RewindDatabase
+DatabaseSync "1" o-- "*" StatementSync
+PostgresDatabase "1" *-- "*" PostgresStatement
+PostgresDatabase ..> TR : translate()
+PostgresDatabase ..> WK : postMessage + Atomics.wait\n(blocks until reply)
+DB ..> DatabaseSync : «create» REWIND_DATABASE_URL unset
+DB ..> PostgresDatabase : «create» REWIND_DATABASE_URL set\n(cast: asRewindDatabase)
+note right of PostgresDatabase
+  Structural fit only: no "implements DatabaseSync".
+  db.ts casts the adapter to RewindDatabase.
+end note
+legend bottom
+  Adapter: PostgresDatabase and PostgresStatement expose the node:sqlite method names, so domain code is unchanged.
+  Local runs use SQLite; hosted dev uses PostgreSQL 17.
+endlegend
+@enduml

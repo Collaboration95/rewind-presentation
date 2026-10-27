@@ -1,0 +1,74 @@
+{
+  "output": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/cuts-c/10-watch-the-film.mp4",
+  "duration": 80.0,
+  "forbidden_text_hits": 0,
+  "ocr_samples": 80,
+  "audio": [
+    {
+      "output_in": 0,
+      "output_out": 4.366666666666666,
+      "external_audio": false,
+      "rms": 0.0,
+      "interior_silent_rms": 0.0,
+      "silent_pass": true
+    },
+    {
+      "output_in": 4.366666666666666,
+      "output_out": 25.566666666666666,
+      "external_audio": true,
+      "rms": 1.5300931799324517e-05,
+      "correlation_to_real_film": 0.5967788375896375
+    },
+    {
+      "output_in": 25.566666666666666,
+      "output_out": 33.56666666666666,
+      "external_audio": false,
+      "rms": 0.0,
+      "interior_silent_rms": 0.0,
+      "silent_pass": true
+    },
+    {
+      "output_in": 33.56666666666666,
+      "output_out": 54.766666666666666,
+      "external_audio": true,
+      "rms": 1.5309033556599054e-05,
+      "correlation_to_real_film": -0.017438231329870983
+    },
+    {
+      "output_in": 54.766666666666666,
+      "output_out": 62.766666666666666,
+      "external_audio": false,
+      "rms": 0.0,
+      "interior_silent_rms": 0.0,
+      "silent_pass": true
+    },
+    {
+      "output_in": 62.766666666666666,
+      "output_out": 70.0,
+      "external_audio": false,
+      "rms": 0.0,
+      "interior_silent_rms": 0.0,
+      "silent_pass": true
+    },
+    {
+      "output_in": 70.0,
+      "output_out": 80.0,
+      "external_audio": false,
+      "rms": 0.0,
+      "interior_silent_rms": 0.0,
+      "silent_pass": true
+    }
+  ],
+  "encoding_checks": {
+    "codec": true,
+    "profile": true,
+    "size": true,
+    "pixel_format": true,
+    "fps": true,
+    "frame_count": true,
+    "video_duration": true,
+    "container_duration": true,
+    "audio": true,
+    "audio_duration": true
+  }
+}

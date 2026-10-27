@@ -1,0 +1,28 @@
+@startuml
+!include _style.iuml
+skinparam Padding 0
+skinparam ranksep 20
+skinparam nodesep 18
+left to right direction
+title Use case model · UC07–UC09, UC12–UC13 Release and revisit the film
+actor Member as M
+actor Owner as O
+O --|> M
+rectangle Rewind {
+ usecase "UC07\nClose cycle / open successor" as U7
+ usecase "UC08\nCompile / publish / archive film" as U8
+ usecase "UC09\nOwner prompt / time zone" as U9
+ usecase "UC12\nPremiere / Archive playback" as U12
+ usecase "UC13\nDownload clip / film" as U13
+}
+actor "Cycle scheduler" as C <<system>>
+actor "Amazon S3" as S <<system>>
+M -- U12
+M -- U13
+O -- U9
+U7 -- C
+U8 -- C
+U8 -- S
+U12 -- S
+U13 -- S
+@enduml

@@ -1,0 +1,9 @@
+Attempt 1 (2026-10-26T15:56:55Z, after Deploy dev 40350232534 completed success at 2026-10-26T15:56:03Z, no active runs):
+$ gh workflow run performance.yml --repo Collaboration95/rewind-app --ref dev -f target_url=https://d2m6kz76y4kuvm.cloudfront.net -f max_vus=100
+HTTP 404: workflow performance.yml not found on the default branch (https://api.github.com/repos/Collaboration95/rewind-app/actions/workflows/performance.yml)
+
+Attempt 2:
+$ gh api -X POST repos/Collaboration95/rewind-app/actions/workflows/performance.yml/dispatches -f ref=dev -f 'inputs[target_url]=https://d2m6kz76y4kuvm.cloudfront.net' -f 'inputs[max_vus]=100'
+{"message":"Not Found","documentation_url":"https://docs.github.com/rest/actions/workflows#create-a-workflow-dispatch-event","status":"404"}
+
+Cause: performance.yml exists on dev but not on the default branch (main); GitHub does not register a workflow_dispatch workflow until it is on the default branch, so no run was created. Fallback: identical default-profile runner executed locally.

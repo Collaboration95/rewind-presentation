@@ -1,0 +1,5 @@
+sprint,start_sgt,end_sgt,closed_issues_all_milestones,closed_issues_current_own_milestone,closed_issues_completed,closed_issues_not_planned,closed_issues_duplicate,merged_prs_all_bases,merged_prs_dev,merged_prs_main,merged_prs_other
+Sprint 0,2026-09-01,2026-09-12,44,21,43,1,0,11,0,11,0
+Sprint 1,2026-09-13,2026-09-26,100,37,76,10,14,36,0,36,0
+Sprint 2,2026-09-27,2026-10-10,145,120,118,27,0,132,128,3,1
+Sprint 3,2026-10-11,2026-10-24,30,25,25,5,0,34,33,1,0

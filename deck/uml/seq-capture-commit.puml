@@ -1,0 +1,34 @@
+@startuml
+!include _style.iuml
+title Design sequence · UC06 Commit the allowance and contribution
+hide footbox
+autonumber
+skinparam Padding 0
+skinparam sequence {
+ MessageSpacing 0
+ ParticipantPadding 5
+ BoxPadding 3
+}
+skinparam ParticipantFontSize 19
+skinparam SequenceGroupHeaderFontSize 19
+skinparam maxMessageSize 500
+skinparam sequenceMessageSpan true
+participant "upload-intents.ts\n«module»" as I
+participant "contributions/index.ts\n«module»" as Q
+participant "contributions/ledger.ts\n«module»" as L
+participant ":RewindDatabase" as DB
+group acceptance transaction · rollback on any failed guard / write
+ I -> DB : BEGIN IMMEDIATE
+ I -> I : authorize(); currentIntent(); checkQuota()
+ I -> Q : reserveContributionAllowance()
+ Q -> DB : SQL: conditional quota UPDATE
+ I -> DB : SQL: INSERT staged_sources, contributions, media_jobs
+ opt replacesContributionId
+  I -> L : linkContributionReplacement()
+  L -> DB : SQL: link original to replacement
+ end
+ I -> DB : SQL: UPDATE cycle counters; intent completed
+ I -> DB : COMMIT
+end
+I -->] : completed receipt
+@enduml

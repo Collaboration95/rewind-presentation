@@ -1,0 +1,23 @@
+$ curl -sS -i https://d2m6kz76y4kuvm.cloudfront.net/api/health
+HTTP/2 200 
+content-type: application/json; charset=utf-8
+server: nginx/1.31.6
+date: Mon, 26 Oct 2026 15:50:49 GMT
+content-security-policy-report-only: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' blob:; connect-src 'self'; font-src 'self' data:; object-src 'none'; base-uri 'self'
+cache-control: no-store
+x-request-id: 4554affa-e83f-4fef-9ba1-cf095d985b80
+server-timing: db;dur=2.4;desc="3 statements, 3 round trips"
+access-control-allow-headers: Content-Type, Authorization, Range, Last-Event-ID
+access-control-allow-methods: GET, HEAD, POST, DELETE, OPTIONS
+access-control-allow-origin: https://d2m6kz76y4kuvm.cloudfront.net
+x-content-type-options: nosniff
+referrer-policy: strict-origin-when-cross-origin
+x-frame-options: DENY
+strict-transport-security: max-age=31536000
+content-security-policy: frame-ancestors 'none'
+x-cache: Miss from cloudfront
+via: 1.1 338ce8ab593fad90ead59f95cfe82d40.cloudfront.net (CloudFront)
+x-amz-cf-pop: MRS53-P4
+x-amz-cf-id: -jhG_kXwiqc6c4QT8YJSKw9dCeNIYOjO4ScdPyeozwcNSISTO7IFHQ==
+
+{"ok":true,"service":"rewind-local-runtime","version":"0.1.0","ready":true,"checks":{"database":"postgresql","ffmpegConfigured":true,"schema":{"ready":true,"expectedMigrationVersion":31,"missingMigrationKeys":[]}},"addresses":{"local":"http://127.0.0.1:8787","lan":"http://172.18.0.2:8787"}}

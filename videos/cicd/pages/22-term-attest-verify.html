@@ -1,0 +1,30 @@
+<!doctype html><html><head><meta charset="utf-8"><style>html{zoom:1.25}*{box-sizing:border-box}html,body{margin:0;width:1536px;height:864px;overflow:hidden;background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif}
+.bar{height:44px;background:#dee1e6;display:flex;align-items:center;gap:14px;padding:0 16px;border-bottom:1px solid #c4c7cc}
+.dots span{display:inline-block;width:12px;height:12px;border-radius:50%;margin-right:7px}.url{flex:1;height:30px;border-radius:15px;background:#fff;display:flex;align-items:center;padding:0 16px;font-size:14px;color:#202124}
+.url b{font-weight:400;color:#5f6368}.lock{width:12px;height:12px;margin-right:10px;border:2px solid #5f6368;border-radius:3px}.view{position:absolute;top:44px;left:0;width:1536px;height:820px;overflow:hidden}.term{position:absolute;inset:0;background:linear-gradient(135deg,#1d2b38,#14202B);padding:46px 70px}.win{height:100%;border-radius:12px;overflow:hidden;background:#101820;box-shadow:0 30px 80px #0008;border:1px solid #2b3a47}.wt{height:36px;background:#24313d;display:flex;align-items:center;padding:0 14px;color:#9fb0bf;font:13px -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif}.wt .dots{margin-right:auto}.wt .tt{position:absolute;left:0;right:0;text-align:center;pointer-events:none}
+pre{margin:0;padding:22px 26px;font:15.5px/1.5 ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,monospace;color:#d7e0e8;white-space:pre-wrap;word-break:break-all}.p{color:#7ee0a0}.c{color:#f2f5f7;font-weight:600}.g{color:#7ee0a0}.y{color:#f2c94c}.dim{color:#7d8d9b}</style></head><body><div class="term"><div class="win"><div class="wt" style="position:relative"><div class="dots"><span style="background:#ff5f57"></span><span style="background:#febc2e"></span><span style="background:#28c840"></span></div><div class="tt">zsh — dev-release-security-aea7478</div></div><pre><span class="p">$</span> <span class="c">shasum -a 256 release-manifest.json</span>
+59d9b9f7a3d22ce085776edfc08906677d4c238a27d367986c66c63bdc55d14c  release-manifest.json
+
+<span class="p">$</span> <span class="c">gh attestation verify --repo Collaboration95/rewind-app release-manifest.json</span>
+<span class="g" >Loaded digest sha256:59d9b9f7a3d22ce085776edfc08906677d4c238a27d367986c66c63bdc55d14c for file://release-manifest.json</span>
+<span class="g" >Loaded 1 attestation from GitHub API</span>
+
+The following policy criteria will be enforced:
+- Predicate type must match:................ https://slsa.dev/provenance/v1
+- Source Repository Owner URI must match:... https://github.com/Collaboration95
+- Source Repository URI must match:......... https://github.com/Collaboration95/rewind-app
+- Subject Alternative Name must match regex: (?i)^https://github.com/Collaboration95/rewind-app/
+- OIDC Issuer must match:................... https://token.actions.githubusercontent.com
+
+<span class="y foc" id="focus">✓ Verification succeeded!</span>
+
+The following 1 attestation matched the policy criteria
+
+- Attestation #1
+  - Build repo:..... Collaboration95/rewind-app
+<span class="g" >  - Build workflow:. .github/workflows/deploy-dev.yml@refs/heads/dev</span>
+  - Signer repo:.... Collaboration95/rewind-app
+<span class="g" >  - Signer workflow: .github/workflows/deploy-dev.yml@refs/heads/dev</span>
+
+<span class="p">$</span> <span class="c">echo $?</span>
+0</pre></div></div></body></html>

@@ -1,0 +1,16 @@
+@startuml
+!include _style.iuml
+title Statechart · Media job (media_jobs.status, clip and film) · as built at f6cd896
+' Evidence: jobs/compilation.ts#L410-L457 (create), #L501-L574 (claim), #L762-L783 (fail), #L785-L850 (publish ready); jobs/clip.ts#L254-L325 (claim), #L158-L250, #L332-L372; jobs/shared.ts#L6 (lease 15 min); media/upload-intents.ts (clip job insert)
+[*] --> pending : completeUploadIntent (clip job) or ensureCompilationJob (film job)
+pending --> processing : claim [film job: every clip input settled]\n/ claim_generation + 1, attempt_count + 1, processing_started_at = now
+processing --> processing : claim again [now - processing_started_at >= 15 min (lease expired)]\n/ claim_generation + 1, same attempt
+processing --> ready : finalise [claim_generation still current; output verified]\n/ output_path, output_sha256, output_bytes, output_verified_at
+processing --> failed : error [claim_generation still current]\n/ error_code, failed_at, output cleared
+failed --> processing : claim [attempt_count < 3]
+failed --> [*] : claim [attempt_count >= 3] / retry_exhausted (automatic retries stop)
+ready --> [*]
+legend bottom
+  The worker runs inside the same Node process as the HTTP server (cycle scheduler tick). Stale workers lose because every write is fenced by claim_generation.
+endlegend
+@enduml

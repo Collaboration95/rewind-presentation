@@ -1,0 +1,45 @@
+@startuml
+!include _style.iuml
+skinparam Padding 0
+title Logical architecture · UC01–UC14 Rewind
+skinparam componentStyle rectangle
+top to bottom direction
+package "Web / PWA client" {
+  component "App.tsx" as App <<boundary>> $SAD
+  component "GroupCaptureView" as Capture <<boundary>> $SAD
+  component "FilmScreen / ArchiveScreen" as View <<boundary>> $SAD
+  component "real-account-client.ts\ndirect-transfer.ts" as Client <<module>>
+  App -[hidden]right- Capture
+  Capture -[hidden]right- View
+  App ..> Client
+  Capture ..> Client
+  View ..> Client
+}
+package "Node server · one application" {
+  component "http.ts + routes/*\nHTTP / SSE boundaries" as Routes <<boundary>> $SAD
+  component "auth/* + groups/*\ncontributions/* + chat/*" as Domain <<module>>
+  component "cycles/* + jobs/*" as Cycle <<module>>
+  component "reminders/loop.ts\nreminders/outbox.ts" as Rem <<module>>
+  component "media/* + archive/*" as Media <<module>>
+  component "db.ts\nRewindDatabase" as DB <<module>>
+  component "ffmpeg.ts" as FF <<module>>
+  Routes ..> Domain
+  Routes ..> Media
+  Domain ..> DB
+  Cycle ..> DB
+  Cycle ..> Media
+  Cycle ..> FF
+  Rem ..> DB
+}
+component "Cognito\nManaged Login" as Cognito <<system>> $CREAM
+component "S3\nprivate object versions" as S3 <<system>> $CREAM
+component "Web push service" as Push <<system>> $CREAM
+Client ..> Routes : HTTPS / SSE
+Client ..> S3 : presigned PUT
+Domain ..> Cognito
+Media ..> S3
+Rem ..> Push
+legend bottom
+Node hosts the scheduler, worker tick and reminders. PostgresDatabase adapts the DB surface.
+endlegend
+@enduml

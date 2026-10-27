@@ -1,0 +1,22 @@
+{
+  "output": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/cuts-a/03-create-group-review.mp4",
+  "duration_seconds": 60,
+  "frames": 1800,
+  "encoder_checks": {
+    "codec": true,
+    "profile": true,
+    "size": true,
+    "pixel_format": true,
+    "fps": true,
+    "frame_count": true,
+    "video_duration": true,
+    "container_duration": true,
+    "audio": true,
+    "audio_duration": true
+  },
+  "silent_aac": true,
+  "ocr_frames_scanned": 87,
+  "forbidden_text_hits": [],
+  "sha256": "61f7a71018fbd69ea8a45eea4b91e8d943bb3693b60698955de56a8eb7f71c9e",
+  "visual_review": "PASS: final five-second full-frame/phone contact sheets and frames on both sides of all cuts inspected; UI legible; forbidden Home and cycle copy absent in reviewed frames."
+}

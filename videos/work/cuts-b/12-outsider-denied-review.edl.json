@@ -1,0 +1,57 @@
+{
+  "number": 12,
+  "name": "Outsider denied",
+  "output": "12-outsider-denied-review.mp4",
+  "segments": [
+    {
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/stills/12-priya-profile.png",
+      "duration": 7,
+      "audio": false,
+      "note": "Native Priya identity and no-group profile"
+    },
+    {
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/12-outsider.mov",
+      "in": 13,
+      "out": 21,
+      "duration": 8,
+      "audio": false,
+      "note": "Real empty group state then Have an invite"
+    },
+    {
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/12-outsider.mov",
+      "in": 24,
+      "out": 29,
+      "duration": 5,
+      "audio": false,
+      "note": "Invite form, before entry"
+    },
+    {
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/12-outsider.mov",
+      "in": 44,
+      "out": 50,
+      "duration": 6,
+      "audio": false,
+      "note": "Actual EMX-TVD entry"
+    },
+    {
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/12-outsider.mov",
+      "in": 58,
+      "out": 66,
+      "duration": 8,
+      "audio": false,
+      "note": "Actual Accept, Joining, used-invitation error"
+    },
+    {
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/stills/12-invite-denied.png",
+      "duration": 8,
+      "audio": false,
+      "note": "Read actual used-invitation error"
+    },
+    {
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/stills/12-outsider-empty.png",
+      "duration": 8,
+      "audio": false,
+      "note": "Native empty group ending"
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+TITLE: 11 Archive and save
+FCM: NON-DROP FRAME
+FPS: 30
+
+001 AX V C 00:00:46:00 00:00:54:00 00:00:00:00 00:00:08:00
+* SOURCE: /Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/11-archive-save.mov
+* Read real Archive card: Your film is here, Cycle ended 26 Oct. No Home shot.
+* AUDIO: false
+
+002 AX V C 00:00:54:00 00:00:58:00 00:00:08:00 00:00:12:00
+* SOURCE: /Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/11-archive-save.mov
+* Actual Play and loading transition to native player.
+* AUDIO: false
+
+003 AX V C 00:00:59:00 00:01:02:00 00:00:12:00 00:00:15:00
+* SOURCE: /Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/11-archive-save.mov
+* Brief actual native film: first photo into second contribution; silent by choice.
+* AUDIO: false
+
+004 AX V C 00:01:14:00 00:01:17:00 00:00:15:00 00:00:18:00
+* SOURCE: /Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/11-archive-save.mov
+* Brief actual native film near ending; playback shortened for Archive/Save focus.
+* AUDIO: false
+
+005 AX V C 00:02:58:15 00:03:01:15 00:00:18:00 00:00:21:00
+* SOURCE: /Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/11-archive-save.mov
+* Actual native Close returning to real app end UI.
+* AUDIO: false
+
+006 AX V C 00:03:04:00 00:03:10:00 00:00:21:00 00:00:27:00
+* SOURCE: /Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/11-archive-save.mov
+* Read actual The end / Replay / Save film screen.
+* AUDIO: false
+
+007 AX V C 00:03:10:15 00:03:15:12 00:00:27:00 00:00:32:00
+* SOURCE: /Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/11-archive-save.mov
+* Actual Save film action and Saving/Saved state. Final 0.1 s held; stops before any browser prompt transition.
+* AUDIO: false
+
+008 AX V C 00:04:54:06 00:04:59:06 00:00:32:00 00:00:37:00
+* SOURCE: /Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/11-archive-save.mov
+* Real Safari download confirmation and Download acceptance. Password interlude entirely omitted.
+* AUDIO: false
+
+009 AX V C 00:05:33:15 00:05:37:15 00:00:37:00 00:00:41:00
+* SOURCE: /Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/11-archive-save.mov
+* Actual Safari page menu Downloads action and completed-list transition.
+* AUDIO: false
+
+010 AX V C 00:00:00:00 00:00:08:00 00:00:41:00 00:00:49:00
+* SOURCE: /Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/stills/11-downloaded.png
+* Parent clean actual phone proof: completed film in Safari Downloads, 5.2 MB. Entire later Files/Spotlight tail omitted.
+* AUDIO: false
+
+011 AX V C 00:00:00:00 00:00:06:00 00:00:49:00 00:00:55:00
+* SOURCE: /Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/stills/11-archive.png
+* Closing real Archive card still; editorial return to feature context, no fabricated tap.
+* AUDIO: false
+

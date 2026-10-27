@@ -1,0 +1,49 @@
+{
+  "number": 9,
+  "name": "Cycle ends, film ready",
+  "title_card": false,
+  "output": "09-cycle-ends-film-ready.mp4",
+  "notes": [
+    "40 seconds; five 8-second states. No film shown. All Home frames are the parent cleaned actual still. No cycle-length UI. Silence."
+  ],
+  "segments": [
+    {
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/stills/09-premiere-clean.png",
+      "in": 0,
+      "duration": 8,
+      "audio": false,
+      "note": "Parent-approved clean actual Premiere Home still; forbidden cycle UI removed."
+    },
+    {
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/09-premiere.mov",
+      "in": 25,
+      "duration": 8,
+      "audio": false,
+      "note": "Read group settings: The little things, owner and 2 of 6 members. Last 0.2 s held.",
+      "out": 32.8
+    },
+    {
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/09-premiere.mov",
+      "in": 34,
+      "duration": 8,
+      "audio": false,
+      "note": "Members: Maya and Jun.",
+      "out": 42
+    },
+    {
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/09-premiere.mov",
+      "in": 90,
+      "duration": 8,
+      "audio": false,
+      "note": "Return to group settings and prompt context.",
+      "out": 98
+    },
+    {
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/stills/09-premiere-clean.png",
+      "in": 0,
+      "duration": 8,
+      "audio": false,
+      "note": "Return to clean Premiere ready card, Watch and 24 h left preserved."
+    }
+  ]
+}

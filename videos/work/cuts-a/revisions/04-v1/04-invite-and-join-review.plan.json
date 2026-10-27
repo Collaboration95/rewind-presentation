@@ -1,0 +1,250 @@
+{
+  "output": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/cuts-a/04-invite-and-join-review.mp4",
+  "frames": 1800,
+  "duration": 60.0,
+  "segments": [
+    {
+      "type": "phone",
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/stills/04-invite-code.png",
+      "still": true,
+      "start": 0.0,
+      "end": null,
+      "frames": 240,
+      "duration": 8.0,
+      "width": 1206,
+      "height": 2622,
+      "crop": null,
+      "masks": [],
+      "smooth": [],
+      "audio_file": null,
+      "audio_in": 0,
+      "gain": 1,
+      "source_audio": false,
+      "island": false,
+      "signature": {
+        "row": {
+          "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/stills/04-invite-code.png",
+          "duration": 8,
+          "audio": false,
+          "note": "Invite code EMX-TVD; start after initial one-person Settings",
+          "add_island": false
+        },
+        "source": [
+          "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/stills/04-invite-code.png",
+          935813,
+          1793026504849579737
+        ],
+        "audio": null
+      }
+    },
+    {
+      "type": "phone",
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/04-invite.mov",
+      "still": false,
+      "start": 61.0,
+      "end": 66.0,
+      "frames": 240,
+      "duration": 8.0,
+      "width": 1206,
+      "height": 2622,
+      "crop": null,
+      "masks": [],
+      "smooth": [],
+      "audio_file": null,
+      "audio_in": 0,
+      "gain": 1,
+      "source_audio": false,
+      "island": false,
+      "signature": {
+        "row": {
+          "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/04-invite.mov",
+          "in": 61,
+          "out": 66,
+          "duration": 8,
+          "audio": false,
+          "note": "Share code opens real native share sheet"
+        },
+        "source": [
+          "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/04-invite.mov",
+          349698553,
+          1793026707252116849
+        ],
+        "audio": null
+      }
+    },
+    {
+      "type": "phone",
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/04-invite.mov",
+      "still": false,
+      "start": 100.0,
+      "end": 109.0,
+      "frames": 270,
+      "duration": 9.0,
+      "width": 1206,
+      "height": 2622,
+      "crop": null,
+      "masks": [],
+      "smooth": [],
+      "audio_file": null,
+      "audio_in": 0,
+      "gain": 1,
+      "source_audio": false,
+      "island": false,
+      "signature": {
+        "row": {
+          "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/04-invite.mov",
+          "in": 100,
+          "out": 109,
+          "duration": 9,
+          "audio": false,
+          "note": "Read invitation share content and available destinations"
+        },
+        "source": [
+          "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/04-invite.mov",
+          349698553,
+          1793026707252116849
+        ],
+        "audio": null
+      }
+    },
+    {
+      "type": "phone",
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/04-invite.mov",
+      "still": false,
+      "start": 109.0,
+      "end": 110.5,
+      "frames": 240,
+      "duration": 8.0,
+      "width": 1206,
+      "height": 2622,
+      "crop": null,
+      "masks": [],
+      "smooth": [],
+      "audio_file": null,
+      "audio_in": 0,
+      "gain": 1,
+      "source_audio": false,
+      "island": false,
+      "signature": {
+        "row": {
+          "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/04-invite.mov",
+          "in": 109,
+          "out": 110.5,
+          "duration": 8,
+          "audio": false,
+          "note": "Dismiss native share sheet back to invite; omit stale Members and Home"
+        },
+        "source": [
+          "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/04-invite.mov",
+          349698553,
+          1793026707252116849
+        ],
+        "audio": null
+      }
+    },
+    {
+      "type": "phone",
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/04-invite.mov",
+      "still": false,
+      "start": 224.5,
+      "end": 234.5,
+      "frames": 300,
+      "duration": 10.0,
+      "width": 1206,
+      "height": 2622,
+      "crop": null,
+      "masks": [],
+      "smooth": [],
+      "audio_file": null,
+      "audio_in": 0,
+      "gain": 1,
+      "source_audio": false,
+      "island": false,
+      "signature": {
+        "row": {
+          "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/04-invite.mov",
+          "in": 224.5,
+          "out": 234.5,
+          "duration": 10,
+          "audio": false,
+          "note": "After join: Settings shows 2 of 5 members; no refresh/Home footage"
+        },
+        "source": [
+          "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/04-invite.mov",
+          349698553,
+          1793026707252116849
+        ],
+        "audio": null
+      }
+    },
+    {
+      "type": "phone",
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/04-invite.mov",
+      "still": false,
+      "start": 234.5,
+      "end": 237.0,
+      "frames": 300,
+      "duration": 10.0,
+      "width": 1206,
+      "height": 2622,
+      "crop": null,
+      "masks": [],
+      "smooth": [],
+      "audio_file": null,
+      "audio_in": 0,
+      "gain": 1,
+      "source_audio": false,
+      "island": false,
+      "signature": {
+        "row": {
+          "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/04-invite.mov",
+          "in": 234.5,
+          "out": 237,
+          "duration": 10,
+          "audio": false,
+          "note": "Open fresh Members showing Maya and Jun"
+        },
+        "source": [
+          "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/04-invite.mov",
+          349698553,
+          1793026707252116849
+        ],
+        "audio": null
+      }
+    },
+    {
+      "type": "phone",
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/stills/04-members-joined.png",
+      "still": true,
+      "start": 0.0,
+      "end": null,
+      "frames": 210,
+      "duration": 7.0,
+      "width": 1206,
+      "height": 2622,
+      "crop": null,
+      "masks": [],
+      "smooth": [],
+      "audio_file": null,
+      "audio_in": 0,
+      "gain": 1,
+      "source_audio": false,
+      "island": false,
+      "signature": {
+        "row": {
+          "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/stills/04-members-joined.png",
+          "duration": 7,
+          "audio": false,
+          "note": "End on verified joined-members still with both Maya and Jun",
+          "add_island": false
+        },
+        "source": [
+          "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/stills/04-members-joined.png",
+          886419,
+          1793026706452175127
+        ],
+        "audio": null
+      }
+    }
+  ]
+}

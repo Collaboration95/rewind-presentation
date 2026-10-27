@@ -1,0 +1,21 @@
+{
+  "physical_frames": 59,
+  "main_frames": 14,
+  "feature_inserts": 10,
+  "backups": 35,
+  "talk_seconds": 2280,
+  "svg_present": 23,
+  "missing_figures": [],
+  "missing_clips": []
+}
+[73218:110356063:1027/025502.027497:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[73218:110356063:1027/025502.028204:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[73218:110356063:1027/025502.028320:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[73218:110356063:1027/025502.028406:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[73218:110356063:1027/025502.028503:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[73218:110356063:1027/025502.028604:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[73218:110356063:1027/025502.028696:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+Trying to load the allocator multiple times. This is *not* supported.
+[73210:110355993:1027/025502.933629:ERROR:base/process/process_mac.cc:45] task_policy_set TASK_CATEGORY_POLICY: (os/kern) invalid argument (4)
+[73210:110355993:1027/025502.933714:ERROR:base/process/process_mac.cc:90] task_policy_set TASK_SUPPRESSION_POLICY: (os/kern) invalid argument (4)
+3841969 bytes written to file /Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/deck/out/rewind-presentation.pdf

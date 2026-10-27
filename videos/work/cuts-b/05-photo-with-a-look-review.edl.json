@@ -1,0 +1,65 @@
+{
+  "number": 5,
+  "name": "Photo with a look",
+  "output": "05-photo-with-a-look-review.mp4",
+  "segments": [
+    {
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/cuts-b/sources/05-photo.mp4",
+      "in": 0,
+      "out": 8,
+      "duration": 8,
+      "audio": false,
+      "note": "Live photo viewfinder, Compact Digital"
+    },
+    {
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/cuts-b/holds/05-compact-look.png",
+      "duration": 8,
+      "audio": false,
+      "note": "Readable selected-look hold"
+    },
+    {
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/cuts-b/sources/05-photo.mp4",
+      "in": 8,
+      "out": 17.8,
+      "duration": 9.8,
+      "audio": false,
+      "note": "Actual change to Disposable Flash, shutter"
+    },
+    {
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/cuts-b/sources/05-photo.mp4",
+      "in": 18.1,
+      "out": 25.9,
+      "duration": 7.8,
+      "audio": false,
+      "note": "Actual review and Seal"
+    },
+    {
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/cuts-b/holds/05-review.png",
+      "duration": 6,
+      "audio": false,
+      "note": "Review reading hold before Seal upload"
+    },
+    {
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/cuts-b/sources/05-photo.mp4",
+      "in": 26,
+      "out": 33.8,
+      "duration": 7.8,
+      "audio": false,
+      "note": "Actual uploading"
+    },
+    {
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/cuts-b/sources/05-photo.mp4",
+      "in": 34.1,
+      "out": 35.1,
+      "duration": 1.0,
+      "audio": false,
+      "note": "Sealed"
+    },
+    {
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/cuts-b/holds/05-sealed.png",
+      "duration": 6.6,
+      "audio": false,
+      "note": "Sealed ending; no ledger/black tail"
+    }
+  ]
+}

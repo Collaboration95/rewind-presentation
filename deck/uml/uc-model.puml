@@ -1,0 +1,61 @@
+@startuml
+!include _style.iuml
+title Use case model · UC01–UC14 Rewind
+skinparam Padding 0
+skinparam ArrowFontSize 20
+skinparam nodesep 8
+skinparam ranksep 7
+skinparam usecaseFontSize 20
+top to bottom direction
+actor "Account holder" as Account
+actor Member
+actor Owner
+Owner -left-|> Member
+Member -left-|> Account
+rectangle "Rewind" {
+ package "Participation" {
+  usecase "UC01 · Sign in / out" as U1
+  usecase "UC02 · Create / select" as U2
+  usecase "UC03 · Invite / accept" as U3
+  usecase "UC10 · Web reminders" as U10
+  usecase "UC11 · Private chat" as U11
+  usecase "UC14 · Install / open link" as U14
+  U1 -[hidden]down-> U2
+  U2 -[hidden]down-> U3
+  U3 -[hidden]down-> U10
+  U10 -[hidden]down-> U11
+  U11 -[hidden]down-> U14
+ }
+ package "Capture" {
+  usecase "UC04 · Video" as U4
+  usecase "UC05 · Photo" as U5
+  usecase "UC06a · Allowance" as U6
+  usecase "UC06b · Correct" as U6b
+  U4 .down.> U6 : <<include>>
+  U5 .down.> U6 : <<include>>
+  U6b .up.> U5 : <<extend>>\n[replacement]
+ }
+ package "Cycle" {
+  usecase "UC07 · Close / successor" as U7
+  usecase "UC08 · Compile / publish" as U8
+  usecase "UC09 · Prompt / zone" as U9
+  usecase "UC12 · Playback" as U12
+  usecase "UC13 · Download" as U13
+  U7 -[hidden]down-> U8
+  U8 -[hidden]down-> U9
+  U9 -[hidden]down-> U12
+  U12 -[hidden]down-> U13
+ }
+}
+actor "Amazon Cognito" as Cog <<system>>
+actor "Amazon S3" as S3 <<system>>
+actor "Web push service" as Push <<system>>
+actor "Cycle scheduler" as Clock <<system>>
+Account -- U1
+Member -- U5
+Owner -- U9
+U1 -- Cog
+U10 -- Push
+U5 -- S3
+U7 -- Clock
+@enduml

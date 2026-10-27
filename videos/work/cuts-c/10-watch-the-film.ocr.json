@@ -1,0 +1,334 @@
+{
+  "sampling": "One phone crop per output second; tesseract PSM 11; visual contact review supplements OCR.",
+  "patterns": [
+    "week\\s*\\d+\\s*(?:of|/|0f)\\s*4",
+    "minutes?\\s+until",
+    "moments?\\s+reset",
+    "resets?\\s+in\\s+1\\s*day",
+    "\\b(?:1|one)[ -]day\\s+cycle",
+    "cycle\\s+(?:length|duration)"
+  ],
+  "forbidden_hits": [],
+  "frames": [
+    {
+      "second": 0,
+      "text": "9:41\n\nPremiere - 24 h left\n\nOpening the film...\n\noO\n\n\u2014\n\neee\n\nkuvm.cloudfront.net @\n"
+    },
+    {
+      "second": 1,
+      "text": "9:41\n\nPremiere - 24 h left\n\nI\n\noO\n\neee\n\n\u2014\n\nkuvm.cloudfront.net @\n"
+    },
+    {
+      "second": 2,
+      "text": "9:41\n\nPremiere - 24 h left\n\nI\n\noO\n\neee\n\n\u2014\n\nkuvm.cloudfront.net @\n"
+    },
+    {
+      "second": 3,
+      "text": "9:41\n\nPremiere - 24 h left\n\nI\n\noO\n\neee\n\n\u2014\n\nkuvm.cloudfront.net @\n"
+    },
+    {
+      "second": 4,
+      "text": "ee A\n\n\u2014\n\ny\n\ne\n\nw\n"
+    },
+    {
+      "second": 5,
+      "text": "ee A\n\ny,\n"
+    },
+    {
+      "second": 6,
+      "text": "ee A\n\ny,\n"
+    },
+    {
+      "second": 7,
+      "text": "are\n\n~~ e\n\n\u201c2\n\ny av\n\na) Se\n\nA>\n\n- >\n\nSE\n\nSS\n\na\n\nRm)\n\nee\n\naS\n\na\n\n\u201c\u00a2 Ne\n\noh\n\n~\n\nay\n\n#\n\nee\n\nwi.\n\ns{ 2S\n\n>\n\nae\n\n7\n\n3\n\n<_s,\n\now\n\nSy\n\na\n\nSee\n"
+    },
+    {
+      "second": 8,
+      "text": "are\n\nae\n\net/=\n\na) Se\n\nA>\n\n- >\n\n=~ la\n\nRm)\n\nee\n\na\n\n\u201c\u00a2 5\n\n~\n\ney\n\nee\n\nwi.\n\ne{ =>\n\nwe\n\n7\n\n=>\n\nret\n\n<s,\n\now\n\n6.5\n\n\u201cS\n\nee\n"
+    },
+    {
+      "second": 9,
+      "text": "are\n\na) Se\n\nwe\n\n- >\n\nA>\n\n=~ a\n\nSS\n\nwe\n\napy)\n\noe\n\na\n\nxa\n\n\u00bb.\n\n(2\n\n~\n\nay\n\nee\n\nwe\n\ne{ a>\n\n>\n\nvw\n\n~~ =)\n\nye >\n\n*\n\nrt\n\now\n\nPy\n\n\u2018ee\n\n\u2018\n"
+    },
+    {
+      "second": 10,
+      "text": "\\y\n\n4yy\n\ni\u00bb 4\n\n7%\n\n13\n\n\u2014\n\nCG\n\nigs\u201d\n\n\\\n\ntS\n\n|\n"
+    },
+    {
+      "second": 11,
+      "text": "ty 4yy\n\n7% .\n\nj \u2018\n\nne\n\nFa\n\n\u201coe\n\nrer\n\neA:\n\n\\ Ay\n\n|\n"
+    },
+    {
+      "second": 12,
+      "text": "\\y4\n\n\u2018> ay?\n\n\u2014\n\na |\n\nyp\u2018\n\noe\n\ng\n\nJ\n\nah\n\nLe:\n\nig\n\n\\ |;\n"
+    },
+    {
+      "second": 13,
+      "text": "iy 4\n\n\\y\n\n4\n\nm4\n\nLa\n\ne.@\n\ncaer et\n\na.\n\nAN\n\n(f\n\nSQ\n"
+    },
+    {
+      "second": 14,
+      "text": "\\y\n\n(yt) W,\n\n4)\n\n\u00a34\n\n$e\n\nK\n\n3\n\na)\n\nal |\n"
+    },
+    {
+      "second": 15,
+      "text": "ips\n\n\u2018\\y\n\nob\n\ny 4h\n\na\n\nx+y\n\n\u00bb =\n\ni\n\na yes\n\nU\n"
+    },
+    {
+      "second": 16,
+      "text": "_\n\nee\n"
+    },
+    {
+      "second": 17,
+      "text": "5\n\na ro\n\n\\\n\ney\n\n\u2014s\n\nua uy\n"
+    },
+    {
+      "second": 18,
+      "text": "_\n\n= Sr~\n"
+    },
+    {
+      "second": 19,
+      "text": "eM\n\nme, aah y\n"
+    },
+    {
+      "second": 20,
+      "text": "=e\n\nRees. Fn\n\na\n\n> \u201cae ee\n\na\n\n.\n\n\u201c>\n\n>\n\n\u2018 >\n\nell\n\nee\n"
+    },
+    {
+      "second": 21,
+      "text": "a\n\nfa\n\nwa iy\n\nSe a\n"
+    },
+    {
+      "second": 22,
+      "text": ""
+    },
+    {
+      "second": 23,
+      "text": ""
+    },
+    {
+      "second": 24,
+      "text": ""
+    },
+    {
+      "second": 25,
+      "text": ""
+    },
+    {
+      "second": 26,
+      "text": ""
+    },
+    {
+      "second": 27,
+      "text": ""
+    },
+    {
+      "second": 28,
+      "text": ""
+    },
+    {
+      "second": 29,
+      "text": ""
+    },
+    {
+      "second": 30,
+      "text": ""
+    },
+    {
+      "second": 31,
+      "text": ""
+    },
+    {
+      "second": 32,
+      "text": ""
+    },
+    {
+      "second": 33,
+      "text": ""
+    },
+    {
+      "second": 34,
+      "text": "9:41\n\nFr @\n\n@ \u00a9)\n\n\u00ab\n\na\n\n\u2018i\n\n(001\n"
+    },
+    {
+      "second": 35,
+      "text": "9:41\n\nFr @\n\n@ \u00a9)\n\n\u00ab\n\nB\n\n\u2018iz\n\n(002\n"
+    },
+    {
+      "second": 36,
+      "text": "ee A\n\nS\n"
+    },
+    {
+      "second": 37,
+      "text": "wears\n\nae\n\nNe a\"\n\n- >\n\nok >\n\nes an Oe\n\n<\n\nx.\n\n~*~\n\n9.\n\n\u00a9\n\nxa\n\nPh, a?\n\na 5\n\n*\n\nAn,\n\nae\n\na>\n\n>\n\nae\n\nst=>\n\n7\n\nLe\n\n<_e,\n\n1s\n\now\n\n6.y\n\n\u201c\\\n\n\u201c%\n\noe)\n"
+    },
+    {
+      "second": 38,
+      "text": "were\n\nys >\n\nok >\n\n- >\n\nes On Ae\n\neS\n\na\n\noe sgn\n\nSS\n\n~*~\n\n9.\n\nx.\n\nxa\n\na\n\na\n\n*\n\nA.\n\n2\n\na\n\n>\n\na Se\n\nS&S\n\noe\n\n7\n\nLe\n\nSs\n\n<s,\n\now\n\n6 .y\n\n\u201c~\n\n\u201c%\n\nS|\n"
+    },
+    {
+      "second": 39,
+      "text": "Weare\n\n\u2018\\ >\n\na sh'-/s\n\nok >\n\n- >\n\nes On) Oe\n\na\n\n- Ss\n\nNS\n\n~*~\n\n9.\n\nx.\n\ngS\n\na J\n\na\n\n*\n\nA.\n\n2\n\na\n\n>\n\na \u2014\n\nS&S\n\noe\n\nOo ditty:\n\nLe\n\n<s,\n\now\n\n6.\n\n\u201c~\n\n\u201c%\n\nos)\n"
+    },
+    {
+      "second": 40,
+      "text": "iy 4\n\nip \u201cay?\n\n74\"\n\na .\n\naN\n\neBie\n\n==\n\n7\n\n\\ @ |\n"
+    },
+    {
+      "second": 41,
+      "text": "1p,\n\n\\y\n\niy 4\n\na\u2018\n\naA\\\u00a9@\n\nAn\n\n.\n\n\u2014\u2014\u2014\n\n-\n\nLae!\n\nF\n\nv\n\n\\\n"
+    },
+    {
+      "second": 42,
+      "text": "1p,\n\n(>\n\n\\y4\n\na\n\nu\n\na\n\nLore\n\nSe ir\n\na.\n\nAQ\n\n}\n"
+    },
+    {
+      "second": 43,
+      "text": "\\y\n\n\u2018y\n\nW?\n\nr4\\\n\n-\n\n-\n\nec\n\n\u201ca\n"
+    },
+    {
+      "second": 44,
+      "text": "1?\n\nab\n\nr4\\\n\nbed /\n\neet\n\n/\\\n\nfh\n\n,\n\n\\\n\nwe\n"
+    },
+    {
+      "second": 45,
+      "text": "iy\n\nr*\\\n\na)\n\n\\\n\n\u00a2J\n\n_\n\na\n\n\\!\n"
+    },
+    {
+      "second": 46,
+      "text": "\u2014\u2014\n\ncc\n\nSas\n\na ey\n\na\n\nay\n\n, Coa ee\n\nhf 2\n\naS\n\nSe\n\nwa iy\n\n\u2014\n"
+    },
+    {
+      "second": 47,
+      "text": "a _ 8\n"
+    },
+    {
+      "second": 48,
+      "text": "a\n\nv\n\nis\n\n\\ =\n\n.\n\nhy .\n\nEe _ 5\n"
+    },
+    {
+      "second": 49,
+      "text": "=\n\nee ft\n"
+    },
+    {
+      "second": 50,
+      "text": "ps\n\na\n\na ay\n"
+    },
+    {
+      "second": 51,
+      "text": "be:\n\n>\n\nae\n"
+    },
+    {
+      "second": 52,
+      "text": ""
+    },
+    {
+      "second": 53,
+      "text": ""
+    },
+    {
+      "second": 54,
+      "text": ""
+    },
+    {
+      "second": 55,
+      "text": ""
+    },
+    {
+      "second": 56,
+      "text": ""
+    },
+    {
+      "second": 57,
+      "text": ""
+    },
+    {
+      "second": 58,
+      "text": ""
+    },
+    {
+      "second": 59,
+      "text": "9:41\n\nFr @\n\noF\n\n> @\n\n(oa\n"
+    },
+    {
+      "second": 60,
+      "text": "9:41\n\nFr @\n\noF\n\n> @\n\n(oa\n"
+    },
+    {
+      "second": 61,
+      "text": "9:41\n\nFr @\n\noF\n\n> @\n\n(oa\n"
+    },
+    {
+      "second": 62,
+      "text": "9:41\n\nFr @\n\noF\n\n> @\n\n(oa\n"
+    },
+    {
+      "second": 63,
+      "text": "9:41\n\nFr @\n\n> @\n\n(oa\n"
+    },
+    {
+      "second": 64,
+      "text": "9:41\n\nFr @\n\n> @\n\n(oa\n"
+    },
+    {
+      "second": 65,
+      "text": "9:41\n\nFr @\n\n> @\n\n(oa\n"
+    },
+    {
+      "second": 66,
+      "text": "9:41\n\nFr @\n\n> @\n\n(oa\n"
+    },
+    {
+      "second": 67,
+      "text": "9:41\n\nFr @\n\n> @\n\n(oa\n"
+    },
+    {
+      "second": 68,
+      "text": "9:41\n\nFr @\n\n> @\n\n(oa\n"
+    },
+    {
+      "second": 69,
+      "text": "y\n\ni\n\nPremiere - 24 h left\n\n(x)\n\nThe end\n\nPremiere - 24 h left\n\nGua)\n\nSave your own moments\n\nReport a moment\n\noO\n\neee\n\n\u2014\n\nkuvm.cloudfront.net @\n"
+    },
+    {
+      "second": 70,
+      "text": "y\n\nSS\n\nPremiere - 24 h left\n\n(x)\n\nThe end\n\nPremiere - 24 h left\n\nere\n\nSave your own moments\n\nReport a moment\n\neee\n\nkuvm.cloudfront.net @\n"
+    },
+    {
+      "second": 71,
+      "text": "y\n\nSS\n\nPremiere - 24 h left\n\n(x)\n\nThe end\n\nPremiere - 24 h left\n\nere\n\nSave your own moments\n\nReport a moment\n\neee\n\nkuvm.cloudfront.net @\n"
+    },
+    {
+      "second": 72,
+      "text": "y\n\nSS\n\nPremiere - 24 h left\n\n(x)\n\nThe end\n\nPremiere - 24 h left\n\nere\n\nSave your own moments\n\nReport a moment\n\neee\n\nkuvm.cloudfront.net @\n"
+    },
+    {
+      "second": 73,
+      "text": "y\n\nSS\n\nPremiere - 24 h left\n\n(x)\n\nThe end\n\nPremiere - 24 h left\n\nere\n\nSave your own moments\n\nReport a moment\n\neee\n\nkuvm.cloudfront.net @\n"
+    },
+    {
+      "second": 74,
+      "text": "y\n\nSS\n\nPremiere - 24 h left\n\n(x)\n\nThe end\n\nPremiere - 24 h left\n\nere\n\nSave your own moments\n\nReport a moment\n\neee\n\nkuvm.cloudfront.net @\n"
+    },
+    {
+      "second": 75,
+      "text": "y\n\nSS\n\nPremiere - 24 h left\n\n(x)\n\nThe end\n\nPremiere - 24 h left\n\nere\n\nSave your own moments\n\nReport a moment\n\neee\n\nkuvm.cloudfront.net @\n"
+    },
+    {
+      "second": 76,
+      "text": "y\n\nSS\n\nPremiere - 24 h left\n\n(x)\n\nThe end\n\nPremiere - 24 h left\n\nere\n\nSave your own moments\n\nReport a moment\n\neee\n\nkuvm.cloudfront.net @\n"
+    },
+    {
+      "second": 77,
+      "text": "y\n\nSS\n\nPremiere - 24 h left\n\n(x)\n\nThe end\n\nPremiere - 24 h left\n\nere\n\nSave your own moments\n\nReport a moment\n\neee\n\nkuvm.cloudfront.net @\n"
+    },
+    {
+      "second": 78,
+      "text": "4\n\ni\n\nPremiere - 24 h left\n\n(x)\n\nThe end\n\nPremiere - 24 h left\n\nSave your own moments\n\nReport a moment\n\noO\n\neee\n\n\u2014\n\nkuvm.cloudfront.net @\n"
+    },
+    {
+      "second": 79,
+      "text": "4\n\ni\n\nPremiere - 24 h left\n\n(x)\n\nThe end\n\nPremiere - 24 h left\n\nSave your own moments\n\nReport a moment\n\noO\n\neee\n\n\u2014\n\nkuvm.cloudfront.net @\n"
+    }
+  ]
+}

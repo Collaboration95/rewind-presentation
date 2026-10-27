@@ -1,0 +1,17 @@
+$ grep -c '<testcase' quality-test-results-root/test-results-root.xml server-coverage/test-results-server.xml
+quality-test-results-root/test-results-root.xml:124
+server-coverage/test-results-server.xml:1006
+
+$ jq '{numPassedTests, numFailedTests, numPendingTests}' frontend-coverage/frontend-results.json
+{
+  "numPassedTests": 1674,
+  "numFailedTests": 0,
+  "numPendingTests": 0
+}
+
+$ jq -c '.total | {lines: .lines.pct, branches: .branches.pct, functions: .functions.pct}' server-coverage/coverage-summary.json
+{"lines":85.5,"branches":85.52,"functions":86.41}
+
+$ jq -c '.total | {statements: .statements.pct, lines: .lines.pct, branches: .branches.pct}' frontend-coverage/coverage-summary.json
+{"statements":89.64,"lines":92.33,"branches":85.66}
+

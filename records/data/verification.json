@@ -1,0 +1,43 @@
+{
+  "result": "PASS",
+  "charts": {
+    "burndown-sprint-0.png": [
+      1280,
+      720
+    ],
+    "burndown-sprint-1.png": [
+      1280,
+      720
+    ],
+    "burndown-sprint-2.png": [
+      1280,
+      720
+    ],
+    "burndown-sprint-3.png": [
+      1280,
+      720
+    ],
+    "velocity.png": [
+      1280,
+      720
+    ]
+  },
+  "issue_timeline_final_state_mismatches": 0,
+  "issue_count": 329,
+  "closed_issues": 319,
+  "open_mvp": 7,
+  "closed_per_sprint": [
+    44,
+    100,
+    145,
+    30
+  ],
+  "merged_prs_per_sprint": [
+    11,
+    36,
+    132,
+    34
+  ],
+  "visual_qa": "Five final PNGs inspected; no clipping or overlapping headings",
+  "application_tests_rerun": false
+}

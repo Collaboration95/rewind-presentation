@@ -1,0 +1,41 @@
+@startuml
+!include _style.iuml
+title Deployment view · hosted dev · ap-southeast-1 · as declared at f6cd896
+top to bottom direction
+' Evidence: infra/terraform/demo/lightsail.tf#L36-L81, web-distribution.tf#L1-L70, storage.tf; infra/terraform/media/main.tf#L1-L130, database.tf#L33-L60, cognito.tf; deploy/compose.yaml#L1-L110; deploy/nginx.conf; .github/workflows/deploy-dev.yml#L143-L330
+node "Member device" as dev <<device>> #ECFDF5 {
+  artifact "Browser / installed PWA\npublic/sw.js (push, shell cache)" as pwa
+}
+cloud "Browser push service\n(endpoint in the subscription)" as push #F1F5F9
+cloud "AWS ap-southeast-1" {
+  node "Amazon Cognito\nuser pool rewind-dev\nManaged Login (code + PKCE)" as cog <<managed service>> #F1F5F9
+  node "CloudFront distribution\nviewer HTTPS; cache disabled\norigin http-only :80\nadds X-Rewind-Origin-Auth" as cf <<CDN>> #F1F5F9
+  node "Lightsail instance rewind-demo\nmicro_3_0 · Ubuntu 24.04 · static IP\nfirewall: 80 open, 22 restricted" as vm <<device>> {
+    node "Docker Compose project" as dc <<executionEnvironment>> {
+      artifact "web: nginx :8080 -> host :80\nExpo web export + /api proxy" as web
+      artifact "runtime: Node :8787 (127.0.0.1)\nHTTP app + RealtimeHub\ncycle/media loop + reminder loop\nffmpeg child process" as rt
+    }
+    artifact "systemd timer\ndaily backup 03:15 UTC" as bk
+  }
+  database "Lightsail managed PostgreSQL 17\nrewind-dev-postgres · micro_2_0\nTLS · daily snapshots" as pg #F1F5F9
+  database "S3 media bucket\nprivate · versioned · SSE-S3\n_config/dev.env" as s3 #F1F5F9
+  database "S3 backup bucket" as s3b #F1F5F9
+}
+node "GitHub Actions\nDeploy dev" as gh <<device>> #FEF3C7
+pwa --> cf : HTTPS
+cf --> web : HTTP :80
+web --> rt : HTTP :8787 (/api)
+pwa --> cog : redirect (sign-in)
+rt --> cog : HTTPS token exchange
+rt --> pg : TLS (5432)
+rt --> s3 : HTTPS (IAM user key)
+pwa --> s3 : HTTPS presigned PUT
+rt --> push : HTTPS web push (VAPID)
+push ..> pwa : push event
+bk --> s3b : upload
+gh ..> vm : OIDC role -> temporary SSH 22\nscp bundle, compose up
+gh ..> s3 : read _config/dev.env
+legend bottom
+  Solid: runtime calls. Dashed: deploy and push. No load balancer, NAT, queue service or separate worker container.
+endlegend
+@enduml

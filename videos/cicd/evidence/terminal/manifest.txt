@@ -1,0 +1,31 @@
+$ jq '{commit, run_id, workflow, quality_run_id, scanner, security_gate}' release-manifest.json
+{
+  "commit": "aea7478bce14131b821caaa99b1185077b4a9403",
+  "run_id": "40344230832",
+  "workflow": "Deploy dev",
+  "quality_run_id": "40344231052",
+  "scanner": {
+    "name": "Trivy",
+    "version": "v0.70.0"
+  },
+  "security_gate": "pass"
+}
+
+$ jq '.images | map_values(.counts)' release-manifest.json
+{
+  "runtime": {
+    "UNKNOWN": 2,
+    "LOW": 0,
+    "MEDIUM": 1,
+    "HIGH": 0,
+    "CRITICAL": 0
+  },
+  "web": {
+    "UNKNOWN": 0,
+    "LOW": 0,
+    "MEDIUM": 0,
+    "HIGH": 0,
+    "CRITICAL": 0
+  }
+}
+

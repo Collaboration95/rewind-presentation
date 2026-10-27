@@ -1,0 +1,68 @@
+[
+  {
+    "start": 0.0,
+    "end": 0.9,
+    "good": true,
+    "mean": 227.54
+  },
+  {
+    "start": 0.9,
+    "end": 1.0,
+    "good": false,
+    "mean": 10.0
+  },
+  {
+    "start": 1.0,
+    "end": 17.9333,
+    "good": true,
+    "mean": 72.18
+  },
+  {
+    "start": 17.9333,
+    "end": 17.9667,
+    "good": false,
+    "mean": 10.0
+  },
+  {
+    "start": 17.9667,
+    "end": 25.9333,
+    "good": true,
+    "mean": 41.68
+  },
+  {
+    "start": 25.9333,
+    "end": 26.0,
+    "good": false,
+    "mean": 10.0
+  },
+  {
+    "start": 26.0,
+    "end": 33.9333,
+    "good": true,
+    "mean": 40.65
+  },
+  {
+    "start": 33.9333,
+    "end": 34.0,
+    "good": false,
+    "mean": 10.0
+  },
+  {
+    "start": 34.0,
+    "end": 41.9333,
+    "good": true,
+    "mean": 48.45
+  },
+  {
+    "start": 41.9333,
+    "end": 41.9667,
+    "good": false,
+    "mean": 10.0
+  },
+  {
+    "start": 41.9667,
+    "end": 42.0,
+    "good": true,
+    "mean": 226.84
+  }
+]

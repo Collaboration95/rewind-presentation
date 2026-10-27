@@ -1,0 +1,126 @@
+{
+  "source": "local fallback: GitHub workflow dispatch returned HTTP 404 (performance.yml not on default branch main); no Actions run exists",
+  "githubRunUrl": null,
+  "command": "TARGET_URL=https://d2m6kz76y4kuvm.cloudfront.net MAX_VUS=100 OUTPUT=presentation-prep/load-test/rerun-local-20261026T155655Z/results.json node scripts/load/hosted.mjs",
+  "runnerFile": "scripts/load/hosted.mjs (identical to origin/dev), Node v26.3.1, from the presenter's Mac",
+  "target": "https://d2m6kz76y4kuvm.cloudfront.net",
+  "deployedDevSha": "2390589dbf1d731fba9810ac410f5b31ac1c23c4",
+  "precedingDeploy": "https://github.com/Collaboration95/rewind-app/actions/runs/40350232534 (success, finished 2026-10-26T15:56:03Z)",
+  "startedAt": "2026-10-26T15:56:55.909Z",
+  "finishedAt": "2026-10-26T16:13:23.955Z",
+  "overlappingWorkflowRuns": 0,
+  "passed": true,
+  "gate": "every steady stage p95 < 2000 ms and errors < 1%",
+  "steadyStagesMeasured": [
+    {
+      "vus": 1,
+      "requests": 38,
+      "errors": 0,
+      "errorRate": 0,
+      "throughputRps": 0.21103693099558293,
+      "meanMs": 682.2835011052634,
+      "p50Ms": 765.0668750000041,
+      "p95Ms": 1057.7308340000018,
+      "p99Ms": 1238.1317920000001,
+      "maxMs": 1238.1317920000001
+    },
+    {
+      "vus": 10,
+      "requests": 330,
+      "errors": 0,
+      "errorRate": 0,
+      "throughputRps": 1.8333102951617297,
+      "meanMs": 422.782921569696,
+      "p50Ms": 389.79483300005086,
+      "p95Ms": 663.4130420000292,
+      "p99Ms": 827.3990410000551,
+      "maxMs": 948.0073330000159
+    },
+    {
+      "vus": 25,
+      "requests": 826,
+      "errors": 0,
+      "errorRate": 0,
+      "throughputRps": 4.587819824918131,
+      "meanMs": 424.06929156053315,
+      "p50Ms": 378.9762079999782,
+      "p95Ms": 674.9279170000227,
+      "p99Ms": 944.3709169999929,
+      "maxMs": 1525.310792000033
+    },
+    {
+      "vus": 50,
+      "requests": 1632,
+      "errors": 0,
+      "errorRate": 0,
+      "throughputRps": 9.064753361620669,
+      "meanMs": 471.6684033946093,
+      "p50Ms": 432.15862500004005,
+      "p95Ms": 842.4493750000838,
+      "p99Ms": 1105.5832919999957,
+      "maxMs": 1487.9776249999413
+    },
+    {
+      "vus": 100,
+      "requests": 3212,
+      "errors": 0,
+      "errorRate": 0,
+      "throughputRps": 17.83765712919595,
+      "meanMs": 615.4496602117052,
+      "p50Ms": 496.00391700002365,
+      "p95Ms": 1335.9449579999782,
+      "p99Ms": 1635.8794999999227,
+      "maxMs": 1972.7178330000024
+    }
+  ],
+  "aggregateSteadyMeasured": {
+    "requests": 6038,
+    "errors": 0,
+    "errorRate": 0,
+    "throughputRps": 6.707294340523552,
+    "meanMs": 540.2970379147067,
+    "p50Ms": 462.8941249999916,
+    "p95Ms": 1163.627334000077,
+    "p99Ms": 1520.086833999958,
+    "maxMs": 1972.7178330000024
+  },
+  "capacityProjected": {
+    "serviceDemandMs": 45.3897112367573,
+    "fixedDelayMs": 377.8908066517058,
+    "rmseMs": 10.293993619555678,
+    "ceilingRps": 22.031424583952504,
+    "kneeUsersAtU90": 115.6343361547307,
+    "kneeRpsAtU90": 19.828282125557255,
+    "rows": [
+      {
+        "users": 250,
+        "throughputRps": 21.86627833792948,
+        "meanMs": 6433.129869491727,
+        "utilization": 0.9925040595811805,
+        "twoHostsMeanMs": 1071.1897174666021,
+        "twoHostsThroughputRps": 41.17809056118915
+      },
+      {
+        "users": 500,
+        "throughputRps": 21.97387527200963,
+        "meanMs": 17754.293169074546,
+        "utilization": 0.9973878533490388,
+        "twoHostsMeanMs": 6433.129869491727,
+        "twoHostsThroughputRps": 43.73255667585896
+      },
+      {
+        "users": 1000,
+        "throughputRps": 22.006464085826345,
+        "meanMs": 40441.193828316806,
+        "utilization": 0.998867050197728,
+        "twoHostsMeanMs": 17754.293169074546,
+        "twoHostsThroughputRps": 43.94775054401926
+      }
+    ]
+  },
+  "charts": [
+    "charts/latency-vs-vus.png",
+    "charts/throughput-vs-vus.png",
+    "charts/measured-vs-projected.png"
+  ]
+}

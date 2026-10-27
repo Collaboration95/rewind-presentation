@@ -1,0 +1,44 @@
+@startuml
+!include _style.iuml
+skinparam Padding 0
+title Analysis classes · UC07–UC08 Close cycle and release film
+left to right direction
+class "CycleClock\nBoundary" as ClockBoundary <<boundary>> $SAD
+class "PrivateMedia\nBoundary" as MediaBoundary <<boundary>> $SAD
+class CloseCycle <<control>> $CREAM
+class CompileFilm <<control>> $CREAM
+class PublishFilm <<control>> $CREAM
+class Cycle <<entity>> {
+  id: String
+  endsAt: Instant
+  status: CycleStatus
+  releaseStatus: ReleaseStatus
+}
+class FilmJob <<entity>> {
+  id: String
+  status: JobStatus
+  claimGeneration: Integer
+}
+class CompilationInput <<entity>> {
+  position: Integer
+}
+class LifecycleEvent <<entity>> {
+  transition: Transition
+  occurredAt: Instant
+}
+ClockBoundary --> CloseCycle : boundary reached
+ClockBoundary --> CompileFilm : work due
+ClockBoundary --> PublishFilm : release due
+CloseCycle --> Cycle : close / successor
+CloseCycle --> FilmJob : schedule
+CompileFilm --> FilmJob : claim / finalise
+CompileFilm --> MediaBoundary : read / write
+PublishFilm --> MediaBoundary : verify bytes
+PublishFilm --> Cycle : publish / archive
+Cycle "1" -- "0..1" FilmJob : compiled film
+Cycle "1" -- "0..*" LifecycleEvent
+FilmJob "1" -- "0..*" CompilationInput
+legend bottom
+Conceptual BCE responsibilities; mapped to implemented elements in a2d-cycle.
+endlegend
+@enduml

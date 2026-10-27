@@ -1,0 +1,20 @@
+[
+  {
+    "start": 0.0,
+    "end": 25.9333,
+    "good": true,
+    "mean": 78.32
+  },
+  {
+    "start": 25.9333,
+    "end": 25.9667,
+    "good": false,
+    "mean": 10.0
+  },
+  {
+    "start": 25.9667,
+    "end": 42.0,
+    "good": true,
+    "mean": 70.29
+  }
+]

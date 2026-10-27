@@ -1,0 +1,46 @@
+@startuml
+!include _style.iuml
+title Analysis to design · UC07–UC08 Close cycle and release film
+top to bottom direction
+skinparam Padding 0
+skinparam nodesep 14
+skinparam ranksep 22
+class CycleClockBoundary <<boundary>> $SAD
+class "CloseCycle + PublishFilm" as CL <<control>> $SAD
+class CompileFilm <<control>> $SAD
+class PrivateMediaBoundary <<boundary>> $SAD
+class "Cycle + FilmJob\nCompilationInput + LifecycleEvent" as Entities <<entity>> $SAD
+class "cycles/scheduler.ts" as Scheduler <<module>> {
+  runCycleSchedulerTick()
+}
+class "cycles/lifecycle.ts" as Lifecycle <<module>> {
+  advanceCycleLifecycleWithStore()
+  publishCycleReleaseWithStore()
+}
+class "jobs/compilation.ts" as Compilation <<module>> {
+  processCompilationJobForWorker()
+}
+interface "MediaStore" as Store <<interface>> <<strategy>> {
+  read(scope, ref) / put(scope, input)
+}
+class "Persistent records" as Tables <<entity>> {
+  cycles
+  media_jobs (kind = 'film')
+  compilation_job_inputs
+  cycle_lifecycle_events
+}
+CycleClockBoundary ..right.> Scheduler : <<refine>>
+CL ..right.> Lifecycle : <<refine>>
+CompileFilm ..right.> Compilation : <<refine>>
+PrivateMediaBoundary ..right.> Store : <<refine>>
+Entities ..right.> Tables : <<refine>>
+CycleClockBoundary -[hidden]down- CL
+CL -[hidden]down- CompileFilm
+CompileFilm -[hidden]down- PrivateMediaBoundary
+PrivateMediaBoundary -[hidden]down- Entities
+Scheduler -[hidden]down- Lifecycle
+Lifecycle -[hidden]down- Compilation
+Compilation -[hidden]down- Store
+Store -[hidden]down- Tables
+
+@enduml

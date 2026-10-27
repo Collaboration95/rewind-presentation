@@ -1,0 +1,40 @@
+{
+  "output": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/edit/test6.mp4",
+  "frames": 180,
+  "duration": 6.0,
+  "segments": [
+    {
+      "type": "phone",
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/stills/02-signin-blank.png",
+      "still": true,
+      "start": 0.0,
+      "end": 6.0,
+      "frames": 180,
+      "duration": 6.0,
+      "width": 1206,
+      "height": 2622,
+      "crop": null,
+      "masks": [],
+      "audio_file": null,
+      "audio_in": 0,
+      "gain": 1,
+      "source_audio": false,
+      "island": false,
+      "signature": {
+        "row": {
+          "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/stills/02-signin-blank.png",
+          "in": 0,
+          "out": 6,
+          "duration": 6,
+          "audio": false
+        },
+        "source": [
+          "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/stills/02-signin-blank.png",
+          1050466,
+          1793025387768753205
+        ],
+        "audio": null
+      }
+    }
+  ]
+}

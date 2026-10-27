@@ -1,0 +1,35 @@
+@startuml
+!include _style.iuml
+title Artifact view · Source, evidence and deployable bundle
+skinparam nodesep 25
+skinparam ranksep 30
+skinparam defaultFontSize 20
+skinparam ArrowFontSize 19
+skinparam Padding 6
+skinparam linetype polyline
+artifact "Git · source + lockfile + workflows + IaC\nIssue branch → PR → protected dev\nPR dev → main: Quality + 1 approval\nBoth branches: up-to-date + conversations" as SOURCE #F5F2E9
+artifact "Quality → Actions artifacts\nquality-test-results-root: test-results-root.xml\nserver-coverage: test-results-server.xml\n  coverage-summary.json; server-summary.txt\n  server-v8/*.json\nfrontend-coverage: frontend-results.json\n  coverage-summary.json\nquality-npm-audit: npm-audit.json" as QUALITY #F5F2E9
+artifact "Candidate scans → Actions artifacts\nrelease-security-{runtime,web}-<sha>\n  {image}-sbom.cdx.json\n  {image}-vulnerabilities.txt\n  {image}-image-identity.txt\nrelease-security-iac-<sha>: iac-full.json\ngitleaks-<sha>: gitleaks.sarif" as CAND #F5F2E9
+artifact "Deploy dev → Actions artifacts\ndev-release-security-<sha>\n  sbom-{runtime,web}.cdx.json\n  trivy-{runtime,web}.json\n  release-manifest.json\ndev-release-bundle-<sha>\n  rewind-release.tar + Sigstore JSON\n  tar: source.tar, runtime.tar, web.tar, manifest.json" as BUNDLE #EEE7F3
+artifact "Hosted checks → Actions artifacts\nzap-baseline-<sha>\n  report_json.json / report_html.html\n  report_md.md\nhosted-performance-<run-id>\n  results.json + SUMMARY.md" as HOSTED #F5F2E9
+artifact "GitHub Security\nCodeQL analyses / alerts\nGitleaks redacted SARIF results" as SECURITY #F5F2E9
+artifact "Lightsail · /srv/rewind/releases\nVerified runtime + web images" as INSTALL #FCF7E7
+SOURCE -[hidden]right- QUALITY
+QUALITY -[hidden]right- CAND
+BUNDLE -[hidden]right- HOSTED
+HOSTED -[hidden]right- SECURITY
+SOURCE -[hidden]down- BUNDLE
+QUALITY -[hidden]down- HOSTED
+CAND -[hidden]down- SECURITY
+BUNDLE -down-> INSTALL : SCP :22 + health
+SOURCE -[norank,dashed]-> QUALITY : PR + push
+SOURCE -[norank,dashed]-> CAND : security workflows
+SOURCE -[norank,dashed]-> BUNDLE : dev push
+CAND -[norank,dashed]-> SECURITY : SARIF
+INSTALL -[norank,dashed]-> HOSTED : ZAP / manual load
+legend bottom
+  Actions retention: 30 d; server/frontend coverage and hosted performance: 14 d. CodeQL results live in Security.
+  Manifest binds commit + Quality run + image IDs + SHA-256(tar, SBOMs, Trivy). Attestation signs tar + manifest.
+  <sha> = commit; {runtime,web} = both images. Main browser checks join Quality; hosted dev is the deployment target.
+endlegend
+@enduml

@@ -1,0 +1,150 @@
+{
+  "status": "PASS",
+  "scope": "All generated/changed files are inside cuts-b. Only supplied clips/stills and permitted renderer/verification code were read.",
+  "layout": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "phone": [
+      740,
+      60,
+      440,
+      957
+    ],
+    "backdrop": "cream",
+    "text": "small numbered title only"
+  },
+  "outputs": [
+    {
+      "output": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/cuts-b/05-photo-with-a-look-review.mp4",
+      "duration_seconds": 55,
+      "frames": 1650,
+      "encoder_checks": {
+        "codec": true,
+        "profile": true,
+        "size": true,
+        "pixel_format": true,
+        "fps": true,
+        "frame_count": true,
+        "video_duration": true,
+        "container_duration": true,
+        "audio": true,
+        "audio_duration": true
+      },
+      "silent_aac": true,
+      "ocr_frames_scanned": 81,
+      "forbidden_text_hits": [],
+      "sha256": "c292411d474b8796b5e431d5b0281fa58e485ee609c4893584dee2915693caf0",
+      "visual_review": "PASS: final full-frame and phone contact sheets, final frames and edit boundaries inspected",
+      "frame_integrity": {
+        "file": "05-photo-with-a-look-review.mp4",
+        "frames_scanned": 1650,
+        "blank_phone_frames": [],
+        "min_phone_mean_luma": 38.05293062200957,
+        "last_phone_mean_luma": 50.01584928229665
+      }
+    },
+    {
+      "output": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/cuts-b/06-video-and-allowance-review.mp4",
+      "duration_seconds": 65,
+      "frames": 1950,
+      "encoder_checks": {
+        "codec": true,
+        "profile": true,
+        "size": true,
+        "pixel_format": true,
+        "fps": true,
+        "frame_count": true,
+        "video_duration": true,
+        "container_duration": true,
+        "audio": true,
+        "audio_duration": true
+      },
+      "silent_aac": true,
+      "ocr_frames_scanned": 97,
+      "forbidden_text_hits": [],
+      "sha256": "405a8d8017709600e25fd0248d3cefb794d5cb6e6ce8d31188da6b64da6b05d4",
+      "visual_review": "PASS: final full-frame and phone contact sheets, final frames and edit boundaries inspected",
+      "frame_integrity": {
+        "file": "06-video-and-allowance-review.mp4",
+        "frames_scanned": 1950,
+        "blank_phone_frames": [],
+        "min_phone_mean_luma": 40.30442583732057,
+        "last_phone_mean_luma": 227.45962918660288
+      }
+    },
+    {
+      "output": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/cuts-b/08-weekly-reminder-review.mp4",
+      "duration_seconds": 50,
+      "frames": 1500,
+      "encoder_checks": {
+        "codec": true,
+        "profile": true,
+        "size": true,
+        "pixel_format": true,
+        "fps": true,
+        "frame_count": true,
+        "video_duration": true,
+        "container_duration": true,
+        "audio": true,
+        "audio_duration": true
+      },
+      "silent_aac": true,
+      "ocr_frames_scanned": 68,
+      "forbidden_text_hits": [],
+      "sha256": "f1850c0fd7fb865ca010eae999d43255b07736de8b62c73e0c65a1a1e96cb730",
+      "visual_review": "PASS: final full-frame and phone contact sheets, final frames and edit boundaries inspected",
+      "frame_integrity": {
+        "file": "08-weekly-reminder-review.mp4",
+        "frames_scanned": 1500,
+        "blank_phone_frames": [],
+        "min_phone_mean_luma": 224.54306220095694,
+        "last_phone_mean_luma": 224.7221889952153
+      }
+    },
+    {
+      "output": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/cuts-b/12-outsider-denied-review.mp4",
+      "duration_seconds": 50,
+      "frames": 1500,
+      "encoder_checks": {
+        "codec": true,
+        "profile": true,
+        "size": true,
+        "pixel_format": true,
+        "fps": true,
+        "frame_count": true,
+        "video_duration": true,
+        "container_duration": true,
+        "audio": true,
+        "audio_duration": true
+      },
+      "silent_aac": true,
+      "ocr_frames_scanned": 71,
+      "forbidden_text_hits": [],
+      "sha256": "e3b06e17a5383a44f14f8c9a9866501164671aa9e0f47af64acd3c5ccb824edc",
+      "visual_review": "PASS: final full-frame and phone contact sheets, final frames and edit boundaries inspected",
+      "frame_integrity": {
+        "file": "12-outsider-denied-review.mp4",
+        "frames_scanned": 1500,
+        "blank_phone_frames": [],
+        "min_phone_mean_luma": 220.0559210526316,
+        "last_phone_mean_luma": 222.02601674641147
+      }
+    }
+  ],
+  "recording_motion": {
+    "recording_output_in": 21.8,
+    "recording_output_out": 27.8,
+    "frames": 180,
+    "distinct_picture_frames": 180,
+    "mean_consecutive_absolute_pixel_change": 3.2115581005586593
+  },
+  "ocr_limit": "Every second plus both sides of all edit boundaries; this is a sampled text check, supported by visual contacts.",
+  "edits": {
+    "05": "Selected footage through 35.1s only, then captured Sealed hold. No terminal tail.",
+    "06": "Sequential-decoded real footage, complete six-second recording; review/applying-look/Sealed; final native supplied ledger at 57-65s.",
+    "08": "28s settings/reminder opt-in, then 22s banner/Home. Install modal omitted by Off-to-On cut. No sign-out action.",
+    "12": "7s supplied Priya profile, real empty state/invite entry/Accept/used-code error; supplied error hold, empty ending."
+  },
+  "provenance": "05/06 sources/*.mp4 are local 30fps sequential decodes of the supplied raw MOVs, with no speed change. Holds are extracted real frames or the explicitly supplied native PNGs. No new UI, overlays, simulation labels, disclaimers, captions or cycle-duration copy was created."
+}

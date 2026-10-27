@@ -1,0 +1,284 @@
+{
+  "origin": "https://d2m6kz76y4kuvm.cloudfront.net",
+  "createdAt": "2026-10-26T14:38:53.637Z",
+  "accounts": {
+    "maya": {
+      "username": "maya.chen.27",
+      "displayName": "Maya",
+      "password": "Rw!vZ4elJ6W7PaNh2m3HQDgM6Ru",
+      "status": "ready",
+      "attempts": [
+        {
+          "at": "2026-10-26T14:38:53.655Z",
+          "kind": "register",
+          "state": "requested",
+          "result": 429
+        },
+        {
+          "at": "2026-10-26T14:45:16.721Z",
+          "kind": "register",
+          "state": "requested",
+          "result": 201
+        }
+      ],
+      "retryAt": "2026-10-26T14:44:43.512Z",
+      "account": {
+        "id": "872b83de-94d6-4a97-af68-a9e44c6117c7",
+        "username": "maya.chen.27",
+        "displayName": "Maya",
+        "createdAt": "2026-10-26T14:45:17.422Z",
+        "updatedAt": "2026-10-26T14:45:18.476Z"
+      },
+      "storageState": {
+        "cookies": [
+          {
+            "name": "__Host-rewind_session",
+            "value": "IzO2JNZLKKZbCHC00sut9LzWDTwKDjd-hF47qYLRApw",
+            "domain": "d2m6kz76y4kuvm.cloudfront.net",
+            "path": "/",
+            "expires": 1793630718.108,
+            "httpOnly": true,
+            "secure": true,
+            "sameSite": "Lax"
+          }
+        ],
+        "origins": []
+      },
+      "readyAt": "2026-10-26T14:45:18.631Z"
+    },
+    "jun": {
+      "username": "jun.lee.27",
+      "displayName": "Jun",
+      "password": "Rw!g3PU5ZEXYnVhsgt3lL5HlXjI",
+      "status": "ready",
+      "attempts": [
+        {
+          "at": "2026-10-26T14:45:18.634Z",
+          "kind": "register",
+          "state": "requested",
+          "result": 201
+        }
+      ],
+      "account": {
+        "id": "48d0e016-2a67-4634-8e0a-56ccfd347a45",
+        "username": "jun.lee.27",
+        "displayName": "Jun",
+        "createdAt": "2026-10-26T14:45:19.295Z",
+        "updatedAt": "2026-10-26T14:45:20.347Z"
+      },
+      "storageState": {
+        "cookies": [
+          {
+            "name": "__Host-rewind_session",
+            "value": "tLKUi8ZKWta-k04Cl-6LjPdd4p-rpHfsrVoCQeKQFDI",
+            "domain": "d2m6kz76y4kuvm.cloudfront.net",
+            "path": "/",
+            "expires": 1793630719.981,
+            "httpOnly": true,
+            "secure": true,
+            "sameSite": "Lax"
+          }
+        ],
+        "origins": []
+      },
+      "readyAt": "2026-10-26T14:45:20.423Z"
+    },
+    "priya": {
+      "username": "priya.nair.27",
+      "displayName": "Priya",
+      "password": "Rw!_zuJEgrjRu2PCHL5OcWxR-p2",
+      "status": "ready",
+      "attempts": [
+        {
+          "at": "2026-10-26T14:45:20.426Z",
+          "kind": "register",
+          "state": "requested",
+          "result": 201
+        }
+      ],
+      "account": {
+        "id": "759b6d58-3361-48bc-9d38-79e73d165d1d",
+        "username": "priya.nair.27",
+        "displayName": "Priya",
+        "createdAt": "2026-10-26T14:45:20.973Z",
+        "updatedAt": "2026-10-26T14:45:22.048Z"
+      },
+      "storageState": {
+        "cookies": [
+          {
+            "name": "__Host-rewind_session",
+            "value": "QOUwCllLbwi4XiDjC4zoddJPkvyM4yD8smy_kwv376w",
+            "domain": "d2m6kz76y4kuvm.cloudfront.net",
+            "path": "/",
+            "expires": 1793630721.681,
+            "httpOnly": true,
+            "secure": true,
+            "sameSite": "Lax"
+          }
+        ],
+        "origins": []
+      },
+      "readyAt": "2026-10-26T14:45:22.117Z"
+    }
+  },
+  "media": {
+    "account": "jun",
+    "premiere": {
+      "state": "ready",
+      "cycleId": "real-cycle-8a66da82-c634-4f47-9016-9d2d4f0b0dcc",
+      "filmId": "film-bae7047be8d5782f0db5ab95",
+      "segments": [
+        {
+          "contributionId": "contribution-fcfa313ddd137b3e",
+          "startSeconds": 0,
+          "durationSeconds": 3,
+          "hidden": false,
+          "mine": false
+        },
+        {
+          "contributionId": "contribution-1c09a627c08f6247",
+          "startSeconds": 3,
+          "durationSeconds": 3,
+          "hidden": false,
+          "mine": true
+        },
+        {
+          "contributionId": "contribution-a9a1e01c8d124120",
+          "startSeconds": 6,
+          "durationSeconds": 6,
+          "hidden": false,
+          "mine": false
+        },
+        {
+          "contributionId": "contribution-28c58cda16d16c69",
+          "startSeconds": 12,
+          "durationSeconds": 6,
+          "hidden": false,
+          "mine": true
+        },
+        {
+          "contributionId": "contribution-676dc3ef115117de",
+          "startSeconds": 18,
+          "durationSeconds": 3,
+          "hidden": false,
+          "mine": false
+        }
+      ],
+      "playbackPath": "/media/access/4U64beZLXSXS1oqa1lEei5yYF_B0zFWmC5E1xp_WxcQ"
+    },
+    "archive": {
+      "archive": {
+        "films": [
+          {
+            "id": "film-bae7047be8d5782f0db5ab95",
+            "cycleId": "real-cycle-8a66da82-c634-4f47-9016-9d2d4f0b0dcc",
+            "publishedAt": "2026-10-26T15:18:55.456Z",
+            "segments": [
+              {
+                "contributionId": "contribution-fcfa313ddd137b3e",
+                "startSeconds": 0,
+                "durationSeconds": 3,
+                "hidden": false,
+                "mine": false
+              },
+              {
+                "contributionId": "contribution-1c09a627c08f6247",
+                "startSeconds": 3,
+                "durationSeconds": 3,
+                "hidden": false,
+                "mine": true
+              },
+              {
+                "contributionId": "contribution-a9a1e01c8d124120",
+                "startSeconds": 6,
+                "durationSeconds": 6,
+                "hidden": false,
+                "mine": false
+              },
+              {
+                "contributionId": "contribution-28c58cda16d16c69",
+                "startSeconds": 12,
+                "durationSeconds": 6,
+                "hidden": false,
+                "mine": true
+              },
+              {
+                "contributionId": "contribution-676dc3ef115117de",
+                "startSeconds": 18,
+                "durationSeconds": 3,
+                "hidden": false,
+                "mine": false
+              }
+            ],
+            "downloadPath": "/media/access/c9dVOGbHtwLuSzJa3J5NTs-6Ld2wZ7wCroB2Tdd8pM8",
+            "playbackPath": "/media/access/qE18KYMxyqcZJ6VNgiBWFIree2XupRD0Ppc0KQ8yfvQ"
+          }
+        ],
+        "clips": [
+          {
+            "id": "clip-job-28c58cda16d16c69",
+            "contributionId": "contribution-28c58cda16d16c69",
+            "cycleId": "real-cycle-8a66da82-c634-4f47-9016-9d2d4f0b0dcc",
+            "createdAt": "2026-10-26T14:49:06.924Z",
+            "downloadPath": "/media/access/Y3qUjsl7-_J12g2aDbVTthliCoXu4q1Id2XJpHMvSaY"
+          },
+          {
+            "id": "clip-job-1c09a627c08f6247",
+            "contributionId": "contribution-1c09a627c08f6247",
+            "cycleId": "real-cycle-8a66da82-c634-4f47-9016-9d2d4f0b0dcc",
+            "createdAt": "2026-10-26T14:47:54.688Z",
+            "downloadPath": "/media/access/psyPnjvSjBkvNm_QuSFzMJfF-hefl0nOdMj9xTpPT58"
+          }
+        ]
+      },
+      "pagination": {
+        "filmCursor": null,
+        "clipCursor": null,
+        "hasMoreFilms": false,
+        "hasMoreClips": false
+      }
+    },
+    "refreshedAt": "2026-10-26T15:20:58.905Z"
+  },
+  "groups": {
+    "collecting": {
+      "id": "real-group-ef0dc5d3-b66b-49f8-abe9-784509d2c3e6",
+      "name": "Our everyday",
+      "cycleId": "real-cycle-dc6bd068-5625-4fdd-a87e-b0a8d1f2e898",
+      "startsAt": "2026-10-26T14:45:25.472Z",
+      "endsAt": "2026-11-23T14:45:25.472Z",
+      "invite": {
+        "id": "real-invite-a9fbb524dad16c7b33c7e82b",
+        "code": "LTZ-TIC",
+        "groupId": "real-group-ef0dc5d3-b66b-49f8-abe9-784509d2c3e6",
+        "status": "active",
+        "createdAt": "2026-10-26T14:45:35.300Z",
+        "expiresAt": "2026-10-27T14:45:35.300Z"
+      },
+      "inviteAlreadyUsed": true
+    },
+    "film": {
+      "id": "real-group-1ef6c358-817e-43dd-8752-19cb6b7e47ad",
+      "name": "The little things",
+      "cycleId": "real-cycle-8a66da82-c634-4f47-9016-9d2d4f0b0dcc",
+      "startsAt": "2026-10-26T14:47:29.475Z",
+      "endsAt": "2026-10-26T15:17:29.475Z",
+      "invite": {
+        "id": "real-invite-4a2452939534d973b3544d36",
+        "code": "STA-FOK",
+        "groupId": "real-group-1ef6c358-817e-43dd-8752-19cb6b7e47ad",
+        "status": "active",
+        "createdAt": "2026-10-26T14:47:30.641Z",
+        "expiresAt": "2026-10-27T14:47:30.641Z"
+      },
+      "inviteAlreadyUsed": true
+    }
+  },
+  "film": {
+    "file": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/film/rewind-hosted-film.mp4",
+    "groupId": "real-group-1ef6c358-817e-43dd-8752-19cb6b7e47ad",
+    "cycleId": "real-cycle-8a66da82-c634-4f47-9016-9d2d4f0b0dcc",
+    "filmId": "film-bae7047be8d5782f0db5ab95",
+    "ready": true
+  }
+}

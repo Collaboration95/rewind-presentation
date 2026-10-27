@@ -1,0 +1,213 @@
+Classify change scope	Set up job	﻿2026-10-26T14:50:49.0914549Z Current runner version: '2.338.0'
+Classify change scope	Set up job	2026-10-26T14:50:49.0952457Z ##[group]Runner Image Provisioner
+Classify change scope	Set up job	2026-10-26T14:50:49.0953809Z Hosted Compute Agent
+Classify change scope	Set up job	2026-10-26T14:50:49.0954812Z Version: 20261021.618
+Classify change scope	Set up job	2026-10-26T14:50:49.0955809Z Commit: 21505ad2541d5be6135ed84fc33697146cf75b8e
+Classify change scope	Set up job	2026-10-26T14:50:49.0957266Z Build Date: 2026-10-21T00:45:21Z
+Classify change scope	Set up job	2026-10-26T14:50:49.0958388Z Worker ID: {c6e2d1be-e795-48af-b5c2-dcd0ecf8243a}
+Classify change scope	Set up job	2026-10-26T14:50:49.0959576Z Region: westus
+Classify change scope	Set up job	2026-10-26T14:50:49.0960514Z Cloud: Azure
+Classify change scope	Set up job	2026-10-26T14:50:49.0961401Z ##[endgroup]
+Classify change scope	Set up job	2026-10-26T14:50:49.0964047Z ##[group]Operating System
+Classify change scope	Set up job	2026-10-26T14:50:49.0965248Z Ubuntu
+Classify change scope	Set up job	2026-10-26T14:50:49.0966196Z 24.04.5
+Classify change scope	Set up job	2026-10-26T14:50:49.0967358Z LTS
+Classify change scope	Set up job	2026-10-26T14:50:49.0968212Z ##[endgroup]
+Classify change scope	Set up job	2026-10-26T14:50:49.0969055Z ##[group]Runner Image
+Classify change scope	Set up job	2026-10-26T14:50:49.0970105Z Image: ubuntu-24.04
+Classify change scope	Set up job	2026-10-26T14:50:49.0971035Z Version: 20261012.334.1
+Classify change scope	Set up job	2026-10-26T14:50:49.0972877Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261012.334/images/ubuntu/Ubuntu2404-Readme.md
+Classify change scope	Set up job	2026-10-26T14:50:49.0975763Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261012.334
+Classify change scope	Set up job	2026-10-26T14:50:49.0977727Z ##[endgroup]
+Classify change scope	Set up job	2026-10-26T14:50:49.0979623Z ##[group]GITHUB_TOKEN Permissions
+Classify change scope	Set up job	2026-10-26T14:50:49.0982347Z Contents: read
+Classify change scope	Set up job	2026-10-26T14:50:49.0983273Z Metadata: read
+Classify change scope	Set up job	2026-10-26T14:50:49.0984215Z ##[endgroup]
+Classify change scope	Set up job	2026-10-26T14:50:49.0987636Z Secret source: Actions
+Classify change scope	Set up job	2026-10-26T14:50:49.0989206Z Cache mode: write
+Classify change scope	Set up job	2026-10-26T14:50:49.0990274Z Prepare workflow directory
+Classify change scope	Set up job	2026-10-26T14:50:49.1482471Z Prepare all required actions
+Classify change scope	Set up job	2026-10-26T14:50:49.1545336Z Getting action download info
+Classify change scope	Set up job	2026-10-26T14:50:49.5171124Z Download action repository 'actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+Classify change scope	Set up job	2026-10-26T14:50:49.6513240Z Download action repository 'actions/setup-node@820762786026740c76f36085b0efc47a31fe5020' (SHA:820762786026740c76f36085b0efc47a31fe5020)
+Classify change scope	Set up job	2026-10-26T14:50:49.8997568Z Complete job name: Classify change scope
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	﻿2026-10-26T14:50:49.9877708Z ##[group]Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:49.9878844Z with:
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:49.9879311Z   persist-credentials: false
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:49.9879881Z   repository: Collaboration95/rewind-app
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:49.9884066Z   token: ***
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:49.9884540Z   ssh-strict: true
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:49.9885004Z   ssh-user: git
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:49.9885442Z   clean: true
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:49.9885897Z   sparse-checkout-cone-mode: true
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:49.9886431Z   fetch-depth: 1
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:49.9887067Z   fetch-tags: false
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:49.9887532Z   show-progress: true
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:49.9887994Z   lfs: false
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:49.9888417Z   submodules: false
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:49.9888876Z   set-safe-directory: true
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:49.9889385Z   allow-unsafe-pr-checkout: false
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:49.9890105Z ##[endgroup]
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:50.0966290Z Syncing repository: Collaboration95/rewind-app
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:50.0969367Z ##[group]Getting Git version info
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:50.0970559Z Working directory is '/home/runner/work/rewind-app/rewind-app'
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:50.0972218Z [command]/usr/bin/git version
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:50.1003818Z git version 2.55.0
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:50.1026887Z ##[endgroup]
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:50.1038193Z Temporarily overriding HOME='/home/runner/work/_temp/27ed481f-2690-43bf-8a57-e7d98e29cc24' before making global git config changes
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:50.1040438Z Adding repository directory to the temporary git global config as a safe directory
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:50.1045302Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/rewind-app/rewind-app
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:50.1113378Z Deleting the contents of '/home/runner/work/rewind-app/rewind-app'
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:50.1117186Z ##[group]Determining repository object format
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:50.1118983Z ##[endgroup]
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:50.1120085Z ##[group]Initializing the repository
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:50.1124071Z [command]/usr/bin/git init /home/runner/work/rewind-app/rewind-app
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:50.1218677Z hint: Using 'master' as the name for the initial branch. This default branch name
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:50.1220453Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:50.1222367Z hint: to use in all of your new repositories, which will suppress this warning,
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:50.1223548Z hint: call:
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:50.1224184Z hint:
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:50.1224948Z hint: 	git config --global init.defaultBranch <name>
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:50.1225901Z hint:
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:50.1227042Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:50.1228539Z hint: 'development'. The just-created branch can be renamed via this command:
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:50.1229685Z hint:
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:50.1230406Z hint: 	git branch -m <name>
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:50.1231171Z hint:
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:50.1232145Z hint: Disable this message with "git config set advice.defaultBranchName false"
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:50.1233832Z Initialized empty Git repository in /home/runner/work/rewind-app/rewind-app/.git/
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:50.1243446Z [command]/usr/bin/git remote add origin https://github.com/Collaboration95/rewind-app
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:50.1297458Z ##[endgroup]
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:50.1298462Z ##[group]Disabling automatic garbage collection
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:50.1301810Z [command]/usr/bin/git config --local gc.auto 0
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:50.1346197Z ##[endgroup]
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:50.1347362Z ##[group]Setting up auth
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:50.1357511Z Removing SSH command configuration
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:50.1368174Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:50.1420624Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:50.1859150Z Removing HTTP extra header
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:50.1868342Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:50.1918449Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:50.2194259Z Removing includeIf entries pointing to credentials config files
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:50.2200412Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:50.2241263Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:50.2493756Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-8338f9c4-112a-4ce9-a380-0180964e8206.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:50.2541820Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/rewind-app/rewind-app/.git.path /home/runner/work/_temp/git-credentials-8338f9c4-112a-4ce9-a380-0180964e8206.config
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:50.2582090Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/rewind-app/rewind-app/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-8338f9c4-112a-4ce9-a380-0180964e8206.config
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:50.2623664Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-8338f9c4-112a-4ce9-a380-0180964e8206.config
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:50.2664513Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-8338f9c4-112a-4ce9-a380-0180964e8206.config
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:50.2701178Z ##[endgroup]
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:50.2702351Z ##[group]Fetching the repository
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:50.2709963Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +5860b188af0e988ab74a8bcdbf524891744d0620:refs/remotes/pull/595/merge
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:51.3430475Z From https://github.com/Collaboration95/rewind-app
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:51.3432541Z  * [new ref]         5860b188af0e988ab74a8bcdbf524891744d0620 -> pull/595/merge
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:51.3453064Z ##[endgroup]
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:51.3454514Z ##[group]Determining the checkout info
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:51.3456065Z ##[endgroup]
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:51.3457198Z [command]/usr/bin/git sparse-checkout disable
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:51.3503671Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:51.3546320Z ##[group]Checking out the ref
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:51.3549512Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/595/merge
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:51.4453666Z Note: switching to 'refs/remotes/pull/595/merge'.
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:51.4454721Z 
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:51.4455321Z You are in 'detached HEAD' state. You can look around, make experimental
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:51.4456872Z changes and commit them, and you can discard any commits you make in this
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:51.4458719Z state without impacting any branches by switching back to a branch.
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:51.4459607Z 
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:51.4460455Z If you want to create a new branch to retain commits you create, you may
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:51.4462260Z do so (now or later) by using -c with the switch command. Example:
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:51.4463359Z 
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:51.4463880Z   git switch -c <new-branch-name>
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:51.4464623Z 
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:51.4465092Z Or undo this operation with:
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:51.4465842Z 
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:51.4466281Z   git switch -
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:51.4467134Z 
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:51.4468087Z Turn off this advice by setting config variable advice.detachedHead to false
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:51.4469460Z 
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:51.4470983Z HEAD is now at 5860b18 Merge 38593b225cf636062f2b1578ccfcc033f86fbd64 into 47ea5f0ec14c19d6c138876abd44837f598ebeee
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:51.4476269Z ##[endgroup]
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:51.4524653Z [command]/usr/bin/git log -1 --format=%H
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:51.4558767Z 5860b188af0e988ab74a8bcdbf524891744d0620
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:51.4568150Z ##[group]Removing auth
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:51.4569431Z Removing SSH command configuration
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:51.4572682Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:51.4612213Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:51.4865391Z Removing HTTP extra header
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:51.4869085Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:51.4912000Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:51.5163593Z Removing includeIf entries pointing to credentials config files
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:51.5167335Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:51.5200557Z includeif.gitdir:/home/runner/work/rewind-app/rewind-app/.git.path
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:51.5203206Z includeif.gitdir:/home/runner/work/rewind-app/rewind-app/.git/worktrees/*.path
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:51.5205508Z includeif.gitdir:/github/workspace/.git.path
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:51.5207748Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:51.5212751Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/rewind-app/rewind-app/.git.path
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:51.5241482Z /home/runner/work/_temp/git-credentials-8338f9c4-112a-4ce9-a380-0180964e8206.config
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:51.5254915Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/rewind-app/rewind-app/.git.path \/home\/runner\/work\/_temp\/git\-credentials\-8338f9c4\-112a\-4ce9\-a380\-0180964e8206\.config
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:51.5300046Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/rewind-app/rewind-app/.git/worktrees/*.path
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:51.5365383Z /home/runner/work/_temp/git-credentials-8338f9c4-112a-4ce9-a380-0180964e8206.config
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:51.5375264Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/rewind-app/rewind-app/.git/worktrees/*.path \/home\/runner\/work\/_temp\/git\-credentials\-8338f9c4\-112a\-4ce9\-a380\-0180964e8206\.config
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:51.5416201Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:51.5446108Z /github/runner_temp/git-credentials-8338f9c4-112a-4ce9-a380-0180964e8206.config
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:51.5455984Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-8338f9c4\-112a\-4ce9\-a380\-0180964e8206\.config
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:51.5498940Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:51.5530126Z /github/runner_temp/git-credentials-8338f9c4-112a-4ce9-a380-0180964e8206.config
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:51.5540206Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-8338f9c4\-112a\-4ce9\-a380\-0180964e8206\.config
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:51.5582569Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:51.5834276Z Removing credentials config '/home/runner/work/_temp/git-credentials-8338f9c4-112a-4ce9-a380-0180964e8206.config'
+Classify change scope	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:51.5843149Z ##[endgroup]
+Classify change scope	Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020	﻿2026-10-26T14:50:51.6284992Z ##[group]Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+Classify change scope	Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020	2026-10-26T14:50:51.6286511Z with:
+Classify change scope	Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020	2026-10-26T14:50:51.6287561Z   node-version-file: .nvmrc
+Classify change scope	Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020	2026-10-26T14:50:51.6288590Z   check-latest: false
+Classify change scope	Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020	2026-10-26T14:50:51.6296852Z   token: ***
+Classify change scope	Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020	2026-10-26T14:50:51.6297792Z   package-manager-cache: true
+Classify change scope	Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020	2026-10-26T14:50:51.6298831Z ##[endgroup]
+Classify change scope	Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020	2026-10-26T14:50:51.7743993Z Node version file is not JSON file
+Classify change scope	Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020	2026-10-26T14:50:51.7746510Z Resolved .nvmrc as 22.23.3
+Classify change scope	Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020	2026-10-26T14:50:51.8813884Z Found in cache @ /opt/hostedtoolcache/node/22.23.3/x64
+Classify change scope	Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020	2026-10-26T14:50:51.8816422Z ##[group]Environment details
+Classify change scope	Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020	2026-10-26T14:50:52.2526364Z node: v22.23.3
+Classify change scope	Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020	2026-10-26T14:50:52.2527918Z npm: 10.9.9
+Classify change scope	Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020	2026-10-26T14:50:52.2528450Z yarn: 1.22.22
+Classify change scope	Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020	2026-10-26T14:50:52.2529851Z ##[endgroup]
+Classify change scope	Fetch the comparison base commit	﻿2026-10-26T14:50:52.2759979Z ##[group]Run if [ -n "$REWIND_CHANGE_BASE" ]; then
+Classify change scope	Fetch the comparison base commit	2026-10-26T14:50:52.2760564Z ^[[36;1mif [ -n "$REWIND_CHANGE_BASE" ]; then^[[0m
+Classify change scope	Fetch the comparison base commit	2026-10-26T14:50:52.2761301Z ^[[36;1m  git fetch --no-tags --depth=1 "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" "$REWIND_CHANGE_BASE" ||^[[0m
+Classify change scope	Fetch the comparison base commit	2026-10-26T14:50:52.2762072Z ^[[36;1m    echo 'Base commit unavailable; every check will run.'^[[0m
+Classify change scope	Fetch the comparison base commit	2026-10-26T14:50:52.2762474Z ^[[36;1mfi^[[0m
+Classify change scope	Fetch the comparison base commit	2026-10-26T14:50:52.3008603Z shell: /usr/bin/bash -e {0}
+Classify change scope	Fetch the comparison base commit	2026-10-26T14:50:52.3009033Z env:
+Classify change scope	Fetch the comparison base commit	2026-10-26T14:50:52.3012043Z   GH_TOKEN: ***
+Classify change scope	Fetch the comparison base commit	2026-10-26T14:50:52.3012443Z   REWIND_CHANGE_BASE: 47ea5f0ec14c19d6c138876abd44837f598ebeee
+Classify change scope	Fetch the comparison base commit	2026-10-26T14:50:52.3012858Z ##[endgroup]
+Classify change scope	Fetch the comparison base commit	2026-10-26T14:50:52.6560130Z From https://github.com/Collaboration95/rewind-app
+Classify change scope	Fetch the comparison base commit	2026-10-26T14:50:52.6560926Z  * branch            47ea5f0ec14c19d6c138876abd44837f598ebeee -> FETCH_HEAD
+Classify change scope	Classify the exact checked change	﻿2026-10-26T14:50:52.6606993Z ##[group]Run node scripts/classify-quality-changes.mjs
+Classify change scope	Classify the exact checked change	2026-10-26T14:50:52.6607518Z ^[[36;1mnode scripts/classify-quality-changes.mjs^[[0m
+Classify change scope	Classify the exact checked change	2026-10-26T14:50:52.6680111Z shell: /usr/bin/bash -e {0}
+Classify change scope	Classify the exact checked change	2026-10-26T14:50:52.6680445Z env:
+Classify change scope	Classify the exact checked change	2026-10-26T14:50:52.6680783Z   REWIND_CHANGE_BASE: 47ea5f0ec14c19d6c138876abd44837f598ebeee
+Classify change scope	Classify the exact checked change	2026-10-26T14:50:52.6681264Z   REWIND_CHANGE_HEAD: 5860b188af0e988ab74a8bcdbf524891744d0620
+Classify change scope	Classify the exact checked change	2026-10-26T14:50:52.6681671Z ##[endgroup]
+Classify change scope	Classify the exact checked change	2026-10-26T14:50:52.7162345Z {"docsOnly":false,"reason":"runnable-change"}
+Classify change scope	Post Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020	﻿2026-10-26T14:50:52.7338396Z Post job cleanup.
+Classify change scope	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	﻿2026-10-26T14:50:52.8753997Z Post job cleanup.
+Classify change scope	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:52.9688189Z [command]/usr/bin/git version
+Classify change scope	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:52.9737540Z git version 2.55.0
+Classify change scope	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:52.9778460Z Temporarily overriding HOME='/home/runner/work/_temp/ee69e3f8-280e-47d5-9adf-def0c805a313' before making global git config changes
+Classify change scope	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:52.9783811Z Adding repository directory to the temporary git global config as a safe directory
+Classify change scope	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:52.9785241Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/rewind-app/rewind-app
+Classify change scope	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:52.9822835Z Removing SSH command configuration
+Classify change scope	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:52.9830297Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Classify change scope	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:52.9869630Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Classify change scope	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:53.0137351Z Removing HTTP extra header
+Classify change scope	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:53.0144074Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Classify change scope	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:53.0195047Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Classify change scope	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:53.0473081Z Removing includeIf entries pointing to credentials config files
+Classify change scope	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:53.0481932Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Classify change scope	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-26T14:50:53.0527835Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Classify change scope	Complete job	﻿2026-10-26T14:50:53.0954280Z Evaluate and set job outputs
+Classify change scope	Complete job	2026-10-26T14:50:53.0961184Z Set output 'docs_only'
+Classify change scope	Complete job	2026-10-26T14:50:53.0963166Z Cleaning up orphan processes

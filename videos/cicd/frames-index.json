@@ -1,0 +1,621 @@
+[
+  {
+    "id": "00-pipeline",
+    "file": "frames/00-pipeline.png",
+    "title": "Pipeline decisions",
+    "kind": "authored",
+    "data": "../../BRIEF-SHARED.md",
+    "sourceURL": "../../audit/D-cicd-demo.md",
+    "page": "pages/00-pipeline.html",
+    "screenshot": "Playwright Chromium viewport 1920x1080, deviceScaleFactor 2; PNG 3840x2160",
+    "capturedAt": "2026-10-26T15:46:11.109194+00:00"
+  },
+  {
+    "id": "01-pr595-conversation",
+    "file": "frames/01-pr595-conversation.png",
+    "title": "PR #595 merged into dev",
+    "kind": "live",
+    "sourceURL": "https://github.com/Collaboration95/rewind-app/pull/595",
+    "data": "evidence/pr595-view.json",
+    "findings": [
+      "PR #595 \"ci: retain DevSecOps artifacts for verified dev releases\" merged into dev 26 Oct 14:55:29Z as aea7478",
+      "Body lists DAST, exact-bundle Trivy, provenance, manifest, Quality evidence, Gitleaks"
+    ],
+    "focus": [
+      260,
+      382
+    ],
+    "page": "pages/01-pr595-conversation.html",
+    "screenshot": "Playwright Chromium viewport 1920x1080 DSF 2, html zoom 1.25, screenshot clip {x:0,y:0,width:1920,height:1025} placed in 1920x1080 DSF 2 wrapper (html zoom 1.25) under the URL bar showing page.url() after prep",
+    "capturedAt": "2026-10-26T16:04:07.226Z"
+  },
+  {
+    "id": "02-pr595-checks",
+    "file": "frames/02-pr595-checks.png",
+    "title": "PR #595 checks: Quality checks workflow, all jobs and the required gate",
+    "kind": "live",
+    "sourceURL": "https://github.com/Collaboration95/rewind-app/pull/595/checks",
+    "data": "evidence/pr595-view.json",
+    "findings": [
+      "Quality checks on head 38593b2: 12 success, 1 skipped (Web export and browser checks, main-bound only)",
+      "Required gate \"Format, lint, typecheck, and test\" success"
+    ],
+    "focus": [
+      176,
+      778
+    ],
+    "page": "pages/02-pr595-checks.html",
+    "screenshot": "Playwright Chromium viewport 1920x1080 DSF 2, html zoom 1, screenshot clip {x:0,y:0,width:1920,height:1025} placed in 1920x1080 DSF 2 wrapper (html zoom 1.25) under the URL bar showing page.url() after prep",
+    "capturedAt": "2026-10-26T16:05:48.863Z"
+  },
+  {
+    "id": "02b-pr595-checks-security",
+    "file": "frames/02b-pr595-checks-security.png",
+    "title": "PR #595 checks: GitGuardian, Release security, CodeQL, Secret scan, code scanning",
+    "kind": "live",
+    "sourceURL": "https://github.com/Collaboration95/rewind-app/pull/595/checks",
+    "data": "evidence/pr595-view.json",
+    "findings": [
+      "GitGuardian, Release security (runtime image, web image, IaC), CodeQL (classify, javascript-typescript, python, actions), Gitleaks full-history scan, code scanning results: all success"
+    ],
+    "focus": [
+      152,
+      895
+    ],
+    "page": "pages/02b-pr595-checks-security.html",
+    "screenshot": "Playwright Chromium viewport 1920x1080 DSF 2, html zoom 1, screenshot clip {x:0,y:0,width:1920,height:1025} placed in 1920x1080 DSF 2 wrapper (html zoom 1.25) under the URL bar showing page.url() after prep",
+    "capturedAt": "2026-10-26T16:05:54.228Z"
+  },
+  {
+    "id": "03-protect-dev",
+    "file": "frames/03-protect-dev.png",
+    "title": "dev branch protection: one required check, up to date, conversations resolved",
+    "kind": "replica",
+    "sourceURL": "https://github.com/Collaboration95/rewind-app/settings/branches",
+    "data": "evidence/protection-dev.json",
+    "findings": [
+      "Required check: \"Format, lint, typecheck, and test\" (GitHub Actions app 15368), strict up-to-date",
+      "0 required approvals on dev; conversation resolution and enforce_admins on; force push and deletion off"
+    ],
+    "focus": [
+      855,
+      890
+    ],
+    "page": "pages/03-protect-dev.html",
+    "screenshot": "Playwright Chromium viewport 1920x1080 DSF 2, html zoom 1.25",
+    "capturedAt": "2026-10-26T16:10:50.666Z"
+  },
+  {
+    "id": "04-quality-graph",
+    "file": "frames/04-quality-graph.png",
+    "title": "Quality checks run 40343459119: classify, parallel lanes, aggregate gate",
+    "kind": "live",
+    "sourceURL": "https://github.com/Collaboration95/rewind-app/actions/runs/40343459119",
+    "data": "evidence/run-quality.json; evidence/run-quality-jobs.json",
+    "findings": [
+      "PR run, success, 3m 46s (14:50:44Z to 14:54:30Z), 4 artifacts",
+      "Server tests on PostgreSQL 3m 4s is the critical path; gate \"Format, lint, typecheck, and test\" 3s"
+    ],
+    "focus": [
+      962,
+      350
+    ],
+    "page": "pages/04-quality-graph.html",
+    "screenshot": "Playwright Chromium viewport 1920x1080 DSF 2, html zoom 1.25, screenshot clip {x:0,y:0,width:1920,height:1025} placed in 1920x1080 DSF 2 wrapper (html zoom 1.25) under the URL bar showing page.url() after prep",
+    "capturedAt": "2026-10-26T16:09:37.057Z"
+  },
+  {
+    "id": "05-quality-summaries",
+    "file": "frames/05-quality-summaries.png",
+    "title": "Quality job summaries: npm audit gate and root JUnit counts",
+    "kind": "replica",
+    "sourceURL": "https://github.com/Collaboration95/rewind-app/actions/runs/40343459119",
+    "data": "evidence/summaries/quality-*.md (regenerated with scripts/quality-summary.py logic from run artifacts)",
+    "findings": [
+      "npm audit PASS (HIGH+ gate); low 0, moderate 0, high 0, critical 0",
+      "root 123 passed / 0 failed / 1 skipped"
+    ],
+    "focus": [
+      1135,
+      564
+    ],
+    "page": "pages/05-quality-summaries.html",
+    "screenshot": "Playwright Chromium viewport 1920x1080 DSF 2, html zoom 1.25",
+    "capturedAt": "2026-10-26T16:10:51.126Z"
+  },
+  {
+    "id": "05b-quality-coverage-summaries",
+    "file": "frames/05b-quality-coverage-summaries.png",
+    "title": "Quality job summaries: server and frontend tests with coverage",
+    "kind": "replica",
+    "sourceURL": "https://github.com/Collaboration95/rewind-app/actions/runs/40343459119",
+    "data": "evidence/summaries/quality-server.md; evidence/summaries/quality-frontend.md (regenerated with scripts/quality-summary.py logic from run artifacts)",
+    "findings": [
+      "server 985 passed / 0 failed / 21 skipped, 85.5% lines",
+      "frontend 1674 / 0 / 0, 89.64% statements"
+    ],
+    "focus": [
+      1135,
+      448
+    ],
+    "page": "pages/05b-quality-coverage-summaries.html",
+    "screenshot": "Playwright Chromium viewport 1920x1080 DSF 2, html zoom 1.25",
+    "capturedAt": "2026-10-26T16:10:51.579Z"
+  },
+  {
+    "id": "06-quality-artifacts",
+    "file": "frames/06-quality-artifacts.png",
+    "title": "Quality run artifacts: JUnit, coverage, npm-audit",
+    "kind": "live",
+    "sourceURL": "https://github.com/Collaboration95/rewind-app/actions/runs/40343459119",
+    "data": "evidence/run-quality-artifacts.json",
+    "findings": [
+      "frontend-coverage 301 KB, quality-npm-audit 316 B, quality-test-results-root 5.04 KB, server-coverage 9.33 MB"
+    ],
+    "focus": [
+      583,
+      904
+    ],
+    "page": "pages/06-quality-artifacts.html",
+    "screenshot": "Playwright Chromium viewport 1920x1080 DSF 2, html zoom 1.25, screenshot clip {x:0,y:0,width:1920,height:1025} placed in 1920x1080 DSF 2 wrapper (html zoom 1.25) under the URL bar showing page.url() after prep",
+    "capturedAt": "2026-10-26T16:08:54.216Z"
+  },
+  {
+    "id": "07-term-quality-reports",
+    "file": "frames/07-term-quality-reports.png",
+    "title": "Downloaded Quality artifacts: JUnit cases and coverage",
+    "kind": "terminal",
+    "sourceURL": "local command output",
+    "data": "evidence/terminal/quality-reports.txt",
+    "findings": [
+      "JUnit testcases: root 124, server 1006",
+      "Jest 1674 passed, 0 failed",
+      "server lines 85.5 / branches 85.52 / functions 86.41",
+      "frontend statements 89.64 / lines 92.33 / branches 85.66"
+    ],
+    "focus": [
+      378,
+      204
+    ],
+    "page": "pages/07-term-quality-reports.html",
+    "screenshot": "Playwright Chromium viewport 1920x1080 DSF 2, html zoom 1.25",
+    "capturedAt": "2026-10-26T16:10:52.120Z"
+  },
+  {
+    "id": "08-term-npm-audit",
+    "file": "frames/08-term-npm-audit.png",
+    "title": "Production npm audit: 0 vulnerabilities across 674 prod dependencies",
+    "kind": "terminal",
+    "sourceURL": "local command output",
+    "data": "evidence/terminal/npm-audit.txt",
+    "findings": [
+      "npm audit --omit=dev --audit-level=high: 0 at every severity; 674 prod / 1119 total dependencies"
+    ],
+    "focus": [
+      203,
+      378
+    ],
+    "page": "pages/08-term-npm-audit.html",
+    "screenshot": "Playwright Chromium viewport 1920x1080 DSF 2, html zoom 1.25",
+    "capturedAt": "2026-10-26T16:10:52.660Z"
+  },
+  {
+    "id": "09-codescan-alerts",
+    "file": "frames/09-codescan-alerts.png",
+    "title": "Code scanning on dev: 0 open, 23 closed (20 dismissed with reasons, 3 fixed)",
+    "kind": "replica",
+    "sourceURL": "https://github.com/Collaboration95/rewind-app/security/code-scanning?query=is%3Aclosed+branch%3Adev",
+    "data": "evidence/codescan-dev.json",
+    "findings": [
+      "0 open, 23 closed on dev (20 dismissed with written reasons, 3 fixed)",
+      "#54\u2013#56 from PR #592 load harness, dismissed 26 Oct 15:26Z as used in tests"
+    ],
+    "focus": [
+      569,
+      419
+    ],
+    "page": "pages/09-codescan-alerts.html",
+    "screenshot": "Playwright Chromium viewport 1920x1080 DSF 2, html zoom 1.25",
+    "capturedAt": "2026-10-26T16:10:53.099Z"
+  },
+  {
+    "id": "10-codescan-alert-56",
+    "file": "frames/10-codescan-alert-56.png",
+    "title": "CodeQL alert #56 triage from PR #592: dismissed as used in tests",
+    "kind": "replica",
+    "sourceURL": "https://github.com/Collaboration95/rewind-app/security/code-scanning/56",
+    "data": "evidence/codescan-alert-56.json; evidence/codescan-pr592.json",
+    "findings": [
+      "PR #592 raised 3 medium CodeQL alerts (#54, #55, #56) in scripts/load/hosted.mjs",
+      "All 3 dismissed by Collaboration95 26 Oct 15:26\u201315:26:52Z as \"used in tests\" with a written reason"
+    ],
+    "focus": [
+      755,
+      712
+    ],
+    "page": "pages/10-codescan-alert-56.html",
+    "screenshot": "Playwright Chromium viewport 1920x1080 DSF 2, html zoom 1.25",
+    "capturedAt": "2026-10-26T16:10:53.544Z"
+  },
+  {
+    "id": "11-pr592-checks",
+    "file": "frames/11-pr592-checks.png",
+    "title": "PR #592 checks: CodeQL and Gitleaks results",
+    "kind": "live",
+    "sourceURL": "https://github.com/Collaboration95/rewind-app/pull/592/checks",
+    "data": "evidence/pr592-view.json; evidence/codescan-pr592.json",
+    "findings": [
+      "PR #592 \"test(perf): scripted load test and performance workflow\" merged 15:31:52Z; all checks success"
+    ],
+    "focus": [
+      215,
+      642
+    ],
+    "page": "pages/11-pr592-checks.html",
+    "screenshot": "Playwright Chromium viewport 1920x1080 DSF 2, html zoom 1.25, screenshot clip {x:0,y:0,width:1920,height:1025} placed in 1920x1080 DSF 2 wrapper (html zoom 1.25) under the URL bar showing page.url() after prep",
+    "capturedAt": "2026-10-26T16:06:10.539Z"
+  },
+  {
+    "id": "12-gitleaks-run",
+    "file": "frames/12-gitleaks-run.png",
+    "title": "Secret scan run 40343459282: Gitleaks full-history scan",
+    "kind": "live",
+    "sourceURL": "https://github.com/Collaboration95/rewind-app/actions/runs/40343459282",
+    "data": "evidence/run-gitleaks.json; evidence/run-gitleaks-artifacts.json",
+    "findings": [
+      "PR run success in 30s; artifact gitleaks-5860b18\u2026 (redacted SARIF, 7 KB)"
+    ],
+    "focus": [
+      960,
+      540
+    ],
+    "page": "pages/12-gitleaks-run.html",
+    "screenshot": "Playwright Chromium viewport 1920x1080 DSF 2, html zoom 1.25, screenshot clip {x:0,y:0,width:1920,height:1025} placed in 1920x1080 DSF 2 wrapper (html zoom 1.25) under the URL bar showing page.url() after prep",
+    "capturedAt": "2026-10-26T16:04:35.372Z"
+  },
+  {
+    "id": "13-gitleaks-summary",
+    "file": "frames/13-gitleaks-summary.png",
+    "title": "Gitleaks job summary: 0 findings across full history",
+    "kind": "replica",
+    "sourceURL": "https://github.com/Collaboration95/rewind-app/actions/runs/40343459282",
+    "data": "evidence/summaries/gitleaks.md; evidence/terminal/gitleaks.txt",
+    "findings": [
+      "Gitleaks SARIF: 222 rules, 0 results"
+    ],
+    "focus": [
+      1135,
+      564
+    ],
+    "page": "pages/13-gitleaks-summary.html",
+    "screenshot": "Playwright Chromium viewport 1920x1080 DSF 2, html zoom 1.25",
+    "capturedAt": "2026-10-26T16:10:53.976Z"
+  },
+  {
+    "id": "14-deploy-graph",
+    "file": "frames/14-deploy-graph.png",
+    "title": "Deploy dev run 40344230832: classify \u2192 deploy \u2192 DAST",
+    "kind": "live",
+    "sourceURL": "https://github.com/Collaboration95/rewind-app/actions/runs/40344230832",
+    "data": "evidence/run-deploy.json; evidence/run-deploy-jobs.json",
+    "findings": [
+      "push to dev aea7478, success, 9m 6s; deploy job 6m 14s; DAST 1m 49s; 3 artifacts"
+    ],
+    "focus": [
+      547,
+      278
+    ],
+    "page": "pages/14-deploy-graph.html",
+    "screenshot": "Playwright Chromium viewport 1920x1080 DSF 2, html zoom 1.25, screenshot clip {x:0,y:0,width:1920,height:1025} placed in 1920x1080 DSF 2 wrapper (html zoom 1.25) under the URL bar showing page.url() after prep",
+    "capturedAt": "2026-10-26T16:09:42.585Z"
+  },
+  {
+    "id": "15-deploy-steps",
+    "file": "frames/15-deploy-steps.png",
+    "title": "Deploy job steps: Quality wait, bundle, exact scan, attest, OIDC, install, health",
+    "kind": "live",
+    "sourceURL": "https://github.com/Collaboration95/rewind-app/actions/runs/40344230832/job/121646847180",
+    "data": "evidence/run-deploy-jobs.json",
+    "findings": [
+      "Wait for Quality 123 s, build bundle 53 s, scan 16 s, attest 7 s, OIDC 3 s, ship 54 s, install 76 s"
+    ],
+    "focus": [
+      723,
+      886
+    ],
+    "page": "pages/15-deploy-steps.html",
+    "screenshot": "Playwright Chromium viewport 1920x1080 DSF 2, html zoom 1.25, screenshot clip {x:0,y:0,width:1920,height:1025} placed in 1920x1080 DSF 2 wrapper (html zoom 1.25) under the URL bar showing page.url() after prep",
+    "capturedAt": "2026-10-26T16:04:43.914Z"
+  },
+  {
+    "id": "16-deploy-log",
+    "file": "frames/16-deploy-log.png",
+    "title": "Deploy log: Quality gate, attestation, OIDC session, health-checked activation",
+    "kind": "replica",
+    "sourceURL": "https://github.com/Collaboration95/rewind-app/actions/runs/40344230832/job/121646847180",
+    "data": "evidence/logs/deploy-121646847180.log",
+    "findings": [
+      "\"Quality checks passed for aea7478\u2026\"",
+      "\"Attestation created for 2 subjects\" \u2192 attestations/59963857",
+      "OIDC session rewind-demo-deploy-40344230832",
+      "\"Activated release aea7478\u2026 after runtime and web health checks.\""
+    ],
+    "focus": [
+      1135,
+      692
+    ],
+    "page": "pages/16-deploy-log.html",
+    "screenshot": "Playwright Chromium viewport 1920x1080 DSF 2, html zoom 1.25",
+    "capturedAt": "2026-10-26T16:10:54.435Z"
+  },
+  {
+    "id": "17-deploy-summaries",
+    "file": "frames/17-deploy-summaries.png",
+    "title": "Deploy dev summaries: exact-bundle security gate and ZAP baseline",
+    "kind": "replica",
+    "sourceURL": "https://github.com/Collaboration95/rewind-app/actions/runs/40344230832",
+    "data": "evidence/summaries/release-gate.md; evidence/summaries/zap.md",
+    "findings": [
+      "Release gate: runtime HIGH 0 CRITICAL 0 PASS; web HIGH 0 CRITICAL 0 PASS",
+      "ZAP: High 0, Medium 4 (CSP), Low 7, Informational 6; report-only"
+    ],
+    "focus": [
+      740,
+      512
+    ],
+    "page": "pages/17-deploy-summaries.html",
+    "screenshot": "Playwright Chromium viewport 1920x1080 DSF 2, html zoom 1.25",
+    "capturedAt": "2026-10-26T16:11:36.915Z"
+  },
+  {
+    "id": "18-term-trivy-sbom",
+    "file": "frames/18-term-trivy-sbom.png",
+    "title": "Exact-bundle SBOMs and Trivy findings",
+    "kind": "terminal",
+    "sourceURL": "local command output",
+    "data": "evidence/terminal/sbom-trivy.txt",
+    "findings": [
+      "CycloneDX 1.6: runtime 187 components, web 72",
+      "runtime: musl/musl-utils CVE-2026-107891 UNKNOWN, zlib CVE-2026-85091 MEDIUM (fixed versions available); web 0"
+    ],
+    "focus": [
+      278,
+      175
+    ],
+    "page": "pages/18-term-trivy-sbom.html",
+    "screenshot": "Playwright Chromium viewport 1920x1080 DSF 2, html zoom 1.25",
+    "capturedAt": "2026-10-26T16:10:55.414Z"
+  },
+  {
+    "id": "19-term-manifest",
+    "file": "frames/19-term-manifest.png",
+    "title": "release-manifest.json: commit, run, Quality run, scanner, gate",
+    "kind": "terminal",
+    "sourceURL": "local command output",
+    "data": "evidence/terminal/manifest.txt",
+    "findings": [
+      "commit aea7478, run 40344230832, quality_run_id 40344231052, Trivy v0.70.0, security_gate pass"
+    ],
+    "focus": [
+      267,
+      436
+    ],
+    "page": "pages/19-term-manifest.html",
+    "screenshot": "Playwright Chromium viewport 1920x1080 DSF 2, html zoom 1.25",
+    "capturedAt": "2026-10-26T16:10:55.935Z"
+  },
+  {
+    "id": "20-deploy-artifacts",
+    "file": "frames/20-deploy-artifacts.png",
+    "title": "Deploy dev artifacts: ZAP reports, security reports, attested bundle",
+    "kind": "live",
+    "sourceURL": "https://github.com/Collaboration95/rewind-app/actions/runs/40344230832",
+    "data": "evidence/run-deploy-artifacts.json",
+    "findings": [
+      "zap-baseline-aea7478\u2026 34 KB, dev-release-security-aea7478\u2026 80 KB, dev-release-bundle-aea7478\u2026 154 MB"
+    ],
+    "focus": [
+      703,
+      712
+    ],
+    "page": "pages/20-deploy-artifacts.html",
+    "screenshot": "Playwright Chromium viewport 1920x1080 DSF 2, html zoom 1.25, screenshot clip {x:0,y:0,width:1920,height:1025} placed in 1920x1080 DSF 2 wrapper (html zoom 1.25) under the URL bar showing page.url() after prep",
+    "capturedAt": "2026-10-26T16:09:04.534Z"
+  },
+  {
+    "id": "21-attestation",
+    "file": "frames/21-attestation.png",
+    "title": "Build provenance attestation 59963857 for bundle and manifest",
+    "kind": "live",
+    "sourceURL": "https://github.com/Collaboration95/rewind-app/attestations/59963857",
+    "data": "evidence/attestation-verify.json",
+    "findings": [
+      "SLSA provenance v1, commit aea7478, workflow deploy-dev.yml@refs/heads/dev",
+      "Subjects: release-manifest.json sha256:59d9b9f7\u2026, rewind-release.tar sha256:fef3c22a\u2026"
+    ],
+    "focus": [
+      558,
+      791
+    ],
+    "page": "pages/21-attestation.html",
+    "screenshot": "Playwright Chromium viewport 1920x1080 DSF 2, html zoom 1.25, screenshot clip {x:0,y:0,width:1920,height:1025} placed in 1920x1080 DSF 2 wrapper (html zoom 1.25) under the URL bar showing page.url() after prep",
+    "capturedAt": "2026-10-26T16:09:47.378Z"
+  },
+  {
+    "id": "22-term-attest-verify",
+    "file": "frames/22-term-attest-verify.png",
+    "title": "gh attestation verify on release-manifest.json",
+    "kind": "terminal",
+    "sourceURL": "local command output",
+    "data": "evidence/attestation-verify.txt; evidence/terminal/digest.txt",
+    "findings": [
+      "sha256 59d9b9f7\u2026 matches attestation subject",
+      "\u2713 Verification succeeded! (SLSA v1, OIDC issuer token.actions.githubusercontent.com, exit 0)"
+    ],
+    "focus": [
+      267,
+      552
+    ],
+    "page": "pages/22-term-attest-verify.html",
+    "screenshot": "Playwright Chromium viewport 1920x1080 DSF 2, html zoom 1.25",
+    "capturedAt": "2026-10-26T16:10:56.486Z"
+  },
+  {
+    "id": "23-zap-report",
+    "file": "frames/23-zap-report.png",
+    "title": "ZAP baseline HTML report on hosted dev",
+    "kind": "live",
+    "sourceURL": "https://github.com/Collaboration95/rewind-app/actions/runs/40344230832/artifacts/12660614474",
+    "data": "evidence/artifacts/40344230832/report_html.html (artifact zap-baseline-aea7478bce14131b821caaa99b1185077b4a9403, rendered locally)",
+    "findings": [
+      "High 0, Medium 4, Low 7, Informational 6"
+    ],
+    "focus": [
+      438,
+      219
+    ],
+    "page": "pages/23-zap-report.html",
+    "screenshot": "Playwright Chromium viewport 1920x1080 DSF 2, html zoom 1.25, screenshot clip {x:0,y:0,width:1920,height:1025} placed in 1920x1080 DSF 2 wrapper (html zoom 1.25) under the URL bar showing page.url() after prep",
+    "capturedAt": "2026-10-26T16:08:28.288Z"
+  },
+  {
+    "id": "24-term-health",
+    "file": "frames/24-term-health.png",
+    "title": "Hosted dev /api/health: 200, PostgreSQL, schema ready",
+    "kind": "terminal",
+    "sourceURL": "local command output",
+    "data": "evidence/health-curl.txt",
+    "findings": [
+      "HTTP/2 200; ok true, ready true, database postgresql, schema ready, expectedMigrationVersion 31",
+      "HSTS, X-Frame-Options DENY, nosniff, CSP report-only header"
+    ],
+    "focus": [
+      955,
+      843
+    ],
+    "page": "pages/24-term-health.html",
+    "screenshot": "Playwright Chromium viewport 1920x1080 DSF 2, html zoom 1.25",
+    "capturedAt": "2026-10-26T16:10:57.034Z"
+  },
+  {
+    "id": "25-protect-main",
+    "file": "frames/25-protect-main.png",
+    "title": "main branch protection: required gate plus 1 approving review",
+    "kind": "replica",
+    "sourceURL": "https://github.com/Collaboration95/rewind-app/settings/branches",
+    "data": "evidence/protection-main.json",
+    "findings": [
+      "Required check \"Format, lint, typecheck, and test\", strict",
+      "1 required approving review, approval of most recent push required, enforce_admins on"
+    ],
+    "focus": [
+      994,
+      586
+    ],
+    "page": "pages/25-protect-main.html",
+    "screenshot": "Playwright Chromium viewport 1920x1080 DSF 2, html zoom 1.25",
+    "capturedAt": "2026-10-26T16:10:57.485Z"
+  },
+  {
+    "id": "26-pr586",
+    "file": "frames/26-pr586.png",
+    "title": "Promotion PR #586 dev \u2192 main",
+    "kind": "live",
+    "sourceURL": "https://github.com/Collaboration95/rewind-app/pull/586",
+    "data": "evidence/pr586-view.json",
+    "findings": [
+      "PR #586 OPEN, reviewDecision APPROVED, mergeStateStatus CLEAN",
+      "Approved by bibi45c 2026-10-26T15:35:59Z"
+    ],
+    "focus": [
+      1520,
+      575
+    ],
+    "page": "pages/26-pr586.html",
+    "screenshot": "Playwright Chromium viewport 1920x1080 DSF 2, html zoom 1.25, screenshot clip {x:0,y:0,width:1920,height:1025} placed in 1920x1080 DSF 2 wrapper (html zoom 1.25) under the URL bar showing page.url() after prep",
+    "capturedAt": "2026-10-26T16:11:03.209Z"
+  },
+  {
+    "id": "27-promotion-approval",
+    "file": "frames/27-promotion-approval.png",
+    "title": "Promotion rule beside PR #586 approval",
+    "kind": "replica",
+    "sourceURL": "https://github.com/Collaboration95/rewind-app/pull/586",
+    "data": "evidence/protection-main.json; evidence/pr586-view.json",
+    "findings": [
+      "main requires 1 approving review + last-push approval",
+      "PR #586 reviewDecision APPROVED (bibi45c), mergeStateStatus CLEAN; 47 success, 1 skipped, 0 in progress at capture"
+    ],
+    "focus": [
+      1300,
+      506
+    ],
+    "page": "pages/27-promotion-approval.html",
+    "screenshot": "Playwright Chromium viewport 1920x1080 DSF 2, html zoom 1.25",
+    "capturedAt": "2026-10-26T16:11:03.677Z"
+  },
+  {
+    "id": "28-environments",
+    "file": "frames/28-environments.png",
+    "title": "Environments: dev unprotected, release needs a second reviewer from main",
+    "kind": "replica",
+    "sourceURL": "https://github.com/Collaboration95/rewind-app/settings/environments",
+    "data": "evidence/environments.json; evidence/env-release-branch-policies.json",
+    "findings": [
+      "dev: 0 protection rules",
+      "release: required reviewer AndrewNguyenLKN, prevent self-review, branch policy main",
+      "staging-demo: protected branches only"
+    ],
+    "focus": [
+      1135,
+      438
+    ],
+    "page": "pages/28-environments.html",
+    "screenshot": "Playwright Chromium viewport 1920x1080 DSF 2, html zoom 1.25",
+    "capturedAt": "2026-10-26T16:11:04.115Z"
+  },
+  {
+    "id": "70-manifest-digests",
+    "file": "frames/70-manifest-digests.png",
+    "title": "Release manifest bundle and report digests",
+    "kind": "terminal",
+    "data": "evidence/terminal/manifest-digests.txt",
+    "sourceURL": "https://github.com/Collaboration95/rewind-app/actions/runs/40344230832",
+    "page": "pages/70-manifest-digests.html",
+    "screenshot": "Playwright Chromium viewport 1920x1080, deviceScaleFactor 2; PNG 3840x2160",
+    "capturedAt": "2026-10-26T16:02:48.573303+00:00"
+  },
+  {
+    "id": "80-performance",
+    "file": "frames/80-performance.png",
+    "title": "Clean hosted performance summary",
+    "kind": "summary",
+    "data": "../../load-test/results/hosted.json",
+    "sourceURL": "../../load-test/results/summary.json",
+    "page": "pages/80-performance.html",
+    "screenshot": "Playwright Chromium viewport 1920x1080, deviceScaleFactor 2; PNG 3840x2160",
+    "capturedAt": "2026-10-26T16:14:32.397926+00:00"
+  },
+  {
+    "id": "81-performance-chart",
+    "file": "frames/81-performance-chart.png",
+    "title": "Measured hosted latency by VUs",
+    "kind": "chart",
+    "data": "../../load-test/charts/latency-vs-vus.png",
+    "sourceURL": "../../load-test/results/hosted.json",
+    "page": "pages/81-performance-chart.html",
+    "screenshot": "Playwright Chromium viewport 1920x1080, deviceScaleFactor 2; PNG 3840x2160",
+    "capturedAt": "2026-10-26T16:14:32.536206+00:00"
+  },
+  {
+    "id": "99-decisions",
+    "file": "frames/99-decisions.png",
+    "title": "Decisions and retained artifacts",
+    "kind": "authored",
+    "data": "shots.json",
+    "sourceURL": "../../BRIEF-SHARED.md",
+    "page": "pages/99-decisions.html",
+    "screenshot": "Playwright Chromium viewport 1920x1080, deviceScaleFactor 2; PNG 3840x2160",
+    "capturedAt": "2026-10-26T16:20:03.718581+00:00"
+  }
+]

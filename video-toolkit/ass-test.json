@@ -1,0 +1,2 @@
+{"output": "out/ass-test.mp4", "stamp": "27 Oct 2026 · local · 0000000", "srt": "captions.ass",
+ "clips": [{"source": "in/desktop-wait-50s.mp4", "in": 0, "out": 7, "caption": "row caption plus ass cues"}]}

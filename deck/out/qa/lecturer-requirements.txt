@@ -1,0 +1,248 @@
+FILE /Users/speedpowermac/Downloads/course_files_export 5/SWE5006 - Practice Project Presentation Guidelines/SWE5006 - Practice Project Presentation Guidelines.docx / word/document.xml
+
+Practice 
+Project 
+Presentation
+for 
+Graduate Certificate 
+Designing Modern Software 
+Systems
+ (
+Stackable
+)
+General Presentation Outline with approximate suggested time allocation (
+4
+0 minutes) 
+Note:
+ 
+The 
+time for Q&A 
+is included in the overall duration. We suggest 
+the timings 
+for the following segments in the form of (X+Y) where Y is the Q&A time
+. 
+Overview (
+2+1
+ minutes): 
+Explain the context and the business problem that the 
+solution
+ as a whole is trying to achieve.  
+Explain 
+the scope of the project. 
+Project Conduct 
+(
+2+1
+ minutes): 
+Explain the current status of the project including outstanding issues
+. 
+Describe the actual project milestones and the total effort expended by each team member. 
+Explain how many sprints planned, Definition of Done (DoD) achieved
+.
+Sprint retrospective & reflection in the next sprint 
+Software 
+Architecture 
+& Design 
+(
+7+
+2
+ minutes): 
+Software 
+architectural decisions that influence the logical architecture. 
+Transition from analysis to design 
+Use case diagram
+Analysis and design models
+Design problems and patterns 
+Database schemas 
+Dev
+Sec
+Ops and Development Lifecycle 
+(
+6+
+2 
+minutes): 
+Describe the strategy to manage the source code and artifacts. 
+Describe the Dev
+Sec
+Ops pipeline and procedures. 
+Highlight any technical findings and issues encountered. 
+Demo (
+13
++
+4
+ minutes)
+Demonstrate some of the significant use cases of 
+the solution
+.
+Demonstrate how the 
+solution 
+deal
+s
+ with some of the important quality attributes e.g. scalability (such as demonstrating auto-scaling), performance (
+s
+how using
+ some scripted performance testing), maintainability (show/run the DevOps pipeline)
+.
+Presentation Tips 
+Summarize and highlight the significant achievement
+s
+. Talk more about the significant and interesting part
+s
+ of 
+the
+ 
+solution
+ and implementation
+. Y
+our audience 
+should 
+remember the
+ unique aspects of 
+the solution
+ and not similar
+ities
+ to other 
+solutions
+. 
+Manage your time well. 
+Do not
+ present
+ too many slides. R
+emember that 
+the audience
+ 
+can
+ read 
+the
+ text in the slide so refrain from reading the
+m
+. 
+Explain your design in top-down manner. Make sure that your audience understand
+s the requirements,
+ the 
+high-level
+ design and the 
+high-level
+ decisions that you make befor
+e 
+drilling into 
+some detail
+s
+.
+Ensure that the contents on the slides are readable from the distance at which your audience is sitting. 
+This is particular true for face-to-face presentation. 
+
+FILE /Users/speedpowermac/Downloads/course_files_export 5/SWE5006 - Grad Cert - Practice Project Briefing Materials/SWE5006-DMSS-Grad Cert-Briefing Material-MTechTTPT-Aug-Nov2026.pptx / ppt/slides/slide3.xml
+
+Objectives
+you will acquire foundational skills and best practices in various areas. These include conducting agile projects, designing robust and maintainable systems, and leveraging modern tools and techniques for automating 
+DevSecOps
+.
+Outcomes
+Demonstrate 
+competency
+ in all 
+four
+ course modules
+Requirements of Graduate Certificate–1
+Course Module
+Focus
+Essential Practices for Agile Teams
+covers the most important engineering approaches for the sustained success of teams practicing agile methodology such as Scrum. 
+The practices covered include test driven development, pair programming, refactoring, agile architecture, continuous integration and user stories.
+Software Analysis and Design
+Workshops are tailored through the system development process; from requirements to design workflow. Participants will get hands-on experience on the application of OOAD techniques through the relevant cycles.
+Software Design Patterns
+teaches participants to solve tough design problems by adapting proven designs called design patterns. By reusing proven solutions on the right problems in the right contexts, you will be able to solve design problems that you may not have been able to do previously.
+DevSecOps
+ Engineering and Automation
+Continuous Delivery can help large organization’s to become lean, agile and innovative by having Secured, reliable and low risks releases, making it possible to adapt continuous updates in line with user feedback, market shifts and changes to business strategies.
+ATA/SFE-DMMS/Briefing.pptx/V1.0
+© 2023 National University of Singapore. All Rights Reserved
+3
+
+FILE /Users/speedpowermac/Downloads/course_files_export 5/SWE5006 - Grad Cert - Practice Project Briefing Materials/SWE5006-DMSS-Grad Cert-Briefing Material-MTechTTPT-Aug-Nov2026.pptx / ppt/slides/slide5.xml
+
+Requirements of Group Project–1
+Nature of the project
+undertaking group project this project adequately demonstrate the skills learned in the certificate course modules and cover sufficient scope for the size of team. The project is expected to demonstrate the following capabilities: 
+Design and develop software systems by leveraging on best practices for agile teams
+Analyse and design robust software systems for implementation on target technology platforms
+Design reusable, maintainable and extensible software systems by applying expert solutions from existing design patterns
+Engineer and automate 
+DevSecOps
+ pipelines for agile continuous delivery
+ATA/SFE-DMMS/Briefing.pptx/V1.0
+© 2023 National University of Singapore. All Rights Reserved
+5
+Deliverables - 1
+Working system
+Code base (e.g. Git archive, GitHub repository URL)
+Project Report (
+template will be provided
+)
+Design and Architecture of the solution including key architectural decisions
+Quality attributes and strategies
+DevOps and development lifecycle
+etc.
+DevSecOps
+ pipeline scripts and test scripts
+
+FILE /Users/speedpowermac/Downloads/course_files_export 5/SWE5006 - Grad Cert - Practice Project Briefing Materials/SWE5006-DMSS-Grad Cert-Briefing Material-MTechTTPT-Aug-Nov2026.pptx / ppt/slides/slide6.xml
+
+Requirements of Group Project–1
+ATA/SFE-DMMS/Briefing.pptx/V1.0
+© 2023 National University of Singapore. All Rights Reserved
+6
+Deliverables - 2
+Crisp and readable presentation slides with good flow. 
+Agile process 
+artifacts
+ like product backlog, user stories, sprint plans, burndown charts, sprint reviews and sprint retrospectives. 
+High-level design specification capturing the software architecture, in particular the transition strategies from analysis to design. 
+Detailed analysis and design specifications for the user stories (or use cases) in scope. 
+Detailed discussion on the design problems solved by applying design patterns. 
+Well structured source code with unit test cases for classes with more complex behaviours. 
+Design specification of the DevOps pipelines along with the use of appropriate tools with minimal security considerations. 
+
+FILE /Users/speedpowermac/Downloads/course_files_export 5/SWE5006 - Grad Cert - Practice Project Briefing Materials/SWE5006-DMSS-Grad Cert-Briefing Material-MTechTTPT-Aug-Nov2026.pptx / ppt/slides/slide7.xml
+
+Requirements of Group Project–2.
+About 10 man-days of effort per participant is expected
+Rough schedule is shown below (
+some dates are tentative
+)
+ATA/SFE-DMMS/Briefing.pptx/V1.0
+© 2023 National University of Singapore. All Rights Reserved
+7
+Date
+Agenda
+Description
+20 Aug 
+2026
+Module Briefing
+The participants are briefed on the requirements, conduct and assessment of the practice module
+28 Aug
+ 2026
+Proposal Submission
+The participants submit
+ their proposals for review by the lecturers; earlier submissions are welcome
+31 Aug 
+2026
+Proposal Review
+The
+ lecturers provide the review comments. The participants revise the proposals, if necessary, and kick start their projects
+1 Sep 2026
+Project Conduct
+The participants conduct their
+ projects and consult the lecturers on issues. Each group submits a fortnightly progress report for review by the lecturers
+26 & 27 Oct 2026
+Project Presentation
+The participants present their
+ projects
+Throughout the project
+Clinic Session
+The
+ lecturers shall clarify the ongoing queries raised by the students 
+1 Nov 2026
+Report Submission
+The participants submit their project report, incorporating remarks gathered during their project presentations

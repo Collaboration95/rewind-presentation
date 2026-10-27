@@ -1,0 +1,422 @@
+[
+  {
+    "title": "Pipeline decisions",
+    "duration": 20,
+    "section": "Source \u2192 Quality \u2192 hosted dev",
+    "narration": "Follow one change through six decisions: the pull request, parallel verification, security findings, the verified bundle, hosted dev and promotion. I will connect each decision to the check or artifact that records its result.",
+    "id": "shot-00-00-pipeline",
+    "frame": "frames/00-pipeline.png",
+    "focus": [
+      970,
+      730
+    ],
+    "source": "BRIEF-SHARED.md; audit/D-cicd-demo.md \u00a75",
+    "evidence": ""
+  },
+  {
+    "title": "PR #595 checks",
+    "duration": 20,
+    "section": "01 \u00b7 Pull request checks",
+    "narration": "Pull request 595 contains the pipeline artifact changes. Its checks list shows static analysis, tests and the dependency audit feeding the aggregate Quality gate. The individual results remain visible alongside the required merge check.",
+    "id": "shot-01-02-pr595-checks",
+    "frame": "frames/02-pr595-checks.png",
+    "focus": [
+      176,
+      778
+    ],
+    "source": "https://github.com/Collaboration95/rewind-app/pull/595/checks",
+    "evidence": "evidence/pr595-view.json"
+  },
+  {
+    "title": "PR #595 security checks",
+    "duration": 16,
+    "section": "01 \u00b7 Pull request checks",
+    "narration": "The same pull request also records CodeQL, image and IaC scans, and secret scanning. These results are visible for security review alongside Quality.",
+    "id": "shot-01b-pr595-security",
+    "frame": "frames/02b-pr595-checks-security.png",
+    "focus": [
+      152,
+      895
+    ],
+    "source": "https://github.com/Collaboration95/rewind-app/pull/595/checks",
+    "evidence": "evidence/pr595-view.json"
+  },
+  {
+    "title": "Protected dev",
+    "duration": 24,
+    "section": "02 \u00b7 Branch protection",
+    "narration": "The dev branch requires a pull request, an up-to-date branch and the check named Format, lint, typecheck, and test. Conversation resolution and administrator enforcement are enabled. The required approving-review count is zero, which allows routine dev changes to proceed after the automated gate.",
+    "id": "shot-02-03-protect-dev",
+    "frame": "frames/03-protect-dev.png",
+    "focus": [
+      855,
+      890
+    ],
+    "source": "https://github.com/Collaboration95/rewind-app/settings/branches",
+    "evidence": "evidence/protection-dev.json"
+  },
+  {
+    "title": "Protected main",
+    "duration": 24,
+    "section": "02 \u00b7 Branch protection",
+    "narration": "Main keeps the same required Quality context and adds one approving review, including approval of the last push. This is the promotion boundary: a change that has reached dev still passes through the main review rule.",
+    "id": "shot-03-25-protect-main",
+    "frame": "frames/25-protect-main.png",
+    "focus": [
+      994,
+      586
+    ],
+    "source": "https://github.com/Collaboration95/rewind-app/settings/branches",
+    "evidence": "evidence/protection-main.json"
+  },
+  {
+    "title": "Quality run graph",
+    "duration": 28,
+    "section": "03 \u00b7 Parallel Quality jobs",
+    "narration": "The Quality graph starts with change classification and fans out into parallel jobs. Tests, coverage, static checks and the production dependency audit feed the aggregate gate. Main-bound changes also run the web export and browser checks.",
+    "id": "shot-04-04-quality-graph",
+    "frame": "frames/04-quality-graph.png",
+    "focus": [
+      962,
+      350
+    ],
+    "source": "https://github.com/Collaboration95/rewind-app/actions/runs/40343459119",
+    "evidence": "evidence/run-quality.json; evidence/run-quality-jobs.json"
+  },
+  {
+    "title": "Quality artifacts",
+    "duration": 20,
+    "section": "03 \u00b7 Retained test artifacts",
+    "narration": "The run retains four artifact groups: root JUnit results, server coverage, frontend coverage and npm-audit JSON. They remain attached to the run and its commit, so a reviewer can inspect the machine-readable results behind the green check.",
+    "id": "shot-05-06-quality-artifacts",
+    "frame": "frames/06-quality-artifacts.png",
+    "focus": [
+      583,
+      904
+    ],
+    "source": "https://github.com/Collaboration95/rewind-app/actions/runs/40343459119",
+    "evidence": "evidence/run-quality-artifacts.json"
+  },
+  {
+    "title": "JUnit results",
+    "duration": 20,
+    "section": "03 \u00b7 JUnit test results",
+    "narration": "The JUnit report records individual test cases and their outcomes. The job summary presents the totals, while the XML keeps the detail for inspection. This links the test result to the exact Quality run rather than relying on a copied test count.",
+    "id": "shot-06-05-quality-summaries",
+    "frame": "frames/05-quality-summaries.png",
+    "focus": [
+      990,
+      800
+    ],
+    "source": "https://github.com/Collaboration95/rewind-app/actions/runs/40343459119",
+    "evidence": "evidence/summaries/quality-*.md (regenerated with scripts/quality-summary.py logic from run artifacts)"
+  },
+  {
+    "title": "Coverage summaries",
+    "duration": 30,
+    "section": "03 \u00b7 Measured coverage",
+    "narration": "These are the coverage reports retained by the same run. Frontend statement coverage is 89.64 percent, and server line coverage is 85.50 percent. The reports preserve the underlying counts and coverage dimensions alongside the test results.",
+    "id": "shot-07-05b-quality-coverage-summaries",
+    "frame": "frames/05b-quality-coverage-summaries.png",
+    "focus": [
+      1130,
+      695
+    ],
+    "source": "https://github.com/Collaboration95/rewind-app/actions/runs/40343459119",
+    "evidence": "evidence/summaries/quality-server.md; evidence/summaries/quality-frontend.md (regenerated with scripts/quality-summary.py logic from run artifacts)"
+  },
+  {
+    "title": "Production dependency audit",
+    "duration": 24,
+    "section": "04 \u00b7 Software composition analysis",
+    "narration": "The production dependency audit reports zero findings at every severity in this run. The command audits production dependencies and fails on High or Critical findings. Because this job feeds the required Quality gate, a failed audit prevents the normal merge path.",
+    "id": "shot-08-08-term-npm-audit",
+    "frame": "frames/08-term-npm-audit.png",
+    "focus": [
+      203,
+      378
+    ],
+    "source": "local command output",
+    "evidence": "evidence/terminal/npm-audit.txt"
+  },
+  {
+    "title": "CodeQL security results",
+    "duration": 22,
+    "section": "04 \u00b7 SAST results and triage",
+    "narration": "CodeQL publishes its analysis results to the Security area. The alert list records the rule, affected code and disposition. The captured dev results have no open alerts; closed alerts retain their review reasons so the decisions can be inspected.",
+    "id": "shot-09-09-codescan-alerts",
+    "frame": "frames/09-codescan-alerts.png",
+    "focus": [
+      569,
+      419
+    ],
+    "source": "https://github.com/Collaboration95/rewind-app/security/code-scanning?query=is%3Aclosed+branch%3Adev",
+    "evidence": "evidence/codescan-dev.json"
+  },
+  {
+    "title": "PR #592 alert triage",
+    "duration": 30,
+    "section": "04 \u00b7 CodeQL alert triage",
+    "narration": "The load-test harness in pull request 592 raised CodeQL findings. Alert 56 concerns writing a report to an operator-selected path. Its recorded disposition is used in tests, with an explanation that this harness is operator-run and never shipped in the application image.",
+    "id": "shot-10-10-codescan-alert-56",
+    "frame": "frames/10-codescan-alert-56.png",
+    "focus": [
+      755,
+      712
+    ],
+    "source": "https://github.com/Collaboration95/rewind-app/security/code-scanning/56",
+    "evidence": "evidence/codescan-alert-56.json; evidence/codescan-pr592.json"
+  },
+  {
+    "title": "Gitleaks full-history scan",
+    "duration": 24,
+    "section": "04 \u00b7 Secret scanning",
+    "narration": "The secret-scan workflow runs Gitleaks over the repository history and retains a redacted SARIF artifact. The run records the scan result. Historical exceptions are constrained to exact benign values and paths, so a new value in the same file still receives normal scanning.",
+    "id": "shot-11-13-gitleaks-summary",
+    "frame": "frames/13-gitleaks-summary.png",
+    "focus": [
+      1135,
+      564
+    ],
+    "source": "https://github.com/Collaboration95/rewind-app/actions/runs/40343459282",
+    "evidence": "evidence/summaries/gitleaks.md; evidence/terminal/gitleaks.txt"
+  },
+  {
+    "title": "Deploy dev run 40344230832",
+    "duration": 16,
+    "section": "05 \u00b7 Verified deployment",
+    "narration": "Deploy dev 40344230832 records the artifact-rich deployment. The graph orders change classification, the deploy job and the ZAP baseline against hosted dev.",
+    "id": "shot-12-14-deploy-graph",
+    "frame": "frames/14-deploy-graph.png",
+    "focus": [
+      547,
+      278
+    ],
+    "source": "https://github.com/Collaboration95/rewind-app/actions/runs/40344230832",
+    "evidence": "evidence/run-deploy.json; evidence/run-deploy-jobs.json"
+  },
+  {
+    "title": "Deploy job steps",
+    "duration": 14,
+    "section": "05 \u00b7 Verified deployment",
+    "narration": "The steps wait for Quality on the same commit, build and scan the exact bundle, attest the artifacts, obtain temporary OIDC credentials and install the release.",
+    "id": "shot-12b-deploy-steps",
+    "frame": "frames/15-deploy-steps.png",
+    "focus": [
+      950,
+      650
+    ],
+    "source": "https://github.com/Collaboration95/rewind-app/actions/runs/40344230832/job/121646847180",
+    "evidence": "evidence/run-deploy.json; evidence/run-deploy-jobs.json"
+  },
+  {
+    "title": "Exact-bundle Trivy gate",
+    "duration": 32,
+    "section": "05 \u00b7 Exact-bundle image scanning",
+    "narration": "This step scans the runtime and web images inside the bundle that will be uploaded. Both images have zero High and Critical findings in the manifest. The runtime image also records one Medium finding and two Unknown findings. The High and Critical gate runs before host upload.",
+    "id": "shot-13-17-deploy-summaries",
+    "frame": "frames/17-deploy-summaries.png",
+    "focus": [
+      850,
+      500
+    ],
+    "source": "https://github.com/Collaboration95/rewind-app/actions/runs/40344230832",
+    "evidence": "evidence/summaries/release-gate.md; evidence/summaries/zap.md"
+  },
+  {
+    "title": "CycloneDX SBOM",
+    "duration": 24,
+    "section": "05 \u00b7 Software bill of materials",
+    "narration": "The CycloneDX files inventory components from the exact bundled runtime and web images. The SBOM and vulnerability reports describe the same image pair. Their hashes are recorded in the release manifest, connecting component inventory, scan results and the bundle identity.",
+    "id": "shot-14-18-term-trivy-sbom",
+    "frame": "frames/18-term-trivy-sbom.png",
+    "focus": [
+      650,
+      340
+    ],
+    "source": "local command output",
+    "evidence": "evidence/terminal/sbom-trivy.txt"
+  },
+  {
+    "title": "Release manifest",
+    "duration": 18,
+    "section": "05 \u00b7 Source and artifact identity",
+    "narration": "The manifest records the commit, workflow run, successful Quality run, scanner and security-gate result. Its image entries and hashes connect the source verification to the retained deployment artifacts.",
+    "id": "shot-15-19-term-manifest",
+    "frame": "frames/19-term-manifest.png",
+    "focus": [
+      800,
+      380
+    ],
+    "source": "local command output",
+    "evidence": "evidence/terminal/manifest.txt"
+  },
+  {
+    "title": "Retained deployment artifacts",
+    "duration": 12,
+    "section": "05 \u00b7 Source and artifact identity",
+    "narration": "The run retains the deployable bundle, the security reports and manifest, and the ZAP reports as three downloadable artifact groups.",
+    "id": "shot-15b-deploy-artifacts",
+    "frame": "frames/20-deploy-artifacts.png",
+    "focus": [
+      1100,
+      805
+    ],
+    "source": "https://github.com/Collaboration95/rewind-app/actions/runs/40344230832",
+    "evidence": "evidence/terminal/manifest.txt"
+  },
+  {
+    "title": "Manifest digests",
+    "duration": 20,
+    "section": "05 \u00b7 Bundle and report hashes",
+    "narration": "The SHA-256 entries bind the release tarball, both component inventories and both vulnerability reports. The second command computes the digest of the downloaded manifest itself. That exact digest is the subject checked by the attestation verification command.",
+    "id": "shot-16-70-manifest-digests",
+    "frame": "frames/70-manifest-digests.png",
+    "focus": [
+      850,
+      470
+    ],
+    "source": "https://github.com/Collaboration95/rewind-app/actions/runs/40344230832",
+    "evidence": "evidence/terminal/manifest-digests.txt"
+  },
+  {
+    "title": "GitHub build attestation",
+    "duration": 24,
+    "section": "05 \u00b7 Signed build provenance",
+    "narration": "The deployment creates GitHub build attestations for the release bundle and security manifest. The provenance identifies the repository and deployment workflow that produced the subject. The next terminal command checks that signed provenance against the downloaded manifest bytes.",
+    "id": "shot-17-21-attestation",
+    "frame": "frames/21-attestation.png",
+    "focus": [
+      558,
+      791
+    ],
+    "source": "https://github.com/Collaboration95/rewind-app/attestations/59963857",
+    "evidence": "evidence/attestation-verify.json"
+  },
+  {
+    "title": "Verify the attestation",
+    "duration": 30,
+    "section": "05 \u00b7 Verify provenance locally",
+    "narration": "Here is the real gh attestation verify output for release-manifest.json. Verification succeeds against the repository policy, the SLSA provenance predicate and the GitHub Actions OIDC issuer. The matched signer workflow is deploy-dev.yml on the dev branch, and the command exits with status zero.",
+    "id": "shot-18-22-term-attest-verify",
+    "frame": "frames/22-term-attest-verify.png",
+    "focus": [
+      850,
+      550
+    ],
+    "source": "local command output",
+    "evidence": "evidence/attestation-verify.txt; evidence/terminal/digest.txt"
+  },
+  {
+    "title": "DAST job summary",
+    "duration": 28,
+    "section": "06 \u00b7 Dynamic security testing",
+    "narration": "After deployment, the ZAP baseline runs against hosted dev. Its summary records zero High, four Medium, seven Low and six Informational findings. The report is retained with the deploy run, and the baseline reports its findings without making them a deployment gate.",
+    "id": "shot-19-17-deploy-summaries",
+    "frame": "frames/17-deploy-summaries.png",
+    "focus": [
+      1490,
+      600
+    ],
+    "source": "https://github.com/Collaboration95/rewind-app/actions/runs/40344230832",
+    "evidence": "evidence/summaries/release-gate.md; evidence/summaries/zap.md"
+  },
+  {
+    "title": "ZAP HTML report",
+    "duration": 24,
+    "section": "06 \u00b7 Inspect dynamic findings",
+    "narration": "The retained HTML report makes the dynamic findings inspectable. Each entry names the rule, risk and affected requests. The Medium findings concern Content Security Policy. This connects the summary counts to concrete observations on the running hosted application.",
+    "id": "shot-20-23-zap-report",
+    "frame": "frames/23-zap-report.png",
+    "focus": [
+      438,
+      219
+    ],
+    "source": "https://github.com/Collaboration95/rewind-app/actions/runs/40344230832/artifacts/12660614474",
+    "evidence": "evidence/artifacts/40344230832/report_html.html (artifact zap-baseline-aea7478bce14131b821caaa99b1185077b4a9403, rendered locally)"
+  },
+  {
+    "title": "Performance summary",
+    "duration": 34,
+    "section": "07 \u00b7 Hosted performance",
+    "narration": "The full profile ran after deployment, with 1, 10, 25, 50 and 100 virtual users. At 100 VUs, the measured p95 is 1336 milliseconds and throughput is 17.84 requests per second, with 0 errors across 3212 requests. The retained summary records each steady stage.",
+    "id": "shot-21-80-performance",
+    "frame": "frames/80-performance.png",
+    "focus": [
+      1360,
+      785
+    ],
+    "source": "../../load-test/results/hosted.json",
+    "evidence": "../../load-test/status.json"
+  },
+  {
+    "title": "Performance chart",
+    "duration": 28,
+    "section": "07 \u00b7 Measured performance",
+    "narration": "The chart plots the clean run across the five load stages. The measured observations feed the response-time and throughput figures. The capacity table keeps the measured baseline alongside projected values for 250, 500 and 1,000 users.",
+    "id": "shot-22-81-performance-chart",
+    "frame": "frames/81-performance-chart.png",
+    "focus": [
+      1380,
+      720
+    ],
+    "source": "BRIEF-SHARED.md; audit/D-cicd-demo.md \u00a75",
+    "evidence": ""
+  },
+  {
+    "title": "Hosted dev health",
+    "duration": 24,
+    "section": "08 \u00b7 Hosted dev health",
+    "narration": "The hosted dev health endpoint returns HTTP 200. The JSON reports PostgreSQL and a ready schema at migration 31. Deployment identity comes from the workflow and manifest; this endpoint provides a direct check that the hosted application and database are responding.",
+    "id": "shot-23-24-term-health",
+    "frame": "frames/24-term-health.png",
+    "focus": [
+      955,
+      843
+    ],
+    "source": "local command output",
+    "evidence": "evidence/health-curl.txt"
+  },
+  {
+    "title": "Environment controls",
+    "duration": 24,
+    "section": "09 \u00b7 Environment controls",
+    "narration": "The environment settings record which deployment paths run automatically and which require a reviewer. Dev has no environment approval gate. The promotion environment records its reviewer and branch policy. These controls are separate from the source-branch review rule.",
+    "id": "shot-24-28-environments",
+    "frame": "frames/28-environments.png",
+    "focus": [
+      1135,
+      438
+    ],
+    "source": "https://github.com/Collaboration95/rewind-app/settings/environments",
+    "evidence": "evidence/environments.json; evidence/env-release-branch-policies.json"
+  },
+  {
+    "title": "Promotion PR #586",
+    "duration": 36,
+    "section": "09 \u00b7 Promotion through a reviewed PR",
+    "narration": "Pull request 586 carries dev into main. The captured pull request already has an approving review, and the main protection rule requires that review. Its checks and merge state remain visible separately. I am showing the promotion controls and leaving the pull request unchanged.",
+    "id": "shot-25-27-promotion-approval",
+    "frame": "frames/27-promotion-approval.png",
+    "focus": [
+      1300,
+      506
+    ],
+    "source": "https://github.com/Collaboration95/rewind-app/pull/586",
+    "evidence": "evidence/protection-main.json; evidence/pr586-view.json"
+  },
+  {
+    "title": "Decisions and retained artifacts",
+    "duration": 20,
+    "section": "Rewind \u00b7 source, artifacts and hosted dev",
+    "narration": "The chain is now visible: protected source changes, retained test and audit results, reviewed security findings, an exact-bundle scan, a signed manifest, hosted health, dynamic findings and a load-test result. Each artifact stays connected to the commit and run that produced it.",
+    "id": "shot-26-99-decisions",
+    "frame": "frames/99-decisions.png",
+    "focus": [
+      920,
+      760
+    ],
+    "source": "BRIEF-SHARED.md; audit/D-cicd-demo.md \u00a75",
+    "evidence": ""
+  }
+]

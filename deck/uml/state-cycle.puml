@@ -1,0 +1,21 @@
+@startuml
+!include _style.iuml
+title Statechart · UC07–UC08 Close cycle and release film
+skinparam Padding 0
+skinparam ranksep 22
+skinparam nodesep 24
+state "Collecting\nstatus = collecting" as C
+state "Revealing / unpublished\nstatus = revealing\nrelease_status = unpublished" as U
+state "Revealing / published\nstatus = revealing\nrelease_status = published" as P
+state "Archived\nstatus = archived" as A
+[*] --> C : createRealGroup()
+C -right-> U : advance [now >= ends_at]\n/ ensureCompilationJob(); ensureSuccessor()
+U -down-> P : publish [ready proof AND now >= ends_at]\n/ release_published_at := now
+P -left-> A : advance [24 h since publication AND ready proof]\n/ addEvent()
+C -[hidden]down-> A
+legend bottom
+advance = advanceCycleLifecycleWithStore(); publish = publishCycleReleaseWithStore().
+Ready proof = verified film bytes + unchanged ready job. Failed guards retain the state.
+Intake closes at ends_at via cyclePhase(). The successor collects during release.
+endlegend
+@enduml

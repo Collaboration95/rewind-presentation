@@ -1,0 +1,32 @@
+@startuml
+!include _style.iuml
+title Design sequence · UC05–UC06 Pin and validate the photo
+hide footbox
+autonumber
+skinparam Padding 0
+skinparam sequence {
+ MessageSpacing 0
+ ParticipantPadding 5
+ BoxPadding 3
+}
+skinparam ParticipantFontSize 19
+skinparam SequenceGroupHeaderFontSize 19
+skinparam maxMessageSize 500
+skinparam sequenceMessageSpan true
+participant "real-routes.ts\n«module»" as API
+participant "upload-intents.ts\n«module»" as I
+participant ":RewindDatabase" as DB
+participant ":MediaStore\n«interface»" as M
+participant "ffmpeg.ts\n«module»" as F
+API -> I : completeUploadIntent()
+I -> DB : txn 1: authorize; pin open intent if needed; COMMIT
+alt already completed
+ I --> API : same completed receipt
+else pinned
+ I -> M : read(scope, ref) · materialize pinned version
+ I -> F : probePhotoWithFfmpeg()
+ I -> I : validate bytes / type; validateClipUpload()
+ ref over I,DB : seq-capture-commit · one acceptance transaction
+ I --> API : completed receipt / failure
+end
+@enduml

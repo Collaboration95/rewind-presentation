@@ -1,0 +1,17 @@
+{
+  "number": 1,
+  "name": "Install to Home Screen",
+  "output": "01-install.mp4",
+  "segments": [
+    {
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/01-install-clean.mov",
+      "in": 0,
+      "out": 47,
+      "duration": 47
+    },
+    {
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/stills/01-add-confirm.png",
+      "duration": 5
+    }
+  ]
+}

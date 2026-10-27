@@ -1,0 +1,45 @@
+Format, lint, typecheck, and test	Set up job	﻿2026-10-26T14:54:28.4336646Z Current runner version: '2.338.0'
+Format, lint, typecheck, and test	Set up job	2026-10-26T14:54:28.4364131Z ##[group]Runner Image Provisioner
+Format, lint, typecheck, and test	Set up job	2026-10-26T14:54:28.4365228Z Hosted Compute Agent
+Format, lint, typecheck, and test	Set up job	2026-10-26T14:54:28.4366265Z Version: 20261021.618
+Format, lint, typecheck, and test	Set up job	2026-10-26T14:54:28.4367015Z Commit: 21505ad2541d5be6135ed84fc33697146cf75b8e
+Format, lint, typecheck, and test	Set up job	2026-10-26T14:54:28.4367770Z Build Date: 2026-10-21T00:45:21Z
+Format, lint, typecheck, and test	Set up job	2026-10-26T14:54:28.4368498Z Worker ID: {1dfe9f91-4abc-485d-bb17-20cda40c7a8a}
+Format, lint, typecheck, and test	Set up job	2026-10-26T14:54:28.4369256Z Region: eastus
+Format, lint, typecheck, and test	Set up job	2026-10-26T14:54:28.4369799Z Cloud: Azure
+Format, lint, typecheck, and test	Set up job	2026-10-26T14:54:28.4370317Z ##[endgroup]
+Format, lint, typecheck, and test	Set up job	2026-10-26T14:54:28.4372396Z ##[group]Operating System
+Format, lint, typecheck, and test	Set up job	2026-10-26T14:54:28.4373110Z Ubuntu
+Format, lint, typecheck, and test	Set up job	2026-10-26T14:54:28.4373748Z 24.04.5
+Format, lint, typecheck, and test	Set up job	2026-10-26T14:54:28.4374259Z LTS
+Format, lint, typecheck, and test	Set up job	2026-10-26T14:54:28.4374861Z ##[endgroup]
+Format, lint, typecheck, and test	Set up job	2026-10-26T14:54:28.4375453Z ##[group]Runner Image
+Format, lint, typecheck, and test	Set up job	2026-10-26T14:54:28.4376316Z Image: ubuntu-24.04
+Format, lint, typecheck, and test	Set up job	2026-10-26T14:54:28.4376954Z Version: 20261012.334.1
+Format, lint, typecheck, and test	Set up job	2026-10-26T14:54:28.4378051Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261012.334/images/ubuntu/Ubuntu2404-Readme.md
+Format, lint, typecheck, and test	Set up job	2026-10-26T14:54:28.4379860Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261012.334
+Format, lint, typecheck, and test	Set up job	2026-10-26T14:54:28.4380848Z ##[endgroup]
+Format, lint, typecheck, and test	Set up job	2026-10-26T14:54:28.4382020Z ##[group]GITHUB_TOKEN Permissions
+Format, lint, typecheck, and test	Set up job	2026-10-26T14:54:28.4384101Z Contents: read
+Format, lint, typecheck, and test	Set up job	2026-10-26T14:54:28.4384923Z Metadata: read
+Format, lint, typecheck, and test	Set up job	2026-10-26T14:54:28.4385519Z ##[endgroup]
+Format, lint, typecheck, and test	Set up job	2026-10-26T14:54:28.4388973Z Secret source: Actions
+Format, lint, typecheck, and test	Set up job	2026-10-26T14:54:28.4389992Z Cache mode: write
+Format, lint, typecheck, and test	Set up job	2026-10-26T14:54:28.4391050Z Prepare workflow directory
+Format, lint, typecheck, and test	Set up job	2026-10-26T14:54:28.4723524Z Prepare all required actions
+Format, lint, typecheck, and test	Set up job	2026-10-26T14:54:28.4831909Z Complete job name: Format, lint, typecheck, and test
+Format, lint, typecheck, and test	Require successful scope classification	﻿2026-10-26T14:54:28.6053299Z ##[group]Run test 'success' = success
+Format, lint, typecheck, and test	Require successful scope classification	2026-10-26T14:54:28.6054043Z ^[[36;1mtest 'success' = success^[[0m
+Format, lint, typecheck, and test	Require successful scope classification	2026-10-26T14:54:28.6936586Z shell: /usr/bin/bash -e {0}
+Format, lint, typecheck, and test	Require successful scope classification	2026-10-26T14:54:28.6937590Z ##[endgroup]
+Format, lint, typecheck, and test	Require every quality job to succeed	﻿2026-10-26T14:54:28.7320665Z ##[group]Run test 'success' = success
+Format, lint, typecheck, and test	Require every quality job to succeed	2026-10-26T14:54:28.7321350Z ^[[36;1mtest 'success' = success^[[0m
+Format, lint, typecheck, and test	Require every quality job to succeed	2026-10-26T14:54:28.7321936Z ^[[36;1mtest 'success' = success^[[0m
+Format, lint, typecheck, and test	Require every quality job to succeed	2026-10-26T14:54:28.7322474Z ^[[36;1mtest 'success' = success^[[0m
+Format, lint, typecheck, and test	Require every quality job to succeed	2026-10-26T14:54:28.7322998Z ^[[36;1mtest 'success' = success^[[0m
+Format, lint, typecheck, and test	Require every quality job to succeed	2026-10-26T14:54:28.7323527Z ^[[36;1mtest 'success' = success^[[0m
+Format, lint, typecheck, and test	Require every quality job to succeed	2026-10-26T14:54:28.7324054Z ^[[36;1mtest 'success' = success^[[0m
+Format, lint, typecheck, and test	Require every quality job to succeed	2026-10-26T14:54:28.7324583Z ^[[36;1mtest 'success' = success^[[0m
+Format, lint, typecheck, and test	Require every quality job to succeed	2026-10-26T14:54:28.7385994Z shell: /usr/bin/bash -e {0}
+Format, lint, typecheck, and test	Require every quality job to succeed	2026-10-26T14:54:28.7386537Z ##[endgroup]
+Format, lint, typecheck, and test	Complete job	﻿2026-10-26T14:54:28.7587082Z Cleaning up orphan processes

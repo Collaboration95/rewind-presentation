@@ -1,0 +1,515 @@
+{
+  "target": "https://d2m6kz76y4kuvm.cloudfront.net",
+  "modelCeilingRpsProjected": 22.031424583952504,
+  "full": {
+    "series": "full",
+    "files": [
+      "results-fullmix.json"
+    ],
+    "startedAt": "2026-10-27T04:21:31.953Z",
+    "finishedAt": "2026-10-27T04:26:22.840Z",
+    "profile": {
+      "confirmationOnly": false,
+      "mix": "full (95% reads, 5% chat-send)",
+      "levels": [
+        100,
+        150,
+        200,
+        300,
+        500,
+        750,
+        1000,
+        1500,
+        2000
+      ],
+      "steadySeconds": 60,
+      "rampSeconds": 15,
+      "thinkTimeMs": [
+        3000,
+        7000
+      ],
+      "timeoutMs": 15000,
+      "stopConditions": "stage or rolling-15s errors > 10%, p95 > 5 s, 2 consecutive health failures, 13:00 SGT"
+    },
+    "stopReasons": [
+      "rolling p95 7.20 s > 5 s during 300 VU steady"
+    ],
+    "steadyStages": [
+      {
+        "vus": 100,
+        "elapsedSeconds": 60.051731625,
+        "complete": true,
+        "requests": 1086,
+        "errors": 0,
+        "errorRate": 0,
+        "throughputRps": 18.084407736676983,
+        "successRps": 18.084407736676983,
+        "meanMs": 523.5031786104979,
+        "p50Ms": 458.7485000000015,
+        "p95Ms": 990.0168340000018,
+        "p99Ms": 1549.7338329999911,
+        "maxMs": 1818.041041999997,
+        "errorTypes": {},
+        "verdict": "PASS",
+        "client": {
+          "cpuPercentMax": 5.311955256570814,
+          "loopP99MsMax": 21.135359,
+          "inflightMax": 36
+        },
+        "errorsExcludingChatSendRateLimit": 0,
+        "nonSendRequests": 1030,
+        "linearEfficiency": 1.0
+      },
+      {
+        "vus": 150,
+        "elapsedSeconds": 60.023316500000014,
+        "complete": true,
+        "requests": 1541,
+        "errors": 0,
+        "errorRate": 0,
+        "throughputRps": 25.673356453071026,
+        "successRps": 25.673356453071026,
+        "meanMs": 786.6830791719666,
+        "p50Ms": 685.4002919999766,
+        "p95Ms": 1655.5815000000002,
+        "p99Ms": 2378.77062499999,
+        "maxMs": 2715.9507500000036,
+        "errorTypes": {},
+        "verdict": "PASS",
+        "client": {
+          "cpuPercentMax": 5.274280086568282,
+          "loopP99MsMax": 11.821055,
+          "inflightMax": 41
+        },
+        "errorsExcludingChatSendRateLimit": 0,
+        "nonSendRequests": 1468,
+        "linearEfficiency": 0.946426956189554
+      },
+      {
+        "vus": 200,
+        "elapsedSeconds": 60.000115416000014,
+        "complete": true,
+        "requests": 1741,
+        "errors": 0,
+        "errorRate": 0,
+        "throughputRps": 29.016610850314027,
+        "successRps": 29.016610850314027,
+        "meanMs": 1908.1107939385436,
+        "p50Ms": 1870.957916000014,
+        "p95Ms": 3029.7141669999983,
+        "p99Ms": 3469.0669170000183,
+        "maxMs": 3915.5875839999935,
+        "errorTypes": {},
+        "verdict": "FAIL",
+        "client": {
+          "cpuPercentMax": 6.182297607347303,
+          "loopP99MsMax": 12.099583,
+          "inflightMax": 85
+        },
+        "errorsExcludingChatSendRateLimit": 0,
+        "nonSendRequests": 1647,
+        "linearEfficiency": 0.8022549389733523
+      },
+      {
+        "vus": 300,
+        "elapsedSeconds": 35.171640249999996,
+        "complete": false,
+        "requests": 1276,
+        "errors": 0,
+        "errorRate": 0,
+        "throughputRps": 36.279229257725625,
+        "successRps": 36.279229257725625,
+        "meanMs": 3133.1805527014076,
+        "p50Ms": 3080.393708000018,
+        "p95Ms": 6798.124624999997,
+        "p99Ms": 7298.63070899999,
+        "maxMs": 7575.456959000032,
+        "errorTypes": {},
+        "verdict": "STOP",
+        "client": {
+          "cpuPercentMax": 8.443284855136788,
+          "loopP99MsMax": 11.927551,
+          "inflightMax": 134
+        },
+        "errorsExcludingChatSendRateLimit": 0,
+        "nonSendRequests": 1214,
+        "linearEfficiency": 0.6687018228811503
+      }
+    ],
+    "breakpoint": {
+      "vus": 200,
+      "p95Ms": 3029.7141669999983,
+      "errorRate": 0,
+      "verdict": "FAIL",
+      "errorTypes": {}
+    },
+    "lastPassingVus": 150,
+    "saturation": {
+      "vus": 200,
+      "successRps": 29.016610850314027,
+      "linearEfficiency": 0.8022549389733523
+    },
+    "peakSuccessRps": {
+      "vus": 300,
+      "successRps": 36.279229257725625
+    },
+    "operations": {
+      "archive": {
+        "requests": 844,
+        "medianBytes": 128,
+        "errors": 0,
+        "errorTypes": {}
+      },
+      "chat-read": {
+        "requests": 1696,
+        "medianBytes": 11380,
+        "errors": 0,
+        "errorTypes": {}
+      },
+      "chat-send": {
+        "requests": 285,
+        "medianBytes": 688,
+        "errors": 0,
+        "errorTypes": {}
+      },
+      "contributions": {
+        "requests": 561,
+        "medianBytes": 348,
+        "errors": 0,
+        "errorTypes": {}
+      },
+      "groups": {
+        "requests": 850,
+        "medianBytes": 646,
+        "errors": 0,
+        "errorTypes": {}
+      },
+      "home": {
+        "requests": 1119,
+        "medianBytes": 643,
+        "errors": 0,
+        "errorTypes": {}
+      },
+      "media-capability": {
+        "requests": 289,
+        "medianBytes": 128,
+        "errors": 0,
+        "errorTypes": {}
+      }
+    },
+    "health": {
+      "polls": 47,
+      "failures": 0,
+      "maxMs": 6689.334916000022
+    },
+    "statusCodes": {
+      "200": 6864,
+      "201": 359
+    },
+    "cloudFront": {
+      "Miss from cloudfront": 7223
+    }
+  },
+  "readonly": {
+    "series": "readonly",
+    "files": [
+      "results.json",
+      "results-extension.json"
+    ],
+    "startedAt": "2026-10-27T04:08:27.842Z",
+    "finishedAt": "2026-10-27T04:20:17.204Z",
+    "profile": {
+      "confirmationOnly": true,
+      "levels": [
+        100,
+        150,
+        200,
+        300,
+        500,
+        750,
+        1000,
+        1500,
+        2000,
+        3000,
+        4000,
+        5000
+      ],
+      "steadySeconds": 60,
+      "rampSeconds": 15,
+      "thinkTimeMs": [
+        3000,
+        7000
+      ],
+      "timeoutMs": 15000,
+      "stopConditions": "stage or rolling-15s errors > 10%, p95 > 5 s, 2 consecutive health failures, 13:00 SGT"
+    },
+    "stopReasons": [
+      "all stages completed",
+      "rolling p95 5.25 s > 5 s during 1500 VU steady"
+    ],
+    "steadyStages": [
+      {
+        "vus": 100,
+        "elapsedSeconds": 60.042342915999996,
+        "complete": true,
+        "requests": 1127,
+        "errors": 0,
+        "errorRate": 0,
+        "throughputRps": 18.770086996383327,
+        "successRps": 18.770086996383327,
+        "meanMs": 327.67807945252946,
+        "p50Ms": 299.12462499999674,
+        "p95Ms": 429.87275000000227,
+        "p99Ms": 528.5517499999987,
+        "maxMs": 646.2745419999992,
+        "errorTypes": {},
+        "verdict": "PASS",
+        "client": {
+          "cpuPercentMax": 4.333130940295655,
+          "loopP99MsMax": 11.976703,
+          "inflightMax": 12
+        },
+        "errorsExcludingChatSendRateLimit": 0,
+        "nonSendRequests": 1127,
+        "linearEfficiency": 1.0
+      },
+      {
+        "vus": 150,
+        "elapsedSeconds": 60.00789933300001,
+        "complete": true,
+        "requests": 1678,
+        "errors": 0,
+        "errorRate": 0,
+        "throughputRps": 27.962985184472558,
+        "successRps": 27.962985184472558,
+        "meanMs": 330.5511279892727,
+        "p50Ms": 297.2346660000039,
+        "p95Ms": 433.55587500000547,
+        "p99Ms": 675.7032499999914,
+        "maxMs": 1196.235124999992,
+        "errorTypes": {},
+        "verdict": "PASS",
+        "client": {
+          "cpuPercentMax": 2.239331662840411,
+          "loopP99MsMax": 11.640831,
+          "inflightMax": 41
+        },
+        "errorsExcludingChatSendRateLimit": 0,
+        "nonSendRequests": 1678,
+        "linearEfficiency": 0.9931754779066124
+      },
+      {
+        "vus": 200,
+        "elapsedSeconds": 60.07607645900001,
+        "complete": true,
+        "requests": 2255,
+        "errors": 0,
+        "errorRate": 0,
+        "throughputRps": 37.53574022995601,
+        "successRps": 37.53574022995601,
+        "meanMs": 333.61693234323803,
+        "p50Ms": 299.3802499999874,
+        "p95Ms": 438.2900419999787,
+        "p99Ms": 763.6457079999964,
+        "maxMs": 1241.4393750000163,
+        "errorTypes": {},
+        "verdict": "PASS",
+        "client": {
+          "cpuPercentMax": 2.496082798268937,
+          "loopP99MsMax": 15.015935,
+          "inflightMax": 19
+        },
+        "errorsExcludingChatSendRateLimit": 0,
+        "nonSendRequests": 2255,
+        "linearEfficiency": 0.9998818928539996
+      },
+      {
+        "vus": 300,
+        "elapsedSeconds": 60.082741875,
+        "complete": true,
+        "requests": 3382,
+        "errors": 0,
+        "errorRate": 0,
+        "throughputRps": 56.28904231827719,
+        "successRps": 56.28904231827719,
+        "meanMs": 330.10990844027094,
+        "p50Ms": 299.6560419999878,
+        "p95Ms": 427.10095900000306,
+        "p99Ms": 692.506417000026,
+        "maxMs": 978.8595830000122,
+        "errorTypes": {},
+        "verdict": "PASS",
+        "client": {
+          "cpuPercentMax": 3.3228784970315015,
+          "loopP99MsMax": 12.713983,
+          "inflightMax": 25
+        },
+        "errorsExcludingChatSendRateLimit": 0,
+        "nonSendRequests": 3382,
+        "linearEfficiency": 0.9996231828711132
+      },
+      {
+        "vus": 500,
+        "elapsedSeconds": 60.039085416999995,
+        "complete": true,
+        "requests": 5627,
+        "errors": 0,
+        "errorRate": 0,
+        "throughputRps": 93.7222804264557,
+        "successRps": 93.7222804264557,
+        "meanMs": 344.45357039470537,
+        "p50Ms": 306.8614580000285,
+        "p95Ms": 475.1776659999741,
+        "p99Ms": 1036.8624999999884,
+        "maxMs": 1298.1435000000056,
+        "errorTypes": {},
+        "verdict": "PASS",
+        "client": {
+          "cpuPercentMax": 13.426889888094095,
+          "loopP99MsMax": 12.886015,
+          "inflightMax": 49
+        },
+        "errorsExcludingChatSendRateLimit": 0,
+        "nonSendRequests": 5627,
+        "linearEfficiency": 0.9986344809644662
+      },
+      {
+        "vus": 750,
+        "elapsedSeconds": 60.005136708999984,
+        "complete": true,
+        "requests": 8374,
+        "errors": 0,
+        "errorRate": 0,
+        "throughputRps": 139.55471913363726,
+        "successRps": 139.55471913363726,
+        "meanMs": 374.38215937819456,
+        "p50Ms": 316.4154170000111,
+        "p95Ms": 577.384458000015,
+        "p99Ms": 1718.4584580000374,
+        "maxMs": 2235.6525000000256,
+        "errorTypes": {},
+        "verdict": "PASS",
+        "client": {
+          "cpuPercentMax": 15.735498624898575,
+          "loopP99MsMax": 13.115391,
+          "inflightMax": 215
+        },
+        "errorsExcludingChatSendRateLimit": 0,
+        "nonSendRequests": 8374,
+        "linearEfficiency": 0.9913270987007292
+      },
+      {
+        "vus": 1000,
+        "elapsedSeconds": 60.00086479200004,
+        "complete": true,
+        "requests": 11183,
+        "errors": 0,
+        "errorRate": 0,
+        "throughputRps": 186.380646991792,
+        "successRps": 186.380646991792,
+        "meanMs": 368.11737892908906,
+        "p50Ms": 330.2617500000051,
+        "p95Ms": 578.027666000009,
+        "p99Ms": 1066.408666000003,
+        "maxMs": 1760.8136669999803,
+        "errorTypes": {},
+        "verdict": "PASS",
+        "client": {
+          "cpuPercentMax": 19.17183964633856,
+          "loopP99MsMax": 14.688255,
+          "inflightMax": 98
+        },
+        "errorsExcludingChatSendRateLimit": 0,
+        "nonSendRequests": 22320,
+        "linearEfficiency": 0.9929663460148285
+      },
+      {
+        "vus": 1500,
+        "elapsedSeconds": 35.22012141699999,
+        "complete": false,
+        "requests": 9248,
+        "errors": 0,
+        "errorRate": 0,
+        "throughputRps": 262.57717543063865,
+        "successRps": 262.57717543063865,
+        "meanMs": 715.5868531979888,
+        "p50Ms": 374.23879200000374,
+        "p95Ms": 4550.109333,
+        "p99Ms": 5489.027625000002,
+        "maxMs": 5699.784583000001,
+        "errorTypes": {},
+        "verdict": "FAIL",
+        "client": {
+          "cpuPercentMax": 26.22081234542683,
+          "loopP99MsMax": 14.163967,
+          "inflightMax": 690
+        },
+        "errorsExcludingChatSendRateLimit": 0,
+        "nonSendRequests": 9248,
+        "linearEfficiency": 0.9326086252068082
+      }
+    ],
+    "breakpoint": {
+      "vus": 1500,
+      "p95Ms": 4550.109333,
+      "errorRate": 0,
+      "verdict": "FAIL",
+      "errorTypes": {}
+    },
+    "lastPassingVus": 1000,
+    "saturation": null,
+    "peakSuccessRps": {
+      "vus": 1500,
+      "successRps": 262.57717543063865
+    },
+    "operations": {
+      "archive": {
+        "requests": 8087,
+        "medianBytes": 128,
+        "errors": 0,
+        "errorTypes": {}
+      },
+      "chat-read": {
+        "requests": 18929,
+        "medianBytes": 101,
+        "errors": 0,
+        "errorTypes": {}
+      },
+      "contributions": {
+        "requests": 5394,
+        "medianBytes": 348,
+        "errors": 0,
+        "errorTypes": {}
+      },
+      "groups": {
+        "requests": 8125,
+        "medianBytes": 646,
+        "errors": 0,
+        "errorTypes": {}
+      },
+      "home": {
+        "requests": 10785,
+        "medianBytes": 643,
+        "errors": 0,
+        "errorTypes": {}
+      },
+      "media-capability": {
+        "requests": 2691,
+        "medianBytes": 128,
+        "errors": 0,
+        "errorTypes": {}
+      }
+    },
+    "health": {
+      "polls": 124,
+      "failures": 0,
+      "maxMs": 5021.640708999999
+    },
+    "statusCodes": {
+      "200": 67195
+    },
+    "cloudFront": {
+      "Miss from cloudfront": 67195
+    }
+  }
+}

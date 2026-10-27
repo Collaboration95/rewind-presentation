@@ -1,0 +1,187 @@
+{
+  "version": 1,
+  "hostedOrigin": "https://d2m6kz76y4kuvm.cloudfront.net",
+  "intervalConvention": "[start,end), seconds in encoded source",
+  "captureEvidence": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/deck/out/resume-qa/hosted-video/capture-evidence.json",
+  "cameraInput": {
+    "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/stock/friends-food.mp4",
+    "sha256": "3a242e8fa666ecb174668d97c9529d21f7f26aefca1c829fa55ae03d8fa62af3",
+    "feed": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/deck/out/resume-qa/hosted-video/stock-camera.y4m",
+    "transform": "scale=480:854,fps=30,yuv420p; Chromium --use-file-for-fake-video-capture",
+    "hardwareCamera": false
+  },
+  "clips": [
+    {
+      "output": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/deck/clips/hosted-device/05-photo-with-a-look.mp4",
+      "poster": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/deck/clips/hosted-device/05-photo-with-a-look-poster.jpg",
+      "posterTime": 31,
+      "duration": 55,
+      "width": 416,
+      "height": 776,
+      "crop": null,
+      "segments": [
+        {
+          "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/deck/out/resume-qa/hosted-video/capture/page@9f3d364c3d2cdd4a37b95ea9d996486a.webm",
+          "sourceStart": 35,
+          "sourceEnd": 42,
+          "sourceSha256": "b0d4080a9c4fb700004c41160c25f7ae16bb62b3134cb0de9608eaf1feeaab9d",
+          "outputStart": 0,
+          "outputEnd": 12,
+          "finalFrameHoldSeconds": 5,
+          "note": "Compact Digital; change to Disposable Flash follows"
+        },
+        {
+          "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/deck/out/resume-qa/hosted-video/capture/page@9f3d364c3d2cdd4a37b95ea9d996486a.webm",
+          "sourceStart": 42,
+          "sourceEnd": 58,
+          "sourceSha256": "b0d4080a9c4fb700004c41160c25f7ae16bb62b3134cb0de9608eaf1feeaab9d",
+          "outputStart": 12,
+          "outputEnd": 33,
+          "finalFrameHoldSeconds": 5,
+          "note": "Look selection, shutter, review"
+        },
+        {
+          "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/deck/out/resume-qa/hosted-video/capture/page@9f3d364c3d2cdd4a37b95ea9d996486a.webm",
+          "sourceStart": 58,
+          "sourceEnd": 75,
+          "sourceSha256": "b0d4080a9c4fb700004c41160c25f7ae16bb62b3134cb0de9608eaf1feeaab9d",
+          "outputStart": 33,
+          "outputEnd": 55,
+          "finalFrameHoldSeconds": 5,
+          "note": "Seal, actual upload, Sealed"
+        }
+      ],
+      "outputSha256": "e243a0d57f677f65303471bf21faa3529674f5a218157230452165f7aeaf529b",
+      "audio": "silent AAC",
+      "posterSha256": "66b6d663fbbd26525647f0a9ac7db9dfe82585469316c4dcea40c3609378eabe"
+    },
+    {
+      "output": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/deck/clips/hosted-device/06-video-and-allowance.mp4",
+      "poster": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/deck/clips/hosted-device/06-video-and-allowance-poster.jpg",
+      "posterTime": 60,
+      "duration": 65,
+      "width": 416,
+      "height": 776,
+      "crop": null,
+      "segments": [
+        {
+          "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/deck/out/resume-qa/hosted-video/capture/page@9f3d364c3d2cdd4a37b95ea9d996486a.webm",
+          "sourceStart": 95,
+          "sourceEnd": 103,
+          "sourceSha256": "b0d4080a9c4fb700004c41160c25f7ae16bb62b3134cb0de9608eaf1feeaab9d",
+          "outputStart": 0,
+          "outputEnd": 8,
+          "finalFrameHoldSeconds": 0,
+          "note": "Photo-only allowance ledger"
+        },
+        {
+          "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/deck/out/resume-qa/hosted-video/capture/page@9f3d364c3d2cdd4a37b95ea9d996486a.webm",
+          "sourceStart": 158,
+          "sourceEnd": 179,
+          "sourceSha256": "b0d4080a9c4fb700004c41160c25f7ae16bb62b3134cb0de9608eaf1feeaab9d",
+          "outputStart": 8,
+          "outputEnd": 29,
+          "finalFrameHoldSeconds": 0,
+          "note": "VHS viewfinder, recording, stop and review"
+        },
+        {
+          "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/deck/out/resume-qa/hosted-video/capture/page@9f3d364c3d2cdd4a37b95ea9d996486a.webm",
+          "sourceStart": 203,
+          "sourceEnd": 224,
+          "sourceSha256": "b0d4080a9c4fb700004c41160c25f7ae16bb62b3134cb0de9608eaf1feeaab9d",
+          "outputStart": 29,
+          "outputEnd": 50,
+          "finalFrameHoldSeconds": 0,
+          "note": "Preview playback, Seal, processing and upload"
+        },
+        {
+          "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/deck/out/resume-qa/hosted-video/capture/page@9f3d364c3d2cdd4a37b95ea9d996486a.webm",
+          "sourceStart": 224,
+          "sourceEnd": 230,
+          "sourceSha256": "b0d4080a9c4fb700004c41160c25f7ae16bb62b3134cb0de9608eaf1feeaab9d",
+          "outputStart": 50,
+          "outputEnd": 56,
+          "finalFrameHoldSeconds": 0,
+          "note": "Actual Sealed screen"
+        },
+        {
+          "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/deck/out/resume-qa/hosted-video/capture/page@9f3d364c3d2cdd4a37b95ea9d996486a.webm",
+          "sourceStart": 241,
+          "sourceEnd": 250,
+          "sourceSha256": "b0d4080a9c4fb700004c41160c25f7ae16bb62b3134cb0de9608eaf1feeaab9d",
+          "outputStart": 56,
+          "outputEnd": 65,
+          "finalFrameHoldSeconds": 0,
+          "note": "Final ledger: Photo 3 s + Video 6 s, 2 of 5, 9 of 30 s"
+        }
+      ],
+      "outputSha256": "0181ad9d27d6b5ddffa6a06ddb3f143ebe41df3204a05d66622ffb630f3fed4c",
+      "audio": "silent AAC",
+      "posterSha256": "f0488e32814c26a66be86828b30757e73f3966b1aec95ebf82b631a1e21312f2"
+    },
+    {
+      "output": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/deck/clips/hosted-device/08-weekly-reminder.mp4",
+      "poster": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/deck/clips/hosted-device/08-weekly-reminder-poster.jpg",
+      "posterTime": 24,
+      "duration": 50,
+      "width": 416,
+      "height": 776,
+      "crop": {
+        "x": 752,
+        "y": 124,
+        "width": 416,
+        "height": 776
+      },
+      "segments": [
+        {
+          "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/clips/08-weekly-reminder.mp4",
+          "sourceStart": 0,
+          "sourceEnd": 28,
+          "sourceSha256": "f1850c0fd7fb865ca010eae999d43255b07736de8b62c73e0c65a1a1e96cb730",
+          "outputStart": 0,
+          "outputEnd": 50,
+          "finalFrameHoldSeconds": 22,
+          "note": "Hosted settings only; final hosted frame held. Local banner segment [28,50) removed. Raw provenance: 08-reminder.mov [180,190), [210,216), [257,269)."
+        }
+      ],
+      "outputSha256": "b9a5c0b419645b0798e3305bb87498fab196e0f76336501f555f0d70e23824c8",
+      "audio": "silent AAC",
+      "deliveredPushShown": false,
+      "posterSha256": "87d3e6857e4648ac8554ed6d905297e1bd0f16f2b389cd53c1bf02d1d8df71ea",
+      "upstreamSources": [
+        {
+          "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/08-reminder.mov",
+          "sha256": "cfb97f4b0cd7d3ad5e83a436d674ba111e210964013eb3555ee4dcccc4d4b50b",
+          "sourceIntervals": [
+            [
+              180,
+              190
+            ],
+            [
+              210,
+              216
+            ],
+            [
+              257,
+              269
+            ]
+          ],
+          "derivedSourceIntervals": [
+            [
+              0,
+              10
+            ],
+            [
+              10,
+              16
+            ],
+            [
+              16,
+              28
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}

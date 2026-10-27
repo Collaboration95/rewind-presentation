@@ -1,0 +1,149 @@
+{
+  "model": "single serialized M/M/1 center plus fixed delay; closed-loop think time",
+  "serviceDemandSecondsProjected": 0.0510386222547919,
+  "fixedDelaySecondsProjected": 0.34178166436301055,
+  "thinkTimeSeconds": 5.0,
+  "rmseMs": 9.779110204010006,
+  "calibrationMeasured": [
+    {
+      "vus": 10,
+      "rps": 1.8546763054603772,
+      "meanSeconds": 0.39203725479939905
+    },
+    {
+      "vus": 25,
+      "rps": 4.626818039713595,
+      "meanSeconds": 0.399212789965188
+    },
+    {
+      "vus": 50,
+      "rps": 9.138155247325116,
+      "meanSeconds": 0.45345318901458864
+    },
+    {
+      "vus": 100,
+      "rps": 17.311381113372242,
+      "meanSeconds": 0.7795494507847298
+    }
+  ],
+  "baselineMeasured": {
+    "vus": 1,
+    "rps": 0.17777726893182683,
+    "meanSeconds": 0.648136348968751
+  },
+  "ceilingRpsProjected": 19.59300537165484,
+  "practicalSaturationUsersProjected": 103.19540115966464,
+  "practicalSaturationRpsProjected": 17.633704834489357,
+  "projections": [
+    {
+      "users": 100,
+      "throughputRps": 17.304682069835827,
+      "utilization": 0.8832071314016212,
+      "meanMs": 778.7828517411617
+    },
+    {
+      "users": 250,
+      "throughputRps": 19.459765107021916,
+      "utilization": 0.9931996004642717,
+      "meanMs": 7847.02043550321
+    },
+    {
+      "users": 500,
+      "throughputRps": 19.54360322884348,
+      "utilization": 0.9974785826944738,
+      "meanMs": 20583.81861038124
+    },
+    {
+      "users": 1000,
+      "throughputRps": 19.57114928167826,
+      "utilization": 0.9988844952797186,
+      "meanMs": 46095.619659701275
+    }
+  ],
+  "twoHostsIdealizedProjected": [
+    {
+      "users": 100,
+      "throughputRps": 18.389280599896374,
+      "utilization": 0.469281773037742,
+      "meanMs": 437.9506287246237
+    },
+    {
+      "users": 250,
+      "throughputRps": 37.64633128304061,
+      "utilization": 0.9607084408169325,
+      "meanMs": 1640.753334512124
+    },
+    {
+      "users": 500,
+      "throughputRps": 38.91953021404383,
+      "utilization": 0.9931996004642717,
+      "meanMs": 7847.02043550321
+    },
+    {
+      "users": 1000,
+      "throughputRps": 39.08720645768696,
+      "utilization": 0.9974785826944738,
+      "meanMs": 20583.81861038124
+    }
+  ],
+  "serviceDemandSensitivityProjected": [
+    {
+      "demandMultiplier": 0.5,
+      "projections": [
+        {
+          "users": 100,
+          "throughputRps": 18.552031001344133,
+          "utilization": 0.47343505116839596,
+          "meanMs": 390.2454126319008
+        },
+        {
+          "users": 250,
+          "throughputRps": 38.33795723999303,
+          "utilization": 0.9783582587961843,
+          "meanMs": 1520.952549323811
+        },
+        {
+          "users": 500,
+          "throughputRps": 39.05199235099269,
+          "utilization": 0.9965799429496693,
+          "meanMs": 7803.444072868353
+        },
+        {
+          "users": 1000,
+          "throughputRps": 39.13652978360585,
+          "utilization": 0.9987372799944358,
+          "meanMs": 20551.57561309711
+        }
+      ]
+    },
+    {
+      "demandMultiplier": 2,
+      "projections": [
+        {
+          "users": 100,
+          "throughputRps": 9.599475962905188,
+          "utilization": 0.9798880550293454,
+          "meanMs": 5417.235314346889
+        },
+        {
+          "users": 250,
+          "throughputRps": 9.747257270784438,
+          "utilization": 0.9949731637276815,
+          "meanMs": 20648.240633734553
+        },
+        {
+          "users": 500,
+          "throughputRps": 9.774673781926158,
+          "utilization": 0.9977717656390946,
+          "meanMs": 46152.602240753666
+        },
+        {
+          "users": 1000,
+          "throughputRps": 9.786176712462137,
+          "utilization": 0.9989459530919925,
+          "meanMs": 97184.95224255482
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+@startuml
+!include _style.iuml
+' Speaker note: Problem: preserve synchronous SQLite-shaped domain calls while hosted dev uses PostgreSQL.
+' Speaker note: Candidates: rewrite domain callers around async pg, or adapt the existing prepare/run/get/all/exec surface.
+' Speaker note: Choice: PostgresDatabase/PostgresStatement translate SQL and use a synchronous worker bridge; db.ts casts structurally, without interface inheritance.
+title Design class view · PostgreSQL persistence adapter
+skinparam ClassStereotypeFontSize 19
+skinparam nodesep 20
+skinparam ranksep 32
+class "cycles/lifecycle.ts\njobs/*.ts · chat/index.ts" as CLIENT <<client>> {
+  database.prepare(sql).get / run / all
+  database.exec(sql)
+}
+class "node:sqlite\nDatabaseSync" as TARGET <<target>> #EEE7F3 {
+  + prepare(sql): StatementSync
+  + exec(sql): void
+  + close(): void
+}
+class "db.ts" as DB <<factory>> {
+  + openDatabase(config)
+  RewindDatabase =
+  DatabaseSync
+}
+class PostgresDatabase <<adapter>> #F5F2E9 {
+  + prepare(sql): PostgresStatement
+  + exec(sql): void
+  + query(source, params)
+  + close(): void
+}
+class PostgresStatement <<adapter>> #F5F2E9 {
+  + run(...params)
+  + get(...params)
+  + all(...params)
+  + iterate(...params)
+}
+class "translate.ts" as TR <<module>> {
+  + translate(sql): TranslatedStatement
+}
+class "sync-worker.ts\npg.Client" as PG <<adaptee>> #FCF7E7
+CLIENT -right-> TARGET : typed surface
+DB -up-> TARGET : creates SQLite
+DB -right-> PostgresDatabase : creates PostgreSQL
+PostgresDatabase "1" *-right- "0..*" PostgresStatement : creates
+PostgresDatabase -down-> TR : translate(sql)
+PostgresDatabase -down-> PG : postMessage\nAtomics.wait
+TR -[hidden]right- PG
+legend bottom
+  db.ts casts PostgresDatabase to RewindDatabase; the adapter has matching methods.
+  Worker-thread pg.Client performs PostgreSQL I/O; callers keep synchronous operations.
+endlegend
+@enduml

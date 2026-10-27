@@ -1,0 +1,23 @@
+$ gh attestation verify --repo Collaboration95/rewind-app release-manifest.json
+Loaded digest sha256:59d9b9f7a3d22ce085776edfc08906677d4c238a27d367986c66c63bdc55d14c for file://release-manifest.json
+Loaded 1 attestation from GitHub API
+
+The following policy criteria will be enforced:
+- Predicate type must match:................ https://slsa.dev/provenance/v1
+- Source Repository Owner URI must match:... https://github.com/Collaboration95
+- Source Repository URI must match:......... https://github.com/Collaboration95/rewind-app
+- Subject Alternative Name must match regex: (?i)^https://github.com/Collaboration95/rewind-app/
+- OIDC Issuer must match:................... https://token.actions.githubusercontent.com
+
+✓ Verification succeeded!
+
+The following 1 attestation matched the policy criteria
+
+- Attestation #1
+  - Build repo:..... Collaboration95/rewind-app
+  - Build workflow:. .github/workflows/deploy-dev.yml@refs/heads/dev
+  - Signer repo:.... Collaboration95/rewind-app
+  - Signer workflow: .github/workflows/deploy-dev.yml@refs/heads/dev
+
+$ echo $?
+0

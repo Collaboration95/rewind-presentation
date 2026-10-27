@@ -1,0 +1,76 @@
+milestone,label,total
+Sprint 0,archived,0
+Sprint 0,bug,0
+Sprint 0,dev,0
+Sprint 0,documentation,0
+Sprint 0,doing,0
+Sprint 0,duplicate,1
+Sprint 0,enhancement,0
+Sprint 0,epic,0
+Sprint 0,github_actions,0
+Sprint 0,help wanted,0
+Sprint 0,high priority,0
+Sprint 0,mvp,0
+Sprint 0,not-planned,0
+Sprint 0,question,0
+Sprint 0,sprint-2-architecture,0
+Sprint 1,archived,1
+Sprint 1,bug,0
+Sprint 1,dev,0
+Sprint 1,documentation,0
+Sprint 1,doing,0
+Sprint 1,duplicate,11
+Sprint 1,enhancement,0
+Sprint 1,epic,0
+Sprint 1,github_actions,0
+Sprint 1,help wanted,0
+Sprint 1,high priority,0
+Sprint 1,mvp,0
+Sprint 1,not-planned,0
+Sprint 1,question,0
+Sprint 1,sprint-2-architecture,0
+Sprint 2,archived,20
+Sprint 2,bug,34
+Sprint 2,dev,11
+Sprint 2,documentation,5
+Sprint 2,doing,1
+Sprint 2,duplicate,0
+Sprint 2,enhancement,56
+Sprint 2,epic,8
+Sprint 2,github_actions,8
+Sprint 2,help wanted,1
+Sprint 2,high priority,11
+Sprint 2,mvp,43
+Sprint 2,not-planned,5
+Sprint 2,question,0
+Sprint 2,sprint-2-architecture,1
+Sprint 3,archived,3
+Sprint 3,bug,16
+Sprint 3,dev,0
+Sprint 3,documentation,11
+Sprint 3,doing,2
+Sprint 3,duplicate,0
+Sprint 3,enhancement,12
+Sprint 3,epic,0
+Sprint 3,github_actions,0
+Sprint 3,help wanted,0
+Sprint 3,high priority,1
+Sprint 3,mvp,43
+Sprint 3,not-planned,0
+Sprint 3,question,3
+Sprint 3,sprint-2-architecture,0
+Unassigned,archived,3
+Unassigned,bug,14
+Unassigned,dev,0
+Unassigned,documentation,2
+Unassigned,doing,0
+Unassigned,duplicate,11
+Unassigned,enhancement,29
+Unassigned,epic,0
+Unassigned,github_actions,0
+Unassigned,help wanted,0
+Unassigned,high priority,10
+Unassigned,mvp,0
+Unassigned,not-planned,1
+Unassigned,question,0
+Unassigned,sprint-2-architecture,0

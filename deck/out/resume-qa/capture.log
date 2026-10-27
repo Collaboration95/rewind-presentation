@@ -1,0 +1,31 @@
+Rendered 8/59
+Rendered 16/59
+Rendered 24/59
+Rendered 32/59
+Rendered 40/59
+Rendered 48/59
+Rendered 56/59
+{
+  "frames": 59,
+  "bounds": [],
+  "broken": [],
+  "textOverflow": [],
+  "smallFigures": [],
+  "controls": {
+    "arrow": true,
+    "notes": true,
+    "overview": true,
+    "overviewFrames": 59,
+    "overviewClick": true,
+    "hash": true,
+    "clipPlays": true,
+    "mutedDefault": true,
+    "spacePauses": true,
+    "clickPlays": true,
+    "manualUnmute": true,
+    "restartPauses": true,
+    "clipPausesOnLeave": true,
+    "commands": true
+  },
+  "errors": []
+}

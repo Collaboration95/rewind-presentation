@@ -1,0 +1,184 @@
+[
+  {
+    "labels": [
+      {
+        "id": "LA_kwDOUL2vfc8AAAACzYNH5Q",
+        "name": "bug",
+        "description": "Something isn't working",
+        "color": "d73a4a"
+      },
+      {
+        "id": "LA_kwDOUL2vfc8AAAAC6yiqqg",
+        "name": "mvp",
+        "description": "Active backlog on the delivery path",
+        "color": "2D4A8A"
+      }
+    ],
+    "milestone": {
+      "number": 4,
+      "title": "Sprint 3",
+      "description": "11\u201324 October 2026. Follow-up sprint for fixes, hardening, documentation, and release or submission work after the Sprint 2 product target. Move any prerequisite feature work into Sprint 2 during planning; do not treat this milestone as the default home for work required by the 10 October product goal.",
+      "dueOn": "2026-10-24T00:00:00Z"
+    },
+    "number": 588,
+    "state": "OPEN",
+    "title": "Preserve emoji and local calendar labels in chat",
+    "url": "https://github.com/Collaboration95/rewind-app/issues/588"
+  },
+  {
+    "labels": [
+      {
+        "id": "LA_kwDOUL2vfc8AAAACzYNH5Q",
+        "name": "bug",
+        "description": "Something isn't working",
+        "color": "d73a4a"
+      },
+      {
+        "id": "LA_kwDOUL2vfc8AAAAC6yiqqg",
+        "name": "mvp",
+        "description": "Active backlog on the delivery path",
+        "color": "2D4A8A"
+      }
+    ],
+    "milestone": {
+      "number": 4,
+      "title": "Sprint 3",
+      "description": "11\u201324 October 2026. Follow-up sprint for fixes, hardening, documentation, and release or submission work after the Sprint 2 product target. Move any prerequisite feature work into Sprint 2 during planning; do not treat this milestone as the default home for work required by the 10 October product goal.",
+      "dueOn": "2026-10-24T00:00:00Z"
+    },
+    "number": 587,
+    "state": "OPEN",
+    "title": "Fix focused script-test selection and document the Sprint override",
+    "url": "https://github.com/Collaboration95/rewind-app/issues/587"
+  },
+  {
+    "labels": [
+      {
+        "id": "LA_kwDOUL2vfc8AAAAC6yiqqg",
+        "name": "mvp",
+        "description": "Active backlog on the delivery path",
+        "color": "2D4A8A"
+      }
+    ],
+    "milestone": {
+      "number": 4,
+      "title": "Sprint 3",
+      "description": "11\u201324 October 2026. Follow-up sprint for fixes, hardening, documentation, and release or submission work after the Sprint 2 product target. Move any prerequisite feature work into Sprint 2 during planning; do not treat this milestone as the default home for work required by the 10 October product goal.",
+      "dueOn": "2026-10-24T00:00:00Z"
+    },
+    "number": 527,
+    "state": "OPEN",
+    "title": "Verify the current hosted Safari and Home Screen app integrations once",
+    "url": "https://github.com/Collaboration95/rewind-app/issues/527"
+  },
+  {
+    "labels": [
+      {
+        "id": "LA_kwDOUL2vfc8AAAACzYNIGQ",
+        "name": "enhancement",
+        "description": "New feature or request",
+        "color": "a2eeef"
+      },
+      {
+        "id": "LA_kwDOUL2vfc8AAAAC6yiqqg",
+        "name": "mvp",
+        "description": "Active backlog on the delivery path",
+        "color": "2D4A8A"
+      }
+    ],
+    "milestone": {
+      "number": 4,
+      "title": "Sprint 3",
+      "description": "11\u201324 October 2026. Follow-up sprint for fixes, hardening, documentation, and release or submission work after the Sprint 2 product target. Move any prerequisite feature work into Sprint 2 during planning; do not treat this milestone as the default home for work required by the 10 October product goal.",
+      "dueOn": "2026-10-24T00:00:00Z"
+    },
+    "number": 515,
+    "state": "OPEN",
+    "title": "Deploy isolated Cognito Managed Login for the release web and PWA",
+    "url": "https://github.com/Collaboration95/rewind-app/issues/515"
+  },
+  {
+    "labels": [
+      {
+        "id": "LA_kwDOUL2vfc8AAAACzYNIGQ",
+        "name": "enhancement",
+        "description": "New feature or request",
+        "color": "a2eeef"
+      },
+      {
+        "id": "LA_kwDOUL2vfc8AAAAC6yiqqg",
+        "name": "mvp",
+        "description": "Active backlog on the delivery path",
+        "color": "2D4A8A"
+      },
+      {
+        "id": "LA_kwDOUL2vfc8AAAAC6yirAw",
+        "name": "doing",
+        "description": "Being worked on now",
+        "color": "FBCA04"
+      }
+    ],
+    "milestone": {
+      "number": 4,
+      "title": "Sprint 3",
+      "description": "11\u201324 October 2026. Follow-up sprint for fixes, hardening, documentation, and release or submission work after the Sprint 2 product target. Move any prerequisite feature work into Sprint 2 during planning; do not treat this milestone as the default home for work required by the 10 October product goal.",
+      "dueOn": "2026-10-24T00:00:00Z"
+    },
+    "number": 504,
+    "state": "OPEN",
+    "title": "Move the release environment onto managed PostgreSQL with isolated backups",
+    "url": "https://github.com/Collaboration95/rewind-app/issues/504"
+  },
+  {
+    "labels": [
+      {
+        "id": "LA_kwDOUL2vfc8AAAACzYNH_w",
+        "name": "documentation",
+        "description": "Improvements or additions to documentation",
+        "color": "0075ca"
+      },
+      {
+        "id": "LA_kwDOUL2vfc8AAAAC6yiqqg",
+        "name": "mvp",
+        "description": "Active backlog on the delivery path",
+        "color": "2D4A8A"
+      }
+    ],
+    "milestone": {
+      "number": 4,
+      "title": "Sprint 3",
+      "description": "11\u201324 October 2026. Follow-up sprint for fixes, hardening, documentation, and release or submission work after the Sprint 2 product target. Move any prerequisite feature work into Sprint 2 during planning; do not treat this milestone as the default home for work required by the 10 October product goal.",
+      "dueOn": "2026-10-24T00:00:00Z"
+    },
+    "number": 362,
+    "state": "OPEN",
+    "title": "Assemble and validate every final-report template section",
+    "url": "https://github.com/Collaboration95/rewind-app/issues/362"
+  },
+  {
+    "labels": [
+      {
+        "id": "LA_kwDOUL2vfc8AAAAC6yiqqg",
+        "name": "mvp",
+        "description": "Active backlog on the delivery path",
+        "color": "2D4A8A"
+      },
+      {
+        "id": "LA_kwDOUL2vfc8AAAAC6yirAw",
+        "name": "doing",
+        "description": "Being worked on now",
+        "color": "FBCA04"
+      }
+    ],
+    "milestone": {
+      "number": 4,
+      "title": "Sprint 3",
+      "description": "11\u201324 October 2026. Follow-up sprint for fixes, hardening, documentation, and release or submission work after the Sprint 2 product target. Move any prerequisite feature work into Sprint 2 during planning; do not treat this milestone as the default home for work required by the 10 October product goal.",
+      "dueOn": "2026-10-24T00:00:00Z"
+    },
+    "number": 230,
+    "state": "OPEN",
+    "title": "Complete the isolated release deployment and verify environment boundaries",
+    "url": "https://github.com/Collaboration95/rewind-app/issues/230"
+  }
+]

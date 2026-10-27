@@ -1,0 +1,29 @@
+{
+  "output": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/cuts-b/12-outsider-denied-review.mp4",
+  "duration_seconds": 50,
+  "frames": 1500,
+  "encoder_checks": {
+    "codec": true,
+    "profile": true,
+    "size": true,
+    "pixel_format": true,
+    "fps": true,
+    "frame_count": true,
+    "video_duration": true,
+    "container_duration": true,
+    "audio": true,
+    "audio_duration": true
+  },
+  "silent_aac": true,
+  "ocr_frames_scanned": 71,
+  "forbidden_text_hits": [],
+  "sha256": "e3b06e17a5383a44f14f8c9a9866501164671aa9e0f47af64acd3c5ccb824edc",
+  "visual_review": "PASS: final full-frame and phone contact sheets, final frames and edit boundaries inspected",
+  "frame_integrity": {
+    "file": "12-outsider-denied-review.mp4",
+    "frames_scanned": 1500,
+    "blank_phone_frames": [],
+    "min_phone_mean_luma": 220.0559210526316,
+    "last_phone_mean_luma": 222.02601674641147
+  }
+}

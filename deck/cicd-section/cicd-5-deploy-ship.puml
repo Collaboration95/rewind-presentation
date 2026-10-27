@@ -1,0 +1,41 @@
+@startuml
+!include _cicd.iuml
+title Deploy stage 2/2 · keyless AWS access, upload, health-gated activation
+skinparam nodesep 30
+skinparam ranksep 44
+skinparam ArrowFontSize 20
+
+frame "GitHub Actions runner · same deploy job" as RUN {
+  rectangle "<b>Assume the deploy role</b>\n<b>with GitHub OIDC</b>\n<size:20>1-hour STS session</size>" as O
+  hexagon "Host\nrunning?" <<deploy>> as HR
+  rectangle "<b>Open temporary SSH</b>\n<size:20>port 22 for runner /32 only</size>\n<size:20>short-lived Lightsail key</size>" as SSH
+  rectangle "<b>Ship bundle +</b>\n<b>apply hosted settings</b>\n<size:20>settings streamed from S3</size>" as SH
+}
+
+frame "Lightsail host · release-host.sh install" as HOST {
+  hexagon "Uploaded tar\nSHA-256 =\nbuilt tar?" <<deploy>> as SUM
+  rectangle "<b>Start candidate</b>\n<size:20>runtime + web images</size>" as INS
+  hexagon "Health ready +\nrunning image IDs\nmatch?" <<deploy>> as HC
+  rectangle "<b>Activate release</b>\n<size:20>keep current, previous,</size>\n<size:20>pending only</size>" as ACT
+}
+rectangle "<b>BLOCKS DEPLOY</b>\nRestore prior\nrelease · job red" <<deploy>> as RB
+
+  rectangle "<b>Verify public</b>\n<b>/api/health</b>\n<size:20>30 tries</size>" as PH
+  rectangle "<b>Close SSH,</b>\n<b>delete key</b>\n<size:20>always runs</size>" as CL
+  rectangle "<b>REPORTS</b>\nDAST job\n<size:20>ZAP baseline</size>" <<report>> as Z
+
+cloud "AWS · trust policy:\nrepo + environment dev\n+ refs/heads/dev only" as AWS
+
+O -right-> HR
+HR -right-> SSH : yes
+SSH -right-> SH
+SH -down-> SUM
+SUM -left-> INS : yes
+INS -left-> HC
+HC -left-> ACT : yes
+HC -down-> RB : no
+ACT -down-> PH
+PH -right-> CL
+CL -right-> Z
+O -up-> AWS : OIDC token
+@enduml

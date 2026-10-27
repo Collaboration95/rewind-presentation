@@ -1,0 +1,15 @@
+[
+  {
+    "id": "00-pipeline",
+    "frame": "frames/00-pipeline.png",
+    "duration": 10,
+    "section": "Source \u2192 Quality \u2192 hosted dev",
+    "title": "Pipeline decisions",
+    "narration": "Follow one change through source control, parallel checks, security findings, the verified release bundle and hosted dev.",
+    "focus": [
+      920,
+      720
+    ],
+    "source": "BRIEF-SHARED.md; audit/D-cicd-demo.md \u00a75"
+  }
+]

@@ -1,0 +1,90 @@
+[
+  {
+    "id": "s18",
+    "duration": 686,
+    "width": 1280,
+    "height": 720,
+    "paused": true,
+    "muted": true
+  },
+  {
+    "id": "F3",
+    "duration": 60,
+    "width": 416,
+    "height": 776,
+    "paused": true,
+    "muted": true
+  },
+  {
+    "id": "F4",
+    "duration": 60,
+    "width": 416,
+    "height": 858,
+    "paused": true,
+    "muted": true
+  },
+  {
+    "id": "F5",
+    "duration": 55,
+    "width": 416,
+    "height": 776,
+    "paused": true,
+    "muted": true
+  },
+  {
+    "id": "F6",
+    "duration": 65,
+    "width": 416,
+    "height": 776,
+    "paused": true,
+    "muted": true
+  },
+  {
+    "id": "F7",
+    "duration": 55,
+    "width": 416,
+    "height": 776,
+    "paused": true,
+    "muted": true
+  },
+  {
+    "id": "F8",
+    "duration": 50,
+    "width": 416,
+    "height": 776,
+    "paused": true,
+    "muted": true
+  },
+  {
+    "id": "F9",
+    "duration": 40,
+    "width": 416,
+    "height": 776,
+    "paused": true,
+    "muted": true
+  },
+  {
+    "id": "F10",
+    "duration": 80,
+    "width": 416,
+    "height": 858,
+    "paused": true,
+    "muted": true
+  },
+  {
+    "id": "F11",
+    "duration": 55,
+    "width": 416,
+    "height": 858,
+    "paused": true,
+    "muted": true
+  },
+  {
+    "id": "F12",
+    "duration": 50,
+    "width": 416,
+    "height": 776,
+    "paused": true,
+    "muted": true
+  }
+]

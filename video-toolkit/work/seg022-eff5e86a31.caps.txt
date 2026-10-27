@@ -1,0 +1,16 @@
+ffconcat version 1.0
+file '/tmp/rewind-video/work/png/cv-634701edb6.png'
+duration 2.5000
+file '/tmp/rewind-video/work/png/cv-de843837e7.png'
+duration 5.0000
+file '/tmp/rewind-video/work/png/cv-634701edb6.png'
+duration 7.5000
+file '/tmp/rewind-video/work/png/cv-9d301aff57.png'
+duration 5.0000
+file '/tmp/rewind-video/work/png/cv-634701edb6.png'
+duration 7.5000
+file '/tmp/rewind-video/work/png/cv-7cd87e6aef.png'
+duration 5.0000
+file '/tmp/rewind-video/work/png/cv-634701edb6.png'
+duration 1.5000
+file '/tmp/rewind-video/work/png/cv-634701edb6.png'

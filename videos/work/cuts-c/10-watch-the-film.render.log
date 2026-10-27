@@ -1,0 +1,24 @@
+Rendering 1/7 (4.36667s)
+Rendering 2/7 (21.2s)
+Rendering 3/7 (8s)
+Rendering 4/7 (21.2s)
+Rendering 5/7 (8s)
+Rendering 6/7 (7.23333s)
+Rendering 7/7 (10s)
+{
+  "output": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/cuts-c/10-watch-the-film.mp4",
+  "frames": 2400,
+  "duration": 80.0,
+  "checks": {
+    "codec": true,
+    "profile": true,
+    "size": true,
+    "pixel_format": true,
+    "fps": true,
+    "frame_count": true,
+    "video_duration": true,
+    "container_duration": true,
+    "audio": true,
+    "audio_duration": true
+  }
+}

@@ -1,0 +1,29 @@
+TITLE: 09 Cycle ends, film ready
+FCM: NON-DROP FRAME
+FPS: 30
+
+001 AX V C 00:00:00:00 00:00:08:00 00:00:00:00 00:00:08:00
+* SOURCE: /Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/stills/09-premiere-clean.png
+* Parent-approved clean actual Premiere Home still; forbidden cycle UI removed.
+* AUDIO: false
+
+002 AX V C 00:00:25:00 00:00:32:24 00:00:08:00 00:00:16:00
+* SOURCE: /Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/09-premiere.mov
+* Read group settings: The little things, owner and 2 of 6 members. Last 0.2 s held.
+* AUDIO: false
+
+003 AX V C 00:00:34:00 00:00:42:00 00:00:16:00 00:00:24:00
+* SOURCE: /Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/09-premiere.mov
+* Members: Maya and Jun.
+* AUDIO: false
+
+004 AX V C 00:01:30:00 00:01:38:00 00:00:24:00 00:00:32:00
+* SOURCE: /Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/09-premiere.mov
+* Return to group settings and prompt context.
+* AUDIO: false
+
+005 AX V C 00:00:00:00 00:00:08:00 00:00:32:00 00:00:40:00
+* SOURCE: /Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/stills/09-premiere-clean.png
+* Return to clean Premiere ready card, Watch and 24 h left preserved.
+* AUDIO: false
+

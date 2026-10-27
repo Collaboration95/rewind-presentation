@@ -1,0 +1,32 @@
+[
+  {
+    "key": "maya-photo-1",
+    "account": "maya",
+    "file": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/stock/friends-selfie.jpg",
+    "mode": "ccd"
+  },
+  {
+    "key": "jun-photo-1",
+    "account": "jun",
+    "file": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/stock/food-sharing-table.jpg",
+    "mode": "disposable-flash"
+  },
+  {
+    "key": "maya-video",
+    "account": "maya",
+    "file": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/stock/travel-market.mp4",
+    "mode": "8mm"
+  },
+  {
+    "key": "jun-video",
+    "account": "jun",
+    "file": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/stock/friends-food.mp4",
+    "mode": "vhs"
+  },
+  {
+    "key": "maya-photo-2",
+    "account": "maya",
+    "file": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/stock/travel-mountain-sunset.jpg",
+    "mode": "ccd"
+  }
+]

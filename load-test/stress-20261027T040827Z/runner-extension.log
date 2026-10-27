@@ -1,0 +1,7 @@
+{"at":"2026-10-27T04:18:19.261Z","vus":1000,"phase":"ramp","requests":1853,"errors":0,"errorRate":0,"throughputRps":123.46577046027046,"successRps":123.46577046027046,"meanMs":347.25502648677826,"p50Ms":326.1718340000007,"p95Ms":463.11895900000127,"p99Ms":513.3768330000003,"maxMs":568.4574160000002,"errorTypes":{}}
+{"at":"2026-10-27T04:19:19.320Z","vus":1000,"phase":"steady","requests":11137,"errors":0,"errorRate":0,"throughputRps":185.4671018752537,"successRps":185.4671018752537,"meanMs":374.24709815569656,"p50Ms":337.4157500000001,"p95Ms":595.0798750000031,"p99Ms":901.9537500000006,"maxMs":1862.554959000001,"errorTypes":{}}
+{"at":"2026-10-27T04:19:34.366Z","vus":1500,"phase":"ramp","requests":3742,"errors":0,"errorRate":0,"throughputRps":248.74328458009626,"successRps":248.74328458009626,"meanMs":372.01947980625306,"p50Ms":352.8617079999967,"p95Ms":610.7991249999905,"p99Ms":755.4689589999907,"maxMs":841.2855830000044,"errorTypes":{}}
+{"at":"2026-10-27T04:20:09.593Z","vus":1500,"phase":"steady","requests":9248,"errors":0,"errorRate":0,"throughputRps":262.57717543063865,"successRps":262.57717543063865,"meanMs":715.5868531979888,"p50Ms":374.23879200000374,"p95Ms":4550.109333,"p99Ms":5489.027625000002,"maxMs":5699.784583000001,"errorTypes":{}}
+{"stopReason":"rolling p95 5.25 s > 5 s during 1500 VU steady"}
+{"drained":true,"drainStart":"2026-10-27T04:20:09.594Z","at":"2026-10-27T04:20:16.447Z"}
+exit=0

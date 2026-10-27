@@ -1,0 +1,30 @@
+Rendering 1/7 (8s)
+Cache: segment-2f19beff7352af8f404d.mov
+Rendering 2/7 (8s)
+Cache: segment-06747f61848ad248f98a.mov
+Rendering 3/7 (9s)
+Cache: segment-4b881469fab40632f3a8.mov
+Rendering 4/7 (8s)
+Rendering 5/7 (10s)
+Cache: segment-11ae9881a017fc4a7171.mov
+Rendering 6/7 (10s)
+Cache: segment-db5b55eb003ae513068e.mov
+Rendering 7/7 (7s)
+Cache: segment-428e8e673ab25c2a354c.mov
+{
+  "output": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/cuts-a/04-invite-and-join-review.mp4",
+  "frames": 1800,
+  "duration": 60.0,
+  "checks": {
+    "codec": true,
+    "profile": true,
+    "size": true,
+    "pixel_format": true,
+    "fps": true,
+    "frame_count": true,
+    "video_duration": true,
+    "container_duration": true,
+    "audio": true,
+    "audio_duration": true
+  }
+}

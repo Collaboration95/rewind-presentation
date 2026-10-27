@@ -1,0 +1,23 @@
+Rendering 1/6 (6s)
+Rendering 2/6 (6s)
+Rendering 3/6 (8s)
+Rendering 4/6 (8s)
+Rendering 5/6 (9s)
+Rendering 6/6 (8s)
+{
+  "output": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/cuts-a/02-sign-in-review.mp4",
+  "frames": 1350,
+  "duration": 45.0,
+  "checks": {
+    "codec": true,
+    "profile": true,
+    "size": true,
+    "pixel_format": true,
+    "fps": true,
+    "frame_count": true,
+    "video_duration": true,
+    "container_duration": true,
+    "audio": true,
+    "audio_duration": true
+  }
+}

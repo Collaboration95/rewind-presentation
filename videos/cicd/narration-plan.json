@@ -1,0 +1,164 @@
+[
+  {
+    "title": "Pipeline decisions",
+    "duration": 20,
+    "section": "Source \u2192 Quality \u2192 hosted dev",
+    "narration": "Follow one change through six decisions: the pull request, parallel verification, security findings, the verified bundle, hosted dev and promotion. I will connect each decision to the check or artifact that records its result."
+  },
+  {
+    "title": "PR #595 checks",
+    "duration": 36,
+    "section": "01 \u00b7 Pull request checks",
+    "narration": "Pull request 595 contains the pipeline artifact changes. Its checks show static analysis, tests, dependency audit, CodeQL, image and IaC scans, and secret scanning. The aggregate Quality check is the required merge gate; the checks list keeps the individual results visible."
+  },
+  {
+    "title": "Protected dev",
+    "duration": 24,
+    "section": "02 \u00b7 Branch protection",
+    "narration": "The dev branch requires a pull request, an up-to-date branch and the check named Format, lint, typecheck, and test. Conversation resolution and administrator enforcement are enabled. The required approving-review count is zero, which allows routine dev changes to proceed after the automated gate."
+  },
+  {
+    "title": "Protected main",
+    "duration": 24,
+    "section": "02 \u00b7 Branch protection",
+    "narration": "Main keeps the same required Quality context and adds one approving review, including approval of the last push. This is the promotion boundary: a change that has reached dev still passes through the main review rule."
+  },
+  {
+    "title": "Quality run graph",
+    "duration": 28,
+    "section": "03 \u00b7 Parallel Quality jobs",
+    "narration": "The Quality graph starts with change classification and fans out into parallel jobs. Tests, coverage, static checks and the production dependency audit feed the aggregate gate. Main-bound changes also run the web export and browser checks."
+  },
+  {
+    "title": "Quality artifacts",
+    "duration": 20,
+    "section": "03 \u00b7 Retained test artifacts",
+    "narration": "The run retains four artifact groups: root JUnit results, server coverage, frontend coverage and npm-audit JSON. They remain attached to the run and its commit, so a reviewer can inspect the machine-readable results behind the green check."
+  },
+  {
+    "title": "JUnit results",
+    "duration": 20,
+    "section": "03 \u00b7 JUnit test results",
+    "narration": "The JUnit report records individual test cases and their outcomes. The job summary presents the totals, while the XML keeps the detail for inspection. This links the test result to the exact Quality run rather than relying on a copied test count."
+  },
+  {
+    "title": "Coverage summaries",
+    "duration": 30,
+    "section": "03 \u00b7 Measured coverage",
+    "narration": "These are the coverage reports retained by the same run. Frontend statement coverage is 89.64 percent, and server line coverage is 85.50 percent. The reports preserve the underlying counts and coverage dimensions alongside the test results."
+  },
+  {
+    "title": "Production dependency audit",
+    "duration": 24,
+    "section": "04 \u00b7 Software composition analysis",
+    "narration": "The production dependency audit reports zero findings at every severity in this run. The command audits production dependencies and fails on High or Critical findings. Because this job feeds the required Quality gate, a failed audit prevents the normal merge path."
+  },
+  {
+    "title": "CodeQL security results",
+    "duration": 22,
+    "section": "04 \u00b7 SAST results and triage",
+    "narration": "CodeQL publishes its analysis results to the Security area. The alert list records the rule, affected code and disposition. The captured dev results have no open alerts; closed alerts retain their review reasons so the decisions can be inspected."
+  },
+  {
+    "title": "PR #592 alert triage",
+    "duration": 30,
+    "section": "04 \u00b7 CodeQL alert triage",
+    "narration": "The load-test harness in pull request 592 raised CodeQL findings. Alert 56 concerns writing a report to an operator-selected path. Its recorded disposition is used in tests, with an explanation that this harness is operator-run and never shipped in the application image."
+  },
+  {
+    "title": "Gitleaks full-history scan",
+    "duration": 24,
+    "section": "04 \u00b7 Secret scanning",
+    "narration": "The secret-scan workflow runs Gitleaks over the repository history and retains a redacted SARIF artifact. The run records the scan result. Historical exceptions are constrained to exact benign values and paths, so a new value in the same file still receives normal scanning."
+  },
+  {
+    "title": "Deploy dev run 40344230832",
+    "duration": 30,
+    "section": "05 \u00b7 Verified deployment",
+    "narration": "Deploy dev 40344230832 is the artifact-rich deployment used here. It first waits for Quality on the same commit, then builds the release bundle and obtains temporary deployment credentials through GitHub OIDC. The subsequent steps retain the security evidence and install the verified bundle."
+  },
+  {
+    "title": "Exact-bundle Trivy gate",
+    "duration": 32,
+    "section": "05 \u00b7 Exact-bundle image scanning",
+    "narration": "This step scans the runtime and web images inside the bundle that will be uploaded. Both images have zero High and Critical findings in the manifest. The runtime image also records one Medium finding and two Unknown findings. The High and Critical gate runs before host upload."
+  },
+  {
+    "title": "CycloneDX SBOM",
+    "duration": 24,
+    "section": "05 \u00b7 Software bill of materials",
+    "narration": "The CycloneDX files inventory components from the exact bundled runtime and web images. The SBOM and vulnerability reports describe the same image pair. Their hashes are recorded in the release manifest, connecting component inventory, scan results and the bundle identity."
+  },
+  {
+    "title": "Release manifest",
+    "duration": 30,
+    "section": "05 \u00b7 Source and artifact identity",
+    "narration": "The manifest records the commit, workflow run and attempt, successful Quality run, image identifiers and archive digests. Its SHA-256 section binds the release tarball, both SBOMs and both Trivy reports. These fields provide the trace from source verification to the retained deployment artifacts."
+  },
+  {
+    "title": "Manifest digests",
+    "duration": 20,
+    "section": "05 \u00b7 Bundle and report hashes",
+    "narration": "The SHA-256 entries bind the release tarball, both component inventories and both vulnerability reports. The second command computes the digest of the downloaded manifest itself. That exact digest is the subject checked by the attestation verification command."
+  },
+  {
+    "title": "GitHub build attestation",
+    "duration": 24,
+    "section": "05 \u00b7 Signed build provenance",
+    "narration": "The deployment creates GitHub build attestations for the release bundle and security manifest. The provenance identifies the repository and deployment workflow that produced the subject. The next terminal command checks that signed provenance against the downloaded manifest bytes."
+  },
+  {
+    "title": "Verify the attestation",
+    "duration": 30,
+    "section": "05 \u00b7 Verify provenance locally",
+    "narration": "Here is the real gh attestation verify output for release-manifest.json. Verification succeeds against the repository policy, the SLSA provenance predicate and the GitHub Actions OIDC issuer. The matched signer workflow is deploy-dev.yml on the dev branch, and the command exits with status zero."
+  },
+  {
+    "title": "DAST job summary",
+    "duration": 28,
+    "section": "06 \u00b7 Dynamic security testing",
+    "narration": "After deployment, the ZAP baseline runs against hosted dev. Its summary records zero High, four Medium, seven Low and six Informational findings. The report is retained with the deploy run, and the baseline reports its findings without making them a deployment gate."
+  },
+  {
+    "title": "ZAP HTML report",
+    "duration": 24,
+    "section": "06 \u00b7 Inspect dynamic findings",
+    "narration": "The retained HTML report makes the dynamic findings inspectable. Each entry names the rule, risk and affected requests. The Medium findings concern Content Security Policy. This connects the summary counts to concrete observations on the running hosted application."
+  },
+  {
+    "title": "Performance summary",
+    "duration": 34,
+    "section": "07 \u00b7 Hosted performance",
+    "narration": "PERFORMANCE_NARRATION"
+  },
+  {
+    "title": "Performance chart",
+    "duration": 28,
+    "section": "07 \u00b7 Measured performance",
+    "narration": "The chart plots the clean run across the five load stages. The measured observations feed the response-time and throughput figures. The capacity table keeps the measured baseline alongside projected values for 250, 500 and 1,000 users."
+  },
+  {
+    "title": "Hosted dev health",
+    "duration": 24,
+    "section": "08 \u00b7 Hosted dev health",
+    "narration": "The hosted dev health endpoint returns HTTP 200. The JSON reports PostgreSQL and a ready schema at migration 31. Deployment identity comes from the workflow and manifest; this endpoint provides a direct check that the hosted application and database are responding."
+  },
+  {
+    "title": "Environment controls",
+    "duration": 24,
+    "section": "09 \u00b7 Environment controls",
+    "narration": "The environment settings record which deployment paths run automatically and which require a reviewer. Dev has no environment approval gate. The promotion environment records its reviewer and branch policy. These controls are separate from the source-branch review rule."
+  },
+  {
+    "title": "Promotion PR #586",
+    "duration": 36,
+    "section": "09 \u00b7 Promotion through a reviewed PR",
+    "narration": "Pull request 586 carries dev into main. The captured pull request already has an approving review, and the main protection rule requires that review. Its checks and merge state remain visible separately. I am showing the promotion controls and leaving the pull request unchanged."
+  },
+  {
+    "title": "Decisions and retained artifacts",
+    "duration": 20,
+    "section": "Rewind \u00b7 source, artifacts and hosted dev",
+    "narration": "The chain is now visible: protected source changes, retained test and audit results, reviewed security findings, an exact-bundle scan, a signed manifest, hosted health, dynamic findings and a load-test result. Each artifact stays connected to the commit and run that produced it."
+  }
+]

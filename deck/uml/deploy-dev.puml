@@ -1,0 +1,53 @@
+@startuml
+!include _style.iuml
+title Deployment view · Hosted dev
+skinparam nodesep 22
+skinparam ranksep 26
+skinparam Padding 4
+skinparam linetype polyline
+node "GitHub Actions\nrewind-release.tar" as GH <<executionEnvironment>>
+node "AWS STS\nrewind-demo-deploy" as STS <<service>> #FCF7E7
+node "Cognito · rewind-dev\nManaged Login" as COG <<service>> #F5F2E9
+node "Member device\nBrowser / installed PWA\npublic/sw.js" as DEVICE <<device>>
+node "CloudFront\nd2m6kz76y4kuvm" as CF <<CDN>> #F5F2E9
+node "Lightsail · rewind-demo\nUbuntu 24.04 · Docker Compose" as VM <<device>> {
+  artifact "web image\nnginx :8080\nExpo web export + nginx.conf" as WEB
+  artifact "runtime image\nNode :8787 + ffmpeg\nserver/dist/cli.js" as RT
+  WEB -right-> RT : 3
+}
+node "S3 · private media\nversioned · SSE-S3" as S3 <<service>> #F5F2E9
+node "Browser push service" as PUSH <<service>> #F5F2E9
+node "Lightsail PostgreSQL 17\nrewind-dev-postgres" as PG <<DBMS>> #F5F2E9
+GH -[hidden]right- STS
+STS -[hidden]right- COG
+DEVICE -[hidden]right- CF
+CF -[hidden]right- VM
+S3 -[hidden]right- PUSH
+PUSH -[hidden]right- PG
+GH -[hidden]down- DEVICE
+STS -[hidden]down- CF
+COG -[hidden]down- VM
+DEVICE -[hidden]down- S3
+CF -[hidden]down- PUSH
+VM -[hidden]down- PG
+DEVICE -right-> CF : 1 · HTTPS :443
+CF -right-> VM : 2 · HTTP :80
+DEVICE -[norank]-> COG : 4
+VM -[norank]-> COG : 5
+VM -[norank]-> PG : 6
+VM -[norank]-> S3 : 8
+DEVICE -[norank]-> S3 : 7
+VM -[norank]-> PUSH : 9
+PUSH -[norank,dashed]-> DEVICE : 10
+GH -[norank]-> STS : 11
+GH -[norank,dashed]-> VM : 12
+legend bottom
+  1 Browser → CloudFront: HTTPS :443. 2 CloudFront → nginx: HTTP :80 → :8080 + origin auth header.
+  3 nginx → Node: HTTP :8787 /api + SSE. 4 Browser → Cognito: HTTPS :443, authorization code + PKCE.
+  5 Node → Cognito: HTTPS :443 token exchange. 6 Node → PostgreSQL: TLS :5432.
+  7 Browser → S3: HTTPS :443 presigned PUT. 8 Node → S3: HTTPS :443 with IAM user credentials.
+  9 Node → push service: HTTPS :443 / VAPID. 10 Push service → PWA: push event.
+  11 Actions → STS: OIDC / HTTPS :443, 1 h dev role. 12 Actions → host: SCP / SSH :22, runner /32.
+  AWS ap-southeast-1. OIDC: dev branch + environment. Node owns the cycle, media and reminder loops.
+endlegend
+@enduml

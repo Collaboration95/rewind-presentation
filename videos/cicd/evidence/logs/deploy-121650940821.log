@@ -1,0 +1,364 @@
+DAST (ZAP baseline on hosted dev)	Set up job	﻿2026-10-26T15:02:49.5431729Z Current runner version: '2.338.0'
+DAST (ZAP baseline on hosted dev)	Set up job	2026-10-26T15:02:49.5457891Z ##[group]Runner Image Provisioner
+DAST (ZAP baseline on hosted dev)	Set up job	2026-10-26T15:02:49.5458808Z Hosted Compute Agent
+DAST (ZAP baseline on hosted dev)	Set up job	2026-10-26T15:02:49.5459859Z Version: 20261021.618
+DAST (ZAP baseline on hosted dev)	Set up job	2026-10-26T15:02:49.5460547Z Commit: 21505ad2541d5be6135ed84fc33697146cf75b8e
+DAST (ZAP baseline on hosted dev)	Set up job	2026-10-26T15:02:49.5461358Z Build Date: 2026-10-21T00:45:21Z
+DAST (ZAP baseline on hosted dev)	Set up job	2026-10-26T15:02:49.5462080Z Worker ID: {c6feefcb-396c-4001-94c0-c77dd0d11a8c}
+DAST (ZAP baseline on hosted dev)	Set up job	2026-10-26T15:02:49.5462869Z Region: eastus
+DAST (ZAP baseline on hosted dev)	Set up job	2026-10-26T15:02:49.5463425Z Cloud: Azure
+DAST (ZAP baseline on hosted dev)	Set up job	2026-10-26T15:02:49.5463954Z ##[endgroup]
+DAST (ZAP baseline on hosted dev)	Set up job	2026-10-26T15:02:49.5465565Z ##[group]Operating System
+DAST (ZAP baseline on hosted dev)	Set up job	2026-10-26T15:02:49.5466244Z Ubuntu
+DAST (ZAP baseline on hosted dev)	Set up job	2026-10-26T15:02:49.5466820Z 24.04.5
+DAST (ZAP baseline on hosted dev)	Set up job	2026-10-26T15:02:49.5467345Z LTS
+DAST (ZAP baseline on hosted dev)	Set up job	2026-10-26T15:02:49.5467853Z ##[endgroup]
+DAST (ZAP baseline on hosted dev)	Set up job	2026-10-26T15:02:49.5468447Z ##[group]Runner Image
+DAST (ZAP baseline on hosted dev)	Set up job	2026-10-26T15:02:49.5469129Z Image: ubuntu-24.04
+DAST (ZAP baseline on hosted dev)	Set up job	2026-10-26T15:02:49.5470148Z Version: 20261012.334.1
+DAST (ZAP baseline on hosted dev)	Set up job	2026-10-26T15:02:49.5471259Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261012.334/images/ubuntu/Ubuntu2404-Readme.md
+DAST (ZAP baseline on hosted dev)	Set up job	2026-10-26T15:02:49.5473023Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261012.334
+DAST (ZAP baseline on hosted dev)	Set up job	2026-10-26T15:02:49.5474066Z ##[endgroup]
+DAST (ZAP baseline on hosted dev)	Set up job	2026-10-26T15:02:49.5475193Z ##[group]GITHUB_TOKEN Permissions
+DAST (ZAP baseline on hosted dev)	Set up job	2026-10-26T15:02:49.5477065Z Contents: read
+DAST (ZAP baseline on hosted dev)	Set up job	2026-10-26T15:02:49.5477782Z Metadata: read
+DAST (ZAP baseline on hosted dev)	Set up job	2026-10-26T15:02:49.5478383Z ##[endgroup]
+DAST (ZAP baseline on hosted dev)	Set up job	2026-10-26T15:02:49.5480691Z Secret source: Actions
+DAST (ZAP baseline on hosted dev)	Set up job	2026-10-26T15:02:49.5481762Z Cache mode: write
+DAST (ZAP baseline on hosted dev)	Set up job	2026-10-26T15:02:49.5482457Z Prepare workflow directory
+DAST (ZAP baseline on hosted dev)	Set up job	2026-10-26T15:02:49.6017933Z Prepare all required actions
+DAST (ZAP baseline on hosted dev)	Set up job	2026-10-26T15:02:49.6067219Z Getting action download info
+DAST (ZAP baseline on hosted dev)	Set up job	2026-10-26T15:02:49.8646812Z Download action repository 'actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+DAST (ZAP baseline on hosted dev)	Set up job	2026-10-26T15:02:49.9845641Z Download action repository 'zaproxy/action-baseline@de8ad967d3548d44ef623df22cf95c3b0baf8b25' (SHA:de8ad967d3548d44ef623df22cf95c3b0baf8b25)
+DAST (ZAP baseline on hosted dev)	Set up job	2026-10-26T15:02:50.2849893Z Complete job name: DAST (ZAP baseline on hosted dev)
+DAST (ZAP baseline on hosted dev)	Check out the rules file	﻿2026-10-26T15:02:50.3638938Z ##[group]Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:50.3640327Z with:
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:50.3640827Z   ref: aea7478bce14131b821caaa99b1185077b4a9403
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:50.3641433Z   persist-credentials: false
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:50.3641974Z   repository: Collaboration95/rewind-app
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:50.3645778Z   token: ***
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:50.3646221Z   ssh-strict: true
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:50.3646658Z   ssh-user: git
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:50.3647083Z   clean: true
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:50.3647535Z   sparse-checkout-cone-mode: true
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:50.3648062Z   fetch-depth: 1
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:50.3648507Z   fetch-tags: false
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:50.3648945Z   show-progress: true
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:50.3649600Z   lfs: false
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:50.3650032Z   submodules: false
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:50.3650487Z   set-safe-directory: true
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:50.3651001Z   allow-unsafe-pr-checkout: false
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:50.3651764Z env:
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:50.3652214Z   AWS_REGION: ap-southeast-1
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:50.3652946Z   REWIND_DEPLOY_ROLE_ARN: arn:aws:iam::330599756236:role/rewind-demo-deploy
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:50.3653719Z   REWIND_DEPLOY_INSTANCE: rewind-demo
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:50.3654291Z   REWIND_DEPLOY_CONFIG_VERSION: demo-v1
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:50.3654955Z   REWIND_DAST_TARGET: https://d2m6kz76y4kuvm.cloudfront.net
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:50.3655602Z ##[endgroup]
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:50.4629491Z Syncing repository: Collaboration95/rewind-app
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:50.4631854Z ##[group]Getting Git version info
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:50.4632653Z Working directory is '/home/runner/work/rewind-app/rewind-app'
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:50.4634100Z [command]/usr/bin/git version
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:50.4736185Z git version 2.55.0
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:50.4766250Z ##[endgroup]
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:50.4775030Z Temporarily overriding HOME='/home/runner/work/_temp/680a1a7e-1483-4627-afe9-eb55c2f97523' before making global git config changes
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:50.4777937Z Adding repository directory to the temporary git global config as a safe directory
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:50.4782883Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/rewind-app/rewind-app
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:50.4838123Z Deleting the contents of '/home/runner/work/rewind-app/rewind-app'
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:50.4842451Z ##[group]Determining repository object format
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:50.4844335Z ##[endgroup]
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:50.4845687Z ##[group]Initializing the repository
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:50.4850630Z [command]/usr/bin/git init /home/runner/work/rewind-app/rewind-app
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:50.4992251Z hint: Using 'master' as the name for the initial branch. This default branch name
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:50.4993990Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:50.4995583Z hint: to use in all of your new repositories, which will suppress this warning,
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:50.4996773Z hint: call:
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:50.4997398Z hint:
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:50.4998200Z hint: 	git config --global init.defaultBranch <name>
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:50.4999545Z hint:
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:50.5001089Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:50.5002777Z hint: 'development'. The just-created branch can be renamed via this command:
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:50.5003993Z hint:
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:50.5004686Z hint: 	git branch -m <name>
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:50.5005552Z hint:
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:50.5006677Z hint: Disable this message with "git config set advice.defaultBranchName false"
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:50.5013633Z Initialized empty Git repository in /home/runner/work/rewind-app/rewind-app/.git/
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:50.5053442Z [command]/usr/bin/git remote add origin https://github.com/Collaboration95/rewind-app
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:50.5137270Z ##[endgroup]
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:50.5138958Z ##[group]Disabling automatic garbage collection
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:50.5151870Z [command]/usr/bin/git config --local gc.auto 0
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:50.5186955Z ##[endgroup]
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:50.5188272Z ##[group]Setting up auth
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:50.5188884Z Removing SSH command configuration
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:50.5194536Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:50.5232635Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:50.5644115Z Removing HTTP extra header
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:50.5650358Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:50.5689700Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:50.5945569Z Removing includeIf entries pointing to credentials config files
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:50.5952121Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:50.5997045Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:50.6244973Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-525003b8-a7de-41ab-85c1-59febb0ce3b2.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:50.6287071Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/rewind-app/rewind-app/.git.path /home/runner/work/_temp/git-credentials-525003b8-a7de-41ab-85c1-59febb0ce3b2.config
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:50.6324624Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/rewind-app/rewind-app/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-525003b8-a7de-41ab-85c1-59febb0ce3b2.config
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:50.6362704Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-525003b8-a7de-41ab-85c1-59febb0ce3b2.config
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:50.6400258Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-525003b8-a7de-41ab-85c1-59febb0ce3b2.config
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:50.6434348Z ##[endgroup]
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:50.6435168Z ##[group]Fetching the repository
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:50.6441292Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin aea7478bce14131b821caaa99b1185077b4a9403
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:51.3444165Z From https://github.com/Collaboration95/rewind-app
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:51.3446675Z  * branch            aea7478bce14131b821caaa99b1185077b4a9403 -> FETCH_HEAD
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:51.3470928Z [command]/usr/bin/git rev-parse --verify --quiet aea7478bce14131b821caaa99b1185077b4a9403^{object}
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:51.3483783Z aea7478bce14131b821caaa99b1185077b4a9403
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:51.3490535Z ##[endgroup]
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:51.3492229Z ##[group]Determining the checkout info
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:51.3494086Z ##[endgroup]
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:51.3495374Z [command]/usr/bin/git sparse-checkout disable
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:51.3556725Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:51.3595616Z ##[group]Checking out the ref
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:51.3600256Z [command]/usr/bin/git checkout --progress --force aea7478bce14131b821caaa99b1185077b4a9403
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:51.4460712Z Note: switching to 'aea7478bce14131b821caaa99b1185077b4a9403'.
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:51.4461716Z 
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:51.4462294Z You are in 'detached HEAD' state. You can look around, make experimental
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:51.4463634Z changes and commit them, and you can discard any commits you make in this
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:51.4464976Z state without impacting any branches by switching back to a branch.
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:51.4465702Z 
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:51.4466214Z If you want to create a new branch to retain commits you create, you may
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:51.4467412Z do so (now or later) by using -c with the switch command. Example:
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:51.4468190Z 
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:51.4468610Z   git switch -c <new-branch-name>
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:51.4469888Z 
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:51.4470558Z Or undo this operation with:
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:51.4471481Z 
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:51.4472024Z   git switch -
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:51.4472756Z 
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:51.4473791Z Turn off this advice by setting config variable advice.detachedHead to false
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:51.4475284Z 
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:51.4476559Z HEAD is now at aea7478 Merge pull request #595 from Collaboration95/guru/devsecops-artifacts
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:51.4485400Z ##[endgroup]
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:51.4539950Z [command]/usr/bin/git log -1 --format=%H
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:51.4568336Z aea7478bce14131b821caaa99b1185077b4a9403
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:51.4577211Z ##[group]Removing auth
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:51.4578172Z Removing SSH command configuration
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:51.4581934Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:51.4617733Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:51.4841864Z Removing HTTP extra header
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:51.4844882Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:51.4883042Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:51.5107761Z Removing includeIf entries pointing to credentials config files
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:51.5111783Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:51.5142059Z includeif.gitdir:/home/runner/work/rewind-app/rewind-app/.git.path
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:51.5144632Z includeif.gitdir:/home/runner/work/rewind-app/rewind-app/.git/worktrees/*.path
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:51.5147235Z includeif.gitdir:/github/workspace/.git.path
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:51.5149565Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:51.5154720Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/rewind-app/rewind-app/.git.path
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:51.5187662Z /home/runner/work/_temp/git-credentials-525003b8-a7de-41ab-85c1-59febb0ce3b2.config
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:51.5198910Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/rewind-app/rewind-app/.git.path \/home\/runner\/work\/_temp\/git\-credentials\-525003b8\-a7de\-41ab\-85c1\-59febb0ce3b2\.config
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:51.5236012Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/rewind-app/rewind-app/.git/worktrees/*.path
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:51.5265612Z /home/runner/work/_temp/git-credentials-525003b8-a7de-41ab-85c1-59febb0ce3b2.config
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:51.5275422Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/rewind-app/rewind-app/.git/worktrees/*.path \/home\/runner\/work\/_temp\/git\-credentials\-525003b8\-a7de\-41ab\-85c1\-59febb0ce3b2\.config
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:51.5312857Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:51.5337826Z /github/runner_temp/git-credentials-525003b8-a7de-41ab-85c1-59febb0ce3b2.config
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:51.5347914Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-525003b8\-a7de\-41ab\-85c1\-59febb0ce3b2\.config
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:51.5387834Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:51.5414194Z /github/runner_temp/git-credentials-525003b8-a7de-41ab-85c1-59febb0ce3b2.config
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:51.5423157Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-525003b8\-a7de\-41ab\-85c1\-59febb0ce3b2\.config
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:51.5464547Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:51.5693905Z Removing credentials config '/home/runner/work/_temp/git-credentials-525003b8-a7de-41ab-85c1-59febb0ce3b2.config'
+DAST (ZAP baseline on hosted dev)	Check out the rules file	2026-10-26T15:02:51.5698381Z ##[endgroup]
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	﻿2026-10-26T15:02:51.6023744Z ##[group]Run zaproxy/action-baseline@de8ad967d3548d44ef623df22cf95c3b0baf8b25
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:02:51.6025413Z with:
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:02:51.6026463Z   target: https://d2m6kz76y4kuvm.cloudfront.net
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:02:51.6027758Z   rules_file_name: .zap/rules.tsv
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:02:51.6028882Z   cmd_options: -j -m 2
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:02:51.6030047Z   allow_issue_writing: false
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:02:51.6031091Z   fail_action: false
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:02:51.6032415Z   artifact_name: zap-baseline-aea7478bce14131b821caaa99b1185077b4a9403
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:02:51.6041576Z   token: ***
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:02:51.6042581Z   docker_name: ghcr.io/zaproxy/zaproxy:stable
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:02:51.6043840Z   issue_title: ZAP Scan Baseline Report
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:02:51.6044974Z env:
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:02:51.6045823Z   AWS_REGION: ap-southeast-1
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:02:51.6047231Z   REWIND_DEPLOY_ROLE_ARN: arn:aws:iam::330599756236:role/rewind-demo-deploy
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:02:51.6048789Z   REWIND_DEPLOY_INSTANCE: rewind-demo
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:02:51.6050105Z   REWIND_DEPLOY_CONFIG_VERSION: demo-v1
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:02:51.6051541Z   REWIND_DAST_TARGET: https://d2m6kz76y4kuvm.cloudfront.net
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:02:51.6052871Z ##[endgroup]
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:02:51.7784158Z starting the program
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:02:51.7786832Z github run id :40344230832
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:02:51.7793960Z (node:2285) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:02:51.7797323Z (Use `node --trace-deprecation ...` to show where the warning was created)
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:02:51.7892716Z [command]/usr/bin/chmod a+w /home/runner/work/rewind-app/rewind-app
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:02:51.7968267Z [command]/usr/bin/docker pull ghcr.io/zaproxy/zaproxy:stable -q
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:03:17.8821872Z ghcr.io/zaproxy/zaproxy:stable
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:03:17.8848570Z [command]/usr/bin/docker run -v /home/runner/work/rewind-app/rewind-app:/zap/wrk/:rw --network=host -e ZAP_AUTH_HEADER -e ZAP_AUTH_HEADER_VALUE -e ZAP_AUTH_HEADER_SITE -t ghcr.io/zaproxy/zaproxy:stable zap-baseline.py -t https://d2m6kz76y4kuvm.cloudfront.net -J report_json.json -w report_md.md -r report_html.html -j -m 2 -c .zap/rules.tsv
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:03:18.2286632Z Using the Automation Framework
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3627102Z Total of 101 URLs
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3633767Z PASS: Vulnerable JS Library (Powered by Retire.js) [10003]
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3634579Z PASS: In Page Banner Information Leak [10009]
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3635200Z PASS: Cookie No HttpOnly Flag [10010]
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3635705Z PASS: Cookie Without Secure Flag [10011]
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3636402Z PASS: Cross-Domain JavaScript Source File Inclusion [10017]
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3637129Z PASS: Content-Type Header Missing [10019]
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3637646Z PASS: Anti-clickjacking Header [10020]
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3638436Z PASS: X-Content-Type-Options Header Missing [10021]
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3639630Z PASS: Information Disclosure - Debug Error Messages [10023]
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3641506Z PASS: Information Disclosure - Sensitive Information in URL [10024]
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3642887Z PASS: Information Disclosure - Sensitive Information in HTTP Referrer Header [10025]
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3643933Z PASS: HTTP Parameter Override [10026]
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3645064Z PASS: Off-site Redirect [10028]
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3645582Z PASS: Cookie Poisoning [10029]
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3646505Z PASS: User Controllable Charset [10030]
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3647816Z PASS: User Controllable HTML Element Attribute (Potential XSS) [10031]
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3648753Z PASS: Viewstate [10032]
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3649208Z PASS: Directory Browsing [10033]
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3650276Z PASS: Heartbleed OpenSSL Vulnerability (Indicative) [10034]
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3651301Z PASS: Strict-Transport-Security Header [10035]
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3652463Z PASS: Server Leaks Information via "X-Powered-By" HTTP Response Header Field(s) [10037]
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3653686Z PASS: X-Backend-Server Header Information Leak [10039]
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3654366Z PASS: Secure Pages Include Mixed Content [10040]
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3656145Z PASS: HTTP to HTTPS Insecure Transition in Form Post [10041]
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3656902Z PASS: HTTPS to HTTP Insecure Transition in Form Post [10042]
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3657993Z PASS: User Controllable JavaScript Event (XSS) [10043]
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3659191Z PASS: Big Redirect Detected (Potential Sensitive Information Leak) [10044]
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3660620Z PASS: Retrieved from Cache [10050]
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3661030Z PASS: X-ChromeLogger-Data (XCOLD) Header Information Leak [10052]
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3661695Z PASS: Cookie without SameSite Attribute [10054]
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3662034Z PASS: X-Debug-Token Information Leak [10056]
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3662329Z PASS: Username Hash Found [10057]
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3662777Z PASS: X-AspNet-Version Response Header [10061]
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3663108Z PASS: PII Disclosure [10062]
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3663356Z PASS: Hash Disclosure [10097]
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3663625Z PASS: Cross-Domain Misconfiguration [10098]
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3664065Z PASS: Source Code Disclosure [10099]
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3664356Z PASS: Weak Authentication Method [10105]
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3664647Z PASS: Reverse Tabnabbing [10108]
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3664989Z PASS: Authentication Request Identified [10111]
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3665412Z PASS: Session Management Response Identified [10112]
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3665744Z PASS: Verification Request Identified [10113]
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3666164Z PASS: Script Served From Malicious Domain (polyfill) [10115]
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3666587Z PASS: ZAP is Out of Date [10116]
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3666851Z PASS: Absence of Anti-CSRF Tokens [10202]
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3667135Z PASS: Private IP Disclosure [2]
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3667890Z PASS: Server Side Technology Version with Known Vulnerabilities [20020]
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3668275Z PASS: Session ID in URL Rewrite [3]
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3668673Z PASS: Script Passive Scan Rules [50001]
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3668980Z PASS: Stats Passive Scan Rule [50003]
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3669385Z PASS: Insecure JSF ViewState [90001]
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3669793Z PASS: Java Serialization Object [90002]
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3670195Z PASS: Sub Resource Integrity Attribute Missing [90003]
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3670513Z PASS: Charset Mismatch [90011]
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3670776Z PASS: Application Error Disclosure [90022]
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3671224Z PASS: WSDL File Detection [90030]
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3671492Z PASS: Loosely Scoped Cookie [90033]
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3671785Z IGNORE: Timestamp Disclosure - Unix [10096] x 5 
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3672527Z 	https://d2m6kz76y4kuvm.cloudfront.net/_expo/static/js/web/AppEntry-206ca015a5a22034bd01e234b53e154e.js (200 OK)
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3673488Z 	https://d2m6kz76y4kuvm.cloudfront.net/_expo/static/js/web/AppEntry-206ca015a5a22034bd01e234b53e154e.js (200 OK)
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3674337Z 	https://d2m6kz76y4kuvm.cloudfront.net/_expo/static/js/web/AppEntry-206ca015a5a22034bd01e234b53e154e.js (200 OK)
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3675270Z 	https://d2m6kz76y4kuvm.cloudfront.net/_expo/static/js/web/AppEntry-206ca015a5a22034bd01e234b53e154e.js (200 OK)
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3676176Z 	https://d2m6kz76y4kuvm.cloudfront.net/_expo/static/js/web/AppEntry-206ca015a5a22034bd01e234b53e154e.js (200 OK)
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3676771Z IGNORE: Modern Web Application [10109] x 5 
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3677243Z 	https://d2m6kz76y4kuvm.cloudfront.net (200 OK)
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3677624Z 	https://d2m6kz76y4kuvm.cloudfront.net/ (200 OK)
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3678104Z 	https://d2m6kz76y4kuvm.cloudfront.net/index.html (200 OK)
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3678556Z 	https://d2m6kz76y4kuvm.cloudfront.net/robots.txt (200 OK)
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3678953Z 	https://d2m6kz76y4kuvm.cloudfront.net/sitemap.xml (200 OK)
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3679630Z WARN-NEW: Re-examine Cache-control Directives [10015] x 2 
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3680006Z 	https://d2m6kz76y4kuvm.cloudfront.net (200 OK)
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3680498Z 	https://d2m6kz76y4kuvm.cloudfront.net/manifest.json (200 OK)
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3681000Z WARN-NEW: Information Disclosure - Suspicious Comments [10027] x 3 
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3681735Z 	https://d2m6kz76y4kuvm.cloudfront.net/sw.js (200 OK)
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3682141Z 	https://d2m6kz76y4kuvm.cloudfront.net/sw.js (200 OK)
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3682493Z 	https://d2m6kz76y4kuvm.cloudfront.net/sw.js (200 OK)
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3682978Z WARN-NEW: Server Leaks Version Information via "Server" HTTP Response Header Field [10036] x 5 
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3683611Z 	https://d2m6kz76y4kuvm.cloudfront.net (200 OK)
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3684045Z 	https://d2m6kz76y4kuvm.cloudfront.net/icons/apple-touch-icon.png (200 OK)
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3684591Z 	https://d2m6kz76y4kuvm.cloudfront.net/icons/launch-1284x2778.png (200 OK)
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3685045Z 	https://d2m6kz76y4kuvm.cloudfront.net/robots.txt (200 OK)
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3685575Z 	https://d2m6kz76y4kuvm.cloudfront.net/sitemap.xml (200 OK)
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3686037Z WARN-NEW: Content Security Policy (CSP) Report-Only Header Found [10038] x 5 
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3686462Z 	https://d2m6kz76y4kuvm.cloudfront.net (200 OK)
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3686805Z 	https://d2m6kz76y4kuvm.cloudfront.net/ (200 OK)
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3687164Z 	https://d2m6kz76y4kuvm.cloudfront.net/index.html (200 OK)
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3687543Z 	https://d2m6kz76y4kuvm.cloudfront.net/robots.txt (200 OK)
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3687927Z 	https://d2m6kz76y4kuvm.cloudfront.net/sitemap.xml (200 OK)
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3688278Z WARN-NEW: Non-Storable Content [10049] x 9 
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3688596Z 	https://d2m6kz76y4kuvm.cloudfront.net (200 OK)
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3688968Z 	https://d2m6kz76y4kuvm.cloudfront.net/manifest.json (200 OK)
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3689714Z 	https://d2m6kz76y4kuvm.cloudfront.net/robots.txt (200 OK)
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3690293Z 	https://d2m6kz76y4kuvm.cloudfront.net/sitemap.xml (200 OK)
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3690688Z 	https://d2m6kz76y4kuvm.cloudfront.net/favicon.ico (200 OK)
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3691120Z WARN-NEW: CSP: Failure to Define Directive with No Fallback [10055] x 12 
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3691535Z 	https://d2m6kz76y4kuvm.cloudfront.net (200 OK)
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3691895Z 	https://d2m6kz76y4kuvm.cloudfront.net/robots.txt (200 OK)
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3692291Z 	https://d2m6kz76y4kuvm.cloudfront.net/sitemap.xml (200 OK)
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3692662Z 	https://d2m6kz76y4kuvm.cloudfront.net (200 OK)
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3693013Z 	https://d2m6kz76y4kuvm.cloudfront.net/robots.txt (200 OK)
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3693388Z WARN-NEW: Permissions Policy Header Not Set [10063] x 5 
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3693744Z 	https://d2m6kz76y4kuvm.cloudfront.net (200 OK)
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3694072Z 	https://d2m6kz76y4kuvm.cloudfront.net/ (200 OK)
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3694432Z 	https://d2m6kz76y4kuvm.cloudfront.net/index.html (200 OK)
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3694817Z 	https://d2m6kz76y4kuvm.cloudfront.net/robots.txt (200 OK)
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3695220Z 	https://d2m6kz76y4kuvm.cloudfront.net/sitemap.xml (200 OK)
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3695581Z WARN-NEW: Dangerous JS Functions [10110] x 1 
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3696123Z 	https://d2m6kz76y4kuvm.cloudfront.net/_expo/static/js/web/AppEntry-206ca015a5a22034bd01e234b53e154e.js (200 OK)
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3696930Z WARN-NEW: Cross-Origin-Embedder-Policy Header Missing or Invalid [90004] x 9 
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3697378Z 	https://d2m6kz76y4kuvm.cloudfront.net (200 OK)
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3697750Z 	https://d2m6kz76y4kuvm.cloudfront.net/robots.txt (200 OK)
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3698140Z 	https://d2m6kz76y4kuvm.cloudfront.net/sitemap.xml (200 OK)
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3698502Z 	https://d2m6kz76y4kuvm.cloudfront.net (200 OK)
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3698853Z 	https://d2m6kz76y4kuvm.cloudfront.net/robots.txt (200 OK)
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.3699697Z FAIL-NEW: 0	FAIL-INPROG: 0	WARN-NEW: 9	WARN-INPROG: 0	INFO: 0	IGNORE: 2	PASS: 57
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.4458210Z Scanning process completed, starting to analyze the results!
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.4467936Z Artifact name is valid!
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.4468859Z Root directory input is valid!
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.6466660Z Beginning upload of artifact content to blob storage
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.7148788Z Uploaded bytes 33967
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.7346250Z Finished uploading artifact content to blob storage!
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.7347420Z SHA256 digest of uploaded artifact zip is 78c2903100f1db29441f48b010a5cf437adcc0a4c949f9a3085fcb1a5e107489
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:34.7349839Z Finalizing artifact upload
+DAST (ZAP baseline on hosted dev)	ZAP baseline scan	2026-10-26T15:04:35.2098448Z Artifact zap-baseline-aea7478bce14131b821caaa99b1185077b4a9403.zip successfully finalized. Artifact ID 12660614474
+DAST (ZAP baseline on hosted dev)	Publish the ZAP summary	﻿2026-10-26T15:04:35.2261705Z ##[group]Run {
+DAST (ZAP baseline on hosted dev)	Publish the ZAP summary	2026-10-26T15:04:35.2262039Z ^[[36;1m{^[[0m
+DAST (ZAP baseline on hosted dev)	Publish the ZAP summary	2026-10-26T15:04:35.2262344Z ^[[36;1m  echo '### ZAP baseline (unauthenticated, report-only)'^[[0m
+DAST (ZAP baseline on hosted dev)	Publish the ZAP summary	2026-10-26T15:04:35.2262697Z ^[[36;1m  echo ''^[[0m
+DAST (ZAP baseline on hosted dev)	Publish the ZAP summary	2026-10-26T15:04:35.2262956Z ^[[36;1m  echo '| Format | Report | Available |'^[[0m
+DAST (ZAP baseline on hosted dev)	Publish the ZAP summary	2026-10-26T15:04:35.2263301Z ^[[36;1m  echo '| --- | --- | --- |'^[[0m
+DAST (ZAP baseline on hosted dev)	Publish the ZAP summary	2026-10-26T15:04:35.2263685Z ^[[36;1m  for report in report_json.json report_html.html report_md.md; do^[[0m
+DAST (ZAP baseline on hosted dev)	Publish the ZAP summary	2026-10-26T15:04:35.2264070Z ^[[36;1m    available=no^[[0m
+DAST (ZAP baseline on hosted dev)	Publish the ZAP summary	2026-10-26T15:04:35.2264325Z ^[[36;1m    [ ! -s "$report" ] || available=yes^[[0m
+DAST (ZAP baseline on hosted dev)	Publish the ZAP summary	2026-10-26T15:04:35.2264696Z ^[[36;1m    printf '| %s | %s | %s |\n' "${report##*.}" "$report" "$available"^[[0m
+DAST (ZAP baseline on hosted dev)	Publish the ZAP summary	2026-10-26T15:04:35.2265049Z ^[[36;1m  done^[[0m
+DAST (ZAP baseline on hosted dev)	Publish the ZAP summary	2026-10-26T15:04:35.2265244Z ^[[36;1m  echo ''^[[0m
+DAST (ZAP baseline on hosted dev)	Publish the ZAP summary	2026-10-26T15:04:35.2265758Z ^[[36;1m  echo 'Download all three reports from the zap-baseline artifact on this run. Findings do not block deployment.'^[[0m
+DAST (ZAP baseline on hosted dev)	Publish the ZAP summary	2026-10-26T15:04:35.2266304Z ^[[36;1m  echo ''^[[0m
+DAST (ZAP baseline on hosted dev)	Publish the ZAP summary	2026-10-26T15:04:35.2266575Z ^[[36;1m  if [ -f report_md.md ]; then^[[0m
+DAST (ZAP baseline on hosted dev)	Publish the ZAP summary	2026-10-26T15:04:35.2266856Z ^[[36;1m    cat report_md.md^[[0m
+DAST (ZAP baseline on hosted dev)	Publish the ZAP summary	2026-10-26T15:04:35.2267086Z ^[[36;1m  else^[[0m
+DAST (ZAP baseline on hosted dev)	Publish the ZAP summary	2026-10-26T15:04:35.2267379Z ^[[36;1m    echo 'ZAP wrote no Markdown report; inspect the scan step.'^[[0m
+DAST (ZAP baseline on hosted dev)	Publish the ZAP summary	2026-10-26T15:04:35.2267917Z ^[[36;1m  fi^[[0m
+DAST (ZAP baseline on hosted dev)	Publish the ZAP summary	2026-10-26T15:04:35.2268126Z ^[[36;1m} >> "$GITHUB_STEP_SUMMARY"^[[0m
+DAST (ZAP baseline on hosted dev)	Publish the ZAP summary	2026-10-26T15:04:35.2536342Z shell: /usr/bin/bash -e {0}
+DAST (ZAP baseline on hosted dev)	Publish the ZAP summary	2026-10-26T15:04:35.2536648Z env:
+DAST (ZAP baseline on hosted dev)	Publish the ZAP summary	2026-10-26T15:04:35.2536883Z   AWS_REGION: ap-southeast-1
+DAST (ZAP baseline on hosted dev)	Publish the ZAP summary	2026-10-26T15:04:35.2537291Z   REWIND_DEPLOY_ROLE_ARN: arn:aws:iam::330599756236:role/rewind-demo-deploy
+DAST (ZAP baseline on hosted dev)	Publish the ZAP summary	2026-10-26T15:04:35.2537744Z   REWIND_DEPLOY_INSTANCE: rewind-demo
+DAST (ZAP baseline on hosted dev)	Publish the ZAP summary	2026-10-26T15:04:35.2538054Z   REWIND_DEPLOY_CONFIG_VERSION: demo-v1
+DAST (ZAP baseline on hosted dev)	Publish the ZAP summary	2026-10-26T15:04:35.2538440Z   REWIND_DAST_TARGET: https://d2m6kz76y4kuvm.cloudfront.net
+DAST (ZAP baseline on hosted dev)	Publish the ZAP summary	2026-10-26T15:04:35.2538798Z ##[endgroup]
+DAST (ZAP baseline on hosted dev)	Post Check out the rules file	﻿2026-10-26T15:04:35.2956046Z Post job cleanup.
+DAST (ZAP baseline on hosted dev)	Post Check out the rules file	2026-10-26T15:04:35.3793025Z [command]/usr/bin/git version
+DAST (ZAP baseline on hosted dev)	Post Check out the rules file	2026-10-26T15:04:35.3849079Z git version 2.55.0
+DAST (ZAP baseline on hosted dev)	Post Check out the rules file	2026-10-26T15:04:35.3890969Z Temporarily overriding HOME='/home/runner/work/_temp/40fe4c7d-b6b0-4a5d-b15f-babfbcb19118' before making global git config changes
+DAST (ZAP baseline on hosted dev)	Post Check out the rules file	2026-10-26T15:04:35.3892031Z Adding repository directory to the temporary git global config as a safe directory
+DAST (ZAP baseline on hosted dev)	Post Check out the rules file	2026-10-26T15:04:35.3896672Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/rewind-app/rewind-app
+DAST (ZAP baseline on hosted dev)	Post Check out the rules file	2026-10-26T15:04:35.3929065Z Removing SSH command configuration
+DAST (ZAP baseline on hosted dev)	Post Check out the rules file	2026-10-26T15:04:35.3936670Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+DAST (ZAP baseline on hosted dev)	Post Check out the rules file	2026-10-26T15:04:35.3978985Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+DAST (ZAP baseline on hosted dev)	Post Check out the rules file	2026-10-26T15:04:35.4221250Z Removing HTTP extra header
+DAST (ZAP baseline on hosted dev)	Post Check out the rules file	2026-10-26T15:04:35.4228137Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+DAST (ZAP baseline on hosted dev)	Post Check out the rules file	2026-10-26T15:04:35.4321289Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+DAST (ZAP baseline on hosted dev)	Post Check out the rules file	2026-10-26T15:04:35.4611082Z Removing includeIf entries pointing to credentials config files
+DAST (ZAP baseline on hosted dev)	Post Check out the rules file	2026-10-26T15:04:35.4623011Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+DAST (ZAP baseline on hosted dev)	Post Check out the rules file	2026-10-26T15:04:35.4673794Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+DAST (ZAP baseline on hosted dev)	Complete job	﻿2026-10-26T15:04:35.5110085Z Cleaning up orphan processes

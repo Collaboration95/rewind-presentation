@@ -1,0 +1,997 @@
+{
+  "viewport": [
+    1280,
+    720
+  ],
+  "slides": [
+    {
+      "id": "s1",
+      "kind": "main",
+      "sec": "1",
+      "time": 15,
+      "title": "A month of moments. One film.",
+      "bad": [],
+      "broken": [],
+      "figure": [],
+      "textOverflow": []
+    },
+    {
+      "id": "s2",
+      "kind": "main",
+      "sec": "1",
+      "time": 55,
+      "title": "Everyday moments need a shared reason to return.",
+      "bad": [],
+      "broken": [],
+      "figure": [],
+      "textOverflow": []
+    },
+    {
+      "id": "s3",
+      "kind": "main",
+      "sec": "1",
+      "time": 140,
+      "title": "Four sprints delivered the hosted private-group journey.",
+      "bad": [],
+      "broken": [],
+      "figure": [],
+      "textOverflow": []
+    },
+    {
+      "id": "s4",
+      "kind": "main",
+      "sec": "2",
+      "time": 33,
+      "title": "Fourteen use cases follow one private-group journey.",
+      "bad": [],
+      "broken": [],
+      "figure": [
+        {
+          "b": {
+            "x": 0,
+            "y": 32,
+            "width": 1280,
+            "height": 688,
+            "top": 32,
+            "right": 1280,
+            "bottom": 720,
+            "left": 0
+          },
+          "minFont": 15.032
+        }
+      ],
+      "textOverflow": []
+    },
+    {
+      "id": "s5",
+      "kind": "main",
+      "sec": "2",
+      "time": 39,
+      "title": "One Node application keeps rules close to transactions.",
+      "bad": [],
+      "broken": [],
+      "figure": [
+        {
+          "b": {
+            "x": 0,
+            "y": 32,
+            "width": 1280,
+            "height": 688,
+            "top": 32,
+            "right": 1280,
+            "bottom": 720,
+            "left": 0
+          },
+          "minFont": 15.172
+        }
+      ],
+      "textOverflow": []
+    },
+    {
+      "id": "s6",
+      "kind": "main",
+      "sec": "2",
+      "time": 45,
+      "title": "Analysis responsibilities become named implementation modules.",
+      "bad": [],
+      "broken": [],
+      "figure": [
+        {
+          "b": {
+            "x": 0,
+            "y": 32,
+            "width": 1280,
+            "height": 688,
+            "top": 32,
+            "right": 1280,
+            "bottom": 720,
+            "left": 0
+          },
+          "minFont": 19.626
+        }
+      ],
+      "textOverflow": []
+    },
+    {
+      "id": "s7",
+      "kind": "main",
+      "sec": "2",
+      "time": 54,
+      "title": "Durable claims keep repeated cycle work safe.",
+      "bad": [],
+      "broken": [],
+      "figure": [
+        {
+          "b": {
+            "x": 0,
+            "y": 32,
+            "width": 1280,
+            "height": 688,
+            "top": 32,
+            "right": 1280,
+            "bottom": 720,
+            "left": 0
+          },
+          "minFont": 14.333
+        }
+      ],
+      "textOverflow": []
+    },
+    {
+      "id": "s8",
+      "kind": "main",
+      "sec": "2",
+      "time": 57,
+      "title": "A repeated tick reuses work and fences stale completion.",
+      "bad": [],
+      "broken": [],
+      "figure": [
+        {
+          "b": {
+            "x": 0,
+            "y": 32,
+            "width": 1280,
+            "height": 688,
+            "top": 32,
+            "right": 1280,
+            "bottom": 720,
+            "left": 0
+          },
+          "minFont": 17.562
+        }
+      ],
+      "textOverflow": []
+    },
+    {
+      "id": "s9",
+      "kind": "main",
+      "sec": "2",
+      "time": 72,
+      "title": "Keys preserve membership and the film\u2019s exact input set.",
+      "bad": [],
+      "broken": [],
+      "figure": [
+        {
+          "b": {
+            "x": 0,
+            "y": 32,
+            "width": 1280,
+            "height": 688,
+            "top": 32,
+            "right": 1280,
+            "bottom": 720,
+            "left": 0
+          },
+          "minFont": 14.055
+        }
+      ],
+      "textOverflow": []
+    },
+    {
+      "id": "s10",
+      "kind": "main",
+      "sec": "3",
+      "time": 96,
+      "title": "Each test layer catches a different integration failure.",
+      "bad": [],
+      "broken": [],
+      "figure": [],
+      "textOverflow": []
+    },
+    {
+      "id": "s11",
+      "kind": "main",
+      "sec": "3",
+      "time": 84,
+      "title": "\u201cTry again\u201d must return to a usable viewfinder.",
+      "bad": [],
+      "broken": [],
+      "figure": [],
+      "textOverflow": []
+    },
+    {
+      "id": "s12",
+      "kind": "main",
+      "sec": "4",
+      "time": 72,
+      "title": "A commit carries tests, inventory and deployment evidence.",
+      "bad": [],
+      "broken": [],
+      "figure": [
+        {
+          "b": {
+            "x": 0,
+            "y": 32,
+            "width": 1280,
+            "height": 688,
+            "top": 32,
+            "right": 1280,
+            "bottom": 720,
+            "left": 0
+          },
+          "minFont": 15.941
+        }
+      ],
+      "textOverflow": []
+    },
+    {
+      "id": "s13",
+      "kind": "main",
+      "sec": "4",
+      "time": 96,
+      "title": "Pipeline decisions separate merge gates from host activation.",
+      "bad": [],
+      "broken": [],
+      "figure": [
+        {
+          "b": {
+            "x": 0,
+            "y": 32,
+            "width": 1280,
+            "height": 688,
+            "top": 32,
+            "right": 1280,
+            "bottom": 720,
+            "left": 0
+          },
+          "minFont": 14.942
+        }
+      ],
+      "textOverflow": []
+    },
+    {
+      "id": "s14",
+      "kind": "main",
+      "sec": "4",
+      "time": 102,
+      "title": "Security checks cover code, packages, secrets and running pages.",
+      "bad": [],
+      "broken": [],
+      "figure": [],
+      "textOverflow": []
+    },
+    {
+      "id": "s15",
+      "kind": "main",
+      "sec": "4",
+      "time": 90,
+      "title": "The manifest binds deployed images to their scans.",
+      "bad": [],
+      "broken": [],
+      "figure": [],
+      "textOverflow": []
+    },
+    {
+      "id": "s16",
+      "kind": "main",
+      "sec": "4",
+      "time": 72,
+      "title": "Hosted dev activates after candidate health succeeds.",
+      "bad": [],
+      "broken": [],
+      "figure": [
+        {
+          "b": {
+            "x": 0,
+            "y": 32,
+            "width": 1280,
+            "height": 688,
+            "top": 32,
+            "right": 1280,
+            "bottom": 720,
+            "left": 0
+          },
+          "minFont": 14.349
+        }
+      ],
+      "textOverflow": []
+    },
+    {
+      "id": "s17",
+      "kind": "main",
+      "sec": "4",
+      "time": 60,
+      "title": "Packaging and runtime boundaries exposed useful defects.",
+      "bad": [],
+      "broken": [],
+      "figure": [],
+      "textOverflow": []
+    },
+    {
+      "id": "s18",
+      "kind": "main",
+      "sec": "4",
+      "time": 228,
+      "title": "One run connects green Quality to hosted dev.",
+      "bad": [],
+      "broken": [],
+      "figure": [],
+      "textOverflow": []
+    },
+    {
+      "id": "s19",
+      "kind": "main",
+      "sec": "5",
+      "time": 18,
+      "title": "Follow one group from installation to a private film.",
+      "bad": [],
+      "broken": [],
+      "figure": [],
+      "textOverflow": []
+    },
+    {
+      "id": "F1",
+      "kind": "clip",
+      "sec": "5",
+      "time": 45,
+      "title": "Installation keeps the app one tap away.",
+      "bad": [],
+      "broken": [],
+      "figure": [],
+      "textOverflow": []
+    },
+    {
+      "id": "F2",
+      "kind": "clip",
+      "sec": "5",
+      "time": 45,
+      "title": "Sign-in returns the member to the private-group journey.",
+      "bad": [],
+      "broken": [],
+      "figure": [],
+      "textOverflow": []
+    },
+    {
+      "id": "F3",
+      "kind": "clip",
+      "sec": "5",
+      "time": 60,
+      "title": "A shared prompt gives the group a common starting point.",
+      "bad": [],
+      "broken": [],
+      "figure": [],
+      "textOverflow": []
+    },
+    {
+      "id": "F4",
+      "kind": "clip",
+      "sec": "5",
+      "time": 60,
+      "title": "One accepted invitation creates one private membership.",
+      "bad": [],
+      "broken": [],
+      "figure": [],
+      "textOverflow": []
+    },
+    {
+      "id": "F5",
+      "kind": "clip",
+      "sec": "5",
+      "time": 55,
+      "title": "A submitted photo becomes a sealed moment.",
+      "bad": [],
+      "broken": [],
+      "figure": [],
+      "textOverflow": []
+    },
+    {
+      "id": "F6",
+      "kind": "clip",
+      "sec": "5",
+      "time": 65,
+      "title": "Video and photos share one enforced weekly allowance.",
+      "bad": [],
+      "broken": [],
+      "figure": [],
+      "textOverflow": []
+    },
+    {
+      "id": "F7",
+      "kind": "clip",
+      "sec": "5",
+      "time": 55,
+      "title": "Stored messages and live updates keep the group connected.",
+      "bad": [],
+      "broken": [],
+      "figure": [],
+      "textOverflow": []
+    },
+    {
+      "id": "F8",
+      "kind": "clip",
+      "sec": "5",
+      "time": 50,
+      "title": "Reminder permission leads to an explicit weekly choice.",
+      "bad": [],
+      "broken": [],
+      "figure": [],
+      "textOverflow": []
+    },
+    {
+      "id": "F9",
+      "kind": "clip",
+      "sec": "5",
+      "time": 40,
+      "title": "The completed capsule is ready for its shared premiere.",
+      "bad": [],
+      "broken": [],
+      "figure": [],
+      "textOverflow": []
+    },
+    {
+      "id": "F10",
+      "kind": "clip",
+      "sec": "5",
+      "time": 80,
+      "title": "The reveal turns sealed contributions into one shared film.",
+      "bad": [],
+      "broken": [],
+      "figure": [],
+      "textOverflow": []
+    },
+    {
+      "id": "F11",
+      "kind": "clip",
+      "sec": "5",
+      "time": 55,
+      "title": "Archive keeps the film available after its premiere.",
+      "bad": [],
+      "broken": [],
+      "figure": [],
+      "textOverflow": []
+    },
+    {
+      "id": "F12",
+      "kind": "clip",
+      "sec": "5",
+      "time": 50,
+      "title": "A spent invitation gives an outsider no group access.",
+      "bad": [],
+      "broken": [],
+      "figure": [],
+      "textOverflow": []
+    },
+    {
+      "id": "s20",
+      "kind": "main",
+      "sec": "5",
+      "time": 192,
+      "title": "Load results identify the next scaling change.",
+      "bad": [],
+      "broken": [],
+      "figure": [],
+      "textOverflow": []
+    },
+    {
+      "id": "B1",
+      "kind": "back",
+      "sec": "2",
+      "time": 0,
+      "title": "Analysis separates interaction, coordination and state.",
+      "bad": [],
+      "broken": [],
+      "figure": [
+        {
+          "b": {
+            "x": 0,
+            "y": 32,
+            "width": 1280,
+            "height": 688,
+            "top": 32,
+            "right": 1280,
+            "bottom": 720,
+            "left": 0
+          },
+          "minFont": 16.18
+        }
+      ],
+      "textOverflow": []
+    },
+    {
+      "id": "B2",
+      "kind": "back",
+      "sec": "2",
+      "time": 0,
+      "title": "Durable state survives interrupted compilation.",
+      "bad": [],
+      "broken": [],
+      "figure": [
+        {
+          "b": {
+            "x": 0,
+            "y": 32,
+            "width": 1280,
+            "height": 688,
+            "top": 32,
+            "right": 1280,
+            "bottom": 720,
+            "left": 0
+          },
+          "minFont": 21.637
+        }
+      ],
+      "textOverflow": []
+    },
+    {
+      "id": "B3",
+      "kind": "back",
+      "sec": "2",
+      "time": 0,
+      "title": "Capture acceptance checks identity, allowance and media.",
+      "bad": [],
+      "broken": [],
+      "figure": [
+        {
+          "b": {
+            "x": 0,
+            "y": 32,
+            "width": 1280,
+            "height": 688,
+            "top": 32,
+            "right": 1280,
+            "bottom": 720,
+            "left": 0
+          },
+          "minFont": 18.755
+        }
+      ],
+      "textOverflow": []
+    },
+    {
+      "id": "B4",
+      "kind": "back",
+      "sec": "2",
+      "time": 0,
+      "title": "Relational keys make the private film traceable.",
+      "bad": [],
+      "broken": [],
+      "figure": [
+        {
+          "b": {
+            "x": 0,
+            "y": 32,
+            "width": 1280,
+            "height": 688,
+            "top": 32,
+            "right": 1280,
+            "bottom": 720,
+            "left": 0
+          },
+          "minFont": 14.055
+        }
+      ],
+      "textOverflow": []
+    },
+    {
+      "id": "B5",
+      "kind": "back",
+      "sec": "4",
+      "time": 0,
+      "title": "The deployment view names each runtime boundary.",
+      "bad": [],
+      "broken": [],
+      "figure": [
+        {
+          "b": {
+            "x": 0,
+            "y": 32,
+            "width": 1280,
+            "height": 688,
+            "top": 32,
+            "right": 1280,
+            "bottom": 720,
+            "left": 0
+          },
+          "minFont": 14.349
+        }
+      ],
+      "textOverflow": []
+    },
+    {
+      "id": "B6",
+      "kind": "back",
+      "sec": "3",
+      "time": 0,
+      "title": "Coverage and enforcement answer different questions.",
+      "bad": [],
+      "broken": [],
+      "figure": [],
+      "textOverflow": []
+    },
+    {
+      "id": "B7",
+      "kind": "back",
+      "sec": "2",
+      "time": 0,
+      "title": "Storage changes behind Strategy and Adapter roles.",
+      "bad": [],
+      "broken": [],
+      "figure": [
+        {
+          "b": {
+            "x": 0,
+            "y": 32,
+            "width": 1280,
+            "height": 688,
+            "top": 32,
+            "right": 1280,
+            "bottom": 720,
+            "left": 0
+          },
+          "minFont": 15.084
+        }
+      ],
+      "textOverflow": []
+    },
+    {
+      "id": "B8",
+      "kind": "back",
+      "sec": "2",
+      "time": 0,
+      "title": "Observer distributes chat updates alongside stored history.",
+      "bad": [],
+      "broken": [],
+      "figure": [
+        {
+          "b": {
+            "x": 0,
+            "y": 32,
+            "width": 1280,
+            "height": 688,
+            "top": 32,
+            "right": 1280,
+            "bottom": 720,
+            "left": 0
+          },
+          "minFont": 15.315
+        }
+      ],
+      "textOverflow": []
+    },
+    {
+      "id": "B9",
+      "kind": "back",
+      "sec": "2",
+      "time": 0,
+      "title": "The persistence adapter preserves a common data-access contract.",
+      "bad": [],
+      "broken": [],
+      "figure": [
+        {
+          "b": {
+            "x": 0,
+            "y": 32,
+            "width": 1280,
+            "height": 688,
+            "top": 32,
+            "right": 1280,
+            "bottom": 720,
+            "left": 0
+          },
+          "minFont": 14.655
+        }
+      ],
+      "textOverflow": []
+    },
+    {
+      "id": "B10",
+      "kind": "back",
+      "sec": "1",
+      "time": 0,
+      "title": "Agile records retain scope changes and equal effort.",
+      "bad": [],
+      "broken": [],
+      "figure": [],
+      "textOverflow": []
+    },
+    {
+      "id": "B11",
+      "kind": "back",
+      "sec": "5",
+      "time": 0,
+      "title": "The capacity curve follows the closed-user workload.",
+      "bad": [],
+      "broken": [],
+      "figure": [],
+      "textOverflow": []
+    },
+    {
+      "id": "B12",
+      "kind": "back",
+      "sec": "4",
+      "time": 0,
+      "title": "Retained artifacts make the deployment independently inspectable.",
+      "bad": [],
+      "broken": [],
+      "figure": [],
+      "textOverflow": []
+    },
+    {
+      "id": "B13",
+      "kind": "back",
+      "sec": "2",
+      "time": 0,
+      "title": "Acceptance pins and probes the exact media version and replays an existing receipt.",
+      "bad": [],
+      "broken": [],
+      "figure": [
+        {
+          "b": {
+            "x": 0,
+            "y": 32,
+            "width": 1280,
+            "height": 688,
+            "top": 32,
+            "right": 1280,
+            "bottom": 720,
+            "left": 0
+          },
+          "minFont": 21.522
+        }
+      ],
+      "textOverflow": []
+    },
+    {
+      "id": "B14",
+      "kind": "back",
+      "sec": "2",
+      "time": 0,
+      "title": "One transaction records quota, contribution, processing job and completion.",
+      "bad": [],
+      "broken": [],
+      "figure": [
+        {
+          "b": {
+            "x": 0,
+            "y": 32,
+            "width": 1280,
+            "height": 688,
+            "top": 32,
+            "right": 1280,
+            "bottom": 720,
+            "left": 0
+          },
+          "minFont": 22.422
+        }
+      ],
+      "textOverflow": []
+    },
+    {
+      "id": "B15",
+      "kind": "back",
+      "sec": "2",
+      "time": 0,
+      "title": "Processing stores an MP4 and proves current ownership before marking ready.",
+      "bad": [],
+      "broken": [],
+      "figure": [
+        {
+          "b": {
+            "x": 0,
+            "y": 32,
+            "width": 1280,
+            "height": 688,
+            "top": 32,
+            "right": 1280,
+            "bottom": 720,
+            "left": 0
+          },
+          "minFont": 17.83
+        }
+      ],
+      "textOverflow": []
+    },
+    {
+      "id": "B16",
+      "kind": "back",
+      "sec": "2",
+      "time": 0,
+      "title": "The worker claims settled inputs, materialises media and fences finalisation.",
+      "bad": [],
+      "broken": [],
+      "figure": [
+        {
+          "b": {
+            "x": 0,
+            "y": 32,
+            "width": 1280,
+            "height": 688,
+            "top": 32,
+            "right": 1280,
+            "bottom": 720,
+            "left": 0
+          },
+          "minFont": 17.223
+        }
+      ],
+      "textOverflow": []
+    },
+    {
+      "id": "B17",
+      "kind": "back",
+      "sec": "2",
+      "time": 0,
+      "title": "Stored bytes and the current ready row are verified before publication and archiving.",
+      "bad": [],
+      "broken": [],
+      "figure": [
+        {
+          "b": {
+            "x": 0,
+            "y": 32,
+            "width": 1280,
+            "height": 688,
+            "top": 32,
+            "right": 1280,
+            "bottom": 720,
+            "left": 0
+          },
+          "minFont": 16.658
+        }
+      ],
+      "textOverflow": []
+    },
+    {
+      "id": "B18",
+      "kind": "back",
+      "sec": "2",
+      "time": 0,
+      "title": "Account and group goals connect to Cognito, chat and web push.",
+      "bad": [],
+      "broken": [],
+      "figure": [
+        {
+          "b": {
+            "x": 0,
+            "y": 32,
+            "width": 1280,
+            "height": 688,
+            "top": 32,
+            "right": 1280,
+            "bottom": 720,
+            "left": 0
+          },
+          "minFont": 24.183
+        }
+      ],
+      "textOverflow": []
+    },
+    {
+      "id": "B19",
+      "kind": "back",
+      "sec": "2",
+      "time": 0,
+      "title": "Photo and video acceptance include the shared allowance and optional correction.",
+      "bad": [],
+      "broken": [],
+      "figure": [
+        {
+          "b": {
+            "x": 0,
+            "y": 32,
+            "width": 1280,
+            "height": 688,
+            "top": 32,
+            "right": 1280,
+            "bottom": 720,
+            "left": 0
+          },
+          "minFont": 28.052
+        }
+      ],
+      "textOverflow": []
+    },
+    {
+      "id": "B20",
+      "kind": "back",
+      "sec": "2",
+      "time": 0,
+      "title": "Cycle closure produces a film, premiere, Archive and authorised downloads.",
+      "bad": [],
+      "broken": [],
+      "figure": [
+        {
+          "b": {
+            "x": 0,
+            "y": 32,
+            "width": 1280,
+            "height": 688,
+            "top": 32,
+            "right": 1280,
+            "bottom": 720,
+            "left": 0
+          },
+          "minFont": 27.52
+        }
+      ],
+      "textOverflow": []
+    },
+    {
+      "id": "B21",
+      "kind": "back",
+      "sec": "1",
+      "time": 0,
+      "title": "Sprint 0 records opening scope and daily delivery.",
+      "bad": [],
+      "broken": [],
+      "figure": [],
+      "textOverflow": []
+    },
+    {
+      "id": "B22",
+      "kind": "back",
+      "sec": "1",
+      "time": 0,
+      "title": "Sprint 1 records opening scope and daily delivery.",
+      "bad": [],
+      "broken": [],
+      "figure": [],
+      "textOverflow": []
+    },
+    {
+      "id": "B23",
+      "kind": "back",
+      "sec": "1",
+      "time": 0,
+      "title": "Sprint 2 records opening scope and daily delivery.",
+      "bad": [],
+      "broken": [],
+      "figure": [],
+      "textOverflow": []
+    },
+    {
+      "id": "B24",
+      "kind": "back",
+      "sec": "1",
+      "time": 0,
+      "title": "Issue closures and merged PRs track sprint delivery.",
+      "bad": [],
+      "broken": [],
+      "figure": [],
+      "textOverflow": []
+    },
+    {
+      "id": "B25",
+      "kind": "back",
+      "sec": "1",
+      "time": 0,
+      "title": "Backlog stories connect sprint goals to delivered use cases.",
+      "bad": [],
+      "broken": [],
+      "figure": [],
+      "textOverflow": []
+    }
+  ],
+  "pageErrors": [],
+  "controls": {
+    "arrow": true,
+    "notes": true,
+    "overview": true,
+    "overviewFrames": 57,
+    "overviewClick": true,
+    "hash": true,
+    "clipPlays": true,
+    "clipPausesOnLeave": true,
+    "commands": true
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "checks": {
+    "duration_672s": true,
+    "frames_20160": true,
+    "1080p": true,
+    "30fps": true,
+    "h264": true,
+    "yuv420p": true,
+    "aac_stereo": true,
+    "12_clips": true
+  },
+  "duration": "672.021354",
+  "bytes": "20843043",
+  "sha256": "754f022a3227db7aea6dd2f70fdcdee5b0dbec1505b9c3bcbf5ed9aea4574f97",
+  "sampled_join_frames": 24,
+  "frame_contacts": [
+    "demo-card-contact.jpg",
+    "demo-clip-contact.jpg"
+  ],
+  "visual_review": "PASS: 24 joined frames viewed, all 12 feature contact sheets reviewed; no cycle-length labels or disclaimers in presentation exports."
+}

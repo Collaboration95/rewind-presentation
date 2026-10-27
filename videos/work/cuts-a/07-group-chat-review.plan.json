@@ -1,0 +1,285 @@
+{
+  "output": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/cuts-a/07-group-chat-review.mp4",
+  "frames": 1650,
+  "duration": 55.0,
+  "segments": [
+    {
+      "type": "phone",
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/07-chat.mov",
+      "still": false,
+      "start": 0.0,
+      "end": 6.0,
+      "frames": 180,
+      "duration": 6.0,
+      "width": 1206,
+      "height": 2622,
+      "crop": null,
+      "masks": [],
+      "smooth": [],
+      "audio_file": null,
+      "audio_in": 0,
+      "gain": 1,
+      "source_audio": false,
+      "island": false,
+      "signature": {
+        "row": {
+          "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/07-chat.mov",
+          "in": 0,
+          "out": 6,
+          "duration": 6,
+          "audio": false,
+          "note": "Real Jun message arrives at recording start"
+        },
+        "source": [
+          "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/07-chat.mov",
+          8123081,
+          1793027141094136028
+        ],
+        "audio": null
+      }
+    },
+    {
+      "type": "phone",
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/07-chat.mov",
+      "still": false,
+      "start": 27.0,
+      "end": 33.0,
+      "frames": 180,
+      "duration": 6.0,
+      "width": 1206,
+      "height": 2622,
+      "crop": null,
+      "masks": [],
+      "smooth": [],
+      "audio_file": null,
+      "audio_in": 0,
+      "gain": 1,
+      "source_audio": false,
+      "island": false,
+      "signature": {
+        "row": {
+          "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/07-chat.mov",
+          "in": 27,
+          "out": 33,
+          "duration": 6,
+          "audio": false,
+          "note": "Focus the group message composer"
+        },
+        "source": [
+          "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/07-chat.mov",
+          8123081,
+          1793027141094136028
+        ],
+        "audio": null
+      }
+    },
+    {
+      "type": "phone",
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/07-chat.mov",
+      "still": false,
+      "start": 43.0,
+      "end": 46.0,
+      "frames": 240,
+      "duration": 8.0,
+      "width": 1206,
+      "height": 2622,
+      "crop": null,
+      "masks": [],
+      "smooth": [],
+      "audio_file": null,
+      "audio_in": 0,
+      "gain": 1,
+      "source_audio": false,
+      "island": false,
+      "signature": {
+        "row": {
+          "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/07-chat.mov",
+          "in": 43,
+          "out": 46,
+          "duration": 8,
+          "audio": false,
+          "note": "Maya types reply at recorded speed; hold completed draft"
+        },
+        "source": [
+          "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/07-chat.mov",
+          8123081,
+          1793027141094136028
+        ],
+        "audio": null
+      }
+    },
+    {
+      "type": "phone",
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/07-chat.mov",
+      "still": false,
+      "start": 56.0,
+      "end": 60.0,
+      "frames": 240,
+      "duration": 8.0,
+      "width": 1206,
+      "height": 2622,
+      "crop": null,
+      "masks": [],
+      "smooth": [],
+      "audio_file": null,
+      "audio_in": 0,
+      "gain": 1,
+      "source_audio": false,
+      "island": false,
+      "signature": {
+        "row": {
+          "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/07-chat.mov",
+          "in": 56,
+          "out": 60,
+          "duration": 8,
+          "audio": false,
+          "note": "Send reply; real sent message appears"
+        },
+        "source": [
+          "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/07-chat.mov",
+          8123081,
+          1793027141094136028
+        ],
+        "audio": null
+      }
+    },
+    {
+      "type": "phone",
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/stills/07-chat-exchange.png",
+      "still": true,
+      "start": 0.0,
+      "end": null,
+      "frames": 210,
+      "duration": 7.0,
+      "width": 1206,
+      "height": 2622,
+      "crop": null,
+      "masks": [],
+      "smooth": [],
+      "audio_file": null,
+      "audio_in": 0,
+      "gain": 1,
+      "source_audio": false,
+      "island": true,
+      "signature": {
+        "row": {
+          "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/stills/07-chat-exchange.png",
+          "duration": 7,
+          "audio": false,
+          "note": "Read both real chat messages",
+          "add_island": true
+        },
+        "source": [
+          "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/stills/07-chat-exchange.png",
+          770128,
+          1793027091805801556
+        ],
+        "audio": null
+      }
+    },
+    {
+      "type": "phone",
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/07-chat.mov",
+      "still": false,
+      "start": 118.0,
+      "end": 126.0,
+      "frames": 240,
+      "duration": 8.0,
+      "width": 1206,
+      "height": 2622,
+      "crop": null,
+      "masks": [],
+      "smooth": [],
+      "audio_file": null,
+      "audio_in": 0,
+      "gain": 1,
+      "source_audio": false,
+      "island": false,
+      "signature": {
+        "row": {
+          "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/07-chat.mov",
+          "in": 118,
+          "out": 126,
+          "duration": 8,
+          "audio": false,
+          "note": "Select Jun message; real React, Reply, Report actions"
+        },
+        "source": [
+          "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/07-chat.mov",
+          8123081,
+          1793027141094136028
+        ],
+        "audio": null
+      }
+    },
+    {
+      "type": "phone",
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/07-chat.mov",
+      "still": false,
+      "start": 134.0,
+      "end": 138.0,
+      "frames": 120,
+      "duration": 4.0,
+      "width": 1206,
+      "height": 2622,
+      "crop": null,
+      "masks": [],
+      "smooth": [],
+      "audio_file": null,
+      "audio_in": 0,
+      "gain": 1,
+      "source_audio": false,
+      "island": false,
+      "signature": {
+        "row": {
+          "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/07-chat.mov",
+          "in": 134,
+          "out": 138,
+          "duration": 4,
+          "audio": false,
+          "note": "Apply real sparkle reaction; no invented UI"
+        },
+        "source": [
+          "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/raw/07-chat.mov",
+          8123081,
+          1793027141094136028
+        ],
+        "audio": null
+      }
+    },
+    {
+      "type": "phone",
+      "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/stills/07-chat-reaction.png",
+      "still": true,
+      "start": 0.0,
+      "end": null,
+      "frames": 240,
+      "duration": 8.0,
+      "width": 1206,
+      "height": 2622,
+      "crop": null,
+      "masks": [],
+      "smooth": [],
+      "audio_file": null,
+      "audio_in": 0,
+      "gain": 1,
+      "source_audio": false,
+      "island": false,
+      "signature": {
+        "row": {
+          "source": "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/stills/07-chat-reaction.png",
+          "duration": 8,
+          "audio": false,
+          "note": "End on real exchange and sparkle reaction",
+          "add_island": false
+        },
+        "source": [
+          "/Users/speedpowermac/Documents/projects/CODE_MAIN/NUS/SWE5006/presentation-prep/videos/work/stills/07-chat-reaction.png",
+          777723,
+          1793027141037615726
+        ],
+        "audio": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+output: out/example.mp4
+stamp: "27 Oct 2026 · hosted dev · abc1234"
+stamp_pos: br
+bg: "#0f172a"
+srt: captions.srt
+loudnorm: false
+clips:
+  - {title: "CI/CD pipeline", kicker: "Part 1", sub: "Pull request to hosted dev in one run", dur: 3, vo: vo/intro.aiff, vo_delay: 0.3}
+  - {source: in/desktop-wait-50s.mp4, in: 2, out: 10, caption: "Open the pull request"}
+  - {source: in/desktop-wait-50s.mp4, in: 10, out: 51, speed: 8, caption: "wait trimmed: actual {actual}"}
+  - {source: in/desktop-wait-50s.mp4, in: 3, out: 8, speed: 1, audio: false}
+  - {title: "System demo", kicker: "Part 2", sub: "iPhone PWA and push notification", dur: 3}
+  - {source: in/iphone-portrait-hevc.mov, layout: phone, in: 0, out: 6, caption: "Installed PWA on iPhone", vo: vo/phone.aiff, vo_delay: 0.5}
+  - {source: in/iphone-portrait-hevc.mov, layout: sbs, source2: in/mac-retina.mov, in: 6, out: 11, in2: 2, caption: "Phone and desktop side by side"}
+  - {source: in/mac-retina.mov, layout: fill, in: 0, out: 4, crop: "300:200:1800:1100", caption: "Cropped zoom on the retina capture"}
+  - {source: in/sim-iphone17pro.mov, layout: phone, in: 0, out: 3, caption: "Simulator clip held on last frame", stamp: "27 Oct 2026 · simulator · abc1234"}
+  - {source: in/desktop-wait-50s.mp4, in: 20, out: 28, caption: "Braces {json} and 100% are fine"}

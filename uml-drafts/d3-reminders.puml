@@ -1,0 +1,56 @@
+@startuml
+!include _style.iuml
+title Design class view · Reminders · Strategy (provider) + durable outbox · as built at f6cd896
+top to bottom direction
+' Evidence: server/src/reminders/outbox.ts#L30,#L34,#L306,#L443,#L499 ; providers.ts#L18,#L122,#L194,#L234 ; loop.ts#L12 ; cli.ts#L635
+
+interface ReminderProvider <<strategy>> #DBEAFE {
+  + send(destination: ReminderDestination, payload: ReminderPayload): Promise<ReminderReceipt>
+  + receipt?(id: string): Promise<ReminderReceipt>
+}
+class "createWebPushReminderProvider()\nproviders.ts" as WP <<concrete strategy>> {
+  send(): validReminderDestination, binding.sendNotification
+}
+class "createExpoReminderProvider()\nproviders.ts (disabled scope)" as EX <<concrete strategy>> {
+  send(), receipt()
+}
+interface WebPushBinding <<target>> #DBEAFE {
+  + sendNotification(subscription, payload, options): Promise<{ statusCode: number }>
+}
+class "binding object literal\nproviders.ts L250-L285" as BND <<adapter>> #ECFDF5 {
+  sendNotification(): generateRequestDetails + fetch
+}
+class "web-push package\n(encryption + VAPID signing)" as WPK <<adaptee>> #FEF3C7
+class "createConfiguredReminderProviders()\nproviders.ts" as FAC <<factory>> {
+  returns ReminderProviders = Partial<Record<'expo' | 'webpush', ReminderProvider>>
+}
+class "outbox.ts" as OB <<module, context>> {
+  {static} + scanDueReminderJobs(db, now, options)
+  {static} + runReminderOutboxTick(db, providers, options)
+}
+class "loop.ts" as LP <<module>> {
+  {static} + startReminderLoop(openDatabase, providers, options)
+}
+class "reminder_outbox" as TB <<table>> #ECFDF5 {
+  state: pending | sending | retry | awaiting_receipt | accepted | failed | cancelled
+  lease_id, lease_expires_at, attempts <= 3
+  UNIQUE (group_id, account_id, local_sunday)
+}
+WP ..|> ReminderProvider
+EX ..|> ReminderProvider
+WP --> WebPushBinding
+BND ..|> WebPushBinding
+BND ..> WPK : generateRequestDetails()
+FAC ..> WP : «create» VAPID set
+FAC ..> EX : «create» expo enabled
+OB ..> ReminderProvider : providers[destination.provider].send()
+OB ..> TB : claim lease, write state
+LP ..> OB : every 60 s
+note right of LP
+  cli.ts#L635 starts the loop only when at least
+  one provider is configured.
+end note
+legend bottom
+  Strategy: the provider is chosen per row by reminder_destinations.provider. Outbox: the row, its lease and its state make a send durable and retryable.
+endlegend
+@enduml
