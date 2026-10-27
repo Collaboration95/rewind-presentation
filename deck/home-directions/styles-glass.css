@@ -1,0 +1,241 @@
+/* Warm Glass: iOS's new glass look (Liquid Glass) for the dock, shutter and prompt card
+   More see-through (light blur, high saturation), a bright rim (brightest at corners), a top-left highlight, and the pill is a small lens set into the dock */
+/* A warm glow low on the screen, so the glass has something to show through */
+/* The selector must be more specific than .c6 .scroll > *:not(.glow) (which makes all body content relative) */
+.c6 .scroll > .glow-low {
+  position: absolute;
+  left: -60px;
+  right: -60px;
+  bottom: 0;
+  height: 460px;
+  background:
+    radial-gradient(ellipse 60% 45% at 28% 78%, rgba(255, 160, 110, 0.55), transparent 70%),
+    radial-gradient(ellipse 50% 40% at 78% 58%, rgba(255, 210, 140, 0.55), transparent 70%);
+  filter: blur(24px);
+  pointer-events: none;
+}
+/* ---------- Shared glass ---------- */
+.c6 .glass,
+.c6.nav-g .dock-g .tabs,
+.c6.gnav .shutter {
+  position: relative;
+  isolation: isolate;
+  background: linear-gradient(170deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.1));
+  backdrop-filter: blur(12px) saturate(190%) brightness(1.04);
+  -webkit-backdrop-filter: blur(12px) saturate(190%) brightness(1.04);
+  box-shadow:
+    inset 0 1px 1px rgba(255, 255, 255, 0.95),
+    inset 0 -1px 1px rgba(255, 255, 255, 0.4),
+    inset 0 0 20px rgba(255, 255, 255, 0.22),
+    0 18px 36px -16px rgba(160, 90, 40, 0.35),
+    0 2px 6px -2px rgba(160, 90, 40, 0.14);
+}
+/* A top-left highlight (beneath the text) */
+.c6 .glass::before,
+.c6.nav-g .dock-g .tabs::before,
+.c6.gnav .shutter::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  background:
+    radial-gradient(120% 70% at 16% -12%, rgba(255, 255, 255, 0.8), transparent 46%),
+    linear-gradient(118deg, transparent 58%, rgba(255, 255, 255, 0.2) 64%, transparent 72%);
+  pointer-events: none;
+}
+/* A bright rim: brightest at the corners, faint mid-edge */
+.c6 .glass::after,
+.c6.nav-g .dock-g .tabs::after,
+.c6.gnav .shutter::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  padding: 1.3px;
+  border-radius: inherit;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 1),
+    rgba(255, 255, 255, 0.25) 30%,
+    rgba(255, 255, 255, 0.06) 52%,
+    rgba(255, 255, 255, 0.35) 76%,
+    rgba(255, 255, 255, 0.95)
+  );
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+/* ---------- Prompt card ---------- */
+.c6 .glass {
+  z-index: 1;
+  border-radius: 30px;
+}
+/* ---------- Dock: three tabs ---------- */
+.c6.nav-g .dock-g .tabs {
+  padding: 6px;
+  border-radius: 32px;
+}
+/* The pill is a small lens set into the dock */
+.c6.nav-g .dock-g.open .tab.on {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.62), rgba(255, 255, 255, 0.28));
+  box-shadow:
+    inset 0 1px 1px rgba(255, 255, 255, 1),
+    0 3px 10px -3px rgba(150, 80, 30, 0.28);
+}
+/* ---------- Shutter: the same glass circle, still a warm button in the middle ---------- */
+.c6.gnav .shutter {
+  border-radius: 50%;
+}
+/* ---------- "Watch together" after the reveal: the same glass as the dock, a warm play button on the left ---------- */
+.c6 .wt {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  gap: 10px;
+  margin-top: 14px;
+  padding: 6px 22px 6px 6px;
+  font: 500 15px/1 var(--f-body);
+  color: var(--ink);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0.34));
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  backdrop-filter: blur(20px) saturate(160%);
+  box-shadow:
+    inset 0 1px 1px rgba(255, 255, 255, 1),
+    inset 0 -1px 1px rgba(255, 255, 255, 0.5),
+    0 10px 24px -12px rgba(150, 80, 30, 0.38);
+}
+.c6 .wt-i {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  color: #2a1a10;
+  background: linear-gradient(180deg, #ffd2a6, #ff9f6b);
+  box-shadow: 0 4px 10px -4px var(--accent);
+}
+.c6 .wt-i .ic {
+  width: 15px;
+  height: 15px;
+  margin-left: 2px;
+  fill: currentColor;
+}
+/* ---------- Home: status card on top (premiere, compiling, processing failure) ---------- */
+.c6 .st-card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 12px;
+  align-items: center;
+  margin: 0 0 6px;
+  padding: 14px 14px 14px 18px;
+  border-radius: 24px;
+}
+.st-card .st-ct {
+  flex: 1;
+  display: grid;
+  gap: 3px;
+  min-width: 0;
+}
+.st-card .st-ct b {
+  font: 400 18px/1.15 var(--f-serif);
+  font-variation-settings: 'SOFT' 100;
+}
+.st-card .st-ct span {
+  font-size: 12.5px;
+  color: var(--muted);
+}
+.st-card .st-bar {
+  flex-basis: 100%;
+  margin: 2px 0 0;
+}
+.c6 .st-card .wt {
+  flex: none;
+  gap: 8px;
+  margin: 0;
+  padding: 5px 16px 5px 5px;
+  font-size: 14px;
+  font-weight: 600;
+}
+.c6 .st-card .wt-i {
+  width: 32px;
+  height: 32px;
+}
+.st-mini {
+  flex: none;
+  height: 36px;
+  padding: 0 16px;
+  border-radius: 999px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #2a1a10;
+  background: linear-gradient(180deg, #ffd2a6, #ff9f6b);
+}
+.st-card.fx-in {
+  animation: st-in 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+@keyframes st-in {
+  from {
+    opacity: 0;
+    transform: translateY(-10px) scale(0.98);
+  }
+}
+/* With a status card, the hero is a bit shorter */
+.c6 .hero.slim {
+  height: 210px;
+}
+/* Quota row: opens "Your moments" */
+.c6 .glass .mine-row {
+  width: 100%;
+  gap: 10px;
+  text-align: left;
+  color: inherit;
+  cursor: pointer;
+}
+.c6 .glass .mine-row span {
+  flex: 1;
+  text-align: right;
+}
+.mine-row .go {
+  flex: none;
+  width: 14px;
+  height: 14px;
+  color: var(--muted);
+  transform: rotate(-90deg);
+}
+
+/* Your moments this week: a row of small tags with only type, day and seconds */
+.c6 .hist {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 2px 0 12px;
+}
+.hist .hc {
+  display: inline-flex;
+  gap: 4px;
+  align-items: center;
+  padding: 4px 9px 4px 7px;
+  border-radius: 999px;
+  font-size: 11.5px;
+  color: var(--ink);
+  background: rgba(255, 255, 255, 0.55);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.9);
+}
+.hist .hc .ic {
+  width: 12px;
+  height: 12px;
+  color: var(--muted);
+}
+.hist .hc.bad {
+  color: #8f2615;
+  box-shadow: inset 0 0 0 1px rgba(194, 69, 47, 0.5);
+}
+.c6 .hist.none {
+  margin: 0;
+  padding: 0 0 12px;
+  font-size: 12px;
+  color: var(--muted);
+}

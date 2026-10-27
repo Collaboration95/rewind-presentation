@@ -250,7 +250,10 @@ for s in slides:
  accent={'PM':'pm','SAD':'sad','SDP':'sdp','TESTING':'testing','DEVSECOPS':'devsecops','DEMO':'demo'}[s['tag']]
  strip='<div class="section-progress" aria-label="Five section progress">'+''.join('<span class="'+('done' if j<s['sec'] else 'current' if j==s['sec'] else '')+'" title="'+sections[j-1]+'"></span>' for j in range(1,6))+'</div>'
  timing=(f"{s['secs']//60}:{s['secs']%60:02d}" if s['secs'] else 'Q&A')
- notes='<b>'+timing+' · Section '+str(s['sec'])+' · '+s['tag']+'</b><div class="spoken">'+''.join('<p>'+esc(x)+'</p>' for x in s['script'].split('\n\n'))+'</div><p>Transition: '+esc(s['transition'])+'</p><p>If asked: '+ ' · '.join('→ '+x for x in s['refs'])+'</p>'
+ from spoken import S as SPOKEN
+ _sp=SPOKEN.get('s'+str(len(htmlslides)+1)) if s['kind']!='back' else None
+ _say=('<div class="spoken"><p><b>Say:</b> '+esc(_sp[0])+'</p></div><p><i>Detail:</i></p>') if _sp else ''
+ notes='<b>'+timing+' · Section '+str(s['sec'])+' · '+s['tag']+'</b>'+_say+'<div class="spoken">'+''.join('<p>'+esc(x)+'</p>' for x in s['script'].split('\n\n'))+'</div><p>Transition: '+esc(s['transition'])+'</p><p>If asked: '+ ' · '.join('→ '+x for x in s['refs'])+'</p>'
  footer='<div class="foot"><span class="counter"></span></div>'+page_badge(s,len(htmlslides)+1,sum(x['kind']!='back' for x in slides))
  body=s['body']
  htmlslides.append(f'<section class="slide {s["extra"]}" id="{s["id"]}" data-kind="{s["kind"]}" data-num="{num}" data-main="{s["mainindex"]}" data-sec="{s["sec"]}" data-time="{s["secs"]}" style="--accent:var(--{accent})">{strip}<div class="kicker">'+('SWE5006 · Team 14' if s['id']=='s1' else ('Backup · ' if s['kind']=='back' else '')+SECNAMES[s['sec']-1])+'</div><h1>'+s['title']+'</h1><div class="body">'+body+'</div>'+footer+'<aside class="notes">'+notes+'</aside></section>')
@@ -301,7 +304,15 @@ for s in slides:
  if s['kind']=='back':lines.append('| '+s['id']+' | '+s['title']+' | '+s['script'].replace('|','/')+' |')
 lines+=['','## CI/CD walk-through command cards','','```sh','gh run view 40344231052 -R Collaboration95/rewind-app','gh api repos/Collaboration95/rewind-app/branches/dev/protection','gh run view 40344230832 -R Collaboration95/rewind-app','gh api repos/Collaboration95/rewind-app/actions/runs/40344230832/artifacts','gh attestation verify --repo Collaboration95/rewind-app release-manifest.json','```','','Saved artifacts: `../pipeline-run-40344230832/security/` and `../pipeline-run-40344230832/zap/`. Hosted health: `https://d2m6kz76y4kuvm.cloudfront.net/api/health`.','','## Source register','','- Shared brief: scope, effort shares, delivery surface, five-section timing.','- Audits B1/B2: use cases, analysis, module mapping, design and patterns.','- Audit E: dated test inventory, coverage and red/green retry replay.','- records/TEAM.md and AGILE.md: team, effort, milestones, events and dated open register.','- records/FINDINGS.md: technical defects and repairs; later pipeline artifacts establish the delivered scan/deployment state.','- PIPELINE-ARTIFACTS.md and run 40344230832: exact-image inventory, manifest, scan and provenance flow.','- load-test/METHODOLOGY.md and RESULTS.md: hosted measurement, quiet-host run and fitted capacity projection.','']
 assert clock==sum(SECTION_SECS.values())==1980,(clock,'expected 33:00')
-(D/'SCRIPT.md').write_text('\n'.join(lines))
+(D/'SCRIPT-detailed.md').write_text('\n'.join(lines))
+from spoken import S as SPOKEN, CHEAT, LIVE
+_out=['# Rewind · speaking script (33:00)','','## Cheat sheet','']+['- '+c for c in CHEAT]+['','Talk: 33:00 of content + 2:00 buffer inside 35:00. Clock per block. The long version is SCRIPT-detailed.md.','']
+for _i,_s in enumerate([x for x in slides if x['kind']!='back'],1):
+ _t,_cov=SPOKEN['s'+str(_i)]
+ _out+=[f"### Slide {_i} — {_s['title']} ({mm(_s['clock'])}–{mm(_s['clock']+_s['secs'])})",'',_t+f' [covers: {_cov}]','']
+ if _s['id']=='C18':
+  _out+=['Live in GitHub (about 30 s per click; links are on the slide):','']+[f'{k}. {v}' for k,v in enumerate(LIVE,1)]+['']
+(D/'SCRIPT.md').write_text('\n'.join(_out))
 missing_figs=sorted({id for id in re.findall(r'data-figure="([^"]+)"',document) if not (D/'uml'/f'{id}.svg').exists() and not (D/'cicd-section'/f'{id}.svg').exists()})
 missing_clips=[s['id']+': '+re.search(r'data-clip="([^"]+)"',s['body']).group(1) for s in slides if s['kind']=='clip' and not (D/re.search(r'data-clip="([^"]+)"',s['body']).group(1)).resolve().exists()]
 if not (D/'clips/ci-cd-40344230832.mp4').exists():missing_clips.append('CI/CD: clips/ci-cd-40344230832.mp4')

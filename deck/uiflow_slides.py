@@ -81,16 +81,24 @@ def integrate(slides, add_titles=None):
     titles = add_titles or {}
     pick = [b for b in boards if b.name.startswith('3-')] or boards
     poster = ('uiflow/storyboards/' + pick[0].name) if boards else ''
-    body = ('<div class="uiflow-frame">'
+    uf_body = ('<div class="uiflow-frame">'
             '<iframe class="uiflow" data-src="uiflow/index.html#3-1" title="Rewind UI flow · screens mapped to cycle states" '
             'tabindex="0" allow="fullscreen"></iframe>'
             + (f'<img class="uiflow-poster" src="{poster}" alt="UI flow storyboard">' if poster else '') +
             '</div><div class="uiflow-bar"><a href="uiflow/index.html#3-1" target="_blank" rel="noopener">Open full screen ↗</a></div>')
+    body = ('<div class="uiflow-frame"><iframe class="uiflow" data-src="home-directions/index.html" title="Rewind Home design directions" '
+            'tabindex="0" allow="fullscreen"></iframe>'
+            + (f'<img class="uiflow-poster" src="{poster}" alt="UI flow storyboard">' if poster else '') +
+            '</div><div class="uiflow-bar"><a href="https://htmlpreview.github.io/?https://github.com/Collaboration95/rewind-app/blob/ui-concept/final-screens/docs/design/home-directions/index.html" target="_blank" rel="noopener">Open ↗</a> '
+            '<a href="home-directions/index.html" target="_blank" rel="noopener">Local copy ↗</a> '
+            '<a href="uiflow/index.html#3-1" target="_blank" rel="noopener">UI flow ↗</a></div>')
     ui = dict(id='D2', sec=2, tag='SAD', title='Each screen renders one state of the cycle', body=body, secs=SECS['D2'],
               say=['Home, capture, developing, premiere and Archive each render one server state.'],
               transition='Testing checks those states through their real boundaries.', refs=['D1'] + [f'U{i}' for i in range(1, len(boards) + 1)],
               source='uiflow/index.html', script=D2_SCRIPT_DEFAULT, kind='main', extra='uiflow-slide')
-    frames = []
+    frames = [dict(id='U0', sec=2, tag='SAD', title='UI flow page · screens mapped to the cycle statechart', body=uf_body, secs=0,
+                   say=['Interactive UI flow page.'], transition='Return to the main path.', refs=['D1', 'D2'], source='uiflow/index.html',
+                   script=D2_SCRIPT_DEFAULT, kind='back', extra='uiflow-slide fallback')]
     for i, p in enumerate(boards, 1):
         t = titles.get(p.name, _title(p))
         frames.append(dict(id=f'U{i}', sec=2, tag='SAD', title=f'UI flow {i} · {t}',

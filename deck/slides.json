@@ -311,14 +311,7 @@
       "Six test layers, each with a real example of what it catches"
     ],
     "transition": "",
-    "refs": [
-      "T2",
-      "T3",
-      "T4",
-      "T7",
-      "T8",
-      "T9"
-    ],
+    "refs": [],
     "source": "",
     "script": "Six layers, each with a real example. Unit and component tests: one thousand six hundred and seventy-four Jest tests check screens and state without a device, with node:test for server units. Integration: one thousand and six server tests call the real routes over HTTP, and the same suite runs again on PostgreSQL 17, so a dialect difference or migration drift fails the pull request. These block every merge. End to end, forty-one Playwright tests drive the exported app with an owner, an invited member and an outsider; the PWA build is checked as it will be installed; and axe with keyboard tests checks the main screens for WCAG 2.1 AA. Those three join for pull requests to main. Each card names one real test and the bug it catches.",
     "kind": "main",
@@ -338,8 +331,7 @@
     ],
     "transition": "",
     "refs": [
-      "s11",
-      "T10"
+      "s11"
     ],
     "source": "",
     "script": "One real bug shows why we test behaviour. After a failed photo, Try again did nothing, because retry called capture from a state whose guard returned at once. The regression test fails the capture, taps Try again and expects the viewfinder and a fresh capture: it fails on the old code and passes with the fix. Security is also tested inside the suites: cross-group privacy denials, rate limits, our patched dependencies and the scan gates themselves. The pipeline scans come in the CI/CD section, and performance in the system demo.\n\n[Cite if asked] Regression test: camera-capture.characterisation.test.tsx. Rate limits: safety-rate-limits.test.mjs. Patched dependencies: braces and node-forge, where the original node-forge accepts a forged signature. Access tests cover account safety too; scan gates reject expired, wrong or incomplete scans.",
@@ -504,14 +496,14 @@
     "title": "Demo route: eight clicks from pull request to running site",
     "secs": 275,
     "say": [
-      "This is the click route for the live part. Each link opens the real page; the Film column gives the timestamp in the recorded walkthrough if the network fails. "
+      "This is the click route for the live part. Each link opens the real page; if the network fails, play the recorded walkthrough (backup CB1). The order follows th"
     ],
     "transition": "Now the product journey on hosted dev.",
     "refs": [
       "CB1 recorded film"
     ],
     "source": "",
-    "script": "[00:00\u201300:35 on this slide] This is the route for the live part: the pull request checks, the Quality run and its artifacts, a triaged CodeQL alert, the Deploy dev run and its steps, the attestation, the ZAP report and the hosted health endpoint.\n\n[00:35\u201304:35 live in GitHub, about thirty seconds per link. If the network fails, open backup CB1 and play the recorded walkthrough from the Film timestamps.]\n\n1. Pull request checks: Quality is the required context; the security workflows sit beside it.\n2. Quality run: the job graph fans out and joins the aggregate; open the artifacts list.\n3. CodeQL alert 56: the rule, the line and the written dismissal reason.\n4. Deploy dev 40344230832: wait for Quality, build, scan, attest, install.\n5. Deploy steps: the exact-image scan and the upload order.\n6. Attestation: the signed subject is the manifest for this commit.\n7. ZAP report: 0 High, 4 Medium, all Content Security Policy.\n8. Hosted health: the installed version and PostgreSQL readiness.\n\nReturn to the slides for the product journey.",
+    "script": "This is the route for the live part: the pull request checks, the Quality run and its artifacts, a triaged CodeQL alert, the Deploy dev run and its steps, the attestation, the ZAP report and the hosted health endpoint.\n\n[Live in GitHub, about thirty seconds per link. If the network fails, open backup CB1 and play the recorded walkthrough.]\n\n1. Pull request checks: Quality is the required context; the security workflows sit beside it.\n2. Quality run: the job graph fans out and joins the aggregate; open the artifacts list.\n3. CodeQL alert 56: the rule, the line and the written dismissal reason.\n4. Deploy dev 40344230832: wait for Quality, build, scan, attest, install.\n5. Deploy steps: the exact-image scan and the upload order.\n6. Attestation: the signed subject is the manifest for this commit.\n7. ZAP report: 0 High, 4 Medium, all Content Security Policy.\n8. Hosted health: the installed version and PostgreSQL readiness.\n\nReturn to the slides for the product journey.",
     "kind": "main",
     "extra": "",
     "label": "23",
@@ -735,7 +727,6 @@
     ],
     "transition": "",
     "refs": [
-      "T11",
       "T12",
       "B34",
       "B11"
@@ -771,6 +762,28 @@
     "extra": "",
     "label": "26",
     "clock": 1875,
+    "mainindex": 26
+  },
+  {
+    "id": "U0",
+    "sec": 2,
+    "tag": "SAD",
+    "title": "UI flow page \u00b7 screens mapped to the cycle statechart",
+    "secs": 0,
+    "say": [
+      "Interactive UI flow page."
+    ],
+    "transition": "Return to the main path.",
+    "refs": [
+      "D1",
+      "D2"
+    ],
+    "source": "uiflow/index.html",
+    "script": "[Click inside the page to step through a flow; Esc returns to the slides. If the page does not load, press S for the storyboards.]\n\nThe screens came second, and each one maps to a state. While the cycle is collecting, Home shows the countdown, the week and the member\u2019s allowance, and capture is offered. When the cycle closes, Home shows the film developing. Once it is published, the premiere card opens the film for twenty-four hours, and after that the film lives in Archive. Every screen reads the server\u2019s state instead of keeping its own, so a refresh or a second device always agrees.",
+    "kind": "back",
+    "extra": "uiflow-slide fallback",
+    "label": "U0",
+    "clock": 1980,
     "mainindex": 26
   },
   {
@@ -1593,27 +1606,6 @@
     "mainindex": 26
   },
   {
-    "id": "T10",
-    "sec": 3,
-    "tag": "TESTING",
-    "title": "Security is tested in the suites and scanned in the pipeline",
-    "secs": 0,
-    "say": [
-      "Security tests run in the merge gate; six scans run in the pipeline."
-    ],
-    "transition": "Last, performance under load.",
-    "refs": [
-      "B12"
-    ],
-    "source": "",
-    "script": "Security is tested at two levels. Inside the suites: privacy denials across groups, rate limits, our patched dependencies and the scan gates themselves. In the pipeline: SAST, SCA, secrets, IaC, image and DAST scans, which I show next. Performance is shown in the system demo.",
-    "kind": "back",
-    "extra": "",
-    "label": "T10",
-    "clock": 1980,
-    "mainindex": 26
-  },
-  {
     "id": "C2",
     "sec": 4,
     "tag": "DEVSECOPS",
@@ -1740,48 +1732,6 @@
     "mainindex": 26
   },
   {
-    "id": "T1",
-    "sec": 3,
-    "tag": "TESTING",
-    "title": "Static checks reject style, type and layering errors",
-    "secs": 0,
-    "say": [
-      "Four static checks run in parallel and block the merge."
-    ],
-    "transition": "Next, the frontend unit tests.",
-    "refs": [
-      "B6"
-    ],
-    "source": "",
-    "script": "Static checks come first: Prettier, ESLint, TypeScript and our own layer rule. Domain code may not import a framework, and routes may not touch device APIs. They block every merge.",
-    "kind": "back",
-    "extra": "",
-    "label": "T1",
-    "clock": 1980,
-    "mainindex": 26
-  },
-  {
-    "id": "T2",
-    "sec": 3,
-    "tag": "TESTING",
-    "title": "Component tests check screens and state without a device",
-    "secs": 0,
-    "say": [
-      "1,674 Jest tests; 89.6% statement coverage against a 70% floor."
-    ],
-    "transition": "Here is one of those tests in detail.",
-    "refs": [
-      "B6"
-    ],
-    "source": "",
-    "script": "The frontend has one thousand six hundred and seventy-four Jest tests. They render screens and drive state without a phone. Statement coverage is eighty-nine point six percent, with a seventy percent floor enforced in CI. This chat test fails if a session token ever appears in a request URL.",
-    "kind": "back",
-    "extra": "",
-    "label": "T2",
-    "clock": 1980,
-    "mainindex": 26
-  },
-  {
     "id": "s11",
     "sec": 3,
     "tag": "TESTING",
@@ -1801,174 +1751,6 @@
     "kind": "back",
     "extra": "",
     "label": "s11",
-    "clock": 1980,
-    "mainindex": 26
-  },
-  {
-    "id": "T3",
-    "sec": 3,
-    "tag": "TESTING",
-    "title": "API tests call real routes on a running server",
-    "secs": 0,
-    "say": [
-      "1,006 server tests drive real HTTP routes, including privacy denials."
-    ],
-    "transition": "The same suite then runs on PostgreSQL.",
-    "refs": [
-      "B6"
-    ],
-    "source": "",
-    "script": "The server suite has one thousand and six tests. Each starts the real HTTP server and calls real routes. This privacy test signs in as a member of another group and expects a 403 with no content for every protected resource.",
-    "kind": "back",
-    "extra": "",
-    "label": "T3",
-    "clock": 1980,
-    "mainindex": 26
-  },
-  {
-    "id": "T4",
-    "sec": 3,
-    "tag": "TESTING",
-    "title": "The server suite runs again on PostgreSQL 17",
-    "secs": 0,
-    "say": [
-      "The same suite passes 989 tests on PostgreSQL 17."
-    ],
-    "transition": "Repository rules guard the architecture itself.",
-    "refs": [
-      "B9"
-    ],
-    "source": "",
-    "script": "The same suite runs again on PostgreSQL seventeen in a throwaway container: nine hundred and eighty-nine pass. That catches SQL that works on SQLite but not on the hosted database.",
-    "kind": "back",
-    "extra": "",
-    "label": "T4",
-    "clock": 1980,
-    "mainindex": 26
-  },
-  {
-    "id": "T5",
-    "sec": 3,
-    "tag": "TESTING",
-    "title": "Repository tests stop the architecture and policies drifting",
-    "secs": 0,
-    "say": [
-      "Architecture, PWA, classifier and Terraform policies are tested like code."
-    ],
-    "transition": "Deployment scripts get the same treatment.",
-    "refs": [
-      "B6"
-    ],
-    "source": "",
-    "script": "Repository tests check our own rules. The architecture guard is itself tested: we plant a bad import in each layer and expect two violations. Terraform and deploy policy, such as only deploying a commit that passed Quality, are tested the same way.",
-    "kind": "back",
-    "extra": "",
-    "label": "T5",
-    "clock": 1980,
-    "mainindex": 26
-  },
-  {
-    "id": "T6",
-    "sec": 3,
-    "tag": "TESTING",
-    "title": "Deployment scripts are tested offline with injected failures",
-    "secs": 0,
-    "say": [
-      "Eleven cloud-free fixtures inject deployment failures."
-    ],
-    "transition": "Now the browser tests.",
-    "refs": [
-      "B5"
-    ],
-    "source": "",
-    "script": "Deployment scripts are tested offline. Eleven fixtures replace tar, chown and the health check with fakes, then inject failures. A failed restore must leave the previous state intact.",
-    "kind": "back",
-    "extra": "",
-    "label": "T6",
-    "clock": 1980,
-    "mainindex": 26
-  },
-  {
-    "id": "T7",
-    "sec": 3,
-    "tag": "TESTING",
-    "title": "Playwright drives the exported app in a real browser",
-    "secs": 0,
-    "say": [
-      "41 browser tests join for main; one real-account journey runs on demand."
-    ],
-    "transition": "The exported PWA is checked as installed.",
-    "refs": [
-      "B3"
-    ],
-    "source": "",
-    "script": "Playwright drives the exported web app in Chromium at iPhone sizes: forty-one tests, required for pull requests to main. A longer Firefox journey uses real accounts: owner, invited member and outsider, through to the next cycle.",
-    "kind": "back",
-    "extra": "",
-    "label": "T7",
-    "clock": 1980,
-    "mainindex": 26
-  },
-  {
-    "id": "T8",
-    "sec": 3,
-    "tag": "TESTING",
-    "title": "The PWA build is checked the way it will be installed",
-    "secs": 0,
-    "say": [
-      "The exported PWA build, offline shell and cache rules are tested."
-    ],
-    "transition": "Accessibility uses the same browser run.",
-    "refs": [
-      "B5"
-    ],
-    "source": "",
-    "script": "The exported PWA is tested as it will be installed: manifest, service worker, offline page and icons. A service-worker rule test makes sure private media and API answers never enter the cache.",
-    "kind": "back",
-    "extra": "",
-    "label": "T8",
-    "clock": 1980,
-    "mainindex": 26
-  },
-  {
-    "id": "T9",
-    "sec": 3,
-    "tag": "TESTING",
-    "title": "Axe and keyboard tests check the main screens for WCAG 2.1 AA",
-    "secs": 0,
-    "say": [
-      "Axe scans and keyboard tests fail on serious or critical violations."
-    ],
-    "transition": "Security is tested at two levels.",
-    "refs": [
-      "B6"
-    ],
-    "source": "",
-    "script": "Accessibility runs in the same browser job. Axe scans the main screens against WCAG 2.1 A and AA, and two keyboard tests check focus. Serious or critical violations fail the build.",
-    "kind": "back",
-    "extra": "",
-    "label": "T9",
-    "clock": 1980,
-    "mainindex": 26
-  },
-  {
-    "id": "T11",
-    "sec": 3,
-    "tag": "TESTING",
-    "title": "A scripted load test drives the hosted API in five stages",
-    "secs": 0,
-    "say": [
-      "Five stages from 1 to 100 users; pass rule p95 under 2 seconds and under 1% errors."
-    ],
-    "transition": "Here are the results.",
-    "refs": [
-      "B11"
-    ],
-    "source": "",
-    "script": "Performance has its own test. A Node runner drives the hosted API through CloudFront in five stages, from one to one hundred concurrent users. Each user acts, then waits three to seven seconds. The mix is ninety-five percent reads. Every stage must keep p95 under two seconds and errors under one percent.",
-    "kind": "back",
-    "extra": "",
-    "label": "T11",
     "clock": 1980,
     "mainindex": 26
   },

@@ -1,0 +1,13 @@
+/* The dock's three tabs */
+/* ============ Dock: three tabs always expanded ============ */
+.screen.nav-g .dock-g .tab {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 3px;
+  padding: 0;
+}
+.screen.nav-g .dock-g.open .tab .tlbl {
+  display: block;
+  font-size: 10.5px;
+}

@@ -1,0 +1,250 @@
+/* Home states: reuse the Warm Glass variables (--bg --ink --muted --line --accent --f-serif --f-body) */
+/* ============ General ============ */
+.st {
+  display: grid;
+  justify-items: center;
+  gap: 10px;
+  margin: 18px 6px 0;
+  text-align: center;
+}
+.st-h {
+  margin: 0;
+  max-width: 300px;
+  font:
+    500 31px/1.12 var(--f-serif),
+    serif;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+}
+.st-p {
+  margin: 0;
+  max-width: 300px;
+  font:
+    400 15px/1.5 var(--f-body),
+    sans-serif;
+  color: var(--muted);
+}
+.st-btn {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  margin-top: 10px;
+  padding: 13px 24px;
+  border-radius: 999px;
+  font:
+    600 15px/1 var(--f-body),
+    sans-serif;
+  color: var(--ink);
+  box-shadow: inset 0 0 0 1.5px var(--ink);
+}
+.st-btn.primary {
+  color: #1d1208;
+  background: var(--accent);
+  box-shadow: 0 10px 24px -10px var(--accent);
+}
+/* Second button ("Create group" when there's no group): below the primary button */
+.st-btn.st-alt {
+  margin-top: 0;
+}
+.st-btn .ic {
+  width: 16px;
+  height: 16px;
+}
+@keyframes st-slide {
+  from {
+    transform: translateX(-110%);
+  }
+  to {
+    transform: translateX(290%);
+  }
+}
+.st-bar {
+  position: relative;
+  width: 180px;
+  height: 4px;
+  margin-top: 8px;
+  overflow: hidden;
+  border-radius: 4px;
+  background: var(--line);
+}
+.st-bar i {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 35%;
+  border-radius: 4px;
+  background: var(--accent);
+  animation: st-slide 1.8s ease-in-out infinite;
+}
+.st-delayed .st-bar i {
+  animation-duration: 3.6s;
+  opacity: 0.6;
+}
+/* Announce once on entering this state (flare), again on shutter tap (go) */
+/* Tapping the grey shutter: a small side-to-side shake, like a wrong iOS passcode */
+.shutter.nope {
+  animation: nope 0.42s ease;
+}
+@keyframes nope {
+  20% {
+    transform: translateX(-5px);
+  }
+  40% {
+    transform: translateX(5px);
+  }
+  60% {
+    transform: translateX(-3px);
+  }
+  80% {
+    transform: translateX(3px);
+  }
+}
+/* ============ Illustrations ============ */
+.mo {
+  display: block;
+  width: 200px;
+  height: 150px;
+  margin: 4px auto 0;
+  overflow: visible;
+}
+/* Warm Glass: a warm glow */
+@keyframes mo-breathe {
+  0%,
+  100% {
+    transform: scale(0.94);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+}
+.mo-glow {
+  position: relative;
+}
+.mo-glow i,
+.mo-glow b {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  border-radius: 50%;
+}
+.mo-glow i {
+  width: 170px;
+  height: 170px;
+  margin: -85px 0 0 -85px;
+  background: radial-gradient(
+    circle,
+    color-mix(in srgb, var(--accent) 75%, #fff) 0,
+    color-mix(in srgb, var(--accent) 45%, transparent) 38%,
+    transparent 70%
+  );
+  filter: blur(6px);
+}
+.mo-glow b {
+  width: 46px;
+  height: 46px;
+  margin: -23px 0 0 -23px;
+  background: radial-gradient(circle, #fff 0, color-mix(in srgb, var(--accent) 60%, #fff) 70%);
+  box-shadow: 0 0 30px color-mix(in srgb, var(--accent) 70%, transparent);
+}
+.st-developing .mo-glow i {
+  animation: mo-breathe 3.2s ease-in-out infinite;
+}
+.st-delayed .mo-glow i {
+  opacity: 0.6;
+  animation: mo-breathe 6s ease-in-out infinite;
+}
+.st-released .mo-glow i {
+  transform: scale(1.18);
+}
+.st-released .mo-glow b {
+  transform: scale(1.25);
+}
+.st-empty .mo-glow,
+.st-denied .mo-glow,
+.st-error .mo-glow {
+  opacity: 0.35;
+  filter: grayscale(0.6);
+}
+/* ============ States page ============ */
+body:not(.view-states) #states-view,
+body.view-states main > .main-h,
+body.view-states #gallery,
+body.view-states #mix {
+  display: none;
+}
+body.view-states main {
+  padding-bottom: 64px;
+}
+.states-view .main-h {
+  margin-bottom: 22px;
+}
+.sv-ev {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+  margin: -4px 0 18px;
+  font-size: 12.5px;
+  color: var(--page-muted);
+}
+.sv-ev span {
+  margin-right: 4px;
+}
+.sv-ev button {
+  padding: 7px 13px;
+  border-radius: 999px;
+  font-size: 13px;
+  color: var(--page-ink);
+  background: rgba(255, 255, 255, 0.55);
+  box-shadow: inset 0 0 0 1px var(--page-line);
+}
+.sv-ev button:hover {
+  background: #fff;
+}
+.sv-ev button[aria-pressed='true'] {
+  color: var(--page);
+  background: var(--page-ink);
+  box-shadow: none;
+}
+/* All states in a grid: phones a bit smaller than the sidebar zoom, and notes don't widen the phone column */
+.sv-grid {
+  --s: calc(var(--z, 0.62) * 0.7);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 34px 26px;
+  align-items: flex-start;
+}
+.sv-ph {
+  width: calc(410px * var(--s));
+  margin: 0;
+}
+.sv-card {
+  width: calc(410px * var(--s));
+  animation: none;
+}
+.sv-ph figcaption {
+  display: grid;
+  gap: 4px;
+  margin-top: 12px;
+  font-size: 12.5px;
+  line-height: 1.45;
+  color: var(--page-muted);
+}
+.sv-ph figcaption b {
+  font-size: 13.5px;
+  color: var(--page-ink);
+}
+.sv-ph figcaption em {
+  font-style: normal;
+  font-weight: 600;
+  color: var(--page-ink);
+}
+@media (prefers-reduced-motion: reduce) {
+  .st .mo *,
+  .st .mo,
+  .st-bar i {
+    animation: none !important;
+  }
+  .shutter.nope {
+    animation: none;
+  }
+}

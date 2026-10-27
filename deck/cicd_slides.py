@@ -336,12 +336,12 @@ steps = [
     ('7', 'ZAP HTML report', '../pipeline-run-40344230832/zap/report_html.html#10055', 'summary table → CSP finding evidence', '08:40'),
     ('8', 'Hosted dev health', 'https://d2m6kz76y4kuvm.cloudfront.net/api/health', 'HTTP 200 · PostgreSQL · schema ready', '10:06'),
 ]
-st = ''.join(f'<tr><td>{n}</td><td>{a(u, p + " ↗")}</td><td>{s}</td><td>{t}</td></tr>' for n, p, u, s, t in steps)
+st = ''.join(f'<tr><td>{n}</td><td>{a(u, p + " ↗")}</td><td>{s}</td></tr>' for n, p, u, s, t in steps)
 slide('C18', 'Demo route: eight clicks from pull request to running site',
-      f'<table class="data cx-table cx-route"><thead><tr><th>#</th><th>Open</th><th>Point at</th><th>Film</th></tr></thead><tbody>{st}</tbody></table>'
-      '<p class="cx-note">Terminal: <code>gh attestation verify --repo Collaboration95/rewind-app release-manifest.json</code> · fallback: recorded film (backup slide), “Film” = timestamp.</p>',
+      f'<table class="data cx-table cx-route"><thead><tr><th>#</th><th>Open</th><th>Point at</th></tr></thead><tbody>{st}</tbody></table>'
+      '<p class="cx-note">Terminal: <code>gh attestation verify --repo Collaboration95/rewind-app release-manifest.json</code></p>',
       20, [
-        'This is the click route for the live part. Each link opens the real page; the Film column gives the timestamp in the recorded walkthrough if the network fails. The order follows the pipeline: pull request checks, the Quality run and its artifacts, a triaged CodeQL alert, the Deploy dev run, its steps, the attestation, the ZAP report, and finally the hosted health endpoint. Keep each page to about fifteen seconds.'],
+        'This is the click route for the live part. Each link opens the real page; if the network fails, play the recorded walkthrough (backup CB1). The order follows the pipeline: pull request checks, the Quality run and its artifacts, a triaged CodeQL alert, the Deploy dev run, its steps, the attestation, the ZAP report, and finally the hosted health endpoint. Keep each page to about fifteen seconds.'],
       'Close the CI/CD section and move to the system demonstration.', '→ CB1 recorded film', source='')
 
 # ================================================================= backups

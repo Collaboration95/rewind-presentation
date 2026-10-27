@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rewind Home · Warm Glass</title>
+    <link rel="icon" href="data:," />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght,BNCE,INFM@0,300..800,-100..100,0..100&family=Caveat+Brush&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..700&family=Caveat:wght@400..600&family=DM+Mono:wght@400;500&family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..600,0..100;1,9..144,300..600,0..100&family=Geist:wght@200..600&family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@300..700&family=Inter:wght@400..600&family=JetBrains+Mono:wght@300..500&display=swap"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles-r2.css" />
+    <link rel="stylesheet" href="styles-r3.css" />
+    <link rel="stylesheet" href="styles-nav.css" />
+    <link rel="stylesheet" href="styles-motion.css" />
+    <link rel="stylesheet" href="styles-story.css" />
+    <link rel="stylesheet" href="styles-nav2.css" />
+    <link rel="stylesheet" href="styles-fx.css" />
+    <link rel="stylesheet" href="styles-side.css" />
+    <link rel="stylesheet" href="styles-mix.css" />
+    <link rel="stylesheet" href="styles-states.css" />
+    <link rel="stylesheet" href="styles-glass.css" />
+    <link rel="stylesheet" href="styles-screens.css" />
+    <link rel="stylesheet" href="styles-tabs.css" />
+    <link rel="stylesheet" href="styles-final.css" />
+    <script defer src="i18n.js"></script>
+    <script defer src="app.js"></script>
+    <script defer src="icons.js"></script>
+    <script defer src="mix.js"></script>
+    <script defer src="states.js"></script>
+    <script defer src="screens.js"></script>
+    <script defer src="tabs.js"></script>
+    <script defer src="final.js"></script>
+  </head>
+  <body>
+    <!-- Shared icon filter: gives letter and stroke edges a hand-drawn feel -->
+    <svg width="0" height="0" style="position: absolute" aria-hidden="true">
+      <defs>
+        <filter id="rough" x="-5%" y="-5%" width="110%" height="110%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="4" />
+          <feDisplacementMap in="SourceGraphic" scale="3.5" />
+        </filter>
+        <filter id="rough2" x="-5%" y="-5%" width="110%" height="110%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="2" seed="11" />
+          <feDisplacementMap in="SourceGraphic" scale="9" />
+        </filter>
+        <filter id="blur10"><feGaussianBlur stdDeviation="10" /></filter>
+        <filter id="blur18"><feGaussianBlur stdDeviation="18" /></filter>
+        <filter id="rough-s" x="-10%" y="-10%" width="120%" height="120%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.6" numOctaves="2" seed="3" />
+          <feDisplacementMap in="SourceGraphic" scale="1.2" />
+        </filter>
+        <clipPath id="sq"><rect width="512" height="512" rx="112" /></clipPath>
+      </defs>
+    </svg>
+    <div class="app">
+      <aside class="side" data-i18n-aria="side.aria" aria-label="Design controls">
+        <div class="brand">
+          <span class="logo" aria-hidden="true">r.</span>
+          <div><strong>REWIND</strong><span data-i18n="brand.sub">Home · Warm Glass</span></div>
+        </div>
+
+        <div class="grp">
+          <p class="lbl" data-i18n="try.label">Things you can tap</p>
+          <label class="check" for="hints"
+            ><input type="checkbox" id="hints" checked />
+            <span data-i18n="hints.toggle">Show tap hints on the phones</span></label
+          >
+          <ul class="taps">
+            <li data-i18n="tap.play"><b>Play</b>, next to each phone: watch a whole cycle</li>
+            <li data-i18n="tap.shutter"><b>Shutter</b>: record a video or take a photo</li>
+            <li data-i18n="tap.mine"><b>Your allowance</b>, in the prompt card: your moments</li>
+            <li data-i18n="tap.avatar"><b>Avatar</b>: settings</li>
+            <li data-i18n="tap.dock"><b>Dock</b>: Home, Chat and Archive</li>
+            <li data-i18n="tap.grp"><b>Group name</b>: switch group</li>
+          </ul>
+        </div>
+
+        <div class="grp">
+          <p class="lbl" data-i18n="group.label">The group</p>
+          <label class="sub" for="members"
+            ><span data-i18n="members.label">People in the group</span>
+            <output id="membersv">5 people</output></label
+          >
+          <input type="range" id="members" min="2" max="10" value="5" />
+          <div class="btns">
+            <button type="button" class="ghost" id="shuffle" data-i18n="shuffle">Shuffle</button>
+            <button type="button" class="ghost" id="restore" data-i18n="restore">
+              Reset sample
+            </button>
+          </div>
+          <p class="hint" data-i18n="group.hint">
+            Home only shows your own moments. The group size shows in Settings (no invites at 10),
+            the film’s cast and Archive.
+          </p>
+        </div>
+
+        <div class="grp">
+          <label class="lbl" for="zoom"
+            ><span data-i18n="zoom.label">Zoom</span> <output id="zoomv">80%</output></label
+          >
+          <input type="range" id="zoom" min="50" max="100" value="80" />
+        </div>
+
+        <p class="foot" data-i18n="foot">
+          Design directions and generated photos only, no unrevealed media
+        </p>
+      </aside>
+
+      <main>
+        <span class="ver" title="Page version">v4.0</span>
+        <nav class="view-tabs" data-i18n-aria="tab.aria" aria-label="Page">
+          <button type="button" data-view="final" aria-pressed="false">Final</button
+          ><button type="button" data-view="home" aria-pressed="true" data-i18n="tab.home">
+            Home</button
+          ><button type="button" data-view="states" aria-pressed="false" data-i18n="tab.states">
+            States</button
+          ><button type="button" data-view="screens" aria-pressed="false" data-i18n="tab.screens">
+            Screens</button
+          ><button type="button" data-view="mix" aria-pressed="false" data-i18n="tab.mix">
+            App icon
+          </button>
+        </nav>
+        <header class="main-h">
+          <p class="k" data-i18n="main.k">HOME · FINAL DIRECTION</p>
+          <h1 data-i18n="main.h1">Warm Glass</h1>
+          <p data-i18n="main.p">The Home screen and how it behaves. Tap around the phone.</p>
+        </header>
+        <div class="gallery hints" id="gallery"></div>
+        <section class="mix" id="mix" aria-label="App icon"></section>
+        <section class="states-view" id="states-view" aria-label="Home states"></section>
+        <section class="screens-view" id="screens-view" aria-label="Screens"></section>
+        <section class="final-view" id="final-view" aria-label="Final"></section>
+      </main>
+    </div>
+  </body>
+</html>

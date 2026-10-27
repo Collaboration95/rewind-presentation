@@ -136,7 +136,7 @@ COVER_BODY = (
     '<p class="cover-tag">A month of moments. One film.</p>'
     '<p class="cover-sub">Small private groups. Sealed moments. A shared reveal.</p>'
     '<div class="cover-loop"><span>Contribute</span><i>→</i><span>Seal</span><i>→</i><span>Compile</span><i>→</i><span>Watch</span></div>'
-    '<div class="cover-meta"><b>Gopal Guruprasath</b><br>27 October 2026</div>'
+    '<div class="cover-meta">27 October 2026</div>'
     '</div><div class="cover-phone"><div class="phone15" role="img" aria-label="Rewind Home on iPhone: group Sunday table, week 3 of 4, three of five moments sealed">'
     '<span class="key k1"></span><span class="key k2"></span><span class="key k3"></span><span class="key k4"></span>'
     '<div class="phone-screen"><div class="phone-status"><span>9:41</span><span class="di"></span>'

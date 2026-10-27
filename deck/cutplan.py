@@ -114,9 +114,9 @@ SCRIPTS = {
             'so the image stopped building. An audit of our own pipeline found we scanned a rebuilt image rather than the deployed one; PR 595 moved the gate onto '
             'the exact bundle and added the manifest and attestation. Gitleaks reported twenty-seven historical false positives, so we allowlisted exact values. '
             'And Cognito code passed its tests while its runtime dependencies were missing from the image. The lesson: verify what ships, not just the source.'),
-    'C18': ('[00:00–00:35 on this slide] This is the route for the live part: the pull request checks, the Quality run and its artifacts, a triaged CodeQL alert, '
+    'C18': ('This is the route for the live part: the pull request checks, the Quality run and its artifacts, a triaged CodeQL alert, '
             'the Deploy dev run and its steps, the attestation, the ZAP report and the hosted health endpoint.\n\n'
-            '[00:35–04:35 live in GitHub, about thirty seconds per link. If the network fails, open backup CB1 and play the recorded walkthrough from the Film timestamps.]\n\n'
+            '[Live in GitHub, about thirty seconds per link. If the network fails, open backup CB1 and play the recorded walkthrough.]\n\n'
             '1. Pull request checks: Quality is the required context; the security workflows sit beside it.\n'
             '2. Quality run: the job graph fans out and joins the aggregate; open the artifacts list.\n'
             '3. CodeQL alert 56: the rule, the line and the written dismissal reason.\n'
@@ -355,7 +355,10 @@ def apply(slides):
     for x in rest:
         if x['kind'] != 'back':
             raise SystemExit('unplaced main slide ' + x['id'])
-    slides[:] = main + extra_frames + rest + cut
+    gone = {f'T{i}' for i in range(1, 12)}  # owner, 27 Oct: delete the old per-type testing backups
+    slides[:] = [x for x in main + extra_frames + rest + cut if x['id'] not in gone]
+    for x in slides:
+        x['refs'] = [r for r in x['refs'] if r not in gone]
     for x in slides:
         x['refs'] = list(dict.fromkeys('P1' if r in drop - {'B35'} else 'B34' if r == 'B35' else r for r in x['refs']))
     for sec, budget in SECTION_SECS.items():

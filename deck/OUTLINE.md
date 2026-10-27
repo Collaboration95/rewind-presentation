@@ -59,6 +59,7 @@ Design section: the statechart D1 (slide 11) is followed by the full-bleed UI fl
 
 | Anchor | Question / view |
 |---|---|
+| U0 | UI flow page · screens mapped to the cycle statechart |
 | U1 | UI flow 1 · Join a private group |
 | U2 | UI flow 2 · Contribute within the allowance |
 | U3 | UI flow 3 · Cycle lifecycle to archive |
@@ -97,24 +98,13 @@ Design section: the statechart D1 (slide 11) is followed by the full-bleed UI fl
 | CB2 | Branch protection: dev automates the gate; main adds a human review |
 | CB3 | Deploy job steps in GitHub, in the order of the stage diagrams |
 | s7 | Durable claims keep repeated cycle work safe |
-| T10 | Security is tested in the suites and scanned in the pipeline |
 | C2 | Colour says what a failure blocks; shape says what the element is |
 | C9 | Nine kinds of check, each with a recorded result and a link |
 | C12 | Secrets are checked at push, on the PR and across history |
 | C13 | Trivy blocks risky images; IaC risks need dated exceptions |
 | C14 | SBOM and provenance bind shipped bytes to scans and workflow |
 | C16 | Tests and coverage gate the merge and are kept as artifacts |
-| T1 | Static checks reject style, type and layering errors |
-| T2 | Component tests check screens and state without a device |
 | s11 | “Try again” must return to a usable viewfinder |
-| T3 | API tests call real routes on a running server |
-| T4 | The server suite runs again on PostgreSQL 17 |
-| T5 | Repository tests stop the architecture and policies drifting |
-| T6 | Deployment scripts are tested offline with injected failures |
-| T7 | Playwright drives the exported app in a real browser |
-| T8 | The PWA build is checked the way it will be installed |
-| T9 | Axe and keyboard tests check the main screens for WCAG 2.1 AA |
-| T11 | A scripted load test drives the hosted API in five stages |
 | T12 | 100 concurrent users stay under the 2-second target, error-free |
 | F8 | Reminder permission leads to an explicit weekly choice |
 | F10 | The reveal turns sealed contributions into one shared film |

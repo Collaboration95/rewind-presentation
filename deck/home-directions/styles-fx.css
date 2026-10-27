@@ -1,0 +1,13 @@
+/* Friend joins / you press the shutter: one-off small effects */
+/* ============ General ============ */
+.fx-roll,
+.screen span.fx-roll {
+  display: inline-block;
+  animation: fx-roll 0.7s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+@keyframes fx-roll {
+  from {
+    transform: translateY(45%);
+    opacity: 0;
+  }
+}

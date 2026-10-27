@@ -1,0 +1,99 @@
+/* Play / reset; friend-joins and reveal motion */
+/* ============ Play / reset ============ */
+.card-ctl {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 32px;
+  margin: -6px 0 14px;
+}
+.ctl {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 16px;
+  font-size: 12.5px;
+  background: rgba(255, 255, 255, 0.55);
+  box-shadow: inset 0 0 0 1px var(--page-line);
+}
+.ctl:hover {
+  background: #fff;
+}
+.ctl .ic {
+  width: 13px;
+  height: 13px;
+  fill: currentColor;
+  stroke: none;
+}
+.ctl[aria-disabled='true'] {
+  opacity: 0.45;
+  pointer-events: none;
+}
+.step {
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 12px;
+  color: var(--page-muted);
+}
+/* The before and after copy carries no styles of its own and fully inherits from where it sits (so body "xx span" rules don't hit it) */
+@keyframes now-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+}
+/* ============ Converge: friend-join light dots, hints ============ */
+.toast {
+  position: absolute;
+  z-index: 9;
+  left: 50%;
+  top: 104px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 14px 7px 7px;
+  border-radius: 22px;
+  white-space: nowrap;
+  font: 500 12.5px/1 var(--f-body);
+  color: var(--ink);
+  background: var(--sheet);
+  box-shadow:
+    0 14px 30px -12px rgba(0, 0, 0, 0.5),
+    inset 0 0 0 1px var(--line);
+  animation: toast 2.5s ease both;
+}
+.toast i {
+  display: grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  font: 600 11px/1 var(--f-body);
+  font-style: normal;
+  color: #fff;
+  background: var(--mc);
+}
+@keyframes toast {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -8px);
+  }
+  12%,
+  80% {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, 0);
+  }
+}
+/* ============ Warm Glass ============ */
+.c6 .glow {
+  transition:
+    transform 1.8s cubic-bezier(0.2, 0.8, 0.2, 1),
+    filter 1.8s;
+}

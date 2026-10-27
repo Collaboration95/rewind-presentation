@@ -1,0 +1,249 @@
+/* Sidebar extras, glass navigation, Warm Glass */
+/* ============ Sidebar extras ============ */
+.btns {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+.ghost {
+  flex: 1;
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: 1px solid var(--page-line);
+  font-size: 12.5px;
+}
+.ghost:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+.gal-h {
+  flex-basis: 100%;
+  margin: 8px 0 -20px;
+  padding-top: 18px;
+  border-top: 1px solid var(--page-line);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--page-muted);
+}
+.gal-h:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+/* ============ Glass navigation ============ */
+.gnav .tabs {
+  justify-content: space-between;
+  background: var(--gn-bg);
+  backdrop-filter: blur(26px) saturate(160%);
+  box-shadow:
+    inset 0 0 0 1px var(--gn-edge),
+    inset 0 1px 0 var(--gn-hi),
+    0 20px 40px -12px var(--gn-shadow);
+}
+.gnav .tab {
+  flex: 0 0 auto;
+  flex-direction: row;
+  gap: 8px;
+  padding: 0 16px;
+  color: var(--muted);
+}
+.gnav .tab .tlbl {
+  display: none;
+}
+.gnav .tab.on {
+  flex: 1;
+  background: var(--gn-on);
+  color: var(--ink);
+}
+.gnav .tab.on .tlbl {
+  display: inline;
+  font-size: 13px;
+}
+.gnav .shutter {
+  background: var(--gn-bg);
+  backdrop-filter: blur(20px);
+}
+.gnav .grp {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  height: 44px;
+  font-size: 15px;
+  font-weight: 500;
+}
+.gnav .grp .ic {
+  width: 16px;
+  height: 16px;
+  color: var(--muted);
+}
+.gnav .rowx {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  min-height: 44px;
+  border-top: 1px solid var(--line);
+  font-size: 12.5px;
+  color: var(--muted);
+}
+.gnav .pills {
+  display: flex;
+  gap: 5px;
+}
+.gnav .pills i {
+  width: 22px;
+  height: 6px;
+  border-radius: 3px;
+  background: var(--line);
+}
+/* ============ Warm Glass ============ */
+.c6 {
+  --bg: #f6ede3;
+  --ink: #33231a;
+  /* Secondary text: 4.5:1 even on the brightest warm glow */
+  --muted: rgba(51, 35, 26, 0.74);
+  --line: rgba(51, 35, 26, 0.1);
+  --accent: #e0703a;
+  --sheet: rgba(255, 250, 244, 0.97);
+  --av-bg: #f0d9c4;
+  --av-ink: #6b4028;
+  --ring-on: #e8834a;
+  --ring-off: rgba(51, 35, 26, 0.14);
+  --f-body: 'Geist', 'Inter', system-ui, sans-serif;
+  --f-serif: 'Fraunces', Georgia, serif;
+  --gn-bg: rgba(255, 252, 247, 0.55);
+  --gn-edge: rgba(255, 255, 255, 0.85);
+  --gn-hi: rgba(255, 255, 255, 0.95);
+  --gn-shadow: rgba(150, 80, 30, 0.28);
+  --gn-on: rgba(255, 255, 255, 0.85);
+}
+.c6 .scroll > *:not(.glow) {
+  position: relative;
+}
+.c6 .glow {
+  position: absolute;
+  left: 50%;
+  top: 60px;
+  width: 560px;
+  height: 560px;
+  margin-left: -280px;
+  filter: blur(40px);
+  pointer-events: none;
+}
+.c6 .glow i {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+}
+.c6 .glow i:nth-child(1) {
+  background: radial-gradient(
+    circle at 50% 42%,
+    #ffcf96 0,
+    rgba(255, 168, 110, 0.85) 15%,
+    transparent 38%
+  );
+  animation: drift 10s ease-in-out infinite;
+}
+.c6 .glow i:nth-child(2) {
+  background: radial-gradient(circle at 40% 52%, rgba(255, 138, 118, 0.6) 0, transparent 30%);
+  animation: drift 12s ease-in-out -4s infinite reverse;
+}
+.c6 .glow i:nth-child(3) {
+  background: radial-gradient(circle at 62% 38%, rgba(255, 214, 120, 0.75) 0, transparent 28%);
+  animation: drift 14s ease-in-out -7s infinite;
+}
+.c6 .avatar {
+  background: rgba(255, 255, 255, 0.55);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.9),
+    0 4px 12px -4px rgba(150, 80, 30, 0.25);
+  backdrop-filter: blur(10px);
+}
+/* Leave an avatar-wide gap on the left of the header so the group name is centred */
+.c6 .top-sp {
+  width: 40px;
+  flex: none;
+}
+.c6 .hero {
+  height: 282px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.c6 .hero b {
+  font: 300 128px/0.9 var(--f-serif);
+  font-variation-settings:
+    'SOFT' 100,
+    'opsz' 144;
+  letter-spacing: -0.04em;
+  color: #3a2216;
+}
+.c6 .hero > span {
+  font: 400 17px/1 var(--f-serif);
+  font-variation-settings: 'SOFT' 100;
+}
+.c6 .chip {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  margin: 16px 0 0;
+  padding: 7px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(12px);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.9);
+}
+.c6 .chip .ic {
+  width: 14px;
+  height: 14px;
+}
+.c6 .count {
+  display: grid;
+  justify-items: center;
+  gap: 6px;
+  margin: 2px 0 22px;
+}
+.c6 .count strong {
+  font: 400 30px/1 var(--f-serif);
+  font-variation-settings: 'SOFT' 100;
+  letter-spacing: -0.015em;
+}
+.c6 .count span {
+  font-size: 12.5px;
+  color: var(--muted);
+}
+.c6 .glass {
+  padding: 18px 20px 8px;
+  border-radius: 28px;
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.78), rgba(255, 255, 255, 0.42));
+  backdrop-filter: blur(24px) saturate(140%);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.95),
+    0 24px 40px -24px rgba(160, 90, 40, 0.35);
+}
+.c6 .glass small {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.c6 .glass h2 {
+  max-width: 260px;
+  margin: 8px 0 14px;
+  font: 400 25px/1.15 var(--f-serif);
+  font-variation-settings: 'SOFT' 100;
+  letter-spacing: -0.01em;
+}
+.c6 .av {
+  box-shadow: 0 0 0 2px #fbf5ee;
+}
+.c6 .pills i.on {
+  background: linear-gradient(90deg, #f6a15b, #e8704a);
+}
+.c6 .core {
+  background: radial-gradient(circle at 35% 30%, #ffe1b8, #ffa766 50%, #ea6f45);
+  color: #4a2112;
+  box-shadow: 0 10px 28px -6px rgba(234, 111, 69, 0.55);
+}

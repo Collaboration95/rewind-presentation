@@ -1,0 +1,257 @@
+/* App icon tab: page tabs, the picker, real places (launch, home screen, sizes, notification) and all icons */
+/* ============ Page tabs ============ */
+.view-tabs {
+  display: inline-flex;
+  flex-wrap: wrap;
+  max-width: 100%;
+  gap: 4px;
+  margin: 0 0 22px;
+  padding: 4px;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.06);
+}
+.view-tabs button {
+  padding: 8px 16px;
+  border-radius: 9px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--page-muted);
+}
+.view-tabs button[aria-pressed='true'] {
+  color: var(--page-ink);
+  background: #fbfaf7;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+body:not(.view-mix) #mix,
+body.view-mix main > .main-h,
+body.view-mix #gallery {
+  display: none;
+}
+body.view-mix main {
+  padding-bottom: 64px;
+}
+/* ============ Icon ============ */
+.mx-icon {
+  display: inline-block;
+  flex: none;
+  vertical-align: middle;
+  border-radius: 22.5%;
+  overflow: hidden;
+  box-shadow:
+    0 0 0 0.5px rgba(0, 0, 0, 0.08),
+    0 4px 12px rgba(0, 0, 0, 0.12);
+}
+.mx-icon svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+/* ============ Layout ============ */
+.mix .main-h {
+  margin-bottom: 26px;
+}
+.mx-grid {
+  display: grid;
+  grid-template-columns: 290px minmax(0, 1fr);
+  gap: 36px;
+  align-items: start;
+}
+.mx-pick {
+  position: sticky;
+  top: 20px;
+  display: grid;
+  gap: 10px;
+}
+.mx-pick .lbl {
+  margin: 10px 0 0;
+}
+/* ============ Stage ============ */
+.mx-row {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 36px;
+  align-items: start;
+}
+.mx-block {
+  /* Follows the sidebar zoom */
+  --s: var(--z, 0.62);
+  display: grid;
+  gap: 10px;
+  align-content: start;
+}
+.mx-block .lbl {
+  margin: 8px 0 0;
+}
+.mx-phone {
+  position: relative;
+  width: calc(410px * var(--s));
+  animation: none;
+}
+.mx-splash {
+  position: absolute;
+  inset: 0;
+  z-index: 60;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: 22px;
+  border-radius: inherit;
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
+}
+.mx-splash span {
+  font:
+    500 30px/1 'Fraunces',
+    serif;
+  font-variation-settings: 'SOFT' 100;
+  letter-spacing: 0.01em;
+}
+.mx-splash .mx-icon {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+.screen.splashing > :not(.mx-splash) {
+  visibility: hidden;
+}
+.mx-splash.gone {
+  opacity: 0;
+  transform: scale(1.04);
+  pointer-events: none;
+}
+.mx-replay {
+  flex: none;
+  justify-self: start;
+  padding: 7px 12px;
+}
+/* Home screen */
+.mx-home {
+  width: 330px;
+  padding: 14px 18px 16px;
+  border-radius: 34px;
+  box-shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.45);
+}
+.mx-status {
+  margin-bottom: 18px;
+  font:
+    600 12px/1 'Inter',
+    sans-serif;
+  color: #111;
+}
+.mx-home.dark .mx-status {
+  color: #fff;
+}
+.mx-apps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px 10px;
+}
+.mx-apps figure {
+  display: grid;
+  justify-items: center;
+  gap: 5px;
+  margin: 0;
+}
+.mx-apps figcaption {
+  font:
+    500 10.5px/1.1 'Inter',
+    sans-serif;
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+}
+.mx-home.light .mx-apps figcaption {
+  color: #1d1b18;
+  text-shadow: none;
+}
+.mx-dock {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 34px;
+  padding: 12px;
+  border-radius: 26px;
+  background: rgba(255, 255, 255, 0.28);
+  backdrop-filter: blur(8px);
+}
+.mx-walls {
+  display: flex;
+  gap: 8px;
+}
+.mx-walls button {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.15);
+}
+.mx-walls button[aria-pressed='true'] {
+  outline: 2px solid var(--page-ink);
+  outline-offset: 2px;
+}
+/* Sizes and notification */
+.mx-sizerow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+  align-items: flex-end;
+}
+.mx-sizerow figure {
+  display: grid;
+  justify-items: center;
+  gap: 6px;
+  margin: 0;
+}
+.mx-sizerow figcaption {
+  font-size: 11px;
+  color: var(--page-muted);
+}
+.mx-notif {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  width: min(380px, 100%);
+  padding: 12px 14px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.75);
+  box-shadow: 0 8px 24px -10px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+}
+.mx-notif .mx-icon {
+  border-radius: 9px;
+}
+.mx-notif div {
+  display: grid;
+  gap: 2px;
+  font-size: 13px;
+}
+.mx-notif em {
+  align-self: start;
+  margin-left: auto;
+  font-size: 11px;
+  font-style: normal;
+  color: var(--page-muted);
+}
+/* ============ Narrow screens ============ */
+@media (max-width: 1100px) {
+  .mx-row {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 860px) {
+  .mx-grid {
+    grid-template-columns: 1fr;
+  }
+  .mx-pick {
+    position: static;
+  }
+  .mx-home {
+    width: 100%;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .mx-splash {
+    transition: none;
+  }
+}
+
+/* The icon itself, large, next to the stage */
+.mx-pick > .mx-icon {
+  box-shadow: 0 18px 40px -16px rgba(58, 42, 34, 0.55);
+}
